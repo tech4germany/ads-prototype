@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Mund-Nasen-Schutz",
+    "brief_description":"Sie wurden aufgrund des Mund-Nasen-Schutzes diskriminiert.",
+    "link": "/top/item"
+  },
+  {
+    "name": "Sexuelle Belästigung",
+    "brief_description":"Sie wurden sexuell belästigt.",
+    "link": "/top/item"
+  },
+  {
+    "name": "Gehalts-diskrimi-nierung",
+    "brief_description": "Sie fühlen sich in Gehaltsverhandlungen diskriminiert.",
+    "link": "/top/item"
+  },
+  {
+    "name": "Burkini",
+    "brief_description": "Sie fühlen sich in Gehaltsverhandlungen diskriminiert.",
+    "link": "/top/item"
+  }
+]
