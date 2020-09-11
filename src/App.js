@@ -6,13 +6,13 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './components/Home.js';
-import TopThemen from './components/topthemen/TopThemenRouting.js';
+import Start from './components/start/Start.js';
 import NavBar from './components/shared/AppBar.js';
 import FootBar from './components/shared/FootBar.js';
 import logo from './images/antidiskriminierungsstelle.jpg';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import Journey from "./components/journey/Journey.js"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,7 +45,15 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     width: 'auto',
     height: '18vh',
-  }
+  },
+  ptSpace: {
+    backgroundColor: theme.palette.action.hover,
+    display: "flex",
+    flexDirection: "column",
+    marginTop: "3%",
+    marginBottom: "3%",
+    width: "100%"
+  },
 }));
 
 export default function App() {
@@ -58,24 +66,29 @@ export default function App() {
 
           <Grid container  className={classes.mainArea} spacing={3}>
             <Grid item xs></Grid>
-            <Grid item xs={6}>
+            <Grid item lg={8} md={8} xs={6}>
 
               {/* Navbar */}
               <NavBar classes={classes}/>
               {/* End Navbar */}
 
-              {/* Router */}
-               <Router>
-                  <Switch>
-                    <Route path="/top">
-                      <TopThemen />
-                    </Route>
-                    <Route path="/">
-                      <Home />
-                    </Route>
-                  </Switch>
-               </Router>
-              {/* End Router */}
+              <main className={classes.ptSpace}>
+                {/* Router */}
+                 <Router>
+                    <Switch>
+                      <Route exact path="/">
+                        <Start />
+                      </Route>
+                      <Route path="/journey">
+                        <Journey />
+                      </Route>
+                      <Route path="/result">
+                        <Start />
+                      </Route>
+                    </Switch>
+                 </Router>
+                {/* End Router */}
+              </main>
 
               {/* Footer */}
               <FootBar classes={classes}/>
