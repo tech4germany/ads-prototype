@@ -21,7 +21,23 @@ export default function JourneySelection(props) {
     <div className={classes.root}>
         {props.options.map((label, index) => {
           return(
-            <Button variant="outlined">{label}</Button>
+            <div>
+            {
+              props.stepAnswers.includes(label) ?
+              <Button
+                onClick={() => {props.updateStepAnswers(label)}}
+                variant="contained"
+                disableElevation>
+                  {label}
+              </Button>
+              :
+              <Button
+                onClick={() => {props.updateStepAnswers(label)}}
+                variant="outlined">
+                  {label}
+              </Button>
+            }
+            </div>
           );
         })}
     </div>

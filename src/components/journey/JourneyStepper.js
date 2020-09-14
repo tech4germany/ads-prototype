@@ -25,7 +25,7 @@ export default function HorizontalLinearStepper(props) {
           return (
             <Step
              key={label} >
-              <StepLabel onClick={() => { props.setActiveStep(index) }}>{label}</StepLabel>
+              <StepLabel onClick={() => { props.updateStep(index) }}>{label}</StepLabel>
             </Step>
           );
         })}

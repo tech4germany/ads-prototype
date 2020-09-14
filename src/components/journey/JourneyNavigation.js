@@ -20,22 +20,26 @@ export default function JourneyNavigation(props) {
 
   return (
     <div className={classes.root}>
-        <Button
-          variant="outlined"
-          onClick={props.handleBack}
-        >Back</Button>
+        {
+          props.activeStep !== 0 ?
+          <Button
+            variant="outlined"
+            onClick={() => {props.updateStep("back")}}
+          >Back</Button> :
+          false
+        }
         {
           props.activeStep !== 3 ?
-            <Button
-              variant="contained"
-              disableElevation
-              onClick={props.handleNext}
-            >Next</Button> :
-            <Button
-              variant="contained"
-              disableElevation
-              href="./result"
-            >Result</Button>
+          <Button
+            variant="contained"
+            disableElevation
+            onClick={() => {props.updateStep("next")}}
+          >Next</Button> :
+          <Button
+            variant="contained"
+            disableElevation
+            href="./result"
+          >Result</Button>
         }
 
     </div>

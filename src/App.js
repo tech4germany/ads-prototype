@@ -40,6 +40,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
   const classes = useStyles();
+  const [answers, setAnswers] = React.useState({});
+
+  const updateAnswers = (step, stepAnswers) => {
+    let _answers = {...answers};
+    _answers[step] = stepAnswers;
+    setAnswers(_answers);
+  }
 
   return (
     <React.Fragment>
@@ -63,10 +70,19 @@ export default function App() {
                         <Start />
                       </Route>
                       <Route path="/journey">
-                        <Journey />
+                        <Journey
+
+                          answers={answers}
+                          updateAnswers={updateAnswers}
+
+                        />
                       </Route>
                       <Route path="/result">
-                        <Result />
+                        <Result
+
+                          answers={answers}
+
+                        />
                       </Route>
                     </Switch>
                  </Router>

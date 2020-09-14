@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -17,39 +17,67 @@ const useStyles = makeStyles((theme) => ({
 
 export default function JourneyStep(props) {
   const classes = useStyles();
+  const [stepAnswers, setStepAnswers] = useState([]);
+
+  useEffect (() => {
+    if (props.answers.hasOwnProperty(props.identifier)) {
+      let _stepAnswers = props.answers[props.identifier];
+      setStepAnswers(_stepAnswers);
+    }},
+    [props.activeStep]
+  );
+
+  const updateStepAnswers = (label) => {
+    let _stepAnswers = [...stepAnswers];
+    if (!(_stepAnswers.includes(label))) {
+      _stepAnswers.push(label);
+    } else {
+      _stepAnswers = _stepAnswers.filter(function(e) {return e !== label})
+    }
+    setStepAnswers(_stepAnswers)
+  }
+
+  const updateStepButton = (direction) => {
+    if (direction === "next") {
+      props.increaseStep();
+    } else if (direction === "back") {
+      props.decreaseStep();
+    }
+    props.updateAnswers(props.identifier, stepAnswers);
+    setStepAnswers([]);
+  }
+
+  const updateStepStepper = (index) => {
+    props.setActiveStep(index);
+    props.updateAnswers(props.identifier, stepAnswers);
+    setStepAnswers([]);
+  }
 
   return (
 
     <div className={classes.stepContent}>
 
       <JourneyQuestion
-
        question={props.questions[props.activeStep]}
        explanation={props.explanations[props.activeStep]}
-
        />
 
       <JourneySelection
-
         options={props.options[props.activeStep]}
-
+        stepAnswers={stepAnswers}
+        updateStepAnswers={updateStepAnswers}
       />
 
       <JourneyNavigation
-
        activeStep={props.activeStep}
        handleReset={props.handleReset}
-       handleNext={props.handleNext}
-       handleBack={props.handleBack}
-
+       updateStep={updateStepButton}
       />
 
       <HorizontalLinearStepper
-
         activeStep={props.activeStep}
-        setActiveStep={props.setActiveStep}
+        updateStep={updateStepStepper}
         steps={props.steps}
-
       />
 
     </div>

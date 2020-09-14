@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function getIdentifiers() {
+  return ["merkmal", "lebensbereich", "detail1", "detail2"];
+}
 
 function getSteps() {
   return ['Select campaign', 'Create an ad group', 'Create an ad', "Result page"];
@@ -42,22 +45,22 @@ function getExplanations() {
 
 const placeholde_options = [1,2,3];
 
-export default function Journey() {
+export default function Journey(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
-  const [skipped, setSkipped] = React.useState(new Set());
   const steps = getSteps();
+  const identifiers = getIdentifiers();
   const questions = getQuestions();
   const explanations = getExplanations();
   const options = getOptions();
 
-  const maxSteps=4;
+  const identifier = identifiers[activeStep];
 
-  const handleNext = () => {
+  const increaseStep = () => {
      setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
 
-  const handleBack = () => {
+  const decreaseStep = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
@@ -69,8 +72,8 @@ export default function Journey() {
     <Grid container className={classes.mainSpace}>
 
       <JourneyStep
-
       steps={steps}
+      identifier={identifier}
       questions={questions}
       explanations={explanations}
       options={options}
@@ -78,8 +81,11 @@ export default function Journey() {
       activeStep={activeStep}
       setActiveStep={setActiveStep}
       handleReset={handleReset}
-      handleNext={handleNext}
-      handleBack={handleBack}
+      increaseStep={increaseStep}
+      decreaseStep={decreaseStep}
+
+      answers={props.answers}
+      updateAnswers={props.updateAnswers}
       />
 
     </Grid>
