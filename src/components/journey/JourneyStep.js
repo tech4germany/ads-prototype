@@ -45,7 +45,6 @@ export default function JourneyStep(props) {
     }
     props.updateAnswers(props.identifier, stepAnswers);
     setStepAnswers([]);
-
   }
 
   const updateStepStepper = (index) => {
@@ -59,12 +58,12 @@ export default function JourneyStep(props) {
     <div className={classes.stepContent}>
 
       <JourneyQuestion
-       question={props.questions[props.activeStep]}
-       explanation={props.explanations[props.activeStep]}
+       question={props.documentQueue[props.activeStep]}
+       explanation={props.documentQueue[props.activeStep]}
        />
 
       <JourneySelection
-        options={props.options[props.activeStep]}
+        options={props.documentQueue[props.activeStep]}
         stepAnswers={stepAnswers}
         updateStepAnswers={updateStepAnswers}
       />
@@ -78,7 +77,7 @@ export default function JourneyStep(props) {
       <HorizontalLinearStepper
         activeStep={props.activeStep}
         updateStep={updateStepStepper}
-        steps={props.steps}
+        steps={props.documentQueue}
       />
 
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -6,6 +6,8 @@ import Container from '@material-ui/core/Container';
 
 import JourneyStep from "./JourneyStep.js";
 import Result from "./results/Results.js";
+
+import decision_tree from "./documents/decisiontree.json";
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
@@ -18,6 +20,12 @@ const useStyles = makeStyles((theme) => ({
       width: "94%",
   },
 }));
+
+function initialiseDocumentQueue() {
+  return decision_tree.filter(function (element) {
+    return element.type === "default"
+  })
+}
 
 function getIdentifiers() {
   return ["merkmal", "lebensbereich", "detail1", "detail2"];
@@ -54,14 +62,20 @@ export default function Journey(props) {
   const classes = useStyles();
   const [finished, setFinished] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
+  const [documentQueue, setDocumentQueue] = useState([]);
   const [answers, setAnswers] = useState({});
   const steps = getSteps();
   const identifiers = getIdentifiers();
   const questions = getQuestions();
   const explanations = getExplanations();
   const options = getOptions();
-
   const identifier = identifiers[activeStep];
+
+  useEffect(() => {
+    setDocumentQueue(initialiseDocumentQueue)
+  },
+  []
+  );
 
   const updateAnswers = (step, stepAnswers) => {
     let _answers = {...answers};
@@ -90,11 +104,8 @@ export default function Journey(props) {
       {
         !finished ?
           <JourneyStep
-          steps={steps}
           identifier={identifier}
-          questions={questions}
-          explanations={explanations}
-          options={options}
+          documentQueue={documentQueue}
 
           activeStep={activeStep}
           setActiveStep={setActiveStep}
