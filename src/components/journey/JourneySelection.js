@@ -6,24 +6,24 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: "space-between",
     '& > *': {
       margin: theme.spacing(1),
     },
   },
 }));
 
-export default function JourneySelection() {
+export default function JourneySelection(props) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <ButtonGroup color="primary" aria-label="outlined primary button group">
-        <Button>One</Button>
-        <Button>Two</Button>
-        <Button>Three</Button>
-      </ButtonGroup>
+        {props.options.map((label, index) => {
+          return(
+            <Button variant="outlined">{label}</Button>
+          );
+        })}
     </div>
 
   );

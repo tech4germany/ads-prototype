@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
 }));
 
-export default function JourneyQuestion() {
+export default function JourneyQuestion(props) {
   const classes = useStyles();
 
   return (
@@ -17,7 +17,7 @@ export default function JourneyQuestion() {
         color="textPrimary"
         gutterBottom
       >
-        Hier stellen wir eine Frage. Das ist aber aktuell ein Placeholder?
+        {props.question}
       </Typography>
 
       <Typography
@@ -27,7 +27,7 @@ export default function JourneyQuestion() {
         color="textPrimary"
         gutterBottom
       >
-        Hier wird dir nochmal erklärt, was mit der frage so auf sich hat.
+        {props.explanation}
       </Typography>
     </div>
 );

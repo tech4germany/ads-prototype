@@ -15,13 +15,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function JourneyNavigation() {
+export default function JourneyNavigation(props) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-        <Button>Back</Button>
-        <Button>Next</Button>
+        <Button
+          variant="outlined"
+          onClick={props.handleBack}
+        >Back</Button>
+        <Button
+          variant="contained"
+          disableElevation
+          onClick={props.handleNext}
+        >Next</Button>
     </div>
 
   );
