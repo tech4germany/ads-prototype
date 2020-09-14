@@ -38,7 +38,7 @@ export default function JourneyNavigation(props) {
           <Button
             variant="contained"
             disableElevation
-            href="./result"
+            onClick={() => {props.updateStep("next")}}
           >Result</Button>
         }
 

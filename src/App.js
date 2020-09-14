@@ -10,7 +10,6 @@ import NavBar from './components/shared/AppBar.js';
 import FootBar from './components/shared/FootBar.js';
 import Start from './components/start/Start.js';
 import Journey from "./components/journey/Journey.js"
-import Result from "./components/results/Results.js"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,13 +39,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
   const classes = useStyles();
-  const [answers, setAnswers] = React.useState({});
-
-  const updateAnswers = (step, stepAnswers) => {
-    let _answers = {...answers};
-    _answers[step] = stepAnswers;
-    setAnswers(_answers);
-  }
 
   return (
     <React.Fragment>
@@ -71,16 +63,6 @@ export default function App() {
                       </Route>
                       <Route path="/journey">
                         <Journey
-
-                          answers={answers}
-                          updateAnswers={updateAnswers}
-
-                        />
-                      </Route>
-                      <Route path="/result">
-                        <Result
-
-                          answers={answers}
 
                         />
                       </Route>

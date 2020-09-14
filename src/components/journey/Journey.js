@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 import JourneyStep from "./JourneyStep.js";
+import Result from "./results/Results.js";
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
@@ -23,17 +24,21 @@ function getIdentifiers() {
 }
 
 function getSteps() {
-  return ['Select campaign', 'Create an ad group', 'Create an ad', "Result page"];
+  return ['Merkmal', 'Lebensbereich', 'Detail 1', "Detail 2"];
 }
 
 function getQuestions() {
-  return ['Question 1?', 'Question 2?', 'Question 3?', "Question 4?"];
+  return [
+    'Welches Merkmal betraf die Diskriminierung?',
+    'Welcher Lebensraum war betroffen?',
+    'Detail 1?',
+    "Detail 2?"];
 }
 
 function getOptions() {
   return [
-    ["Q1_Option_1","Q1_Option_2","Q1_Option_3","Q1_Option_4"],
-    ["Q2_Option_1","Q2_Option_2","Q2_Option_3","Q2_Option_4"],
+    ["Geschlecht","Alter","Ethnische Herkunft","Behinderung"],
+    ["Arbeit","Schule","Behörde/Ämter","Sportverein"],
     ["Q3_Option_1","Q3_Option_2","Q3_Option_3","Q3_Option_4"],
     ["Q4_Option_1","Q4_Option_2","Q4_Option_3","Q4_Option_4"]
   ];
@@ -47,7 +52,9 @@ const placeholde_options = [1,2,3];
 
 export default function Journey(props) {
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [finished, setFinished] = useState(0);
+  const [activeStep, setActiveStep] = useState(0);
+  const [answers, setAnswers] = useState({});
   const steps = getSteps();
   const identifiers = getIdentifiers();
   const questions = getQuestions();
@@ -56,7 +63,16 @@ export default function Journey(props) {
 
   const identifier = identifiers[activeStep];
 
+  const updateAnswers = (step, stepAnswers) => {
+    let _answers = {...answers};
+    _answers[step] = stepAnswers;
+    setAnswers(_answers);
+  }
+
   const increaseStep = () => {
+    if (activeStep === 3) {
+      setFinished(1);
+    }
      setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
 
@@ -71,22 +87,30 @@ export default function Journey(props) {
   return (
     <Grid container className={classes.mainSpace}>
 
-      <JourneyStep
-      steps={steps}
-      identifier={identifier}
-      questions={questions}
-      explanations={explanations}
-      options={options}
+      {
+        !finished ?
+          <JourneyStep
+          steps={steps}
+          identifier={identifier}
+          questions={questions}
+          explanations={explanations}
+          options={options}
 
-      activeStep={activeStep}
-      setActiveStep={setActiveStep}
-      handleReset={handleReset}
-      increaseStep={increaseStep}
-      decreaseStep={decreaseStep}
+          activeStep={activeStep}
+          setActiveStep={setActiveStep}
+          handleReset={handleReset}
+          increaseStep={increaseStep}
+          decreaseStep={decreaseStep}
 
-      answers={props.answers}
-      updateAnswers={props.updateAnswers}
-      />
+          answers={answers}
+          updateAnswers={updateAnswers}
+          />
+        :
+        <Result
+          answers={answers}
+        />
+      }
+
 
     </Grid>
   );

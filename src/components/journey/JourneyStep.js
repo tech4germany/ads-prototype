@@ -45,6 +45,7 @@ export default function JourneyStep(props) {
     }
     props.updateAnswers(props.identifier, stepAnswers);
     setStepAnswers([]);
+
   }
 
   const updateStepStepper = (index) => {
