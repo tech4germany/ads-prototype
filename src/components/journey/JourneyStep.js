@@ -21,28 +21,37 @@ export default function JourneyStep(props) {
   return (
 
     <div className={classes.stepContent}>
-    <JourneyQuestion
-     question={props.questions[props.activeStep]}
-     explanation={props.explanations[props.activeStep]}
 
-     />
+      <JourneyQuestion
 
-    <JourneySelection
-      options={props.options[props.activeStep]}
-    />
+       question={props.questions[props.activeStep]}
+       explanation={props.explanations[props.activeStep]}
 
-    <JourneyNavigation
+       />
 
-     handleReset={props.handleReset}
-     handleNext={props.handleNext}
-     handleBack={props.handleBack}
-    />
+      <JourneySelection
 
-    <HorizontalLinearStepper
-      activeStep={props.activeStep}
-      setActiveStep={props.setActiveStep}
-      steps={props.steps}
-     />
+        options={props.options[props.activeStep]}
+
+      />
+
+      <JourneyNavigation
+
+       activeStep={props.activeStep}
+       handleReset={props.handleReset}
+       handleNext={props.handleNext}
+       handleBack={props.handleBack}
+
+      />
+
+      <HorizontalLinearStepper
+
+        activeStep={props.activeStep}
+        setActiveStep={props.setActiveStep}
+        steps={props.steps}
+
+      />
+
     </div>
   );
 }

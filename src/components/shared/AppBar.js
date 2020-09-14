@@ -8,8 +8,24 @@ import logo from './../../images/antidiskriminierungsstelle.jpg';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
+const useStyles = makeStyles((theme) => ({
+  appBar: {
+    borderBottom: `1px solid ${theme.palette.divider}`,
+    backgroundColor: theme.palette.background.paper,
+    maxHeight: '20vh',
+  },
+  toolbar: {
+    flexWrap: 'wrap',
+  },
+  logo: {
+    width: 'auto',
+    height: '18vh',
+  },
+}));
+
+
 export default function NavBar(props) {
-  const { classes } = props;
+  const classes = useStyles();
 
   return (
     <React.Fragment>

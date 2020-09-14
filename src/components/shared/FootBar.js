@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
+import { makeStyles } from '@material-ui/core/styles';
 
 function Copyright() {
   return (
@@ -16,8 +16,17 @@ function Copyright() {
   );
 }
 
+const useStyles = makeStyles((theme) => ({
+  footer: {
+    borderTop: `1px solid ${theme.palette.divider}`,
+    backgroundColor: theme.palette.background.paper,
+    marginTop: 'auto',
+    padding: theme.spacing(6),
+  },
+}));
+
 export default function FootBar(props) {
-  const { classes } = props;
+  const classes = useStyles();
 
   return(
     <React.Fragment>

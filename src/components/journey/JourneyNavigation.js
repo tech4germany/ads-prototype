@@ -24,11 +24,20 @@ export default function JourneyNavigation(props) {
           variant="outlined"
           onClick={props.handleBack}
         >Back</Button>
-        <Button
-          variant="contained"
-          disableElevation
-          onClick={props.handleNext}
-        >Next</Button>
+        {
+          props.activeStep !== 3 ?
+            <Button
+              variant="contained"
+              disableElevation
+              onClick={props.handleNext}
+            >Next</Button> :
+            <Button
+              variant="contained"
+              disableElevation
+              href="./result"
+            >Result</Button>
+        }
+
     </div>
 
   );

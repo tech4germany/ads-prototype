@@ -6,8 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
-import StartButton from "./StartButton.js";
-
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
       backgroundColor: theme.palette.background.paper,
@@ -20,18 +18,17 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Home() {
+export default function Result() {
   const classes = useStyles();
 
   return (
     <Grid container className={classes.mainSpace}>
       <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-        Wegweiser
+        Ergebnis
       </Typography>
       <Typography variant="h5" align="center" color="textSecondary" paragraph>
-        Hier kommt ein kleiner Text, der den Wegweiser und seine Funktionsweise ein bisschen erklärt. Und so weiter
+        Hier wird die ratsuchende über ihre möglichkeiten aufgeklärt.
       </Typography>
-      <StartButton />
     </Grid>
   );
 }

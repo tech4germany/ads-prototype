@@ -1,18 +1,16 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Start from './components/start/Start.js';
+import Grid from '@material-ui/core/Grid';
+
+import logo from './images/antidiskriminierungsstelle.jpg';
 import NavBar from './components/shared/AppBar.js';
 import FootBar from './components/shared/FootBar.js';
-import logo from './images/antidiskriminierungsstelle.jpg';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+import Start from './components/start/Start.js';
 import Journey from "./components/journey/Journey.js"
+import Result from "./components/results/Results.js"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,31 +18,15 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     minHeight: '100vh',
   },
-  appBar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-    backgroundColor: theme.palette.background.paper,
-    maxHeight: '20vh',
-  },
   mainArea: {
     backgroundColor: theme.palette.background.paper,
     height: "100%",
-  },
-  toolbar: {
-    flexWrap: 'wrap',
-  },
-  toolbarTitle: {
-    flexGrow: 1,
-    color: "black",
   },
   footer: {
     borderTop: `1px solid ${theme.palette.divider}`,
     backgroundColor: theme.palette.background.paper,
     marginTop: 'auto',
     padding: theme.spacing(6),
-  },
-  logo: {
-    width: 'auto',
-    height: '18vh',
   },
   ptSpace: {
     backgroundColor: theme.palette.action.hover,
@@ -73,6 +55,7 @@ export default function App() {
               {/* End Navbar */}
 
               <main className={classes.ptSpace}>
+
                 {/* Router */}
                  <Router>
                     <Switch>
@@ -83,11 +66,12 @@ export default function App() {
                         <Journey />
                       </Route>
                       <Route path="/result">
-                        <Start />
+                        <Result />
                       </Route>
                     </Switch>
                  </Router>
                 {/* End Router */}
+
               </main>
 
               {/* Footer */}
