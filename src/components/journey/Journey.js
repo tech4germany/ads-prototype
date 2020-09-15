@@ -21,61 +21,40 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function initialiseDocumentQueue() {
+const initialiseDocumentQueue = () => {
   return decision_tree.filter(function (element) {
     return element.type === "default"
   })
 }
 
-function getIdentifiers() {
-  return ["merkmal", "lebensbereich", "detail1", "detail2"];
+const retrieveDefaultStepTitles = (docQueue) => {
+  return docQueue
+  .filter(function(e) {return e.type === "default"})
+  .map(obj => obj.step_title)
 }
-
-function getSteps() {
-  return ['Merkmal', 'Lebensbereich', 'Detail 1', "Detail 2"];
-}
-
-function getQuestions() {
-  return [
-    'Welches Merkmal betraf die Diskriminierung?',
-    'Welcher Lebensraum war betroffen?',
-    'Detail 1?',
-    "Detail 2?"];
-}
-
-function getOptions() {
-  return [
-    ["Geschlecht","Alter","Ethnische Herkunft","Behinderung"],
-    ["Arbeit","Schule","Behörde/Ämter","Sportverein"],
-    ["Q3_Option_1","Q3_Option_2","Q3_Option_3","Q3_Option_4"],
-    ["Q4_Option_1","Q4_Option_2","Q4_Option_3","Q4_Option_4"]
-  ];
-}
-
-function getExplanations() {
-  return ['Explanation 1', 'Explanation 2', 'Explanation 3', "Explanation 4"];
-}
-
-const placeholde_options = [1,2,3];
 
 export default function Journey(props) {
   const classes = useStyles();
   const [finished, setFinished] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
-  const [documentQueue, setDocumentQueue] = useState([]);
+  const [documentQueue, setDocumentQueue] = useState(initialiseDocumentQueue());
+  const [stepTracker, setStepTracker] = useState(retrieveDefaultStepTitles(documentQueue));
+  const [activeDocument, setActiveDocument] = useState(documentQueue[activeStep]);
   const [answers, setAnswers] = useState({});
-  const steps = getSteps();
-  const identifiers = getIdentifiers();
-  const questions = getQuestions();
-  const explanations = getExplanations();
-  const options = getOptions();
-  const identifier = identifiers[activeStep];
 
-  useEffect(() => {
-    setDocumentQueue(initialiseDocumentQueue)
-  },
-  []
-  );
+  const updateDocumentQueue = () => {
+    let _documentQueue = [...documentQueue];
+
+
+  }
+
+  const updateActiveDocument = (activeStep) => {
+    setActiveDocument(documentQueue[activeStep]);
+  }
+
+  const retrieveActiveIdentifier = (activeStep) => {
+    return documentQueue[activeStep]["identifier"]
+  }
 
   const updateAnswers = (step, stepAnswers) => {
     let _answers = {...answers};
@@ -94,27 +73,25 @@ export default function Journey(props) {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleReset = () => {
-    setActiveStep(0);
-  };
-
   return (
     <Grid container className={classes.mainSpace}>
 
       {
         !finished ?
           <JourneyStep
-          identifier={identifier}
-          documentQueue={documentQueue}
+          activeDocument={activeDocument}
+          updateActiveDocument={updateActiveDocument}
+          retrieveActiveIdentifier={retrieveActiveIdentifier}
 
           activeStep={activeStep}
           setActiveStep={setActiveStep}
-          handleReset={handleReset}
           increaseStep={increaseStep}
           decreaseStep={decreaseStep}
 
           answers={answers}
           updateAnswers={updateAnswers}
+
+          stepTracker={stepTracker}
           />
         :
         <Result

@@ -3,60 +3,60 @@
 		"identifier":"merkmal",
 		"type":"default",
 		"step_title": "Merkmal",
-		"questions":"Welches Merkmal war betroffen?",
+		"question":"Welches Merkmal war betroffen?",
 		"explanation":"Ein Merkmal ist dieses und jenes.",
-		"options": [
-			"Geschlecht",
-			"Alter",
-			"Ethnische Herkunft"
-		]
+		"options": {
+			"Geschlecht": "merkmal detail",
+			"Alter": "",
+			"Ethnische Herkunft": ""
+		}
 	},
 	{
 		"identifier":"lebensbereich",
 		"type":"default",
 		"step_title": "Lebensbereich",
-		"questions":"Welcher Lebensbereich war betroffen?",
+		"question":"Welcher Lebensbereich war betroffen?",
 		"explanation":"Ein Lebensbereich ist dieses und jenes.",
-		"options": [
-			"Arbeit",
-			"Behörde",
-			"Sportverein"
-		]
+		"options": {
+			"Arbeit": "",
+			"Behörde": "",
+			"Sportverein": ""
+		}
 	},
 	{
 		"identifier":"detailfrage 1",
 		"type":"default",
 		"step_title": "Detail 1",
-		"questions":"Detailfrage 1?",
+		"question":"Detailfrage 1?",
 		"explanation":"Erklärung zu detailfrage 1.",
-		"options": [
-			"D1 Option 1",
-			"D1 Option 2",
-			"D1 Option 3"
-		]
+		"options": {
+			"D1 Option 1":"",
+			"D1 Option 2":"",
+			"D1 Option 3":""
+		}
 	},
 	{
 		"identifier":"detailfrage 2",
 		"type":"default",
 		"step_title": "Detail 2",
-		"questions":"Detailsfrage 2?",
+		"question":"Detailsfrage 2?",
 		"explanation":"Exklärung zu detailfrage 2.",
-		"options": [
-			"D2 Option 1",
-			"D2 Option 2",
-			"D2 Option 3"
-		]
+		"options": {
+			"D2 Option 1":"",
+			"D2 Option 2":"",
+			"D2 Option 3":""
+		}
 	},
 	{
-		"identifier":"detailfrage 3",
+		"identifier":"merkmal detail",
 		"type":"non-default",
-		"step_title": "Detail 3",
-		"questions":"Detailsfrage 3?",
-		"explanation":"Exklärung zu detailfrage 3.",
-		"options": [
-			"D3 Option 1",
-			"D3 Option 2",
-			"D3 Option 3"
-		]
+		"step_title": "merkmal_detail",
+		"question":"Merkmal Detailfrage?",
+		"explanation":"Exklärung zu Merkmaldetailfrage.",
+		"options": {
+			"MD Option 1":"",
+			"MD Option 2":"",
+			"MD Option 3":""
+		}
 	}
 ]
