@@ -100,15 +100,19 @@ export default function Journey(props) {
     setAnswers(_answers);
   }
 
-  const increaseStep = () => {
-    if (activeStep+2 > documentQueue.length) {
-      setFinished(1);
+  const updateStep = (change) => {
+    switch(change) {
+      case 1:
+        if (activeStep+2 > documentQueue.length) {
+          setFinished(1);
+        }
+        console.log("here we go")
+        setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        break;
+      case -1:
+        setActiveStep((prevActiveStep) => prevActiveStep - 1);
+        break;
     }
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const decreaseStep = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
   const updateFinishLine = (length) => {
@@ -131,11 +135,9 @@ export default function Journey(props) {
           removeDocumentQueue={removeDocumentQueue}
 
           retrieveActiveIdentifier={retrieveActiveIdentifier}
-
           activeStep={activeStep}
           setActiveStep={setActiveStep}
-          increaseStep={increaseStep}
-          decreaseStep={decreaseStep}
+          updateStep={updateStep}
 
           answers={answers}
           updateAnswers={updateAnswers}

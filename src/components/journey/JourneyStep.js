@@ -45,17 +45,19 @@ export default function JourneyStep(props) {
 
   {/* Action functions */}
   const updateStepButton = (direction) => {
+    var change=0;
     if (direction === "next") {
-      props.increaseStep();
-      props.updateActiveDocument(props.activeStep+1);
-      initialiseStepAnswers(props.retrieveActiveIdentifier(props.activeStep+1))
+      change = 1;
     } else if (direction === "back") {
-      props.decreaseStep();
-      props.updateActiveDocument(props.activeStep-1);
-      initialiseStepAnswers(props.retrieveActiveIdentifier(props.activeStep-1))
+      change = -1;
     }
-    props.updateFinishLine(props.documentQueue.length);
+    console.log(props.activeStep);
+    console.log(change);
     props.updateAnswers(itemFromDocument("identifier"), stepAnswers);
+    props.updateActiveDocument(props.activeStep+change);
+    initialiseStepAnswers(props.retrieveActiveIdentifier(props.activeStep+change))
+    props.updateStep(change);
+    props.updateFinishLine(props.documentQueue.length);
   }
 
   const updateStepStepper = (index) => {
