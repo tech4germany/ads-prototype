@@ -6,8 +6,8 @@
 		"question":"Welches Merkmal war betroffen?",
 		"explanation":"Ein Merkmal ist dieses und jenes.",
 		"options": {
-			"Geschlecht": "merkmal detail",
-			"Alter": null,
+			"Geschlecht": "geschlecht detail",
+			"Alter": "alter detail",
 			"Ethnische Herkunft": null
 		}
 	},
@@ -42,16 +42,28 @@
 		"question":"Detailsfrage 2?",
 		"explanation":"Exklärung zu detailfrage 2.",
 		"options": {
-			"D2 Option 1":"d2 detail",
+			"D2 Option 1":null,
 			"D2 Option 2":null,
 			"D2 Option 3":null
 		}
 	},
 	{
-		"identifier":"merkmal detail",
+		"identifier":"geschlecht detail",
 		"type":"non-default",
-		"step_title": "merkmal_detail",
-		"question":"Merkmal Detailfrage?",
+		"step_title": "geschlecht_detail",
+		"question":"Geschlecht Detailfrage?",
+		"explanation":"Exklärung zu Merkmaldetailfrage.",
+		"options": {
+			"MD Option 1":null,
+			"MD Option 2":null,
+			"MD Option 3":null
+		}
+	},
+	{
+		"identifier":"alter detail",
+		"type":"non-default",
+		"step_title": "alter_detail",
+		"question":"Alter Detailfrage?",
 		"explanation":"Exklärung zu Merkmaldetailfrage.",
 		"options": {
 			"MD Option 1":null,

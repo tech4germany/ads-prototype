@@ -36,29 +36,6 @@ const retrieveStepAnswers = (label, activeDocument) => {
   return activeDocument["options"][label]
 }
 
-const cleanNonDefaultDocs = (documentQueue, activeStep) => {
-  let _cleanQueue = [...documentQueue];
-  for (var i=0; i < documentQueue.length; i++) {
-
-    if (
-      i > activeStep &&
-      documentQueue[i]["type"] === "default"
-    ) { break }
-
-
-    if (!(
-      documentQueue[i]["type"] === "default" ||
-      (
-        documentQueue[i]["type"] === "non-default" &&
-        i <= activeStep
-      )
-    )) {
-    _cleanQueue.splice(i, 1);
-    }
-  }
-  return _cleanQueue
-}
-
 const insertNewDoc = (newDocumentIdentifier, documentQueue, activeStep) => {
   let existingIdentifiers = documentQueue.map(obj => obj.identifier);
   if (!(existingIdentifiers.includes(newDocumentIdentifier.identifier))) {
@@ -85,7 +62,6 @@ export default function Journey(props) {
 
   const addDocumentQueue = (label) => {
     let _documentQueue = [...documentQueue];
-    _documentQueue = cleanNonDefaultDocs(_documentQueue, activeStep);
     let newDocumentIdentifier = retrieveStepAnswers(label, activeDocument);
     if (!(newDocumentIdentifier === null)) {
       _documentQueue = insertNewDoc(newDocumentIdentifier, _documentQueue, activeStep);
@@ -153,13 +129,10 @@ export default function Journey(props) {
           setActiveStep={setActiveStep}
           increaseStep={increaseStep}
           decreaseStep={decreaseStep}
-
           answers={answers}
           updateAnswers={updateAnswers}
-
           stepTracker={stepTracker}
           updateStepTracker={updateStepTracker}
-
           updateFinishLine={updateFinishLine}
           />
         :
