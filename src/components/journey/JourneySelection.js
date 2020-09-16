@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,14 +24,20 @@ export default function JourneySelection(props) {
             {
               props.stepAnswers.includes(label) ?
               <Button
-                onClick={() => {props.updateStepAnswers(label)}}
+                onClick={() => {
+                  props.updateStepAnswers(label);
+                  props.removeDocumentQueue(label);
+                }}
                 variant="contained"
                 disableElevation>
                   {label}
               </Button>
               :
               <Button
-                onClick={() => {props.updateStepAnswers(label)}}
+                onClick={() => {
+                    props.updateStepAnswers(label);
+                    props.addDocumentQueue(label);
+                  }}
                 variant="outlined">
                   {label}
               </Button>

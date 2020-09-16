@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 
 import JourneyQuestion from "./JourneyQuestion.js";
 import JourneySelection from "./JourneySelection.js";
@@ -26,15 +23,6 @@ export default function JourneyStep(props) {
     } else {setStepAnswers([])}
   }
 
-  const itemFromDocument = (item) => {
-    return props.activeDocument[item]
-  }
-
-  const optionsFromDocument = () => {
-    return Object.keys(props.activeDocument["options"])
-  }
-  optionsFromDocument();
-
   const updateStepAnswers = (label) => {
     let _stepAnswers = [...stepAnswers];
     if (!(_stepAnswers.includes(label))) {
@@ -45,29 +33,40 @@ export default function JourneyStep(props) {
     setStepAnswers(_stepAnswers)
   }
 
+  const itemFromDocument = (item) => {
+    return props.activeDocument[item]
+  }
+
+  const optionsFromDocument = () => {
+    return Object.keys(props.activeDocument["options"])
+  }
+
   const updateStepButton = (direction) => {
     if (direction === "next") {
       props.increaseStep();
     } else if (direction === "back") {
       props.decreaseStep();
     }
-    props.updateDocumentQueue(stepAnswers);
     props.updateAnswers(props.retrieveActiveIdentifier(props.activeStep), stepAnswers);
   }
 
   const updateStepStepper = (index) => {
     props.setActiveStep(index);
-    props.updateDocumentQueue(stepAnswers);
     props.updateAnswers(props.retrieveActiveIdentifier(props.activeStep), stepAnswers);
   }
 
   useEffect (() => {
+    props.updateFinishLine(props.documentQueue.length);
     props.updateActiveDocument(props.activeStep);
     props.updateStepTracker();
     initialiseStepAnswers(props.retrieveActiveIdentifier(props.activeStep))
     },
     [props.activeStep]
   );
+
+  useEffect (() => {
+    props.updateStepTracker();
+  }, [props.documentQueue])
 
   return (
 
@@ -82,6 +81,8 @@ export default function JourneyStep(props) {
         options={optionsFromDocument()}
         stepAnswers={stepAnswers}
         updateStepAnswers={updateStepAnswers}
+        addDocumentQueue={props.addDocumentQueue}
+        removeDocumentQueue={props.removeDocumentQueue}
       />
 
       <JourneyNavigation

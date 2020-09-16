@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -28,19 +27,11 @@ export default function JourneyNavigation(props) {
           >Back</Button> :
           false
         }
-        {
-          props.activeStep !== 3 ?
-          <Button
-            variant="contained"
-            disableElevation
-            onClick={() => {props.updateStep("next")}}
-          >Next</Button> :
-          <Button
-            variant="contained"
-            disableElevation
-            onClick={() => {props.updateStep("next")}}
-          >Result</Button>
-        }
+        <Button
+          variant="contained"
+          disableElevation
+          onClick={() => {props.updateStep("next")}}
+        >Next</Button>
 
     </div>
 

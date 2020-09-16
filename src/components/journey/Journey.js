@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 
 import JourneyStep from "./JourneyStep.js";
 import Result from "./results/Results.js";
@@ -34,11 +32,8 @@ const retrieveNonDefaultDocument = (identifier) => {
   return _newDoc[0]
 }
 
-const retrieveStepAnswers = (stepAnswers, activeDocument) => {
-  let _stepAnswersLinks = stepAnswers.map(function(answer) {
-    return activeDocument["options"][answer]
-  })
-  return _stepAnswersLinks.filter(function(el) { return el != null; })
+const retrieveStepAnswers = (label, activeDocument) => {
+  return activeDocument["options"][label]
 }
 
 const cleanNonDefaultDocs = (documentQueue, activeStep) => {
@@ -64,17 +59,19 @@ const cleanNonDefaultDocs = (documentQueue, activeStep) => {
   return _cleanQueue
 }
 
-const insertNewDocs = (newDocumentIdentifiers, documentQueue, activeStep) => {
-  let newDocuments = newDocumentIdentifiers.map(function(id) {
-    return retrieveNonDefaultDocument(id)
-  });
-  newDocuments.map(function(obj) {
-    let existingIdentifiers = documentQueue.map(obj => obj.identifier);
-    if (!(existingIdentifiers.includes(obj.identifier))) {
-      documentQueue.splice(activeStep+1, 0, obj)
+const insertNewDoc = (newDocumentIdentifier, documentQueue, activeStep) => {
+  let existingIdentifiers = documentQueue.map(obj => obj.identifier);
+  if (!(existingIdentifiers.includes(newDocumentIdentifier.identifier))) {
+    let newDocument = retrieveNonDefaultDocument(newDocumentIdentifier);
+    documentQueue.splice(activeStep+1, 0, newDocument);
     }
-  });
   return documentQueue
+}
+
+const removeNewDoc = (newDocumentIdentifier, documentQueue) => {
+  return documentQueue.filter(function (el) {
+    return el.identifier !== newDocumentIdentifier
+  })
 }
 
 export default function Journey(props) {
@@ -86,12 +83,21 @@ export default function Journey(props) {
   const [activeDocument, setActiveDocument] = useState(documentQueue[activeStep]);
   const [answers, setAnswers] = useState({});
 
-  const updateDocumentQueue = (stepAnswers) => {
+  const addDocumentQueue = (label) => {
     let _documentQueue = [...documentQueue];
     _documentQueue = cleanNonDefaultDocs(_documentQueue, activeStep);
-    let newDocumentIdentifiers = retrieveStepAnswers(stepAnswers, activeDocument);
-    if (newDocumentIdentifiers.length >= 0) {
-      _documentQueue = insertNewDocs(newDocumentIdentifiers, _documentQueue, activeStep);
+    let newDocumentIdentifier = retrieveStepAnswers(label, activeDocument);
+    if (!(newDocumentIdentifier === null)) {
+      _documentQueue = insertNewDoc(newDocumentIdentifier, _documentQueue, activeStep);
+      setDocumentQueue(_documentQueue);
+    }
+  }
+
+  const removeDocumentQueue = (label) => {
+    let _documentQueue = [...documentQueue];
+    let newDocumentIdentifier = retrieveStepAnswers(label, activeDocument);
+    if (!(newDocumentIdentifier === null)) {
+      _documentQueue = removeNewDoc(newDocumentIdentifier, _documentQueue);
       setDocumentQueue(_documentQueue);
     }
   }
@@ -115,15 +121,21 @@ export default function Journey(props) {
   }
 
   const increaseStep = () => {
-    if (activeStep === 5) {
+    if (activeStep+2 > documentQueue.length) {
       setFinished(1);
     }
-     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
 
   const decreaseStep = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
+
+  const updateFinishLine = (length) => {
+    if (activeStep > length) {
+      setFinished(1);
+    }
+  }
 
   return (
     <Grid container className={classes.mainSpace}>
@@ -133,9 +145,10 @@ export default function Journey(props) {
           <JourneyStep
           activeDocument={activeDocument}
           updateActiveDocument={updateActiveDocument}
-          updateDocumentQueue={updateDocumentQueue}
+          addDocumentQueue={addDocumentQueue}
+          removeDocumentQueue={removeDocumentQueue}
           retrieveActiveIdentifier={retrieveActiveIdentifier}
-
+          documentQueue={documentQueue}
           activeStep={activeStep}
           setActiveStep={setActiveStep}
           increaseStep={increaseStep}
@@ -146,6 +159,8 @@ export default function Journey(props) {
 
           stepTracker={stepTracker}
           updateStepTracker={updateStepTracker}
+
+          updateFinishLine={updateFinishLine}
           />
         :
         <Result
