@@ -20,7 +20,7 @@ export default function JourneySelection(props) {
     <div className={classes.root}>
         {props.options.map((label, index) => {
           return(
-            <div>
+            <div key={index}>
             {
               props.stepAnswers.includes(label) ?
               <Button

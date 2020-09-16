@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import JourneyQuestion from "./JourneyQuestion.js";
@@ -47,17 +47,16 @@ export default function JourneyStep(props) {
   const updateStepButton = (direction) => {
     var change=0;
     if (direction === "next") {
-      change = 1;
+      if (props.checkFinishLine()) {
+        return true;
+      } else { change = 1; }
     } else if (direction === "back") {
       change = -1;
     }
-    console.log(props.activeStep);
-    console.log(change);
     props.updateAnswers(itemFromDocument("identifier"), stepAnswers);
     props.updateActiveDocument(props.activeStep+change);
     initialiseStepAnswers(props.retrieveActiveIdentifier(props.activeStep+change))
     props.updateStep(change);
-    props.updateFinishLine(props.documentQueue.length);
   }
 
   const updateStepStepper = (index) => {
