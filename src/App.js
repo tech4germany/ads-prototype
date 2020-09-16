@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.action.hover,
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
     marginTop: "3%",
     marginBottom: "3%",
     width: "100%"
