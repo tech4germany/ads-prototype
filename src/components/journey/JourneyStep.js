@@ -16,6 +16,16 @@ export default function JourneyStep(props) {
   const classes = useStyles();
   const [stepAnswers, setStepAnswers] = useState([]);
 
+  {/* auxiliary functions */}
+  const itemFromDocument = (item) => {
+    return props.activeDocument[item]
+  }
+
+  const optionsFromDocument = () => {
+    return Object.keys(props.activeDocument["options"])
+  }
+
+  {/* state update functions */}
   const initialiseStepAnswers = (identifier) => {
     if (props.answers.hasOwnProperty(identifier)) {
       let _stepAnswers = props.answers[identifier];
@@ -33,40 +43,27 @@ export default function JourneyStep(props) {
     setStepAnswers(_stepAnswers)
   }
 
-  const itemFromDocument = (item) => {
-    return props.activeDocument[item]
-  }
-
-  const optionsFromDocument = () => {
-    return Object.keys(props.activeDocument["options"])
-  }
-
+  {/* Action functions */}
   const updateStepButton = (direction) => {
     if (direction === "next") {
       props.increaseStep();
+      props.updateActiveDocument(props.activeStep+1);
+      initialiseStepAnswers(props.retrieveActiveIdentifier(props.activeStep+1))
     } else if (direction === "back") {
       props.decreaseStep();
+      props.updateActiveDocument(props.activeStep-1);
+      initialiseStepAnswers(props.retrieveActiveIdentifier(props.activeStep-1))
     }
-    props.updateAnswers(props.retrieveActiveIdentifier(props.activeStep), stepAnswers);
+    props.updateFinishLine(props.documentQueue.length);
+    props.updateAnswers(itemFromDocument("identifier"), stepAnswers);
   }
 
   const updateStepStepper = (index) => {
+    props.updateAnswers(itemFromDocument("identifier"), stepAnswers);
     props.setActiveStep(index);
-    props.updateAnswers(props.retrieveActiveIdentifier(props.activeStep), stepAnswers);
+    props.updateActiveDocument(index);
+    initialiseStepAnswers(props.retrieveActiveIdentifier(index))
   }
-
-  useEffect (() => {
-    props.updateFinishLine(props.documentQueue.length);
-    props.updateActiveDocument(props.activeStep);
-    props.updateStepTracker();
-    initialiseStepAnswers(props.retrieveActiveIdentifier(props.activeStep))
-    },
-    [props.activeStep]
-  );
-
-  useEffect (() => {
-    props.updateStepTracker();
-  }, [props.documentQueue])
 
   return (
 

@@ -42,7 +42,7 @@
 		"question":"Detailsfrage 2?",
 		"explanation":"Exklärung zu detailfrage 2.",
 		"options": {
-			"D2 Option 1":null,
+			"D2 Option 1":"d2 detail",
 			"D2 Option 2":null,
 			"D2 Option 3":null
 		}

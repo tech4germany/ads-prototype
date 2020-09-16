@@ -60,34 +60,38 @@ export default function Journey(props) {
   const [activeDocument, setActiveDocument] = useState(documentQueue[activeStep]);
   const [answers, setAnswers] = useState({});
 
+  {/* auxiliary functions */}
+  const retrieveActiveIdentifier = (activeStep) => {
+    return documentQueue[activeStep]["identifier"]
+  }
+
   const addDocumentQueue = (label) => {
     let _documentQueue = [...documentQueue];
     let newDocumentIdentifier = retrieveStepAnswers(label, activeDocument);
     if (!(newDocumentIdentifier === null)) {
       _documentQueue = insertNewDoc(newDocumentIdentifier, _documentQueue, activeStep);
       setDocumentQueue(_documentQueue);
+      updateStepTracker(_documentQueue);
     }
   }
 
+  {/* state update functions */}
   const removeDocumentQueue = (label) => {
     let _documentQueue = [...documentQueue];
     let newDocumentIdentifier = retrieveStepAnswers(label, activeDocument);
     if (!(newDocumentIdentifier === null)) {
       _documentQueue = removeNewDoc(newDocumentIdentifier, _documentQueue);
       setDocumentQueue(_documentQueue);
+      updateStepTracker(_documentQueue);
     }
   }
 
-  const updateStepTracker = () => {
-    setStepTracker(documentQueue.map(obj => obj.step_title));
+  const updateStepTracker = (_documentQueue) => {
+    setStepTracker(_documentQueue.map(obj => obj.step_title));
   }
 
   const updateActiveDocument = (activeStep) => {
     setActiveDocument(documentQueue[activeStep]);
-  }
-
-  const retrieveActiveIdentifier = (activeStep) => {
-    return documentQueue[activeStep]["identifier"]
   }
 
   const updateAnswers = (step, stepAnswers) => {
@@ -121,18 +125,24 @@ export default function Journey(props) {
           <JourneyStep
           activeDocument={activeDocument}
           updateActiveDocument={updateActiveDocument}
+
+          documentQueue={documentQueue}
           addDocumentQueue={addDocumentQueue}
           removeDocumentQueue={removeDocumentQueue}
+
           retrieveActiveIdentifier={retrieveActiveIdentifier}
-          documentQueue={documentQueue}
+
           activeStep={activeStep}
           setActiveStep={setActiveStep}
           increaseStep={increaseStep}
           decreaseStep={decreaseStep}
+
           answers={answers}
           updateAnswers={updateAnswers}
+
           stepTracker={stepTracker}
           updateStepTracker={updateStepTracker}
+
           updateFinishLine={updateFinishLine}
           />
         :
