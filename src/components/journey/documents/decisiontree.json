@@ -7,8 +7,8 @@
 		"explanation":"Ein Merkmal ist dieses und jenes.",
 		"options": {
 			"Geschlecht": "merkmal detail",
-			"Alter": "",
-			"Ethnische Herkunft": ""
+			"Alter": null,
+			"Ethnische Herkunft": null
 		}
 	},
 	{
@@ -18,9 +18,9 @@
 		"question":"Welcher Lebensbereich war betroffen?",
 		"explanation":"Ein Lebensbereich ist dieses und jenes.",
 		"options": {
-			"Arbeit": "",
-			"Behörde": "",
-			"Sportverein": ""
+			"Arbeit": null,
+			"Behörde": null,
+			"Sportverein": null
 		}
 	},
 	{
@@ -30,9 +30,9 @@
 		"question":"Detailfrage 1?",
 		"explanation":"Erklärung zu detailfrage 1.",
 		"options": {
-			"D1 Option 1":"",
-			"D1 Option 2":"",
-			"D1 Option 3":""
+			"D1 Option 1":null,
+			"D1 Option 2":null,
+			"D1 Option 3":null
 		}
 	},
 	{
@@ -42,9 +42,9 @@
 		"question":"Detailsfrage 2?",
 		"explanation":"Exklärung zu detailfrage 2.",
 		"options": {
-			"D2 Option 1":"",
-			"D2 Option 2":"",
-			"D2 Option 3":""
+			"D2 Option 1":"d2 detail",
+			"D2 Option 2":null,
+			"D2 Option 3":null
 		}
 	},
 	{
@@ -54,9 +54,22 @@
 		"question":"Merkmal Detailfrage?",
 		"explanation":"Exklärung zu Merkmaldetailfrage.",
 		"options": {
-			"MD Option 1":"",
-			"MD Option 2":"",
-			"MD Option 3":""
+			"MD Option 1":null,
+			"MD Option 2":null,
+			"MD Option 3":null
+		}
+	},
+	{
+		"identifier":"d2 detail",
+		"type":"non-default",
+		"step_title": "d2 detail",
+		"question":"D2 Detailfrage?",
+		"explanation":"Exklärung zu D2detailfrage.",
+		"options": {
+			"MD Option 1":null,
+			"MD Option 2":null,
+			"MD Option 3":null
 		}
 	}
+
 ]

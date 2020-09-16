@@ -23,7 +23,7 @@ export default function JourneyStep(props) {
     if (props.answers.hasOwnProperty(identifier)) {
       let _stepAnswers = props.answers[identifier];
       setStepAnswers(_stepAnswers);
-    }
+    } else {setStepAnswers([])}
   }
 
   const itemFromDocument = (item) => {
@@ -51,18 +51,19 @@ export default function JourneyStep(props) {
     } else if (direction === "back") {
       props.decreaseStep();
     }
+    props.updateDocumentQueue(stepAnswers);
     props.updateAnswers(props.retrieveActiveIdentifier(props.activeStep), stepAnswers);
-    setStepAnswers([]);
   }
 
   const updateStepStepper = (index) => {
     props.setActiveStep(index);
+    props.updateDocumentQueue(stepAnswers);
     props.updateAnswers(props.retrieveActiveIdentifier(props.activeStep), stepAnswers);
-    setStepAnswers([]);
   }
 
   useEffect (() => {
     props.updateActiveDocument(props.activeStep);
+    props.updateStepTracker();
     initialiseStepAnswers(props.retrieveActiveIdentifier(props.activeStep))
     },
     [props.activeStep]

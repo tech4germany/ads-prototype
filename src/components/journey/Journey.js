@@ -27,10 +27,54 @@ const initialiseDocumentQueue = () => {
   })
 }
 
-const retrieveDefaultStepTitles = (docQueue) => {
-  return docQueue
-  .filter(function(e) {return e.type === "default"})
-  .map(obj => obj.step_title)
+const retrieveNonDefaultDocument = (identifier) => {
+  let _newDoc = decision_tree.filter(function (element) {
+    return element.identifier === identifier
+  })
+  return _newDoc[0]
+}
+
+const retrieveStepAnswers = (stepAnswers, activeDocument) => {
+  let _stepAnswersLinks = stepAnswers.map(function(answer) {
+    return activeDocument["options"][answer]
+  })
+  return _stepAnswersLinks.filter(function(el) { return el != null; })
+}
+
+const cleanNonDefaultDocs = (documentQueue, activeStep) => {
+  let _cleanQueue = [...documentQueue];
+  for (var i=0; i < documentQueue.length; i++) {
+
+    if (
+      i > activeStep &&
+      documentQueue[i]["type"] === "default"
+    ) { break }
+
+
+    if (!(
+      documentQueue[i]["type"] === "default" ||
+      (
+        documentQueue[i]["type"] === "non-default" &&
+        i <= activeStep
+      )
+    )) {
+    _cleanQueue.splice(i, 1);
+    }
+  }
+  return _cleanQueue
+}
+
+const insertNewDocs = (newDocumentIdentifiers, documentQueue, activeStep) => {
+  let newDocuments = newDocumentIdentifiers.map(function(id) {
+    return retrieveNonDefaultDocument(id)
+  });
+  newDocuments.map(function(obj) {
+    let existingIdentifiers = documentQueue.map(obj => obj.identifier);
+    if (!(existingIdentifiers.includes(obj.identifier))) {
+      documentQueue.splice(activeStep+1, 0, obj)
+    }
+  });
+  return documentQueue
 }
 
 export default function Journey(props) {
@@ -38,14 +82,22 @@ export default function Journey(props) {
   const [finished, setFinished] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
   const [documentQueue, setDocumentQueue] = useState(initialiseDocumentQueue());
-  const [stepTracker, setStepTracker] = useState(retrieveDefaultStepTitles(documentQueue));
+  const [stepTracker, setStepTracker] = useState(documentQueue.map(obj => obj.step_title));
   const [activeDocument, setActiveDocument] = useState(documentQueue[activeStep]);
   const [answers, setAnswers] = useState({});
 
-  const updateDocumentQueue = () => {
+  const updateDocumentQueue = (stepAnswers) => {
     let _documentQueue = [...documentQueue];
+    _documentQueue = cleanNonDefaultDocs(_documentQueue, activeStep);
+    let newDocumentIdentifiers = retrieveStepAnswers(stepAnswers, activeDocument);
+    if (newDocumentIdentifiers.length >= 0) {
+      _documentQueue = insertNewDocs(newDocumentIdentifiers, _documentQueue, activeStep);
+      setDocumentQueue(_documentQueue);
+    }
+  }
 
-
+  const updateStepTracker = () => {
+    setStepTracker(documentQueue.map(obj => obj.step_title));
   }
 
   const updateActiveDocument = (activeStep) => {
@@ -63,7 +115,7 @@ export default function Journey(props) {
   }
 
   const increaseStep = () => {
-    if (activeStep === 3) {
+    if (activeStep === 5) {
       setFinished(1);
     }
      setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -81,6 +133,7 @@ export default function Journey(props) {
           <JourneyStep
           activeDocument={activeDocument}
           updateActiveDocument={updateActiveDocument}
+          updateDocumentQueue={updateDocumentQueue}
           retrieveActiveIdentifier={retrieveActiveIdentifier}
 
           activeStep={activeStep}
@@ -92,6 +145,7 @@ export default function Journey(props) {
           updateAnswers={updateAnswers}
 
           stepTracker={stepTracker}
+          updateStepTracker={updateStepTracker}
           />
         :
         <Result
