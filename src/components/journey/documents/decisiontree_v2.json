@@ -1,0 +1,33 @@
+[
+	{
+		"identifier":"support_type",
+		"type":"default",
+		"step_title": "Beratungstyp",
+		"question":"Sie wurden diskriminiert und suchen nach Hilfe? In welcher Form können wir Sie unterstützen?",
+		"explanation":"Erklärung",
+		"options": {
+			"juristische Ersteinschätzung": null,
+			"Vorfall melden": null,
+			"Sozialberatung": null,
+			"psychologische Beratung":null,
+			"Beratung bei Gewalterfahrung":null
+		}
+	},
+	{
+		"identifier":"merkmal",
+		"type":"default",
+		"step_title":"Merkmal",
+		"question":"Was ist der Grund, aus welchem Sie diskriminiert wurden?",
+		"explanation":"Für die juristische Einschätzung benötigen wir ein paar Angaben von Ihnen. Eine Mehrfachnennung ist möglich.",
+		"options": {
+			"Ethnische Herkunft / Rassistische Diskriminierung":"ethnisch_detail",
+			"Religion / Weltanschauung": "religion_detail",
+			"Behinderung / chronische Krankheiten": "krankheit_detail",
+			"Alter":null,
+			"Sexuelle Orientierung":"sex_detail",
+			"Geschlecht":"gender_detail",
+			"Sozialer Status (Finanzen, Bildung, Sozialleistung)":null,
+			"Ich bin mir nicht sicher":null
+		}
+	}
+]

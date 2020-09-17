@@ -46,7 +46,7 @@ export default function Journey(props) {
     return documentQueue[activeStep]["identifier"]
   }
 
-  const retrieveStepAnswers = (label) => {
+  const retrieveSelectionLink = (label) => {
     return activeDocument["options"][label]
   }
 
@@ -68,7 +68,7 @@ export default function Journey(props) {
   {/* state update functions */}
   const addDocumentQueue = (label) => {
     let _documentQueue = [...documentQueue];
-    let newDocumentIdentifier = retrieveStepAnswers(label);
+    let newDocumentIdentifier = retrieveSelectionLink(label);
     if (!(newDocumentIdentifier === null)) {
       _documentQueue = insertNewDoc(newDocumentIdentifier, _documentQueue);
       setDocumentQueue(_documentQueue);
@@ -78,7 +78,7 @@ export default function Journey(props) {
 
   const removeDocumentQueue = (label) => {
     let _documentQueue = [...documentQueue];
-    let newDocumentIdentifier = retrieveStepAnswers(label, activeDocument);
+    let newDocumentIdentifier = retrieveSelectionLink(label, activeDocument);
     if (!(newDocumentIdentifier === null)) {
       _documentQueue = removeNewDoc(newDocumentIdentifier, _documentQueue);
       setDocumentQueue(_documentQueue);
