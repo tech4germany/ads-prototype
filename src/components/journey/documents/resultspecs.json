@@ -1,0 +1,26 @@
+[
+  {
+    "identifier": 0,
+    "agg": 1,
+    "info": "lorem ipsum 1",
+    "contact": 1,
+    "blist": 0,
+    "templates": 0
+  },
+  {
+    "identifier": 1,
+    "agg": 0,
+    "info": "lorem ipsum 2",
+    "contact": 0,
+    "blist": 1,
+    "templates": 0
+  },
+  {
+    "identifier": 2,
+    "agg": 1,
+    "info": "lorem ipsum 3",
+    "contact": 1,
+    "blist": 0,
+    "templates": 1
+  }
+]

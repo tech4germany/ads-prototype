@@ -1,0 +1,38 @@
+[
+  {
+    "name": "type 1",
+    "identifier": 0,
+    "input": {
+      "merkmal": "Geschlecht",
+      "geschlecht detail": null,
+      "alter detail": null,
+      "lebensbereich": null,
+      "detailfrage 1": null,
+      "detailfrage 2": null
+    }
+  },
+  {
+    "name": "type 2",
+    "identifier": 1,
+    "input": {
+      "merkmal": "",
+      "geschlecht detail": "",
+      "alter detail": "",
+      "lebensbereich": "",
+      "detailfrage 1": "",
+      "detailfrage 2": ""
+    }
+  },
+  {
+    "name": "type 3",
+    "identifier": 2,
+    "input": {
+      "merkmal": "",
+      "geschlecht detail": "",
+      "alter detail": "",
+      "lebensbereich": "",
+      "detailfrage 1": "",
+      "detailfrage 2": ""
+    }
+  }
+]
