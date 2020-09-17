@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-import Accordion from "./ResultsInfobox.js";
+import ControlledAccordions from "./ResultsInfobox.js";
 
 import result_map from "./../documents/resultmap.json";
 import result_specs from "./../documents/resultspecs.json";
@@ -49,18 +49,21 @@ export default function Result(props) {
     let res_document = result_specs.filter(function(el) {
       return el.identifier == result_identifier
     })
-    return res_document[0]
-  }
+    if (res_document.length > 0) {return res_document[0]}
+    else {return {}}
 
+  }
   let resDoc = retrieveResultSpecs();
-  console.log(resDoc);
 
   return (
     <Grid container className={classes.mainSpace}>
       <Typography component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
         Ergebnis
       </Typography>
-      <Accordion />
+      <ControlledAccordions
+
+       resDoc={resDoc}
+       />
     </Grid>
   );
 }
