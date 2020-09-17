@@ -15,6 +15,6 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is up and running: http://localhost:${PORT}`);
+  console.log(`Server is up and running: http://0.0.0.0:${PORT}`);
 });
 
