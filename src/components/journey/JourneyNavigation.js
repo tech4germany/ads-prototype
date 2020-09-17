@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   singleButton: {
     display: 'flex',
     flexDirection: "row",
-    justifyContent: 'right',
+    justifyContent: 'flex-end',
   },
   bothButtons: {
     display: 'flex',
