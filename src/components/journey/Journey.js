@@ -122,9 +122,10 @@ export default function Journey(props) {
 
   return (
     <Grid container className={classes.mainSpace}>
-
       {
         !finished ?
+          <div>
+
           <JourneyStep
           activeDocument={activeDocument}
           updateActiveDocument={updateActiveDocument}
@@ -145,14 +146,14 @@ export default function Journey(props) {
           updateStepTracker={updateStepTracker}
 
           checkFinishLine={checkFinishLine}
-          />
+
+          /></div>
         :
         <Result
           answers={answers}
         />
       }
-
-
     </Grid>
+
   );
 }
