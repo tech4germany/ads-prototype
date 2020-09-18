@@ -31,7 +31,7 @@ export default function ControlledAccordions(props) {
 
       {
         props.resDoc.info ?
-          <Accordion>
+          <Accordion defaultExpanded>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1bh-content"

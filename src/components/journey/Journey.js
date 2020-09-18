@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import JourneyStep from "./JourneyStep.js";
 import Result from "./results/Results.js";
 
-import decision_tree from "./documents/decisiontree.json";
+import decision_tree from "./documents/decisiontree_v2.json";
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {

@@ -20,9 +20,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const isTrue = (bool) => bool===true;
-
-
 const initialiseDocumentQueue = () => {
   return result_specs.filter(function (element) {
     return element.type === "default"
@@ -36,18 +33,31 @@ export default function Result(props) {
     let answers_keys = Object.keys(props.answers);
     let result_match = null;
     for (var i=0; i < result_map.length; i++) {
+          console.log("current match:", result_match);
+          console.log("current match:", result_map[i]["identifier"]);
+      let kill=0;
       for (var y=0; y<answers_keys.length; y++) {
-        if (result_map[i]["input"][answers_keys[y]] != props.answers[answers_keys[y]][0]) { break; }
-        else { result_match = result_map[i]["identifier"] }
+        console.log("resultmap",result_map[i]["input"][answers_keys[y]]);
+        console.log("provided answer:", props.answers[answers_keys[y]]);
+        try {
+          if (!(result_map[i]["input"][answers_keys[y]].includes(props.answers[answers_keys[y]][0]))) {
+            kill = 1;
+            break;
+          }
+        } catch(err) { continue; }
+
       }
+      if (kill==1) { continue; }
+      else { result_match = result_map[i]["identifier"] }
     }
+    console.log(result_match)
     return result_match
   }
 
   const retrieveResultSpecs = () => {
     let result_identifier = matchResultType();
     let res_document = result_specs.filter(function(el) {
-      return el.identifier == result_identifier
+      return el.identifier === result_identifier
     })
     if (res_document.length > 0) {return res_document[0]}
     else {return {}}
@@ -61,7 +71,6 @@ export default function Result(props) {
         Ergebnis
       </Typography>
       <ControlledAccordions
-
        resDoc={resDoc}
        />
     </Grid>

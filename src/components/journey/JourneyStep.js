@@ -45,6 +45,7 @@ export default function JourneyStep(props) {
 
   {/* Action functions */}
   const updateStepButton = (direction) => {
+    props.updateAnswers(itemFromDocument("identifier"), stepAnswers);
     var change=0;
     if (direction === "next") {
       if (props.checkFinishLine()) {
@@ -53,7 +54,6 @@ export default function JourneyStep(props) {
     } else if (direction === "back") {
       change = -1;
     }
-    props.updateAnswers(itemFromDocument("identifier"), stepAnswers);
     props.updateActiveDocument(props.activeStep+change);
     initialiseStepAnswers(props.retrieveActiveIdentifier(props.activeStep+change))
     props.updateStep(change);
