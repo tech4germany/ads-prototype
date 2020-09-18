@@ -1,12 +1,17 @@
 import { createContainer } from 'unstated-next';
+import React, { useState } from 'react';
 
 function useAnswers(initialState = {}) {
   let [answers, setAnswers] = useState(initialState)
-  let update = (step, stepAnswers) => {
-    let _answers = {...answers};
-    _answers[step] = stepAnswers;
-    setAnswers(_answers);
+  let update = (step, label) => {
+  let _answers = {...answers};
+  if _answers.hasOwnProperty(step) {
+    _answers[step].push(label)
+  } else {
+    _answers[step] = [label]
   }
-  return { answers, decrement, increment }
+  setAnswers(_answers);
+  }
+  return { answers, update }
 }
-let Answers = createContainer(useAnswers)
+export const Answers = createContainer(useAnswers)

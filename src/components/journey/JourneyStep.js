@@ -6,6 +6,8 @@ import JourneySelection from "./JourneySelection.js";
 import JourneyNavigation from "./JourneyNavigation.js";
 import HorizontalLinearStepper from "./JourneyStepper.js";
 
+import { Answers } from "./../states/answerState.js";
+
 const useStyles = makeStyles((theme) => ({
   stepContent: {
     width: "100%"
@@ -14,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function JourneyStep(props) {
   const classes = useStyles();
-  const [stepAnswers, setStepAnswers] = useState([]);
+  let answers = Answers.useContainer();
 
   {/* auxiliary functions */}
   const itemFromDocument = (item) => {
@@ -25,27 +27,8 @@ export default function JourneyStep(props) {
     return Object.keys(props.activeDocument["options"])
   }
 
-  {/* state update functions */}
-  const initialiseStepAnswers = (identifier) => {
-    if (props.answers.hasOwnProperty(identifier)) {
-      let _stepAnswers = props.answers[identifier];
-      setStepAnswers(_stepAnswers);
-    } else {setStepAnswers([])}
-  }
-
-  const updateStepAnswers = (label) => {
-    let _stepAnswers = [...stepAnswers];
-    if (!(_stepAnswers.includes(label))) {
-      _stepAnswers.push(label);
-    } else {
-      _stepAnswers = _stepAnswers.filter(function(e) {return e !== label})
-    }
-    setStepAnswers(_stepAnswers)
-  }
-
   {/* Action functions */}
   const updateStepButton = (direction) => {
-    props.updateAnswers(itemFromDocument("identifier"), stepAnswers);
     var change=0;
     if (direction === "next") {
       if (props.checkFinishLine()) {
@@ -60,7 +43,7 @@ export default function JourneyStep(props) {
   }
 
   const updateStepStepper = (index) => {
-    props.updateAnswers(itemFromDocument("identifier"), stepAnswers);
+    answers.update(itemFromDocument("identifier"), stepAnswers);
     props.setActiveStep(index);
     props.updateActiveDocument(index);
     initialiseStepAnswers(props.retrieveActiveIdentifier(index))

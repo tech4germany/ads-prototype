@@ -5,6 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import JourneyStep from "./JourneyStep.js";
 import Result from "./results/Results.js";
 
+import { ActiveStep } from "./../states/activeStepState.js";
+
 import decision_tree from "./documents/decisiontree_v2.json";
 
 const useStyles = makeStyles((theme) => ({
@@ -35,11 +37,12 @@ const retrieveNonDefaultDocument = (identifier) => {
 export default function Journey(props) {
   const classes = useStyles();
   const [finished, setFinished] = useState(0);
-  const [activeStep, setActiveStep] = useState(0);
   const [documentQueue, setDocumentQueue] = useState(initialiseDocumentQueue());
   const [stepTracker, setStepTracker] = useState(documentQueue.map(obj => obj.step_title));
-  const [activeDocument, setActiveDocument] = useState(documentQueue[activeStep]);
-  const [answers, setAnswers] = useState({});
+
+  let activeStep = ActiveStep.useContainer();
+  const [activeDocument, setActiveDocument] = useState(documentQueue[activeStep.activeStep]);
+
 
   {/* auxiliary functions */}
   const retrieveActiveIdentifier = (activeStep) => {
@@ -54,7 +57,7 @@ export default function Journey(props) {
     let existingIdentifiers = documentQueue.map(obj => obj.identifier);
     if (!(existingIdentifiers.includes(newDocumentIdentifier.identifier))) {
       let newDocument = retrieveNonDefaultDocument(newDocumentIdentifier);
-      documentQueue.splice(activeStep+1, 0, newDocument);
+      documentQueue.splice(activeStep.activeStep+1, 0, newDocument);
       }
     return documentQueue
   }
@@ -94,27 +97,8 @@ export default function Journey(props) {
     setActiveDocument(documentQueue[activeStep]);
   }
 
-  const updateAnswers = (step, stepAnswers) => {
-    let _answers = {...answers};
-    _answers[step] = stepAnswers;
-    setAnswers(_answers);
-  }
-
-  const updateStep = (change) => {
-    switch(change) {
-      case 1:
-        setActiveStep((prevActiveStep) => prevActiveStep + 1);
-        break;
-      case -1:
-        setActiveStep((prevActiveStep) => prevActiveStep - 1);
-        break;
-      default:
-        break;
-    }
-  };
-
   const checkFinishLine = () => {
-    if (activeStep+2 > documentQueue.length) {
+    if (activeStep.activeStep+2 > documentQueue.length) {
       setFinished(1)
       return true
     } else { return false }
@@ -125,7 +109,6 @@ export default function Journey(props) {
       {
         !finished ?
           <div>
-
           <JourneyStep
           activeDocument={activeDocument}
           updateActiveDocument={updateActiveDocument}
@@ -135,12 +118,6 @@ export default function Journey(props) {
           removeDocumentQueue={removeDocumentQueue}
 
           retrieveActiveIdentifier={retrieveActiveIdentifier}
-          activeStep={activeStep}
-          setActiveStep={setActiveStep}
-          updateStep={updateStep}
-
-          answers={answers}
-          updateAnswers={updateAnswers}
 
           stepTracker={stepTracker}
           updateStepTracker={updateStepTracker}
@@ -150,7 +127,6 @@ export default function Journey(props) {
           /></div>
         :
         <Result
-          answers={answers}
         />
       }
     </Grid>

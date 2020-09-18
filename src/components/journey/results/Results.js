@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 import ControlledAccordions from "./ResultsInfobox.js";
+import { Answers } from "./../../states/answerState.js";
 
 import result_map from "./../documents/resultmap.json";
 import result_specs from "./../documents/resultspecs.json";
@@ -28,9 +29,11 @@ const initialiseDocumentQueue = () => {
 
 export default function Result(props) {
   const classes = useStyles();
+  let answers = Answers.useContainer();
+  console.log(answers);
 
   const matchResultType = () => {
-    let answers_keys = Object.keys(props.answers);
+    let answers_keys = Object.keys(answers);
     let result_match = null;
     for (var i=0; i < result_map.length; i++) {
           console.log("current match:", result_match);
@@ -38,9 +41,9 @@ export default function Result(props) {
       let kill=0;
       for (var y=0; y<answers_keys.length; y++) {
         console.log("resultmap",result_map[i]["input"][answers_keys[y]]);
-        console.log("provided answer:", props.answers[answers_keys[y]]);
+        console.log("provided answer:", answers[answers_keys[y]]);
         try {
-          if (!(result_map[i]["input"][answers_keys[y]].includes(props.answers[answers_keys[y]][0]))) {
+          if (!(result_map[i]["input"][answers_keys[y]].includes(answers[answers_keys[y]][0]))) {
             kill = 1;
             break;
           }
