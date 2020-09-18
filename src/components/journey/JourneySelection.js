@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: "space-between",
+    flexWrap: "wrap",
     '& > *': {
       margin: theme.spacing(1),
     },
