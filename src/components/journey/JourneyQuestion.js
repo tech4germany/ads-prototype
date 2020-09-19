@@ -1,7 +1,13 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 
+import { DocumentQueue } from "./../states/documentQueueState.js";
+import { ActiveStep } from "./../states/activeStepState.js";
+
 export default function JourneyQuestion(props) {
+  let documentQueue = DocumentQueue.useContainer();
+  let activeStep = ActiveStep.useContainer();
+  let activeDocument = documentQueue.active(activeStep.self)
 
   return (
     <div>
@@ -12,7 +18,7 @@ export default function JourneyQuestion(props) {
         color="textPrimary"
         gutterBottom
       >
-        {props.question}
+        {activeDocument.question}
       </Typography>
 
       <Typography
@@ -22,7 +28,7 @@ export default function JourneyQuestion(props) {
         color="textPrimary"
         gutterBottom
       >
-        {props.explanation}
+        {activeDocument.explanation}
       </Typography>
     </div>
 );

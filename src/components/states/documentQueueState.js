@@ -1,13 +1,22 @@
 import { createContainer } from 'unstated-next';
 import React, { useState } from 'react';
 
-{/*
+import decision_tree from "./../journey/documents/decisiontree_v2.json";
 
-const retrieveSelectionLink = (label) => {
-  return activeDocument["options"][label]
+const initialiseDocumentQueue = () => {
+  return decision_tree.filter(function (element) {
+    return element.type === "default"
+  })
 }
 
-const insertNewDoc = (newDocumentIdentifier, documentQueue) => {
+const retrieveNonDefaultDocument = (identifier) => {
+  let _newDoc = decision_tree.filter(function (element) {
+    return element.identifier === identifier
+  })
+  return _newDoc[0]
+}
+
+const insertNewDoc = (newDocumentIdentifier, activeStep, documentQueue) => {
   let existingIdentifiers = documentQueue.map(obj => obj.identifier);
   if (!(existingIdentifiers.includes(newDocumentIdentifier.identifier))) {
     let newDocument = retrieveNonDefaultDocument(newDocumentIdentifier);
@@ -22,31 +31,37 @@ const removeNewDoc = (newDocumentIdentifier, documentQueue) => {
   })
 }
 
-function useDocumentQueue(initialState = {}) {
-  let [documentQueue, setDocumentQueue] = useState(initialState)
+function useDocumentQueue(initialState = initialiseDocumentQueue()) {
+  let [self, setDocumentQueue] = useState(initialState);
 
-  const addDocumentQueue = (label) => {
-    let _documentQueue = [...documentQueue];
-    let newDocumentIdentifier = retrieveSelectionLink(label);
+  let active = (activeStep) => {
+    return self[activeStep]
+  }
+
+  let steps = () => {
+    return self.map(obj => obj.step_title)
+  }
+
+  const add = (activeStep, label) => {
+    let _documentQueue = [...self];
+    let activeDocument = _documentQueue[activeStep];
+    let newDocumentIdentifier = activeDocument["options"][label];
     if (!(newDocumentIdentifier === null)) {
       _documentQueue = insertNewDoc(newDocumentIdentifier, _documentQueue);
       setDocumentQueue(_documentQueue);
-      updateStepTracker(_documentQueue);
     }
   }
 
-  const removeDocumentQueue = (label) => {
-    let _documentQueue = [...documentQueue];
-    let newDocumentIdentifier = retrieveSelectionLink(label, activeDocument);
+  const remove = (activeStep, label) => {
+    let _documentQueue = [...self];
+    let activeDocument = _documentQueue[activeStep];
+    let newDocumentIdentifier = activeDocument["options"][label];
     if (!(newDocumentIdentifier === null)) {
       _documentQueue = removeNewDoc(newDocumentIdentifier, _documentQueue);
       setDocumentQueue(_documentQueue);
-      updateStepTracker(_documentQueue);
     }
   }
 
-  return { documentQueue }
+  return { self, active, steps, add, remove }
 }
-
 export const DocumentQueue = createContainer(useDocumentQueue)
-*/}

@@ -4,6 +4,9 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 
+import { DocumentQueue } from "./../states/documentQueueState.js";
+import { ActiveStep } from "./../states/activeStepState.js";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
@@ -15,15 +18,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HorizontalLinearStepper(props) {
   const classes = useStyles();
+  let activeStep = ActiveStep.useContainer();
+  let documentQueue = DocumentQueue.useContainer();
+
+  let steps = documentQueue.steps()
 
   return (
     <div className={classes.root}>
-      <Stepper className={classes.stepper} activeStep={props.activeStep} alternativeLabel>
-        {props.steps.map((label, index) => {
+      <Stepper className={classes.stepper} activeStep={activeStep.self} alternativeLabel>
+        {steps.map((label, index) => {
           return (
             <Step
              key={label} >
-              <StepLabel onClick={() => { props.updateStep(index) }}>{label}</StepLabel>
+              <StepLabel onClick={() => { activeStep.jumpTo(index) }}>{label}</StepLabel>
             </Step>
           );
         })}

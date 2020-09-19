@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { ActiveStep } from "./../states/activeStepState.js";
 
+
 const useStyles = makeStyles((theme) => ({
   buttonGroup: {
     '& > *': {
@@ -30,24 +31,24 @@ export default function JourneyNavigation(props) {
   return (
     <div className={classes.buttonGroup}>
         {
-          props.activeStep === 0 ?
+          activeStep.self === 0 ?
             <div className={classes.singleButton}>
               <Button
                 variant="contained"
                 disableElevation
-                onClick={() => {props.updateStep("next")}}
+                onClick={() => activeStep.increment()}
               >Next</Button>
             </div>
             :
             <div className={classes.bothButtons}>
               <Button
                 variant="outlined"
-                onClick={() => {props.updateStep("back")}}
+                onClick={() => activeStep.decrement()}
               >Back</Button>
               <Button
                 variant="contained"
                 disableElevation
-                onClick={() => {props.updateStep("next")}}
+                onClick={() => activeStep.increment()}
               >Next</Button>
             </div>
         }
