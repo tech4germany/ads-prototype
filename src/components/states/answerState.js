@@ -1,5 +1,5 @@
 import { createContainer } from 'unstated-next';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function useAnswers(initialState = {}) {
   let [self, setAnswers] = useState(initialState)

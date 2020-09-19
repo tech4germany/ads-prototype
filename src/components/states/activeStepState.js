@@ -1,5 +1,5 @@
 import { createContainer } from 'unstated-next';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function useActiveStep(initialState = 0) {
   let [self, setActiveStep] = useState(initialState)

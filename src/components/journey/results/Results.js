@@ -21,12 +21,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const initialiseDocumentQueue = () => {
-  return result_specs.filter(function (element) {
-    return element.type === "default"
-  })
-}
-
 export default function Result(props) {
   const classes = useStyles();
   let answers = Answers.useContainer();

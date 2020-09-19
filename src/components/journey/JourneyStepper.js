@@ -21,13 +21,13 @@ export default function HorizontalLinearStepper(props) {
   let activeStep = ActiveStep.useContainer();
   let documentQueue = DocumentQueue.useContainer();
   let steps = documentQueue.steps()
+  let activeDefaultStep = documentQueue.countDefaultSteps(activeStep.self);
 
-  console.log(steps)
   return (
     <div className={classes.root}>
       <Stepper
         className={classes.stepper}
-        activeStep={activeStep.self}
+        activeStep={activeDefaultStep}
         alternativeLabel
       >
         {steps.map((label, index) => {

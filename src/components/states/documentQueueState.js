@@ -1,5 +1,5 @@
 import { createContainer } from 'unstated-next';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import decision_tree from "./../journey/documents/decisiontree_v2.json";
 
@@ -38,9 +38,18 @@ function useDocumentQueue(initialState = initialiseDocumentQueue()) {
     return self[activeStep]
   }
 
+  let countDefaultSteps = (activeStep) => {
+    let _documentQueue = [...self];
+    let slicedDocQueue = _documentQueue.slice(0, activeStep+1);
+    let remainingDefaultDoc = slicedDocQueue.filter(function(el) {
+      return el.type ==="default"
+    })
+    return remainingDefaultDoc.length-1
+  }
+
   let steps = () => {
     let defaultSteps = self.filter(function(el) {
-      return el.type=="default"
+      return el.type ==="default"
     });
     return defaultSteps.map(obj => obj.step_title )
   }
@@ -65,6 +74,6 @@ function useDocumentQueue(initialState = initialiseDocumentQueue()) {
     }
   }
 
-  return { self, active, steps, add, remove }
+  return { self, active, steps, add, remove, countDefaultSteps }
 }
 export const DocumentQueue = createContainer(useDocumentQueue)

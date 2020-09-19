@@ -5,8 +5,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import JourneyStep from "./JourneyStep.js";
 import Result from "./results/Results.js";
 
-import { ActiveStep } from "./../states/activeStepState.js";
-
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
       backgroundColor: theme.palette.background.paper,

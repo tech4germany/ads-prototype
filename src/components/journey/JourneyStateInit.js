@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react';
 
 import Journey from "./Journey.js";
 

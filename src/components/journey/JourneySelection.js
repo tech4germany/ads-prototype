@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react';
-import Button from '@material-ui/core/Button';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
 import Paper from '@material-ui/core/Paper';
 
 import { Answers } from "./../states/answerState.js";
@@ -54,8 +52,7 @@ export default function JourneySelection(props) {
                     documentQueue.add(activeStep.self, label)
                     }}
                   variant="outlined"
-                  disableRipple
-                  disableFocusRipple>
+                  >
                     {label}
                 </Paper>
               :

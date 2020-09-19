@@ -45,7 +45,6 @@ export default function JourneyNavigation(props) {
               <Button
                 variant="outlined"
                 onClick={() => activeStep.decrement()}
-                disableFocusRipple
               >Back</Button>
               <Button
                 variant="contained"
