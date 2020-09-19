@@ -7,7 +7,6 @@ import Result from "./results/Results.js";
 
 import { ActiveStep } from "./../states/activeStepState.js";
 
-
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
       backgroundColor: theme.palette.background.paper,

@@ -47,7 +47,7 @@ function useDocumentQueue(initialState = initialiseDocumentQueue()) {
     let activeDocument = _documentQueue[activeStep];
     let newDocumentIdentifier = activeDocument["options"][label];
     if (!(newDocumentIdentifier === null)) {
-      _documentQueue = insertNewDoc(newDocumentIdentifier, _documentQueue);
+      _documentQueue = insertNewDoc(newDocumentIdentifier, activeStep, _documentQueue);
       setDocumentQueue(_documentQueue);
     }
   }

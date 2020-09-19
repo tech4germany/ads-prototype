@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import Paper from '@material-ui/core/Paper';
 
 import { Answers } from "./../states/answerState.js";
 import { ActiveStep } from "./../states/activeStepState.js";
@@ -16,6 +18,15 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
   },
+  buttonCardInactive: {
+    backgroundColor: "white",
+    padding: theme.spacing(3)
+  },
+  buttonCardActive: {
+    color: "white",
+    backgroundColor: "grey",
+    padding: theme.spacing(3)
+  }
 }));
 
 export default function JourneySelection(props) {
@@ -30,29 +41,33 @@ export default function JourneySelection(props) {
 
   return (
     <div className={classes.root}>
+
         {options.map((label, index) => {
           return(
             <div key={index}>
             {
-              stepAnswers.includes(label) ?
-              <Button
+              !stepAnswers.includes(label) ?
+                <Paper className={classes.buttonCardInactive}
+                elevation={0}
+                  onClick={() => {
+                    answers.update(activeDocument.identifier, label)
+                    documentQueue.add(activeStep.self, label)
+                    }}
+                  variant="outlined"
+                  disableRipple
+                  disableFocusRipple>
+                    {label}
+                </Paper>
+              :
+              <Paper className={classes.buttonCardActive}
+              elevation={0}
                 onClick={() => {
                   answers.update(activeDocument.identifier, label)
                   documentQueue.remove(activeStep.self, label)
                 }}
-                variant="contained"
-                disableElevation>
+                >
                   {label}
-              </Button>
-              :
-              <Button
-                onClick={() => {
-                  answers.update(activeDocument.identifier, label)
-                  documentQueue.remove(activeStep.self, label)
-                  }}
-                variant="outlined">
-                  {label}
-              </Button>
+              </Paper>
             }
             </div>
           );

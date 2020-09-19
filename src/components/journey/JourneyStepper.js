@@ -24,7 +24,11 @@ export default function HorizontalLinearStepper(props) {
 
   return (
     <div className={classes.root}>
-      <Stepper className={classes.stepper} activeStep={activeStep.self} alternativeLabel>
+      <Stepper
+        className={classes.stepper}
+        activeStep={activeStep.self}
+        alternativeLabel
+      >
         {steps.map((label, index) => {
           return (
             <Step
