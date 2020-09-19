@@ -20,7 +20,6 @@ export default function HorizontalLinearStepper(props) {
   const classes = useStyles();
   let activeStep = ActiveStep.useContainer();
   let documentQueue = DocumentQueue.useContainer();
-
   let steps = documentQueue.steps()
 
   return (

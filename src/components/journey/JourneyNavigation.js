@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { ActiveStep } from "./../states/activeStepState.js";
 
-
 const useStyles = makeStyles((theme) => ({
   buttonGroup: {
     '& > *': {
