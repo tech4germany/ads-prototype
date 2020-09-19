@@ -39,7 +39,10 @@ function useDocumentQueue(initialState = initialiseDocumentQueue()) {
   }
 
   let steps = () => {
-    return self.map(obj => obj.step_title)
+    let defaultSteps = self.filter(function(el) {
+      return el.type=="default"
+    });
+    return defaultSteps.map(obj => obj.step_title )
   }
 
   const add = (activeStep, label) => {

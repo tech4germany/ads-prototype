@@ -22,6 +22,7 @@ export default function HorizontalLinearStepper(props) {
   let documentQueue = DocumentQueue.useContainer();
   let steps = documentQueue.steps()
 
+  console.log(steps)
   return (
     <div className={classes.root}>
       <Stepper

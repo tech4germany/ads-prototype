@@ -4,8 +4,6 @@ import React, { useState } from 'react';
 function useActiveStep(initialState = 0) {
   let [self, setActiveStep] = useState(initialState)
   let increment = (documentQueueLength) => {
-    console.log("doc", documentQueueLength)
-    console.log("active", self)
     if (self+1 < documentQueueLength) {
       setActiveStep(self + 1)
     }
