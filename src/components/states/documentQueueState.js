@@ -39,8 +39,7 @@ function useDocumentQueue(initialState = initialiseDocumentQueue()) {
   }
 
   let countDefaultSteps = (activeStep) => {
-    let _documentQueue = [...self];
-    let slicedDocQueue = _documentQueue.slice(0, activeStep+1);
+    let slicedDocQueue = self.slice(0, activeStep+1);
     let remainingDefaultDoc = slicedDocQueue.filter(function(el) {
       return el.type ==="default"
     })

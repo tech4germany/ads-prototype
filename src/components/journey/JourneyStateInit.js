@@ -5,6 +5,7 @@ import Journey from "./Journey.js";
 import { Answers } from "./../states/answerState.js";
 import { ActiveStep } from "./../states/activeStepState.js";
 import { DocumentQueue } from "./../states/documentQueueState.js";
+import { ShowResult } from "./../states/showResultState.js";
 
 export default function JourneyStateInit(props) {
 
@@ -12,9 +13,11 @@ export default function JourneyStateInit(props) {
     <Answers.Provider>
     <ActiveStep.Provider>
     <DocumentQueue.Provider>
+    <ShowResult.Provider>
 
       <Journey/>
 
+    </ShowResult.Provider>
     </DocumentQueue.Provider>
     </ActiveStep.Provider>
     </Answers.Provider>

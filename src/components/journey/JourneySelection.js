@@ -18,12 +18,14 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonCardInactive: {
     backgroundColor: "white",
-    padding: theme.spacing(3)
+    padding: theme.spacing(3),
+    cursor: "pointer"
   },
   buttonCardActive: {
     color: "white",
     backgroundColor: "grey",
-    padding: theme.spacing(3)
+    padding: theme.spacing(3),
+    cursor: "pointer"
   }
 }));
 
@@ -62,6 +64,7 @@ export default function JourneySelection(props) {
                   answers.update(activeDocument.identifier, label)
                   documentQueue.remove(activeStep.self, label)
                 }}
+                variant="outlined"
                 >
                   {label}
               </Paper>

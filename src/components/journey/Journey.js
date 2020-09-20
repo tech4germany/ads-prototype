@@ -5,6 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import JourneyStep from "./JourneyStep.js";
 import Result from "./results/Results.js";
 
+import { ShowResult } from "./../states/showResultState.js";
+
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
       backgroundColor: theme.palette.background.paper,
@@ -19,17 +21,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Journey(props) {
   const classes = useStyles();
-  const [finished, setFinished] = useState(0)
-
+  let showResult = ShowResult.useContainer();
+  console.log(showResult.self)
   return (
     <Grid container className={classes.mainSpace}>
       {
-        !finished ?
-          <div>
-          <JourneyStep /></div>
+        !showResult.self ?
+        <JourneyStep />
         :
-        <Result
-        />
+        <Result/>
       }
     </Grid>
 
