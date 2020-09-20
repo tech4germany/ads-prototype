@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import NavBar from './components/shared/AppBar.js';
 import FootBar from './components/shared/FootBar.js';
 import Start from './components/start/Start.js';
-import Journey from "./components/journey/Journey.js"
+import JourneyStateInit from "./components/journey/JourneyStateInit.js"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -61,7 +61,7 @@ export default function App() {
                         <Start />
                       </Route>
                       <Route path="/journey">
-                        <Journey
+                        <JourneyStateInit
 
                         />
                       </Route>
