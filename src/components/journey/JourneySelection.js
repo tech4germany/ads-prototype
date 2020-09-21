@@ -20,32 +20,65 @@ const useStyles = makeStyles((theme) => ({
     margin: "0px"
   },
   buttonCardInactive: {
-    backgroundColor: "white",
-    padding: theme.spacing(3),
-    cursor: "pointer",
-    width: "25vh",
-    height: "7vh",
     display: "flex",
     flexWrap: "wrap",
     flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: "0px"
+    justifyContent: "left",
+    alignItems: "flex-start",
+    width: "18vw",
+    cursor: "pointer",
+    height: "10vh",
+    borderRadius: "0px",
   },
   buttonCardActive: {
-    color: "white",
-    backgroundColor: "grey",
-    padding: theme.spacing(3),
-    cursor: "pointer",
-    width: "25vh",
-    height: "7vh",
     display: "flex",
     flexWrap: "wrap",
     flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: "0px"
-  }
+    justifyContent: "left",
+    alignItems: "flex-start",
+    width: "18vw",
+    cursor: "pointer",
+    height: "10vh",
+    borderRadius: "0px",
+  },
+  buttonTextBoxActive: {
+    backgroundColor: "#f3b500",
+    padding: theme.spacing(3,4,3,4),
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
+    height: "100%",
+    width: "98%"
+  },
+  buttonTextBoxInactive: {
+    backgroundColor: "white",
+    padding: theme.spacing(3,4,3,4),
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
+    height: "100%",
+    width: "98%"
+  },
+  buttonStripe: {
+    display: "flex",
+    backgroundColor: "#f3b500",
+    height: "100%",
+    width: "2%"
+  },
+  positionStart: {
+    marginLeft: "0px",
+    marginRight: "2vw",
+    marginTop: "0px",
+    marginBottom: "20px"
+  },
+  positionCenter: {
+    marginLeft: "0px",
+    marginRight: "2vw",
+    marginTop: "0px",
+    marginBottom: "20px"  },
+  positionEnd: {
+    marginLeft: "0vw",
+    marginRight: "0px",
+    marginTop: "0px",
+    marginBottom: "20px"  },
 }));
 
 export default function JourneySelection(props) {
@@ -62,34 +95,67 @@ export default function JourneySelection(props) {
     <div className={classes.root}>
 
         {options.map((label, index) => {
-          return(
-            <div key={index} className={classes.buttonContainer}>
-            {
-              !stepAnswers.includes(label) ?
-                <Paper className={classes.buttonCardInactive}
-                elevation={0}
-                  onClick={() => {
-                    answers.update(activeDocument.identifier, label)
-                    documentQueue.add(activeStep.self, label)
-                    }}
-                  >
-                    {label}
-                </Paper>
-              :
-              <Paper className={classes.buttonCardActive}
-              elevation={0}
+
+          let CardWithPosition;
+          if (index%4===0) {
+            CardWithPosition = (props) => {
+              return(
+                <div className={classes.positionStart}>
+                  {props.component}
+                </div>
+              );
+            }
+          } else if (index%4===3) {
+            CardWithPosition = (props) => {
+              return(
+                <div className={classes.positionEnd}>
+                  {props.component}
+                </div>
+              )
+            }
+          } else {
+            CardWithPosition = (props) => {
+              return(
+                <div className={classes.positionCenter}>
+                  {props.component}
+                </div>
+              )
+            }
+          }
+
+          let CardWithActive;
+          if (!stepAnswers.includes(label)) {
+            CardWithActive =
+              <div className={classes.buttonCardInactive}
+                onClick={() => {
+                  answers.update(activeDocument.identifier, label)
+                  documentQueue.add(activeStep.self, label)
+                }}
+              >
+                <div className={classes.buttonTextBoxInactive}>
+                  {label}
+                </div>
+               <div className={classes.buttonStripe}></div>
+              </div>
+          } else {
+            CardWithActive =
+              <div className={classes.buttonCardActive}
                 onClick={() => {
                   answers.update(activeDocument.identifier, label)
                   documentQueue.remove(activeStep.self, label)
                 }}
-                >
+              >
+                <div className={classes.buttonTextBoxActive}>
                   {label}
-              </Paper>
-            }
-            </div>
-          );
+                </div>
+                <div className={classes.buttonStripe}></div>
+              </div>
+          }
+
+          return(
+            <CardWithPosition component={CardWithActive}/>
+          )
         })}
     </div>
-
-  );
+  )
 }
