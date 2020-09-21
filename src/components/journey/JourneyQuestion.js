@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
+    paddingLeft: "0.8vw"
   },
   question: {
     fontFamily: "BundesSansWeb-Bold",

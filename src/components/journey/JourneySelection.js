@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+import  Grid from '@material-ui/core/Grid';
 
 import { Answers } from "./../states/answerState.js";
 import { ActiveStep } from "./../states/activeStepState.js";
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
-    minHeight: "36vh"
+    minHeight: "39vh"
   },
   buttonContainer: {
     margin: "0px"
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "left",
     alignItems: "flex-start",
-    width: "18vw",
+    width: "100%",
     cursor: "pointer",
     height: "10vh",
     borderRadius: "0px",
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "left",
     alignItems: "flex-start",
-    width: "18vw",
+    width: "100%",
     cursor: "pointer",
     height: "10vh",
     borderRadius: "0px",
@@ -65,22 +65,14 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "2%"
   },
-  positionStart: {
-    marginLeft: "0px",
-    marginRight: "2vw",
+  buttonTextContainer: {
+    paddingLeft: "0.8vw",
+    paddingRight: "0.8vw",
+    marginBottom: "3vh",
     marginTop: "0px",
-    marginBottom: "2vh"
+    marginLeft: "0px",
+    marginRight: "0px"
   },
-  positionCenter: {
-    marginLeft: "0px",
-    marginRight: "2vw",
-    marginTop: "0px",
-    marginBottom: "2vh"  },
-  positionEnd: {
-    marginLeft: "0vw",
-    marginRight: "0px",
-    marginTop: "0px",
-    marginBottom: "2vh"  },
 }));
 
 export default function JourneySelection(props) {
@@ -94,36 +86,19 @@ export default function JourneySelection(props) {
   let options = Object.keys(activeDocument["options"]);
 
   return (
-    <div className={classes.root}>
+    <Grid Container className={classes.root} >
 
         {options.map((label, index) => {
 
-          let CardWithPosition;
-          if (index%4===0) {
-            CardWithPosition = (props) => {
-              return(
-                <div className={classes.positionStart}>
-                  {props.component}
-                </div>
-              );
-            }
-          } else if (index%4===3) {
-            CardWithPosition = (props) => {
-              return(
-                <div className={classes.positionEnd}>
-                  {props.component}
-                </div>
-              )
-            }
-          } else {
-            CardWithPosition = (props) => {
-              return(
-                <div className={classes.positionCenter}>
-                  {props.component}
-                </div>
-              )
-            }
+
+          let CardWithPosition = (props) => {
+            return(
+              <Grid Item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
+                {props.component}
+              </Grid>
+            )
           }
+
 
           let CardWithActive;
           if (!stepAnswers.includes(label)) {
@@ -158,6 +133,6 @@ export default function JourneySelection(props) {
             <CardWithPosition component={CardWithActive}/>
           )
         })}
-    </div>
+    </Grid>
   )
 }
