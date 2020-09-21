@@ -10,11 +10,14 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: "stretch",
+    alignItems: "flex-start",
     flexWrap: "wrap",
     '& > *': {
       margin: theme.spacing(1),
     },
+  },
+  buttonContainer: {
+    margin: "0px"
   },
   buttonCardInactive: {
     backgroundColor: "white",
@@ -26,8 +29,8 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center"
-
+    alignItems: "center",
+    borderRadius: "0px"
   },
   buttonCardActive: {
     color: "white",
@@ -40,7 +43,8 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    borderRadius: "0px"
   }
 }));
 
@@ -59,7 +63,7 @@ export default function JourneySelection(props) {
 
         {options.map((label, index) => {
           return(
-            <div key={index}>
+            <div key={index} className={classes.buttonContainer}>
             {
               !stepAnswers.includes(label) ?
                 <Paper className={classes.buttonCardInactive}
@@ -68,7 +72,6 @@ export default function JourneySelection(props) {
                     answers.update(activeDocument.identifier, label)
                     documentQueue.add(activeStep.self, label)
                     }}
-                  variant="outlined"
                   >
                     {label}
                 </Paper>
@@ -79,7 +82,6 @@ export default function JourneySelection(props) {
                   answers.update(activeDocument.identifier, label)
                   documentQueue.remove(activeStep.self, label)
                 }}
-                variant="outlined"
                 >
                   {label}
               </Paper>

@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'BundesSansWeb-Bold';
+  src: local('BundesSansWeb-Bold'), url(./fonts/BundesSchrift/BundesSansWeb-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'BundesSansWeb-Regular';
+  src: local('BundesSansWeb-Regular'), url(./fonts/BundesSchrift/BundesSansWeb-Regular.woff) format('woff');
+}

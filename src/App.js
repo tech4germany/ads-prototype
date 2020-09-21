@@ -11,25 +11,25 @@ import JourneyStateInit from "./components/journey/JourneyStateInit.js"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "rgba(0, 73, 139, 0.15)",
+    backgroundColor: "#fef3df",
     height:"100%",
     minHeight: "100vh",
     display: 'flex',
     flexDirection: 'column',
+    alignItems: "center"
   },
   mainArea: {
     minHeight: "80vh",
     display: 'flex',
     flexDirection: "row",
     justifyContent: "center",
+    width: "78vw",
+    margin: theme.spacing(0),
+    padding: theme.spacing(0),
   },
-  ptSpace: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    width: "80%",
-    height: "auto"
-  },
+  placeholder: {
+    height: "11vh",
+  }
 }));
 
 export default function App() {
@@ -44,11 +44,9 @@ export default function App() {
           <NavBar classes={classes}/>
           {/* End Navbar */}
 
-          <Grid container spacing={3}>
-            <Grid item xs></Grid>
-            <Grid item lg={8} md={8} xs={8} className={classes.mainArea}>
+          <div className={classes.placeholder}></div>
 
-              <main>
+          <div className={classes.mainArea}>
 
                 {/* Router */}
                  <Router>
@@ -63,10 +61,7 @@ export default function App() {
                  </Router>
                 {/* End Router */}
 
-              </main>
-              </Grid>
-            <Grid item xs></Grid>
-          </Grid>
+          </div>
         </div>
     </React.Fragment>
   );

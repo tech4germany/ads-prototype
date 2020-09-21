@@ -3,8 +3,8 @@
 		"identifier":"merkmal",
 		"type":"default",
 		"step_title":"Merkmal",
-		"question":"Was ist der Grund, aus welchem Sie diskriminiert wurden?",
-		"explanation":"Für die juristische Einschätzung benötigen wir ein paar Angaben von Ihnen. Eine Mehrfachnennung ist möglich.",
+		"question":"Aufgrund welchen Merkmals sind Sie diskriminiert worden?",
+		"explanation":"(Mehrfachauswahl ist möglich)",
 		"options": {
 			"Ethnische Herkunft / Rassistische Diskriminierung":"merkmal_ethnisch_detail",
 			"Religion / Weltanschauung": "merkmal_religion_detail",

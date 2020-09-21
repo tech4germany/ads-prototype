@@ -7,7 +7,6 @@ import logo from './../../images/antidiskriminierungsstelle.jpg';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
     backgroundColor: theme.palette.background.paper,
     maxHeight: '20vh',
   },
