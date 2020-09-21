@@ -10,11 +10,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'row',
+    alignContent: "flex-start",
     alignItems: "flex-start",
     flexWrap: "wrap",
     '& > *': {
       margin: theme.spacing(1),
     },
+    minHeight: "36vh"
   },
   buttonContainer: {
     margin: "0px"
@@ -45,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#f3b500",
     padding: theme.spacing(3,4,3,4),
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "18px",
+    fontSize: "1.7vh",
     height: "100%",
     width: "98%"
   },
@@ -53,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     padding: theme.spacing(3,4,3,4),
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "18px",
+    fontSize: "1.7vh",
     height: "100%",
     width: "98%"
   },
@@ -67,18 +69,18 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "0px",
     marginRight: "2vw",
     marginTop: "0px",
-    marginBottom: "20px"
+    marginBottom: "2vh"
   },
   positionCenter: {
     marginLeft: "0px",
     marginRight: "2vw",
     marginTop: "0px",
-    marginBottom: "20px"  },
+    marginBottom: "2vh"  },
   positionEnd: {
     marginLeft: "0vw",
     marginRight: "0px",
     marginTop: "0px",
-    marginBottom: "20px"  },
+    marginBottom: "2vh"  },
 }));
 
 export default function JourneySelection(props) {
