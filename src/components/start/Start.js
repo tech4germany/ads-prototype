@@ -7,13 +7,13 @@ import StartButton from "./StartButton.js";
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
-      backgroundColor: theme.palette.background.paper,
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       padding: theme.spacing(6, 3, 6, 3),
       margin: theme.spacing(6, 3, 6, 3),
       width: "94%",
+      height: "auto"
   }
 }));
 

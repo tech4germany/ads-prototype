@@ -9,7 +9,6 @@ import { ResultSpecs } from "./../../states/resultState.js";
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
-      backgroundColor: theme.palette.background.paper,
       display: "flex",
       flexDirection: "column",
       alignItems: "center",

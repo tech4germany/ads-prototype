@@ -9,13 +9,13 @@ import { ShowResult } from "./../states/showResultState.js";
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: "inherit",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       padding: theme.spacing(6, 3, 6, 3),
       margin: theme.spacing(6, 3, 6, 3),
-      width: "94%",
+      minWidth: "80%",
   },
 }));
 

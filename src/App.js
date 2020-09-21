@@ -11,28 +11,24 @@ import JourneyStateInit from "./components/journey/JourneyStateInit.js"
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    backgroundColor: "rgba(0, 73, 139, 0.15)",
+    height:"100%",
+    minHeight: "100vh",
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh',
   },
   mainArea: {
-    backgroundColor: theme.palette.background.paper,
-    height: "100%",
-  },
-  footer: {
-    borderTop: `1px solid ${theme.palette.divider}`,
-    backgroundColor: theme.palette.background.paper,
-    marginTop: 'auto',
-    padding: theme.spacing(6),
+    minHeight: "80vh",
+    display: 'flex',
+    flexDirection: "row",
+    justifyContent: "center",
   },
   ptSpace: {
-    backgroundColor: theme.palette.action.hover,
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    marginTop: "3%",
-    marginBottom: "3%",
-    width: "100%"
+    flexDirection: "row",
+    justifyContent: "center",
+    width: "80%",
+    height: "auto"
   },
 }));
 
@@ -44,15 +40,15 @@ export default function App() {
       <CssBaseline />
         <div className={classes.root}>
 
-          <Grid container  className={classes.mainArea} spacing={3}>
+          {/* Navbar */}
+          <NavBar classes={classes}/>
+          {/* End Navbar */}
+
+          <Grid container spacing={3}>
             <Grid item xs></Grid>
-            <Grid item lg={8} md={8} xs={6}>
+            <Grid item lg={8} md={8} xs={8} className={classes.mainArea}>
 
-              {/* Navbar */}
-              <NavBar classes={classes}/>
-              {/* End Navbar */}
-
-              <main className={classes.ptSpace}>
+              <main>
 
                 {/* Router */}
                  <Router>
@@ -61,20 +57,13 @@ export default function App() {
                         <Start />
                       </Route>
                       <Route path="/journey">
-                        <JourneyStateInit
-
-                        />
+                        <JourneyStateInit />
                       </Route>
                     </Switch>
                  </Router>
                 {/* End Router */}
 
               </main>
-
-              {/* Footer */}
-              <FootBar classes={classes}/>
-              {/* End footer */}
-
               </Grid>
             <Grid item xs></Grid>
           </Grid>

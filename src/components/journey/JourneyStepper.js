@@ -12,8 +12,10 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   stepper: {
+    backgroundColor: "inherit",
+    color: "rgba(240, 172, 50, 0.4)",
     padding: theme.spacing(4,0,0,0)
-  },
+  }
 }));
 
 export default function HorizontalLinearStepper(props) {

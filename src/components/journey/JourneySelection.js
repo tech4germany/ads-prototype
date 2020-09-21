@@ -19,13 +19,28 @@ const useStyles = makeStyles((theme) => ({
   buttonCardInactive: {
     backgroundColor: "white",
     padding: theme.spacing(3),
-    cursor: "pointer"
+    cursor: "pointer",
+    width: "25vh",
+    height: "7vh",
+    display: "flex",
+    flexWrap: "wrap",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center"
+
   },
   buttonCardActive: {
     color: "white",
     backgroundColor: "grey",
     padding: theme.spacing(3),
-    cursor: "pointer"
+    cursor: "pointer",
+    width: "25vh",
+    height: "7vh",
+    display: "flex",
+    flexWrap: "wrap",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center"
   }
 }));
 
