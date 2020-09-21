@@ -49,7 +49,6 @@ export default function JourneyNavigation(props) {
             <div className={classes.singleButton}>
               <Card className={classes.buttonCardActive}
                 variant="outlined"
-                disableElevation
                 onClick={() => activeStep.increment(documentQueue.self.length)}
               >Next</Card>
             </div>
@@ -63,13 +62,11 @@ export default function JourneyNavigation(props) {
                 activeStep.isLast(documentQueue.self.length) ?
                   <Card className={classes.buttonCardActive}
                     variant="outlined"
-                    disableElevation
                     onClick={() => showResult.show()}
                   >Result</Card>
                   :
                   <Card className={classes.buttonCardActive}
                     variant="outlined"
-                    disableElevation
                     onClick={() => activeStep.increment(documentQueue.self.length)}
                   >Next</Card>
               }

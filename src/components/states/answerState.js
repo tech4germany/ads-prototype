@@ -4,6 +4,8 @@ import { useState } from 'react';
 function useAnswers(initialState = {}) {
   let [self, setAnswers] = useState(initialState)
 
+  let keys = () => Object.keys(self)
+
   let update = (identifier, label) => {
     let _answers = {...self}
     if (self.hasOwnProperty(identifier)) {
@@ -23,6 +25,6 @@ function useAnswers(initialState = {}) {
     } else { return [] }
   }
 
-  return { self, update, initialiseStep }
+  return { self, update, initialiseStep, keys }
 }
 export const Answers = createContainer(useAnswers)
