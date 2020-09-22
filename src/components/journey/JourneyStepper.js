@@ -92,7 +92,7 @@ export default function CustomizedStepper() {
   let activeDefaultStep = documentQueue.countDefaultSteps(activeStep.self);
 
   return (
-      <Stepper alternativeLabel activeStep={activeStep.self} connector={<QontoConnector />} className={classes.root}>
+      <Stepper alternativeLabel activeStep={activeDefaultStep} connector={<QontoConnector />} className={classes.root}>
         {steps.map((label) => (
           <Step key={label}>
             <StepLabel StepIconComponent={QontoStepIcon}></StepLabel>

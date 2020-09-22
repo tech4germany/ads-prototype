@@ -49,7 +49,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "1.7vh",
     height: "100%",
-    width: "98%"
+    width: "98%",
+    overflow: "hidden"
   },
   buttonTextBoxInactive: {
     backgroundColor: "white",
@@ -57,7 +58,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "1.7vh",
     height: "100%",
-    width: "98%"
+    width: "98%",
+    overflow: "hidden"
   },
   buttonStripe: {
     display: "flex",

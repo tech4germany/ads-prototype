@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    overflow: "hidden"
   }
 
 }));
@@ -53,7 +54,7 @@ export default function JourneyNavigation(props) {
       <Grid item md={4} sm={4} lg={4} xs={4} className={classes.stepperBox}>
         <Stepper/>
       </Grid>
-      <Grid item md={4} sm={4} lg={4} xs={6} className={classes.nextBox}>
+      <Grid item md={4} sm={4} lg={4} xs={4} className={classes.nextBox}>
         <NextButton/>
       </Grid>
     </Grid>

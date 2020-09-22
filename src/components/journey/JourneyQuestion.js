@@ -14,10 +14,14 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "0.8vw"
   },
   question: {
+    display: "flex",
+    flexWrap: "wrap",
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "28px"
   },
   explanation: {
+    display: "flex",
+    flexWrap: "wrap",
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "22px"
   }
