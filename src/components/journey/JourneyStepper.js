@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   stepper: {
     backgroundColor: "inherit",
     color: "rgba(240, 172, 50, 0.4)",
-    padding: theme.spacing(4,0,0,0)
+    padding: theme.spacing(0,0,0,0)
   }
 }));
 
@@ -36,7 +36,7 @@ export default function HorizontalLinearStepper(props) {
           return (
             <Step
              key={label} >
-              <StepLabel onClick={() => { activeStep.jumpTo(index) }}>{label}</StepLabel>
+              <StepLabel onClick={() => { activeStep.jumpTo(index) }}></StepLabel>
             </Step>
           );
         })}

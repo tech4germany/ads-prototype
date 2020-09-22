@@ -28,8 +28,6 @@ export default function JourneyStep(props) {
 
       <JourneyNavigation />
 
-      <HorizontalLinearStepper />
-
     </div>
   );
 }
