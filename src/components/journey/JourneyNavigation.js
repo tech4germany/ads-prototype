@@ -37,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: "2.5vh"
   }
 
 }));

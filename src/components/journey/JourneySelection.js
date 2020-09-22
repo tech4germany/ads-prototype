@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
-    minHeight: "39vh"
+    minHeight: "42vh"
   },
   buttonContainer: {
     margin: "0px"

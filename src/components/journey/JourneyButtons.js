@@ -95,11 +95,9 @@ export function BackButton(props) {
     )
   } else {
     return(
-      <div>
         <KeyboardArrowLeft className={classes.arrow}
           onClick={() => activeStep.decrement()}
         />
-      </div>
     )
   }
 }
