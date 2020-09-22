@@ -99,13 +99,12 @@ export default function JourneySelection(props) {
             )
           }
 
-
           let CardWithActive;
           if (!stepAnswers.includes(label)) {
             CardWithActive =
               <div className={classes.buttonCardInactive}
                 onClick={() => {
-                  answers.update(activeDocument.identifier, label)
+                  answers.update(activeDocument.identifier, activeDocument.multiple_choice, label)
                   documentQueue.add(activeStep.self, label)
                 }}
               >
@@ -118,7 +117,7 @@ export default function JourneySelection(props) {
             CardWithActive =
               <div className={classes.buttonCardActive}
                 onClick={() => {
-                  answers.update(activeDocument.identifier, label)
+                  answers.update(activeDocument.identifier, activeDocument.multiple_choice, label)
                   documentQueue.remove(activeStep.self, label)
                 }}
               >

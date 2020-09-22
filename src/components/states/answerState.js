@@ -6,13 +6,18 @@ function useAnswers(initialState = {}) {
 
   let keys = () => Object.keys(self)
 
-  let update = (identifier, label) => {
+  let update = (identifier, mchoice, label) => {
     let _answers = {...self}
     if (self.hasOwnProperty(identifier)) {
+
       if (_answers[identifier].includes(label)) {
         const index = _answers[identifier].indexOf(label)
         _answers[identifier].splice(index, 1)
-      } else { _answers[identifier].push(label) }
+      } else {
+        if (!mchoice) {
+          _answers[identifier] = [label]
+        } else { _answers[identifier].push(label) }
+      }
     } else {
       _answers[identifier] = [label]
     }

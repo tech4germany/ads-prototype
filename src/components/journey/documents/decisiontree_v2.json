@@ -2,6 +2,7 @@
 	{
 		"identifier":"merkmal",
 		"type":"default",
+		"multiple_choice": true,
 		"step_title":"Merkmal",
 		"question":"Aufgrund welchen Merkmals sind Sie diskriminiert worden?",
 		"explanation":"(Mehrfachauswahl ist möglich)",
@@ -11,7 +12,7 @@
 			"Behinderung / chronische Krankheiten": "merkmal_behinderung_detail",
 			"Alter":null,
 			"Sexuelle Orientierung":"merkmal_sex_detail",
-			"Geschlecht":"gender_detail",
+			"Geschlecht":"merkmal_gender_detail",
 			"Sozialer Status (Finanzen, Bildung, Sozialleistung)":null,
 			"Ich bin mir nicht sicher":null
 		}
@@ -20,6 +21,7 @@
 		"identifier":"lebensbereich",
 		"type":"default",
 		"step_title":"Lebensbereich",
+		"multiple_choice": true,
 		"question":"In welchem Bereich haben Sie Diskriminierung Erfahren?",
 		"explanation":"",
 		"options": {
@@ -40,6 +42,7 @@
 		"identifier":"frist",
 		"type":"default",
 		"step_title":"Frist",
+		"multiple_choice": false,
 		"question":"Ist die Diskriminierung innerhalb der letzten 2 Monate vorgefallen?",
 		"explanation":"",
 		"options": {
@@ -51,6 +54,7 @@
 		"identifier":"merkmal_ethnisch_detail",
 		"type":"non-default",
 		"step_title":"Ethnische Herkunft",
+		"multiple_choice": true,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
@@ -67,6 +71,7 @@
 		"identifier":"merkmal_religion_detail",
 		"type":"non-default",
 		"step_title":"Religion",
+		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
@@ -81,6 +86,7 @@
 		"identifier":"merkmal_behinderung_detail",
 		"type":"non-default",
 		"step_title":"Behinderung",
+		"multiple_choice": true,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
@@ -97,6 +103,7 @@
 		"identifier":"merkmal_sex_detail",
 		"type":"non-default",
 		"step_title":"Sexuelle Orientierung",
+		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
@@ -110,6 +117,7 @@
 		"identifier":"merkmal_gender_detail",
 		"type":"non-default",
 		"step_title":"Geschlecht",
+		"multiple_choice": true,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
@@ -126,6 +134,7 @@
 		"identifier":"merkmal_gender_detail",
 		"type":"non-default",
 		"step_title":"Geschlecht",
+		"multiple_choice": true,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
@@ -142,6 +151,7 @@
 		"identifier":"lebensbereich_arbeit_detail",
 		"type":"non-default",
 		"step_title":"Arbeit",
+		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
@@ -154,6 +164,7 @@
 		"identifier":"lebensbereich_behörden_detail",
 		"type":"non-default",
 		"step_title":"Behörden",
+		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
@@ -166,6 +177,7 @@
 		"identifier":"lebensbereich_wohnen_detail",
 		"type":"non-default",
 		"step_title":"Wohnen",
+		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
@@ -179,6 +191,7 @@
 		"identifier":"lebensbereich_bildung_detail",
 		"type":"non-default",
 		"step_title":"Bildung",
+		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
@@ -191,6 +204,7 @@
 		"identifier":"lebensbereich_gesundheit_detail",
 		"type":"non-default",
 		"step_title":"Gesundheit",
+		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
