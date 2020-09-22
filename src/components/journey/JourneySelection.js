@@ -93,7 +93,7 @@ export default function JourneySelection(props) {
 
           let CardWithPosition = (props) => {
             return(
-              <Grid Item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
+              <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
                 {props.component}
               </Grid>
             )

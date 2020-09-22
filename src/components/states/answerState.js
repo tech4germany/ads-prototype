@@ -9,7 +9,6 @@ function useAnswers(initialState = {}) {
   let update = (identifier, mchoice, label) => {
     let _answers = {...self}
     if (self.hasOwnProperty(identifier)) {
-
       if (_answers[identifier].includes(label)) {
         const index = _answers[identifier].indexOf(label)
         _answers[identifier].splice(index, 1)
@@ -30,6 +29,12 @@ function useAnswers(initialState = {}) {
     } else { return [] }
   }
 
-  return { self, update, initialiseStep, keys }
+  let getAnswersById = (identifier) => {
+    if (self[identifier] === undefined ) {
+      return []
+    } else { return self[identifier]}
+  }
+
+  return { self, update, initialiseStep, keys, getAnswersById }
 }
 export const Answers = createContainer(useAnswers)

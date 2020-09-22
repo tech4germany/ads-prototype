@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { ActiveStep } from "./../states/activeStepState.js";
 import { DocumentQueue } from "./../states/documentQueueState.js";
+import { Answers } from "./../states/answerState.js";
 import { ShowResult } from "./../states/showResultState.js";
 
 const useStyles = makeStyles((theme) => ({
@@ -37,42 +38,64 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function JourneyNavigation(props) {
-  const classes = useStyles();
-  let activeStep = ActiveStep.useContainer();
-  let documentQueue = DocumentQueue.useContainer();
-  let showResult = ShowResult.useContainer();
+  const classes = useStyles()
+  let activeStep = ActiveStep.useContainer()
+  let documentQueue = DocumentQueue.useContainer()
+  let showResult = ShowResult.useContainer()
+  let answers = Answers.useContainer()
+  let activeDocument = documentQueue.active(activeStep.self)
+  let stepAnswers = answers.getAnswersById(activeDocument.identifier)
+
+
+  let nextText;
+  if (showResult.self) {
+    nextText = "Result"
+  } else { nextText = "Next" }
+
+  let NextButton;
+  if (stepAnswers.length > 0) {
+    NextButton =
+      <div className={classes.singleButton}>
+        <Card className={classes.buttonCardActive}
+          variant="outlined"
+          onClick={() => activeStep.increment(documentQueue.self.length)}
+        >{nextText}</Card>
+      </div>
+  } else {
+    NextButton =
+      <div className={classes.singleButton}>
+        <Card className={classes.buttonCardInactive}
+          variant="outlined"
+        >{nextText}</Card>
+      </div>
+  }
+
+  let BackButton =
+    <Card className={classes.buttonCardInactive}
+      variant="outlined"
+      onClick={() => activeStep.decrement()}
+    >Back</Card>
+
+  const BothButtons = (props) => {
+    if (activeStep.self === 0) {
+      return(
+        <div className={classes.singleButton}>
+          {props.NextButton}
+        </div>
+      )
+    } else {
+      return(
+        <div className={classes.bothButtons}>
+         {props.BackButton}
+         {props.NextButton}
+        </div>
+      )
+    }
+  }
 
   return (
     <div className={classes.buttonGroup}>
-        {
-          activeStep.self === 0 ?
-            <div className={classes.singleButton}>
-              <Card className={classes.buttonCardActive}
-                variant="outlined"
-                onClick={() => activeStep.increment(documentQueue.self.length)}
-              >Next</Card>
-            </div>
-            :
-            <div className={classes.bothButtons}>
-              <Card className={classes.buttonCardInactive}
-                variant="outlined"
-                onClick={() => activeStep.decrement()}
-              >Back</Card>
-              {
-                activeStep.isLast(documentQueue.self.length) ?
-                  <Card className={classes.buttonCardActive}
-                    variant="outlined"
-                    onClick={() => showResult.show()}
-                  >Result</Card>
-                  :
-                  <Card className={classes.buttonCardActive}
-                    variant="outlined"
-                    onClick={() => activeStep.increment(documentQueue.self.length)}
-                  >Next</Card>
-              }
-
-            </div>
-        }
+      <BothButtons NextButton={NextButton} BackButton={BackButton}/>
     </div>
   );
 }
