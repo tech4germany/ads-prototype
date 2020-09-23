@@ -1,7 +1,7 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
 
-function useAnswers(initialState = {}) {
+export function useAnswers(initialState = {}) {
   let [self, setAnswers] = useState(initialState)
 
   let keys = () => Object.keys(self)
@@ -23,18 +23,12 @@ function useAnswers(initialState = {}) {
     setAnswers(_answers);
   }
 
-  let initialiseStep = (identifier) => {
-    if (Object.keys(self).includes(identifier)) {
-      return self[identifier]
-    } else { return [] }
-  }
-
   let getAnswersById = (identifier) => {
     if (self[identifier] === undefined ) {
       return []
     } else { return self[identifier]}
   }
 
-  return { self, update, initialiseStep, keys, getAnswersById }
+  return { self, update, keys, getAnswersById }
 }
 export const Answers = createContainer(useAnswers)

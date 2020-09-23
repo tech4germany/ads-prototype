@@ -84,7 +84,6 @@ export default function JourneySelection(props) {
   let documentQueue = DocumentQueue.useContainer();
 
   let activeDocument = documentQueue.active(activeStep.self)
-  let stepAnswers = answers.initialiseStep(activeDocument.identifier)
   let options = Object.keys(activeDocument["options"]);
 
   return (
@@ -102,7 +101,7 @@ export default function JourneySelection(props) {
           }
 
           let CardWithActive;
-          if (!stepAnswers.includes(label)) {
+          if (!answers.getAnswersById(activeDocument.identifier).includes(label)) {
             CardWithActive =
               <div className={classes.buttonCardInactive}
                 onClick={() => {
