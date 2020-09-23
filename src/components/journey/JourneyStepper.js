@@ -89,7 +89,7 @@ export default function CustomizedStepper() {
   let activeStep = ActiveStep.useContainer();
   let documentQueue = DocumentQueue.useContainer();
   let steps = documentQueue.steps()
-  let activeDefaultStep = documentQueue.countDefaultSteps(activeStep.self);
+  let activeDefaultStep = documentQueue.activeDefaultStep(activeStep.self);
 
   return (
       <Stepper alternativeLabel activeStep={activeDefaultStep} connector={<QontoConnector />} className={classes.root}>

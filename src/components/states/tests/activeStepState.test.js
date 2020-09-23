@@ -1,4 +1,4 @@
-import  {useActiveStep} from "./../activeStepState.js";
+import  { useActiveStep } from "./../activeStepState.js";
 import { renderHook, act } from "@testing-library/react-hooks"
 
 test('Increment while in middle of Queue', () => {
@@ -36,7 +36,6 @@ test('Decrement while at beginning of Queue', () => {
     act(() => result.current.decrement())
     expect(result.current.self).toBe(initial_step)
   })
-
 
 test('Jump to valid position along the queue', () => {
     const queue_length=4;

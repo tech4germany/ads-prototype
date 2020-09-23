@@ -31,14 +31,14 @@ const removeNewDoc = (newDocumentIdentifier, documentQueue) => {
   })
 }
 
-function useDocumentQueue(initialState = initialiseDocumentQueue()) {
+export function useDocumentQueue(initialState = initialiseDocumentQueue()) {
   let [self, setDocumentQueue] = useState(initialState);
 
   let active = (activeStep) => {
     return self[activeStep]
   }
 
-  let countDefaultSteps = (activeStep) => {
+  let activeDefaultStep = (activeStep) => {
     let slicedDocQueue = self.slice(0, activeStep+1);
     let remainingDefaultDoc = slicedDocQueue.filter(function(el) {
       return el.type ==="default"
@@ -73,6 +73,16 @@ function useDocumentQueue(initialState = initialiseDocumentQueue()) {
     }
   }
 
-  return { self, active, steps, add, remove, countDefaultSteps }
+  const retrieveIndexOfDoc = (identifier) => {
+    let indexDoc;
+    self.map((doc, index) => {
+      if (doc.identifier === identifier) {
+        indexDoc = index
+      }
+    })
+    return indexDoc
+  }
+
+  return { self, active, steps, add, remove, activeDefaultStep, retrieveIndexOfDoc }
 }
 export const DocumentQueue = createContainer(useDocumentQueue)
