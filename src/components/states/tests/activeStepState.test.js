@@ -36,3 +36,55 @@ test('Decrement while at beginning of Queue', () => {
     act(() => result.current.decrement())
     expect(result.current.self).toBe(initial_step)
   })
+
+
+test('Jump to valid position along the queue', () => {
+    const queue_length=4;
+    const newStep = 3;
+
+    const { result } = renderHook(() => useActiveStep())
+    act(() => result.current.jumpTo(newStep, queue_length))
+    expect(result.current.self).toBe(newStep)
+  })
+
+test('Jump to0 far along the queue', () => {
+    const queue_length=4;
+    const newStep = 4;
+
+    const { result } = renderHook(() => useActiveStep())
+    act(() => result.current.jumpTo(newStep, queue_length))
+    expect(result.current.self).toBe(0)
+  })
+
+test('Jump to far back along the queue', () => {
+    const queue_length=4;
+    const newStep = -1;
+
+    const { result } = renderHook(() => useActiveStep())
+    act(() => result.current.jumpTo(newStep, queue_length))
+    expect(result.current.self).toBe(0)
+  })
+
+test('Active Step is last', () => {
+    const queue_length=4;
+    const currentStep = 3;
+    let isLast;
+
+    const { result } = renderHook(() => useActiveStep(currentStep))
+    act(() => {
+      isLast = result.current.isLast(queue_length)
+    })
+    expect(isLast).toBe(true)
+  })
+
+test('Active Step is NOT last', () => {
+    const queue_length=4;
+    const currentStep = 2;
+    let isLast;
+
+    const { result } = renderHook(() => useActiveStep(currentStep))
+    act(() => {
+      isLast = result.current.isLast(queue_length)
+    })
+    expect(isLast).toBe(false)
+  })
