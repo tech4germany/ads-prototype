@@ -21,7 +21,7 @@
 		"identifier":"lebensbereich",
 		"type":"default",
 		"step_title":"Lebensbereich",
-		"multiple_choice": true,
+		"multiple_choice": false,
 		"question":"In welchem Bereich haben Sie Diskriminierung Erfahren?",
 		"explanation":"",
 		"options": {
