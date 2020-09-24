@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
+import JourneyNavigation from "./../JourneyNavigation.js";
 import ResultsInfo from "./ResultsInfo.js";
 import ResultsContact from "./ResultsContact.js";
 import ResultsMap from "./ResultsMap.js";
@@ -16,11 +17,25 @@ const useStyles = makeStyles((theme) => ({
   mainSpace: {
       backgroundColor: "inherit",
       display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      minWidth: "100%",
+  },
+  resultSpace: {
+      backgroundColor: "inherit",
+      display: "flex",
       flexDirection: "row",
       alignItems: "flex-start",
       minWidth: "100%",
-      height: "100%"
+      minHeight: "52vh"
   },
+  infoTemplateSpace: {
+    height: "100%",
+    paddingRight: "7vw"
+  },
+  contactMapSpace: {
+    height: "100%"
+  }
 }));
 
 export default function Result(props) {
@@ -30,18 +45,19 @@ export default function Result(props) {
   let resDoc = resultSpecs.retrieveSpecs(answers);
 
   return (
+    <div className={classes.mainSpace}>
+      <Grid container className={classes.resultSpace}>
+        <Grid item lg={9} md={10} sm={12} xs={12} className={classes.infoTemplateSpace}>
+          <ResultsInfo />
+          <ResultsTemplates />
+        </Grid>
 
-    <Grid container className={classes.mainSpace}>
-
-      <Grid item lg={8} md={8} sm={12} xs={12}>
-        <ResultsInfo />
-        <ResultsTemplates />
+        <Grid item lg={3} md={2} sm={12} xs={12} className={classes.contactMapSpace}>
+          <ResultsContact />
+          <ResultsMap />
+        </Grid>
       </Grid>
-
-      <Grid item lg={4} md={4} sm={12} xs={12}>
-        <ResultsContact />
-        <ResultsMap />
-      </Grid>
-    </Grid>
+      <JourneyNavigation />
+  </div>
   );
 }

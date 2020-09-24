@@ -3,13 +3,29 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   templateSpace: {
-      backgroundColor: "white",
+      backgroundColor: "inherit",
       display: "flex",
-      flexDirection: "row",
-      alignItems: "center",
+      flexDirection: "column",
+      alignItems: "flex-start",
       minWidth: "100%",
-      minHeight: "20vh"
+      maxHeight: "auto",
   },
+  formulierungsHeader: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "2.1vh",
+    paddingBottom: "2.3vh"
+  },
+  formulierungsLinks: {
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "2.1vh",
+    paddingBottom: "2.3vh"
+  },
+  formulierungsPaket: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "2.5vh",
+    textDecoration: "underline",
+    cursor: "pointer"
+  }
 }));
 
 export default function ResultTemplates(props) {
@@ -17,7 +33,17 @@ export default function ResultTemplates(props) {
 
   return (
     <div className={classes.templateSpace}>
-      This is where people can download different templates
+      <div className={classes.formulierungsHeader}>
+        Formulierungshilfen:
+      </div>
+      <div className={classes.formulierungsLinks}>
+        Ein Leitfaden mit Informationen zu Ihrem Sachverhalt | PDF<br></br>
+        Formulierungen zur Geltendmachung von Forderungen | Word<br></br>
+        Guide für die Ausfüllung der Formulare | Word<br></br>
+      </div>
+      <div className={classes.formulierungsPaket}>
+        Download Paket
+      </div>
     </div>
   );
 }

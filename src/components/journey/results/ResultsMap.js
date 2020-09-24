@@ -1,15 +1,38 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import map from './../../../images/image_ph.jpg';
 
 const useStyles = makeStyles((theme) => ({
   mapSpace: {
-    backgroundColor: "#f3b500",
+    backgroundColor: "inherit",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    flexWrap: "wrap",
+    minWidth: "100%",
+    paddingBottom: "4vh"
+  },
+  mapHeader: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "2.1vh",
+    paddingBottom: "2.3vh"
+  },
+  mapImage: {
     display: "flex",
     flexDirection: "row",
+    justifyContent: "center",
     alignItems: "center",
-    minWidth: "100%",
-    minHeight: "30vh"
+    width: "18.6vw",
+    height: "18vh",
+    overflow: "hidden",
+    borderStyle: "solid",
+    borderWidth: "3px",
+    borderColor: "white"
   },
+  mapImageZoom: {
+    maxWidth: "100%",
+    height: "auto"
+  }
 }));
 
 export default function ResultMap(props) {
@@ -17,7 +40,12 @@ export default function ResultMap(props) {
 
   return (
     <div className={classes.mapSpace}>
-      This is where people can search different beratungsstellen
+      <div className={classes.mapHeader}>
+        Beratungsstellen in Ihrer Nähe finden
+      </div>
+      <div className={classes.mapImage}>
+        <img src={map} alt={"empty"}/>
+      </div>
     </div>
   );
 }

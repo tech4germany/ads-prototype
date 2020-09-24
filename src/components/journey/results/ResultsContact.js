@@ -3,13 +3,23 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   contactSpace: {
-    backgroundColor: "white",
+    backgroundColor: "inherit",
     display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    flexWrap: "wrap",
     minWidth: "100%",
-    minHeight: "30vh"
+    paddingBottom: "4vh"
   },
+  contactHeader: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "2.1vh",
+    paddingBottom: "2.3vh"
+  },
+  contactInfo: {
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "2.1vh",
+  }
 }));
 
 export default function ResultContact(props) {
@@ -17,7 +27,15 @@ export default function ResultContact(props) {
 
   return (
     <div className={classes.contactSpace}>
-      This is where we provide all the contact information
+
+      <div className={classes.contactHeader}>
+        Kontakt zu uns!
+      </div>
+      <div className={classes.contactInfo}>
+        Mo 13-15, Mi und Fr 9-12 bieten wir eine juristische Erberatung an.<br></br>
+        Tel.: 030 18555-1855
+      </div>
+
     </div>
   );
 }
