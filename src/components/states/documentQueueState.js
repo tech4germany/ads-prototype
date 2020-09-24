@@ -61,14 +61,26 @@ export function useDocumentQueue(initialState = initialiseDocumentQueue()) {
     return defaultSteps.map(obj => obj.step_title )
   }
 
+  const testForMChoice = (documentQueue, activeStep) => {
+    let activeDocument = documentQueue[activeStep];
+    if (!activeDocument.mchoice) {
+      let nextDocument = documentQueue[activeStep+1];
+      if (nextDocument.type !== "default") {
+        documentQueue.splice(activeStep+1, 1)
+      }
+    }
+    return documentQueue
+  }
+
   const add = (activeStep, label) => {
     let _documentQueue = [...self];
+    _documentQueue = testForMChoice(_documentQueue, activeStep)
     let activeDocument = _documentQueue[activeStep];
     let newDocumentIdentifier = activeDocument["options"][label];
     if (!(newDocumentIdentifier === null)) {
       _documentQueue = insertNewDoc(newDocumentIdentifier, activeStep, _documentQueue);
-      setDocumentQueue(_documentQueue);
     }
+    setDocumentQueue(_documentQueue);
   }
 
   const remove = (activeStep, label) => {
@@ -81,6 +93,8 @@ export function useDocumentQueue(initialState = initialiseDocumentQueue()) {
     }
   }
 
+
+
   const retrieveIndexOfDoc = (identifier) => {
     let indexDoc;
     self.map((doc, index) => {
@@ -91,6 +105,6 @@ export function useDocumentQueue(initialState = initialiseDocumentQueue()) {
     return indexDoc
   }
 
-  return { self, active, steps, add, remove, activeDefaultStep, retrieveIndexOfDoc }
+  return { self, active, steps, add, remove, activeDefaultStep, retrieveIndexOfDoc, testForMChoice }
 }
 export const DocumentQueue = createContainer(useDocumentQueue)

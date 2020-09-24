@@ -2,7 +2,7 @@
 	{
 		"identifier":"merkmal",
 		"type":"default",
-		"multiple_choice": true,
+		"multiple_choice": false,
 		"step_title":"Merkmal",
 		"question":"Aufgrund welchen Merkmals sind Sie diskriminiert worden?",
 		"explanation":"(Mehrfachauswahl ist möglich)",

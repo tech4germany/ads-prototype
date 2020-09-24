@@ -86,6 +86,9 @@ export default function JourneySelection(props) {
   let activeDocument = documentQueue.active(activeStep.self)
   let options = Object.keys(activeDocument["options"]);
 
+  console.log(answers.self)
+  console.log(documentQueue.self)
+
   return (
     <Grid container className={classes.root} >
 
@@ -105,7 +108,7 @@ export default function JourneySelection(props) {
             CardWithActive =
               <div className={classes.buttonCardInactive}
                 onClick={() => {
-                  answers.update(activeDocument.identifier, activeDocument.multiple_choice, label)
+                  answers.update(activeDocument, label)
                   documentQueue.add(activeStep.self, label)
                 }}
               >
@@ -118,7 +121,7 @@ export default function JourneySelection(props) {
             CardWithActive =
               <div className={classes.buttonCardActive}
                 onClick={() => {
-                  answers.update(activeDocument.identifier, activeDocument.multiple_choice, label)
+                  answers.update(activeDocument, label)
                   documentQueue.remove(activeStep.self, label)
                 }}
               >
