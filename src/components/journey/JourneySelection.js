@@ -87,7 +87,7 @@ export default function JourneySelection(props) {
   let options = Object.keys(activeDocument["options"]);
 
   return (
-    <Grid Container className={classes.root} >
+    <Grid container className={classes.root} >
 
         {options.map((label, index) => {
 
