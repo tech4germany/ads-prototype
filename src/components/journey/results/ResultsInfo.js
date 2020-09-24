@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   nextStepsHeader: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "2.1vh",
-    paddingBottom: "2.3vh"
+    paddingBottom: "1vh"
   },
   nextStepsText: {
     fontFamily: "BundesSansWeb-Regular",

@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   formulierungsHeader: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "2.1vh",
-    paddingBottom: "2.3vh"
+    paddingBottom: "1vh"
   },
   formulierungsLinks: {
     fontFamily: "BundesSansWeb-Regular",
