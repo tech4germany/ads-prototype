@@ -27,6 +27,11 @@ export function useActiveStep(initialState = 0) {
     else { return false }
   }
 
-  return { self, increment, decrement,  jumpTo, isLast }
+  let isSecondLast = (documentQueueLength) => {
+    if (self+2 === documentQueueLength) { return true}
+    else { return false }
+  }
+
+  return { self, increment, decrement,  jumpTo, isLast, isSecondLast }
 }
 export const ActiveStep = createContainer(useActiveStep)

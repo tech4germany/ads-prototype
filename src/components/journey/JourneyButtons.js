@@ -57,10 +57,15 @@ export function NextButton(props) {
 
   let nextText;
   let nextAction;
-  if (activeStep.isLast(documentQueue.self.length)) {
+  if (activeStep.isSecondLast(documentQueue.self.length)) {
     nextText = "Ergebnis";
     nextAction = arg => {
       showResult.show()
+      activeStep.increment(arg)
+    }
+  } else if (activeStep.isLast(documentQueue.self.length)) {
+    nextText = "Schließen";
+    nextAction = arg => {
     }
   } else {
     nextText = "Weiter";
@@ -70,7 +75,7 @@ export function NextButton(props) {
   }
 
   let NextButton;
-  if (stepAnswers.length > 0) {
+  if ((stepAnswers.length > 0) || (activeStep.isLast(documentQueue.self.length))) {
     NextButton =
         <div className={classes.buttonActive}
           variant="outlined"
@@ -88,6 +93,20 @@ export function NextButton(props) {
 export function BackButton(props) {
   const classes = useStyles()
   let activeStep = ActiveStep.useContainer()
+  let documentQueue = DocumentQueue.useContainer()
+  let showResult = ShowResult.useContainer();
+
+  let nextAction;
+  if (activeStep.isLast(documentQueue.self.length)) {
+    nextAction = () => {
+      activeStep.decrement();
+      showResult.hide();
+    }
+  } else {
+    nextAction = () => {
+      activeStep.decrement();
+    }
+  }
 
   if (activeStep.self === 0) {
     return(
@@ -96,7 +115,7 @@ export function BackButton(props) {
   } else {
     return(
         <KeyboardArrowLeft className={classes.arrow}
-          onClick={() => activeStep.decrement()}
+          onClick={() => nextAction()}
         />
     )
   }

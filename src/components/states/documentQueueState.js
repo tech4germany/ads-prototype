@@ -3,10 +3,18 @@ import { useState } from 'react';
 
 import decision_tree from "./../journey/documents/decisiontree_v2.json";
 
+const resultObj = {
+  "identifier": "result",
+  "type":"default",
+  "step_title": "Result"
+}
+
 const initialiseDocumentQueue = () => {
-  return decision_tree.filter(function (element) {
+  var initialDocQueue = decision_tree.filter(function (element) {
     return element.type === "default"
   })
+  initialDocQueue.push(resultObj)
+  return initialDocQueue
 }
 
 const retrieveNonDefaultDocument = (identifier) => {
