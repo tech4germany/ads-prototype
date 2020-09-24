@@ -1,7 +1,7 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
 
-function useShowResult(initialState = false) {
+function useShowResult(initialState = true) {
   let [self, setShowResult] = useState(initialState)
   let show = () => setShowResult(true)
 

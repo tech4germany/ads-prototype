@@ -3,19 +3,24 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
+import ResultsInfo from "./ResultsInfo.js";
+import ResultsContact from "./ResultsContact.js";
+import ResultsMap from "./ResultsMap.js";
+import ResultsTemplates from "./ResultsTemplates.js";
+
 import ControlledAccordions from "./ResultsInfobox.js";
 import { Answers } from "./../../states/answerState.js";
 import { ResultSpecs } from "./../../states/resultState.js";
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
+      backgroundColor: "inherit",
       display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      padding: theme.spacing(6, 3, 6, 3),
-      margin: theme.spacing(6, 3, 6, 3),
-      width: "94%",
-  }
+      flexDirection: "row",
+      alignItems: "flex-start",
+      minWidth: "100%",
+      height: "100%"
+  },
 }));
 
 export default function Result(props) {
@@ -25,13 +30,18 @@ export default function Result(props) {
   let resDoc = resultSpecs.retrieveSpecs(answers);
 
   return (
+
     <Grid container className={classes.mainSpace}>
-      <Typography component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
-        Ergebnis
-      </Typography>
-      <ControlledAccordions
-       resDoc={resDoc}
-       />
+
+      <Grid item lg={8} md={8} sm={12} xs={12}>
+        <ResultsInfo />
+        <ResultsTemplates />
+      </Grid>
+
+      <Grid item lg={4} md={4} sm={12} xs={12}>
+        <ResultsContact />
+        <ResultsMap />
+      </Grid>
     </Grid>
   );
 }
