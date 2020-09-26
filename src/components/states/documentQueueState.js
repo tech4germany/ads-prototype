@@ -6,39 +6,37 @@ import { initialiseDocQueue, retrieveNonDefaultDoc } from "data/ProvideDecisionT
 export function useDocumentQueue(initialState = initialiseDocQueue()) {
   let [self, setDocumentQueue] = useState(initialState);
 
-  const _insertNewDoc = (newDocumentIdentifier, activeStep, documentQueue) => {
-    let existingIdentifiers = documentQueue.map(obj => obj.identifier);
-    if (!(existingIdentifiers.includes(newDocumentIdentifier.identifier))) {
+  const _insertNewDoc = (newDocumentIdentifier, activeStep) => {
+    let existingIdentifiers = self.map(obj => obj.identifier);
+    if (!(existingIdentifiers.includes(newDocumentIdentifier))) {
       let newDocument = retrieveNonDefaultDoc(newDocumentIdentifier);
-      documentQueue.splice(activeStep+1, 0, newDocument);
+      let  _docQueue = [...self]
+      _docQueue.splice(activeStep+1, 0, newDocument)
+      setDocumentQueue(_docQueue);
       }
-    return documentQueue
   }
 
-  const _removeNewDoc = (newDocumentIdentifier, documentQueue) => {
-    return documentQueue.filter(function (el) {
+  const _removeNewDoc = (newDocumentIdentifier) => {
+    let  _docQueue = [...self]
+    let updatedDocQueue = _docQueue.filter(function (el) {
       return el.identifier !== newDocumentIdentifier
     })
+    setDocumentQueue(updatedDocQueue)
   }
 
-
   const add = (activeStep, label) => {
-    let _documentQueue = [...self];
-    let activeDocument = _documentQueue[activeStep];
-    let newDocumentIdentifier = activeDocument["options"][label];
+    let activeDocument = returnActiveDocument(activeStep)
+    let newDocumentIdentifier = activeDocument["options"][label]
     if (!(newDocumentIdentifier === null)) {
-      _documentQueue = _insertNewDoc(newDocumentIdentifier, activeStep, _documentQueue);
-      setDocumentQueue(_documentQueue);
+      _insertNewDoc(newDocumentIdentifier, activeStep);
     }
   }
 
   const remove = (activeStep, label) => {
-    let _documentQueue = [...self];
-    let activeDocument = _documentQueue[activeStep];
+    let activeDocument = returnActiveDocument(activeStep);
     let newDocumentIdentifier = activeDocument["options"][label];
     if (!(newDocumentIdentifier === null)) {
-      _documentQueue = _removeNewDoc(newDocumentIdentifier, _documentQueue);
-      setDocumentQueue(_documentQueue);
+      _removeNewDoc(newDocumentIdentifier);
     }
   }
 
