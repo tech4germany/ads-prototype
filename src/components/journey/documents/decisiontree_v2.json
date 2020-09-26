@@ -5,16 +5,16 @@
 		"multiple_choice": true,
 		"step_title":"Merkmal",
 		"question":"Aufgrund welchen Merkmals sind Sie diskriminiert worden?",
-		"explanation":"(Mehrfachauswahl ist möglich)",
+		"explanation":"Mehrfachauswahl ist möglich",
 		"options": {
 			"Ethnische Herkunft / Rassistische Diskriminierung":"merkmal_ethnisch_detail",
-			"Religion / Weltanschauung": "merkmal_religion_detail",
-			"Behinderung / chronische Krankheiten": "merkmal_behinderung_detail",
-			"Alter":null,
-			"Sexuelle Orientierung":"merkmal_sex_detail",
-			"Geschlecht":"merkmal_gender_detail",
-			"Sozialer Status (Finanzen, Bildung, Sozialleistung)":null,
-			"Ich bin mir nicht sicher":null
+			"Religion / Weltanschauung": null,
+			"Behinderung / chronische Krankheiten": null,
+			"Alter": null,
+			"Sexuelle Identität": null,
+			"Geschlecht / Geschlechtsidentität": "merkmal_gender_detail",
+			"Sozialer Status (Finanzen, Bildung, Sozialleistung)": null,
+			"Ich bin mir nicht sicher / Sonstiges": null
 		}
 	},
 	{
@@ -25,15 +25,14 @@
 		"question":"In welchem Bereich haben Sie Diskriminierung Erfahren?",
 		"explanation":"",
 		"options": {
-			"Arbeit":"lebensbereich_arbeit_detail",
-			"Verträge": null,
-			"Versicherung": null,
-			"Freizeit":null,
-			"Behörden / Ämter / Justiz":"lebensbereich_behörden_detail",
-			"Wohnen":"lebensbereich_wohnen_detail",
-			"Bildung":"lebensbereich_bildung_detail",
-			"Öffentlicher Raum":null,
-			"Gesundheit und Pflege":"lebensbereich_gesundheit_detail",
+			"Arbeitsleben":"lebensbereich_arbeit_detail",
+			"Geschäfte, Verträge und Dienstleistungen": null,
+			"Wohnungsmarkt":null,
+			"Ämter und Behörden": null,
+			"Justiz und Polizei": null,
+			"Bildungsbereich":"lebensbereich_bildung_detail",
+			"Gesundheit und Pflege": "lebensbereich_gesundheit_detail",
+			"Öffentlichkeit und Freizeit":null,
 			"Internet, Medien und Werbung":null,
 			"Ich bin mir nicht sicher":null
 		}
@@ -47,7 +46,9 @@
 		"explanation":"",
 		"options": {
 			"Ja":null,
-			"Nein": null
+			"Nein": null,
+			"dauert noch an / passiert staendig": null,
+			"Ich bin mir nicht sicher": null
 		}
 	},
 	{
@@ -58,59 +59,9 @@
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
-			"Äußere Merkmale": null,
-			"Sprache": null,
-			"Name": null,
-			"Staatsangehörigkeit":null,
-			"Aufenthaltsstatus":null,
-			"Geflüchtete":null,
-			"Sonstige":null
-		}
-	},
-	{
-		"identifier":"merkmal_religion_detail",
-		"type":"non-default",
-		"step_title":"Religion",
-		"multiple_choice": false,
-		"question":"Worauf genau bezog sie die Diskriminierung?",
-		"explanation":"",
-		"options": {
-			"Islam": null,
-			"Christentum": null,
-			"Judentum": null,
-			"Konfessionslos":null,
-			"Andere":null
-		}
-	},
-	{
-		"identifier":"merkmal_behinderung_detail",
-		"type":"non-default",
-		"step_title":"Behinderung",
-		"multiple_choice": true,
-		"question":"Worauf genau bezog sie die Diskriminierung?",
-		"explanation":"",
-		"options": {
-			"Psychisch": null,
-			"Körperlich": null,
-			"geistig": null,
-			"Sehen":null,
-			"Hören":null,
-			"Chronische Krankheit":null,
-			"Sonstige":null
-		}
-	},
-	{
-		"identifier":"merkmal_sex_detail",
-		"type":"non-default",
-		"step_title":"Sexuelle Orientierung",
-		"multiple_choice": false,
-		"question":"Worauf genau bezog sie die Diskriminierung?",
-		"explanation":"",
-		"options": {
-			"Heterosexuell": null,
-			"Homosexuell": null,
-			"Queer": null,
-			"Sonstige":null
+			"Äußere Merkmale (Hautfarge), Sprache, Name": null,
+			"Staatsangehörigkeit / Aufenthaltsstatus": null,
+			"Ich bin mir nicht sicher / Sonstiges": null
 		}
 	},
 	{
@@ -122,29 +73,11 @@
 		"explanation":"",
 		"options": {
 			"Sexuelle Belästigung": null,
-			"Trans": null,
-			"Inter": null,
-			"Mann / Frau": null,
-			"Schwangerschaft": null,
-			"Queer": null,
-			"Sonstige":null
-		}
-	},
-	{
-		"identifier":"merkmal_gender_detail",
-		"type":"non-default",
-		"step_title":"Geschlecht",
-		"multiple_choice": true,
-		"question":"Worauf genau bezog sie die Diskriminierung?",
-		"explanation":"",
-		"options": {
-			"Sexuelle Belästigung": null,
-			"Trans": null,
-			"Inter": null,
-			"Mann / Frau": null,
-			"Schwangerschaft": null,
-			"Queer": null,
-			"Sonstige":null
+			"Trans*": null,
+			"Inter*": null,
+			"Frau / Mann": null,
+			"queer": null,
+			"Ich bin mir nicht sicher / Sonstige":null
 		}
 	},
 	{
@@ -156,35 +89,8 @@
 		"explanation":"",
 		"options": {
 			"Zugang": null,
-			"Beschäftigungsverhältnis": null,
+			"Im Beschäftigungsverhältnis": null,
 			"Kündigung / Beendigung": null
-		}
-	},
-	{
-		"identifier":"lebensbereich_behörden_detail",
-		"type":"non-default",
-		"step_title":"Behörden",
-		"multiple_choice": false,
-		"question":"Worauf genau bezog sie die Diskriminierung?",
-		"explanation":"",
-		"options": {
-			"Gerichte": null,
-			"Arbeitsagentur": null,
-			"Sonstige Ämter": null
-		}
-	},
-	{
-		"identifier":"lebensbereich_wohnen_detail",
-		"type":"non-default",
-		"step_title":"Wohnen",
-		"multiple_choice": false,
-		"question":"Worauf genau bezog sie die Diskriminierung?",
-		"explanation":"",
-		"options": {
-			"Wohnungsanzeige": null,
-			"Wohnungsbesichtigung": null,
-			"Im Mietverhältnis": null,
-			"Sonstige": null
 		}
 	},
 	{
@@ -196,7 +102,8 @@
 		"explanation":"",
 		"options": {
 			"Kita": null,
-			"Schule": null,
+			"Privatschule / Privatunterricht": null,
+			"Öffentliche Schule": null,
 			"Hochschule": null
 		}
 	},
