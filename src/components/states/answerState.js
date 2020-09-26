@@ -16,7 +16,6 @@ export function useAnswers(initialState = {}) {
 
   const _deleteLabelFromStepAnswer = (ans, id, label) => {
     let index = ans[id].indexOf(label)
-    console.log(ans)
     ans[id].splice(index, 1)
     return ans
   }
@@ -33,18 +32,21 @@ export function useAnswers(initialState = {}) {
     return ans
   }
 
-  let update = (id, mchoice, label) => {
+  let add = (id, mchoice, label) => {
     let _ans = {...self}
     if (_checkStepInAnswers(id)) {
-      if (_checkLabelInStepAnswers(id, label)) {
-        _ans = _deleteLabelFromStepAnswer(_ans, id, label)
-      } else {
-        _ans = _addLabelToStepAnswer(_ans, id, label, mchoice)
-      }
+      _ans = _addLabelToStepAnswer(_ans, id, label, mchoice)
     } else {
       _ans = _addStepWithLabelToAnswers(_ans, id, label)
     }
-    setAnswers(_ans);
+    setAnswers(_ans)
+  }
+
+  let remove = (id, label, delId) => {
+    let _ans = {...self}
+    _ans = _deleteLabelFromStepAnswer(_ans, id, label)
+    delete _ans[delId]
+    setAnswers(_ans)
   }
 
   let getAnswersById = (identifier) => {
@@ -54,6 +56,6 @@ export function useAnswers(initialState = {}) {
 
   let keys = () => Object.keys(self)
 
-  return { self, update, keys, getAnswersById }
+  return { self, add, remove, keys, getAnswersById }
 }
 export const Answers = createContainer(useAnswers)

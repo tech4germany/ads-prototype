@@ -65,8 +65,7 @@ export function NextButton(props) {
     }
   } else if (activeStep.isLast(documentQueue.self.length)) {
     nextText = "Schließen";
-    nextAction = arg => {
-    }
+    nextAction = arg => {}
   } else {
     nextText = "Weiter";
     nextAction = arg => {

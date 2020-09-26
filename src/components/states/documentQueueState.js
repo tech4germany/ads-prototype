@@ -50,6 +50,11 @@ export function useDocumentQueue(initialState = initialiseDocQueue()) {
     return indexDoc
   }
 
+  const retrieveDocId = (activeStep, label) => {
+    let activeDocument = returnActiveDocument(activeStep);
+    return activeDocument["options"][label]
+  }
+
   let returnActiveDocument = (activeStep) => {
     return self[activeStep]
   }
@@ -69,6 +74,8 @@ export function useDocumentQueue(initialState = initialiseDocQueue()) {
     return defaultSteps.map(obj => obj.step_title )
   }
 
-  return { self, returnActiveDocument, extractStepTitles, add, remove, activeDefaultStep, retrieveIndexOfDoc }
+  return { self, returnActiveDocument, extractStepTitles, add, remove, activeDefaultStep, retrieveIndexOfDoc,
+  retrieveDocId
+   }
 }
 export const DocumentQueue = createContainer(useDocumentQueue)

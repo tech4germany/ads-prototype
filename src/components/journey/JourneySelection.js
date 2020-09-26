@@ -105,7 +105,7 @@ export default function JourneySelection(props) {
             CardWithActive =
               <div className={classes.buttonCardInactive}
                 onClick={() => {
-                  answers.update(activeDocument.identifier, activeDocument.multiple_choice, label)
+                  answers.add(activeDocument.identifier, activeDocument.multiple_choice, label)
                   documentQueue.add(activeStep.self, label)
                 }}
               >
@@ -118,8 +118,9 @@ export default function JourneySelection(props) {
             CardWithActive =
               <div className={classes.buttonCardActive}
                 onClick={() => {
-                  answers.update(activeDocument.identifier, activeDocument.multiple_choice, label)
                   documentQueue.remove(activeStep.self, label)
+                  let delId = documentQueue.retrieveDocId(activeStep.self, label)
+                  answers.remove(activeDocument.identifier, label, delId)
                 }}
               >
                 <div className={classes.buttonTextBoxActive}>

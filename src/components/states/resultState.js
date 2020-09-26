@@ -6,12 +6,8 @@ import result_specs from "data/resultspecs.json";
 
 const currentExceptions = [
   "merkmal_ethnisch_detail",
-  "merkmal_religion_detail",
-  "merkmal_behinderung_detail",
-  "merkmal_sex_detail",
+  "merkmal_gender_detail",
   "lebensbereich_arbeit_detail",
-  "lebensbereich_behörden_detail",
-  "lebensbereich_wohnen_detail",
   "lebensbereich_bildung_detail",
   "lebensbereich_gesundheit_detail"
   ]
