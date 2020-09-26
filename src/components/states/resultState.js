@@ -1,8 +1,8 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
 
-import result_map from "./../journey/documents/resultmap.json";
-import result_specs from "./../journey/documents/resultspecs.json";
+import result_map from "data/resultmap.json";
+import result_specs from "data/resultspecs.json";
 
 const currentExceptions = [
   "merkmal_ethnisch_detail",

@@ -2,9 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
 
-import { Answers } from "./../states/answerState.js";
-import { ActiveStep } from "./../states/activeStepState.js";
-import { DocumentQueue } from "./../states/documentQueueState.js";
+import { Answers } from "components/states/answerState.js";
+import { ActiveStep } from "components/states/activeStepState.js";
+import { DocumentQueue } from "components/states/documentQueueState.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -83,7 +83,7 @@ export default function JourneySelection(props) {
   let activeStep = ActiveStep.useContainer();
   let documentQueue = DocumentQueue.useContainer();
 
-  let activeDocument = documentQueue.active(activeStep.self)
+  let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
   let options = Object.keys(activeDocument["options"]);
 
   return (

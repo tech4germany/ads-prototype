@@ -4,30 +4,55 @@ import { useState } from 'react';
 export function useAnswers(initialState = {}) {
   let [self, setAnswers] = useState(initialState)
 
-  let keys = () => Object.keys(self)
+  const _checkStepInAnswers = (identifier) => {
+    if ( self.hasOwnProperty(identifier) ) { return true }
+    else { return false }
+  }
 
-  let update = (identifier, mchoice, label) => {
-    let _answers = {...self}
-    if (self.hasOwnProperty(identifier)) {
-      if (_answers[identifier].includes(label)) {
-        const index = _answers[identifier].indexOf(label)
-        _answers[identifier].splice(index, 1)
+  const _checkLabelInStepAnswers = (id, label) => {
+    if (self[id].includes(label)) { return true }
+    else { return false }
+  }
+
+  const _deleteLabelFromStepAnswer = (ans, id, label) => {
+    let index = ans[id].indexOf(label)
+    console.log(ans)
+    ans[id].splice(index, 1)
+    return ans
+  }
+
+  const _addLabelToStepAnswer = (ans, id, label, mchoice) => {
+    if (mchoice) {
+      ans[id].push(label)
+    } else { ans[id] = [label] }
+    return ans
+  }
+
+  const _addStepWithLabelToAnswers = (ans, id, label) => {
+    ans[id] = [label]
+    return ans
+  }
+
+  let update = (id, mchoice, label) => {
+    let _ans = {...self}
+    if (_checkStepInAnswers(id)) {
+      if (_checkLabelInStepAnswers(id, label)) {
+        _ans = _deleteLabelFromStepAnswer(_ans, id, label)
       } else {
-        if (!mchoice) {
-          _answers[identifier] = [label]
-        } else { _answers[identifier].push(label) }
+        _ans = _addLabelToStepAnswer(_ans, id, label, mchoice)
       }
     } else {
-      _answers[identifier] = [label]
+      _ans = _addStepWithLabelToAnswers(_ans, id, label)
     }
-    setAnswers(_answers);
+    setAnswers(_ans);
   }
 
   let getAnswersById = (identifier) => {
-    if (self[identifier] === undefined ) {
-      return []
-    } else { return self[identifier]}
+    if (self[identifier] === undefined ) { return [] }
+     else { return self[identifier]}
   }
+
+  let keys = () => Object.keys(self)
 
   return { self, update, keys, getAnswersById }
 }

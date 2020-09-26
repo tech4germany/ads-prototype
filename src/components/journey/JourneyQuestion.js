@@ -2,8 +2,8 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { DocumentQueue } from "./../states/documentQueueState.js";
-import { ActiveStep } from "./../states/activeStepState.js";
+import { DocumentQueue } from "components/states/documentQueueState.js";
+import { ActiveStep } from "components/states/activeStepState.js";
 
 const useStyles = makeStyles((theme) => ({
   questionBox: {
@@ -31,7 +31,7 @@ export default function JourneyQuestion(props) {
   const classes = useStyles()
   let documentQueue = DocumentQueue.useContainer();
   let activeStep = ActiveStep.useContainer();
-  let activeDocument = documentQueue.active(activeStep.self)
+  let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
 
   return (
     <div className={classes.questionBox}>

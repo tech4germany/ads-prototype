@@ -2,10 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 
-import { ActiveStep } from "./../states/activeStepState.js";
-import { DocumentQueue } from "./../states/documentQueueState.js";
-import { Answers } from "./../states/answerState.js";
-import { ShowResult } from "./../states/showResultState.js";
+import { ActiveStep } from "components/states/activeStepState.js";
+import { DocumentQueue } from "components/states/documentQueueState.js";
+import { Answers } from "components/states/answerState.js";
+import { ShowResult } from "components/states/showResultState.js";
 
 const useStyles = makeStyles((theme) => ({
   buttonInactive: {
@@ -52,7 +52,7 @@ export function NextButton(props) {
   let documentQueue = DocumentQueue.useContainer()
   let answers = Answers.useContainer()
   let showResult = ShowResult.useContainer();
-  let activeDocument = documentQueue.active(activeStep.self)
+  let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
   let stepAnswers = answers.getAnswersById(activeDocument.identifier)
 
   let nextText;

@@ -3,13 +3,13 @@ import Card from '@material-ui/core/Card';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-import { NextButton, BackButton } from "./JourneyButtons.js"
-import Stepper from "./JourneyStepper.js"
+import { NextButton, BackButton } from "components/journey/JourneyButtons.js"
+import Stepper from "components/journey/JourneyStepper.js"
 
-import { ActiveStep } from "./../states/activeStepState.js";
-import { DocumentQueue } from "./../states/documentQueueState.js";
-import { Answers } from "./../states/answerState.js";
-import { ShowResult } from "./../states/showResultState.js";
+import { ActiveStep } from "components/states/activeStepState.js";
+import { DocumentQueue } from "components/states/documentQueueState.js";
+import { Answers } from "components/states/answerState.js";
+import { ShowResult } from "components/states/showResultState.js";
 
 const useStyles = makeStyles((theme) => ({
   navigationGroup: {
