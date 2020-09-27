@@ -42,7 +42,8 @@ export default function Result(props) {
   const classes = useStyles();
   let answers = Answers.useContainer();
   let resultSpecs = ResultSpecs.useContainer();
-  let resDoc = resultSpecs.retrieveSpecs(answers);
+  resultSpecs.retrieveSpecs(answers);
+  console.log(answers.self)
 
   return (
     <div className={classes.mainSpace}>

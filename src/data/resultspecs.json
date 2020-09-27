@@ -2,46 +2,36 @@
   {
     "identifier": 0,
     "agg": 1,
-    "info": "Wir können ihnen helfen",
-    "contact": 1,
-    "blist": 0,
+    "frist":  1,
     "templates": 1
   },
 
 
   {
     "identifier": 1,
-    "agg": 0,
-    "info": "Sie sind leider zu spät",
-    "contact": 0,
-    "blist": 1,
+    "agg": 1,
+    "frist": 0,
     "templates": 0
   },
 
   {
     "identifier": 2,
     "agg": 0,
-    "info": "Leider sind weder merkmale noch lebensbereicha agg-relevant",
-    "contact": 0,
-    "blist": 0,
+    "frist": 0,
     "templates": 1
   },
 
   {
     "identifier": 3,
     "agg": 0,
-    "info": "Leider ist das betroffene merkmal nicht agg-relevant",
-    "contact": 0,
-    "blist": 1,
+    "frist": 0,
     "templates": 1
   },
 
   {
     "identifier": 4,
     "agg": 0,
-    "info": "Leider ist der der betroffene lebensbereich nicht agg-relevant",
-    "contact": 0,
-    "blist": 1,
+    "frist": 0,
     "templates": 1
   }
 ]

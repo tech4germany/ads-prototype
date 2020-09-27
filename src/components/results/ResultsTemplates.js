@@ -13,18 +13,8 @@ const useStyles = makeStyles((theme) => ({
   formulierungsHeader: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "2.1vh",
-    paddingBottom: "1vh"
-  },
-  formulierungsLinks: {
-    fontFamily: "BundesSansWeb-Regular",
-    fontSize: "2.1vh",
-    paddingBottom: "2.3vh"
-  },
-  formulierungsPaket: {
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "2.5vh",
+    paddingBottom: "1vh",
     textDecoration: "underline",
-    cursor: "pointer"
   }
 }));
 
@@ -34,15 +24,7 @@ export default function ResultTemplates(props) {
   return (
     <div className={classes.templateSpace}>
       <div className={classes.formulierungsHeader}>
-        Formulierungshilfen:
-      </div>
-      <div className={classes.formulierungsLinks}>
-        Ein Leitfaden mit Informationen zu Ihrem Sachverhalt | PDF<br></br>
-        Formulierungen zur Geltendmachung von Forderungen | Word<br></br>
-        Guide für die Ausfüllung der Formulare | Word<br></br>
-      </div>
-      <div className={classes.formulierungsPaket}>
-        Download Paket
+        Formulierungshilfen finden Sie hier
       </div>
     </div>
   );

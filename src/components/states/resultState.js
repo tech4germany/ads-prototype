@@ -12,7 +12,7 @@ const currentExceptions = [
   "lebensbereich_gesundheit_detail"
   ]
 
-export function useResultSpecs(initialState = -1) {
+export function useResultSpecs(initialState = {}) {
   let [self, setResultSpecs] = useState(initialState)
 
   let _splitAnswers = (answers) => {
@@ -42,13 +42,13 @@ export function useResultSpecs(initialState = -1) {
     let answers_vals = _splitAnswers(answers)[0]
     let answers_keys = _splitAnswers(answers)[1]
     let res_match = matchAnswer(answers_vals, answers_keys);
+    console.log(res_match)
     let res_document = result_specs.filter(function(el) {
       return el.identifier === res_match
     })
-    if (res_document.length > 0) {return res_document[0]}
-    else {return {}}
+    if (res_document.length > 0) { setResultSpecs(res_document[0]) }
   }
 
-  return { self, retrieveSpecs, matchAnswer}
+  return { self, retrieveSpecs, matchAnswer }
 }
 export const ResultSpecs = createContainer(useResultSpecs)
