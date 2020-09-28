@@ -44,5 +44,10 @@
   },
   "devDependencies": {
     "@testing-library/react-hooks": "^3.4.1"
+  },
+  "alias": {
+    "images":"./src/images",
+    "data":"./src/data",
+    "components":"./src/components"
   }
 }
