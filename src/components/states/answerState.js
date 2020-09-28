@@ -1,16 +1,13 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
 
+import { mapLabelToId } from "data/ProvideDecisionTree.js";
+
 export function useAnswers(initialState = {}) {
   let [self, setAnswers] = useState(initialState)
 
   const _checkStepInAnswers = (identifier) => {
     if ( self.hasOwnProperty(identifier) ) { return true }
-    else { return false }
-  }
-
-  const _checkLabelInStepAnswers = (id, label) => {
-    if (self[id].includes(label)) { return true }
     else { return false }
   }
 
@@ -20,10 +17,19 @@ export function useAnswers(initialState = {}) {
     return ans
   }
 
+  const _overwriteCurrentLabel = (ans, id, newLabel) => {
+    let delLabel = ans[id][0]
+    delete ans[mapLabelToId(id, delLabel)]
+    ans[id] = [newLabel]
+    return ans
+  }
+
   const _addLabelToStepAnswer = (ans, id, label, mchoice) => {
     if (mchoice) {
       ans[id].push(label)
-    } else { ans[id] = [label] }
+    } else {
+      ans = _overwriteCurrentLabel(ans, id, label)
+    }
     return ans
   }
 
@@ -42,8 +48,9 @@ export function useAnswers(initialState = {}) {
     setAnswers(_ans)
   }
 
-  let remove = (id, label, delId) => {
+  let remove = (id, label) => {
     let _ans = {...self}
+    let delId = mapLabelToId(id, label)
     _ans = _deleteLabelFromStepAnswer(_ans, id, label)
     delete _ans[delId]
     setAnswers(_ans)

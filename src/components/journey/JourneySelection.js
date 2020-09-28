@@ -105,8 +105,11 @@ export default function JourneySelection(props) {
             CardWithActive =
               <div className={classes.buttonCardInactive}
                 onClick={() => {
+                  console.log("ative step", activeStep.self)
                   answers.add(activeDocument.identifier, activeDocument.multiple_choice, label)
-                  documentQueue.add(activeStep.self, label)
+                                    console.log("ative step", activeStep.self)
+
+                  documentQueue.add(activeStep.self, label, activeDocument.multiple_choice)
                 }}
               >
                 <div className={classes.buttonTextBoxInactive}>
@@ -119,8 +122,7 @@ export default function JourneySelection(props) {
               <div className={classes.buttonCardActive}
                 onClick={() => {
                   documentQueue.remove(activeStep.self, label)
-                  let delId = documentQueue.retrieveDocId(activeStep.self, label)
-                  answers.remove(activeDocument.identifier, label, delId)
+                  answers.remove(activeDocument.identifier, label)
                 }}
               >
                 <div className={classes.buttonTextBoxActive}>

@@ -1,7 +1,5 @@
-import { createContainer } from 'unstated-next';
-import { useState } from 'react';
-
 import decision_tree from "data/decisiontree_v2.json";
+import labeltoid from "data/labeltoid.json";
 
 const resultObj = {
   "identifier": "result",
@@ -22,4 +20,8 @@ export function retrieveNonDefaultDoc(identifier) {
     return element.identifier === identifier
   })
   return _newDoc[0]
+}
+
+export function mapLabelToId(stepIdentifier, label) {
+  return labeltoid[stepIdentifier][label]
 }

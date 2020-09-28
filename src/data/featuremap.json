@@ -1,0 +1,58 @@
+{
+  "merkmal": {
+    "Ethnische Herkunft / Rassistische Diskriminierung":"agg",
+    "Religion / Weltanschauung": "agg",
+    "Behinderung / chronische Krankheiten": "agg",
+    "Alter": "agg",
+    "Sexuelle Identität": "agg",
+    "Geschlecht / Geschlechtsidentität": "agg",
+    "Sozialer Status": "non-agg",
+    "Ich bin mir nicht sicher / Sonstiges": "non-agg"
+  },
+  "lebensbereich": {
+    "Arbeitsleben":"agg",
+    "Geschäfte, Verträge und Dienstleistungen": "agg",
+    "Wohnungsmarkt": "agg",
+    "Ämter und Behörden": "non-agg",
+    "Justiz und Polizei": "non-agg",
+    "Bildungsbereich": "agg",
+    "Gesundheit und Pflege": "agg",
+    "Öffentlichkeit und Freizeit": "non-agg",
+    "Internet, Medien und Werbung": "non-agg",
+    "Ich bin mir nicht sicher": "non-agg"
+  },
+  "merkmal_ethnisch_detail": {
+    "Äußere Merkmale (Hautfarbe), Sprache, Name": "agg",
+    "Staatsangehörigkeit / Aufenthaltsstatus": "agg",
+    "Ich bin mir nicht sicher / Sonstiges": "agg"
+  },
+  "merkmal_gender_detail": {
+    "Sexuelle Belästigung": "agg",
+    "Trans*": "agg",
+    "Inter*": "agg",
+    "Frau / Mann": "agg",
+    "queer": "agg",
+    "Ich bin mir nicht sicher / Sonstige": "agg"
+  },
+  "lebensbereich_arbeit_detail": {
+    "Zugang": "agg",
+    "Im Beschäftigungsverhältnis": "agg",
+    "Kündigung / Beendigung": "agg"
+  },
+  "lebensbereich_bildung_detail": {
+    "Kita": "agg",
+    "Privatschule / Privatunterricht": "agg",
+    "Öffentliche Schule": "non-agg",
+    "Hochschule": "non-agg"
+  },
+  "lebensbereich_gesundheit_detail": {
+    "Krankenkasse": "agg",
+    "Arztbesuch": "non-agg"
+  },
+  "frist": {
+    "Ja": "inTime",
+    "Nein": "notInTime",
+    "dauert noch an / passiert staendig": "notInTime",
+    "Ich bin mir nicht sicher": "notInTime"
+  }
+}

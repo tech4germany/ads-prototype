@@ -27,7 +27,7 @@ export default function Journey(props) {
         !showResult.self ?
         <JourneyStep />
         :
-        <Result/>
+        <Result />
       }
     </Grid>
 

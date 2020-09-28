@@ -1,17 +1,22 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
 
-import { initialiseDocQueue, retrieveNonDefaultDoc } from "data/ProvideDecisionTree.js";
+import { initialiseDocQueue, retrieveNonDefaultDoc, mapLabelToId } from "data/ProvideDecisionTree.js";
 
 export function useDocumentQueue(initialState = initialiseDocQueue()) {
   let [self, setDocumentQueue] = useState(initialState);
 
-  const _insertNewDoc = (newDocumentIdentifier, activeStep) => {
+  const _setMChoicePurger = (activeStep, mchoice) => {
+    if ((!mchoice) && (self[activeStep+1]["type"] !== "default")) {return 1}
+    else { return 0 }
+  }
+
+  const _insertNewDoc = (newDocumentIdentifier, activeStep, mchoice) => {
     let existingIdentifiers = self.map(obj => obj.identifier);
     if (!(existingIdentifiers.includes(newDocumentIdentifier))) {
       let newDocument = retrieveNonDefaultDoc(newDocumentIdentifier);
       let  _docQueue = [...self]
-      _docQueue.splice(activeStep+1, 0, newDocument)
+      _docQueue.splice(activeStep+1, _setMChoicePurger(activeStep, mchoice), newDocument)
       setDocumentQueue(_docQueue);
       }
   }
@@ -24,17 +29,17 @@ export function useDocumentQueue(initialState = initialiseDocQueue()) {
     setDocumentQueue(updatedDocQueue)
   }
 
-  const add = (activeStep, label) => {
+  const add = (activeStep, label, mchoice) => {
     let activeDocument = returnActiveDocument(activeStep)
-    let newDocumentIdentifier = activeDocument["options"][label]
+    let newDocumentIdentifier = mapLabelToId(activeDocument.identifier, label)
     if (!(newDocumentIdentifier === null)) {
-      _insertNewDoc(newDocumentIdentifier, activeStep);
+      _insertNewDoc(newDocumentIdentifier, activeStep, mchoice);
     }
   }
 
   const remove = (activeStep, label) => {
     let activeDocument = returnActiveDocument(activeStep);
-    let newDocumentIdentifier = activeDocument["options"][label];
+    let newDocumentIdentifier = mapLabelToId(activeDocument.identifier, label)
     if (!(newDocumentIdentifier === null)) {
       _removeNewDoc(newDocumentIdentifier);
     }
@@ -48,11 +53,6 @@ export function useDocumentQueue(initialState = initialiseDocQueue()) {
       }
     })
     return indexDoc
-  }
-
-  const retrieveDocId = (activeStep, label) => {
-    let activeDocument = returnActiveDocument(activeStep);
-    return activeDocument["options"][label]
   }
 
   let returnActiveDocument = (activeStep) => {
@@ -74,9 +74,7 @@ export function useDocumentQueue(initialState = initialiseDocQueue()) {
     return defaultSteps.map(obj => obj.step_title )
   }
 
-  return { self, returnActiveDocument, extractStepTitles, add, remove, activeDefaultStep, retrieveIndexOfDoc,
-  retrieveDocId
-   }
+  return { self, returnActiveDocument, extractStepTitles, add, remove, activeDefaultStep, retrieveIndexOfDoc }
 }
 
 export const DocumentQueue = createContainer(useDocumentQueue)

@@ -1,108 +1,31 @@
 [
   {
-    "name": "type 1",
     "identifier": 0,
-    "input": {
-      "merkmal": [
-        "Geschlecht",
-        "Ethnische Herkunft / Rassistische Diskriminierung",
-        "Religion / Weltanschauung",
-        "Behinderung / chronische Krankheiten",
-        "Alter",
-        "Sexuelle Orientierung"
-      ],
-      "lebensbereich": [
-        "Arbeitsleben",
-        "Verträge",
-        "Versicherung",
-        "Wohnen",
-        "Bildung",
-        "Öffentlicher Raum",
-        "Gesundheit und Pflege"
-      ],
-      "frist": ["Ja"]
+    "profile": {
+      "agg": true,
+      "frist": true
     }
   },
   {
-    "name": "type 2",
     "identifier": 1,
-    "input": {
-      "merkmal": [
-        "Geschlecht",
-        "Ethnische Herkunft / Rassistische Diskriminierung",
-        "Religion / Weltanschauung",
-        "Behinderung / chronische Krankheiten",
-        "Alter",
-        "Sexuelle Orientierung"
-      ],
-      "lebensbereich": [
-        "Arbeitsleben",
-        "Verträge",
-        "Versicherung",
-        "Wohnen",
-        "Bildung",
-        "Öffentlicher Raum",
-        "Gesundheit und Pflege"
-      ],
-      "frist": ["Nein"]
+    "profile": {
+      "agg": true,
+      "frist": false
     }
   },
   {
-    "name": "type 3",
     "identifier": 2,
-    "input": {
-      "merkmal": [
-        "Sozialer Status (Finanzen, Bildung, Sozialleistung)",
-        "Ich bin mir nicht sicher"
-      ],
-      "lebensbereich": [
-        "Freizeit",
-        "Behörden / Ämter / Justiz",
-        "Internet, Medien und Werbung",
-        "Ich bin mir nicht sicher"
-      ],
-      "frist": ["Ja", "Nein"]
+    "profile": {
+      "agg": false,
+      "frist": true
     }
   },
   {
-    "name": "type 4",
     "identifier": 3,
-    "input": {
-      "merkmal": [
-        "Sozialer Status (Finanzen, Bildung, Sozialleistung)",
-        "Ich bin mir nicht sicher"
-      ],
-      "lebensbereich": [
-        "Arbeitsleben",
-        "Verträge",
-        "Versicherung",
-        "Wohnen",
-        "Bildung",
-        "Öffentlicher Raum",
-        "Gesundheit und Pflege"
-      ],
-      "frist": ["Ja","Nein"]
-    }
-  },
-  {
-    "name": "type 5",
-    "identifier": 4,
-    "input": {
-      "merkmal": [
-        "Geschlecht",
-        "Ethnische Herkunft / Rassistische Diskriminierung",
-        "Religion / Weltanschauung",
-        "Behinderung / chronische Krankheiten",
-        "Alter",
-        "Sexuelle Orientierung"
-      ],
-      "lebensbereich": [
-        "Freizeit",
-        "Behörden / Ämter / Justiz",
-        "Internet, Medien und Werbung",
-        "Ich bin mir nicht sicher"
-      ],
-      "frist": ["Ja","Nein"]
+    "profile": {
+      "agg": false,
+      "frist": false
     }
   }
 ]
+

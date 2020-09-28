@@ -13,7 +13,7 @@
 			"Alter": null,
 			"Sexuelle Identität": null,
 			"Geschlecht / Geschlechtsidentität": "merkmal_gender_detail",
-			"Sozialer Status (Finanzen, Bildung, Sozialleistung)": null,
+			"Sozialer Status": null,
 			"Ich bin mir nicht sicher / Sonstiges": null
 		}
 	},
@@ -59,7 +59,7 @@
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": {
-			"Äußere Merkmale (Hautfarge), Sprache, Name": null,
+			"Äußere Merkmale (Hautfarbe), Sprache, Name": null,
 			"Staatsangehörigkeit / Aufenthaltsstatus": null,
 			"Ich bin mir nicht sicher / Sonstiges": null
 		}

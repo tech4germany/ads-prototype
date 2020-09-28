@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -42,16 +42,29 @@ export default function Result(props) {
   const classes = useStyles();
   let answers = Answers.useContainer();
   let resultSpecs = ResultSpecs.useContainer();
-  resultSpecs.retrieveSpecs(answers);
+
+  useEffect(() => {
+    resultSpecs.retrieveSpecs(answers);
+  })
+
   console.log(answers.self)
+  console.log(resultSpecs.self)
 
   return (
     <div className={classes.mainSpace}>
       <Grid container className={classes.resultSpace}>
-        <Grid item lg={9} md={10} sm={12} xs={12} className={classes.infoTemplateSpace}>
-          <ResultsInfo />
-          <ResultsTemplates />
-        </Grid>
+
+        {
+          resultSpecs.isSet() ?
+            <Grid item lg={9} md={10} sm={12} xs={12} className={classes.infoTemplateSpace}>
+              <ResultsInfo />
+              <ResultsTemplates />
+            </Grid>
+          :
+            <Grid item lg={9} md={10} sm={12} xs={12} className={classes.infoTemplateSpace}>
+              Loading ...
+            </Grid>
+        }
 
         <Grid item lg={3} md={2} sm={12} xs={12} className={classes.contactMapSpace}>
           <ResultsContact />

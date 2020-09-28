@@ -42,7 +42,7 @@ export default function ResultInfo(props) {
   let aggText;
   let fristText;
 
-  if (resultSpecs.self.agg === 1) {
+  if (resultSpecs.isAGG()) {
     aggText = "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. "
     fristText = "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall "
     fristText += "schriftlich geltend machen müssen."
@@ -51,7 +51,7 @@ export default function ResultInfo(props) {
   }
 
   let nextSteps;
-  if ((resultSpecs.self.agg === 1) && (resultSpecs.self.frist === 1)) {
+  if ((resultSpecs.isAGG()) && (resultSpecs.isFrist())) {
     nextSteps = "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das "
     nextSteps += "ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
   } else {
