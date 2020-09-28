@@ -2,7 +2,6 @@ import { createContainer } from 'unstated-next';
 import { useState } from 'react';
 
 import result_map from "data/resultmap.json";
-import result_specs from "data/resultspecs.json";
 import feature_map from "data/featuremap.json";
 
 let _initialState = {
@@ -11,10 +10,6 @@ let _initialState = {
 
 export function useResultSpecs(initialState = _initialState) {
   let [self, setResultSpecs] = useState(initialState)
-
-  let _splitAnswers = (answers) => {
-    return [answers.self, answers.keys()]
-  }
 
   const _isEquivalent = (a, b) => {
       var aProps = Object.getOwnPropertyNames(a);
@@ -47,9 +42,8 @@ export function useResultSpecs(initialState = _initialState) {
   }
 
   const _checkForAgg = (answerProfile) => {
-    if (Object.values(answerProfile).includes("non-agg")) {
-      { return false }
-    } else { return true}
+    if (Object.values(answerProfile).includes("non-agg")) { return false }
+    else { return true}
   }
 
   const _checkForFrist = (answerProfile) => {

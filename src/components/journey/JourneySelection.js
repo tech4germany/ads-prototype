@@ -86,19 +86,18 @@ export default function JourneySelection(props) {
   let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
   let options = Object.keys(activeDocument["options"]);
 
+  let CardWithPosition = (props) => {
+    return(
+      <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
+        {props.component}
+      </Grid>
+    )
+  }
+
   return (
     <Grid container className={classes.root} >
 
         {options.map((label, index) => {
-
-
-          let CardWithPosition = (props) => {
-            return(
-              <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
-                {props.component}
-              </Grid>
-            )
-          }
 
           let CardWithActive;
           if (!answers.getAnswersById(activeDocument.identifier).includes(label)) {
