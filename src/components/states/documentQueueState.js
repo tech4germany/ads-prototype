@@ -29,12 +29,20 @@ export function useDocumentQueue(initialState = initialiseDocQueue()) {
     setDocumentQueue(updatedDocQueue)
   }
 
+  const _removeOldDoc = (activeStep, mchoice) => {
+    if ((!mchoice) && (self[activeStep+1]["type"] !== "default")) {
+      let  _docQueue = [...self]
+      _docQueue.splice(activeStep+1, 1)
+      setDocumentQueue(_docQueue);
+    }
+  }
+
   const add = (activeStep, label, mchoice) => {
     let activeDocument = returnActiveDocument(activeStep)
     let newDocumentIdentifier = mapLabelToId(activeDocument.identifier, label)
     if (!(newDocumentIdentifier === null)) {
       _insertNewDoc(newDocumentIdentifier, activeStep, mchoice);
-    }
+    } else { _removeOldDoc(activeStep, mchoice) }
   }
 
   const remove = (activeStep, label) => {
