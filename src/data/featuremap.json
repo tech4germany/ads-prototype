@@ -52,7 +52,7 @@
   "frist": {
     "Ja": "inTime",
     "Nein": "notInTime",
-    "dauert noch an / passiert staendig": "notInTime",
+    "dauert noch an / passiert staendig": "inTime",
     "Ich bin mir nicht sicher": "notInTime"
   }
 }

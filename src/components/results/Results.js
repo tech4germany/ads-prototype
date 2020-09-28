@@ -30,11 +30,11 @@ const useStyles = makeStyles((theme) => ({
       minHeight: "52vh"
   },
   infoTemplateSpace: {
-    height: "100%",
+    maxHeight: "100%",
     paddingRight: "7vw"
   },
   contactMapSpace: {
-    height: "100%"
+    maxHeight: "100%"
   }
 }));
 
