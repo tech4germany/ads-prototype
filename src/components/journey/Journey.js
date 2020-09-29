@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      minWidth: "100%",
+      width: "100%",
   },
 }));
 
