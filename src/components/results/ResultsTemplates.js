@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
   formulierungsHeader: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "2.1vh",
+    color: "black",
     paddingBottom: "1vh",
     textDecoration: "underline",
   }
