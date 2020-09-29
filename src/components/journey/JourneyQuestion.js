@@ -11,19 +11,20 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    paddingLeft: "0.8vw"
+    paddingLeft: "0.8vw",
+    marginBottom: "2vh"
   },
   question: {
     display: "flex",
     flexWrap: "wrap",
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "28px"
+    fontSize: "3.5vh"
   },
   explanation: {
     display: "flex",
     flexWrap: "wrap",
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "22px"
+    fontSize: "2.7vh"
   }
 }));
 

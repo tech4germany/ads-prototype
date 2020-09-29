@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   buttonTextBoxActive: {
     backgroundColor: "#f3b500",
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "1.7vh",
+    fontSize: "1.9vh",
     height: "100%",
     width: "98%",
     overflow: "hidden",
@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
   buttonTextBoxInactive: {
     backgroundColor: "white",
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "1.7vh",
+    fontSize: "1.9vh",
     height: "100%",
     width: "98%",
     overflow: "hidden",
