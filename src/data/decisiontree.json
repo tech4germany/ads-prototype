@@ -1,0 +1,122 @@
+[
+	{
+		"identifier":"merkmal",
+		"type":"default",
+		"multiple_choice": true,
+		"step_title":"Merkmal",
+		"question":"Aufgrund welchen Merkmals sind Sie diskriminiert worden?",
+		"explanation":"Mehrfachauswahl ist möglich",
+		"options": [
+			"Ethnische Herkunft / Rassistische Diskriminierung",
+			"Religion / Weltanschauung",
+			"Behinderung / chronische Krankheiten",
+			"Alter",
+			"Sexuelle Identität",
+			"Geschlecht / Geschlechtsidentität",
+			"Sozialer Status",
+			"Ich bin mir nicht sicher / Sonstiges"
+		]
+	},
+	{
+		"identifier":"lebensbereich",
+		"type":"default",
+		"step_title":"Lebensbereich",
+		"multiple_choice": false,
+		"question":"In welchem Bereich haben Sie Diskriminierung Erfahren?",
+		"explanation":"",
+		"options": [
+			"Arbeitsleben",
+			"Geschäfte, Verträge und Dienstleistungen",
+			"Wohnungsmarkt",
+			"Ämter und Behörden",
+			"Justiz und Polizei",
+			"Bildungsbereich",
+			"Gesundheit und Pflege",
+			"Öffentlichkeit und Freizeit",
+			"Internet, Medien und Werbung",
+			"Ich bin mir nicht sicher"
+		]
+	},
+	{
+		"identifier":"frist",
+		"type":"default",
+		"step_title":"Frist",
+		"multiple_choice": false,
+		"question":"Ist die Diskriminierung innerhalb der letzten 2 Monate vorgefallen?",
+		"explanation":"",
+		"options": [
+			"Ja",
+			"Nein",
+			"dauert noch an / passiert staendig",
+			"Ich bin mir nicht sicher"
+		]
+	},
+	{
+		"identifier":"merkmal_ethnisch_detail",
+		"type":"non-default",
+		"step_title":"Ethnische Herkunft",
+		"multiple_choice": true,
+		"question":"Worauf genau bezog sie die Diskriminierung?",
+		"explanation":"",
+		"options": [
+			"Äußere Merkmale (Hautfarbe), Sprache, Name",
+			"Staatsangehörigkeit / Aufenthaltsstatus",
+			"Ich bin mir nicht sicher / Sonstiges"
+		]
+	},
+	{
+		"identifier":"merkmal_gender_detail",
+		"type":"non-default",
+		"step_title":"Geschlecht",
+		"multiple_choice": true,
+		"question":"Worauf genau bezog sie die Diskriminierung?",
+		"explanation":"",
+		"options": [
+			"Sexuelle Belästigung",
+			"Trans*",
+			"Inter*",
+			"Frau / Mann",
+			"queer",
+			"Ich bin mir nicht sicher / Sonstige"
+		]
+	},
+	{
+		"identifier":"lebensbereich_arbeit_detail",
+		"type":"non-default",
+		"step_title":"Arbeit",
+		"multiple_choice": false,
+		"question":"Worauf genau bezog sie die Diskriminierung?",
+		"explanation":"",
+		"options": [
+			"Zugang",
+			"Im Beschäftigungsverhältnis",
+			"Kündigung / Beendigung"
+		]
+	},
+	{
+		"identifier":"lebensbereich_bildung_detail",
+		"type":"non-default",
+		"step_title":"Bildung",
+		"multiple_choice": false,
+		"question":"Worauf genau bezog sie die Diskriminierung?",
+		"explanation":"",
+		"options": [
+			"Kita",
+			"Privatschule / Privatunterricht",
+			"Öffentliche Schule",
+			"Hochschule"
+		]
+	},
+	{
+		"identifier":"lebensbereich_gesundheit_detail",
+		"type":"non-default",
+		"step_title":"Gesundheit",
+		"multiple_choice": false,
+		"question":"Worauf genau bezog sie die Diskriminierung?",
+		"explanation":"",
+		"options": [
+			"Krankenkasse",
+			"Arztbesuch"
+		]
+	}
+]
