@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8000;
 
 const app = express();
 
-app.use("/ads", express.static(path.join(__dirname, "../build")));
+app.use("/", express.static(path.join(__dirname, "../build")));
 
 // React App
 app.get("/", (req, res) => {

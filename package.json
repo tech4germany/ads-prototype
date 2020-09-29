@@ -2,6 +2,7 @@
   "name": "basefe",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -22,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start:server": "node server/index.js",
-    "build:alternative": "parcel build src/index.html --out-dir build --public-url ./ads",
+    "build:alternative": "parcel build src/index.html --out-dir build/ --public-url ./",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
