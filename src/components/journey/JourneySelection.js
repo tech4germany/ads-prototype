@@ -2,9 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
 
-import { Answers } from "./../states/answerState.js";
-import { ActiveStep } from "./../states/activeStepState.js";
-import { DocumentQueue } from "./../states/documentQueueState.js";
+import { Answers } from "components/states/answerState.js";
+import { ActiveStep } from "components/states/activeStepState.js";
+import { DocumentQueue } from "components/states/documentQueueState.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -83,33 +83,32 @@ export default function JourneySelection(props) {
   let activeStep = ActiveStep.useContainer();
   let documentQueue = DocumentQueue.useContainer();
 
-  let activeDocument = documentQueue.active(activeStep.self)
+  let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
   let options = Object.keys(activeDocument["options"]);
 
-  console.log(answers.self)
-  console.log(documentQueue.self)
+  let CardWithPosition = (props) => {
+    return(
+      <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
+        {props.component}
+      </Grid>
+    )
+  }
 
   return (
     <Grid container className={classes.root} >
 
         {options.map((label, index) => {
 
-
-          let CardWithPosition = (props) => {
-            return(
-              <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
-                {props.component}
-              </Grid>
-            )
-          }
-
           let CardWithActive;
           if (!answers.getAnswersById(activeDocument.identifier).includes(label)) {
             CardWithActive =
               <div className={classes.buttonCardInactive}
                 onClick={() => {
-                  answers.update(activeDocument, label)
-                  documentQueue.add(activeStep.self, label)
+                  console.log("ative step", activeStep.self)
+                  answers.add(activeDocument.identifier, activeDocument.multiple_choice, label)
+                                    console.log("ative step", activeStep.self)
+
+                  documentQueue.add(activeStep.self, label, activeDocument.multiple_choice)
                 }}
               >
                 <div className={classes.buttonTextBoxInactive}>
@@ -121,8 +120,8 @@ export default function JourneySelection(props) {
             CardWithActive =
               <div className={classes.buttonCardActive}
                 onClick={() => {
-                  answers.update(activeDocument, label)
                   documentQueue.remove(activeStep.self, label)
+                  answers.remove(activeDocument.identifier, label)
                 }}
               >
                 <div className={classes.buttonTextBoxActive}>

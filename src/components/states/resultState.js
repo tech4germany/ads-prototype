@@ -1,58 +1,95 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
 
-import result_map from "./../journey/documents/resultmap.json";
-import result_specs from "./../journey/documents/resultspecs.json";
+import result_map from "data/resultmap.json";
+import feature_map from "data/featuremap.json";
 
-const currentExceptions = [
-  "merkmal_ethnisch_detail",
-  "merkmal_religion_detail",
-  "merkmal_behinderung_detail",
-  "merkmal_sex_detail",
-  "lebensbereich_arbeit_detail",
-  "lebensbereich_behörden_detail",
-  "lebensbereich_wohnen_detail",
-  "lebensbereich_bildung_detail",
-  "lebensbereich_gesundheit_detail"
-  ]
+let _initialState = {
+  "profile": null
+}
 
-export function useResultSpecs(initialState = -1) {
+export function useResultSpecs(initialState = _initialState) {
   let [self, setResultSpecs] = useState(initialState)
 
-  let _splitAnswers = (answers) => {
-    return [answers.self, answers.keys()]
-  }
-
-  let matchAnswer = (answers_vals, answers_keys) => {
-    let res_match = -1;
-    for (var i=0; i < result_map.length; i++) {
-      let kill_switch = 1;
-      for (var y=0; y<answers_keys.length; y++) {
-        kill_switch = 0;
-        if (!currentExceptions.includes(answers_keys[y])) {
-          if (!(result_map[i]["input"][answers_keys[y]].includes(answers_vals[answers_keys[y]][0]))) {
-            kill_switch = 1;
-            break;
-          } else { continue; }
-        }
+  const _isEquivalent = (a, b) => {
+      var aProps = Object.getOwnPropertyNames(a);
+      var bProps = Object.getOwnPropertyNames(b);
+      if (aProps.length != bProps.length) {
+          return false;
       }
-      if (kill_switch===1) { continue; }
-      else { res_match = result_map[i]["identifier"] }
+      for (var i = 0; i < aProps.length; i++) {
+          var propName = aProps[i];
+          if (a[propName] !== b[propName]) {
+              return false;
+          }
+      }
+      return true;
+  }
+
+  const _parseAnswerToProfile = (answers) => {
+    let answersProfile = {};
+    for (var key in answers.self) {
+      let translatedAnswer = answers.self[key].map(function(el) { return feature_map[key][el] })
+      if (key !== "frist") {
+        if (translatedAnswer.includes("agg")) { answersProfile[key] = "agg" }
+        else { answersProfile[key] = "non-agg" }
+      } else {
+        if (translatedAnswer.includes("inTime")) { answersProfile[key] = "inTime" }
+        else { answersProfile[key] = "notInTime" }
+      }
     }
-    return res_match
+    return answersProfile
   }
 
-  let retrieveSpecs = (answers) => {
-    let answers_vals = _splitAnswers(answers)[0]
-    let answers_keys = _splitAnswers(answers)[1]
-    let res_match = matchAnswer(answers_vals, answers_keys);
-    let res_document = result_specs.filter(function(el) {
-      return el.identifier === res_match
-    })
-    if (res_document.length > 0) {return res_document[0]}
-    else {return {}}
+  const _checkForAgg = (answerProfile) => {
+    if (Object.values(answerProfile).includes("non-agg")) { return false }
+    else { return true}
   }
 
-  return { self, retrieveSpecs, matchAnswer}
+  const _checkForFrist = (answerProfile) => {
+    if (answerProfile["frist"] !== "inTime") { return false }
+    else { return true}
+  }
+
+  const _parseAnswerToSparseProfile = (answers) => {
+    let answerProfile = _parseAnswerToProfile(answers)
+    let sparseAnswerProfile = {};
+    sparseAnswerProfile["agg"] = _checkForAgg(answerProfile)
+    sparseAnswerProfile["frist"] = _checkForFrist(answerProfile)
+    return sparseAnswerProfile
+  }
+
+  const matchFeatureProfileToResult = (sparseAnswerProfile) => {
+    let res_match;
+    for (var i=0; i < result_map.length; i++) {
+      if (_isEquivalent(result_map[i]["profile"], sparseAnswerProfile)) {
+        res_match = result_map[i]
+        break
+      }
+    }
+    setResultSpecs(res_match)
+  }
+
+  const retrieveSpecs = (answers) => {
+    let sparseAnswerProfile = _parseAnswerToSparseProfile(answers)
+    matchFeatureProfileToResult(sparseAnswerProfile)
+  }
+
+  const isAGG = () => {
+    if (self["profile"].agg) { return true }
+    else { return false }
+  }
+
+  const isFrist = () => {
+    if (self["profile"].frist) { return true }
+    else { return false }
+  }
+
+  const isSet = () => {
+    if (self.profile !== null) { return true }
+    else { return false }
+  }
+
+  return { self, retrieveSpecs, isAGG, isFrist, isSet }
 }
 export const ResultSpecs = createContainer(useResultSpecs)

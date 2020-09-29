@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-import StartButton from "./StartButton.js";
+import StartButton from "components/start/StartButton.js";
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {

@@ -1,0 +1,31 @@
+[
+  {
+    "identifier": 0,
+    "profile": {
+      "agg": true,
+      "frist": true
+    }
+  },
+  {
+    "identifier": 1,
+    "profile": {
+      "agg": true,
+      "frist": false
+    }
+  },
+  {
+    "identifier": 2,
+    "profile": {
+      "agg": false,
+      "frist": true
+    }
+  },
+  {
+    "identifier": 3,
+    "profile": {
+      "agg": false,
+      "frist": false
+    }
+  }
+]
+

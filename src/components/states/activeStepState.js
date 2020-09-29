@@ -4,20 +4,36 @@ import { useState } from 'react';
 export function useActiveStep(initialState = 0) {
   let [self, setActiveStep] = useState(initialState)
 
+  const _validateNoOverflowStep = (docQueueLength) => {
+    if ( self+1 < docQueueLength ) { return true }
+    else { return false }
+  }
+
+  const _validateNonNegativeStep = () => {
+    if (self > 0) { return true }
+    else { return false }
+  }
+
+  const _validateJump = (newStep, docQueueLength) => {
+    if ((newStep+1 <= docQueueLength) && (newStep >= 0)) {
+      return true
+    } else { return false }
+  }
+
   let increment = (documentQueueLength) => {
-    if (self+1 < documentQueueLength) {
+    if (_validateNoOverflowStep) {
       setActiveStep(self + 1)
     }
   }
 
   let decrement = () => {
-    if (self > 0) {
+    if (_validateNonNegativeStep) {
       setActiveStep(self - 1)
     }
   }
 
-  let jumpTo = (newStep, documentQueueLength) => {
-    if ((newStep+1 <= documentQueueLength) && (newStep >= 0)) {
+  let jumpTo = (newStep, docQueueLength) => {
+     if (_validateJump(newStep, docQueueLength)) {
       setActiveStep(newStep)
     }
   }

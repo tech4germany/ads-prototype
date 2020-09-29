@@ -8,8 +8,8 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Check from '@material-ui/icons/Check';
 import StepConnector from '@material-ui/core/StepConnector';
 
-import { DocumentQueue } from "./../states/documentQueueState.js";
-import { ActiveStep } from "./../states/activeStepState.js";
+import { DocumentQueue } from "components/states/documentQueueState.js";
+import { ActiveStep } from "components/states/activeStepState.js";
 
 const QontoConnector = withStyles({
   alternativeLabel: {
@@ -88,7 +88,7 @@ export default function CustomizedStepper() {
   const classes = useStyles();
   let activeStep = ActiveStep.useContainer();
   let documentQueue = DocumentQueue.useContainer();
-  let steps = documentQueue.steps()
+  let steps = documentQueue.extractStepTitles()
   let activeDefaultStep = documentQueue.activeDefaultStep(activeStep.self);
 
   return (

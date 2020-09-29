@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import map from './../../../images/image_ph.jpg';
+import map from 'images/image_ph.jpg';
 
 const useStyles = makeStyles((theme) => ({
   mapSpace: {
