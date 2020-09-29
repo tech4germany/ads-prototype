@@ -27,6 +27,4 @@ yarn-error.log*
 /cypress
 cypress.json
 
-/src/fonts/
-
 .cache/
