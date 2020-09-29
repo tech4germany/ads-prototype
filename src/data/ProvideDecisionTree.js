@@ -1,4 +1,4 @@
-import decision_tree from "data/decisiontree_v2.json";
+import decision_tree from "data/decisiontree.json";
 import labeltoid from "data/labeltoid.json";
 
 const resultObj = {

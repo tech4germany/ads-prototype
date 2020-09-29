@@ -6,16 +6,16 @@
 		"step_title":"Merkmal",
 		"question":"Aufgrund welchen Merkmals sind Sie diskriminiert worden?",
 		"explanation":"Mehrfachauswahl ist möglich",
-		"options": {
-			"Ethnische Herkunft / Rassistische Diskriminierung":"merkmal_ethnisch_detail",
-			"Religion / Weltanschauung": null,
-			"Behinderung / chronische Krankheiten": null,
-			"Alter": null,
-			"Sexuelle Identität": null,
-			"Geschlecht / Geschlechtsidentität": "merkmal_gender_detail",
-			"Sozialer Status": null,
-			"Ich bin mir nicht sicher / Sonstiges": null
-		}
+		"options": [
+			"Ethnische Herkunft / Rassistische Diskriminierung",
+			"Religion / Weltanschauung",
+			"Behinderung / chronische Krankheiten",
+			"Alter",
+			"Sexuelle Identität",
+			"Geschlecht / Geschlechtsidentität",
+			"Sozialer Status",
+			"Ich bin mir nicht sicher / Sonstiges"
+		]
 	},
 	{
 		"identifier":"lebensbereich",
@@ -24,18 +24,18 @@
 		"multiple_choice": false,
 		"question":"In welchem Bereich haben Sie Diskriminierung Erfahren?",
 		"explanation":"",
-		"options": {
-			"Arbeitsleben":"lebensbereich_arbeit_detail",
-			"Geschäfte, Verträge und Dienstleistungen": null,
-			"Wohnungsmarkt":null,
-			"Ämter und Behörden": null,
-			"Justiz und Polizei": null,
-			"Bildungsbereich":"lebensbereich_bildung_detail",
-			"Gesundheit und Pflege": "lebensbereich_gesundheit_detail",
-			"Öffentlichkeit und Freizeit":null,
-			"Internet, Medien und Werbung":null,
-			"Ich bin mir nicht sicher":null
-		}
+		"options": [
+			"Arbeitsleben",
+			"Geschäfte, Verträge und Dienstleistungen",
+			"Wohnungsmarkt",
+			"Ämter und Behörden",
+			"Justiz und Polizei",
+			"Bildungsbereich",
+			"Gesundheit und Pflege",
+			"Öffentlichkeit und Freizeit",
+			"Internet, Medien und Werbung",
+			"Ich bin mir nicht sicher"
+		]
 	},
 	{
 		"identifier":"frist",
@@ -44,12 +44,12 @@
 		"multiple_choice": false,
 		"question":"Ist die Diskriminierung innerhalb der letzten 2 Monate vorgefallen?",
 		"explanation":"",
-		"options": {
-			"Ja":null,
-			"Nein": null,
-			"dauert noch an / passiert staendig": null,
-			"Ich bin mir nicht sicher": null
-		}
+		"options": [
+			"Ja",
+			"Nein",
+			"dauert noch an / passiert staendig",
+			"Ich bin mir nicht sicher"
+		]
 	},
 	{
 		"identifier":"merkmal_ethnisch_detail",
@@ -58,11 +58,11 @@
 		"multiple_choice": true,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
-		"options": {
-			"Äußere Merkmale (Hautfarbe), Sprache, Name": null,
-			"Staatsangehörigkeit / Aufenthaltsstatus": null,
-			"Ich bin mir nicht sicher / Sonstiges": null
-		}
+		"options": [
+			"Äußere Merkmale (Hautfarbe), Sprache, Name",
+			"Staatsangehörigkeit / Aufenthaltsstatus",
+			"Ich bin mir nicht sicher / Sonstiges"
+		]
 	},
 	{
 		"identifier":"merkmal_gender_detail",
@@ -71,14 +71,14 @@
 		"multiple_choice": true,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
-		"options": {
-			"Sexuelle Belästigung": null,
-			"Trans*": null,
-			"Inter*": null,
-			"Frau / Mann": null,
-			"queer": null,
-			"Ich bin mir nicht sicher / Sonstige":null
-		}
+		"options": [
+			"Sexuelle Belästigung",
+			"Trans*",
+			"Inter*",
+			"Frau / Mann",
+			"queer",
+			"Ich bin mir nicht sicher / Sonstige"
+		]
 	},
 	{
 		"identifier":"lebensbereich_arbeit_detail",
@@ -87,11 +87,11 @@
 		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
-		"options": {
-			"Zugang": null,
-			"Im Beschäftigungsverhältnis": null,
-			"Kündigung / Beendigung": null
-		}
+		"options": [
+			"Zugang",
+			"Im Beschäftigungsverhältnis",
+			"Kündigung / Beendigung"
+		]
 	},
 	{
 		"identifier":"lebensbereich_bildung_detail",
@@ -100,12 +100,12 @@
 		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
-		"options": {
-			"Kita": null,
-			"Privatschule / Privatunterricht": null,
-			"Öffentliche Schule": null,
-			"Hochschule": null
-		}
+		"options": [
+			"Kita",
+			"Privatschule / Privatunterricht",
+			"Öffentliche Schule",
+			"Hochschule"
+		]
 	},
 	{
 		"identifier":"lebensbereich_gesundheit_detail",
@@ -114,9 +114,9 @@
 		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
-		"options": {
-			"Krankenkasse": null,
-			"Arztbesuch": null
-		}
+		"options": [
+			"Krankenkasse",
+			"Arztbesuch"
+		]
 	}
 ]

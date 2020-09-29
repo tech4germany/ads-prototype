@@ -45,8 +45,9 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonTextBoxActive: {
     backgroundColor: "#f3b500",
+    color: "white",
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "1.9vh",
+    fontSize: "2vh",
     height: "100%",
     width: "98%",
     overflow: "hidden",
@@ -58,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   buttonTextBoxInactive: {
     backgroundColor: "white",
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "1.9vh",
+    fontSize: "2vh",
     height: "100%",
     width: "98%",
     overflow: "hidden",
@@ -90,7 +91,6 @@ export default function JourneySelection(props) {
   let documentQueue = DocumentQueue.useContainer();
 
   let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
-  let options = Object.keys(activeDocument["options"]);
 
   let CardWithPosition = (props) => {
     return(
@@ -103,7 +103,7 @@ export default function JourneySelection(props) {
   return (
     <Grid container className={classes.root} >
 
-        {options.map((label, index) => {
+        {activeDocument["options"].map((label, index) => {
 
           let CardWithSelection;
           if (!answers.getAnswersById(activeDocument.identifier).includes(label)) {
