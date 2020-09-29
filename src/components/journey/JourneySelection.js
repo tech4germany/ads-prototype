@@ -45,21 +45,27 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonTextBoxActive: {
     backgroundColor: "#f3b500",
-    padding: theme.spacing(3,4,3,4),
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "1.7vh",
     height: "100%",
     width: "98%",
-    overflow: "hidden"
+    overflow: "hidden",
+    paddingLeft: "0.8vw",
+    paddingRight: "0.8vw",
+    paddingTop: "0.8vw",
+    paddingBottom: "0.8vw",
   },
   buttonTextBoxInactive: {
     backgroundColor: "white",
-    padding: theme.spacing(3,4,3,4),
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "1.7vh",
     height: "100%",
     width: "98%",
-    overflow: "hidden"
+    overflow: "hidden",
+    paddingLeft: "0.8vw",
+    paddingRight: "0.8vw",
+    paddingTop: "0.8vw",
+    paddingBottom: "0.8vw",
   },
   buttonStripe: {
     display: "flex",
@@ -99,9 +105,9 @@ export default function JourneySelection(props) {
 
         {options.map((label, index) => {
 
-          let CardWithActive;
+          let CardWithSelection;
           if (!answers.getAnswersById(activeDocument.identifier).includes(label)) {
-            CardWithActive =
+            CardWithSelection =
               <div className={classes.buttonCardInactive}
                 onClick={() => {
                   console.log("ative step", activeStep.self)
@@ -117,7 +123,7 @@ export default function JourneySelection(props) {
                <div className={classes.buttonStripe}></div>
               </div>
           } else {
-            CardWithActive =
+            CardWithSelection =
               <div className={classes.buttonCardActive}
                 onClick={() => {
                   documentQueue.remove(activeStep.self, label)
@@ -132,7 +138,7 @@ export default function JourneySelection(props) {
           }
 
           return(
-            <CardWithPosition component={CardWithActive}/>
+            <CardWithPosition component={CardWithSelection}/>
           )
         })}
     </Grid>
