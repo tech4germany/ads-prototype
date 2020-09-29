@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from "react-router-dom";
 
 import { ResultSpecs } from "components/states/resultState.js";
 
@@ -34,9 +35,9 @@ export default function ResultTemplates(props) {
   return (
     <div className={classes.templateSpace}>
       { showTemplate ?
-        <div className={classes.formulierungsHeader}>
-          Formulierungshilfen finden Sie hier
-        </div>
+          <a target="_blank" href="https://www.antidiskriminierungsstelle.de/DE/ThemenUndForschung/Recht_und_gesetz/Handbuch/Anhang/Musterschreiben/Musterschreiben_node.html" className={classes.formulierungsHeader} >
+            Formulierungshilfen finden Sie hier
+          </a>
         :
         null
       }

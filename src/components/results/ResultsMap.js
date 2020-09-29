@@ -44,7 +44,9 @@ export default function ResultMap(props) {
         Beratungsstellen in Ihrer Nähe finden
       </div>
       <div className={classes.mapImage}>
+        <a target="_blank" href="https://www.antidiskriminierungsstelle.de/SiteGlobals/Forms/Suche/Beratungsstellensuche/Karte/Beratungsstellensuche_formular.html?nn=6560716&ambit_distance=200&ambit_distance.HASH=3f1f143fdef1207bca01">
         <img src={map} alt={"empty"}/>
+        </a>
       </div>
     </div>
   );
