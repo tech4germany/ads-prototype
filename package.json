@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start:server": "node server/index.js",
-    "build:alternative": "parcel build src/index.html --out-dir build --public-url ./ads",
+    "build:alternative": "parcel build src/index.html --out-dir build/ --public-url ./",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
