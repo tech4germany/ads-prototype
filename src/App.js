@@ -48,18 +48,7 @@ export default function App() {
 
           <div className={classes.mainArea}>
 
-                {/* Router */}
-                 <Router>
-                    <Switch>
-                      <Route exact path="/">
-                        <Start />
-                      </Route>
-                      <Route path="/journey">
-                        <JourneyStateInit />
-                      </Route>
-                    </Switch>
-                 </Router>
-                {/* End Router */}
+            <JourneyStateInit />
 
           </div>
         </div>
