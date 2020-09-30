@@ -14,8 +14,8 @@ import { ActiveStep } from "components/states/activeStepState.js";
 const QontoConnector = withStyles({
   alternativeLabel: {
     top: 10,
-    left: 'calc(-50% + 32px)',
-    right: 'calc(50% + 32px)',
+    left: 'calc(-50% + 16px)',
+    right: 'calc(50% + 16px)',
   },
   active: {
     '& $line': {
@@ -45,15 +45,15 @@ const useQontoStepIconStyles = makeStyles({
     color: "#f3b500",
   },
   circle: {
-    width: 30,
-    height: 30,
+    width: "2vh",
+    height: "2vh",
     borderRadius: '50%',
     backgroundColor: 'currentColor',
   },
   completed: {
     color: '#ffd740',
     zIndex: 1,
-    fontSize: 46,
+    fontSize: "3.5vh",
   },
 });
 
@@ -79,8 +79,15 @@ QontoStepIcon.propTypes = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    display: "flex",
+    justifyContent: "center",
     backgroundColor: "#fef3df",
     width: '100%',
+    position: "absolute",
+    left: "-100vw",
+    right: "-100vw",
+    margin: "auto",
+
   },
 }));
 
