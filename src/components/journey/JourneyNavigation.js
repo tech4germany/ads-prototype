@@ -37,7 +37,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    overflow: "hidden"
+    position: "relative",
+    overflowX: "hidden"
   }
 
 }));
