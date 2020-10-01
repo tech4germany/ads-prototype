@@ -7,7 +7,7 @@ import { ActiveStep } from "components/states/activeStepState"
 
 const useStyles = makeStyles((theme) => ({
   questionBox: {
-    minHeight: "10vh",
+    minHeight: "12vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
@@ -18,13 +18,14 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "3.5vh"
+    fontSize: "4vh"
   },
   explanation: {
     display: "flex",
     flexWrap: "wrap",
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "2.7vh"
+    fontSize: "2vh",
+    whiteSpace: "pre-wrap"
   }
 }));
 

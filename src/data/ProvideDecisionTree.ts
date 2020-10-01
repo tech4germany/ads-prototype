@@ -1,5 +1,8 @@
 import decision_tree from "data/decisiontree.json";
 import labeltoid from "data/labeltoid.json";
+import labeltodescription from "data/labeltodescription.json";
+
+type OrNull<T> = T | null;
 
 const resultObj = {
   "identifier": "result",
@@ -36,7 +39,6 @@ export function retrieveNonDefaultDoc(identifier: string): StepDocumentLayout {
   return _newDoc[0]
 }
 
-type OrNull<T> = T | null;
 interface StepLabelToIdLayout {
   [key: string]: OrNull<string>;
 }
@@ -44,8 +46,19 @@ interface LabelToIdLayout {
   [key: string]: StepLabelToIdLayout;
 }
 let LabelToId: LabelToIdLayout = labeltoid;
-export function mapLabelToId(stepIdentifier: string, label: string): string {
-  let nextId: OrNull<string> = LabelToId[stepIdentifier][label];
+export function mapLabelToId(stepIdentifier: string, label: string): OrNull<string> {
+  return LabelToId[stepIdentifier][label];
+}
+
+interface StepLabelToDescriptionLayout {
+  [key: string]: OrNull<string>;
+}
+interface LabelToDescriptionLayout {
+  [key: string]: StepLabelToIdLayout;
+}
+let LabelToDescription: LabelToDescriptionLayout = labeltodescription;
+export function mapLabelToDescription(stepIdentifier: string, label: string): string {
+  let nextId: OrNull<string> = LabelToDescription[stepIdentifier][label];
   if (nextId !== null) {
     return nextId
   } else { return "" }

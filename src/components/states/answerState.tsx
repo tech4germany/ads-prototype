@@ -25,7 +25,10 @@ export function useAnswers(initialState: AnswersLayout = {}) {
 
   const _overwriteCurrentLabel = (ans: AnswersLayout, id: string, newLabel: string): AnswersLayout => {
     let delLabel = ans[id][0]
-    delete ans[mapLabelToId(id, delLabel)]
+    let delIndex = mapLabelToId(id, delLabel);
+    if (delIndex !== null) {
+      delete ans[delIndex]
+    }
     ans[id] = [newLabel]
     return ans
   }
@@ -56,9 +59,11 @@ export function useAnswers(initialState: AnswersLayout = {}) {
 
   let remove = (id: string, label: string): void => {
     let _ans: AnswersLayout = {...self}
-    let delId = mapLabelToId(id, label)
     _ans = _deleteLabelFromStepAnswer(_ans, id, label)
-    delete _ans[delId]
+    let delId = mapLabelToId(id, label)
+    if (delId !== null) {
+      delete _ans[delId]
+    }
     setAnswers(_ans)
   }
 

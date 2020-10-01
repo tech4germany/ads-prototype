@@ -4,8 +4,8 @@
 		"type":"default",
 		"multiple_choice": true,
 		"step_title":"Merkmal",
-		"question":"Aufgrund welchen Merkmals sind Sie diskriminiert worden?",
-		"explanation":"Mehrfachauswahl ist möglich",
+		"question":"Grund der Diskriminierung",
+		"explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können.\nErst mal interessiert uns, welche Ursache Sie hinter der Diskriminierung vermuten. Also aus welchem Grund bzw. persönlichen Merkmal wurden Sie  diskriminiert?",
 		"options": [
 			"Ethnische Herkunft / Rassistische Diskriminierung",
 			"Religion / Weltanschauung",
@@ -14,7 +14,7 @@
 			"Sexuelle Identität",
 			"Geschlecht / Geschlechtsidentität",
 			"Sozialer Status",
-			"Ich bin mir nicht sicher / Sonstiges"
+			"Sonstiges"
 		]
 	},
 	{
@@ -22,8 +22,8 @@
 		"type":"default",
 		"step_title":"Lebensbereich",
 		"multiple_choice": false,
-		"question":"In welchem Bereich haben Sie Diskriminierung Erfahren?",
-		"explanation":"",
+		"question":"Bereich der Diskriminierung",
+		"explanation":"Außerdem ist es wichtig zu wissen, in welchem Zusammenhang Sie die Diskriminierung erlebt haben. In welchem Lebensbereich wurden Sie denn diskriminiert?",
 		"options": [
 			"Arbeitsleben",
 			"Geschäfte, Verträge und Dienstleistungen",
@@ -42,8 +42,8 @@
 		"type":"default",
 		"step_title":"Frist",
 		"multiple_choice": false,
-		"question":"Ist die Diskriminierung innerhalb der letzten 2 Monate vorgefallen?",
-		"explanation":"",
+		"question":"Zeitpunkt",
+		"explanation":"Schließlich kommt es auch darauf an, wann die Diskriminierung vorgefallen ist, ob Sie noch rechtliche Schritte ergreifen können. Wurden Sie innerhalb der letzten zwei Monate diskriminiert?",
 		"options": [
 			"Ja",
 			"Nein",
@@ -59,9 +59,9 @@
 		"question":"Worauf genau bezog sie die Diskriminierung?",
 		"explanation":"",
 		"options": [
-			"Äußere Merkmale (Hautfarbe), Sprache, Name",
+			"Äußere Merkmale",
 			"Staatsangehörigkeit / Aufenthaltsstatus",
-			"Ich bin mir nicht sicher / Sonstiges"
+			"Sonstiges"
 		]
 	},
 	{
@@ -77,7 +77,7 @@
 			"Inter*",
 			"Frau / Mann",
 			"queer",
-			"Ich bin mir nicht sicher / Sonstige"
+			"Sonstiges"
 		]
 	},
 	{
