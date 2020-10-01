@@ -7,7 +7,7 @@
     "Sexuelle Identität": null,
     "Geschlecht / Geschlechtsidentität": "merkmal_gender_detail",
     "Sozialer Status": null,
-    "Ich bin mir nicht sicher / Sonstiges": null
+    "Sonstiges": null
   },
   "lebensbereich": {
     "Arbeitsleben":"lebensbereich_arbeit_detail",
@@ -22,9 +22,9 @@
     "Ich bin mir nicht sicher":null
   },
   "merkmal_ethnisch_detail": {
-    "Äußere Merkmale (Hautfarbe), Sprache, Name": null,
+    "Äußere Merkmale": null,
     "Staatsangehörigkeit / Aufenthaltsstatus": null,
-    "Ich bin mir nicht sicher / Sonstiges": null
+    "Sonstiges": null
   },
   "merkmal_gender_detail": {
     "Sexuelle Belästigung": null,
@@ -32,7 +32,7 @@
     "Inter*": null,
     "Frau / Mann": null,
     "queer": null,
-    "Ich bin mir nicht sicher / Sonstige":null
+    "Sonstiges":null
   },
   "lebensbereich_arbeit_detail": {
     "Zugang": null,

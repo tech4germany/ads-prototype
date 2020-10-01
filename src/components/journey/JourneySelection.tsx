@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
 
+import { mapLabelToDescription } from "data/ProvideDecisionTree"
+
 import { Answers } from "components/states/answerState"
 import { ActiveStep } from "components/states/activeStepState"
 import { DocumentQueue } from "components/states/documentQueueState"
@@ -29,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     width: "100%",
     cursor: "pointer",
-    height: "10vh",
+    height: "11vh",
     borderRadius: "0px",
   },
   buttonCardActive: {
@@ -40,33 +42,42 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     width: "100%",
     cursor: "pointer",
-    height: "10vh",
+    height: "11vh",
     borderRadius: "0px",
   },
   buttonTextBoxActive: {
     backgroundColor: "#f3b500",
     color: "white",
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "2vh",
+    fontSize: "1.8vh",
     height: "100%",
     width: "98%",
     overflow: "hidden",
-    paddingLeft: "0.8vw",
-    paddingRight: "0.8vw",
-    paddingTop: "0.8vw",
-    paddingBottom: "0.8vw",
+    paddingLeft: "1vw",
+    paddingRight: "1vw",
+    paddingTop: "0.6vw",
+    paddingBottom: "0.6vw",
   },
   buttonTextBoxInactive: {
     backgroundColor: "white",
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "2vh",
+    fontSize: "1.8vh",
     height: "100%",
     width: "98%",
     overflow: "hidden",
-    paddingLeft: "0.8vw",
-    paddingRight: "0.8vw",
-    paddingTop: "0.8vw",
-    paddingBottom: "0.8vw",
+    paddingLeft: "1vw",
+    paddingRight: "1vw",
+    paddingTop: "0.6vw",
+    paddingBottom: "0.6vw",
+  },
+  buttonTextExplanationInactive: {
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "1.4vh",
+  },
+  buttonTextExplanationActive: {
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "1.4vh",
+    color: "white"
   },
   buttonStripe: {
     display: "flex",
@@ -112,15 +123,15 @@ export default function JourneySelection() {
             CardWithSelection =
               <div className={classes.buttonCardInactive}
                 onClick={() => {
-                  console.log("ative step", activeStep.self)
                   answers.add(activeDocument.identifier, activeDocument.multiple_choice, label)
-                                    console.log("ative step", activeStep.self)
-
                   documentQueue.add(activeStep.self, label, activeDocument.multiple_choice)
                 }}
               >
                 <div className={classes.buttonTextBoxInactive}>
                   {label}
+                  <div className={classes.buttonTextExplanationInactive}>
+                    {mapLabelToDescription(activeDocument.identifier, label)}
+                  </div>
                 </div>
                <div className={classes.buttonStripe}></div>
               </div>
@@ -134,6 +145,9 @@ export default function JourneySelection() {
               >
                 <div className={classes.buttonTextBoxActive}>
                   {label}
+                  <div className={classes.buttonTextExplanationActive}>
+                    {mapLabelToDescription(activeDocument.identifier, label)}
+                  </div>
                 </div>
                 <div className={classes.buttonStripe}></div>
               </div>

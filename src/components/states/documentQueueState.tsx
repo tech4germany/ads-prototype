@@ -1,7 +1,7 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
 
-import { initialiseDocQueue, retrieveNonDefaultDoc, mapLabelToId } from "data/ProvideDecisionTree.js";
+import { initialiseDocQueue, retrieveNonDefaultDoc, mapLabelToId } from "data/ProvideDecisionTree"
 
 type OrUndefined<T> = T | undefined;
 
