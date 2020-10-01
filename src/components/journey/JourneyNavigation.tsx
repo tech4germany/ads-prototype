@@ -8,7 +8,7 @@ import Stepper from "components/journey/JourneyStepper"
 
 import { ActiveStep } from "components/states/activeStepState.js";
 import { DocumentQueue } from "components/states/documentQueueState.js";
-import { Answers } from "components/states/answerState.js";
+import { Answers } from "components/states/answerState";
 import { ShowResult } from "components/states/showResultState.js";
 
 const useStyles = makeStyles((theme) => ({

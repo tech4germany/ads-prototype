@@ -2,8 +2,8 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
-import JourneyStep from "components/journey/JourneyStep";
-import Result from "components/results/Results.js";
+import JourneyStep from "components/journey/JourneyStep"
+import Result from "components/results/Results"
 
 import { ShowResult } from "components/states/showResultState.js";
 

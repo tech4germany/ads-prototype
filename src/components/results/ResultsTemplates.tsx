@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ResultTemplates(props) {
+export default function ResultTemplates() {
   const classes = useStyles();
   let resultSpecs = ResultSpecs.useContainer()
 

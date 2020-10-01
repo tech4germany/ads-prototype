@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ResultMap(props) {
+export default function ResultMap() {
   const classes = useStyles();
 
   return (
