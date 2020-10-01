@@ -1,7 +1,9 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
 
-import { mapLabelToId } from "data/ProvideDecisionTree.js";
+import { mapLabelToId } from "data/ProvideDecisionTree"
+
+type OrNull<T> = T | null;
 
 interface AnswersLayout {
   [key: string]: Array<string>;
