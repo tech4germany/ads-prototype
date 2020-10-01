@@ -2,8 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
 
-import { Answers } from "components/states/answerState";
-import { ActiveStep } from "components/states/activeStepState";
+import { Answers } from "components/states/answerState"
+import { ActiveStep } from "components/states/activeStepState"
 import { DocumentQueue } from "components/states/documentQueueState"
 
 const useStyles = makeStyles((theme) => ({

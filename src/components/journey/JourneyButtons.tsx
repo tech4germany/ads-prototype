@@ -5,7 +5,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import { ActiveStep } from "components/states/activeStepState"
 import { DocumentQueue } from "components/states/documentQueueState"
 import { Answers } from "components/states/answerState"
-import { ShowResult } from "components/states/showResultState.js";
+import { ShowResult } from "components/states/showResultState"
 
 const useStyles = makeStyles((theme) => ({
   buttonInactive: {

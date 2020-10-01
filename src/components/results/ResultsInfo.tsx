@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { ResultSpecs } from "components/states/resultState.js";
+import { ResultSpecs } from "components/states/resultState"
 import { Answers } from "components/states/answerState";
 
 const useStyles = makeStyles((theme) => ({

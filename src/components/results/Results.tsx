@@ -9,8 +9,8 @@ import ResultsContact from "components/results/ResultsContact"
 import ResultsMap from "components/results/ResultsMap"
 import ResultsTemplates from "components/results/ResultsTemplates"
 
-import { Answers } from "components/states/answerState";
-import { ResultSpecs } from "components/states/resultState.js";
+import { Answers } from "components/states/answerState"
+import { ResultSpecs } from "components/states/resultState"
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
@@ -43,7 +43,7 @@ export default function Result() {
   let resultSpecs = ResultSpecs.useContainer();
 
   useEffect(() => {
-    resultSpecs.retrieveSpecs(answers);
+    resultSpecs.retrieveSpecs(answers.self);
   })
 
   console.log(answers.self)

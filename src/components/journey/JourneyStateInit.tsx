@@ -2,11 +2,11 @@ import React from 'react';
 
 import Journey from "./Journey";
 
-import { Answers } from "components/states/answerState";
-import { ActiveStep } from "components/states/activeStepState";
+import { Answers } from "components/states/answerState"
+import { ActiveStep } from "components/states/activeStepState"
 import { DocumentQueue } from "components/states/documentQueueState"
-import { ShowResult } from "components/states/showResultState.js";
-import { ResultSpecs } from "components/states/resultState.js";
+import { ShowResult } from "components/states/showResultState"
+import { ResultSpecs } from "components/states/resultState"
 
 export default function JourneyStateInit() {
 

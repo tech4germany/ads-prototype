@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import JourneyStep from "components/journey/JourneyStep"
 import Result from "components/results/Results"
 
-import { ShowResult } from "components/states/showResultState.js";
+import { ShowResult } from "components/states/showResultState"
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
