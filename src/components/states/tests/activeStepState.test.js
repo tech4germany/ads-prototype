@@ -1,4 +1,4 @@
-import  { useActiveStep } from "./../activeStepState.js";
+import  { useActiveStep } from "./../activeStepState";
 import { renderHook, act } from "@testing-library/react-hooks"
 
 test('Increment while in middle of Queue', () => {

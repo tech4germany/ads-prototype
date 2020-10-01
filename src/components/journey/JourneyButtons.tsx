@@ -2,9 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 
-import { ActiveStep } from "components/states/activeStepState.js";
-import { DocumentQueue } from "components/states/documentQueueState.js";
-import { Answers } from "components/states/answerState";
+import { ActiveStep } from "components/states/activeStepState"
+import { DocumentQueue } from "components/states/documentQueueState"
+import { Answers } from "components/states/answerState"
 import { ShowResult } from "components/states/showResultState.js";
 
 const useStyles = makeStyles((theme) => ({

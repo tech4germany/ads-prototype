@@ -2,8 +2,8 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { DocumentQueue } from "components/states/documentQueueState.js";
-import { ActiveStep } from "components/states/activeStepState.js";
+import { DocumentQueue } from "components/states/documentQueueState"
+import { ActiveStep } from "components/states/activeStepState";
 
 const useStyles = makeStyles((theme) => ({
   questionBox: {

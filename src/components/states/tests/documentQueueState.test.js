@@ -1,4 +1,4 @@
-import  { useDocumentQueue } from "./../documentQueueState.js";
+import  { useDocumentQueue } from "./../documentQueueState";
 import { renderHook, act } from "@testing-library/react-hooks"
 
 import decision_tree from "./../../journey/documents/decisiontree_v2.json";

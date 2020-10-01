@@ -6,8 +6,8 @@ import Grid from '@material-ui/core/Grid';
 import { NextButton, BackButton } from "components/journey/JourneyButtons"
 import Stepper from "components/journey/JourneyStepper"
 
-import { ActiveStep } from "components/states/activeStepState.js";
-import { DocumentQueue } from "components/states/documentQueueState.js";
+import { ActiveStep } from "components/states/activeStepState"
+import { DocumentQueue } from "components/states/documentQueueState"
 import { Answers } from "components/states/answerState";
 import { ShowResult } from "components/states/showResultState.js";
 
