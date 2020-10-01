@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100vh",
     display: 'flex',
     flexDirection: 'column',
-    alignItems: "center"
+    alignItems: "center",
+    paddingBottom: "3vh"
   },
   mainArea: {
     minHeight: "80vh",
