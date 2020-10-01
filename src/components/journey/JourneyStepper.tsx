@@ -57,7 +57,12 @@ const useQontoStepIconStyles = makeStyles({
   },
 });
 
-function QontoStepIcon(props) {
+type QontoStepIconProps = {
+   active: boolean,
+   completed: boolean
+};
+
+function QontoStepIcon(props: QontoStepIconProps) {
   const classes = useQontoStepIconStyles();
   const { active, completed } = props;
 

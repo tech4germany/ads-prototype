@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function JourneyQuestion(props) {
+export default function JourneyQuestion() {
   const classes = useStyles()
   let documentQueue = DocumentQueue.useContainer();
   let activeStep = ActiveStep.useContainer();

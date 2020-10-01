@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function JourneySelection(props) {
+export default function JourneySelection() {
   const classes = useStyles();
   let answers = Answers.useContainer();
   let activeStep = ActiveStep.useContainer();
@@ -92,7 +92,9 @@ export default function JourneySelection(props) {
 
   let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
 
-  let CardWithPosition = (props) => {
+  type CardWithPositionProps = { component: JSX.Element };
+
+  let CardWithPosition = (props: CardWithPositionProps) => {
     return(
       <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
         {props.component}
@@ -105,7 +107,7 @@ export default function JourneySelection(props) {
 
         {activeDocument["options"].map((label, index) => {
 
-          let CardWithSelection;
+          let CardWithSelection: JSX.Element;
           if (!answers.getAnswersById(activeDocument.identifier).includes(label)) {
             CardWithSelection =
               <div className={classes.buttonCardInactive}

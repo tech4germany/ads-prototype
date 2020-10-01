@@ -3,8 +3,8 @@ import Card from '@material-ui/core/Card';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-import { NextButton, BackButton } from "components/journey/JourneyButtons.tsx"
-import Stepper from "components/journey/JourneyStepper.js"
+import { NextButton, BackButton } from "components/journey/JourneyButtons"
+import Stepper from "components/journey/JourneyStepper"
 
 import { ActiveStep } from "components/states/activeStepState.js";
 import { DocumentQueue } from "components/states/documentQueueState.js";
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function JourneyNavigation(props) {
+export default function JourneyNavigation() {
   const classes = useStyles()
   let activeStep = ActiveStep.useContainer()
 
