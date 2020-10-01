@@ -1,9 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import JourneyQuestion from "components/journey/JourneyQuestion.js";
-import JourneySelection from "components/journey/JourneySelection.js";
-import JourneyNavigation from "components/journey/JourneyNavigation.js";
+import JourneyQuestion from "components/journey/JourneyQuestion";
+import JourneySelection from "components/journey/JourneySelection";
+import JourneyNavigation from "components/journey/JourneyNavigation";
 
 const useStyles = makeStyles((theme) => ({
   stepContent: {
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function JourneyStep(props) {
+export default function JourneyStep() {
   const classes = useStyles()
 
   return (

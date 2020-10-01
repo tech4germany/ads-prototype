@@ -1,4 +1,4 @@
-import  { useResultSpecs } from "./../resultState.js";
+import  { useResultSpecs } from "./../resultState"
 import  { useAnswers } from "./../answerState.js";
 import { renderHook, act } from "@testing-library/react-hooks"
 

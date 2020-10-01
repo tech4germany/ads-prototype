@@ -2,9 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
 
-import { Answers } from "components/states/answerState.js";
-import { ActiveStep } from "components/states/activeStepState.js";
-import { DocumentQueue } from "components/states/documentQueueState.js";
+import { Answers } from "components/states/answerState"
+import { ActiveStep } from "components/states/activeStepState"
+import { DocumentQueue } from "components/states/documentQueueState"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function JourneySelection(props) {
+export default function JourneySelection() {
   const classes = useStyles();
   let answers = Answers.useContainer();
   let activeStep = ActiveStep.useContainer();
@@ -92,7 +92,9 @@ export default function JourneySelection(props) {
 
   let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
 
-  let CardWithPosition = (props) => {
+  type CardWithPositionProps = { component: JSX.Element };
+
+  let CardWithPosition = (props: CardWithPositionProps) => {
     return(
       <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
         {props.component}
@@ -105,7 +107,7 @@ export default function JourneySelection(props) {
 
         {activeDocument["options"].map((label, index) => {
 
-          let CardWithSelection;
+          let CardWithSelection: JSX.Element;
           if (!answers.getAnswersById(activeDocument.identifier).includes(label)) {
             CardWithSelection =
               <div className={classes.buttonCardInactive}

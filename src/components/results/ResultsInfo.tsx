@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { ResultSpecs } from "components/states/resultState.js";
-import { Answers } from "components/states/answerState.js";
+import { ResultSpecs } from "components/states/resultState"
+import { Answers } from "components/states/answerState";
 
 const useStyles = makeStyles((theme) => ({
   infoSpace: {
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function ResultInfo(props) {
+export default function ResultInfo() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
   let answers = Answers.useContainer();
@@ -68,8 +68,7 @@ export default function ResultInfo(props) {
         Die Ersteinschätzung Ihres Sachverhalts
       </div>
       <div className={classes.infoText}>
-        Sie sehen sich aufgrund des Merkmals {answers.self["merkmal"][0]} im Lebensbereich {answers
-        .self["lebensbereich"][0]} diskriminiert.
+        Sie sehen sich aufgrund des Merkmals {answers.getAnswerByKey("merkmal", 0)} im Lebensbereich {answers.getAnswerByKey("lebensbereich", 0)} diskriminiert.
         <br></br>
         {aggText}
         {fristText}

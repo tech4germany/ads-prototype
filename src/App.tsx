@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import NavBar from './components/shared/AppBar.js';
 import FootBar from './components/shared/FootBar.js';
 import Start from './components/start/Start.js';
-import JourneyStateInit from "./components/journey/JourneyStateInit.js"
+import JourneyStateInit from "./components/journey/JourneyStateInit"
 
 const useStyles = makeStyles((theme) => ({
   root: {

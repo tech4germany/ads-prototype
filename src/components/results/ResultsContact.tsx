@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ResultContact(props) {
+export default function ResultContact() {
   const classes = useStyles();
 
   return (

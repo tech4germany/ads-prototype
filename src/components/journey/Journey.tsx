@@ -2,10 +2,10 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
-import JourneyStep from "components/journey/JourneyStep.js";
-import Result from "components/results/Results.js";
+import JourneyStep from "components/journey/JourneyStep"
+import Result from "components/results/Results"
 
-import { ShowResult } from "components/states/showResultState.js";
+import { ShowResult } from "components/states/showResultState"
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Journey(props) {
+export default function Journey() {
   const classes = useStyles();
   let showResult = ShowResult.useContainer();
 

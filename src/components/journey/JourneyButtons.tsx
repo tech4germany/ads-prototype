@@ -2,10 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 
-import { ActiveStep } from "components/states/activeStepState.js";
-import { DocumentQueue } from "components/states/documentQueueState.js";
-import { Answers } from "components/states/answerState.js";
-import { ShowResult } from "components/states/showResultState.js";
+import { ActiveStep } from "components/states/activeStepState"
+import { DocumentQueue } from "components/states/documentQueueState"
+import { Answers } from "components/states/answerState"
+import { ShowResult } from "components/states/showResultState"
 
 const useStyles = makeStyles((theme) => ({
   buttonInactive: {
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export function NextButton(props) {
+export function NextButton() {
   const classes = useStyles()
   let activeStep = ActiveStep.useContainer()
   let documentQueue = DocumentQueue.useContainer()
@@ -55,8 +55,8 @@ export function NextButton(props) {
   let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
   let stepAnswers = answers.getAnswersById(activeDocument.identifier)
 
-  let nextText;
-  let nextAction;
+  let nextText:string;
+  let nextAction: (arg: number) => void;
   if (activeStep.isSecondLast(documentQueue.self.length)) {
     nextText = "Ergebnis";
     nextAction = arg => {
@@ -77,25 +77,23 @@ export function NextButton(props) {
   if ((stepAnswers.length > 0) || (activeStep.isLast(documentQueue.self.length))) {
     NextButton =
         <div className={classes.buttonActive}
-          variant="outlined"
           onClick={() => nextAction(documentQueue.self.length)}
         >{nextText}</div>
   } else {
     NextButton =
         <div className={classes.buttonInactive}
-          variant="outlined"
         >{nextText}</div>
   }
   return NextButton
 }
 
-export function BackButton(props) {
+export function BackButton() {
   const classes = useStyles()
   let activeStep = ActiveStep.useContainer()
   let documentQueue = DocumentQueue.useContainer()
   let showResult = ShowResult.useContainer();
 
-  let nextAction;
+  let nextAction: () => void;
   if (activeStep.isLast(documentQueue.self.length)) {
     nextAction = () => {
       activeStep.decrement();
