@@ -37,7 +37,7 @@ export default function ResultTemplates() {
     <div className={classes.templateSpace}>
       { showTemplate ?
           <a target="_blank" href="https://www.antidiskriminierungsstelle.de/DE/ThemenUndForschung/Recht_und_gesetz/Handbuch/Anhang/Musterschreiben/Musterschreiben_node.html" className={classes.formulierungsHeader} >
-            Formulierungshilfen finden Sie hier
+            Download Formulierungshilfen
           </a>
         :
         null
