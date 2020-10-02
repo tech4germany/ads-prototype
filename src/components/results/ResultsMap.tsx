@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
-    maxWidth: "45vw",
+    maxWidth: "50vw",
     maxHeight: "20vh",
     overflow: "hidden",
     borderStyle: "solid",
