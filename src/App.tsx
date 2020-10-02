@@ -13,11 +13,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#fef3df",
     height:"100%",
-    minHeight: "100vh",
+    minHeight: "105vh",
     display: 'flex',
     flexDirection: 'column',
     alignItems: "center",
-    paddingBottom: "3vh"
+    paddingBottom: "5vh"
   },
   mainArea: {
     minHeight: "80vh",

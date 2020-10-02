@@ -32,7 +32,7 @@ export default function ResultContact() {
         Kontakt zu uns!
       </div>
       <div className={classes.contactInfo}>
-        Mo 13-15, Mi und Fr 9-12 bieten wir eine juristische Erberatung an.<br></br>
+        Mo 13-15, Mi und Fr 9-12 bieten wir eine juristische Erstberatung an.<br></br>
         Tel.: 030 18555-1855
       </div>
 
