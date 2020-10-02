@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    fontSize: "2vh",
-    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "1.8vh",
+    fontFamily: "BundesSansWeb-Bold",
     height: "5vh",
     width: "15vw",
     backgroundColor: "#e0e0e0",
@@ -32,8 +32,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#a7a7a7",
     padding: theme.spacing(1,3,1,3),
     cursor: "pointer",
-    fontSize: "2vh",
-    fontFamily: "BundesSansWeb-Regular"
+    fontSize: "1.8vh",
+    fontFamily: "BundesSansWeb-Bold"
   },
   arrow: {
     cursor: "pointer",

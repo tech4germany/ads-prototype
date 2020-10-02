@@ -2,7 +2,7 @@
 	{
 		"identifier":"merkmal",
 		"type":"default",
-		"multiple_choice": true,
+		"multiple_choice": false,
 		"step_title":"Merkmal",
 		"question":"Grund der Diskriminierung",
 		"explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können.\nErst mal interessiert uns, welche Ursache Sie hinter der Diskriminierung vermuten. Also aus welchem Grund bzw. persönlichen Merkmal wurden Sie  diskriminiert?",
@@ -23,7 +23,7 @@
 		"step_title":"Lebensbereich",
 		"multiple_choice": false,
 		"question":"Bereich der Diskriminierung",
-		"explanation":"Außerdem ist es wichtig zu wissen, in welchem Zusammenhang Sie die Diskriminierung erlebt haben. In welchem Lebensbereich wurden Sie denn diskriminiert?",
+		"explanation":"Außerdem ist es wichtig zu wissen, in welchem Zusammenhang Sie die Diskriminierung erlebt haben.\nIn welchem Lebensbereich wurden Sie denn diskriminiert?",
 		"options": [
 			"Arbeitsleben",
 			"Geschäfte, Verträge und Dienstleistungen",
@@ -42,8 +42,8 @@
 		"type":"default",
 		"step_title":"Frist",
 		"multiple_choice": false,
-		"question":"Zeitpunkt",
-		"explanation":"Schließlich kommt es auch darauf an, wann die Diskriminierung vorgefallen ist, ob Sie noch rechtliche Schritte ergreifen können. Wurden Sie innerhalb der letzten zwei Monate diskriminiert?",
+		"question":"Zeitpunkt des Diskriminierung",
+		"explanation":"Schließlich kommt es auch darauf an, wann die Diskriminierung vorgefallen ist, ob Sie noch rechtliche Schritte ergreifen können.\nWurden Sie innerhalb der letzten zwei Monate diskriminiert?",
 		"options": [
 			"Ja",
 			"Nein",
@@ -55,9 +55,9 @@
 		"identifier":"merkmal_ethnisch_detail",
 		"type":"non-default",
 		"step_title":"Ethnische Herkunft",
-		"multiple_choice": true,
-		"question":"Worauf genau bezog sie die Diskriminierung?",
-		"explanation":"",
+		"multiple_choice": false,
+		"question": "Worauf genau bezog sie die Diskriminierung?",
+		"explanation": "Sie haben das Merkmal Ethnische Herkunft / Rassistische Diskriminierung ausgewählt",
 		"options": [
 			"Äußere Merkmale",
 			"Staatsangehörigkeit / Aufenthaltsstatus",
@@ -68,9 +68,9 @@
 		"identifier":"merkmal_gender_detail",
 		"type":"non-default",
 		"step_title":"Geschlecht",
-		"multiple_choice": true,
-		"question":"Worauf genau bezog sie die Diskriminierung?",
-		"explanation":"",
+		"multiple_choice": false,
+		"question": "Worauf genau bezog sie die Diskriminierung?",
+		"explanation": "Sie haben das Merkmal Geschlecht / Geschlechtsidentität ausgewählt",
 		"options": [
 			"Sexuelle Belästigung",
 			"Trans*",
@@ -86,7 +86,7 @@
 		"step_title":"Arbeit",
 		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
-		"explanation":"",
+		"explanation":"Sie haben den Bereich Arbeitsleben ausgewählt",
 		"options": [
 			"Zugang",
 			"Im Beschäftigungsverhältnis",
@@ -99,7 +99,7 @@
 		"step_title":"Bildung",
 		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
-		"explanation":"",
+		"explanation":"Sie haben den Lebensbereich Bildung ausgewählt",
 		"options": [
 			"Kita",
 			"Privatschule / Privatunterricht",
@@ -113,7 +113,7 @@
 		"step_title":"Gesundheit",
 		"multiple_choice": false,
 		"question":"Worauf genau bezog sie die Diskriminierung?",
-		"explanation":"",
+		"explanation":"Sie haben den Lebensbereich Gesundheit ausgewählt",
 		"options": [
 			"Krankenkasse",
 			"Arztbesuch"

@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "2.7vh",
     paddingBottom: "2.3vh",
-    paddingLeft: "0.8vw"
+    paddingLeft: "0.4vw"
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
@@ -49,7 +49,7 @@ export default function ResultInfo() {
     fristText = "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall "
     fristText += "schriftlich geltend machen müssen."
   } else {
-    aggText = "Der von Ihnen geschilderte Sachverhalt ist leider nicht vom Diskriminierungsschutz durch das AGG umfasst."
+    aggText = "Der von Ihnen geschilderte Sachverhalt ist leider nicht vom Diskriminierungsschutz durch das AGG umfasst. Dennoch können Sie Ihre Rechte auf verschiedenen Wegen verfolgen."
   }
 
   let nextSteps;
@@ -68,7 +68,7 @@ export default function ResultInfo() {
         Die Ersteinschätzung Ihres Sachverhalts
       </div>
       <div className={classes.infoText}>
-        Sie sehen sich aufgrund des Merkmals {answers.getAnswerByKey("merkmal", 0)} im Lebensbereich {answers.getAnswerByKey("lebensbereich", 0)} diskriminiert.
+        Sie sehen sich aufgrund des Merkmals <b>{answers.getAnswerByKey("merkmal", 0)}</b> im Lebensbereich <b>{answers.getAnswerByKey("lebensbereich", 0)}</b> diskriminiert.
         <br></br>
         {aggText}
         {fristText}
