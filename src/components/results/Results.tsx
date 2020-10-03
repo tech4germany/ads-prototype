@@ -9,8 +9,8 @@ import ResultsContact from "components/results/ResultsContact"
 import ResultsMap from "components/results/ResultsMap"
 import ResultsTemplates from "components/results/ResultsTemplates"
 
-import { Answers } from "components/states/answerState"
-import { ResultSpecs } from "components/states/resultState"
+import { Answers } from "states/answerState"
+import { ResultSpecs } from "states/resultState"
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {

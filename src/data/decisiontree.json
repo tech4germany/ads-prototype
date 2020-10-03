@@ -2,7 +2,7 @@
 	{
 		"identifier":"merkmal",
 		"type":"default",
-		"multiple_choice": false,
+		"multiple_choice": true,
 		"step_title":"Merkmal",
 		"question":"Grund der Diskriminierung",
 		"explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können.\nErst mal interessiert uns, welche Ursache Sie hinter der Diskriminierung vermuten. Also aus welchem Grund bzw. persönlichen Merkmal wurden Sie  diskriminiert?",

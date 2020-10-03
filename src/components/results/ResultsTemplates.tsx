@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from "react-router-dom";
 
-import { ResultSpecs } from "components/states/resultState"
+import { ResultSpecs } from "states/resultState"
 
 const useStyles = makeStyles((theme) => ({
   templateSpace: {

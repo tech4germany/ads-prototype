@@ -6,10 +6,10 @@ import Grid from '@material-ui/core/Grid';
 import { NextButton, BackButton } from "components/journey/JourneyButtons"
 import Stepper from "components/journey/JourneyStepper"
 
-import { ActiveStep } from "components/states/activeStepState"
-import { DocumentQueue } from "components/states/documentQueueState"
-import { Answers } from "components/states/answerState"
-import { ShowResult } from "components/states/showResultState"
+import { ActiveStep } from "states/activeStepState"
+import { DocumentQueue } from "states/documentQueueState"
+import { Answers } from "states/answerState"
+import { ShowResult } from "states/showResultState"
 
 const useStyles = makeStyles((theme) => ({
   navigationGroup: {

@@ -2,10 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 
-import { ActiveStep } from "components/states/activeStepState"
-import { DocumentQueue } from "components/states/documentQueueState"
-import { Answers } from "components/states/answerState"
-import { ShowResult } from "components/states/showResultState"
+import { ActiveStep } from "states/activeStepState"
+import { DocumentQueue } from "states/documentQueueState"
+import { Answers } from "states/answerState"
+import { ShowResult } from "states/showResultState"
 
 const useStyles = makeStyles((theme) => ({
   buttonInactive: {

@@ -4,9 +4,9 @@ import  Grid from '@material-ui/core/Grid';
 
 import { mapLabelToDescription } from "data/ProvideDecisionTree"
 
-import { Answers } from "components/states/answerState"
-import { ActiveStep } from "components/states/activeStepState"
-import { DocumentQueue } from "components/states/documentQueueState"
+import { Answers } from "states/answerState"
+import { ActiveStep } from "states/activeStepState"
+import { DocumentQueue } from "states/documentQueueState"
 
 const useStyles = makeStyles((theme) => ({
   root: {
