@@ -1,20 +1,7 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
-
-import { initialiseDocQueue, retrieveNonDefaultDoc, mapLabelToId } from "data/ProvideDecisionTree"
-
-type OrUndefined<T> = T | undefined;
-
-interface StepDocumentLayout {
-  "identifier":string,
-  "type":string,
-  "multiple_choice": boolean,
-  "step_title": string,
-  "question": string,
-  "explanation": string,
-  "options": Array<string>
-}
-type DocumentQueueLayout = Array<StepDocumentLayout>
+import { OrUndefined, StepDocumentLayout, DocumentQueueLayout } from "customTypes"
+import { initialiseDocQueue, retrieveNonDefaultDoc, mapLabelToId } from "data/Interface"
 
 export function useDocumentQueue(initialState: DocumentQueueLayout = initialiseDocQueue()) {
   let [self, setDocumentQueue] = useState(initialState);

@@ -1,7 +1,6 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
-
-type ActiveStepLayout = number;
+import { ActiveStepLayout } from "customTypes"
 
 export function useActiveStep(initialState: ActiveStepLayout = 0) {
   let [self, setActiveStep] = useState(initialState)
