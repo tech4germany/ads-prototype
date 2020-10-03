@@ -2,7 +2,7 @@ import { createContainer } from 'unstated-next';
 import { useState } from 'react';
 
 import { mapLabelToId } from "data/Interface"
-import { AnswersLayout, OrNull } from "customTypes"
+import { AnswersLayout } from "customTypes"
 
 export function useAnswers(initialState: AnswersLayout = {}) {
   let [self, setAnswers] = useState(initialState)

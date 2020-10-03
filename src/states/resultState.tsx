@@ -1,6 +1,6 @@
 import { createContainer } from 'unstated-next'
 import { useState } from 'react'
-import { FeatureNode, FeatureMapLayout, AnswersProfileLayout, AnswersLayout, OrNull, SpecsLayout, ResultSpecsLayout} from "customTypes"
+import { FeatureMapLayout, AnswersProfileLayout, AnswersLayout, SpecsLayout, ResultSpecsLayout} from "customTypes"
 import result_map from "data/resultmap.json"
 import feature_map from "data/featuremap.json"
 

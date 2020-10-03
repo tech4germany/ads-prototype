@@ -1,13 +1,9 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Grid from '@material-ui/core/Grid';
 
-import NavBar from './components/shared/AppBar.js';
-import FootBar from './components/shared/FootBar.js';
-import Start from './components/start/Start.js';
-import JourneyStateInit from "./components/journey/JourneyStateInit"
+import NavBar from 'components/shared/AppBar.js';
+import JourneyStateInit from "components/journey/JourneyStateInit"
 
 const useStyles = makeStyles((theme) => ({
   root: {

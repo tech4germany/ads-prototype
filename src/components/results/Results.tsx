@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 import JourneyNavigation from "components/journey/JourneyNavigation"
@@ -45,9 +44,6 @@ export default function Result() {
   useEffect(() => {
     resultSpecs.retrieveSpecs(answers.self);
   })
-
-  console.log(answers.self)
-  console.log(resultSpecs.self)
 
   return (
     <div className={classes.mainSpace}>

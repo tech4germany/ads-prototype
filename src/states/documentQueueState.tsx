@@ -55,7 +55,7 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialiseD
 
   const retrieveIndexOfDoc = (identifier: string): OrUndefined<number> => {
     let indexDoc: OrUndefined<number>;
-    self.map((doc, index) => {
+    let _drop = self.map((doc, index) => {
       if (doc.identifier === identifier) {
         indexDoc = index
       }

@@ -1,15 +1,9 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 import { NextButton, BackButton } from "components/journey/JourneyButtons"
 import Stepper from "components/journey/JourneyStepper"
-
-import { ActiveStep } from "states/activeStepState"
-import { DocumentQueue } from "states/documentQueueState"
-import { Answers } from "states/answerState"
-import { ShowResult } from "states/showResultState"
 
 const useStyles = makeStyles((theme) => ({
   navigationGroup: {
@@ -45,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function JourneyNavigation() {
   const classes = useStyles()
-  let activeStep = ActiveStep.useContainer()
 
   return (
     <Grid className={classes.navigationGroup}>
