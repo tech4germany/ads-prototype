@@ -2,7 +2,7 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
 
-import NavBar from 'components/shared/AppBar.js';
+import NavBar from 'components/shared/AppBar'
 import JourneyStateInit from "components/journey/JourneyStateInit"
 
 const useStyles = makeStyles((theme) => ({
@@ -38,7 +38,7 @@ export default function App() {
         <div className={classes.root}>
 
           {/* Navbar */}
-          <NavBar classes={classes}/>
+          <NavBar />
           {/* End Navbar */}
 
           <div className={classes.placeholder}></div>

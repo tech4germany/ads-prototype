@@ -1,9 +1,9 @@
-import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import { makeStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
-import logo from 'images/antidiskriminierungsstelle.jpg';
+import React from 'react'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import { makeStyles } from '@material-ui/core/styles'
+import Link from '@material-ui/core/Link'
+import logo from 'images/antidiskriminierungsstelle.jpg'
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NavBar(props) {
+export default function NavBar() {
   const classes = useStyles();
 
   return (
