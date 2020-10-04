@@ -5,6 +5,11 @@ import Grid from '@material-ui/core/Grid';
 import { NextButton, BackButton } from "components/journey/JourneyButtons"
 import Stepper from "components/journey/JourneyStepper"
 
+const navBox = {
+  "display": 'flex',
+  "alignItems": "center"
+}
+
 const useStyles = makeStyles((theme) => ({
   navigationGroup: {
     display: "flex",
@@ -15,26 +20,19 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "0.8vw",
   },
   nextBox: {
-    display: "flex",
-    flexDirection: "row",
     justifyContent: "flex-end",
-    alignItems: "center"
+    ...navBox
   },
   backBox: {
-    display: "flex",
-    flexDirection: "row",
     justifyContent: "flex-start",
-    alignItems: "center"
+    ...navBox,
   },
   stepperBox: {
-    display: "flex",
-    flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center",
     position: "relative",
-    overflow: "hidden"
+    overflow: "hidden",
+    ...navBox,
   }
-
 }));
 
 export default function JourneyNavigation() {

@@ -7,33 +7,30 @@ import { DocumentQueue } from "states/documentQueueState"
 import { Answers } from "states/answerState"
 import { ShowResult } from "states/showResultState"
 
+const button = {
+  "display": "flex",
+  "justifyContent": "center",
+  "alignItems": "center",
+  "fontSize": "1.8vh",
+  "fontFamily": "BundesSansWeb-Bold",
+  "height": "5vh",
+  "width": "15vw",
+  "color": "white",
+}
+
 const useStyles = makeStyles((theme) => ({
   buttonInactive: {
-    display: "flex",
+    ...button,
     flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    fontSize: "1.8vh",
-    fontFamily: "BundesSansWeb-Bold",
-    height: "5vh",
-    width: "15vw",
     backgroundColor: "#e0e0e0",
-    color: "white",
-    padding: theme.spacing(1,3,1,3)
+    padding: theme.spacing(1,3,1,3),
   },
   buttonActive: {
-    display: "flex",
+    ...button,
     flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "5vh",
-    width: "15vw",
-    color: "white",
     backgroundColor: "#a7a7a7",
     padding: theme.spacing(1,3,1,3),
     cursor: "pointer",
-    fontSize: "1.8vh",
-    fontFamily: "BundesSansWeb-Bold"
   },
   arrow: {
     cursor: "pointer",

@@ -1,13 +1,14 @@
-import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { makeStyles } from '@material-ui/core/styles'
+import { colorMain } from "styleguide"
 
 import NavBar from 'components/shared/AppBar'
 import JourneyStateInit from "components/journey/JourneyStateInit"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "#fef3df",
+    backgroundColor: colorMain["15"],
     height:"100%",
     minHeight: "105vh",
     display: 'flex',

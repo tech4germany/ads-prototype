@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { questionHeader, questionExplanation } from "styleguide"
 
 import { DocumentQueue } from "states/documentQueueState"
 import { ActiveStep } from "states/activeStepState"
@@ -16,14 +17,14 @@ const useStyles = makeStyles((theme) => ({
   question: {
     display: "flex",
     flexWrap: "wrap",
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "4vh"
+    fontFamily: questionHeader["fontFamily"],
+    fontSize:  questionHeader["fontSize"]
   },
   explanation: {
     display: "flex",
     flexWrap: "wrap",
-    fontFamily: "BundesSansWeb-Regular",
-    fontSize: "2vh",
+    fontFamily: questionExplanation["fontFamily"],
+    fontSize:  questionExplanation["fontSize"],
     whiteSpace: "pre-wrap"
   }
 }));

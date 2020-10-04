@@ -7,6 +7,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Check from '@material-ui/icons/Check';
 import StepConnector from '@material-ui/core/StepConnector';
+import { colorMain } from "styleguide"
 
 import { DocumentQueue } from "states/documentQueueState"
 import { ActiveStep } from "states/activeStepState";
@@ -19,16 +20,16 @@ const QontoConnector = withStyles({
   },
   active: {
     '& $line': {
-      borderColor: '#ffecb3',
+      borderColor: colorMain["115"],
     },
   },
   completed: {
     '& $line': {
-      borderColor: '#ffecb3',
+      borderColor: colorMain["115"],
     },
   },
   line: {
-    borderColor: '#ffe57f',
+    borderColor: colorMain["115"],
     borderTopWidth: 3,
     borderRadius: 1,
   },
@@ -36,13 +37,13 @@ const QontoConnector = withStyles({
 
 const useQontoStepIconStyles = makeStyles({
   root: {
-    color: '#ffecb3',
+    color: colorMain["45"],
     display: 'flex',
     height: 22,
     alignItems: 'center',
   },
   active: {
-    color: "#f3b500",
+    color: colorMain["115"],
   },
   circle: {
     width: "2vh",
@@ -51,7 +52,7 @@ const useQontoStepIconStyles = makeStyles({
     backgroundColor: 'currentColor',
   },
   completed: {
-    color: '#ffd740',
+    color: colorMain["115"],
     zIndex: 1,
     fontSize: "3.5vh",
   },
@@ -86,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "center",
-    backgroundColor: "#fef3df",
+    backgroundColor: colorMain["15"],
     width: '100%',
     position: "absolute",
     left: "-100vw",
