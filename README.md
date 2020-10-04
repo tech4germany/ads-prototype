@@ -7,7 +7,7 @@ The tool comes as standard react app implemented in typescript and built by defa
 with the parcel bundler. In its current form, it does not require a backend and is
 meant to be published serverless.
 
-Currently, the project is hosted with Netlify and can be accessed [here](epic-fermat-07e38c.netlify.app/).
+Currently, the project is hosted with Netlify and can be accessed [here](https://epic-fermat-07e38c.netlify.app/).
 
 #### Installation and Setup
 
