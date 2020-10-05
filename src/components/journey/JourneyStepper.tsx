@@ -7,7 +7,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Check from '@material-ui/icons/Check';
 import StepConnector from '@material-ui/core/StepConnector';
-import { colorMain } from "styleguide"
+import { colorMain } from "components/styleguide"
 
 import { DocumentQueue } from "states/documentQueueState"
 import { ActiveStep } from "states/activeStepState";

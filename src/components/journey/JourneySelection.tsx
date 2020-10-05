@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
-import { colorMain, textSelectionMain } from "styleguide"
+import { colorMain, textSelectionMain } from "components/styleguide"
 
 import { mapLabelToDescription } from "data/Interface"
 
