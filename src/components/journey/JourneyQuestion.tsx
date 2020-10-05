@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { questionHeader, questionExplanation } from "styleguide"
+import { questionHeader, questionExplanation } from "components/styleguide"
 
 import { DocumentQueue } from "states/documentQueueState"
 import { ActiveStep } from "states/activeStepState"

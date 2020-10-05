@@ -53,6 +53,7 @@
   "alias": {
     "images": "./src/images",
     "data": "./src/data",
-    "components": "./src/components"
+    "components": "./src/components",
+    "states": "./src/states"
   }
 }
