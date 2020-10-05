@@ -1,7 +1,7 @@
 import React from 'react'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { makeStyles } from '@material-ui/core/styles'
-import { colorMain } from "styleguide"
+import { colorMain } from "components/styleguide"
 
 import NavBar from 'components/shared/AppBar'
 import JourneyStateInit from "components/journey/JourneyStateInit"

@@ -1,13 +1,14 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
-import { colorMain, textSelectionMain } from "styleguide"
+import { colorMain, textSelectionMain } from "components/styleguide"
 
 import { mapLabelToDescription } from "data/Interface"
 
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
+import { ShowResult } from "states/showResultState"
 
 const buttonTextBox = {
     "fontFamily": textSelectionMain["fontFamily"],
@@ -90,18 +91,32 @@ export default function JourneySelection() {
   let answers = Answers.useContainer();
   let activeStep = ActiveStep.useContainer();
   let documentQueue = DocumentQueue.useContainer();
+  let showResult = ShowResult.useContainer();
 
   let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
 
-  type CardWithPositionProps = { component: JSX.Element };
-
-  let CardWithPosition = (props: CardWithPositionProps) => {
+  let CardWithPosition = (props: { component: JSX.Element }) => {
     return(
       <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
         {props.component}
       </Grid>
     )
   }
+
+  let nextAction: (arg: number) => void;
+  if (activeStep.isSecondLast(documentQueue.self.length)) {
+    nextAction = arg => {
+      showResult.show()
+      activeStep.increment(arg)
+    }
+  } else if (activeStep.isLast(documentQueue.self.length)) {
+    nextAction = arg => {}
+  } else {
+    nextAction = arg => {
+      activeStep.increment(arg)
+    }
+  }
+
 
   return (
     <Grid container className={classes.root} >
@@ -114,6 +129,7 @@ export default function JourneySelection() {
                 onClick={() => {
                   answers.add(activeDocument.identifier, activeDocument.multiple_choice, label)
                   documentQueue.add(activeStep.self, label, activeDocument.multiple_choice)
+                  nextAction(documentQueue.self.length)
                 }}
               >
                 <div className={classes.buttonTextBoxInactive}>
