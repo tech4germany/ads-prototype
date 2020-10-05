@@ -1,34 +1,13 @@
-import { createContainer } from 'unstated-next';
-import { useState } from 'react';
+import { createContainer } from 'unstated-next'
+import { useState } from 'react'
+import { FeatureMapLayout, AnswersProfileLayout, AnswersLayout, SpecsLayout, ResultSpecsLayout} from "customTypes"
+import result_map from "data/resultmap.json"
+import feature_map from "data/featuremap.json"
 
-import result_map from "data/resultmap.json";
-import feature_map from "data/featuremap.json";
-
-interface FeatureNode {
-  [key: string]: string;
-}
-interface FeatureMapLayout {
-  [key: string]: FeatureNode
-}
 let featureMap: FeatureMapLayout = feature_map;
 let _initialState = {
   "identifier": -1,
   "profile": null
-}
-interface AnswersProfileLayout {
-  [key: string]: string;
-}
-interface AnswersLayout {
-  [key: string]: Array<string>;
-}
-type OrNull<T> = T | null;
-interface SpecsLayout {
-  "agg": boolean,
-  "frist": boolean
-}
-interface ResultSpecsLayout {
-  "identifier": number,
-  "profile": OrNull<SpecsLayout>
 }
 
 export function useResultSpecs(initialState: ResultSpecsLayout = _initialState) {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { ResultSpecs } from "components/states/resultState"
-import { Answers } from "components/states/answerState";
+import { ResultSpecs } from "states/resultState"
+import { Answers } from "states/answerState";
 
 const useStyles = makeStyles((theme) => ({
   infoSpace: {
