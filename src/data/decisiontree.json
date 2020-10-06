@@ -2,10 +2,10 @@
 	{
 		"identifier":"merkmal",
 		"type":"default",
-		"multiple_choice": true,
+		"multiple_choice": false,
 		"step_title":"Merkmal",
 		"question":"Grund der Diskriminierung",
-		"explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können.\nErst mal interessiert uns, welche Ursache Sie hinter der Diskriminierung vermuten. Also aus welchem Grund bzw. persönlichen Merkmal wurden Sie  diskriminiert?",
+		"explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können.\nErst mal interessiert uns, welche Ursache Sie hinter der Diskriminierung vermuten. Also aus welchem Grund bzw. persönlichen Merkmal wurden Sie diskriminiert?",
 		"options": [
 			"Ethnische Herkunft / Rassistische Diskriminierung",
 			"Religion / Weltanschauung",
@@ -23,7 +23,7 @@
 		"step_title":"Lebensbereich",
 		"multiple_choice": false,
 		"question":"Bereich der Diskriminierung",
-		"explanation":"Außerdem ist es wichtig zu wissen, in welchem Zusammenhang Sie die Diskriminierung erlebt haben.\nIn welchem Lebensbereich wurden Sie denn diskriminiert?",
+		"explanation":"Außerdem ist es wichtig zu wissen, in welchem Zusammenhang Sie die Diskriminierung erlebt haben.\nIn welchem Lebensbereich wurden Sie diskriminiert?",
 		"options": [
 			"Arbeitsleben",
 			"Geschäfte, Verträge und Dienstleistungen",
@@ -56,7 +56,7 @@
 		"type":"non-default",
 		"step_title":"Ethnische Herkunft",
 		"multiple_choice": false,
-		"question": "Worauf genau bezog sie die Diskriminierung?",
+		"question": "Worauf genau bezog sich die Diskriminierung?",
 		"explanation": "Sie haben das Merkmal Ethnische Herkunft / Rassistische Diskriminierung ausgewählt",
 		"options": [
 			"Äußere Merkmale",
@@ -69,7 +69,7 @@
 		"type":"non-default",
 		"step_title":"Geschlecht",
 		"multiple_choice": false,
-		"question": "Worauf genau bezog sie die Diskriminierung?",
+		"question": "Worauf genau bezog sich die Diskriminierung?",
 		"explanation": "Sie haben das Merkmal Geschlecht / Geschlechtsidentität ausgewählt",
 		"options": [
 			"Sexuelle Belästigung",
@@ -85,7 +85,7 @@
 		"type":"non-default",
 		"step_title":"Arbeit",
 		"multiple_choice": false,
-		"question":"Worauf genau bezog sie die Diskriminierung?",
+		"question": "In welchem Zusammenhang fand die Diskriminierung genau statt?",
 		"explanation":"Sie haben den Bereich Arbeitsleben ausgewählt",
 		"options": [
 			"Zugang",
@@ -98,7 +98,7 @@
 		"type":"non-default",
 		"step_title":"Bildung",
 		"multiple_choice": false,
-		"question":"Worauf genau bezog sie die Diskriminierung?",
+		"question": "In welchem Zusammenhang fand die Diskriminierung genau statt?",
 		"explanation":"Sie haben den Lebensbereich Bildung ausgewählt",
 		"options": [
 			"Kita",
@@ -112,7 +112,7 @@
 		"type":"non-default",
 		"step_title":"Gesundheit",
 		"multiple_choice": false,
-		"question":"Worauf genau bezog sie die Diskriminierung?",
+		"question": "In welchem Zusammenhang fand die Diskriminierung genau statt?",
 		"explanation":"Sie haben den Lebensbereich Gesundheit ausgewählt",
 		"options": [
 			"Krankenkasse",

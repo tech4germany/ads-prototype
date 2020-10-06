@@ -47,7 +47,6 @@ export default function JourneyNavigation() {
         <Stepper/>
       </Grid>
       <Grid item md={4} sm={4} lg={4} xs={4} className={classes.nextBox}>
-        <NextButton/>
       </Grid>
     </Grid>
   );
