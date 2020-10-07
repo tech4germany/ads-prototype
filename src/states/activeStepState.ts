@@ -5,11 +5,6 @@ import { ActiveStepLayout } from "customTypes"
 export function useActiveStep(initialState: ActiveStepLayout = 0) {
   let [self, setActiveStep] = useState(initialState)
 
-  const _validateNoOverflowStep = (docQueueLength: number): boolean => {
-    if ( self+1 < docQueueLength ) { return true }
-    else { return false }
-  }
-
   const _validateNonNegativeStep = () => {
     if (self > 0) { return true }
     else { return false }
@@ -21,8 +16,8 @@ export function useActiveStep(initialState: ActiveStepLayout = 0) {
     } else { return false }
   }
 
-  let increment = (documentQueueLength: number): void => {
-    if (_validateNoOverflowStep(documentQueueLength)) {
+  let increment = (remainingSteps: number): void => {
+    if (remainingSteps > 0) {
       setActiveStep(self + 1)
     }
   }

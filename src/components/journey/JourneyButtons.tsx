@@ -87,8 +87,10 @@ export function NextButton() {
 export function BackButton() {
   const classes = useStyles()
   let activeStep = ActiveStep.useContainer()
+  let answers = Answers.useContainer()
   let documentQueue = DocumentQueue.useContainer()
   let showResult = ShowResult.useContainer();
+  let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
 
   let nextAction: () => void;
   if (activeStep.isLast(documentQueue.self.length)) {
@@ -98,7 +100,9 @@ export function BackButton() {
     }
   } else {
     nextAction = () => {
-      activeStep.decrement();
+      activeStep.decrement()
+      answers.prune(activeDocument.identifier)
+      documentQueue.prune(activeDocument)
     }
   }
 

@@ -1,6 +1,7 @@
 import decision_tree from "data/decisiontree.json";
 import labeltoid from "data/labeltoid.json";
 import labeltodescription from "data/labeltodescription.json";
+import featuremap from "data/featuremap.json";
 
 type OrNull<T> = T | null;
 
@@ -62,4 +63,16 @@ export function mapLabelToDescription(stepIdentifier: string, label: string): st
   if (nextId !== null) {
     return nextId
   } else { return "" }
+}
+
+interface FeatureToAgg {
+  [key: string]: string;
+}
+
+interface FeatureMapLayout {
+  [key: string]: FeatureToAgg;
+}
+let FeatureMap: FeatureMapLayout = featuremap;
+export function mapFeatureToAgg(stepIdentifier: string, label: string): string {
+  return FeatureMap[stepIdentifier][label];
 }

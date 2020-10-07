@@ -1,11 +1,19 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
-
+import { FeatureMapLayout } from "customTypes"
 import { mapLabelToId } from "data/Interface"
 import { AnswersLayout } from "customTypes"
 
+import feature_map from "data/featuremap.json"
+
+let featureMap: FeatureMapLayout = feature_map;
+
 export function useAnswers(initialState: AnswersLayout = {}) {
   let [self, setAnswers] = useState(initialState)
+
+  let _keys = () => {
+    return Object.keys(self)
+  }
 
   const _checkStepInAnswers = (identifier: string): boolean => {
     if ( self.hasOwnProperty(identifier) ) { return true }
@@ -62,6 +70,26 @@ export function useAnswers(initialState: AnswersLayout = {}) {
     setAnswers(_ans)
   }
 
+  let prune = (id: string): void => {
+    if (Object.keys(self).includes(id)) {
+      let _ans: AnswersLayout = {...self}
+      delete _ans[id]
+      setAnswers(_ans)
+    }
+  }
+
+  let isAgg = (): boolean => {
+    let agg: boolean = true;
+    Object.keys(self).map(function(el) {
+      self[el].map(function(_el){
+        if (featureMap[el][_el] !== "agg") {
+          agg = false
+        }
+      })
+    })
+    return agg
+  }
+
   let getAnswersById = (identifier: string): Array<string> => {
     if (self[identifier] === undefined ) { return [] }
      else { return self[identifier]}
@@ -75,6 +103,6 @@ export function useAnswers(initialState: AnswersLayout = {}) {
 
   let keys = () => Object.keys(self)
 
-  return { self, add, remove, keys, getAnswersById, getAnswerByKey }
+  return { self, add, remove, keys, getAnswersById, getAnswerByKey, prune, isAgg }
 }
 export const Answers = createContainer(useAnswers)
