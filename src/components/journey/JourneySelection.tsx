@@ -61,7 +61,10 @@ const useStyles = makeStyles((theme) => ({
   buttonTextBoxInactive: {
     backgroundColor: "white",
     color: textSelectionMain["color"]["inactive"],
-    ...buttonTextBox
+    ...buttonTextBox,
+    "&:hover": {
+      backgroundColor: colorMain["115"],
+    }
   },
   buttonTextExplanationInactive: {
     ...buttonTextExplanation
@@ -94,6 +97,7 @@ export default function JourneySelection() {
   let showResult = ShowResult.useContainer();
 
   let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
+  answers.prune(activeDocument.identifier)
 
   let CardWithPosition = (props: { component: JSX.Element }) => {
     return(
@@ -103,20 +107,15 @@ export default function JourneySelection() {
     )
   }
 
-  let nextAction: (arg: number) => void;
-  if (activeStep.isSecondLast(documentQueue.self.length)) {
-    nextAction = arg => {
+  let nextAction = (arg: number): void => {
+    if (arg === 1) {
       showResult.show()
       activeStep.increment(arg)
-    }
-  } else if (activeStep.isLast(documentQueue.self.length)) {
-    nextAction = arg => {}
-  } else {
-    nextAction = arg => {
+    } else if (arg === 0) {}
+    else {
       activeStep.increment(arg)
     }
   }
-
 
   return (
     <Grid container className={classes.root} >
@@ -128,8 +127,8 @@ export default function JourneySelection() {
               <div className={classes.buttonCard}
                 onClick={() => {
                   answers.add(activeDocument.identifier, activeDocument.multiple_choice, label)
-                  documentQueue.add(activeStep.self, label, activeDocument.multiple_choice)
-                  nextAction(documentQueue.self.length)
+                  let remainingSteps = documentQueue.add(activeStep.self, label, activeDocument.multiple_choice)
+                  nextAction(remainingSteps)
                 }}
               >
                 <div className={classes.buttonTextBoxInactive}>
