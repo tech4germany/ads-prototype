@@ -98,6 +98,8 @@ export default function JourneySelection() {
 
   let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
   answers.prune(activeDocument.identifier)
+  documentQueue.validateFristQuestion(answers.isAgg())
+
 
   let CardWithPosition = (props: { component: JSX.Element }) => {
     return(

@@ -44,18 +44,25 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     return docQueue
   }
 
-  const _updateFristQuestion = (isAgg: boolean): void => {
-    let docQueue: DocumentQueueLayout = [...self]
-    if (!isAgg) {
-      docQueue = docQueue.filter(function (el) {
-        return el.identifier !== "frist"
-      })
-    } else {
-      if (!(self.map(obj => obj.identifier).includes("frist"))) {
-        docQueue.splice(docQueue.length-2, 0, fristDoc)
+  const _removeFristQuestion = (docQueue: DocumentQueueLayout, identifier: string, label: string): DocumentQueueLayout => {
+    if (!["agg", "inTime", "notInTime"].includes(featureMap[identifier][label])) {
+      if (self.map(obj => obj.identifier).includes("frist")) {
+        docQueue = docQueue.filter(function (el) {
+          return el.identifier !== "frist"
+        })
       }
     }
-    setDocumentQueue(docQueue)
+    return docQueue
+  }
+
+  const validateFristQuestion = (isAgg: boolean) => {
+    if (isAgg) {
+      if (!(self.map(obj => obj.identifier).includes("frist"))) {
+        let docQueue = [...self]
+        docQueue.splice(docQueue.length-1, 0, fristDoc)
+        setDocumentQueue(docQueue)
+      }
+    }
   }
 
   const add = (activeStep: number, label: string, mchoice: boolean): number => {
@@ -67,6 +74,9 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     if (!(newDocumentIdentifier === null)) {
       _docQueue = _insertNewDoc(_docQueue, newDocumentIdentifier, activeStep, mchoice);
     } else { _docQueue = _removeOldDoc(_docQueue, activeStep, mchoice) }
+
+    // check if we need to remove date question
+    _docQueue = _removeFristQuestion(_docQueue, activeDocument.identifier, label)
     setDocumentQueue(_docQueue)
 
     let remainingSteps = _docQueue.length - (activeStep + 1)
@@ -116,7 +126,7 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     return defaultSteps.map(obj => obj.step_title )
   }
 
-  return { self, returnActiveDocument, extractStepTitles, add, remove, activeDefaultStep, retrieveIndexOfDoc, prune, _updateFristQuestion }
+  return { self, returnActiveDocument, extractStepTitles, add, remove, activeDefaultStep, retrieveIndexOfDoc, prune, validateFristQuestion }
 }
 
 export const DocumentQueue = createContainer(useDocumentQueue)
