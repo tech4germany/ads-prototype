@@ -19,19 +19,6 @@ const button = {
 }
 
 const useStyles = makeStyles((theme) => ({
-  buttonInactive: {
-    ...button,
-    flexDirection: "row",
-    backgroundColor: "#e0e0e0",
-    padding: theme.spacing(1,3,1,3),
-  },
-  buttonActive: {
-    ...button,
-    flexDirection: "row",
-    backgroundColor: "#a7a7a7",
-    padding: theme.spacing(1,3,1,3),
-    cursor: "pointer",
-  },
   arrow: {
     cursor: "pointer",
     color: "#a7a7a7",
