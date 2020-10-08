@@ -43,47 +43,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export function NextButton() {
-  const classes = useStyles()
-  let activeStep = ActiveStep.useContainer()
-  let documentQueue = DocumentQueue.useContainer()
-  let answers = Answers.useContainer()
-  let showResult = ShowResult.useContainer();
-  let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
-  let stepAnswers = answers.getAnswersById(activeDocument.identifier)
-
-  let nextText:string;
-  let nextAction: (arg: number) => void;
-  if (activeStep.isSecondLast(documentQueue.self.length)) {
-    nextText = "Ergebnis";
-    nextAction = arg => {
-      showResult.show()
-      activeStep.increment(arg)
-    }
-  } else if (activeStep.isLast(documentQueue.self.length)) {
-    nextText = "Schließen";
-    nextAction = arg => {}
-  } else {
-    nextText = "Weiter";
-    nextAction = arg => {
-      activeStep.increment(arg)
-    }
-  }
-
-  let NextButton;
-  if ((stepAnswers.length > 0) || (activeStep.isLast(documentQueue.self.length))) {
-    NextButton =
-        <div className={classes.buttonActive}
-          onClick={() => nextAction(documentQueue.self.length)}
-        >{nextText}</div>
-  } else {
-    NextButton =
-        <div className={classes.buttonInactive}
-        >{nextText}</div>
-  }
-  return NextButton
-}
-
 export function BackButton() {
   const classes = useStyles()
   let activeStep = ActiveStep.useContainer()
