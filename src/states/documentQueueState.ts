@@ -11,16 +11,12 @@ let fristDoc: StepDocumentLayout  = initialQueue.filter(function (el) {return el
 export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueue) {
   let [self, setDocumentQueue] = useState(initialState);
 
-  const _retrieveDocIds = (): Array<string> => {
-    return self.map(obj => obj.identifier)
-  }
-
-  const _setMChoicePurger = (activeStep: number, mchoice: boolean): number => {
+  let _setMChoicePurger = (activeStep: number, mchoice: boolean): number => {
     if ((!mchoice) && (self[activeStep+1]["type"] !== "default")) {return 1}
     else { return 0 }
   }
 
-  const _insertNewDoc = (docQueue: DocumentQueueLayout, newDocumentIdentifier: string, activeStep: number, mchoice: boolean): DocumentQueueLayout => {
+  let _insertNewDoc = (docQueue: DocumentQueueLayout, newDocumentIdentifier: string, activeStep: number, mchoice: boolean): DocumentQueueLayout => {
     let existingIdentifiers = self.map(obj => obj.identifier);
     if (!(existingIdentifiers.includes(newDocumentIdentifier))) {
       let newDocument = retrieveNonDefaultDoc(newDocumentIdentifier)
@@ -29,7 +25,7 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     return docQueue
   }
 
-  const _removeNewDoc = (newDocumentIdentifier: string): void => {
+  let _removeNewDoc = (newDocumentIdentifier: string): void => {
     let  _docQueue = [...self]
     let updatedDocQueue = _docQueue.filter(function (el) {
       return el.identifier !== newDocumentIdentifier
@@ -37,14 +33,14 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     setDocumentQueue(updatedDocQueue)
   }
 
-  const _removeOldDoc = (docQueue: DocumentQueueLayout, activeStep: number, mchoice: boolean): DocumentQueueLayout => {
+  let _removeOldDoc = (docQueue: DocumentQueueLayout, activeStep: number, mchoice: boolean): DocumentQueueLayout => {
     if ((!mchoice) && (self[activeStep+1]["type"] !== "default")) {
       docQueue.splice(activeStep+1, 1)
     }
     return docQueue
   }
 
-  const _removeFristQuestion = (docQueue: DocumentQueueLayout, identifier: string, label: string): DocumentQueueLayout => {
+  let _removeFristQuestion = (docQueue: DocumentQueueLayout, identifier: string, label: string): DocumentQueueLayout => {
     if (!["agg", "inTime", "notInTime"].includes(featureMap[identifier][label])) {
       if (self.map(obj => obj.identifier).includes("frist")) {
         docQueue = docQueue.filter(function (el) {
@@ -55,7 +51,7 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     return docQueue
   }
 
-  const validateFristQuestion = (isAgg: boolean) => {
+  let validateFristQuestion = (isAgg: boolean) => {
     if (isAgg) {
       if (!(self.map(obj => obj.identifier).includes("frist"))) {
         let docQueue = [...self]
@@ -65,7 +61,7 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     }
   }
 
-  const add = (activeStep: number, label: string, mchoice: boolean): number => {
+  let add = (activeStep: number, label: string, mchoice: boolean): number => {
     let activeDocument = returnActiveDocument(activeStep)
     let newDocumentIdentifier = mapLabelToId(activeDocument.identifier, label)
     let _docQueue = [...self]
@@ -83,28 +79,18 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     return remainingSteps
   }
 
-  const prune = (activeDoc: StepDocumentLayout): void => {
+  let prune = (activeDoc: StepDocumentLayout): void => {
     if (activeDoc.type !== "default") {
       _removeNewDoc(activeDoc.identifier)
     }
   }
 
-  const remove = (activeStep: number, label: string): void => {
+  let remove = (activeStep: number, label: string): void => {
     let activeDocument = returnActiveDocument(activeStep);
     let newDocumentIdentifier = mapLabelToId(activeDocument.identifier, label)
     if (!(newDocumentIdentifier === null)) {
       _removeNewDoc(newDocumentIdentifier);
     }
-  }
-
-  const retrieveIndexOfDoc = (identifier: string): OrUndefined<number> => {
-    let indexDoc: OrUndefined<number>;
-    let _drop = self.map((doc, index) => {
-      if (doc.identifier === identifier) {
-        indexDoc = index
-      }
-    })
-    return indexDoc
   }
 
   let returnActiveDocument = (activeStep: number): StepDocumentLayout => {
@@ -126,7 +112,7 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     return defaultSteps.map(obj => obj.step_title )
   }
 
-  return { self, returnActiveDocument, extractStepTitles, add, remove, activeDefaultStep, retrieveIndexOfDoc, prune, validateFristQuestion }
+  return { self, returnActiveDocument, extractStepTitles, add, remove, activeDefaultStep, prune, validateFristQuestion }
 }
 
 export const DocumentQueue = createContainer(useDocumentQueue)

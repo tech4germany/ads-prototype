@@ -11,22 +11,18 @@ let featureMap: FeatureMapLayout = feature_map;
 export function useAnswers(initialState: AnswersLayout = {}) {
   let [self, setAnswers] = useState(initialState)
 
-  let _keys = () => {
-    return Object.keys(self)
-  }
-
-  const _checkStepInAnswers = (identifier: string): boolean => {
+  let _checkStepInAnswers = (identifier: string): boolean => {
     if ( self.hasOwnProperty(identifier) ) { return true }
     else { return false }
   }
 
-  const _deleteLabelFromStepAnswer = (ans: AnswersLayout, id: string, label: string): AnswersLayout => {
+  let _deleteLabelFromStepAnswer = (ans: AnswersLayout, id: string, label: string): AnswersLayout => {
     let index = ans[id].indexOf(label)
     ans[id].splice(index, 1)
     return ans
   }
 
-  const _overwriteCurrentLabel = (ans: AnswersLayout, id: string, newLabel: string): AnswersLayout => {
+  let _overwriteCurrentLabel = (ans: AnswersLayout, id: string, newLabel: string): AnswersLayout => {
     let delLabel = ans[id][0]
     let delIndex = mapLabelToId(id, delLabel);
     if (delIndex !== null) {
@@ -36,7 +32,7 @@ export function useAnswers(initialState: AnswersLayout = {}) {
     return ans
   }
 
-  const _addLabelToStepAnswer = (ans: AnswersLayout, id: string, label: string, mchoice: boolean): AnswersLayout => {
+  let _addLabelToStepAnswer = (ans: AnswersLayout, id: string, label: string, mchoice: boolean): AnswersLayout => {
     if (mchoice) {
       ans[id].push(label)
     } else {
@@ -45,7 +41,7 @@ export function useAnswers(initialState: AnswersLayout = {}) {
     return ans
   }
 
-  const _addStepWithLabelToAnswers = (ans: AnswersLayout, id: string, label: string): AnswersLayout => {
+  let _addStepWithLabelToAnswers = (ans: AnswersLayout, id: string, label: string): AnswersLayout => {
     ans[id] = [label]
     return ans
   }
@@ -101,8 +97,6 @@ export function useAnswers(initialState: AnswersLayout = {}) {
     } else { return "Identifier not existent"}
   }
 
-  let keys = () => Object.keys(self)
-
-  return { self, add, remove, keys, getAnswersById, getAnswerByKey, prune, isAgg }
+  return { self, add, remove, getAnswersById, getAnswerByKey, prune, isAgg }
 }
 export const Answers = createContainer(useAnswers)
