@@ -64,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
     ...buttonTextBox,
     "&:hover": {
       backgroundColor: colorMain["115"],
+      color: textSelectionMain["color"]["active"],
     }
   },
   buttonTextExplanationInactive: {

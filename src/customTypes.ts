@@ -3,11 +3,11 @@ export type OrUndefined<T> = T | undefined;
 
 export type ActiveStepLayout = number;
 
-export type AnswersLayout {
+export type AnswersLayout = {
   [key: string]: Array<string>;
 };
 
-export type StepDocumentLayout {
+export type StepDocumentLayout = {
   "identifier":string,
   "type":string,
   "multiple_choice": boolean,
@@ -18,24 +18,24 @@ export type StepDocumentLayout {
 }
 export type DocumentQueueLayout = Array<StepDocumentLayout>;
 
-export type FeatureNode {
+export type FeatureNode = {
   [key: string]: string;
 };
 
-export type FeatureMapLayout {
+export type FeatureMapLayout = {
   [key: string]: FeatureNode
 };
 
-export type AnswersProfileLayout {
+export type AnswersProfileLayout = {
   [key: string]: string;
 };
 
-export type SpecsLayout {
+export type SpecsLayout = {
   "agg": boolean,
   "frist": boolean
 };
 
-export type ResultSpecsLayout {
+export type ResultSpecsLayout = {
   "identifier": number,
   "profile": OrNull<SpecsLayout>
 };
