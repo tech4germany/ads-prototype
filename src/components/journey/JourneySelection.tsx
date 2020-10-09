@@ -24,7 +24,7 @@ const buttonTextBox = {
 
 const buttonTextExplanation = {
   "fontFamily": "BundesSansWeb-Regular",
-  "fontSize": "1.4vh",
+  "fontSize": "16px",
 }
 
 const useStyles = makeStyles((theme) => ({

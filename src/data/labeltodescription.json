@@ -11,12 +11,12 @@
   },
   "lebensbereich": {
     "Arbeitsleben": null,
-    "Geschäfte, Verträge und Dienstleistungen": "z.B.: Einkaufen, Fitnessstudio, Club, Friseur, Versicherungen, Kino",
-    "Wohnungsmarkt": "z.B. in einer Wohnungsanzeige, bei der Besichtigung, im Mietverhältnis oder wenn die Wohnung gekündigt wird",
+    "Geschäfte, Verträge und Dienstleistungen": "Einkaufen, Fitnessstudio, Club, Friseur, Versicherungen, Kino",
+    "Wohnungsmarkt": "Wohnungsanzeige, Besichtigung, Mietverhältnis, Kündigung",
     "Ämter und Behörden": null,
     "Justiz und Polizei": null,
     "Bildungsbereich": "Kita, Schule, Hochschule",
-    "Gesundheit und Pflege": "Artbesuch, Krankenhaus, Pflegedienstleistung",
+    "Gesundheit und Pflege": "Arztbesuch, Krankenhaus, Pflegedienstleistung",
     "Öffentlichkeit und Freizeit": "Nachbarschaft, auf der Straße, Vereine, Ehrenamt",
     "Internet, Medien und Werbung":null,
     "Sonstiges": "Ich bin mir nicht sicher"
