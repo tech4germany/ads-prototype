@@ -6,6 +6,7 @@ import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { Answers } from "states/answerState"
 import { ShowResult } from "states/showResultState"
+import { colorMain } from "components/styleguide"
 
 const button = {
   "display": "flex",
@@ -21,11 +22,11 @@ const button = {
 const useStyles = makeStyles((theme) => ({
   arrow: {
     cursor: "pointer",
-    color: "#a7a7a7",
+    color: "#b8c0c5",
     fontSize: "6vh"
   },
   arrowInvisible: {
-    color: "#fef3df",
+    color: colorMain["15"],
     fontSize: "6vh"
   }
 }));
