@@ -18,14 +18,17 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     fontFamily: questionHeader["fontFamily"],
-    fontSize:  questionHeader["fontSize"]
+    fontSize:  questionHeader["fontSize"],
+    marginBottom: "1.5vh"
   },
   explanation: {
     display: "flex",
     flexWrap: "wrap",
     fontFamily: questionExplanation["fontFamily"],
     fontSize:  questionExplanation["fontSize"],
-    whiteSpace: "pre-wrap"
+    lineHeight: 1.15,
+    whiteSpace: "pre-wrap",
+    marginBottom: "1.5vh"
   }
 }));
 

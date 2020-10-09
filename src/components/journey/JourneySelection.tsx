@@ -13,6 +13,7 @@ import { ShowResult } from "states/showResultState"
 const buttonTextBox = {
     "fontFamily": textSelectionMain["fontFamily"],
     "fontSize": textSelectionMain["fontSize"],
+    "lineHeight": 1.15,
     "height": "100%",
     "width": "98%",
     "overflow": "hidden",
@@ -25,6 +26,7 @@ const buttonTextBox = {
 const buttonTextExplanation = {
   "fontFamily": "BundesSansWeb-Regular",
   "fontSize": "16px",
+  "lineHeight": 1.15,
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -37,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
-    minHeight: "42vh"
+    minHeight: "45vh"
   },
   buttonContainer: {
     margin: "0px"
