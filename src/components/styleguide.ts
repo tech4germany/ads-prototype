@@ -14,7 +14,7 @@ export const colorMainBU = {
 
 export const textSelectionMain = {
   "fontFamily": "BundesSansWeb-Bold",
-  "fontSize": "1.8vh",
+  "fontSize": "18px",
   "color": {
     "active": "white",
     "inactive": "black",
@@ -23,10 +23,10 @@ export const textSelectionMain = {
 
 export const questionHeader = {
   "fontFamily": "BundesSansWeb-Bold",
-  "fontSize": "4vh",
+  "fontSize": "28px",
 }
 
 export const questionExplanation = {
   "fontFamily": "BundesSansWeb-Regular",
-  "fontSize": "2vh",
+  "fontSize": "22px",
 }
