@@ -43,7 +43,7 @@ export default function Result() {
 
   useEffect(() => {
     resultSpecs.retrieveSpecs(answers.self);
-  })
+  }, [])
 
   return (
     <div className={classes.mainSpace}>
