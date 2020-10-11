@@ -30,6 +30,24 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+export enum TrackEvent {
+  Like = 'like',
+  Selection = "selection",
+};
+
+type PlausibleArgs = Array<TrackEvent>;
+
+declare global {
+  const plausible: {
+    (...args: PlausibleArgs): void
+    q?: PlausibleArgs[]
+  }
+
+  interface Window {
+    plausible?: typeof plausible
+  }
+}
+
 export default function App() {
   const classes = useStyles();
 

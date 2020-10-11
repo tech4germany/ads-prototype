@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
 import { colorMain, textSelectionMain } from "components/styleguide"
 
+import { TrackEvent } from "App"
 import { mapLabelToDescription } from "data/Interface"
 
 import { Answers } from "states/answerState"
@@ -103,7 +104,6 @@ export default function JourneySelection() {
   answers.prune(activeDocument.identifier)
   documentQueue.validateFristQuestion(answers.isAgg())
 
-
   let CardWithPosition = (props: { component: JSX.Element }) => {
     return(
       <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
@@ -134,6 +134,7 @@ export default function JourneySelection() {
                   answers.add(activeDocument.identifier, activeDocument.multiple_choice, label)
                   let remainingSteps = documentQueue.add(activeStep.self, label, activeDocument.multiple_choice)
                   nextAction(remainingSteps)
+                  plausible(TrackEvent.Selection)
                 }}
               >
                 <div className={classes.buttonTextBoxInactive}>
