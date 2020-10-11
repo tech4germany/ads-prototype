@@ -7,7 +7,7 @@ import { ActiveStep } from "states/activeStepState"
 
 const useStyles = makeStyles((theme) => ({
   questionBox: {
-    minHeight: "12vh",
+    minHeight: "15vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
