@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "row",
       alignItems: "flex-start",
       minWidth: "100%",
-      minHeight: "56vh"
+      minHeight: "59vh"
   },
   infoTemplateSpace: {
     maxHeight: "100%",

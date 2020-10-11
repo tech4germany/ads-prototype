@@ -5,7 +5,7 @@
 		"multiple_choice": false,
 		"step_title":"Merkmal",
 		"question":"Grund der Diskriminierung",
-		"explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können.\nErst mal interessiert uns, welche Ursache Sie hinter der Diskriminierung vermuten. Also aus welchem Grund bzw. persönlichen Merkmal wurden Sie diskriminiert?",
+			"explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können.Welche vermuten Ursache Sie hinter der Diskriminierung vermuten. Also aus welchem Grund bzw. persönlichen Merkmal wurden Sie diskriminiert?",
 		"options": [
 			"Ethnische Herkunft / Rassistische Diskriminierung",
 			"Religion / Weltanschauung",
@@ -43,7 +43,7 @@
 		"step_title":"Frist",
 		"multiple_choice": false,
 		"question":"Zeitpunkt des Diskriminierung",
-		"explanation":"Schließlich kommt es auch darauf an, wann die Diskriminierung vorgefallen ist, ob Sie noch rechtliche Schritte ergreifen können.\nWurden Sie innerhalb der letzten zwei Monate diskriminiert?",
+		"explanation":"Schließlich kommt es auch darauf an, wann die Diskriminierung vorgefallen ist, ob Sie noch rechtliche Schritte ergreifen können. Wurden Sie innerhalb der letzten zwei Monate diskriminiert?",
 		"options": [
 			"Ja",
 			"Nein",
