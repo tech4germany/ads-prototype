@@ -3,13 +3,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
 import { colorMain, textSelectionMain } from "components/styleguide"
 
-import { TrackEvent } from "App"
 import { mapLabelToDescription } from "data/Interface"
 
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { ShowResult } from "states/showResultState"
+
+export enum TrackEvent {
+  Like = 'like',
+  Selection = "selection",
+};
 
 const buttonTextBox = {
     "fontFamily": textSelectionMain["fontFamily"],
