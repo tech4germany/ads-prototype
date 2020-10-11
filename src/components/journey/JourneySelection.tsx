@@ -138,7 +138,7 @@ export default function JourneySelection() {
                   answers.add(activeDocument.identifier, activeDocument.multiple_choice, label)
                   let remainingSteps = documentQueue.add(activeStep.self, label, activeDocument.multiple_choice)
                   nextAction(remainingSteps)
-                  plausible(TrackEvent.Selection)
+                  window.plausible(TrackEvent.Selection)
                 }}
               >
                 <div className={classes.buttonTextBoxInactive}>
