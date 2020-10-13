@@ -13,12 +13,12 @@ const useStyles = makeStyles((theme) => ({
   },
   contactHeader: {
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "2.1vh",
+    fontSize: "22px",
     paddingBottom: "2.3vh"
   },
   contactInfo: {
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "2.1vh",
+    fontSize: "22px",
   }
 }));
 
