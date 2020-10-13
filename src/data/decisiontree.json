@@ -5,7 +5,7 @@
 		"multiple_choice": false,
 		"step_title":"Merkmal",
 		"question":"Grund der Diskriminierung",
-			"explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können.Welche vermuten Ursache Sie hinter der Diskriminierung vermuten. Also aus welchem Grund bzw. persönlichen Merkmal wurden Sie diskriminiert?",
+			"explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können. Welche Ursache vermuten Sie hinter der Diskriminierung. Also aus welchem Grund bzw. persönlichen Merkmal wurden Sie diskriminiert?",
 		"options": [
 			"Ethnische Herkunft / Rassistische Diskriminierung",
 			"Religion / Weltanschauung",
@@ -23,7 +23,7 @@
 		"step_title":"Lebensbereich",
 		"multiple_choice": false,
 		"question":"Bereich der Diskriminierung",
-		"explanation":"Außerdem ist es wichtig zu wissen, in welchem Zusammenhang Sie die Diskriminierung erlebt haben.\nIn welchem Lebensbereich wurden Sie diskriminiert?",
+		"explanation":"Außerdem ist es wichtig zu wissen, in welchem Zusammenhang Sie die Diskriminierung erlebt haben. In welchem Lebensbereich wurden Sie diskriminiert?",
 		"options": [
 			"Arbeitsleben",
 			"Geschäfte, Verträge und Dienstleistungen",
