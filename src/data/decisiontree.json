@@ -42,7 +42,7 @@
 		"type":"default",
 		"step_title":"Frist",
 		"multiple_choice": false,
-		"question":"Zeitpunkt des Diskriminierung",
+		"question":"Zeitpunkt der Diskriminierung",
 		"explanation":"Schließlich kommt es auch darauf an, wann die Diskriminierung vorgefallen ist, ob Sie noch rechtliche Schritte ergreifen können. Wurden Sie innerhalb der letzten zwei Monate diskriminiert?",
 		"options": [
 			"Ja",
