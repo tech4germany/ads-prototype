@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mapHeader: {
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "2.1vh",
+    fontSize: "22px",
     paddingBottom: "2.3vh"
   },
   mapImage: {

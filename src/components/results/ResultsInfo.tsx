@@ -15,22 +15,22 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "18px",
+    fontSize: "28px",
     paddingBottom: "2.3vh",
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "16px",
+    fontSize: "22px",
     paddingBottom: "2.3vh"
   },
   nextStepsHeader: {
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "16px",
+    fontSize: "22px",
     paddingBottom: "1vh"
   },
   nextStepsText: {
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "16px",
+    fontSize: "22px",
     whiteSpace: "pre-wrap"
     }
 }));
