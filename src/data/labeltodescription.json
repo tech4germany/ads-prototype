@@ -11,7 +11,7 @@
   },
   "lebensbereich": {
     "Arbeitsleben": null,
-    "Geschäfte, Verträge und Dienstleistungen": "Einkaufen, Fitnessstudio, Club, Friseur, Versicherungen, Kino",
+    "Geschäfte, Verträge und Dienstleistungen": "z.B. Einkaufen, Club, Friseur",
     "Wohnungsmarkt": "Wohnungsanzeige, Besichtigung, Mietverhältnis, Kündigung",
     "Ämter und Behörden": null,
     "Justiz und Polizei": null,
@@ -30,12 +30,12 @@
     "Sexuelle Belästigung": null,
     "Trans*": null,
     "Inter*": null,
-    "Frau / Mann": "z.B.: Schwangerschaft, unterschiedliche Bezahlung",
+    "Frau / Mann": "z.B. Schwangerschaft, unterschiedliche Bezahlung",
     "queer": null,
     "Sonstiges": "Ich bin mir nicht sicher"
   },
   "lebensbereich_arbeit_detail": {
-    "Zugang": "Stellenausschreibung, Bewerbungsverfahren, Vorstellungsgespräch",
+    "Zugang": "z.B. Stellenausschreibung, Bewerbungsverfahren",
     "Im Beschäftigungsverhältnis": "Mobbing / Bossing oder bei der Bezahlung",
     "Kündigung / Beendigung": null
   },

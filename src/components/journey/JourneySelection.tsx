@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
-import { colorMain, textSelectionMain } from "components/styleguide"
+import { colorMain, textSelectionMain, textSelectionExplanation } from "components/styleguide"
 
 import { mapLabelToDescription } from "data/Interface"
 
@@ -26,12 +26,6 @@ const buttonTextBox = {
     "paddingRight": "1vw",
     'paddingTop': "0.6vw",
     "paddingBottom": "0.6vw",
-}
-
-const buttonTextExplanation = {
-  "fontFamily": "BundesSansWeb-Regular",
-  "fontSize": "16px",
-  "lineHeight": 1.15,
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -75,10 +69,10 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   buttonTextExplanationInactive: {
-    ...buttonTextExplanation
+    ...textSelectionExplanation
   },
   buttonTextExplanationActive: {
-    ...buttonTextExplanation,
+    ...textSelectionExplanation,
     color: "white"
   },
   buttonStripe: {
