@@ -28,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
     ...navBox,
   },
   stepperBox: {
+    [theme.breakpoints.down('xs')]: {
+      visibility: "hidden",
+    },
     justifyContent: "center",
     position: "relative",
     overflow: "hidden",
