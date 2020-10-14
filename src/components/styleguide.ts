@@ -12,6 +12,16 @@ export const colorMainBU = {
   "15":"#fef3df",
 }
 
+export const questionHeader = {
+  "fontFamily": "BundesSansWeb-Bold",
+  "fontSize": "28px",
+}
+
+export const questionExplanation = {
+  "fontFamily": "BundesSansWeb-Regular",
+  "fontSize": "22px",
+}
+
 export const textSelectionMain = {
   "fontFamily": "BundesSansWeb-Bold",
   "fontSize": "18px",
@@ -21,12 +31,8 @@ export const textSelectionMain = {
   }
 }
 
-export const questionHeader = {
-  "fontFamily": "BundesSansWeb-Bold",
-  "fontSize": "28px",
-}
-
-export const questionExplanation = {
+export const textSelectionExplanation = {
   "fontFamily": "BundesSansWeb-Regular",
-  "fontSize": "22px",
+  "fontSize": "16px",
+  "lineHeight": 1.15,
 }
