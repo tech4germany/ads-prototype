@@ -1,11 +1,11 @@
 {
   "merkmal": {
-    "Ethnische Herkunft / Rassistische Diskriminierung":null,
-    "Religion / Weltanschauung": null,
-    "Behinderung / chronische Krankheiten": null,
+    "Ethnische Herkunft/Rassistische Diskriminierung":null,
+    "Religion/Weltanschauung": null,
+    "Behinderung/chronische Krankheiten": null,
     "Alter": null,
     "Sexuelle Identität": null,
-    "Geschlecht / Geschlechtsidentität": null,
+    "Geschlecht/Geschlechtsidentität": null,
     "Sozialer Status": "z.B. Finanzen, Bildungsniveau, Sozialleistungen",
     "Sonstiges": "Ich bin mir nicht sicher"
   },
@@ -23,25 +23,25 @@
   },
   "merkmal_ethnisch_detail": {
     "Äußere Merkmale": "Hautfarbe, Sprache, Name",
-    "Staatsangehörigkeit / Aufenthaltsstatus": null,
+    "Staatsangehörigkeit/Aufenthaltsstatus": null,
     "Sonstiges": "Ich bin mir nicht sicher"
   },
   "merkmal_gender_detail": {
     "Sexuelle Belästigung": null,
     "Trans*": null,
     "Inter*": null,
-    "Frau / Mann": "z.B. Schwangerschaft, unterschiedliche Bezahlung",
+    "Frau/Mann": "z.B. Schwangerschaft, unterschiedliche Bezahlung",
     "queer": null,
     "Sonstiges": "Ich bin mir nicht sicher"
   },
   "lebensbereich_arbeit_detail": {
     "Zugang": "z.B. Stellenausschreibung, Bewerbungsverfahren",
     "Im Beschäftigungsverhältnis": "Mobbing / Bossing oder bei der Bezahlung",
-    "Kündigung / Beendigung": null
+    "Kündigung/Beendigung": null
   },
   "lebensbereich_bildung_detail": {
     "Kita": null,
-    "Privatschule / Privatunterricht": null,
+    "Privatschule/Privatunterricht": null,
     "Öffentliche Schule": "Grundschule oder weiterführende Schule",
     "Hochschule": null
   },

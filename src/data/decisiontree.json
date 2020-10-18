@@ -7,12 +7,12 @@
 		"question":"Grund der Diskriminierung",
 			"explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können. Welche Ursache vermuten Sie hinter der Diskriminierung. Also aus welchem Grund bzw. persönlichen Merkmal wurden Sie diskriminiert?",
 		"options": [
-			"Ethnische Herkunft / Rassistische Diskriminierung",
-			"Religion / Weltanschauung",
-			"Behinderung / chronische Krankheiten",
+			"Ethnische Herkunft/Rassistische Diskriminierung",
+			"Religion/Weltanschauung",
+			"Behinderung/chronische Krankheiten",
 			"Alter",
 			"Sexuelle Identität",
-			"Geschlecht / Geschlechtsidentität",
+			"Geschlecht/Geschlechtsidentität",
 			"Sozialer Status",
 			"Sonstiges"
 		]
@@ -47,7 +47,7 @@
 		"options": [
 			"Ja",
 			"Nein",
-			"dauert noch an / passiert staendig",
+			"dauert noch an/passiert ständig",
 			"Ich bin mir nicht sicher"
 		]
 	},
@@ -57,10 +57,10 @@
 		"step_title":"Ethnische Herkunft",
 		"multiple_choice": false,
 		"question": "Worauf genau bezog sich die Diskriminierung?",
-		"explanation": "Sie haben das Merkmal Ethnische Herkunft / Rassistische Diskriminierung ausgewählt",
+		"explanation": "Sie haben das Merkmal Ethnische Herkunft/Rassistische Diskriminierung ausgewählt",
 		"options": [
 			"Äußere Merkmale",
-			"Staatsangehörigkeit / Aufenthaltsstatus",
+			"Staatsangehörigkeit/Aufenthaltsstatus",
 			"Sonstiges"
 		]
 	},
@@ -70,12 +70,12 @@
 		"step_title":"Geschlecht",
 		"multiple_choice": false,
 		"question": "Worauf genau bezog sich die Diskriminierung?",
-		"explanation": "Sie haben das Merkmal Geschlecht / Geschlechtsidentität ausgewählt",
+		"explanation": "Sie haben das Merkmal Geschlecht/Geschlechtsidentität ausgewählt",
 		"options": [
 			"Sexuelle Belästigung",
 			"Trans*",
 			"Inter*",
-			"Frau / Mann",
+			"Frau/Mann",
 			"queer",
 			"Sonstiges"
 		]
@@ -90,7 +90,7 @@
 		"options": [
 			"Zugang",
 			"Im Beschäftigungsverhältnis",
-			"Kündigung / Beendigung"
+			"Kündigung/Beendigung"
 		]
 	},
 	{
@@ -102,7 +102,7 @@
 		"explanation":"Sie haben den Lebensbereich Bildung ausgewählt",
 		"options": [
 			"Kita",
-			"Privatschule / Privatunterricht",
+			"Privatschule/Privatunterricht",
 			"Öffentliche Schule",
 			"Hochschule"
 		]
