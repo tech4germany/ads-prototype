@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
 import { colorMain, textSelectionMain, textSelectionExplanation } from "components/styleguide"
 
-import { mapLabelToDescription } from "data/Interface"
+import { mapLabelToDescription, mapLabelToEvent } from "data/Interface"
 
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
@@ -132,7 +132,7 @@ export default function JourneySelection() {
                   answers.add(activeDocument.identifier, activeDocument.multiple_choice, label)
                   let remainingSteps = documentQueue.add(activeStep.self, label, activeDocument.multiple_choice)
                   nextAction(remainingSteps)
-                  plausible(TrackEvent.Selection)
+                  plausible(mapLabelToEvent(activeDocument.identifier, label))
                 }}
               >
                 <div className={classes.buttonTextBoxInactive}>

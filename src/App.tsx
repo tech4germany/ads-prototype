@@ -30,12 +30,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export enum TrackEvent {
-  Like = 'like',
-  Selection = "selection",
-};
-
-type PlausibleArgs = Array<TrackEvent>;
+type PlausibleArgs = Array<string>;
 
 declare global {
   const plausible: {

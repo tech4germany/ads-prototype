@@ -1,0 +1,58 @@
+{
+  "merkmal": {
+    "Ethnische Herkunft/Rassistische Diskriminierung":"merkmal_ethnicity",
+    "Religion/Weltanschauung": "merkmal_religion",
+    "Behinderung/chronische Krankheiten": "merkmal_handicap",
+    "Alter": "merkmal_age",
+    "Sexuelle Identität": "merkmal_sex",
+    "Geschlecht/Geschlechtsidentität": "merkmal_gender",
+    "Sozialer Status": "merkmal_social",
+    "Sonstiges": "merkmal_other"
+  },
+  "lebensbereich": {
+    "Arbeitsleben": "lebensbereich_work",
+    "Geschäfte, Verträge und Dienstleistungen": "lebensbereich_shops",
+    "Wohnungsmarkt": "lebensbereich_housing",
+    "Ämter und Behörden": "lebensbereich_council",
+    "Justiz und Polizei": "lebensbereich_police",
+    "Bildungsbereich": "lebensbereich_education",
+    "Gesundheit und Pflege": "lebensbereich_health",
+    "Öffentlichkeit und Freizeit": "lebensbereich_leisure",
+    "Internet, Medien und Werbung": "lebensbereich_internet",
+    "Sonstiges": "lebensbereich_other"
+  },
+  "merkmal_ethnisch_detail": {
+    "Äußere Merkmale": "merkmal_ethnisch_detail_appearance",
+    "Staatsangehörigkeit/Aufenthaltsstatus": "merkmal_ethnisch_detail_nationality",
+    "Sonstiges": "merkmal_ethnisch_detail_other"
+  },
+  "merkmal_gender_detail": {
+    "Sexuelle Belästigung": "merkmal_gender_detail_molest",
+    "Trans*": "merkmal_gender_detail_trans",
+    "Inter*": "merkmal_gender_detail_inter",
+    "Frau/Mann": "merkmal_gender_detail_manwoman",
+    "queer": "merkmal_gender_detail_queer",
+    "Sonstiges": "merkmal_gender_detail_other"
+  },
+  "lebensbereich_arbeit_detail": {
+    "Zugang": "lebensbereich_arbeit_detail_access",
+    "Im Beschäftigungsverhältnis": "lebensbereich_arbeit_job",
+    "Kündigung/Beendigung": "lebensbereich_arbeit_quit"
+  },
+  "lebensbereich_bildung_detail": {
+    "Kita": "lebensbereich_bildung_detail_kiga",
+    "Privatschule/Privatunterricht": "lebensbereich_bildung_detail_privateschool",
+    "Öffentliche Schule": "lebensbereich_bildung_detail_publicschool",
+    "Hochschule": "lebensbereich_bildung_detail_college"
+  },
+  "lebensbereich_gesundheit_detail": {
+    "Krankenkasse": "lebensbereich_gesundheit_detail_payer",
+    "Arztbesuch": "lebensbereich_gesundheit_detail_doctor"
+  },
+  "frist": {
+    "Ja":"frist_yes",
+    "Nein": "frist_no",
+    "dauert noch an / passiert staendig": "frist_ongoing",
+    "Ich bin mir nicht sicher": "frist_unsure"
+  }
+}
