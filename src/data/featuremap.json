@@ -1,11 +1,11 @@
 {
   "merkmal": {
-    "Ethnische Herkunft / Rassistische Diskriminierung":"agg",
-    "Religion / Weltanschauung": "agg",
-    "Behinderung / chronische Krankheiten": "agg",
+    "Ethnische Herkunft/Rassistische Diskriminierung":"agg",
+    "Religion/Weltanschauung": "agg",
+    "Behinderung/chronische Krankheiten": "agg",
     "Alter": "agg",
     "Sexuelle Identität": "agg",
-    "Geschlecht / Geschlechtsidentität": "agg",
+    "Geschlecht/Geschlechtsidentität": "agg",
     "Sozialer Status": "non-agg",
     "Sonstiges": "non-agg"
   },
@@ -23,25 +23,25 @@
   },
   "merkmal_ethnisch_detail": {
     "Äußere Merkmale": "agg",
-    "Staatsangehörigkeit / Aufenthaltsstatus": "agg",
+    "Staatsangehörigkeit/Aufenthaltsstatus": "agg",
     "Sonstiges": "agg"
   },
   "merkmal_gender_detail": {
     "Sexuelle Belästigung": "agg",
     "Trans*": "agg",
     "Inter*": "agg",
-    "Frau / Mann": "agg",
+    "Frau/Mann": "agg",
     "queer": "agg",
     "Sonstiges": "agg"
   },
   "lebensbereich_arbeit_detail": {
     "Zugang": "agg",
     "Im Beschäftigungsverhältnis": "agg",
-    "Kündigung / Beendigung": "agg"
+    "Kündigung/Beendigung": "agg"
   },
   "lebensbereich_bildung_detail": {
     "Kita": "agg",
-    "Privatschule / Privatunterricht": "agg",
+    "Privatschule/Privatunterricht": "agg",
     "Öffentliche Schule": "non-agg",
     "Hochschule": "non-agg"
   },
