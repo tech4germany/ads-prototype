@@ -1,5 +1,6 @@
 import decision_tree from "data/decisiontree.json";
 import labeltoid from "data/labeltoid.json";
+import labeltoevent from "data/labeltoevent.json";
 import labeltodescription from "data/labeltodescription.json";
 import featuremap from "data/featuremap.json";
 
@@ -75,4 +76,15 @@ interface FeatureMapLayout {
 let FeatureMap: FeatureMapLayout = featuremap;
 export function mapFeatureToAgg(stepIdentifier: string, label: string): string {
   return FeatureMap[stepIdentifier][label];
+}
+
+interface StepLabelToIdEvent {
+  [key: string]: string;
+}
+interface LabelToIdEventLayout {
+  [key: string]: StepLabelToIdEvent;
+}
+let LabelToEvent: LabelToIdEventLayout = labeltoevent;
+export function mapLabelToEvent(stepIdentifier: string, label: string): string {
+  return LabelToEvent[stepIdentifier][label];
 }
