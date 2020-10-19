@@ -119,8 +119,7 @@ export default function JourneySelection() {
   return (
     <Grid container className={classes.root} >
         {activeDocument["options"].map((label, index) => {
-          console.log(wrap(label))
-
+          
           let CardWithSelection: JSX.Element;
           if (!answers.getAnswersById(activeDocument.identifier).includes(label)) {
             CardWithSelection =
