@@ -1,13 +1,13 @@
 ## Wegweiser Antidiskiminierungstelle des Bundes
 
 This repo contains the code for a decision support tool designed to advise people
-in taking next steps when approaching the German Antidiscrimination agency.
+in taking next steps when approaching the [German Federal Anti-discrimination agency](https://www.antidiskriminierungsstelle.de/DE/Home/home_node.htmle). The project was part of the Tech4Germany Fellowship cohorte of 2020. It allows people seeking advice after experiencing an act of discrimination to quickly find relevant information and possible next steps.
 
-The tool comes as standard react app implemented in typescript and built by default
-with the parcel bundler. In its current form, it does not require a backend and is
-meant to be published serverless through Amplify.
+:point_right:
+Currently, the project is hosted with AWS Amplify and can be accessed [here](https://wegweiser.tech4germany.org/). :point_left:
 
 ### Get up and running
+------
 
 1. Using ssh, clone repo to local enviroment
 
@@ -27,6 +27,7 @@ meant to be published serverless through Amplify.
 
 
 ### Background
+------
 
 The Federal Anti-discrimination agency in Germany has a range of responsibilities. It runs programs to increase awareness against discrimination, it funds and directs a number of studies designed to better understand the state of discrimination in Germany and relevant trends and finally, it offers legal advise to people affected by discrimination.
 
@@ -36,7 +37,12 @@ Following an explorative stint where the team analysed the strengths and current
 
 At the moment much of this work, informing and re-directing claimants to better suited institutions, is done manually by highly-trained legal consultants. With an expected decrease in the number of these cases through the **Wegweiser** the consultants will be able to direct their capacities to more intricate cases where their legal expertise is required.
 
+#### What is Tech4Germany
+
+Tech4Germany is a 3-month fellowship program for digital talents under the patronage of the head of the Federal Chancellery, Prof. Dr. Helge Braun. Every year since 2018, the best young talents from the fields of technology, product and design have been working for three months on specific challenges of the federal ministries. In interdisciplinary teams, prototypical software products are developed with agile and user-centered methods.
+
 ### User Flow
+------
 
 The **Wegweiser** is not a complicated tool but allows users through a very reduced flow of questions to arrive at relevant information to their case.
 
@@ -63,5 +69,3 @@ The **Wegweiser** is not a complicated tool but allows users through a very redu
 ### Technical Architecture
 
 ### Team
-
-Currently, the project is hosted with AWS Amplify and can be accessed [here](https://wegweiser.tech4germany.org/).
