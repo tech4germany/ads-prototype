@@ -56,9 +56,9 @@ export default function ResultInfo() {
     nextSteps = "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das "
     nextSteps += "ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
   } else if (resultSpecs.isAGG()) {
-    nextSteps = "Leider scheint die Frist in Ihrem Fall schon abgelaufen zu sein."
+    nextSteps = "Leider scheint die Frist in Ihrem Fall schon abgelaufen zu sein. Wenn Sie dennoch Beratung zu Ihrem Fall wünschen, kontaktieren Sie uns bitte über das Kontaktformular."
   } else {
-    nextSteps = "Wenden Sie sich an stelle xy"
+    nextSteps = "Möglicherweise gibt es eine Stelle, die für Ihren Fall besser geeignet ist. Die Karte leitet Sie weiter zu einer Liste aller eingetragenen Beratungsstellen. Sollten Sie dort nicht fündig werden und wünschen weiterhin Beratung, kontaktieren Sie uns bitte über das Kontaktformular."
   }
 
   return (
