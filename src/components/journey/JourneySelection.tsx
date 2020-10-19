@@ -2,18 +2,15 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
 import { colorMain, textSelectionMain, textSelectionExplanation } from "components/styleguide"
-
 import { mapLabelToDescription, mapLabelToEvent } from "data/Interface"
-
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { ShowResult } from "states/showResultState"
 
-export enum TrackEvent {
-  Like = 'like',
-  Selection = "selection",
-};
+const wrap = (s: string) => s.replace(
+        /(?![^\n]{1,28}$)([^\n]{1,28})\//g, '$1\/\n'
+    )
 
 const buttonTextBox = {
     "fontFamily": textSelectionMain["fontFamily"],
@@ -34,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     alignContent: "flex-start",
     alignItems: "flex-start",
-    flexWrap: "wrap",
     '& > *': {
       margin: theme.spacing(1),
     },
@@ -45,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonCard: {
     display: "flex",
-    flexWrap: "wrap",
     flexDirection: "row",
     justifyContent: "left",
     alignItems: "flex-start",
@@ -53,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     height: "11vh",
     borderRadius: "0px",
+    whiteSpace: "pre-wrap"
   },
   buttonTextBoxActive: {
     backgroundColor: colorMain["115"],
@@ -123,6 +119,7 @@ export default function JourneySelection() {
   return (
     <Grid container className={classes.root} >
         {activeDocument["options"].map((label, index) => {
+          console.log(wrap(label))
 
           let CardWithSelection: JSX.Element;
           if (!answers.getAnswersById(activeDocument.identifier).includes(label)) {
@@ -136,7 +133,7 @@ export default function JourneySelection() {
                 }}
               >
                 <div className={classes.buttonTextBoxInactive}>
-                  {label}
+                  {wrap(label)}
                   <div className={classes.buttonTextExplanationInactive}>
                     {mapLabelToDescription(activeDocument.identifier, label)}
                   </div>
@@ -152,7 +149,7 @@ export default function JourneySelection() {
                 }}
               >
                 <div className={classes.buttonTextBoxActive}>
-                  {label}
+                  {wrap(label)}
                   <div className={classes.buttonTextExplanationActive}>
                     {mapLabelToDescription(activeDocument.identifier, label)}
                   </div>
