@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "50vw",
     maxHeight: "20vh",
     overflow: "hidden",
-    borderStyle: "solid",
     borderWidth: "3px",
     backgroundColor: "white"
   },
