@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import map from 'images/image_ph.jpg';
+import map from 'images/map_icon.png';
 
 const useStyles = makeStyles((theme) => ({
   mapSpace: {
@@ -28,11 +28,11 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     borderStyle: "solid",
     borderWidth: "3px",
-    borderColor: "white"
+    backgroundColor: "white"
   },
   mapImageZoom: {
-    maxWidth: "100%",
-    height: "auto"
+    width: "auto",
+    maxHeight: "20vh"
   }
 }));
 
@@ -46,7 +46,7 @@ export default function ResultMap() {
       </div>
       <div className={classes.mapImage}>
         <a target="_blank" href="https://www.antidiskriminierungsstelle.de/SiteGlobals/Forms/Suche/Beratungsstellensuche/Karte/Beratungsstellensuche_formular.html?nn=6560716&ambit_distance=200&ambit_distance.HASH=3f1f143fdef1207bca01">
-        <img src={map} alt={"empty"}/>
+        <img className={classes.mapImageZoom} src={map} alt={"empty"}/>
         </a>
       </div>
     </div>
