@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { colorMain } from "components/styleguide"
 
 import NavBar from 'components/shared/AppBar'
-import JourneyStateInit from "components/journey/JourneyStateInit"
+import StateInit from "components/StateInit"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -59,7 +59,7 @@ export default function App() {
 
           <div className={classes.mainArea}>
 
-            <JourneyStateInit />
+            <StateInit />
 
           </div>
         </div>

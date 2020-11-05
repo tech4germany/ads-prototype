@@ -1,6 +1,5 @@
 import React from 'react';
-
-import Journey from "./Journey";
+import Main from "./Main";
 
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
@@ -17,7 +16,7 @@ export default function JourneyStateInit() {
     <ShowResult.Provider>
     <ResultSpecs.Provider>
 
-      <Journey/>
+      <Main />
 
     </ResultSpecs.Provider>
     </ShowResult.Provider>

@@ -40,12 +40,15 @@ export default function JourneyQuestion() {
 
   return (
     <div className={classes.questionBox}>
+
       <div className={classes.question}>
         {activeDocument.question}
       </div>
+
       <div className={classes.explanation}>
         {activeDocument.explanation}
       </div>
+      
     </div>
 );
 }
