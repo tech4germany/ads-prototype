@@ -1,7 +1,7 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
 import { EdgeDetail } from "data/customTypes"
-import { mapLabelToFeature } from "data/InterfaceNew"
+import { mapLabelToFeature } from "data/Interface"
 import { AnswersLayout } from "data/customTypes"
 
 export function useAnswers(initialState: AnswersLayout = {}) {

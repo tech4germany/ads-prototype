@@ -1,94 +1,53 @@
 /*
 This file handles all dealing with data from the webapp.
  */
+import merkmal from "data/stepDocuments/merkmal.json"
+import merkmal_ethnisch_detail from "data/stepDocuments/merkmal_ethnisch_detail.json"
+import merkmal_gender_detail from "data/stepDocuments/merkmal_gender_detail.json"
+import lebensbereich from "data/stepDocuments/lebensbereich.json"
+import lebensbereich_arbeit_detail from "data/stepDocuments/lebensbereich_arbeit_detail.json"
+import lebensbereich_bildung_detail from "data/stepDocuments/lebensbereich_bildung_detail.json"
+import lebensbereich_gesundheit_detail from "data/stepDocuments/lebensbereich_gesundheit_detail.json"
+import frist from "data/stepDocuments/frist.json"
+import result_placeholder from "data/stepDocuments/result_placeholder.json"
+import {StepDocumentLayout, EdgeDetail, DocumentQueueLayout} from "data/customTypes"
 
-import decision_tree from "data/decisiontree.json";
-import labeltoid from "data/labeltoid.json";
-import labeltoevent from "data/labeltoevent.json";
-import labeltodescription from "data/labeltodescription.json";
-import featuremap from "data/featuremap.json";
+// collect all documents
+let allDocuments: DocumentQueueLayout = [
+  merkmal,
+  merkmal_ethnisch_detail,
+  merkmal_gender_detail,
+  lebensbereich,
+  lebensbereich_arbeit_detail,
+  lebensbereich_bildung_detail,
+  lebensbereich_gesundheit_detail,
+  frist,
+  result_placeholder
+];
 
-type OrNull<T> = T | null;
-
-const resultObj = {
-  "identifier": "result",
-  "type": "default",
-  "multiple_choice": false,
-  "step_title": "result",
-  "question": "",
-  "explanation": "",
-  "options": []
-}
-interface StepDocumentLayout {
-  "identifier":string,
-  "type":string,
-  "multiple_choice": boolean,
-  "step_title": string,
-  "question": string,
-  "explanation": string,
-  "options": Array<string>
-}
-type DocumentQueueLayout = Array<StepDocumentLayout>
-
-export function initialiseDocQueue() {
-  var initialDocQueue: DocumentQueueLayout = decision_tree.filter(function (element) {
-    return element.type === "default"
+// collect documents required for initial decision tree
+export function initialiseDocQueue(): DocumentQueueLayout {
+  allDocuments.forEach((element, index) => {
+    if (element.type === "default") {
+      element.visible = true
+    }
+    element.index = index
   })
-  initialDocQueue.push(resultObj)
-  return initialDocQueue
+  return allDocuments
 }
 
+// retrieve additional documents for insertion into decision tree
 export function retrieveNonDefaultDoc(identifier: string): StepDocumentLayout {
-  let _newDoc = decision_tree.filter(function (element) {
+  let _newDoc = allDocuments.filter(function (element) {
     return element.identifier === identifier
   })
   return _newDoc[0]
 }
 
-interface StepLabelToIdLayout {
-  [key: string]: OrNull<string>;
-}
-interface LabelToIdLayout {
-  [key: string]: StepLabelToIdLayout;
-}
-let LabelToId: LabelToIdLayout = labeltoid;
-export function mapLabelToId(stepIdentifier: string, label: string): OrNull<string> {
-  return LabelToId[stepIdentifier][label];
-}
-
-interface StepLabelToDescriptionLayout {
-  [key: string]: OrNull<string>;
-}
-interface LabelToDescriptionLayout {
-  [key: string]: StepLabelToIdLayout;
-}
-let LabelToDescription: LabelToDescriptionLayout = labeltodescription;
-export function mapLabelToDescription(stepIdentifier: string, label: string): string {
-  let nextId: OrNull<string> = LabelToDescription[stepIdentifier][label];
-  if (nextId !== null) {
-    return nextId
-  } else { return "" }
-}
-
-interface FeatureToAgg {
-  [key: string]: string;
-}
-
-interface FeatureMapLayout {
-  [key: string]: FeatureToAgg;
-}
-let FeatureMap: FeatureMapLayout = featuremap;
-export function mapFeatureToAgg(stepIdentifier: string, label: string): string {
-  return FeatureMap[stepIdentifier][label];
-}
-
-interface StepLabelToIdEvent {
-  [key: string]: string;
-}
-interface LabelToIdEventLayout {
-  [key: string]: StepLabelToIdEvent;
-}
-let LabelToEvent: LabelToIdEventLayout = labeltoevent;
-export function mapLabelToEvent(stepIdentifier: string, label: string): string {
-  return LabelToEvent[stepIdentifier][label];
+// retrieve edge node for a given document/label pair
+export function mapLabelToFeature(stepIdentifier: string, label: string, feature: EdgeDetail ): string | null {
+  let _doc = allDocuments.filter(function(element) {
+    return element.identifier === stepIdentifier
+  })
+  return _doc[0]["edges"][label][feature]
 }

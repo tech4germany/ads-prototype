@@ -11,7 +11,7 @@ qualifies for AGG support. In that case it re-inserts the frist question into th
 visible document queue.
 
  */
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import JourneyQuestion from "components/journey/JourneyQuestion";
 import JourneySelection from "components/journey/JourneySelection";
@@ -41,7 +41,7 @@ export default function JourneyStep() {
     answers.prune(activeDocument.identifier)
   })
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     documentQueue.validateFristQuestion(answers.isAgg())
   }, [answers])
 

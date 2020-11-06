@@ -1,7 +1,7 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
-import { DocumentQueueLayout, StepDocumentLayoutNew, EdgeDetail, StepDetail, UpdateType } from "data/customTypes"
-import { initialiseDocQueue, mapLabelToFeature } from "data/InterfaceNew"
+import { DocumentQueueLayout, StepDocumentLayout, EdgeDetail, StepDetail, UpdateType } from "data/customTypes"
+import { initialiseDocQueue, mapLabelToFeature } from "data/Interface"
 
 let initialQueue: DocumentQueueLayout = initialiseDocQueue()
 export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueue) {
@@ -60,17 +60,17 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
 
   // getter functions
   let getEdges = (activeStep: number): Array<string> => {
-    let activeDocument: StepDocumentLayoutNew = self[activeStep]
+    let activeDocument: StepDocumentLayout = self[activeStep]
     return Object.keys(activeDocument["edges"])
   }
 
   let getEdgeFeatureByLabel = (activeStep: number, label: string, feature: EdgeDetail): string | null => {
-    let activeDocument: StepDocumentLayoutNew = self[activeStep]
+    let activeDocument: StepDocumentLayout = self[activeStep]
     return activeDocument["edges"][label][feature]
   }
 
   let getStepDetail = (activeStep: number, detail: StepDetail): string | number | boolean => {
-    let activeDocument: StepDocumentLayoutNew = self[activeStep]
+    let activeDocument: StepDocumentLayout = self[activeStep]
     return activeDocument[detail]
   }
 

@@ -7,16 +7,6 @@ export type AnswersLayout = {
   [key: string]: Array<string>;
 };
 
-export type StepDocumentLayout = {
-  "identifier":string,
-  "type":string,
-  "multiple_choice": boolean,
-  "step_title": string,
-  "question": string,
-  "explanation": string,
-  "options": Array<string>
-}
-
 export type FeatureNode = {
   [key: string]: string;
 };
@@ -25,8 +15,8 @@ export type FeatureMapLayout = {
   [key: string]: FeatureNode
 };
 
-export type AnswersProfileLayout = {
-  [key: string]: string;
+export type AnswerProfileLayout = {
+  [key: string]: boolean;
 };
 
 export type SpecsLayout = {
@@ -35,8 +25,8 @@ export type SpecsLayout = {
 };
 
 export type ResultSpecsLayout = {
-  "identifier": number,
-  "profile": OrNull<SpecsLayout>
+  "identifier"?: number,
+  "profile"?: SpecsLayout
 };
 
 type DefaultList = Array<string>;
@@ -75,7 +65,7 @@ export type EdgeDetailsLayout = {
     "next_node": string | null
 }
 
-export interface StepDocumentLayoutNew {
+export interface StepDocumentLayout {
   "identifier": string,
   "type": string,
   "step_title": string,
@@ -89,4 +79,4 @@ export interface StepDocumentLayoutNew {
   }
 }
 
-export type DocumentQueueLayout = Array<StepDocumentLayoutNew>;
+export type DocumentQueueLayout = Array<StepDocumentLayout>;
