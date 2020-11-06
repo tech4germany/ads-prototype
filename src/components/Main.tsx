@@ -1,3 +1,9 @@
+/*
+This component is the main entry point to the wegweiser. Each time the
+active step updates it checks whether we have reached the final node in the
+document queue. Depending on that it either renders the next step or switches to
+the result page.
+ */
 import React, {useEffect} from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
@@ -23,13 +29,12 @@ export default function Journey() {
   let showResult = ShowResult.useContainer();
   let documentQueue = DocumentQueue.useContainer();
   let activeStep = ActiveStep.useContainer();
-  let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
 
   useEffect(() => {
-    if (activeStep.self === documentQueue.self.length-1) {
+    if (activeStep.isLast(documentQueue.self.length)) {
       showResult.show()
     } else showResult.hide()
-  })
+  }, [activeStep])
 
   return (
     <Grid container className={classes.mainSpace}>

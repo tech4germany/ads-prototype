@@ -1,6 +1,6 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
-import { FeatureMapLayout, EdgeDetail } from "data/customTypes"
+import { EdgeDetail } from "data/customTypes"
 import { mapLabelToFeature } from "data/InterfaceNew"
 import { AnswersLayout } from "data/customTypes"
 
@@ -71,8 +71,8 @@ export function useAnswers(initialState: AnswersLayout = {}) {
   // getter functions
   let isAgg = (): boolean => {
     let agg: boolean = true;
-    Object.keys(self).map(function(stepIdentifier) {
-      self[stepIdentifier].map(function(label){
+    Object.keys(self).forEach(stepIdentifier => {
+      self[stepIdentifier].forEach(label => {
         let status: string | null = mapLabelToFeature(stepIdentifier, label, EdgeDetail.status)
         if (status === null) { status=""}
         if (!["agg", "inTime", "not-InTime"].includes(status)) {

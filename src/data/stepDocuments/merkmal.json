@@ -33,7 +33,7 @@
             "description": null,
             "next_node": null
         },
-        "Geschlecht/Geschlechtsidentit": {
+        "Geschlecht/Geschlechtsidentität": {
             "status": "agg",
             "description": null,
             "next_node": "merkmal_gender_detail"

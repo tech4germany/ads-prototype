@@ -48,6 +48,11 @@ export type InventoryLayout = {
   }
 };
 
+export enum UpdateType {
+  add = "add",
+  remove = "remove"
+}
+
 export enum StepDetail {
   identifier = "identifier",
   type = "type",

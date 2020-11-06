@@ -101,8 +101,8 @@ export default function CustomizedStepper() {
   const classes = useStyles();
   let activeStep = ActiveStep.useContainer();
   let documentQueue = DocumentQueue.useContainer();
-  let steps = documentQueue.extractStepTitles()
-  let activeDefaultStep = documentQueue.activeDefaultStep(activeStep.self);
+  let steps = documentQueue.getStepTitles()
+  let activeDefaultStep = documentQueue.getActiveDefaultStep(activeStep.self);
 
   return (
       <Stepper alternativeLabel activeStep={activeDefaultStep} connector={<QontoConnector />} className={classes.root}>

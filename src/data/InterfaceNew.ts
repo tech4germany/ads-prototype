@@ -27,13 +27,12 @@ let allDocuments: DocumentQueueLayout = [
 
 // collect documents required for initial decision tree
 export function initialiseDocQueue(): DocumentQueueLayout {
-  allDocuments.map((element, index) => {
-    if (element.type == "default") {
+  allDocuments.forEach((element, index) => {
+    if (element.type === "default") {
       element.visible = true
     }
     element.index = index
   })
-  console.log("initial", allDocuments)
   return allDocuments
 }
 

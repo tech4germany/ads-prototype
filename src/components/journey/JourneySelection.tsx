@@ -1,11 +1,11 @@
-import React, { useEffect }from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
 import { colorMain, textSelectionMain, textSelectionExplanation } from "components/styleguide"
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
-import { EdgeDetail } from "data/customTypes"
+import { EdgeDetail, UpdateType } from "data/customTypes"
 
 const wrap = (s: string) => s.replace(
         /(?![^\n]{1,28}$)([^\n]{1,28})\//g, '$1\/\n'
@@ -91,25 +91,25 @@ export default function JourneySelection() {
   let answers = Answers.useContainer();
   let activeStep = ActiveStep.useContainer();
   let documentQueue = DocumentQueue.useContainer();
-  let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
+  let activeDocument = documentQueue.self[activeStep.self]
 
   return (
     <Grid container className={classes.root} >
-      {documentQueue.retrieveEdges(activeStep.self).map((label, index) => {
+      {documentQueue.getEdges(activeStep.self).map((label, index) => {
 
         return (
           <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
             <div className={classes.buttonCard}
               onClick={() => {
                 answers.add(activeDocument.identifier, label)
-                documentQueue.update(activeStep.self, label)
-                activeStep.increment(documentQueue.retrieveVisibilityQueue())
+                documentQueue.update(UpdateType.add, activeStep.self, label)
+                activeStep.increment(documentQueue.getVisibilityQueue())
               }}
             >
             <div className={classes.buttonTextBoxInactive}>
               {wrap(label)}
               <div className={classes.buttonTextExplanationInactive}>
-                {documentQueue.retrieveEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.description)}
+                {documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.description)}
               </div>
             </div>
            <div className={classes.buttonStripe}></div>
