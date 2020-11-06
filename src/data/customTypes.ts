@@ -29,6 +29,12 @@ export type ResultSpecsLayout = {
   "profile"?: SpecsLayout
 };
 
+export enum ResultFeatureType {
+  agg_text = "agg_text",
+  frist_text = "frist_text",
+  next_step = "next_step"
+}
+
 type DefaultList = Array<string>;
 type NonDefaultList = Array<string>;
 export type InventoryLayout = {

@@ -49,7 +49,7 @@ export default function Result() {
       <Grid container className={classes.resultSpace}>
 
         {
-          resultSpecs.isSet() ?
+          resultSpecs.self.profile ?
             <Grid item lg={9} md={10} sm={12} xs={12} className={classes.infoTemplateSpace}>
               <ResultsInfo />
               <ResultsTemplates />

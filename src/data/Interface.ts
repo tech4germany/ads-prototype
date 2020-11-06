@@ -10,7 +10,9 @@ import lebensbereich_bildung_detail from "data/stepDocuments/lebensbereich_bildu
 import lebensbereich_gesundheit_detail from "data/stepDocuments/lebensbereich_gesundheit_detail.json"
 import frist from "data/stepDocuments/frist.json"
 import result_placeholder from "data/stepDocuments/result_placeholder.json"
-import {StepDocumentLayout, EdgeDetail, DocumentQueueLayout} from "data/customTypes"
+import result_map from "data/resultDocuments/resultmap.json"
+import result_content from "data/resultDocuments/resultContent.json"
+import {StepDocumentLayout, EdgeDetail, DocumentQueueLayout, ResultSpecsLayout, SpecsLayout, ResultFeatureType } from "data/customTypes"
 
 // collect all documents
 let allDocuments: DocumentQueueLayout = [
@@ -50,4 +52,29 @@ export function mapLabelToFeature(stepIdentifier: string, label: string, feature
     return element.identifier === stepIdentifier
   })
   return _doc[0]["edges"][label][feature]
+}
+
+// retrieve count of result types
+export function getResultCount(): number {
+  return result_map.length
+}
+
+// retrieve result mapping by id
+export function getResultMap(id: number): ResultSpecsLayout {
+  return result_map[id]
+}
+
+export function getResultProfile(id: number): SpecsLayout {
+  let _profile = result_map.filter(function(element) {
+    return element.identifier === id
+  })[0]["profile"]
+  return _profile
+}
+
+// retrieve result content by id
+export function getResultFeature(id: number | undefined, feature: ResultFeatureType): string {
+  let _feature = result_content.filter(function(element) {
+    return element.identifier === id
+  })[0]["features"][feature]
+  return _feature
 }

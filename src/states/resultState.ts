@@ -1,13 +1,14 @@
 import { createContainer } from 'unstated-next'
 import { useState } from 'react'
 import { AnswerProfileLayout, AnswersLayout, SpecsLayout, ResultSpecsLayout, EdgeDetail } from "data/customTypes"
-import result_map from "data/resultmap.json"
-import { mapLabelToFeature } from "data/Interface"
+import result_map from "data/resultDocuments/resultmap.json"
+import { mapLabelToFeature, getResultMap, getResultCount, getResultProfile } from "data/Interface"
 
 export function useResultSpecs(initialState: ResultSpecsLayout = {}) {
   let [self, setResultSpecs] = useState(initialState)
 
   let _isEquivalent = (a: SpecsLayout, b: AnswerProfileLayout): boolean => {
+    console.log(a)
     if ((a.agg === b.agg) && (a.frist === b.frist)) {
       return true
     } else { return false}
@@ -27,28 +28,24 @@ export function useResultSpecs(initialState: ResultSpecsLayout = {}) {
         }
       }
     }
-    console.log(answerProfile)
     return answerProfile
   }
 
   let matchFeatureProfileToResult = (sparseAnswerProfile: AnswerProfileLayout): ResultSpecsLayout => {
     let res_match: ResultSpecsLayout={};
-    for (var i=0; i < result_map.length; i++) {
-      console.log("match", result_map[i]["profile"])
-      console.log("answerp", sparseAnswerProfile)
-      if (_isEquivalent(result_map[i]["profile"], sparseAnswerProfile)) {
-        console.log("we have a match")
-        res_match = result_map[i]
+    for (var i=0; i < getResultCount(); i++) {
+      if (_isEquivalent(getResultProfile(i), sparseAnswerProfile)) {
+        res_match = getResultMap(i)
         break
       }
     }
+    console.log("match", res_match)
     return res_match
   }
 
   let matchAnswersToResult = (answers: AnswersLayout): void => {
     let sparseAnswerProfile = _parseAnswerToProfile(answers)
     let result_match = matchFeatureProfileToResult(sparseAnswerProfile)
-    console.log(result_match)
     setResultSpecs(result_match)
   }
 
