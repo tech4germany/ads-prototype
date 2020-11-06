@@ -1,0 +1,32 @@
+{
+    "identifier":"lebensbereich_bildung_detail",
+    "type":"non-default",
+    "step_title":"Bildung",
+    "multiple_choice": false,
+    "visible": false,
+    "index": 0,
+    "question": "In welchem Zusammenhang fand die Diskriminierung genau statt?",
+    "explanation":"Sie haben den Lebensbereich Bildung ausgewählt",
+    "edges": {
+        "Kita": {
+            "status":"agg",
+            "description": null,
+            "next_node": null
+        },
+        "Privatschule/Privatunterricht": {
+            "status":"agg",
+            "description": null,
+            "next_node": null
+        },
+        "Öffentliche Schule": {
+            "status":"non-agg",
+            "description": "Grundschule oder weiterführende Schule",
+            "next_node": null
+        },
+        "Hochschule": {
+            "status":"non-agg",
+            "description": null,
+            "next_node": null
+        }
+    }
+}

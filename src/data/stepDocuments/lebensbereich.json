@@ -1,0 +1,62 @@
+{
+    "identifier":"lebensbereich",
+    "type":"default",
+    "step_title":"Lebensbereich",
+    "multiple_choice": false,
+    "visible": false,
+    "index": 0,
+    "question":"Bereich der Diskriminierung",
+    "explanation":"Außerdem ist es wichtig zu wissen, in welchem Zusammenhang Sie die Diskriminierung erlebt haben. In welchem Lebensbereich wurden Sie diskriminiert?",
+    "edges": {
+        "Arbeitsleben": {
+            "status":"agg",
+            "description": null,
+            "next_node": "lebensbereich_arbeit_detail"
+        },
+        "Geschäfte, Verträge und Dienstleistungen": {
+            "status":"agg",
+            "description": "z.B. Einkaufen, Club, Friseur",
+            "next_node": null
+        },
+        "Wohnungsmarkt": {
+            "status":"agg",
+            "description": "Wohnungsanzeige, Besichtigung, Mietverhältnis, Kündigung",
+            "next_node": null
+        },
+        "Ämter und Behörden": {
+            "status":"non-agg",
+            "description": null,
+            "next_node": null
+        },
+        "Justiz und Polizei": {
+            "status":"non-agg",
+            "description": null,
+            "next_node": null
+        },
+        "Bildungsbereich": {
+            "status":"agg",
+            "description": "Kita, Schule, Hochschule",
+            "next_node": "lebensbereich_bildung_detail"
+        },
+        "Gesundheit und Pflege": {
+            "status":"agg",
+            "description": "Arztbesuch, Krankenhaus, Pflegedienstleistung",
+            "next_node": "lebensbereich_gesundheit_detail"
+        },
+        "Öffentlichkeit und Freizeit": {
+            "status":"non-agg",
+            "description": "Nachbarschaft, auf der Straße, Vereine, Ehrenamt",
+            "next_node": null
+        },
+        "Internet, Medien und Werbung": {
+            "status":"non-agg",
+            "description": null,
+            "next_node": null
+        },
+        "Sonstiges": {
+            "status": "non-agg",
+            "description": "Ich bin mir nicht sicher",
+            "next_node": null
+        }
+    }
+}

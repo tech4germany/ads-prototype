@@ -1,0 +1,42 @@
+{
+    "identifier":"merkmal_gender_detail",
+    "type":"non-default",
+    "step_title":"Geschlecht",
+    "multiple_choice": false,
+    "visible": false,
+    "index": 0,
+    "question": "Worauf genau bezog sich die Diskriminierung?",
+    "explanation": "Sie haben das Merkmal Geschlecht/Geschlechtsidentität ausgewählt",
+    "edges": {
+        "Sexuelle Belästigung": {
+            "status":"agg",
+            "description": null,
+            "next_node": null
+        },
+        "Trans*": {
+            "status":"agg",
+            "description": null,
+            "next_node": null
+        },
+        "Inter*": {
+            "status":"agg",
+            "description": null,
+            "next_node": null
+        },
+        "Frau/Mann": {
+            "status":"agg",
+            "description": "z.B. Schwangerschaft, unterschiedliche Bezahlung",
+            "next_node": null
+        },
+        "queer": {
+            "status":"agg",
+            "description": null,
+            "next_node": null
+        },
+        "Sonstiges": {
+            "status":"agg",
+            "description": "Ich bin mir nicht sicher",
+            "next_node": null
+        }
+    }
+}

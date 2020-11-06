@@ -1,3 +1,7 @@
+/*
+This file handles all dealing with data from the webapp.
+ */
+
 import decision_tree from "data/decisiontree.json";
 import labeltoid from "data/labeltoid.json";
 import labeltoevent from "data/labeltoevent.json";

@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-
 import { BackButton } from "components/journey/JourneyButtons"
 import Stepper from "components/journey/JourneyStepper"
 

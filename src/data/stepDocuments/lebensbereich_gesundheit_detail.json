@@ -1,0 +1,22 @@
+{
+    "identifier":"lebensbereich_gesundheit_detail",
+    "type":"non-default",
+    "step_title":"Gesundheit",
+    "multiple_choice": false,
+    "visible": false,
+    "index": 0,
+    "question": "In welchem Zusammenhang fand die Diskriminierung genau statt?",
+    "explanation":"Sie haben den Lebensbereich Gesundheit ausgewählt",
+    "edges": {
+        "Krankenkasse": {
+            "status":"agg",
+            "description": null,
+            "next_node": null
+        },
+        "Arztbesuch": {
+            "status":"non-agg",
+            "description": null,
+            "next_node": null
+        }
+    }
+}

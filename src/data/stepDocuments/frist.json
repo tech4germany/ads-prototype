@@ -1,0 +1,32 @@
+{
+    "identifier":"frist",
+    "type":"default",
+    "step_title":"Frist",
+    "multiple_choice": false,
+    "visible": false,
+    "index": 0,
+    "question":"Zeitpunkt der Diskriminierung",
+    "explanation":"Schließlich kommt es auch darauf an, wann die Diskriminierung vorgefallen ist, ob Sie noch rechtliche Schritte ergreifen können. Wurden Sie innerhalb der letzten zwei Monate diskriminiert?",
+    "edges": {
+        "Ja": {
+            "status": "inTime",
+            "description": null,
+            "next_node": null
+        },
+        "Nein": {
+            "status":"not-inTime",
+            "description": null,
+            "next_node": null
+        },
+        "dauert noch an/passiert ständig": {
+            "status":"inTime",
+            "description": null,
+            "next_node": null
+        },
+        "Ich bin mir nicht sicher": {
+            "status":"not-inTime",
+            "description": null,
+            "next_node": null
+        }
+    }
+}

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-
 import JourneyNavigation from "components/journey/JourneyNavigation"
 import ResultsInfo from "components/results/ResultsInfo"
 import ResultsContact from "components/results/ResultsContact"
