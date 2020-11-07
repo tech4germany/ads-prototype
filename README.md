@@ -117,8 +117,7 @@ src
 ├── App.tsx  
 ├── index.css
 ├── index.html
-├── index.tsx
-└── README.md
+└── index.tsx
 ```
 
 The source directory contains a number of directories that deal with UI
