@@ -101,7 +101,7 @@ provides an easy to use, out of the box serverless hosting.
 
 Please find more information [here](https://aws.amazon.com/de/amplify/).
 
-#### Repository Structure
+### Repository Structure
 ______________________
 In the following we give a brief introduction into the repository going down
 from the source folder. Configurations for react, typescript and the parcel
