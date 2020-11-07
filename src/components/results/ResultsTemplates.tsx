@@ -25,16 +25,9 @@ export default function ResultTemplates() {
   const classes = useStyles();
   let resultSpecs = ResultSpecs.useContainer()
 
-  let showTemplate;
-  if ((resultSpecs.isAGG()) && (resultSpecs.isFrist())) {
-    showTemplate = true
-  } else {
-    showTemplate = false
-  }
-
   return (
     <div className={classes.templateSpace}>
-      { showTemplate ?
+      { (resultSpecs.isAGG()) && (resultSpecs.isFrist()) ?
           <a target="_blank" href="https://www.antidiskriminierungsstelle.de/DE/ThemenUndForschung/Recht_und_gesetz/Handbuch/Anhang/Musterschreiben/Musterschreiben_node.html" className={classes.formulierungsHeader} >
             Download Formulierungshilfen
           </a>

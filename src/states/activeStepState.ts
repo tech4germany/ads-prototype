@@ -1,24 +1,25 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
-import { ActiveStepLayout } from "customTypes"
+import { ActiveStepLayout } from "data/customTypes"
 
 export function useActiveStep(initialState: ActiveStepLayout = 0) {
   let [self, setActiveStep] = useState(initialState)
 
-  let _validateNonNegativeStep = () => {
-    if (self > 0) { return true }
-    else { return false }
-  }
-
-  let increment = (remainingSteps: number): void => {
-    if (remainingSteps > 0) {
-      setActiveStep(self + 1)
+  let increment = (visQueue: Array<boolean>) => {
+    for (var i = self+1; i < visQueue.length; i++) {
+      if (visQueue[i] === true) {
+        setActiveStep(i)
+        break
+      }
     }
   }
 
-  let decrement = () => {
-    if (_validateNonNegativeStep()) {
-      setActiveStep(self - 1)
+  let decrement = (visQueue: Array<boolean>): void => {
+    for (var i = 1; i <= self; i++) {
+      if (visQueue[self - i] === true) {
+        setActiveStep(self - i)
+        break
+      }
     }
   }
 
@@ -27,11 +28,6 @@ export function useActiveStep(initialState: ActiveStepLayout = 0) {
     else { return false }
   }
 
-  let isSecondLast = (documentQueueLength: number): boolean => {
-    if (self+2 === documentQueueLength) { return true}
-    else { return false }
-  }
-
-  return { self, increment, decrement, isLast, isSecondLast }
+  return { self, increment, decrement, isLast }
 }
 export const ActiveStep = createContainer(useActiveStep)

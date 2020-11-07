@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { questionHeader, questionExplanation } from "components/styleguide"
+import { StepDetail } from "data/customTypes"
 
 import { DocumentQueue } from "states/documentQueueState"
 import { ActiveStep } from "states/activeStepState"
@@ -34,18 +35,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function JourneyQuestion() {
   const classes = useStyles()
-  let documentQueue = DocumentQueue.useContainer();
-  let activeStep = ActiveStep.useContainer();
-  let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
+  let documentQueue = DocumentQueue.useContainer()
+  let activeStep = ActiveStep.useContainer()
 
   return (
     <div className={classes.questionBox}>
+
       <div className={classes.question}>
-        {activeDocument.question}
+        {documentQueue.getStepDetail(activeStep.self, StepDetail.question)}
       </div>
+
       <div className={classes.explanation}>
-        {activeDocument.explanation}
+        {documentQueue.getStepDetail(activeStep.self, StepDetail.explanation)}
       </div>
+
     </div>
 );
 }

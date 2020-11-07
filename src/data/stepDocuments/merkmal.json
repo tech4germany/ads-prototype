@@ -1,0 +1,52 @@
+{
+    "identifier":"merkmal",
+    "type":"default",
+    "step_title":"Merkmal",
+    "multiple_choice": false,
+    "visible": false,
+    "index": 0,
+    "question":"Grund der Diskriminierung",
+    "explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können. Welche Ursache vermuten Sie hinter der Diskriminierung. Also aus welchem Grund bzw. persönlichen Merkmal wurden Sie diskriminiert?",
+    "edges": {
+        "Ethnische Herkunft/Rassistische Diskriminierung": {
+            "status":"agg",
+            "description": null,
+            "next_node": "merkmal_ethnisch_detail"
+        },
+        "Religion/Weltanschauung": {
+            "status":"agg",
+            "description": null,
+            "next_node": null
+        },
+        "Behinderung/chronische Krankheiten": {
+            "status": "agg",
+            "description": null,
+            "next_node": null
+        },
+        "Alter": {
+            "status": "agg",
+            "description": null,
+            "next_node": null
+        },
+        "Sexuelle Identität": {
+            "status": "agg",
+            "description": null,
+            "next_node": null
+        },
+        "Geschlecht/Geschlechtsidentität": {
+            "status": "agg",
+            "description": null,
+            "next_node": "merkmal_gender_detail"
+        },
+        "Sozialer Status": {
+            "status": "non-agg",
+            "description": "z.B. Finanzen, Bildungsniveau, Sozialleistungen",
+            "next_node": null
+        },
+        "Sonstiges": {
+            "status": "non-agg",
+            "description": "Ich bin mir nicht sicher",
+            "next_node": null
+        }
+    }
+}

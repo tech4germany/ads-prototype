@@ -2,11 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
 import { colorMain, textSelectionMain, textSelectionExplanation } from "components/styleguide"
-import { mapLabelToDescription, mapLabelToEvent } from "data/Interface"
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
-import { ShowResult } from "states/showResultState"
+import { EdgeDetail, UpdateType } from "data/customTypes"
 
 const wrap = (s: string) => s.replace(
         /(?![^\n]{1,28}$)([^\n]{1,28})\//g, '$1\/\n'
@@ -92,75 +91,32 @@ export default function JourneySelection() {
   let answers = Answers.useContainer();
   let activeStep = ActiveStep.useContainer();
   let documentQueue = DocumentQueue.useContainer();
-  let showResult = ShowResult.useContainer();
-
-  let activeDocument = documentQueue.returnActiveDocument(activeStep.self)
-  answers.prune(activeDocument.identifier)
-  documentQueue.validateFristQuestion(answers.isAgg())
-
-  let CardWithPosition = (props: { component: JSX.Element }) => {
-    return(
-      <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
-        {props.component}
-      </Grid>
-    )
-  }
-
-  let nextAction = (arg: number): void => {
-    if (arg === 1) {
-      showResult.show()
-      activeStep.increment(arg)
-    } else if (arg === 0) {}
-    else {
-      activeStep.increment(arg)
-    }
-  }
+  let activeDocument = documentQueue.self[activeStep.self]
 
   return (
     <Grid container className={classes.root} >
-        {activeDocument["options"].map((label, index) => {
-          
-          let CardWithSelection: JSX.Element;
-          if (!answers.getAnswersById(activeDocument.identifier).includes(label)) {
-            CardWithSelection =
-              <div className={classes.buttonCard}
-                onClick={() => {
-                  answers.add(activeDocument.identifier, activeDocument.multiple_choice, label)
-                  let remainingSteps = documentQueue.add(activeStep.self, label, activeDocument.multiple_choice)
-                  nextAction(remainingSteps)
-                  plausible(mapLabelToEvent(activeDocument.identifier, label))
-                }}
-              >
-                <div className={classes.buttonTextBoxInactive}>
-                  {wrap(label)}
-                  <div className={classes.buttonTextExplanationInactive}>
-                    {mapLabelToDescription(activeDocument.identifier, label)}
-                  </div>
-                </div>
-               <div className={classes.buttonStripe}></div>
-              </div>
-          } else {
-            CardWithSelection =
-              <div className={classes.buttonCard}
-                onClick={() => {
-                  documentQueue.remove(activeStep.self, label)
-                  answers.remove(activeDocument.identifier, label)
-                }}
-              >
-                <div className={classes.buttonTextBoxActive}>
-                  {wrap(label)}
-                  <div className={classes.buttonTextExplanationActive}>
-                    {mapLabelToDescription(activeDocument.identifier, label)}
-                  </div>
-                </div>
-                <div className={classes.buttonStripe}></div>
-              </div>
-          }
+      {documentQueue.getEdges(activeStep.self).map((label, index) => {
 
-          return(
-            <CardWithPosition component={CardWithSelection}/>
-          )
-        })}
-    </Grid>
+        return (
+          <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
+            <div className={classes.buttonCard}
+              onClick={() => {
+                answers.add(activeDocument.identifier, label)
+                documentQueue.update(UpdateType.add, activeStep.self, label)
+                activeStep.increment(documentQueue.getVisibilityQueue())
+              }}
+            >
+            <div className={classes.buttonTextBoxInactive}>
+              {wrap(label)}
+              <div className={classes.buttonTextExplanationInactive}>
+                {documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.description)}
+              </div>
+            </div>
+           <div className={classes.buttonStripe}></div>
+          </div>
+        </Grid>
+      );
+    })}
+  </Grid>
   )
 }

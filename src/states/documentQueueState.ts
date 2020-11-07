@@ -1,118 +1,107 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
-import { OrUndefined, StepDocumentLayout, DocumentQueueLayout, FeatureMapLayout } from "customTypes"
-import { initialiseDocQueue, retrieveNonDefaultDoc, mapLabelToId } from "data/Interface"
-import feature_map from "data/featuremap.json"
-let featureMap: FeatureMapLayout = feature_map;
+import { DocumentQueueLayout, StepDocumentLayout, EdgeDetail, StepDetail, UpdateType } from "data/customTypes"
+import { initialiseDocQueue, mapLabelToFeature } from "data/Interface"
 
 let initialQueue: DocumentQueueLayout = initialiseDocQueue()
-let fristDoc: StepDocumentLayout  = initialQueue.filter(function (el) {return el.identifier === "frist"})[0]
-
 export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueue) {
   let [self, setDocumentQueue] = useState(initialState);
 
-  let _setMChoicePurger = (activeStep: number, mchoice: boolean): number => {
-    if ((!mchoice) && (self[activeStep+1]["type"] !== "default")) {return 1}
-    else { return 0 }
-  }
-
-  let _insertNewDoc = (docQueue: DocumentQueueLayout, newDocumentIdentifier: string, activeStep: number, mchoice: boolean): DocumentQueueLayout => {
-    let existingIdentifiers = self.map(obj => obj.identifier);
-    if (!(existingIdentifiers.includes(newDocumentIdentifier))) {
-      let newDocument = retrieveNonDefaultDoc(newDocumentIdentifier)
-      docQueue.splice(activeStep+1, _setMChoicePurger(activeStep, mchoice), newDocument)
-    }
-    return docQueue
-  }
-
-  let _removeNewDoc = (newDocumentIdentifier: string): void => {
-    let  _docQueue = [...self]
-    let updatedDocQueue = _docQueue.filter(function (el) {
-      return el.identifier !== newDocumentIdentifier
-    })
-    setDocumentQueue(updatedDocQueue)
-  }
-
-  let _removeOldDoc = (docQueue: DocumentQueueLayout, activeStep: number, mchoice: boolean): DocumentQueueLayout => {
-    if ((!mchoice) && (self[activeStep+1]["type"] !== "default")) {
-      docQueue.splice(activeStep+1, 1)
-    }
+  // auxilliary functions
+  let _updateVisibility = (docQueue: DocumentQueueLayout, newDocumentIdentifier: string, newVisibility: boolean): DocumentQueueLayout => {
+    let updateDoc = docQueue.filter(function(element) {
+      return element.identifier === newDocumentIdentifier
+    })[0]
+    updateDoc[StepDetail.visible] = newVisibility
+    docQueue.splice(updateDoc[StepDetail.index], 1, updateDoc)
     return docQueue
   }
 
   let _removeFristQuestion = (docQueue: DocumentQueueLayout, identifier: string, label: string): DocumentQueueLayout => {
-    if (!["agg", "inTime", "notInTime"].includes(featureMap[identifier][label])) {
-      if (self.map(obj => obj.identifier).includes("frist")) {
-        docQueue = docQueue.filter(function (el) {
-          return el.identifier !== "frist"
-        })
-      }
+    let status: string | null = mapLabelToFeature(identifier, label, EdgeDetail.status)
+    if (status === "non-agg") {
+      docQueue = _updateVisibility(docQueue, "frist", false)
     }
     return docQueue
   }
 
+  // setter functions
   let validateFristQuestion = (isAgg: boolean) => {
     if (isAgg) {
-      if (!(self.map(obj => obj.identifier).includes("frist"))) {
-        let docQueue = [...self]
-        docQueue.splice(docQueue.length-1, 0, fristDoc)
-        setDocumentQueue(docQueue)
-      }
+      let docQueue = [...self]
+      docQueue = _updateVisibility(docQueue, "frist", true)
+      setDocumentQueue(docQueue)
     }
   }
 
-  let add = (activeStep: number, label: string, mchoice: boolean): number => {
-    let activeDocument = returnActiveDocument(activeStep)
-    let newDocumentIdentifier = mapLabelToId(activeDocument.identifier, label)
+  let update = (type: UpdateType, activeStep: number, label: string = ""): void => {
+    let activeDocument = self[activeStep]
     let _docQueue = [...self]
 
-    // check if answer requires detail question
-    if (!(newDocumentIdentifier === null)) {
-      _docQueue = _insertNewDoc(_docQueue, newDocumentIdentifier, activeStep, mchoice);
-    } else { _docQueue = _removeOldDoc(_docQueue, activeStep, mchoice) }
+    if (type === UpdateType.add) {
+      let newDocumentIdentifier = mapLabelToFeature(activeDocument.identifier, label, EdgeDetail.next_node)
 
-    // check if we need to remove date question
-    _docQueue = _removeFristQuestion(_docQueue, activeDocument.identifier, label)
+      // check if answer requires detail question
+      if (!(newDocumentIdentifier === null)) {
+        _docQueue = _updateVisibility(_docQueue, newDocumentIdentifier, true);
+      }
+
+      // check if we need to remove date question
+      _docQueue = _removeFristQuestion(_docQueue, activeDocument.identifier, label)
+
+    } else {
+      // if document is no default document we reset its status back to invisible
+      if (activeDocument.type !== "default") {
+        _updateVisibility(_docQueue, activeDocument.identifier, false)
+      }
+    }
     setDocumentQueue(_docQueue)
-
-    let remainingSteps = _docQueue.length - (activeStep + 1)
-    return remainingSteps
   }
 
-  let prune = (activeDoc: StepDocumentLayout): void => {
-    if (activeDoc.type !== "default") {
-      _removeNewDoc(activeDoc.identifier)
-    }
+  // getter functions
+  let getEdges = (activeStep: number): Array<string> => {
+    let activeDocument: StepDocumentLayout = self[activeStep]
+    return Object.keys(activeDocument["edges"])
   }
 
-  let remove = (activeStep: number, label: string): void => {
-    let activeDocument = returnActiveDocument(activeStep);
-    let newDocumentIdentifier = mapLabelToId(activeDocument.identifier, label)
-    if (!(newDocumentIdentifier === null)) {
-      _removeNewDoc(newDocumentIdentifier);
-    }
+  let getEdgeFeatureByLabel = (activeStep: number, label: string, feature: EdgeDetail): string | null => {
+    let activeDocument: StepDocumentLayout = self[activeStep]
+    return activeDocument["edges"][label][feature]
   }
 
-  let returnActiveDocument = (activeStep: number): StepDocumentLayout => {
-    return self[activeStep]
+  let getStepDetail = (activeStep: number, detail: StepDetail): string | number | boolean => {
+    let activeDocument: StepDocumentLayout = self[activeStep]
+    return activeDocument[detail]
   }
 
-  let activeDefaultStep = (activeStep: number): number => {
-    let slicedDocQueue = self.slice(0, activeStep+1);
-    let remainingDefaultDoc = slicedDocQueue.filter(function(el) {
-      return el.type ==="default"
-    })
-    return remainingDefaultDoc.length-1
+  let getVisibilityQueue = (): Array<boolean> => {
+    return self.map( obj => obj.visible )
   }
 
-  let extractStepTitles = () => {
+  let getStepTitles = () => {
     let defaultSteps = self.filter(function(el) {
-      return el.type ==="default"
+      return (el.type ==="default" && el.visible === true)
     });
     return defaultSteps.map(obj => obj.step_title )
   }
 
-  return { self, returnActiveDocument, extractStepTitles, add, remove, activeDefaultStep, prune, validateFristQuestion }
+  let getActiveDefaultStep = (activeStep: number) => {
+    let slicedQueue = self.filter(function(el) {
+      return el.index <= activeStep && el.type === "default"
+    });
+    return slicedQueue.length - 1
+  }
+
+  return { self,
+    update,
+    validateFristQuestion,
+    getVisibilityQueue,
+    getEdges,
+    getEdgeFeatureByLabel,
+    getStepDetail,
+    getStepTitles,
+    getActiveDefaultStep
+  }
 }
 
 export const DocumentQueue = createContainer(useDocumentQueue)

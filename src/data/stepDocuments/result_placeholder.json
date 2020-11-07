@@ -1,0 +1,11 @@
+{
+    "identifier":"result",
+    "type":"default",
+    "step_title":"",
+    "multiple_choice": false,
+    "visible": false,
+    "index": 0,
+    "question": "",
+    "explanation": "",
+    "edges": {}
+}

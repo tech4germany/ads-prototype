@@ -1,3 +1,8 @@
+/*
+This file contains style elements that are shared across the app. This includes
+e.g. color codes and font size and types.
+ */
+
 export const colorMain = {
   "115":"#63b1c9",
   "100":"#63b1c9",

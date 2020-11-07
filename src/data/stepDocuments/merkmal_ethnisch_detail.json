@@ -1,0 +1,27 @@
+{
+    "identifier":"merkmal_ethnisch_detail",
+    "type":"non-default",
+    "step_title":"Ethnische Herkunft",
+    "multiple_choice": false,
+    "visible": false,
+    "index": 0,
+    "question": "Worauf genau bezog sich die Diskriminierung?",
+    "explanation": "Sie haben das Merkmal Ethnische Herkunft/Rassistische Diskriminierung ausgewählt",
+    "edges": {
+        "Äußere Merkmale": {
+            "status":"agg",
+            "description": "Hautfarbe, Sprache, Name",
+            "next_node": null
+        },
+        "Staatsangehörigkeit/Aufenthaltsstatus": {
+            "status":"agg",
+            "description": null,
+            "next_node": null
+        },
+        "Sonstiges": {
+            "status":"agg",
+            "description": "Ich bin mir nicht sicher",
+            "next_node": null
+        }
+    }
+}

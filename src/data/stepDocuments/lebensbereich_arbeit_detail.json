@@ -1,0 +1,27 @@
+{
+    "identifier":"lebensbereich_arbeit_detail",
+    "type":"non-default",
+    "step_title":"Arbeit",
+    "multiple_choice": false,
+    "visible": false,
+    "index": 0,
+    "question": "In welchem Zusammenhang fand die Diskriminierung genau statt?",
+    "explanation":"Sie haben den Bereich Arbeitsleben ausgewählt",
+    "edges": {
+        "Zugang": {
+            "status":"agg",
+            "description": "z.B. Stellenausschreibung, Bewerbungsverfahren",
+            "next_node": null
+        },
+        "Im Beschäftigungsverhältnis": {
+            "status":"agg",
+            "description": "Mobbing / Bossing oder bei der Bezahlung",
+            "next_node": null
+        },
+        "Kündigung/Beendigung": {
+            "status":"agg",
+            "description": null,
+            "next_node": null
+        }
+    }
+}
