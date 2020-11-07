@@ -28,8 +28,7 @@ Currently, the project is hosted with AWS Amplify and can be accessed [here](htt
 ## Technical Setup
 ______________________
 
-#### Tech Stack
-______________________
+### Tech Stack
 
 ##### React Framework
 
@@ -105,18 +104,132 @@ Please find more information [here](https://aws.amazon.com/de/amplify/).
 
 #### Repository Structure
 ______________________
+In the following we give a brief introduction into the repository going down
+from the source folder. Configurations for react, typescript and the parcel
+bundler in the root directory are standard and can be inspected individually.
 
-src
-├── build                   
-├── docs                    
-├── src                     
-├── test                    
-├── tools                   
-├── LICENSE
+```
+src                
+├── components   
+├── data                    
+├── fonts                    
+├── images                   
+├── states
+├── App.tsx  
+├── index.css
+├── index.html
+├── index.tsx
 └── README.md
+```
+
+The source directory contains a number of directories that deal with UI
+components, assets like fonts and images as well as our state handling. In
+addition we have a number of standard index files that are required for our production build. Finally, `App.tsx` represents the react entry point into our
+application.
+
+Please note that production compilations are stored in a /build folder that is
+located in the root directory.
 
 
+##### Components
 
+```
+components                
+├── Main.tsx
+├── StateInit.tsx
+├── styleguide.ts
+├── journey   
+├── results         
+└── shared
+```
+
+The first file here is `StateInit.tsx`. It injects our set of global states into
+the application, which allows us to manipulate and retrieve state values
+throughout the user flow. One layer further down, `Main.tsx` allows the
+application to switch been the flow of questions, which we call journey, and the display of a result page. The file `styleguide.ts` contains a number style
+variables that need to be consistent throughout the application. This includes
+font styles and color codes.
+
+The directory `journey` contains all components to guide a user through the
+flow of the questions. These include components for questions headers, brief
+explanations and cards for selecting answer options.
+
+The directory `results` on the other hand deals with components necessary to
+display individualised result pages. This includes components for a brief info
+text outlining the current case and options going forward.
+
+The directory `shared` contains components that are shared between all UI
+components. Currently there is only the NavBar in the directory, which is only a
+mockup for our development setup.
+
+##### Data
+
+```
+components                
+├── Interface.ts
+├── customTypes.ts
+├── resultDocuments
+└── stepDocuments   
+```
+
+The data directory deals with our static data files that are required to fill
+the app flow with relevant information, including the decision tree linking
+answers to follow up questions.
+
+The file `Interface.ts` acts as a gateway to the raw datafiles. E.g. it collects
+the documents defining a single question step and builds the decision tree out
+of it. Additionally it links answer profiles to text elements that are displayed
+depending on the answers a user gave along the wegweiser.
+
+The file `customTypes.ts` contains the set of data types that we use at one
+point or another throughout the application. This includes the static input
+files as well as certain state types
+
+The directory `resultDocuments` contains json files that map given answers to a
+number of different result types as well as a file that links an answer type to
+text elements.
+
+The directory `stepDocuments` contains the files defining each node in the
+decisiontree. Each Node contains the same set of data points including question
+headers, explanations or the set up possible follow up questions. Please note that the initial sequence of questions needs to be defined in the `Interface.ts` file.
+
+##### States
+
+```
+states                
+├── activeStepState.ts
+├── answerState.ts
+├── documentQueue.ts
+├── resultState.ts
+├── showResultstate.ts
+└── tests   
+```
+
+The states directory contains a set of files that describe our different state
+variables and how they can be manipulate and viewed throughout the application.
+
+The file `activeStepState.ts` contains the step variable that keeps track of the
+position of a user within the decision tree.
+
+The file `answerState.ts` tracks the answers a user has provided throughout the
+decision tree.
+
+The file `documentQueue.ts` is probably the central state variable as it tracks
+and updates the decision tree relevant to a specific user depending on the
+answers given along the way.
+
+The file `resultState.ts` allows the application to link a set of given answers
+to a result type which then in turn links to text content displayed in the
+result page. Handling this through a state variable is not strictly necessary
+and might be adjusted in the future.
+
+The file `showResultstate.ts` is binary and allows the application to switch
+between the questions nodes and the result page. It updated when the end of the
+question flow has been reached.
+
+There is also a `tests` directory. Please note the these tests were written
+at an earlier stage in the development process and do not apply to the current
+form of our state modules.
 
 ## Background
 ______________________
