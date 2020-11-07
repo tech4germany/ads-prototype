@@ -1,18 +1,7 @@
-export type OrNull<T> = T | null;
-export type OrUndefined<T> = T | undefined;
-
 export type ActiveStepLayout = number;
 
 export type AnswersLayout = {
   [key: string]: Array<string>;
-};
-
-export type FeatureNode = {
-  [key: string]: string;
-};
-
-export type FeatureMapLayout = {
-  [key: string]: FeatureNode
 };
 
 export type AnswerProfileLayout = {
@@ -34,15 +23,6 @@ export enum ResultFeatureType {
   frist_text = "frist_text",
   next_step = "next_step"
 }
-
-type DefaultList = Array<string>;
-type NonDefaultList = Array<string>;
-export type InventoryLayout = {
-  "decisiontree": {
-    "default": DefaultList,
-    "NonDefaultListdefault": NonDefaultList
-  }
-};
 
 export enum UpdateType {
   add = "add",
