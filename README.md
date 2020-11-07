@@ -33,7 +33,7 @@ ______________________
 ##### React Framework
 
 We have used React to supply us with the necessary tools to build an interactive
-user interface. The reasons are simple. React is technologically mature and widely used, ensuring excellent community support, and integrates nicely with a range of additional
+user interface. The reasons are simple. React is technologically mature and widely used, ensuring excellent community support, integrates nicely with a range of additional
 tools like design frameworks or state handling.
 
 For setting up the basic development infrastructure we have used the create-react-app cli
@@ -51,7 +51,7 @@ Please find more information [here](https://reactjs.org/).
 
 ##### Parcel Bundler
 For the production setup we use Parcel as our bundling tool to transpile and minify our
-application. We chose Parcel because it is easy to handle, it features great community support comes very light-weight out of the box.
+application. We chose Parcel because it is easy to handle, it features great community support and comes very light-weight out of the box.
 
 Please find more information [here](https://parceljs.org/).
 
@@ -63,14 +63,13 @@ guide the flow of the application.
 Please find more information [here](https://www.typescriptlang.org/).
 
 ##### Material UI Design Framework
-For building our UI components we used Material UI. There were a few, straight-
-forward reasons for our choice. Material UI provides a mature framework with
+For building our UI components we used Material UI. There were a few, straight-forward reasons for our choice. Material UI provides a mature framework with
 decent api documentation, it integrates smoothly with react and finally it has
 great community support.
 
 We ended up using very few actual design components straight from Material UI.
-We did however heavily apply the styling solution *makeStyles* to adapt styles
-our custom components. The setup is intuitive and quick to use, which was great
+We did however heavily apply the styling solution *makeStyles* to adapt the styles
+of our custom components. The setup is intuitive and quick to use, which was great
 for our short timeframe. For future development stages of the application this
 decision might be reversed if deemed necessary.
 
@@ -124,7 +123,7 @@ src
 
 The source directory contains a number of directories that deal with UI
 components, assets like fonts and images as well as our state handling. In
-addition we have a number of standard index files that are required for our production build. Finally, `App.tsx` represents the react entry point into our
+addition we have a number of standard `index.*` files that are required for our production build. Finally, `App.tsx` represents the react entry point into our
 application.
 
 Please note that production compilations are stored in a /build folder that is
@@ -146,7 +145,7 @@ components
 The first file here is `StateInit.tsx`. It injects our set of global states into
 the application, which allows us to manipulate and retrieve state values
 throughout the user flow. One layer further down, `Main.tsx` allows the
-application to switch been the flow of questions, which we call journey, and the display of a result page. The file `styleguide.ts` contains a number style
+application to switch between the flow of questions, which we call journey, and the display of a result page. The file `styleguide.ts` contains a number style
 variables that need to be consistent throughout the application. This includes
 font styles and color codes.
 
@@ -165,7 +164,7 @@ mockup for our development setup.
 ##### Data
 
 ```
-components                
+data                
 ├── Interface.ts
 ├── customTypes.ts
 ├── resultDocuments
@@ -177,7 +176,7 @@ the app flow with relevant information, including the decision tree linking
 answers to follow up questions.
 
 The file `Interface.ts` acts as a gateway to the raw datafiles. E.g. it collects
-the documents defining a single question step and builds the decision tree out
+the documents defining the question flow and builds the decision tree out
 of it. Additionally it links answer profiles to text elements that are displayed
 depending on the answers a user gave along the wegweiser.
 
