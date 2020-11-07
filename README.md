@@ -26,9 +26,101 @@ ______________________
     `npm run build:alternative`
 
 
-### Background
+### Technical Setup
 ______________________
 
+#### Tech Stack
+______________________
+
+##### React Framework
+
+We have used React to supply us with the necessary tools to build an interactive
+user interface. The reasons are simple. React is technologically mature and widely used, ensuring excellent community support, and integrates nicely with a range of additional
+tools like design frameworks or state handling.
+
+For setting up the basic development infrastructure we have used the create-react-app cli
+command. Ideally we would liked to set up necessary infrastructure with a custom
+setup for e.g. babbel and wepback to avoid packages that are not necessary and lead to
+substantial overhead. However due to time constraints we have resorted to this
+solution.
+
+We decided against using a more elaborate react-dom system for routing through the different stages of the application. The application has really only two types of
+pages that are able to load content dynamically from a number static files. We
+therefor decided to implement a system of state-dependent renderings with less
+overhead.
+
+Please find more information [here](https://reactjs.org/).
+
+##### Parcel Bundler
+For the production setup we use Parcel as our bundling tool to transpile and minify our
+application. We chose Parcel because it is easy to handle, it features great community support comes very light-weight out of the box.
+
+Please find more information [here](https://parceljs.org/).
+
+##### TypeScript as implementation language
+Initially the app was built using Javascript but we switched to TypeScript to
+ensure greater type security when handling the different kinds of input data that
+guide the flow of the application.
+
+Please find more information [here](https://www.typescriptlang.org/).
+
+##### Material UI Design Framework
+For building our UI components we used Material UI. There were a few, straight-
+forward reasons for our choice. Material UI provides a mature framework with
+decent api documentation, it integrates smoothly with react and finally it has
+great community support.
+
+We ended up using very few actual design components straight from Material UI.
+We did however heavily apply the styling solution *makeStyles* to adapt styles
+our custom components. The setup is intuitive and quick to use, which was great
+for our short timeframe. For future development stages of the application this
+decision might be reversed if deemed necessary.
+
+Please find more information [here](https://material-ui.com/).
+
+##### Unstated-Next State Management
+Initially we used a more traditional state handling passing hooks back and forth
+through the application. Although this worked fine it was easy to loose the
+overview at times and became a little tedious. We therefor decided to implement
+a more comprehensive state management system. This is usually done using redux,
+which proved a little to much of an overhead for our small application. Instead
+we went for unstated-next. This is a little less mature but much smaller
+framework that allows us to better separate global state-management from our
+UI components.
+
+Please find more information [here](https://github.com/jamiebuilds/unstated-next).
+
+##### Data
+The logic determining the flow of the application is set through our state-management
+and UI components. The content for individual renderings however is retrieved
+from a set of static json files that are stored within the src folder. This allows
+us to avoid a more elaborate backend setup with database connections. We have
+composed a interface module that handles all interactions with the raw input data.
+
+##### Serverless Hosting with AWS Amplify
+Seeing that we do not require an interactive backend and the application can be
+served statically. For our prototype we have decided to use AWS Amplify which
+provides an easy to use, out of the box serverless hosting.
+
+Please find more information [here](https://aws.amazon.com/de/amplify/).
+
+#### Repository Structure
+______________________
+
+src
+├── build                   
+├── docs                    
+├── src                     
+├── test                    
+├── tools                   
+├── LICENSE
+└── README.md
+
+
+
+
+### Background
+______________________
 
 The Federal Anti-discrimination agency in Germany has a range of responsibilities. It runs programs to increase awareness against discrimination, it funds and directs a number of studies designed to better understand the state of discrimination in Germany and relevant trends and finally, it offers legal advise to people affected by discrimination.
 
@@ -68,10 +160,6 @@ The **Wegweiser** is not a complicated tool but allows users through a very redu
 
 ![Frist](docs/user_flow/ergebnisseite.png)
 
-### Technical Architecture
-______________________
-
-The technical setup is simple and follows modern industry standard. The product is developed as a responsive webapp using [React](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/). Design-elements are largely based on [Material UI](https://material-ui.com/). Internal state management is done through [unstated-next](https://github.com/jamiebuilds/unstated-next). For hosting we currently use [AWS Amplify](https://aws.amazon.com/de/amplify/). A rudimentary tracking setup is implemented using [Plausible](https://plausible.io/).
 
 ### Team
 ______________________
