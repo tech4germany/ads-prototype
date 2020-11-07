@@ -38,14 +38,6 @@ export function initialiseDocQueue(): DocumentQueueLayout {
   return allDocuments
 }
 
-// retrieve additional documents for insertion into decision tree
-export function retrieveNonDefaultDoc(identifier: string): StepDocumentLayout {
-  let _newDoc = allDocuments.filter(function (element) {
-    return element.identifier === identifier
-  })
-  return _newDoc[0]
-}
-
 // retrieve edge node for a given document/label pair
 export function mapLabelToFeature(stepIdentifier: string, label: string, feature: EdgeDetail ): string | null {
   let _doc = allDocuments.filter(function(element) {

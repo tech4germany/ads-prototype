@@ -1,7 +1,7 @@
 /*
 This file initialises states that need to be accessible throughout the app. This
 could of course also be done through passing state hooks back and forth within
-individual components. This is however much more tedious to stay onto of, which is
+individual components. This is however much more tedious to stay on top of, which is
 why I resort to using unstated-next.
  */
 

@@ -51,9 +51,7 @@ export default function App() {
       <CssBaseline />
         <div className={classes.root}>
 
-          {/* Navbar */}
           <NavBar />
-          {/* End Navbar */}
 
           <div className={classes.placeholder}></div>
 
