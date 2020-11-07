@@ -50,16 +50,6 @@ export function useAnswers(initialState: AnswersLayout = {}) {
     setAnswers(_ans)
   }
 
-  let remove = (id: string, label: string): void => {
-    let _ans: AnswersLayout = {...self}
-    _ans = _deleteLabelFromStepAnswer(_ans, id, label)
-    let delId = mapLabelToFeature(id, label, EdgeDetail.next_node)
-    if (delId !== null) {
-      delete _ans[delId]
-    }
-    setAnswers(_ans)
-  }
-
   let prune = (id: string): void => {
     if (Object.keys(self).includes(id)) {
       let _ans: AnswersLayout = {...self}
@@ -94,6 +84,6 @@ export function useAnswers(initialState: AnswersLayout = {}) {
     } else { return "Identifier not existent"}
   }
 
-  return { self, add, remove, getAnswersById, getAnswerByKey, prune, isAgg }
+  return { self, add, getAnswersById, getAnswerByKey, prune, isAgg }
 }
 export const Answers = createContainer(useAnswers)
