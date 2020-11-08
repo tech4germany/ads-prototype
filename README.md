@@ -271,6 +271,11 @@ The **Wegweiser** is not a complicated tool but allows users through a very redu
 ![Frist](docs/user_flow/ergebnisseite.png)
 
 
+## Todo
+- [ ] Adjust Selection Fields for touch environment  
+- [ ] Ensure adequate Keyboard navigation
+- [ ] Make stepbar consistent with current step
+
 ## Team
 ______________________
 
