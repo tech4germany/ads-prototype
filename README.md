@@ -33,18 +33,18 @@ ______________________
 ##### React Framework
 
 We have used React to supply us with the necessary tools to build an interactive
-user interface. The reasons are simple. React is technologically mature and widely used, ensuring excellent community support, integrates nicely with a range of additional
+user interface. The reasons are simple. React is technologically mature and widely used, ensuring excellent community support, and integrates nicely with a range of additional
 tools like design frameworks or state handling.
 
 For setting up the basic development infrastructure we have used the create-react-app cli
-command. Ideally we would liked to set up necessary infrastructure with a custom
-setup for e.g. babbel and wepback to avoid packages that are not necessary and lead to
+command. Ideally we would have liked to set up necessary infrastructure with custom
+setups to avoid packages that are not necessary and lead to
 substantial overhead. However due to time constraints we have resorted to this
 solution.
 
 We decided against using a more elaborate react-dom system for routing through the different stages of the application. The application has really only two types of
 pages that are able to load content dynamically from a number static files. We
-therefor decided to implement a system of state-dependent renderings with less
+therefore decided to implement a system of state-dependent renderings with less
 overhead.
 
 Please find more information [here](https://reactjs.org/).
@@ -67,7 +67,7 @@ For building our UI components we used Material UI. There were a few, straight-f
 decent api documentation, it integrates smoothly with react and finally it has
 great community support.
 
-We ended up using very few actual design components straight from Material UI.
+We ended up using very few actual design components from Material UI.
 We did however heavily apply the styling solution *makeStyles* to adapt the styles
 of our custom components. The setup is intuitive and quick to use, which was great
 for our short timeframe. For future development stages of the application this
@@ -78,7 +78,7 @@ Please find more information [here](https://material-ui.com/).
 ##### Unstated-Next State Management
 Initially we used a more traditional state handling passing hooks back and forth
 through the application. Although this worked fine it was easy to loose the
-overview at times and became a little tedious. We therefor decided to implement
+overview at times and became a little tedious. We therefore decided to implement
 a more comprehensive state management system. This is usually done using redux,
 which proved a little to much of an overhead for our small application. Instead
 we went for unstated-next. This is a little less mature but much smaller
@@ -92,11 +92,11 @@ The logic determining the flow of the application is set through our state-manag
 and UI components. The content for individual renderings however is retrieved
 from a set of static json files that are stored within the src folder. This allows
 us to avoid a more elaborate backend setup with database connections. We have
-composed a interface module that handles all interactions with the raw input data.
+composed an interface module that handles all interactions with the raw input data.
 
 ##### Serverless Hosting with AWS Amplify
 Seeing that we do not require an interactive backend and the application can be
-served statically. For our prototype we have decided to use AWS Amplify which
+served statically we have decided to use AWS Amplify which
 provides an easy to use, out of the box serverless hosting.
 
 Please find more information [here](https://aws.amazon.com/de/amplify/).
