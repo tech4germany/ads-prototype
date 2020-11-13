@@ -43,12 +43,14 @@ export enum StepDetail {
 export enum EdgeDetail {
   status="status",
   description="description",
-  next_node="next_node"
+  next_node="next_node",
+  icon="icon"
 }
 export type EdgeDetailsLayout = {
     "status": string,
     "description": string | null,
-    "next_node": string | null
+    "next_node": string | null,
+    "icon": string | null
 }
 
 export interface StepDocumentLayout {
