@@ -6,23 +6,11 @@ import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { EdgeDetail, UpdateType } from "data/customTypes"
+import map from 'assets/images/map_icon.png';
 
 const wrap = (s: string) => s.replace(
         /(?![^\n]{1,28}$)([^\n]{1,28})\//g, '$1\/\n'
     )
-
-const buttonTextBox = {
-    "fontFamily": textSelectionMain["fontFamily"],
-    "fontSize": textSelectionMain["fontSize"],
-    "lineHeight": 1.15,
-    "height": "100%",
-    "width": "98%",
-    "overflow": "hidden",
-    "paddingLeft": "1vw",
-    "paddingRight": "1vw",
-    'paddingTop': "0.6vw",
-    "paddingBottom": "0.6vw",
-}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,60 +18,68 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     alignContent: "flex-start",
     alignItems: "flex-start",
+    flexWrap: "wrap",
     '& > *': {
       margin: theme.spacing(1),
     },
     minHeight: "42vh"
   },
   buttonContainer: {
-    margin: "0px"
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    marginBottom: "15px",
+    marginTop: "0px",
+    marginLeft: "0px",
+    marginRight: "0px"
   },
   buttonCard: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "left",
     alignItems: "flex-start",
-    width: "100%",
+    width: "260px",
     cursor: "pointer",
-    height: "11vh",
-    borderRadius: "0px",
-    whiteSpace: "pre-wrap"
-  },
-  buttonTextBoxActive: {
-    backgroundColor: colorMain["115"],
-    color: textSelectionMain["color"]["active"],
-    ...buttonTextBox,
-  },
-  buttonTextBoxInactive: {
+    height: "200px",
     backgroundColor: "white",
-    color: textSelectionMain["color"]["inactive"],
-    ...buttonTextBox,
     "&:hover": {
       backgroundColor: colorMain["115"],
       color: textSelectionMain["color"]["active"],
     }
   },
-  buttonTextExplanationInactive: {
-    ...textSelectionExplanation
+  buttonContent: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    width: "254px",
+    height: "100%"
   },
-  buttonTextExplanationActive: {
-    ...textSelectionExplanation,
-    color: "white"
+  iconContainer: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+  icon: {
+    width: "83px",
+    height: "74px",
+    marginTop: "28px"
+  },
+  buttonText: {
+    whiteSpace: "pre-wrap",
+    color: textSelectionMain["color"]["inactive"],
+    fontFamily: textSelectionMain["fontFamily"],
+    fontSize: textSelectionMain["fontSize"],
+    paddingLeft: "22px",
+    paddingBottom: "21px"
+  },
+  buttonTextExplanation: {
+    ...textSelectionExplanation
   },
   buttonStripe: {
     display: "flex",
     backgroundColor: colorMain["115"],
     height: "100%",
-    width: "2%"
-  },
-  buttonTextContainer: {
-    paddingLeft: "0.8vw",
-    paddingRight: "0.8vw",
-    marginBottom: "3vh",
-    marginTop: "0px",
-    marginLeft: "0px",
-    marginRight: "0px"
-  },
+    width: "6px"
+  }
 }));
 
 export default function JourneySelection() {
@@ -98,7 +94,8 @@ export default function JourneySelection() {
       {documentQueue.getEdges(activeStep.self).map((label, index) => {
 
         return (
-          <Grid item md={3} sm={6} xs={12} className={classes.buttonTextContainer}>
+          <div className={classes.buttonContainer}>
+
             <div className={classes.buttonCard}
               onClick={() => {
                 answers.add(activeDocument.identifier, label)
@@ -106,15 +103,25 @@ export default function JourneySelection() {
                 activeStep.increment(documentQueue.getVisibilityQueue())
               }}
             >
-            <div className={classes.buttonTextBoxInactive}>
-              {wrap(label)}
-              <div className={classes.buttonTextExplanationInactive}>
-                {documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.description)}
+
+            <div className={classes.buttonContent}>
+
+              <div className={classes.iconContainer}>
+                  <img className={classes.icon} src={map} alt={"empty"}/>
               </div>
+
+              <div className={classes.buttonText}>
+                {wrap(label)}
+                <div className={classes.buttonTextExplanation}>
+                  {documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.description)}
+                </div>
+              </div>
+
             </div>
+
            <div className={classes.buttonStripe}></div>
           </div>
-        </Grid>
+        </div>
       );
     })}
   </Grid>

@@ -14,10 +14,10 @@ code {
 
 @font-face {
   font-family: 'BundesSansWeb-Bold';
-  src: local('BundesSansWeb-Bold'), url(./fonts/BundesSchrift/BundesSansWeb-Bold.woff) format('woff');
+  src: local('BundesSansWeb-Bold'), url(./assets/fonts/BundesSchrift/BundesSansWeb-Bold.woff) format('woff');
 }
 
 @font-face {
   font-family: 'BundesSansWeb-Regular';
-  src: local('BundesSansWeb-Regular'), url(./fonts/BundesSchrift/BundesSansWeb-Regular.woff) format('woff');
+  src: local('BundesSansWeb-Regular'), url(./assets/fonts/BundesSchrift/BundesSansWeb-Regular.woff) format('woff');
 }
