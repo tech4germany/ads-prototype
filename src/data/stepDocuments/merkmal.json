@@ -12,49 +12,49 @@
             "status":"agg",
             "description": null,
             "next_node": "merkmal_ethnisch_detail",
-            "icon": "idee.png"
+            "icon": "group.png"
         },
         "Religion/Weltanschauung": {
             "status":"agg",
             "description": null,
             "next_node": null,
-            "icon": "idee.png"
+            "icon": "group.png"
         },
         "Behinderung/chronische Krankheiten": {
             "status": "agg",
             "description": null,
             "next_node": null,
-            "icon": "idee.png"
+            "icon": "group.png"
         },
         "Alter": {
             "status": "agg",
             "description": null,
             "next_node": null,
-            "icon": "idee.png"
+            "icon": "group.png"
         },
         "Sexuelle Identität": {
             "status": "agg",
             "description": null,
             "next_node": null,
-            "icon": "idee.png"
+            "icon": "group.png"
         },
         "Geschlecht/Geschlechtsidentität": {
             "status": "agg",
             "description": null,
             "next_node": "merkmal_gender_detail",
-            "icon": "idee.png"
+            "icon": "group.png"
         },
         "Sozialer Status": {
             "status": "non-agg",
             "description": "z.B. Finanzen, Bildungsniveau, Sozialleistungen",
             "next_node": null,
-            "icon": "idee.png"
+            "icon": "group.png"
         },
         "Sonstiges": {
             "status": "non-agg",
             "description": "Ich bin mir nicht sicher",
             "next_node": null,
-            "icon": "idee.png"
+            "icon": "group.png"
         }
     }
 }

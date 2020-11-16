@@ -59,8 +59,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   icon: {
-    width: "83px",
-    height: "74px",
+    width: "90px",
+    height: "90px",
     marginTop: "28px"
   },
   buttonText: {

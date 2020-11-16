@@ -11,52 +11,62 @@
         "Arbeitsleben": {
             "status":"agg",
             "description": null,
-            "next_node": "lebensbereich_arbeit_detail"
+            "next_node": "lebensbereich_arbeit_detail",
+            "icon": "group.png"
         },
         "Geschäfte, Verträge und Dienstleistungen": {
             "status":"agg",
             "description": "z.B. Einkaufen, Club, Friseur",
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Wohnungsmarkt": {
             "status":"agg",
             "description": "Wohnungsanzeige, Besichtigung, Mietverhältnis, Kündigung",
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Ämter und Behörden": {
             "status":"non-agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Justiz und Polizei": {
             "status":"non-agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Bildungsbereich": {
             "status":"agg",
             "description": "Kita, Schule, Hochschule",
-            "next_node": "lebensbereich_bildung_detail"
+            "next_node": "lebensbereich_bildung_detail",
+            "icon": "group.png"
         },
         "Gesundheit und Pflege": {
             "status":"agg",
             "description": "Arztbesuch, Krankenhaus, Pflegedienstleistung",
-            "next_node": "lebensbereich_gesundheit_detail"
+            "next_node": "lebensbereich_gesundheit_detail",
+            "icon": "group.png"
         },
         "Öffentlichkeit und Freizeit": {
             "status":"non-agg",
             "description": "Nachbarschaft, auf der Straße, Vereine, Ehrenamt",
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Internet, Medien und Werbung": {
             "status":"non-agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Sonstiges": {
             "status": "non-agg",
             "description": "Ich bin mir nicht sicher",
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         }
     }
 }

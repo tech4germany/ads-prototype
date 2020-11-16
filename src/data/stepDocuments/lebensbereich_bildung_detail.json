@@ -11,22 +11,26 @@
         "Kita": {
             "status":"agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Privatschule/Privatunterricht": {
             "status":"agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Öffentliche Schule": {
             "status":"non-agg",
             "description": "Grundschule oder weiterführende Schule",
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Hochschule": {
             "status":"non-agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         }
     }
 }
