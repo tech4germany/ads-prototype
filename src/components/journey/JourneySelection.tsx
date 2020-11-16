@@ -108,7 +108,6 @@ export default function JourneySelection() {
     <Grid container className={classes.root} >
       {documentQueue.getEdges(activeStep.self).map((label, index) => {
 
-        const icon = require("./src/assets/icons/" + documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
         return (
 
             <div className={classes.buttonContainer}>
@@ -134,7 +133,7 @@ export default function JourneySelection() {
                     <div className={classes.iconContainer}>
                         <div className={classes.iconContainerPlaceholder}></div>
                         <img className={classes.icon}
-                        src={icon}
+                        src={require('/assets/icons/group.png')}
                         alt={"empty"}/>
                         <div className={classes.infoIconContainer}>
                           <img className={classes.infoIcon}
