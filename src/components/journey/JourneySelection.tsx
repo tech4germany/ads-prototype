@@ -39,18 +39,21 @@ const useStyles = makeStyles((theme) => ({
     width: "260px",
     cursor: "pointer",
     height: "200px",
-    backgroundColor: "white",
-    "&:hover": {
-      backgroundColor: colorMain["115"],
-      color: textSelectionMain["color"]["active"],
-    }
+    backgroundColor: "white"
   },
   buttonContent: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
     width: "254px",
-    height: "100%"
+    height: "100%",
+    color: textSelectionMain["color"]["inactive"],
+    fontFamily: textSelectionMain["fontFamily"],
+    fontSize: textSelectionMain["fontSize"],
+    "&:hover": {
+      backgroundColor: colorMain["115"],
+      color: textSelectionMain["color"]["active"],
+    }
   },
   iconContainer: {
     width: "100%",
@@ -65,11 +68,8 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonText: {
     whiteSpace: "pre-wrap",
-    color: textSelectionMain["color"]["inactive"],
-    fontFamily: textSelectionMain["fontFamily"],
-    fontSize: textSelectionMain["fontSize"],
     paddingLeft: "22px",
-    paddingBottom: "21px"
+    paddingBottom: "21px",
   },
   buttonTextExplanation: {
     ...textSelectionExplanation
