@@ -6,7 +6,7 @@ import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { EdgeDetail, UpdateType } from "data/customTypes"
-import map from 'assets/images/map_icon.png';
+import infoIcon from 'assets/icons/information.png';
 
 const wrap = (s: string) => s.replace(
         /(?![^\n]{1,28}$)([^\n]{1,28})\//g, '$1\/\n'
@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "42vh"
   },
   buttonContainer: {
-    paddingLeft: "10px",
-    paddingRight: "10px",
+    paddingLeft: "0px",
+    paddingRight: "15px",
     marginBottom: "15px",
     marginTop: "0px",
     marginLeft: "0px",
@@ -36,16 +36,16 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
-    width: "260px",
+    width: "270px",
     cursor: "pointer",
-    height: "200px",
+    height: "210px",
     backgroundColor: "white"
   },
   buttonContent: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    width: "254px",
+    width: "264px",
     height: "100%",
     color: textSelectionMain["color"]["inactive"],
     fontFamily: textSelectionMain["fontFamily"],
@@ -59,12 +59,27 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
   },
   icon: {
     width: "90px",
     height: "90px",
     marginTop: "28px"
+  },
+  infoIconContainer: {
+    width: "33.3%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+  },
+  iconContainerPlaceholder: {
+    width: "33.3%",
+  },
+  infoIcon: {
+    width: "30px",
+    height: "30px",
+    marginTop: "10px",
+    marginRight: "10px",
   },
   buttonText: {
     whiteSpace: "pre-wrap",
@@ -108,9 +123,15 @@ export default function JourneySelection() {
             <div className={classes.buttonContent}>
 
               <div className={classes.iconContainer}>
+                  <div className={classes.iconContainerPlaceholder}></div>
                   <img className={classes.icon}
                   src={icon}
                   alt={"empty"}/>
+                  <div className={classes.infoIconContainer}>
+                    <img className={classes.infoIcon}
+                    src={infoIcon}
+                    alt={"empty"}/>
+                  </div>
               </div>
 
               <div className={classes.buttonText}>
