@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import  Grid from '@material-ui/core/Grid';
 import { colorMain, textSelectionMain, textSelectionExplanation } from "components/styleguide"
@@ -25,14 +25,10 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "42vh"
   },
   buttonContainer: {
-    paddingLeft: "0px",
-    paddingRight: "15px",
     marginBottom: "15px",
     marginTop: "0px",
     marginLeft: "0px",
-    marginRight: "0px"
-  },
-  buttonCard: {
+    marginRight: "15px",
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
@@ -42,9 +38,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white"
   },
   buttonContent: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
     width: "264px",
     height: "100%",
     color: textSelectionMain["color"]["inactive"],
@@ -54,6 +47,12 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: colorMain["115"],
       color: textSelectionMain["color"]["active"],
     }
+  },
+  buttonCard: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
   },
   iconContainer: {
     width: "100%",
@@ -67,13 +66,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "28px"
   },
   infoIconContainer: {
-    width: "33.3%",
+    width: "50%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
   },
   iconContainerPlaceholder: {
-    width: "33.3%",
+    width: "50%",
   },
   infoIcon: {
     width: "30px",
@@ -99,6 +98,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function JourneySelection() {
   const classes = useStyles();
+  let [infoDisplay, setInfoDisplay] = useState<String>()
   let answers = Answers.useContainer();
   let activeStep = ActiveStep.useContainer();
   let documentQueue = DocumentQueue.useContainer();
@@ -110,42 +110,55 @@ export default function JourneySelection() {
 
         const icon = require("../../assets/icons/" + documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
         return (
-          <div className={classes.buttonContainer}>
 
-            <div className={classes.buttonCard}
-              onClick={() => {
-                answers.add(activeDocument.identifier, label)
-                documentQueue.update(UpdateType.add, activeStep.self, label)
-                activeStep.increment(documentQueue.getVisibilityQueue())
-              }}
-            >
+            <div className={classes.buttonContainer}>
 
-            <div className={classes.buttonContent}>
+              <div className={classes.buttonContent}>
 
-              <div className={classes.iconContainer}>
-                  <div className={classes.iconContainerPlaceholder}></div>
-                  <img className={classes.icon}
-                  src={icon}
-                  alt={"empty"}/>
-                  <div className={classes.infoIconContainer}>
-                    <img className={classes.infoIcon}
-                    src={infoIcon}
-                    alt={"empty"}/>
+                {
+                  infoDisplay === label?
+                  <div
+                    onClick={() => {setInfoDisplay("")}}
+                  >
+                    test
                   </div>
-              </div>
+                  :
+                  <div className={classes.buttonCard}
+                    onClick={() => {
+                      answers.add(activeDocument.identifier, label)
+                      documentQueue.update(UpdateType.add, activeStep.self, label)
+                      activeStep.increment(documentQueue.getVisibilityQueue())
+                    }}
+                  >
 
-              <div className={classes.buttonText}>
-                {wrap(label)}
-                <div className={classes.buttonTextExplanation}>
-                  {documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.description)}
+                    <div className={classes.iconContainer}>
+                        <div className={classes.iconContainerPlaceholder}></div>
+                        <img className={classes.icon}
+                        src={icon}
+                        alt={"empty"}/>
+                        <div className={classes.infoIconContainer}>
+                          <img className={classes.infoIcon}
+                          src={infoIcon}
+                          alt={"empty"}
+                          onClick={(event) => {event.stopPropagation();
+                            setInfoDisplay(label)
+                          }}/>
+                        </div>
+                    </div>
+
+                    <div className={classes.buttonText}>
+                      {wrap(label)}
+                      <div className={classes.buttonTextExplanation}>
+                        {documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.description)}
+                      </div>
+                    </div>
+
                 </div>
-              </div>
+              }
 
             </div>
-
-           <div className={classes.buttonStripe}></div>
+            <div className={classes.buttonStripe}></div>
           </div>
-        </div>
       );
     })}
   </Grid>
