@@ -11,22 +11,26 @@
         "Ja": {
             "status": "inTime",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Nein": {
             "status":"not-inTime",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "dauert noch an/passiert ständig": {
             "status":"inTime",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Ich bin mir nicht sicher": {
             "status":"not-inTime",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         }
     }
 }

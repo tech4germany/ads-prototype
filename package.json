@@ -54,6 +54,7 @@
     "images": "./src/images",
     "data": "./src/data",
     "components": "./src/components",
-    "states": "./src/states"
+    "states": "./src/states",
+    "assets": "./src/assets"
   }
 }

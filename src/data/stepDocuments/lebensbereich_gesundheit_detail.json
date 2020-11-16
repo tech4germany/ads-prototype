@@ -11,12 +11,14 @@
         "Krankenkasse": {
             "status":"agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Arztbesuch": {
             "status":"non-agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         }
     }
 }

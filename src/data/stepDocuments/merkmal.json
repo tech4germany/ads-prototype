@@ -11,42 +11,50 @@
         "Ethnische Herkunft/Rassistische Diskriminierung": {
             "status":"agg",
             "description": null,
-            "next_node": "merkmal_ethnisch_detail"
+            "next_node": "merkmal_ethnisch_detail",
+            "icon": "group.png"
         },
         "Religion/Weltanschauung": {
             "status":"agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Behinderung/chronische Krankheiten": {
             "status": "agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Alter": {
             "status": "agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Sexuelle Identität": {
             "status": "agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Geschlecht/Geschlechtsidentität": {
             "status": "agg",
             "description": null,
-            "next_node": "merkmal_gender_detail"
+            "next_node": "merkmal_gender_detail",
+            "icon": "group.png"
         },
         "Sozialer Status": {
             "status": "non-agg",
             "description": "z.B. Finanzen, Bildungsniveau, Sozialleistungen",
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Sonstiges": {
             "status": "non-agg",
             "description": "Ich bin mir nicht sicher",
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         }
     }
 }

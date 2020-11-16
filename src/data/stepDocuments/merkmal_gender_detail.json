@@ -11,32 +11,38 @@
         "Sexuelle Belästigung": {
             "status":"agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Trans*": {
             "status":"agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Inter*": {
             "status":"agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Frau/Mann": {
             "status":"agg",
             "description": "z.B. Schwangerschaft, unterschiedliche Bezahlung",
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "queer": {
             "status":"agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Sonstiges": {
             "status":"agg",
             "description": "Ich bin mir nicht sicher",
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         }
     }
 }

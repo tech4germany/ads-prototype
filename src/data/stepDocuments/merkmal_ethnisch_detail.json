@@ -11,17 +11,20 @@
         "Äußere Merkmale": {
             "status":"agg",
             "description": "Hautfarbe, Sprache, Name",
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Staatsangehörigkeit/Aufenthaltsstatus": {
             "status":"agg",
             "description": null,
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         },
         "Sonstiges": {
             "status":"agg",
             "description": "Ich bin mir nicht sicher",
-            "next_node": null
+            "next_node": null,
+            "icon": "group.png"
         }
     }
 }

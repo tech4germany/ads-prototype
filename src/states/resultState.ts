@@ -1,7 +1,6 @@
 import { createContainer } from 'unstated-next'
 import { useState } from 'react'
 import { AnswerProfileLayout, AnswersLayout, SpecsLayout, ResultSpecsLayout, EdgeDetail } from "data/customTypes"
-import result_map from "data/resultDocuments/resultmap.json"
 import { mapLabelToFeature, getResultMap, getResultCount, getResultProfile } from "data/Interface"
 
 export function useResultSpecs(initialState: ResultSpecsLayout = {}) {
