@@ -66,13 +66,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "28px"
   },
   infoIconContainer: {
-    width: "50%",
+    width: "30%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
   },
   iconContainerPlaceholder: {
-    width: "50%",
+    width: "30%",
   },
   infoIcon: {
     width: "30px",
@@ -120,7 +120,7 @@ export default function JourneySelection() {
                   <div
                     onClick={() => {setInfoDisplay("")}}
                   >
-                    test
+                    hier finden sie einen informationstext
                   </div>
                   :
                   <div className={classes.buttonCard}
@@ -133,6 +133,7 @@ export default function JourneySelection() {
 
                     <div className={classes.iconContainer}>
                         <div className={classes.iconContainerPlaceholder}></div>
+
                         <img className={classes.icon}
                         src={icon}
                         alt={"empty"}/>
@@ -144,6 +145,7 @@ export default function JourneySelection() {
                             setInfoDisplay(label)
                           }}/>
                         </div>
+
                     </div>
 
                     <div className={classes.buttonText}>

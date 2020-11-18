@@ -89,7 +89,11 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     let slicedQueue = self.filter(function(el) {
       return el.index <= activeStep && el.type === "default"
     });
-    return slicedQueue.length - 1
+    if (self[activeStep]["identifier"] === "result") {
+      return slicedQueue.length
+    } else {
+      return slicedQueue.length - 1
+    }
   }
 
   return { self,
