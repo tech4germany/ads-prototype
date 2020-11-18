@@ -122,15 +122,14 @@ export default function JourneySelection() {
             })}>
 
               <div
+              onClick={() => {setInfoDisplay("")}}
               className={clsx(classes.buttonContent, {
                 [classes.buttonContentInfo]: infoDisplay === label
               })}>
 
                 {
                   infoDisplay === label?
-                  <div
-                    onClick={() => {setInfoDisplay("")}}
-                  >
+                  <div>
                     hier finden sie einen informationstext
                   </div>
                   :
