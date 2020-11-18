@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import clsx from 'clsx';
 import  Grid from '@material-ui/core/Grid';
 import { colorMain, textSelectionMain, textSelectionExplanation } from "components/styleguide"
 import { Answers } from "states/answerState"
@@ -37,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
     height: "210px",
     backgroundColor: "white"
   },
+  buttonContainerInfo: {
+    width: "555px",
+  },
   buttonContent: {
     width: "264px",
     height: "100%",
@@ -47,6 +51,9 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: colorMain["115"],
       color: textSelectionMain["color"]["active"],
     }
+  },
+  buttonContentInfo: {
+    width: "549px",
   },
   buttonCard: {
     height: "100%",
@@ -111,9 +118,14 @@ export default function JourneySelection() {
         const icon = require("assets/icons/" + documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
         return (
 
-            <div className={classes.buttonContainer}>
+            <div className={clsx(classes.buttonContainer, {
+              [classes.buttonContainerInfo]: infoDisplay === label
+            })}>
 
-              <div className={classes.buttonContent}>
+              <div
+              className={clsx(classes.buttonContent, {
+                [classes.buttonContentInfo]: infoDisplay === label
+              })}>
 
                 {
                   infoDisplay === label?
@@ -141,8 +153,9 @@ export default function JourneySelection() {
                           <img className={classes.infoIcon}
                           src={infoIcon}
                           alt={"empty"}
-                          onClick={(event) => {event.stopPropagation();
-                            setInfoDisplay(label)
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            setInfoDisplay(label);
                           }}/>
                         </div>
 
@@ -150,9 +163,7 @@ export default function JourneySelection() {
 
                     <div className={classes.buttonText}>
                       {wrap(label)}
-                      <div className={classes.buttonTextExplanation}>
-                        {documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.description)}
-                      </div>
+                      <div className={classes.buttonTextExplanation}></div>
                     </div>
 
                 </div>
