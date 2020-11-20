@@ -12,7 +12,7 @@ import frist from "data/stepDocuments/frist.json"
 import result_placeholder from "data/stepDocuments/result_placeholder.json"
 import result_map from "data/resultDocuments/resultmap.json"
 import result_content from "data/resultDocuments/resultContent.json"
-import {StepDocumentLayout, EdgeDetail, DocumentQueueLayout, ResultSpecsLayout, SpecsLayout, ResultFeatureType } from "data/customTypes"
+import {AnswerSpecsLayout, StepDocumentLayout, EdgeDetail, DocumentQueueLayout, ResultSpecsLayout, SpecsLayout, ResultFeatureType } from "data/customTypes"
 
 // collect all documents
 let allDocuments: DocumentQueueLayout = [
@@ -61,6 +61,13 @@ export function getResultProfile(id: number): SpecsLayout {
     return element.identifier === id
   })[0]["profile"]
   return _profile
+}
+
+export function getResultFeatures(id: number): AnswerSpecsLayout {
+  let _features = result_map.filter(function(element) {
+    return element.identifier === id
+  })[0]["features"]
+  return _features
 }
 
 // retrieve result content by id

@@ -4,28 +4,59 @@
     "profile": {
       "agg": true,
       "frist": true
-    }
+    },
+    "features": {}
   },
   {
     "identifier": 1,
     "profile": {
       "agg": true,
       "frist": false
-    }
+    },
+    "features": {}
   },
   {
     "identifier": 2,
     "profile": {
       "agg": false,
       "frist": true
-    }
+    },
+    "features": {}
   },
   {
     "identifier": 3,
     "profile": {
       "agg": false,
       "frist": false
+    },
+    "features": {}
+  },
+  {
+    "identifier": 4,
+    "profile": {
+      "agg": false,
+      "frist": false
+    },
+    "features": {
+      "merkmal": ["Behinderung/chronische Krankheiten"],
+      "lebensbereich_bildung_detail": ["Hochschule"]
+    }
+  },
+  {
+    "identifier": 5,
+    "profile": {
+      "agg": false,
+      "frist": false
+    },
+    "features": {
+      "merkmal_ethnisch_detail": ["Äußere Merkmale"],
+      "lebensbereich": [
+        "Ämter und Behörden",
+        "Justiz und Polizei",
+        "Bildungsbereich",
+        "Gesundheit und Pflege",
+        "Öffentlichkeit und Freizeit"
+      ]
     }
   }
 ]
-

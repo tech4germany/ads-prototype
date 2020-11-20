@@ -1,16 +1,29 @@
 import { createContainer } from 'unstated-next'
 import { useState } from 'react'
-import { AnswerProfileLayout, AnswersLayout, SpecsLayout, ResultSpecsLayout, EdgeDetail } from "data/customTypes"
-import { mapLabelToFeature, getResultMap, getResultCount, getResultProfile } from "data/Interface"
+import { AnswerProfileLayout, AnswerSpecsLayout, AnswersLayout, SpecsLayout, ResultSpecsLayout, EdgeDetail } from "data/customTypes"
+import { mapLabelToFeature, getResultMap, getResultCount, getResultProfile, getResultFeatures } from "data/Interface"
 
 export function useResultSpecs(initialState: ResultSpecsLayout = {}) {
   let [self, setResultSpecs] = useState(initialState)
 
-  let _isEquivalent = (a: SpecsLayout, b: AnswerProfileLayout): boolean => {
+  let _isProfileEquivalent = (a: SpecsLayout, b: AnswerProfileLayout): boolean => {
     console.log(a)
     if ((a.agg === b.agg) && (a.frist === b.frist)) {
       return true
     } else { return false}
+  }
+
+  let _isFeatureEquivalent = (result_features: AnswerSpecsLayout, answers: AnswersLayout): boolean => {
+    for (const [key, value] of Object.entries(result_features)) {
+      if(typeof value !== "undefined") {
+        if (!(key in answers)){
+          return false
+        } else if (!value.includes(answers[key][0])) {
+          return false
+        }
+      }
+    }
+    return true
   }
 
   let _parseAnswerToProfile = (answers: AnswersLayout): AnswerProfileLayout => {
@@ -30,24 +43,25 @@ export function useResultSpecs(initialState: ResultSpecsLayout = {}) {
     return answerProfile
   }
 
-  let matchFeatureProfileToResult = (sparseAnswerProfile: AnswerProfileLayout): ResultSpecsLayout => {
+  let matchAnswersToResult = (answers: AnswersLayout): ResultSpecsLayout => {
     let res_match: ResultSpecsLayout={};
     for (var i=0; i < getResultCount(); i++) {
-      if (_isEquivalent(getResultProfile(i), sparseAnswerProfile)) {
-        res_match = getResultMap(i)
-        break
+      if (_isProfileEquivalent(getResultProfile(i), _parseAnswerToProfile(answers))) {
+        if (_isFeatureEquivalent(getResultFeatures(i), answers)){
+          res_match = getResultMap(i)
+        }
       }
     }
-    console.log("match", res_match)
     return res_match
   }
 
-  let matchAnswersToResult = (answers: AnswersLayout): void => {
-    let sparseAnswerProfile = _parseAnswerToProfile(answers)
-    let result_match = matchFeatureProfileToResult(sparseAnswerProfile)
+  let retrieveResultType = (answers: AnswersLayout): void => {
+    let result_match = matchAnswersToResult(answers)
+    console.log(result_match)
     setResultSpecs(result_match)
   }
 
+  // getter functions
   let isAGG = (): boolean => {
     if (self["profile"] !== undefined) {
       return self["profile"].agg
@@ -67,7 +81,7 @@ export function useResultSpecs(initialState: ResultSpecsLayout = {}) {
     else { return false }
   }
 
-  return { self, matchAnswersToResult, isAGG, isFrist, isSet }
+  return { self, retrieveResultType, isAGG, isFrist, isSet }
 }
 
 export const ResultSpecs = createContainer(useResultSpecs)

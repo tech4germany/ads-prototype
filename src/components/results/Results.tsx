@@ -46,7 +46,7 @@ export default function Result() {
   const [showMaterials, setShowMaterials] = useState(true)
 
   useLayoutEffect(() => {
-    resultSpecs.matchAnswersToResult(answers.self);
+    resultSpecs.retrieveResultType(answers.self);
   }, [])
 
   return (

@@ -13,6 +13,10 @@ export type SpecsLayout = {
   "frist": boolean
 };
 
+export type AnswerSpecsLayout = {
+  [key: string]: string[] | undefined;
+};
+
 export type ResultSpecsLayout = {
   "identifier"?: number,
   "profile"?: SpecsLayout

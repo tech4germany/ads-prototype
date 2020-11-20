@@ -30,5 +30,21 @@
       "frist_text": "",
       "next_step": "Möglicherweise gibt es eine Stelle, die für Ihren Fall besser geeignet ist. Die Karte leitet Sie weiter zu einer Liste aller eingetragenen Beratungsstellen. Sollten Sie dort nicht fündig werden und wünschen weiterhin Beratung, kontaktieren Sie uns bitte über das Kontaktformular."
     }
+  },
+  {
+    "identifier": 4,
+    "features": {
+      "agg_text": "Der von Ihnen geschilderte Sachverhalt ist leider nicht vom Diskriminierungsschutz durch das AGG umfasst. Dennoch können Sie Ihre Rechte auf verschiedenen Wegen verfolgen.",
+      "frist_text": "wowowow",
+      "next_step": "Möglicherweise gibt es eine Stelle, die für Ihren Fall besser geeignet ist. Die Karte leitet Sie weiter zu einer Liste aller eingetragenen Beratungsstellen. Sollten Sie dort nicht fündig werden und wünschen weiterhin Beratung, kontaktieren Sie uns bitte über das Kontaktformular."
+    }
+  },
+  {
+    "identifier": 5,
+    "features": {
+      "agg_text": "Der von Ihnen geschilderte Sachverhalt ist leider nicht vom Diskriminierungsschutz durch das AGG umfasst. Dennoch können Sie Ihre Rechte auf verschiedenen Wegen verfolgen.",
+      "frist_text": "äußere merkmale",
+      "next_step": "Möglicherweise gibt es eine Stelle, die für Ihren Fall besser geeignet ist. Die Karte leitet Sie weiter zu einer Liste aller eingetragenen Beratungsstellen. Sollten Sie dort nicht fündig werden und wünschen weiterhin Beratung, kontaktieren Sie uns bitte über das Kontaktformular."
+    }
   }
 ]

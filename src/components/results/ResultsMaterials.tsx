@@ -35,6 +35,9 @@ export default function ResultsMaterials() {
   return (
     <div className={classes.infoSpace}>
       <span className={classes.subHeader}>Informationsmaterial:</span>
+      <span className={classes.infoText}>
+        Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
+      </span>
     </div>
   );
 }

@@ -31,11 +31,13 @@ export default function ResultsTemplates() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
   let answers = Answers.useContainer();
-  console.log(resultSpecs.self)
 
   return (
     <div className={classes.infoSpace}>
       <span className={classes.subHeader}>Formulierungshilfen und Ausfühllhinweise:</span>
+      <span className={classes.infoText}>
+        Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
+      </span>
     </div>
   );
 }

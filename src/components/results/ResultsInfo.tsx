@@ -36,7 +36,6 @@ export default function ResultInfo() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
   let answers = Answers.useContainer();
-  console.log(resultSpecs.self)
 
   return (
     <div className={classes.infoSpace}>
