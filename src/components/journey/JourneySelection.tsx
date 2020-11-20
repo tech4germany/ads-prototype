@@ -39,7 +39,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white"
   },
   buttonContainerInfo: {
-    width: "555px",
+    width: "1140px",
+    height: "400px"
   },
   buttonContent: {
     width: "264px",
@@ -53,7 +54,8 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   buttonContentInfo: {
-    width: "549px",
+    width: "1134px",
+    height: "400px"
   },
   buttonCard: {
     height: "100%",

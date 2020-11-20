@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ResultsTemplates() {
+export default function ResultReferrals() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
   let answers = Answers.useContainer();
@@ -35,7 +35,8 @@ export default function ResultsTemplates() {
 
   return (
     <div className={classes.infoSpace}>
-      <span className={classes.subHeader}>Formulierungshilfen und Ausfühllhinweise:</span>
+      <span className={classes.subHeader}>Anlaufstellen:</span>
+
     </div>
   );
 }

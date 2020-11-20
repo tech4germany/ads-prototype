@@ -12,28 +12,24 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     minWidth: "100%",
-    paddingBottom: "2.3vh",
+    maxWidth: "750px",
   },
   header: {
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "28px",
-    paddingBottom: "2.3vh",
+    fontSize: "40px",
+    lineHeight: "32px",
+    marginBottom: "50px",
+  },
+  subHeader: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "30px",
+    marginBottom: "32px",
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "22px",
-    paddingBottom: "2.3vh"
-  },
-  nextStepsHeader: {
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "22px",
-    paddingBottom: "1vh"
-  },
-  nextStepsText: {
-    fontFamily: "BundesSansWeb-Regular",
-    fontSize: "22px",
-    whiteSpace: "pre-wrap"
-    }
+    fontSize: "18px",
+    marginBottom: "50px"
+  }
 }));
 
 export default function ResultInfo() {
@@ -44,21 +40,20 @@ export default function ResultInfo() {
 
   return (
     <div className={classes.infoSpace}>
-      <div className={classes.header}>
-        Die Ersteinschätzung Ihres Sachverhalts
-      </div>
-      <div className={classes.infoText}>
-        Sie sehen sich aufgrund des Merkmals <b>{answers.getAnswerByKey("merkmal", 0)}</b> im Lebensbereich <b>{answers.getAnswerByKey("lebensbereich", 0)}</b> diskriminiert.
-        <br></br>
+
+      <span className={classes.header}>Die Ersteinschätzung Ihres Sachverhalts</span>
+      <span className={classes.subHeader}>Rechtliche Einordnung:</span>
+
+      <span className={classes.infoText}>
+        Sie sehen sich aufgrund des Merkmals <b>{answers.getAnswerByKey("merkmal", 0)}
+        </b> im Lebensbereich <b>{answers.getAnswerByKey("lebensbereich", 0)}</b> diskriminiert.&nbsp;
         {getResultFeature(resultSpecs.self.identifier, ResultFeatureType.agg_text)}
         {getResultFeature(resultSpecs.self.identifier, ResultFeatureType.frist_text)}
-      </div>
-      <div className={classes.nextStepsHeader}>
-        Nächste Schritte:
-      </div>
-      <div className={classes.nextStepsText}>
+      </span>
+      <span className={classes.subHeader}>Nächste Schritte:</span>
+      <span className={classes.infoText}>
         {getResultFeature(resultSpecs.self.identifier, ResultFeatureType.next_step)}
-      </div>
+      </span>
     </div>
   );
 }

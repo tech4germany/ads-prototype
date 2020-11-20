@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 function useShowResult(initialState = false) {
   let [self, setShowResult] = useState(initialState)
-  
+
   let show = () => setShowResult(true)
   let hide = () => setShowResult(false)
 

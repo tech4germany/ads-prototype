@@ -27,15 +27,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ResultsTemplates() {
+export default function ResultsMaterials() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
   let answers = Answers.useContainer();
-  console.log(resultSpecs.self)
 
   return (
     <div className={classes.infoSpace}>
-      <span className={classes.subHeader}>Formulierungshilfen und Ausfühllhinweise:</span>
+      <span className={classes.subHeader}>Informationsmaterial:</span>
     </div>
   );
 }

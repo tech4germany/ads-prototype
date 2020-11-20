@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import JourneyNavigation from "components/journey/JourneyNavigation"
@@ -6,6 +6,8 @@ import ResultsInfo from "components/results/ResultsInfo"
 import ResultsContact from "components/results/ResultsContact"
 import ResultsMap from "components/results/ResultsMap"
 import ResultsTemplates from "components/results/ResultsTemplates"
+import ResultsReferrals from "components/results/ResultsReferral"
+import ResultsMaterials from "components/results/ResultsMaterials"
 
 import { Answers } from "states/answerState"
 import { ResultSpecs } from "states/resultState"
@@ -39,6 +41,9 @@ export default function Result() {
   const classes = useStyles();
   let answers = Answers.useContainer();
   let resultSpecs = ResultSpecs.useContainer();
+  const [showReferrals, setShowReferrals] = useState(true)
+  const [showTemplates, setShowTemplates] = useState(true)
+  const [showMaterials, setShowMaterials] = useState(true)
 
   useLayoutEffect(() => {
     resultSpecs.matchAnswersToResult(answers.self);
@@ -52,7 +57,22 @@ export default function Result() {
           resultSpecs.self.profile ?
             <Grid item lg={9} md={10} sm={12} xs={12} className={classes.infoTemplateSpace}>
               <ResultsInfo />
-              <ResultsTemplates />
+              {
+                showReferrals?
+                <ResultsReferrals />:
+                <></>
+              }
+              {
+                showTemplates?
+                <ResultsTemplates />:
+                <></>
+              }
+              {
+                showMaterials?
+                <ResultsMaterials />:
+                <></>
+              }
+
             </Grid>
           :
             <Grid item lg={9} md={10} sm={12} xs={12} className={classes.infoTemplateSpace}>
