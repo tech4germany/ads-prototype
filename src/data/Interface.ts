@@ -12,7 +12,7 @@ import frist from "data/stepDocuments/frist.json"
 import result_placeholder from "data/stepDocuments/result_placeholder.json"
 import result_map from "data/resultDocuments/resultmap.json"
 import result_content from "data/resultDocuments/resultContent.json"
-import {AnswerSpecsLayout, StepDocumentLayout, EdgeDetail, DocumentQueueLayout, ResultSpecsLayout, SpecsLayout, ResultFeatureType } from "data/customTypes"
+import {ResultType, DefaultSpecsLayout, NonDefaultSpecsLayout, StepDocumentLayout, EdgeDetail, DocumentQueueLayout, ResultSpecsLayout, ResultFeatureType } from "data/customTypes"
 
 // collect all documents
 let allDocuments: DocumentQueueLayout = [
@@ -47,27 +47,28 @@ export function mapLabelToFeature(stepIdentifier: string, label: string, feature
 }
 
 // retrieve count of result types
-export function getResultCount(): number {
-  return result_map.length
+export function getResultCount(result_type: ResultType): number {
+  return result_map[result_type].length
 }
 
 // retrieve result mapping by id
-export function getResultMap(id: number): ResultSpecsLayout {
-  return result_map[id]
+export function getResultMap(id: number, result_type: ResultType): ResultSpecsLayout {
+  return JSON.parse(JSON.stringify(result_map[result_type][id]))
 }
 
-export function getResultProfile(id: number): SpecsLayout {
-  let _profile = result_map.filter(function(element) {
-    return element.identifier === id
-  })[0]["profile"]
+export function getDefaultResultProfile(id: number): DefaultSpecsLayout {
+  let _profile = result_map[ResultType.default][id]["profile"]
   return _profile
 }
 
-export function getResultFeatures(id: number): AnswerSpecsLayout {
-  let _features = result_map.filter(function(element) {
-    return element.identifier === id
-  })[0]["features"]
+export function getNonDefaultResultFeatures(id: number): NonDefaultSpecsLayout {
+  let _features = result_map[ResultType.non_default][id]["features"]
   return _features
+}
+
+export function getNonDefaultResultId(id: number): number {
+  let _identifier = result_map[ResultType.non_default][id]["identifier"]
+  return _identifier
 }
 
 // retrieve result content by id

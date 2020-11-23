@@ -47,7 +47,7 @@ export default function Result() {
 
   useLayoutEffect(() => {
     resultSpecs.retrieveResultType(answers.self);
-  }, [])
+  }, [answers])
 
   return (
     <div className={classes.mainSpace}>

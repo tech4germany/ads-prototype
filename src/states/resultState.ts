@@ -1,19 +1,18 @@
 import { createContainer } from 'unstated-next'
 import { useState } from 'react'
-import { AnswerProfileLayout, AnswerSpecsLayout, AnswersLayout, SpecsLayout, ResultSpecsLayout, EdgeDetail } from "data/customTypes"
-import { mapLabelToFeature, getResultMap, getResultCount, getResultProfile, getResultFeatures } from "data/Interface"
+import { AnswerProfileLayout, DefaultSpecsLayout, NonDefaultSpecsLayout, AnswersLayout, ResultSpecsLayout, EdgeDetail, ResultType } from "data/customTypes"
+import { mapLabelToFeature, getResultMap, getResultCount, getDefaultResultProfile, getNonDefaultResultFeatures, getNonDefaultResultId } from "data/Interface"
 
-export function useResultSpecs(initialState: ResultSpecsLayout = {}) {
+export function useResultSpecs(initialState: ResultSpecsLayout={}) {
   let [self, setResultSpecs] = useState(initialState)
 
-  let _isProfileEquivalent = (a: SpecsLayout, b: AnswerProfileLayout): boolean => {
-    console.log(a)
+  let _isProfileEquivalent = (a: DefaultSpecsLayout, b: AnswerProfileLayout): boolean => {
     if ((a.agg === b.agg) && (a.frist === b.frist)) {
       return true
     } else { return false}
   }
 
-  let _isFeatureEquivalent = (result_features: AnswerSpecsLayout, answers: AnswersLayout): boolean => {
+  let _isFeatureEquivalent = (result_features: NonDefaultSpecsLayout, answers: AnswersLayout): boolean => {
     for (const [key, value] of Object.entries(result_features)) {
       if(typeof value !== "undefined") {
         if (!(key in answers)){
@@ -43,21 +42,31 @@ export function useResultSpecs(initialState: ResultSpecsLayout = {}) {
     return answerProfile
   }
 
-  let matchAnswersToResult = (answers: AnswersLayout): ResultSpecsLayout => {
+  let retrieveDefaultResult = (answers: AnswersLayout): ResultSpecsLayout => {
     let res_match: ResultSpecsLayout={};
-    for (var i=0; i < getResultCount(); i++) {
-      if (_isProfileEquivalent(getResultProfile(i), _parseAnswerToProfile(answers))) {
-        if (_isFeatureEquivalent(getResultFeatures(i), answers)){
-          res_match = getResultMap(i)
-        }
+    for (var i=0; i < getResultCount(ResultType.default); i++) {
+      if (_isProfileEquivalent(getDefaultResultProfile(i), _parseAnswerToProfile(answers))) {
+        res_match = getResultMap(i, ResultType.default)
+      }
+    }
+    return res_match
+  }
+
+  let checkForNonDefaultResult = (answers: AnswersLayout, default_result: ResultSpecsLayout): ResultSpecsLayout => {
+    let res_match = default_result;
+    for (var i=0; i < getResultCount(ResultType.non_default); i++) {
+      if (_isFeatureEquivalent(getNonDefaultResultFeatures(i), answers)) {
+        res_match["identifier"] = getNonDefaultResultId(i)
+        res_match["features"] = getNonDefaultResultFeatures(i)
       }
     }
     return res_match
   }
 
   let retrieveResultType = (answers: AnswersLayout): void => {
-    let result_match = matchAnswersToResult(answers)
-    console.log(result_match)
+    let result_match = retrieveDefaultResult(answers);
+    result_match = checkForNonDefaultResult(answers, result_match)
+    console.log("final_result_match: ", result_match)
     setResultSpecs(result_match)
   }
 

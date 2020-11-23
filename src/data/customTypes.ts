@@ -8,19 +8,25 @@ export type AnswerProfileLayout = {
   [key: string]: boolean;
 };
 
-export type SpecsLayout = {
+export type DefaultSpecsLayout = {
   "agg": boolean,
   "frist": boolean
 };
 
-export type AnswerSpecsLayout = {
+export type NonDefaultSpecsLayout = {
   [key: string]: string[] | undefined;
-};
+}
 
 export type ResultSpecsLayout = {
   "identifier"?: number,
-  "profile"?: SpecsLayout
+  "profile"?: DefaultSpecsLayout,
+  "features"?: NonDefaultSpecsLayout
 };
+
+export enum ResultType {
+  default = "default",
+  non_default = "non-default"
+}
 
 export enum ResultFeatureType {
   agg_text = "agg_text",
