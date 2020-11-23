@@ -8,6 +8,7 @@ import ResultsMap from "components/results/ResultsMap"
 import ResultsTemplates from "components/results/ResultsTemplates"
 import ResultsReferrals from "components/results/ResultsReferral"
 import ResultsMaterials from "components/results/ResultsMaterials"
+import { getResultReferrals, getResultTemplates, getResultMaterials } from "data/Interface"
 
 import { Answers } from "states/answerState"
 import { ResultSpecs } from "states/resultState"
@@ -58,17 +59,17 @@ export default function Result() {
             <Grid item lg={9} md={10} sm={12} xs={12} className={classes.infoTemplateSpace}>
               <ResultsInfo />
               {
-                showReferrals?
+                getResultReferrals(resultSpecs.self.identifier)?
                 <ResultsReferrals />:
                 <></>
               }
               {
-                showTemplates?
+                getResultTemplates(resultSpecs.self.identifier)?
                 <ResultsTemplates />:
                 <></>
               }
               {
-                showMaterials?
+                getResultMaterials(resultSpecs.self.identifier)?
                 <ResultsMaterials />:
                 <></>
               }

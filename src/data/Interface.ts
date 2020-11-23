@@ -12,7 +12,7 @@ import frist from "data/stepDocuments/frist.json"
 import result_placeholder from "data/stepDocuments/result_placeholder.json"
 import result_map from "data/resultDocuments/resultmap.json"
 import result_content from "data/resultDocuments/resultContent.json"
-import {ResultType, DefaultSpecsLayout, NonDefaultSpecsLayout, StepDocumentLayout, EdgeDetail, DocumentQueueLayout, ResultSpecsLayout, ResultFeatureType } from "data/customTypes"
+import {ResultContentLayout, ReferralLayout, AdditionalContentType, ResultType, DefaultSpecsLayout, NonDefaultSpecsLayout, StepDocumentLayout, EdgeDetail, DocumentQueueLayout, ResultSpecsLayout, ResultFeatureType } from "data/customTypes"
 
 // collect all documents
 let allDocuments: DocumentQueueLayout = [
@@ -77,4 +77,42 @@ export function getResultFeature(id: number | undefined, feature: ResultFeatureT
     return element.identifier === id
   })[0]["features"][feature]
   return _feature
+}
+
+// retrieve additional content information
+export function getResultReferrals(id: number | undefined): Array<ReferralLayout> | null {
+  let _result: ResultContentLayout = result_content.filter(function(element) {
+    return element.identifier === id
+  })[0]
+  console.log("res content: ", _result)
+  if (typeof _result["additional_content"] !== "undefined") {
+    if (typeof _result["additional_content"]["referrals"] !== "undefined") {
+      return _result["additional_content"]["referrals"]
+    }
+  }
+  return null
+}
+
+export function getResultTemplates(id: number | undefined): Array<string> | null {
+  let _result: ResultContentLayout = result_content.filter(function(element) {
+    return element.identifier === id
+  })[0]
+  if (typeof _result["additional_content"] !== "undefined") {
+    if (typeof _result["additional_content"]["templates"] !== "undefined") {
+      return _result["additional_content"]["templates"]
+    }
+  }
+  return null
+}
+
+export function getResultMaterials(id: number | undefined): Array<string> | null {
+  let _result: ResultContentLayout = result_content.filter(function(element) {
+    return element.identifier === id
+  })[0]
+  if (typeof _result["additional_content"] !== "undefined") {
+    if (typeof _result["additional_content"]["material"] !== "undefined") {
+      return _result["additional_content"]["material"]
+    }
+  }
+  return null
 }

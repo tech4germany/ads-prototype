@@ -60,13 +60,13 @@ export function useResultSpecs(initialState: ResultSpecsLayout={}) {
         res_match["features"] = getNonDefaultResultFeatures(i)
       }
     }
+    console.log("final result: ", res_match)
     return res_match
   }
 
   let retrieveResultType = (answers: AnswersLayout): void => {
     let result_match = retrieveDefaultResult(answers);
     result_match = checkForNonDefaultResult(answers, result_match)
-    console.log("final_result_match: ", result_match)
     setResultSpecs(result_match)
   }
 
