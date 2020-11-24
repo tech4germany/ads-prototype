@@ -13,12 +13,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     minWidth: "100%",
     maxWidth: "750px",
-  },
-  header: {
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "40px",
-    lineHeight: "32px",
-    marginBottom: "50px",
+    paddingBottom: "2.3vh",
   },
   subHeader: {
     fontFamily: "BundesSansWeb-Bold",
@@ -32,26 +27,16 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ResultInfo() {
+export default function ResultsMaterials() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
   let answers = Answers.useContainer();
 
   return (
     <div className={classes.infoSpace}>
-
-      <span className={classes.header}>Die Ersteinschätzung Ihres Sachverhalts</span>
-      <span className={classes.subHeader}>Rechtliche Einordnung:</span>
-
+      <span className={classes.subHeader}>Informationsmaterial:</span>
       <span className={classes.infoText}>
-        Sie sehen sich aufgrund des Merkmals <b>{answers.getAnswerByKey("merkmal", 0)}
-        </b> im Lebensbereich <b>{answers.getAnswerByKey("lebensbereich", 0)}</b> diskriminiert.&nbsp;
-        {getResultFeature(resultSpecs.self.identifier, ResultFeatureType.agg_text)}
-        {getResultFeature(resultSpecs.self.identifier, ResultFeatureType.frist_text)}
-      </span>
-      <span className={classes.subHeader}>Nächste Schritte:</span>
-      <span className={classes.infoText}>
-        {getResultFeature(resultSpecs.self.identifier, ResultFeatureType.next_step)}
+        Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
       </span>
     </div>
   );

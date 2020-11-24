@@ -1,31 +1,76 @@
-[
-  {
-    "identifier": 0,
-    "profile": {
-      "agg": true,
-      "frist": true
+{
+  "default": [
+    {
+      "identifier": 0,
+      "profile": {
+        "agg": true,
+        "frist": true
+      }
+    },
+    {
+      "identifier": 1,
+      "profile": {
+        "agg": true,
+        "frist": false
+      }
+    },
+    {
+      "identifier": 2,
+      "profile": {
+        "agg": false,
+        "frist": true
+      }
+    },
+    {
+      "identifier": 3,
+      "profile": {
+        "agg": false,
+        "frist": false
+      }
     }
-  },
-  {
-    "identifier": 1,
-    "profile": {
-      "agg": true,
-      "frist": false
+  ],
+  "non-default": [
+    {
+      "identifier": 4,
+      "features": {
+        "merkmal": ["Behinderung/chronische Krankheiten"],
+        "lebensbereich": [
+          "Bildungsbereich"
+        ],
+        "lebensbereich_bildung_detail": ["Hochschule"]
+      }
+    },
+    {
+      "identifier": 5,
+      "features": {
+        "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+        "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
+        "lebensbereich": [
+          "Ämter und Behörden",
+          "Justiz und Polizei",
+          "Bildungsbereich",
+          "Gesundheit und Pflege",
+          "Öffentlichkeit und Freizeit"
+        ]
+      }
+    },
+    {
+      "identifier": 6,
+      "features": {
+        "merkmal": ["Behinderung/chronische Krankheiten"],
+        "lebensbereich": [
+          "Ämter und Behörden",
+          "Justiz und Polizei",
+          "Bildungsbereich",
+          "Gesundheit und Pflege",
+          "Öffentlichkeit und Freizeit"
+        ],
+        "lebensbereich_bildung_detail": [
+          "Kita",
+          "Privatschule/Privatunterricht",
+          "Öffentliche Schule"
+        ]
+      }
     }
-  },
-  {
-    "identifier": 2,
-    "profile": {
-      "agg": false,
-      "frist": true
-    }
-  },
-  {
-    "identifier": 3,
-    "profile": {
-      "agg": false,
-      "frist": false
-    }
-  }
-]
-
+  ]
+}

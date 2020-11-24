@@ -4,6 +4,7 @@ import { ResultSpecs } from "states/resultState"
 import { Answers } from "states/answerState"
 import { getResultFeature } from "data/Interface"
 import { ResultFeatureType } from "data/customTypes"
+import { getResultReferrals } from "data/Interface"
 
 const useStyles = makeStyles((theme) => ({
   infoSpace: {
@@ -13,12 +14,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     minWidth: "100%",
     maxWidth: "750px",
-  },
-  header: {
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "40px",
-    lineHeight: "32px",
-    marginBottom: "50px",
+    paddingBottom: "2.3vh",
   },
   subHeader: {
     fontFamily: "BundesSansWeb-Bold",
@@ -29,30 +25,39 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
     marginBottom: "50px"
+  },
+  referralItem: {
+    display: "flex",
+    flexDirection: "column"
   }
 }));
 
-export default function ResultInfo() {
+export default function ResultReferrals() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
-  let answers = Answers.useContainer();
+  let list = getResultReferrals(resultSpecs.self.identifier)
 
   return (
     <div className={classes.infoSpace}>
-
-      <span className={classes.header}>Die Ersteinschätzung Ihres Sachverhalts</span>
-      <span className={classes.subHeader}>Rechtliche Einordnung:</span>
-
+      <span className={classes.subHeader}>Anlaufstellen:</span>
       <span className={classes.infoText}>
-        Sie sehen sich aufgrund des Merkmals <b>{answers.getAnswerByKey("merkmal", 0)}
-        </b> im Lebensbereich <b>{answers.getAnswerByKey("lebensbereich", 0)}</b> diskriminiert.&nbsp;
-        {getResultFeature(resultSpecs.self.identifier, ResultFeatureType.agg_text)}
-        {getResultFeature(resultSpecs.self.identifier, ResultFeatureType.frist_text)}
+        Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:<br></br>
+        {
+          (list !== null)?
+          list.map((label, index) => {
+            return(
+              <div className={classes.referralItem}>
+                <span>{label.name}</span>
+                <span>{label.phone}</span>
+                <span>{label.email}</span>
+                <span>{label.website}</span>
+              </div>
+            )
+          }):
+          <></>
+        }
       </span>
-      <span className={classes.subHeader}>Nächste Schritte:</span>
-      <span className={classes.infoText}>
-        {getResultFeature(resultSpecs.self.identifier, ResultFeatureType.next_step)}
-      </span>
+
     </div>
   );
 }
