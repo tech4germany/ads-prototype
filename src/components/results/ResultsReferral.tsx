@@ -4,6 +4,7 @@ import { ResultSpecs } from "states/resultState"
 import { Answers } from "states/answerState"
 import { getResultFeature } from "data/Interface"
 import { ResultFeatureType } from "data/customTypes"
+import { getResultReferrals } from "data/Interface"
 
 const useStyles = makeStyles((theme) => ({
   infoSpace: {
@@ -24,19 +25,37 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
     marginBottom: "50px"
+  },
+  referralItem: {
+    display: "flex",
+    flexDirection: "column"
   }
 }));
 
 export default function ResultReferrals() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
-  let answers = Answers.useContainer();
+  let list = getResultReferrals(resultSpecs.self.identifier)
 
   return (
     <div className={classes.infoSpace}>
       <span className={classes.subHeader}>Anlaufstellen:</span>
       <span className={classes.infoText}>
-        Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
+        Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:<br></br>
+        {
+          (list !== null)?
+          list.map((label, index) => {
+            return(
+              <div className={classes.referralItem}>
+                <span>{label.name}</span>
+                <span>{label.phone}</span>
+                <span>{label.email}</span>
+                <span>{label.website}</span>
+              </div>
+            )
+          }):
+          <></>
+        }
       </span>
 
     </div>

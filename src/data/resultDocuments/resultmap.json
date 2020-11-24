@@ -34,19 +34,41 @@
       "identifier": 4,
       "features": {
         "merkmal": ["Behinderung/chronische Krankheiten"],
+        "lebensbereich": [
+          "Bildungsbereich"
+        ],
         "lebensbereich_bildung_detail": ["Hochschule"]
       }
     },
     {
       "identifier": 5,
       "features": {
-        "merkmal_ethnisch_detail": ["Äußere Merkmale"],
+        "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+        "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
         "lebensbereich": [
           "Ämter und Behörden",
           "Justiz und Polizei",
           "Bildungsbereich",
           "Gesundheit und Pflege",
           "Öffentlichkeit und Freizeit"
+        ]
+      }
+    },
+    {
+      "identifier": 6,
+      "features": {
+        "merkmal": ["Behinderung/chronische Krankheiten"],
+        "lebensbereich": [
+          "Ämter und Behörden",
+          "Justiz und Polizei",
+          "Bildungsbereich",
+          "Gesundheit und Pflege",
+          "Öffentlichkeit und Freizeit"
+        ],
+        "lebensbereich_bildung_detail": [
+          "Kita",
+          "Privatschule/Privatunterricht",
+          "Öffentliche Schule"
         ]
       }
     }

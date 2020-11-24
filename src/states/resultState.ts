@@ -13,10 +13,12 @@ export function useResultSpecs(initialState: ResultSpecsLayout={}) {
   }
 
   let _isFeatureEquivalent = (result_features: NonDefaultSpecsLayout, answers: AnswersLayout): boolean => {
+    console.log("new comparison")
+
     for (const [key, value] of Object.entries(result_features)) {
       if(typeof value !== "undefined") {
         if (!(key in answers)){
-          return false
+          continue
         } else if (!value.includes(answers[key][0])) {
           return false
         }

@@ -35,7 +35,7 @@
     "identifier": 4,
     "features": {
       "agg_text": "Der von Ihnen geschilderte Sachverhalt ist leider nicht vom Diskriminierungsschutz durch das AGG umfasst. Dennoch können Sie Ihre Rechte auf verschiedenen Wegen verfolgen.",
-      "frist_text": "wowowow",
+      "frist_text": "",
       "next_step": "Möglicherweise gibt es eine Stelle, die für Ihren Fall besser geeignet ist. Die Karte leitet Sie weiter zu einer Liste aller eingetragenen Beratungsstellen. Sollten Sie dort nicht fündig werden und wünschen weiterhin Beratung, kontaktieren Sie uns bitte über das Kontaktformular."
     },
     "additional_content": {
@@ -53,8 +53,42 @@
     "identifier": 5,
     "features": {
       "agg_text": "Der von Ihnen geschilderte Sachverhalt ist leider nicht vom Diskriminierungsschutz durch das AGG umfasst. Dennoch können Sie Ihre Rechte auf verschiedenen Wegen verfolgen.",
-      "frist_text": "äußere merkmale",
+      "frist_text": "",
       "next_step": "Möglicherweise gibt es eine Stelle, die für Ihren Fall besser geeignet ist. Die Karte leitet Sie weiter zu einer Liste aller eingetragenen Beratungsstellen. Sollten Sie dort nicht fündig werden und wünschen weiterhin Beratung, kontaktieren Sie uns bitte über das Kontaktformular."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Die Beauftragte der Bundesregierung für Migration, Flüchtlinge und Integration",
+          "phone": "+49 (0) 30 18 400 - 1640",
+          "email": "integrationsbeauftragte@bk.bund.de",
+          "website": "https://www.integrationsbeauftragte.de/ib-de/service/kontakt"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 6,
+    "features": {
+      "agg_text": "Der von Ihnen geschilderte Sachverhalt ist leider nicht vom Diskriminierungsschutz durch das AGG umfasst. Dennoch können Sie Ihre Rechte auf verschiedenen Wegen verfolgen.",
+      "frist_text": "new",
+      "next_step": "Möglicherweise gibt es eine Stelle, die für Ihren Fall besser geeignet ist. Die Karte leitet Sie weiter zu einer Liste aller eingetragenen Beratungsstellen. Sollten Sie dort nicht fündig werden und wünschen weiterhin Beratung, kontaktieren Sie uns bitte über das Kontaktformular."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Schlichtungsstelle nach dem Behindertengleichstellungsgesetz bei dem Beauftragten der Bundesregierung für die Belange von Menschen mit Behinderungen",
+          "phone": "+49 (0) 30 18 527 - 2805",
+          "email": "info@schlichtungsstelle-bgg.de",
+          "website": "http://www.schlichtungsstelle-bgg.de/"
+        },
+        {
+          "name": "Ergänzende unabhängige Teilhabeberatung (EUTB)",
+          "phone": "None",
+          "email": "None",
+          "website": "https://www.teilhabeberatung.de/beratung/beratungsangebote-der-eutb "
+        }
+      ]
     }
   }
 ]
