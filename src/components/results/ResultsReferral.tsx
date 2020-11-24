@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
   },
   referralItem: {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    marginBottom: "16px"
   }
 }));
 
