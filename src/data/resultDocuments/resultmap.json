@@ -71,6 +71,152 @@
           "Öffentliche Schule"
         ]
       }
+    },
+    {
+      "identifier": 7,
+      "features": {
+        "merkmal": ["Geschlecht/Geschlechtsidentität"],
+        "merkmal_ethnisch_detail": [
+          "Trans*",
+          "Inter*",
+          "queer"
+        ]
+      }
+    },
+    {
+      "identifier": 8,
+      "features": {
+        "merkmal": ["Sexuelle Identität"]
+      }
+    },
+    {
+      "identifier": 9,
+      "features": {
+        "lebensbereich": ["Gesundheit und Pflege"]
+      }
+    },
+    {
+      "identifier": 10,
+      "features": {
+        "merkmal": ["Sozialer Status"]
+      }
+    },
+    {
+      "identifier": 11,
+      "features": {
+        "lebensbereich": ["Internet, Medien und Werbung"]
+      }
+    },
+    {
+      "identifier": 12,
+      "features": {
+        "lebensbereich": ["Geschäfte, Verträge und Dienstleistungen"]
+      }
+    },
+    {
+      "identifier": 13,
+      "features": {
+        "lebensbereich": [
+          "Internet, Medien und Werbung",
+          "Öffentlichkeit und Freizeit"
+        ]
+      }
+    },
+    {
+      "identifier": 14,
+      "features": {
+        "merkmal": ["Sozialer Status"],
+        "lebensbereich": ["Ämter und Behörden"]
+      }
+    },
+    {
+      "identifier": 15,
+      "features": {
+        "merkmal": ["Geschlecht/Geschlechtsidentität"],
+        "merkmal_gender_detail": ["Sexuelle Belästigung"]
+      }
+    },
+    {
+      "identifier": 16,
+      "features": {
+        "merkmal": ["Geschlecht/Geschlechtsidentität"],
+        "merkmal_gender_detail": ["Sexuelle Belästigung"],
+        "lebensbereich": ["Bildungsbereich"],
+        "lebensbereich_bildung_detail": [
+          "Kita",
+          "Privatschule/Privatunterricht",
+          "Öffentliche Schule"
+        ]
+      }
+    },
+    {
+      "identifier": 17,
+      "features": {
+        "merkmal": ["Geschlecht/Geschlechtsidentität"],
+        "merkmal_gender_detail": [
+          "Trans*",
+          "Inter*"
+        ]
+      }
+    },
+    {
+      "identifier": 18,
+      "features": {
+        "merkmal": ["Geschlecht/Geschlechtsidentität"],
+        "merkmal_gender_detail": ["Trans*"],
+        "lebensbereich": ["Bildungsbereich"],
+        "lebensbereich_bildung_detail": [
+          "Kita",
+          "Privatschule/Privatunterricht",
+          "Öffentliche Schule"
+        ]
+      }
+    },
+    {
+      "identifier": 19,
+      "features": {
+        "merkmal": [
+          "Ethnische Herkunft/Rassistische Diskriminierung",
+          "Geschlecht/Geschlechtsidentität"
+        ],
+        "merkmal_gender_detail": [
+          "Trans*",
+          "Inter*",
+          "queer"
+        ]
+      }
+    },
+    {
+      "identifier": 20,
+      "features": {
+        "lebensbereich": ["Gesundheit und Pflege"],
+        "lebensbereich_bildung_detail": ["Arztbesuch"]
+      }
+    },
+    {
+      "identifier": 21,
+      "features": {
+        "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+        "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
+        "lebensbereich": ["Arbeitsleben"]
+      }
+    },
+    {
+      "identifier": 22,
+      "features": {
+        "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+        "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
+        "lebensbereich": ["Bildungsbereich"],
+        "lebensbereich_bildung_detail": ["Hochschule"]
+      }
+    },
+    {
+      "identifier": 23,
+      "features": {
+        "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+        "merkmal_ethnisch_detail": ["Äußere Merkmale"],
+        "lebensbereich": ["Öffentlichkeit und Freizeit"]
+      }
     }
   ]
 }

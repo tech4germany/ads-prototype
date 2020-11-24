@@ -86,7 +86,373 @@
           "name": "Ergänzende unabhängige Teilhabeberatung (EUTB)",
           "phone": "None",
           "email": "None",
-          "website": "https://www.teilhabeberatung.de/beratung/beratungsangebote-der-eutb "
+          "website": "https://www.teilhabeberatung.de/beratung/beratungsangebote-der-eutb"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 7,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "TransInterQueer (TrIQ) e.V. Persönliche Trans*- und Inter*-Beratung",
+          "phone": "",
+          "email": "beratung@transinterqueer.org",
+          "website": "https://www.transinterqueer.org"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 8,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Lesben- und Schwulenverband (LSVD) e.V.",
+          "phone": "",
+          "email": "recht@lsvd.de",
+          "website": "https://www.lsvd.de/de/ct/1297-Die-LSVD-Rechtsberatung"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 9,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Unabhängige Patientenberatung Deutschland (UPD)",
+          "phone": "0800 0 11 77 22",
+          "email": "",
+          "website": "https://www.patientenberatung.de/de/beratungsangebot"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 10,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Caritas Allgemeine Sozialberatung",
+          "phone": "",
+          "email": "",
+          "website": "https://www.caritas.de/hilfeundberatung/onlineberatung/allgemeine-soziale-beratung/start"
+        },
+        {
+          "name": "Diakonie Allgemeine Sozialberatung",
+          "phone": "",
+          "email": "",
+          "website": "https://hilfe.diakonie.de/hilfe-vor-ort/allgemeine-sozialberatung/bundesweit/?text=&ersteller=&ansicht=karte"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 11,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "eco - Verband der Internetwirtschaft e.V. Internet-Beschwerdestelle",
+          "phone": "",
+          "email": "",
+          "website": "www.internet-beschwerdestelle.de"
+        },
+        {
+          "name": "Deutscher Presserat e.V.",
+          "phone": "",
+          "email": "",
+          "website": "www.presserat.de/beschwerde.html"
+        },
+        {
+          "name": "Arbeitsgemeinschaft der Landesmedienanstalten (ALM) Programmbeschwerde",
+          "phone": "",
+          "email": "",
+          "website": "https://www.programmbeschwerde.de/beschwerde/"
+        },
+        {
+          "name": "Zentralverband der deutschen Werbewirtschaft (ZAW) e.V. Deutscher Werberat",
+          "phone": "",
+          "email": "",
+          "website": "www.werberat.de/beschwerdeformular"
+        },
+        {
+          "name": "Pinkstinks Germany e.V. Werbemelder*in",
+          "phone": "",
+          "email": "",
+          "website": "www.pinkstinks.de/werbung-melden/"
+        },
+        {
+          "name": "HateAid",
+          "phone": "",
+          "email": "",
+          "website": "https://hateaid.org/"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 12,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Übersicht Schlichtungs- und Ombudsstellen in der Privatwirtschaft",
+          "phone": "",
+          "email": "",
+          "website": "http://www.allgemeinbildungsmagazin.de/galli/vr_om.htm"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 13,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Helpdesk des No Hate Speech Movement",
+          "phone": "",
+          "email": "",
+          "website": "https://www.neuemedienmacher.de/helpdesk/"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 14,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "",
+          "phone": "",
+          "email": "",
+          "website": "https://www.my-sozialberatung.de/adressen"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 15,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Frauenberatungsstellen vor Ort",
+          "phone": "",
+          "email": "",
+          "website": "https://www.frauen-gegen-gewalt.de/de/hilfe-vor-ort.html"
+        },
+        {
+          "name": "Hilfetelefon Gewalt gegen Frauen",
+          "phone": "",
+          "email": "",
+          "website": "https://www.hilfetelefon.de/"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 16,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Hilfetelefon sexueller Missbrauch",
+          "phone": "",
+          "email": "",
+          "website": "https://www.hilfeportal-missbrauch.de/startseite.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 17,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Beratungs- und Kontaktstellen der Deutschen Gesellschaft für Transidentität und Intersexualität e.V. (dgti)",
+          "phone": "",
+          "email": "",
+          "website": "https://www.dgti.org/beratungsstellen.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 18,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Trans-Kinder-Netz e.V. (Trakine e.V.)",
+          "phone": "",
+          "email": "",
+          "website": "https://www.trans-kinder-netz.de/was-bieten-wir-an.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 19,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Beratung für lesbische und bisexuelle Frauen/Mädchen Trans* und Inter*, mit und ohne Migrationshintergrund und Schwarze Lesben, Trans* und Inter*",
+          "phone": "",
+          "email": "",
+          "website": "https://lesmigras.de/beratung.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 20,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Beschwerdestellen der Landesärztekammern",
+          "phone": "",
+          "email": "",
+          "website": "https://www.tk.de/techniker/leistungen-und-mitgliedschaft/informationen-versicherte/leistungen/arzt-und-krankenhausbesuch/behandlungsfehler/haeufigste-fragen-zu-behandlungsfehlern/beschwerdestellen-aerztekammer-laender-zustaendigkeit-2010400"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 21,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Übersicht: Beratungsstellen zu Arbeit und Migration",
+          "phone": "",
+          "email": "",
+          "website": "https://www.faire-mobilitaet.de/beratungsstellen/++co++5050bc8e-e5a9-11e2-b08b-00188b4dc422"
+        },
+        {
+          "name": "Gleichbehandlungsstelle EU-Arbeitnehmer",
+          "phone": "",
+          "email": "",
+          "website": "https://www.eu-gleichbehandlungsstelle.de/eugs-de/fachleute/beratungsanfrage"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 22,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Beratungsangebote für ausländische Studierende der Studierendenwerke",
+          "phone": "",
+          "email": "",
+          "website": "https://www.studentenwerke.de/de/content/rat-und-hilfe"
+        },
+        {
+          "name": "Anerkennung ausländischer (Schul- und Studien-)Abschlüsse: Zentralstelle für ausländisches Bildungswesen (ZAB) im Sekretariat der Kultusministerkonferenz",
+          "phone": "",
+          "email": "",
+          "website": "https://www.kmk.org/zab/zentralstelle-fuer-auslaendisches-bildungswesen.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 23,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Übersicht: Beratungsstellen bei rechter, rassistischer und antisemitischer Gewalt",
+          "phone": "",
+          "email": "",
+          "website": "https://verband-brg.de/beratung/#beratungsstellen"
+        },
+        {
+          "name": "Übersicht: Angebote der Opferberatung",
+          "phone": "",
+          "email": "",
+          "website": "https://www.demokratie-leben.de/projekte-expertise/beratungsangebote/alle-angebote-der-opferberatung"
         }
       ]
     }
