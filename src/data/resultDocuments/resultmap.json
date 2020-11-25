@@ -217,6 +217,84 @@
         "merkmal_ethnisch_detail": ["Äußere Merkmale"],
         "lebensbereich": ["Öffentlichkeit und Freizeit"]
       }
+    },
+    {
+      "identifier": 24,
+      "features": {
+        "lebensbereich":[
+          "Ämter und Behörden",
+          "Justiz und Polizei",
+          "Bildungsbereich"
+        ],
+        "lebensbereich_bildung_detail": [
+          "Öffentliche Schule",
+          "Hochschule"
+        ]
+      }
+    },
+    {
+      "identifier": 25,
+      "features": {
+        "merkmal": [
+          "Ethnische Herkunft/Rassistische Diskriminierung",
+          "Religion/Weltanschauung",
+          "Behinderung/chronische Krankheiten",
+          "Alter",
+          "Sexuelle Identität",
+          "Geschlecht/Geschlechtsidentität"
+        ],
+        "lebensbereich":["Arbeitsleben"],
+        "lebensbereich_arbeit_detail": ["Zugang"]
+      }
+    },
+    {
+      "identifier": 26,
+      "features": {
+        "merkmal": [
+          "Ethnische Herkunft/Rassistische Diskriminierung",
+          "Religion/Weltanschauung",
+          "Behinderung/chronische Krankheiten",
+          "Alter",
+          "Sexuelle Identität",
+          "Geschlecht/Geschlechtsidentität"
+        ],
+        "lebensbereich":["Arbeitsleben"],
+        "lebensbereich_arbeit_detail": ["Im Beschäftigungsverhältnis"]
+      }
+    },
+    {
+      "identifier": 27,
+      "features": {
+        "merkmal": [
+          "Ethnische Herkunft/Rassistische Diskriminierung",
+          "Religion/Weltanschauung",
+          "Behinderung/chronische Krankheiten",
+          "Alter",
+          "Sexuelle Identität",
+          "Geschlecht/Geschlechtsidentität"
+        ],
+        "lebensbereich":["Arbeitsleben"],
+        "lebensbereich_arbeit_detail": ["Kündigung/Beendigung"]
+      }
+    },
+    {
+      "identifier": 28,
+      "features": {
+        "merkmal": [
+          "Ethnische Herkunft/Rassistische Diskriminierung",
+          "Religion/Weltanschauung",
+          "Behinderung/chronische Krankheiten",
+          "Alter",
+          "Sexuelle Identität",
+          "Geschlecht/Geschlechtsidentität"
+        ],
+        "lebensbereich":[
+          "Geschäfte, Verträge und Dienstleistungen",
+          "Wohnungsmarkt",
+          "Bildungsbereich"
+        ],
+        "lebensbereich_bildung_detail": ["Privatschule/Privatunterricht"]
+      }
     }
   ]
 }

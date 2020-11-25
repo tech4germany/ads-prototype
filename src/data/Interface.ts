@@ -12,7 +12,7 @@ import frist from "data/stepDocuments/frist.json"
 import result_placeholder from "data/stepDocuments/result_placeholder.json"
 import result_map from "data/resultDocuments/resultmap.json"
 import result_content from "data/resultDocuments/resultContent.json"
-import {ResultContentLayout, ReferralLayout, AdditionalContentType, ResultType, DefaultSpecsLayout, NonDefaultSpecsLayout, StepDocumentLayout, EdgeDetail, DocumentQueueLayout, ResultSpecsLayout, ResultFeatureType } from "data/customTypes"
+import {TemplateLayout, ResultContentLayout, ReferralLayout, AdditionalContentType, ResultType, DefaultSpecsLayout, NonDefaultSpecsLayout, StepDocumentLayout, EdgeDetail, DocumentQueueLayout, ResultSpecsLayout, ResultFeatureType } from "data/customTypes"
 
 // collect all documents
 let allDocuments: DocumentQueueLayout = [
@@ -93,7 +93,7 @@ export function getResultReferrals(id: number | undefined): Array<ReferralLayout
   return null
 }
 
-export function getResultTemplates(id: number | undefined): Array<string> | null {
+export function getResultTemplates(id: number | undefined): TemplateLayout | null {
   let _result: ResultContentLayout = result_content.filter(function(element) {
     return element.identifier === id
   })[0]

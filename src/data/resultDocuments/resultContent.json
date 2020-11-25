@@ -456,5 +456,75 @@
         }
       ]
     }
+  },
+  {
+    "identifier": 24,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "templates": {
+          "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.9_Dienstaufsichtsbeschwerde_PC.docx?__blob=publicationFile&v=6",
+          "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/59_Dienstaufsichtsbeschwerde_Ausfuellhinweise2.pdf?__blob=publicationFile&v=6"
+        }
+    }
+  },
+  {
+    "identifier": 25,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "templates": {
+          "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.4_Abhilfe_aussergerichtlich_PC.doc;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=18",
+          "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.4_Abhilfe_aussergerichtlich_Ausfuellhinweise.pdf;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=14"
+        }
+    }
+  },
+  {
+    "identifier": 26,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "templates": {
+          "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.3_Beschwerde_nach_13_AGG_PC.docx;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=6",
+          "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.3_Beschwerde_nach_13_AGG_Ausfuellhinweise.pdf;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=6"
+        }
+    }
+  },
+  {
+    "identifier": 27,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "templates": {
+          "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.4_Abhilfe_aussergerichtlich_PC.doc;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=18",
+          "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.4_Abhilfe_aussergerichtlich_Ausfuellhinweise.pdf;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=14"
+        }
+    }
+  },
+  {
+    "identifier": 28,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    },
+    "additional_content": {
+      "templates": {
+          "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.5_Abhilfe_aussergerichtlich_Geltendmachung_PC.doc;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=14",
+          "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.5_Abhilfe_aussergerichtlich_Geltendmachung_Ausfuellhinweise.pdf;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=17"
+        }
+    }
   }
 ]

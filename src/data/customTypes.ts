@@ -25,7 +25,7 @@ export type ResultSpecsLayout = {
 
 type AdditionalContentLayout = {
   "referrals"?: Array<ReferralLayout>,
-  "templates"?: Array<string>,
+  "templates"?: TemplateLayout,
   "material"?: Array<string>
 }
 
@@ -90,6 +90,11 @@ export type ReferralLayout = {
   "phone": string,
   "email": string,
   "website": string
+}
+
+export type TemplateLayout = {
+  "template": string,
+  "help": string
 }
 
 export interface StepDocumentLayout {
