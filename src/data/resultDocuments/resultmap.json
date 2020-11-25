@@ -240,6 +240,7 @@
           "Religion/Weltanschauung",
           "Behinderung/chronische Krankheiten",
           "Alter",
+          "Geschlecht/Geschlechtsidentität",
           "Sexuelle Identität",
           "Geschlecht/Geschlechtsidentität"
         ],
@@ -255,6 +256,7 @@
           "Religion/Weltanschauung",
           "Behinderung/chronische Krankheiten",
           "Alter",
+          "Geschlecht/Geschlechtsidentität",
           "Sexuelle Identität",
           "Geschlecht/Geschlechtsidentität"
         ],
@@ -270,6 +272,7 @@
           "Religion/Weltanschauung",
           "Behinderung/chronische Krankheiten",
           "Alter",
+          "Geschlecht/Geschlechtsidentität",
           "Sexuelle Identität",
           "Geschlecht/Geschlechtsidentität"
         ],
@@ -285,6 +288,7 @@
           "Religion/Weltanschauung",
           "Behinderung/chronische Krankheiten",
           "Alter",
+          "Geschlecht/Geschlechtsidentität",
           "Sexuelle Identität",
           "Geschlecht/Geschlechtsidentität"
         ],
@@ -294,6 +298,93 @@
           "Bildungsbereich"
         ],
         "lebensbereich_bildung_detail": ["Privatschule/Privatunterricht"]
+      }
+    },
+    {
+      "identifier": 29,
+      "features": {
+        "merkmal": ["Geschlecht/Geschlechtsidentität"],
+        "merkmal_gender_detail": ["Sexuelle Belästigung"],
+        "lebensbereich":["Arbeitsleben"]
+      }
+    },
+    {
+      "identifier": 30,
+      "features": {
+        "lebensbereich":["Arbeitsleben"]
+      }
+    },
+    {
+      "identifier": 31,
+      "features": {
+        "lebensbereich":["Wohnungsmarkt"]
+      }
+    },
+    {
+      "identifier": 32,
+      "features": {
+        "lebensbereich":["Bildungsbereich"],
+        "lebensbereich_bildung_detail": ["Öffentliche Schule"]
+      }
+    },
+    {
+      "identifier": 33,
+      "features": {
+        "lebensbereich":["Bildungsbereich"],
+        "lebensbereich_bildung_detail": ["Hochschule"]
+      }
+    },
+    {
+      "identifier": 34,
+      "features": {
+        "merkmal": ["Geschlecht/Geschlechtsidentität"],
+        "merkmal_gender_detail": ["Trans*"],
+        "lebensbereich": ["Arbeitsleben"]
+      }
+    },
+    {
+      "identifier": 35,
+      "features": {
+        "merkmal": ["Geschlecht/Geschlechtsidentität"],
+        "merkmal_gender_detail": ["Trans*"],
+        "lebensbereich": ["Gesundheit und Pflege"],
+        "lebensbereich_gesundheit_detail": ["Arztbesuch"]
+      }
+    },
+    {
+      "identifier": 36,
+      "features": {
+        "merkmal": ["Geschlecht/Geschlechtsidentität"],
+        "merkmal_gender_detail": ["Inter*"],
+        "lebensbereich": ["Gesundheit und Pflege"],
+        "lebensbereich_gesundheit_detail": ["Arztbesuch"]
+      }
+    },
+    {
+      "identifier": 37,
+      "features": {
+        "merkmal": ["Geschlecht/Geschlechtsidentität"],
+        "merkmal_gender_detail": ["Frau/Mann"],
+        "lebensbereich": ["Arbeitsleben"],
+        "lebensbereich_gesundheit_detail": ["Im Beschäftigungsverhältnis"]
+      }
+    },
+    {
+      "identifier": 38,
+      "features": {
+        "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+        "merkmal_ethnisch_detail": ["Äußere Merkmale"],
+        "lebensbereich": ["Justiz und Polizei"]
+      }
+    },
+    {
+      "identifier": 39,
+      "features": {
+        "merkmal": ["Geschlecht/Geschlechtsidentität"],
+        "merkmal_gender_detail": [
+          "Trans*",
+          "queer"
+        ]
       }
     }
   ]
