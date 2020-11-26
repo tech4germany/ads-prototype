@@ -4,7 +4,7 @@ e.g. color codes and font size and types.
  */
 
 export const colorMain = {
-  "115":"#63b1c9",
+  "115":"#004a8a",
   "100":"#63b1c9",
   "45": '#b8c0c5',
   "15":"#e8f3f7",

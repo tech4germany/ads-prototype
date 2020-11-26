@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   templateItem: {
     display: "flex",
     flexDirection: "column",
-    marginBottom: "16px"
+    marginTop: "16px"
   }
 }));
 
@@ -46,8 +46,8 @@ export default function ResultsTemplates() {
           list.map((label, index) => {
             return(
               <div className={classes.templateItem}>
-                <span>{label.template}</span>
-                <span>{label.help}</span>
+                <span><a href={label.template}>Vorlage</a></span>
+                <span><a href={label.help}>Ausfüllhinweise</a></span>
               </div>
             )
           }):
