@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   referralItem: {
     display: "flex",
     flexDirection: "column",
-    marginBottom: "16px"
+    marginTop: "16px"
   }
 }));
 
@@ -49,9 +49,21 @@ export default function ResultReferrals() {
             return(
               <div className={classes.referralItem}>
                 <span>{label.name}</span>
-                <span>{label.phone}</span>
-                <span>{label.email}</span>
-                <span>{label.website}</span>
+                {
+                  label.phone?
+                  <span>Telefon: <a href={"tel:"+label.phone}>{label.phone}</a></span>:
+                  null
+                }
+                {
+                  label.email?
+                  <span>Email: <a href={"email:"+label.email}>{label.email}</a></span>:
+                  null
+                }
+                {
+                  label.website?
+                  <span><a href={label.website}>Website</a></span>:
+                  null
+                }
               </div>
             )
           }):

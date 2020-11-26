@@ -93,9 +93,9 @@ export type EdgeDetailsLayout = {
 
 export type ReferralLayout = {
   "name": string,
-  "phone": string,
-  "email": string,
-  "website": string
+  "phone"?: string,
+  "email"?: string,
+  "website"?: string
 }
 
 export type TemplateLayout = {

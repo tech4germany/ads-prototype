@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import map from 'assets/images/map_icon.png';
+import { colorMain, textSelectionMain, textSelectionExplanation } from "components/styleguide"
 
 const useStyles = makeStyles((theme) => ({
   mapSpace: {
@@ -9,29 +9,41 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     flexWrap: "wrap",
-    minWidth: "100%",
     paddingBottom: "4vh"
   },
   mapHeader: {
+    marginTop: "20px",
+    marginBottom: "8px",
+    marginLeft: "38px",
+    marginRight: "38px",
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "22px",
-    paddingBottom: "2.3vh"
+    fontSize: "22px"
   },
-  mapImage: {
+  mapInfo: {
+    marginBottom: "20px",
+    marginLeft: "38px",
+    marginRight: "38px",
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "16px",
+    lineHeight: "22px",
+    maxWidth: "268px"
+  },
+  mapContainer: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
-    maxWidth: "50vw",
-    maxHeight: "20vh",
-    overflow: "hidden",
-    borderWidth: "3px",
+    justifyContent: "flex-start",
+    maxWidth: "344px",
     backgroundColor: "white"
   },
-  mapImageZoom: {
-    width: "auto",
-    maxHeight: "20vh"
+  mapContent: {
+    height: "100%",
+    maxWidth: "333px"
+  },
+  mapStripe: {
+    display: "flex",
+    backgroundColor: colorMain["115"],
+    minHeight: "100px",
+    width: "11px"
   }
 }));
 
@@ -40,13 +52,19 @@ export default function ResultMap() {
 
   return (
     <div className={classes.mapSpace}>
-      <div className={classes.mapHeader}>
-        Beratungsstellen in Ihrer Nähe finden
-      </div>
-      <div className={classes.mapImage}>
-        <a target="_blank" href="https://www.antidiskriminierungsstelle.de/SiteGlobals/Forms/Suche/Beratungsstellensuche/Karte/Beratungsstellensuche_formular.html?nn=6560716&ambit_distance=200&ambit_distance.HASH=3f1f143fdef1207bca01">
-        <img className={classes.mapImageZoom} src={map} alt={"empty"}/>
-        </a>
+      <div className={classes.mapContainer}>
+        <div className={classes.mapContent}>
+          <div className={classes.mapHeader}>
+            <span>Beratungsstellen</span>
+          </div>
+          <div className={classes.mapInfo}>
+            Finden Sie eine Beratungsstelle in Ihrer Nähe über unsere Beratungsstellensuche
+              <br></br>
+              <br></br>
+            <span><a target="_blank" href={"https://www.antidiskriminierungsstelle.de/SiteGlobals/Forms/Suche/Beratungsstellensuche/Karte/Beratungsstellensuche_formular.html?nn=6560716&ambit_distance=200&ambit_distance.HASH=3f1f143fdef1207bca01"}>Beratungsstelle finden</a></span>
+          </div>
+        </div>
+        <div className={classes.mapStripe}></div>
       </div>
     </div>
   );

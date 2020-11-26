@@ -26,12 +26,12 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       flexDirection: "row",
       alignItems: "flex-start",
-      minWidth: "100%",
       minHeight: "59vh"
   },
   infoTemplateSpace: {
     maxHeight: "100%",
-    paddingRight: "7vw"
+    maxWidth: "750px",
+    marginRight: "30px"
   },
   contactMapSpace: {
     maxHeight: "100%"

@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   materialsItem: {
     display: "flex",
     flexDirection: "column",
-    marginBottom: "16px"
+    marginTop: "16px"
   }
 }));
 
@@ -47,8 +47,8 @@ export default function ResultsMaterials() {
           materials.map((label, index) => {
             return(
               <div className={classes.materialsItem}>
-                <span>{label.name}</span>
-                <span>{label.link}</span>
+              <span>{label.name}</span>
+              <span><a href={label.link}>Link zum Download</a></span>
               </div>
             )
           }):
