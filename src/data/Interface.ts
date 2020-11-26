@@ -10,9 +10,25 @@ import lebensbereich_bildung_detail from "data/stepDocuments/lebensbereich_bildu
 import lebensbereich_gesundheit_detail from "data/stepDocuments/lebensbereich_gesundheit_detail.json"
 import frist from "data/stepDocuments/frist.json"
 import result_placeholder from "data/stepDocuments/result_placeholder.json"
-import result_map from "data/resultDocuments/resultmap.json"
-import result_content from "data/resultDocuments/resultContent.json"
-import {ResultContentLayout, ReferralLayout, AdditionalContentType, ResultType, DefaultSpecsLayout, NonDefaultSpecsLayout, StepDocumentLayout, EdgeDetail, DocumentQueueLayout, ResultSpecsLayout, ResultFeatureType } from "data/customTypes"
+import default_result_map from "data/resultDocuments/defaultResultMap.json"
+import non_default_result_map from "data/resultDocuments/nonDefaultResultMap.json"
+import non_default_result_content from "data/resultDocuments/nonDefaultResultContent.json"
+import default_result_content from "data/resultDocuments/defaultResultContent.json"
+import {
+  NonDefaultResultContentLayout,
+  DefaultResultContentLayout,
+  MaterialLayout,
+  TemplateLayout,
+  ReferralLayout,
+  AdditionalContentType,
+  ResultType,
+  DefaultSpecsLayout,
+  NonDefaultSpecsLayout,
+  StepDocumentLayout,
+  EdgeDetail,
+  DocumentQueueLayout,
+  ResultSpecsLayout,
+  ResultFeatureType } from "data/customTypes"
 
 // collect all documents
 let allDocuments: DocumentQueueLayout = [
@@ -47,72 +63,79 @@ export function mapLabelToFeature(stepIdentifier: string, label: string, feature
 }
 
 // retrieve count of result types
-export function getResultCount(result_type: ResultType): number {
-  return result_map[result_type].length
+export function getDefaultResultCount(): number {
+  return default_result_map.length
 }
 
-// retrieve result mapping by id
-export function getResultMap(id: number, result_type: ResultType): ResultSpecsLayout {
-  return JSON.parse(JSON.stringify(result_map[result_type][id]))
+export function getNonDefaultResultCount(): number {
+  return non_default_result_map.length
+}
+
+// retrieve result map
+export function getDefaultResultIdentifier(id: number): number {
+  return JSON.parse(JSON.stringify(default_result_map[id].identifier))
 }
 
 export function getDefaultResultProfile(id: number): DefaultSpecsLayout {
-  let _profile = result_map[ResultType.default][id]["profile"]
-  return _profile
+  return JSON.parse(JSON.stringify(default_result_map[id].profile))
+}
+
+export function getNonDefaultResultIdentifier(id: number): number {
+  return JSON.parse(JSON.stringify(non_default_result_map[id].identifier))
 }
 
 export function getNonDefaultResultFeatures(id: number): NonDefaultSpecsLayout {
-  let _features = result_map[ResultType.non_default][id]["features"]
+  let _features = non_default_result_map[id]["features"]
   return _features
-}
-
-export function getNonDefaultResultId(id: number): number {
-  let _identifier = result_map[ResultType.non_default][id]["identifier"]
-  return _identifier
 }
 
 // retrieve result content by id
 export function getResultFeature(id: number | undefined, feature: ResultFeatureType): string {
-  let _feature = result_content.filter(function(element) {
+  let _feature = default_result_content.filter(function(element) {
     return element.identifier === id
   })[0]["features"][feature]
   return _feature
 }
 
 // retrieve additional content information
-export function getResultReferrals(id: number | undefined): Array<ReferralLayout> | null {
-  let _result: ResultContentLayout = result_content.filter(function(element) {
-    return element.identifier === id
-  })[0]
-  console.log("res content: ", _result)
-  if (typeof _result["additional_content"] !== "undefined") {
-    if (typeof _result["additional_content"]["referrals"] !== "undefined") {
-      return _result["additional_content"]["referrals"]
-    }
+export function getResultReferrals(ids: Array<number> | undefined): Array<ReferralLayout> {
+  let referrals: Array<ReferralLayout> =[];
+  if (typeof ids === "undefined") { return referrals}
+  for (const val of ids) {
+    let _result: NonDefaultResultContentLayout = non_default_result_content.filter(function(element) {
+      return element.identifier === val
+    })[0]
+      if (typeof _result["additional_content"]["referrals"] !== "undefined") {
+        referrals.push(..._result["additional_content"]["referrals"])
+      }
   }
-  return null
+  return referrals
 }
 
-export function getResultTemplates(id: number | undefined): Array<string> | null {
-  let _result: ResultContentLayout = result_content.filter(function(element) {
-    return element.identifier === id
-  })[0]
-  if (typeof _result["additional_content"] !== "undefined") {
-    if (typeof _result["additional_content"]["templates"] !== "undefined") {
-      return _result["additional_content"]["templates"]
-    }
+export function getResultTemplates(ids: Array<number> | undefined): Array<TemplateLayout> {
+  let templates: Array<TemplateLayout> =[];
+  if (typeof ids === "undefined") { return templates}
+  for (const val of ids) {
+    let _result: NonDefaultResultContentLayout = non_default_result_content.filter(function(element) {
+      return element.identifier === val
+    })[0]
+      if (typeof _result["additional_content"]["templates"] !== "undefined") {
+        templates.push(..._result["additional_content"]["templates"])
+      }
   }
-  return null
+  return templates
 }
 
-export function getResultMaterials(id: number | undefined): Array<string> | null {
-  let _result: ResultContentLayout = result_content.filter(function(element) {
-    return element.identifier === id
-  })[0]
-  if (typeof _result["additional_content"] !== "undefined") {
-    if (typeof _result["additional_content"]["material"] !== "undefined") {
-      return _result["additional_content"]["material"]
-    }
+export function getResultMaterials(ids: Array<number> | undefined): Array<MaterialLayout> {
+  let materials: Array<MaterialLayout> =[];
+  if (typeof ids === "undefined") { return materials}
+  for (const val of ids) {
+    let _result: NonDefaultResultContentLayout = non_default_result_content.filter(function(element) {
+      return element.identifier === val
+    })[0]
+      if (typeof _result["additional_content"]["materials"] !== "undefined") {
+        materials.push(..._result["additional_content"]["materials"])
+      }
   }
-  return null
+  return materials
 }

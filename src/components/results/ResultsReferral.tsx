@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 export default function ResultReferrals() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
-  let list = getResultReferrals(resultSpecs.self.identifier)
+  let list = getResultReferrals(resultSpecs.self.non_default_identifier)
 
   return (
     <div className={classes.infoSpace}>

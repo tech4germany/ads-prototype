@@ -46,12 +46,12 @@ export default function ResultInfo() {
       <span className={classes.infoText}>
         Sie sehen sich aufgrund des Merkmals <b>{answers.getAnswerByKey("merkmal", 0)}
         </b> im Lebensbereich <b>{answers.getAnswerByKey("lebensbereich", 0)}</b> diskriminiert.&nbsp;
-        {getResultFeature(resultSpecs.self.identifier, ResultFeatureType.agg_text)}
-        {getResultFeature(resultSpecs.self.identifier, ResultFeatureType.frist_text)}
+        {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.agg_text)}
+        {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.frist_text)}
       </span>
       <span className={classes.subHeader}>Nächste Schritte:</span>
       <span className={classes.infoText}>
-        {getResultFeature(resultSpecs.self.identifier, ResultFeatureType.next_step)}
+        {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.next_step)}
       </span>
     </div>
   );

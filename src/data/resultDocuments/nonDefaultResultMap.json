@@ -1,0 +1,359 @@
+[
+  {
+    "identifier": 0,
+    "features": {
+      "merkmal": ["Behinderung/chronische Krankheiten"],
+      "lebensbereich": [
+        "Bildungsbereich"
+      ],
+      "lebensbereich_bildung_detail": ["Hochschule"]
+    }
+  },
+  {
+    "identifier": 1,
+    "features": {
+      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
+      "lebensbereich": [
+        "Ämter und Behörden",
+        "Justiz und Polizei",
+        "Bildungsbereich",
+        "Gesundheit und Pflege",
+        "Öffentlichkeit und Freizeit"
+      ]
+    }
+  },
+  {
+    "identifier": 2,
+    "features": {
+      "merkmal": ["Behinderung/chronische Krankheiten"],
+      "lebensbereich": [
+        "Ämter und Behörden",
+        "Justiz und Polizei",
+        "Bildungsbereich",
+        "Gesundheit und Pflege",
+        "Öffentlichkeit und Freizeit"
+      ],
+      "lebensbereich_bildung_detail": [
+        "Kita",
+        "Privatschule/Privatunterricht",
+        "Öffentliche Schule"
+      ]
+    }
+  },
+  {
+    "identifier": 3,
+    "features": {
+      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal_ethnisch_detail": [
+        "Trans*",
+        "Inter*",
+        "queer"
+      ]
+    }
+  },
+  {
+    "identifier": 4,
+    "features": {
+      "merkmal": ["Sexuelle Identität"]
+    }
+  },
+  {
+    "identifier": 5,
+    "features": {
+      "lebensbereich": ["Gesundheit und Pflege"]
+    }
+  },
+  {
+    "identifier": 6,
+    "features": {
+      "merkmal": ["Sozialer Status"]
+    }
+  },
+  {
+    "identifier": 7,
+    "features": {
+      "lebensbereich": ["Internet, Medien und Werbung"]
+    }
+  },
+  {
+    "identifier": 8,
+    "features": {
+      "lebensbereich": ["Geschäfte, Verträge und Dienstleistungen"]
+    }
+  },
+  {
+    "identifier": 9,
+    "features": {
+      "lebensbereich": [
+        "Internet, Medien und Werbung",
+        "Öffentlichkeit und Freizeit"
+      ]
+    }
+  },
+  {
+    "identifier": 10,
+    "features": {
+      "merkmal": ["Sozialer Status"],
+      "lebensbereich": ["Ämter und Behörden"]
+    }
+  },
+  {
+    "identifier": 11,
+    "features": {
+      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal_gender_detail": ["Sexuelle Belästigung"]
+    }
+  },
+  {
+    "identifier": 12,
+    "features": {
+      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal_gender_detail": ["Sexuelle Belästigung"],
+      "lebensbereich": ["Bildungsbereich"],
+      "lebensbereich_bildung_detail": [
+        "Kita",
+        "Privatschule/Privatunterricht",
+        "Öffentliche Schule"
+      ]
+    }
+  },
+  {
+    "identifier": 13,
+    "features": {
+      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal_gender_detail": [
+        "Trans*",
+        "Inter*"
+      ]
+    }
+  },
+  {
+    "identifier": 14,
+    "features": {
+      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal_gender_detail": ["Trans*"],
+      "lebensbereich": ["Bildungsbereich"],
+      "lebensbereich_bildung_detail": [
+        "Kita",
+        "Privatschule/Privatunterricht",
+        "Öffentliche Schule"
+      ]
+    }
+  },
+  {
+    "identifier": 15,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Geschlecht/Geschlechtsidentität"
+      ],
+      "merkmal_gender_detail": [
+        "Trans*",
+        "Inter*",
+        "queer"
+      ]
+    }
+  },
+  {
+    "identifier": 16,
+    "features": {
+      "lebensbereich": ["Gesundheit und Pflege"],
+      "lebensbereich_bildung_detail": ["Arztbesuch"]
+    }
+  },
+  {
+    "identifier": 17,
+    "features": {
+      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
+      "lebensbereich": ["Arbeitsleben"]
+    }
+  },
+  {
+    "identifier": 18,
+    "features": {
+      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
+      "lebensbereich": ["Bildungsbereich"],
+      "lebensbereich_bildung_detail": ["Hochschule"]
+    }
+  },
+  {
+    "identifier": 19,
+    "features": {
+      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal_ethnisch_detail": ["Äußere Merkmale"],
+      "lebensbereich": ["Öffentlichkeit und Freizeit"]
+    }
+  },
+  {
+    "identifier": 20,
+    "features": {
+      "lebensbereich":[
+        "Ämter und Behörden",
+        "Justiz und Polizei",
+        "Bildungsbereich"
+      ],
+      "lebensbereich_bildung_detail": [
+        "Öffentliche Schule",
+        "Hochschule"
+      ]
+    }
+  },
+  {
+    "identifier": 21,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität"
+      ],
+      "lebensbereich":["Arbeitsleben"],
+      "lebensbereich_arbeit_detail": ["Zugang"]
+    }
+  },
+  {
+    "identifier": 22,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität"
+      ],
+      "lebensbereich":["Arbeitsleben"],
+      "lebensbereich_arbeit_detail": ["Im Beschäftigungsverhältnis"]
+    }
+  },
+  {
+    "identifier": 23,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität"
+      ],
+      "lebensbereich":["Arbeitsleben"],
+      "lebensbereich_arbeit_detail": ["Kündigung/Beendigung"]
+    }
+  },
+  {
+    "identifier": 24,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität"
+      ],
+      "lebensbereich":[
+        "Geschäfte, Verträge und Dienstleistungen",
+        "Wohnungsmarkt",
+        "Bildungsbereich"
+      ],
+      "lebensbereich_bildung_detail": ["Privatschule/Privatunterricht"]
+    }
+  },
+  {
+    "identifier": 25,
+    "features": {
+      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal_gender_detail": ["Sexuelle Belästigung"],
+      "lebensbereich":["Arbeitsleben"]
+    }
+  },
+  {
+    "identifier": 26,
+    "features": {
+      "lebensbereich":["Arbeitsleben"]
+    }
+  },
+  {
+    "identifier": 27,
+    "features": {
+      "lebensbereich":["Wohnungsmarkt"]
+    }
+  },
+  {
+    "identifier": 28,
+    "features": {
+      "lebensbereich":["Bildungsbereich"],
+      "lebensbereich_bildung_detail": ["Öffentliche Schule"]
+    }
+  },
+  {
+    "identifier": 29,
+    "features": {
+      "lebensbereich":["Bildungsbereich"],
+      "lebensbereich_bildung_detail": ["Hochschule"]
+    }
+  },
+  {
+    "identifier": 30,
+    "features": {
+      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal_gender_detail": ["Trans*"],
+      "lebensbereich": ["Arbeitsleben"]
+    }
+  },
+  {
+    "identifier": 31,
+    "features": {
+      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal_gender_detail": ["Trans*"],
+      "lebensbereich": ["Gesundheit und Pflege"],
+      "lebensbereich_gesundheit_detail": ["Arztbesuch"]
+    }
+  },
+  {
+    "identifier": 32,
+    "features": {
+      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal_gender_detail": ["Inter*"],
+      "lebensbereich": ["Gesundheit und Pflege"],
+      "lebensbereich_gesundheit_detail": ["Arztbesuch"]
+    }
+  },
+  {
+    "identifier": 33,
+    "features": {
+      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal_gender_detail": ["Frau/Mann"],
+      "lebensbereich": ["Arbeitsleben"],
+      "lebensbereich_gesundheit_detail": ["Im Beschäftigungsverhältnis"]
+    }
+  },
+  {
+    "identifier": 34,
+    "features": {
+      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal_ethnisch_detail": ["Äußere Merkmale"],
+      "lebensbereich": ["Justiz und Polizei"]
+    }
+  },
+  {
+    "identifier": 35,
+    "features": {
+      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal_gender_detail": [
+        "Trans*",
+        "queer"
+      ]
+    }
+  }
+]
