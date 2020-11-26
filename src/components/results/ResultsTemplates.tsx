@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 export default function ResultsTemplates() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
-  let template = getResultTemplates(resultSpecs.self.identifier)
+  let list = getResultTemplates(resultSpecs.self.non_default_identifier)
 
   return (
     <div className={classes.infoSpace}>
@@ -42,12 +42,15 @@ export default function ResultsTemplates() {
       <span className={classes.infoText}>
         Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
         {
-          template !== null?
+          (list !== null)?
+          list.map((label, index) => {
+            return(
               <div className={classes.templateItem}>
-                <span>{template.template}</span>
-                <span>{template.help}</span>
+                <span>{label.template}</span>
+                <span>{label.help}</span>
               </div>
-          :
+            )
+          }):
           <></>
         }
       </span>

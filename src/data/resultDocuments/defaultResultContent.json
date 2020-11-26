@@ -1,0 +1,34 @@
+[
+  {
+    "identifier": 0,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Machen Sie Ihre Forderung geltend! \nLaden Sie dazu das Download Paket runter und senden Sie das ausgefüllte Formular innerhalb der 2 Monatsfrist an die diskriminierende Stelle."
+    }
+  },
+  {
+    "identifier": 1,
+    "features": {
+      "agg_text": "Das Allgemeine Gleichbehandlungsgesetz (AGG) verbietet solche Benachteiligungen. ",
+      "frist_text": "Bitte beachten Sie, dass Sie Ihre Ihre Ansprüche innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen müssen.",
+      "next_step": "Leider scheint die Frist in Ihrem Fall schon abgelaufen zu sein. Wenn Sie dennoch Beratung zu Ihrem Fall wünschen, kontaktieren Sie uns bitte über das Kontaktformular."
+    }
+  },
+  {
+    "identifier": 2,
+    "features": {
+      "agg_text": "Der von Ihnen geschilderte Sachverhalt ist leider nicht vom Diskriminierungsschutz durch das AGG umfasst. Dennoch können Sie Ihre Rechte auf verschiedenen Wegen verfolgen.",
+      "frist_text": "",
+      "next_step": "Möglicherweise gibt es eine Stelle, die für Ihren Fall besser geeignet ist. Die Karte leitet Sie weiter zu einer Liste aller eingetragenen Beratungsstellen. Sollten Sie dort nicht fündig werden und wünschen weiterhin Beratung, kontaktieren Sie uns bitte über das Kontaktformular."
+    }
+  },
+  {
+    "identifier": 3,
+    "features": {
+      "agg_text": "Der von Ihnen geschilderte Sachverhalt ist leider nicht vom Diskriminierungsschutz durch das AGG umfasst. Dennoch können Sie Ihre Rechte auf verschiedenen Wegen verfolgen.",
+      "frist_text": "",
+      "next_step": "Möglicherweise gibt es eine Stelle, die für Ihren Fall besser geeignet ist. Die Karte leitet Sie weiter zu einer Liste aller eingetragenen Beratungsstellen. Sollten Sie dort nicht fündig werden und wünschen weiterhin Beratung, kontaktieren Sie uns bitte über das Kontaktformular."
+    }
+  }
+]

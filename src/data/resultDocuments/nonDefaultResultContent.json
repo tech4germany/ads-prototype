@@ -1,0 +1,520 @@
+[
+  {
+    "identifier": 0,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Informations- und Beratungsstelle Studium und Behinderung (IBS) beim Deutschen Studentenwerk",
+          "phone": "+ 49 (0) 30 29 77 27 - 64",
+          "email": "studium-behinderung@studentenwerke.de",
+          "website": "https://www.studentenwerke.de/de/content/beratung"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 1,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Die Beauftragte der Bundesregierung für Migration, Flüchtlinge und Integration",
+          "phone": "+49 (0) 30 18 400 - 1640",
+          "email": "integrationsbeauftragte@bk.bund.de",
+          "website": "https://www.integrationsbeauftragte.de/ib-de/service/kontakt"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 2,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Schlichtungsstelle nach dem Behindertengleichstellungsgesetz bei dem Beauftragten der Bundesregierung für die Belange von Menschen mit Behinderungen",
+          "phone": "+49 (0) 30 18 527 - 2805",
+          "email": "info@schlichtungsstelle-bgg.de",
+          "website": "http://www.schlichtungsstelle-bgg.de/"
+        },
+        {
+          "name": "Ergänzende unabhängige Teilhabeberatung (EUTB)",
+          "phone": "None",
+          "email": "None",
+          "website": "https://www.teilhabeberatung.de/beratung/beratungsangebote-der-eutb"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 3,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "TransInterQueer (TrIQ) e.V. Persönliche Trans*- und Inter*-Beratung",
+          "phone": "",
+          "email": "beratung@transinterqueer.org",
+          "website": "https://www.transinterqueer.org"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 4,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Lesben- und Schwulenverband (LSVD) e.V.",
+          "phone": "",
+          "email": "recht@lsvd.de",
+          "website": "https://www.lsvd.de/de/ct/1297-Die-LSVD-Rechtsberatung"
+        }
+      ],
+      "materials": [
+        {
+          "name": "Informationspool zu gleichgeschlechtlichen Lebensweisen und geschlechtlicher Vielfalt",
+          "link": "https://www.regenbogenportal.de/"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 5,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Unabhängige Patientenberatung Deutschland (UPD)",
+          "phone": "0800 0 11 77 22",
+          "email": "",
+          "website": "https://www.patientenberatung.de/de/beratungsangebot"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 6,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Caritas Allgemeine Sozialberatung",
+          "phone": "",
+          "email": "",
+          "website": "https://www.caritas.de/hilfeundberatung/onlineberatung/allgemeine-soziale-beratung/start"
+        },
+        {
+          "name": "Diakonie Allgemeine Sozialberatung",
+          "phone": "",
+          "email": "",
+          "website": "https://hilfe.diakonie.de/hilfe-vor-ort/allgemeine-sozialberatung/bundesweit/?text=&ersteller=&ansicht=karte"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 7,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "eco - Verband der Internetwirtschaft e.V. Internet-Beschwerdestelle",
+          "phone": "",
+          "email": "",
+          "website": "www.internet-beschwerdestelle.de"
+        },
+        {
+          "name": "Deutscher Presserat e.V.",
+          "phone": "",
+          "email": "",
+          "website": "www.presserat.de/beschwerde.html"
+        },
+        {
+          "name": "Arbeitsgemeinschaft der Landesmedienanstalten (ALM) Programmbeschwerde",
+          "phone": "",
+          "email": "",
+          "website": "https://www.programmbeschwerde.de/beschwerde/"
+        },
+        {
+          "name": "Zentralverband der deutschen Werbewirtschaft (ZAW) e.V. Deutscher Werberat",
+          "phone": "",
+          "email": "",
+          "website": "www.werberat.de/beschwerdeformular"
+        },
+        {
+          "name": "Pinkstinks Germany e.V. Werbemelder*in",
+          "phone": "",
+          "email": "",
+          "website": "www.pinkstinks.de/werbung-melden/"
+        },
+        {
+          "name": "HateAid",
+          "phone": "",
+          "email": "",
+          "website": "https://hateaid.org/"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 8,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Übersicht Schlichtungs- und Ombudsstellen in der Privatwirtschaft",
+          "phone": "",
+          "email": "",
+          "website": "http://www.allgemeinbildungsmagazin.de/galli/vr_om.htm"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 9,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Helpdesk des No Hate Speech Movement",
+          "phone": "",
+          "email": "",
+          "website": "https://www.neuemedienmacher.de/helpdesk/"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 10,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "",
+          "phone": "",
+          "email": "",
+          "website": "https://www.my-sozialberatung.de/adressen"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 11,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Frauenberatungsstellen vor Ort",
+          "phone": "",
+          "email": "",
+          "website": "https://www.frauen-gegen-gewalt.de/de/hilfe-vor-ort.html"
+        },
+        {
+          "name": "Hilfetelefon Gewalt gegen Frauen",
+          "phone": "",
+          "email": "",
+          "website": "https://www.hilfetelefon.de/"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 12,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Hilfetelefon sexueller Missbrauch",
+          "phone": "",
+          "email": "",
+          "website": "https://www.hilfeportal-missbrauch.de/startseite.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 13,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Beratungs- und Kontaktstellen der Deutschen Gesellschaft für Transidentität und Intersexualität e.V. (dgti)",
+          "phone": "",
+          "email": "",
+          "website": "https://www.dgti.org/beratungsstellen.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 14,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Trans-Kinder-Netz e.V. (Trakine e.V.)",
+          "phone": "",
+          "email": "",
+          "website": "https://www.trans-kinder-netz.de/was-bieten-wir-an.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 15,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Beratung für lesbische und bisexuelle Frauen/Mädchen Trans* und Inter*, mit und ohne Migrationshintergrund und Schwarze Lesben, Trans* und Inter*",
+          "phone": "",
+          "email": "",
+          "website": "https://lesmigras.de/beratung.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 16,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Beschwerdestellen der Landesärztekammern",
+          "phone": "",
+          "email": "",
+          "website": "https://www.tk.de/techniker/leistungen-und-mitgliedschaft/informationen-versicherte/leistungen/arzt-und-krankenhausbesuch/behandlungsfehler/haeufigste-fragen-zu-behandlungsfehlern/beschwerdestellen-aerztekammer-laender-zustaendigkeit-2010400"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 17,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Übersicht: Beratungsstellen zu Arbeit und Migration",
+          "phone": "",
+          "email": "",
+          "website": "https://www.faire-mobilitaet.de/beratungsstellen/++co++5050bc8e-e5a9-11e2-b08b-00188b4dc422"
+        },
+        {
+          "name": "Gleichbehandlungsstelle EU-Arbeitnehmer",
+          "phone": "",
+          "email": "",
+          "website": "https://www.eu-gleichbehandlungsstelle.de/eugs-de/fachleute/beratungsanfrage"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 18,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Beratungsangebote für ausländische Studierende der Studierendenwerke",
+          "phone": "",
+          "email": "",
+          "website": "https://www.studentenwerke.de/de/content/rat-und-hilfe"
+        },
+        {
+          "name": "Anerkennung ausländischer (Schul- und Studien-)Abschlüsse: Zentralstelle für ausländisches Bildungswesen (ZAB) im Sekretariat der Kultusministerkonferenz",
+          "phone": "",
+          "email": "",
+          "website": "https://www.kmk.org/zab/zentralstelle-fuer-auslaendisches-bildungswesen.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 19,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Übersicht: Beratungsstellen bei rechter, rassistischer und antisemitischer Gewalt",
+          "phone": "",
+          "email": "",
+          "website": "https://verband-brg.de/beratung/#beratungsstellen"
+        },
+        {
+          "name": "Übersicht: Angebote der Opferberatung",
+          "phone": "",
+          "email": "",
+          "website": "https://www.demokratie-leben.de/projekte-expertise/beratungsangebote/alle-angebote-der-opferberatung"
+        }
+      ],
+      "materials": [
+        {
+          "name": "Flyer: Was tun nach einem rassistischen Angriff? Empfehlungen für Betroffene (10 Sprachen)",
+          "link": "https://verband-brg.de/publikation-was-tun-nach-rassistischen-angriff-obr-2/"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 20,
+    "additional_content": {
+      "templates": [
+        {
+            "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.9_Dienstaufsichtsbeschwerde_PC.docx?__blob=publicationFile&v=6",
+            "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/59_Dienstaufsichtsbeschwerde_Ausfuellhinweise2.pdf?__blob=publicationFile&v=6"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 21,
+    "additional_content": {
+      "templates": [
+        {
+          "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.4_Abhilfe_aussergerichtlich_PC.doc;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=18",
+          "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.4_Abhilfe_aussergerichtlich_Ausfuellhinweise.pdf;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=14"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 22,
+    "additional_content": {
+      "templates": [
+        {
+          "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.3_Beschwerde_nach_13_AGG_PC.docx;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=6",
+          "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.3_Beschwerde_nach_13_AGG_Ausfuellhinweise.pdf;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=6"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 23,
+    "additional_content": {
+      "templates": [
+        {
+          "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.4_Abhilfe_aussergerichtlich_PC.doc;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=18",
+          "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.4_Abhilfe_aussergerichtlich_Ausfuellhinweise.pdf;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=14"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 24,
+    "additional_content": {
+      "templates": [
+        {
+          "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.5_Abhilfe_aussergerichtlich_Geltendmachung_PC.doc;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=14",
+          "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.5_Abhilfe_aussergerichtlich_Geltendmachung_Ausfuellhinweise.pdf;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=17"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 25,
+    "additional_content": {
+      "materials": [
+        {
+          "name": "Leitfaden: Was tun bei sexueller Belästigung am Arbeitsplatz?",
+          "link": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Leitfaeden/Leitfaden_Was_tun_bei_sexueller_Belaestigung.pdf?__blob=publicationFile&v=3"
+        },
+        {
+          "name": "Broschüre Grenzen setzen - was kann ich bei sexueller Belästigung am Arbeits-Platz machen? in Leichter Sprache",
+          "link": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Flyer/Grenzen_setzen_Leichte_Sprache_Broschuere_2017.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 26,
+    "additional_content": {
+      "materials": [
+        {
+          "name": "Leitfaden „Fair in den Job! - Leitfaden für diskriminierungsfreie Einstellungsverfahren“",
+          "link": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Leitfaeden/leitfaden_fair_in_den_job.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 27,
+    "additional_content": {
+      "materials": [
+        {
+          "name": "Leitfaden „Fair mieten, fair wohnen“",
+          "link": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Leitfaeden/Leitfaden_Wohnungsmarkt.pdf?__blob=publicationFile&v=1"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 28,
+    "additional_content": {
+      "materials": [
+        {
+          "name": "Leitfaden „Diskriminierung an Schulen erkennen und vermeiden“",
+          "link": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Leitfaeden/leitfaden_diskriminierung_an_schulen_erkennen_u_vermeiden.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 29,
+    "additional_content": {
+      "materials": [
+        {
+          "name": "Leitfaden „Diskriminierungsschutz an Hochschulen“",
+          "link": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Diskriminierungsfreie_Hochschule/leitfaden_diskriminierung_hochschule_20130916.html"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 30,
+    "additional_content": {
+      "materials": [
+        {
+          "name": "Reader Trans* im Job",
+          "link": "https://www.berlin.de/sen/lads/_assets/schwerpunkte/lsbti/materialien/tia/tia_broschure_reader_trans_im_job_bf.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 31,
+    "additional_content": {
+      "materials": [
+        {
+          "name": "Hinweise für Ärzt_innen, Psycholog_innen, Therapeut_innen & andere medizinische Berufsgruppen",
+          "link": "http://www.transinterqueer.org/download/Publikationen/triq_infobroschuere_medizinpsych_berufe.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 32,
+    "additional_content": {
+      "materials": [
+        {
+          "name": "Hinweise für Ärzt_innen, Psycholog_innen, Therapeut_innen & andere medizinische Berufsgruppen",
+          "link": "http://www.transinterqueer.org/download/Publikationen/InterSensibroschuere_2013.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 33,
+    "additional_content": {
+      "materials": [
+        {
+          "name": "Informationen zum Entgelttransparenzgesetz",
+          "link": "https://www.bmfsfj.de/entgelttransparenzgesetz"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 34,
+    "additional_content": {
+      "materials": [
+        {
+          "name": "Broschüre zu (rassistischer) Diskriminierung bei der Polizei",
+          "link": "http://www.gleichbehandlungsbuero.de/docs/Rassistische%20Disktiminierung%20bei%20der%20Polizei_Brochure%20vom%20ADB_K%C3%B6ln.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 35,
+    "additional_content": {
+      "materials": [
+        {
+          "name": "Informationspool zu gleichgeschlechtlichen Lebensweisen und geschlechtlicher Vielfalt",
+          "link": "https://www.regenbogenportal.de/"
+        }
+      ]
+    }
+  }
+]

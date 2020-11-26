@@ -59,17 +59,17 @@ export default function Result() {
             <Grid item lg={9} md={10} sm={12} xs={12} className={classes.infoTemplateSpace}>
               <ResultsInfo />
               {
-                getResultReferrals(resultSpecs.self.identifier)?
+                getResultReferrals(resultSpecs.self.non_default_identifier).length>0?
                 <ResultsReferrals />:
                 <></>
               }
               {
-                getResultTemplates(resultSpecs.self.identifier)?
+                getResultTemplates(resultSpecs.self.non_default_identifier).length>0?
                 <ResultsTemplates />:
                 <></>
               }
               {
-                getResultMaterials(resultSpecs.self.identifier)?
+                getResultMaterials(resultSpecs.self.non_default_identifier).length>0?
                 <ResultsMaterials />:
                 <></>
               }

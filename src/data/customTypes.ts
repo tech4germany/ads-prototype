@@ -18,18 +18,19 @@ export type NonDefaultSpecsLayout = {
 }
 
 export type ResultSpecsLayout = {
-  "identifier"?: number,
+  "default_identifier"?: number,
+  "non_default_identifier"?: Array<number>,
   "profile"?: DefaultSpecsLayout,
   "features"?: NonDefaultSpecsLayout
 }
 
 type AdditionalContentLayout = {
   "referrals"?: Array<ReferralLayout>,
-  "templates"?: TemplateLayout,
+  "templates"?: Array<TemplateLayout>,
   "materials"?: Array<MaterialLayout>
 }
 
-export type ResultContentLayout = {
+export type DefaultResultContentLayout = {
   "identifier": number,
   "features": {
     "agg_text": string,
@@ -37,6 +38,11 @@ export type ResultContentLayout = {
     "next_step": string
   },
   "additional_content"?: AdditionalContentLayout
+}
+
+export type NonDefaultResultContentLayout = {
+  "identifier": number,
+  "additional_content": AdditionalContentLayout
 }
 
 export enum ResultType {

@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 export default function ResultsMaterials() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
-  let materials = getResultMaterials(resultSpecs.self.identifier)
+  let materials = getResultMaterials(resultSpecs.self.non_default_identifier)
 
   return (
     <div className={classes.infoSpace}>

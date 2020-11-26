@@ -1,7 +1,13 @@
 import { createContainer } from 'unstated-next'
 import { useState } from 'react'
 import { AnswerProfileLayout, DefaultSpecsLayout, NonDefaultSpecsLayout, AnswersLayout, ResultSpecsLayout, EdgeDetail, ResultType } from "data/customTypes"
-import { mapLabelToFeature, getResultMap, getResultCount, getDefaultResultProfile, getNonDefaultResultFeatures, getNonDefaultResultId } from "data/Interface"
+import { getDefaultResultCount,
+  getNonDefaultResultCount,
+  mapLabelToFeature,
+  getDefaultResultIdentifier,
+  getDefaultResultProfile,
+  getNonDefaultResultIdentifier,
+  getNonDefaultResultFeatures } from "data/Interface"
 
 export function useResultSpecs(initialState: ResultSpecsLayout={}) {
   let [self, setResultSpecs] = useState(initialState)
@@ -13,11 +19,9 @@ export function useResultSpecs(initialState: ResultSpecsLayout={}) {
   }
 
   let _isFeatureEquivalent = (result_features: NonDefaultSpecsLayout, answers: AnswersLayout): boolean => {
-    console.log("new comparison")
-
     for (const [key, value] of Object.entries(result_features)) {
       if(typeof value !== "undefined") {
-        if (!(key in answers)){
+        if (!(key in answers)){ /// this only works because merkmal und lebensbereich are ALWAYS included
           continue
         } else if (!value.includes(answers[key][0])) {
           return false
@@ -44,31 +48,34 @@ export function useResultSpecs(initialState: ResultSpecsLayout={}) {
     return answerProfile
   }
 
-  let retrieveDefaultResult = (answers: AnswersLayout): ResultSpecsLayout => {
-    let res_match: ResultSpecsLayout={};
-    for (var i=0; i < getResultCount(ResultType.default); i++) {
+  let retrieveDefaultResult = (answers: AnswersLayout, result_match: ResultSpecsLayout): ResultSpecsLayout => {
+    for (var i=0; i < getDefaultResultCount(); i++) {
       if (_isProfileEquivalent(getDefaultResultProfile(i), _parseAnswerToProfile(answers))) {
-        res_match = getResultMap(i, ResultType.default)
+        result_match["default_identifier"] = getDefaultResultIdentifier(i)
+        result_match["profile"] = getDefaultResultProfile(i)
       }
     }
-    return res_match
+    return result_match
   }
 
-  let checkForNonDefaultResult = (answers: AnswersLayout, default_result: ResultSpecsLayout): ResultSpecsLayout => {
-    let res_match = default_result;
-    for (var i=0; i < getResultCount(ResultType.non_default); i++) {
+  let checkForNonDefaultResult = (answers: AnswersLayout, result_match: ResultSpecsLayout): ResultSpecsLayout => {
+    for (var i=0; i < getNonDefaultResultCount(); i++) {
       if (_isFeatureEquivalent(getNonDefaultResultFeatures(i), answers)) {
-        res_match["identifier"] = getNonDefaultResultId(i)
-        res_match["features"] = getNonDefaultResultFeatures(i)
+        if (typeof result_match["non_default_identifier"] === "undefined") {
+          result_match["non_default_identifier"] = [getNonDefaultResultIdentifier(i)]
+        } else {
+          result_match["non_default_identifier"].push(getNonDefaultResultIdentifier(i))
+        }
       }
     }
-    console.log("final result: ", res_match)
-    return res_match
+    return result_match
   }
 
   let retrieveResultType = (answers: AnswersLayout): void => {
-    let result_match = retrieveDefaultResult(answers);
+    let result_match: ResultSpecsLayout={};
+    result_match = retrieveDefaultResult(answers, result_match);
     result_match = checkForNonDefaultResult(answers, result_match)
+    console.log(result_match)
     setResultSpecs(result_match)
   }
 
