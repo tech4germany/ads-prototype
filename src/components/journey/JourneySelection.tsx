@@ -7,7 +7,8 @@ import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { EdgeDetail, UpdateType } from "data/customTypes"
-import infoIcon from 'assets/icons/information.png';
+import infoIcon from 'assets/icons/information.png'
+import { provideSelectionIcon } from "assets/icons/ProvideIcons"
 import JourneySelectionInfo from "components/journey/JourneySelectionInfo"
 
 const wrap = (s: string) => s.replace(
@@ -119,7 +120,6 @@ export default function JourneySelection() {
   }
 
   if (infoDisplay) {
-    console.log(typeof infoDisplay)
     return (
       <JourneySelectionInfo infoDisplay={infoDisplay} updateInfoDisplay={updateInfoDisplay} />
     )
@@ -128,7 +128,7 @@ export default function JourneySelection() {
       <Grid container className={classes.root}>
         {documentQueue.getEdges(activeStep.self).map((label, index) => {
           const infoTextisSet = documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.info_text)
-          const icon = require("assets/icons/" + documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
+          const selectionIcon = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
           return (
               <div className={classes.buttonContainer}>
                 <div className={classes.buttonContent}>
@@ -140,7 +140,7 @@ export default function JourneySelection() {
                     }}>
                     <div className={classes.iconContainer}>
                       <div className={classes.iconContainerPlaceholder}></div>
-                      <img className={classes.icon} src={icon} alt={"empty"}/>
+                      <img className={classes.icon} src={selectionIcon} alt={"empty"}/>
                       <div className={classes.infoIconContainer}>
                         {
                           infoTextisSet?
