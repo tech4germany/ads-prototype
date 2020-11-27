@@ -82,13 +82,15 @@ export enum EdgeDetail {
   status="status",
   description="description",
   next_node="next_node",
-  icon="icon"
+  icon="icon",
+  info_text="info_text"
 }
 export type EdgeDetailsLayout = {
     "status": string,
     "description": string | null,
     "next_node": string | null,
-    "icon": string | null
+    "icon": string | null,
+    "info_text": string | null
 }
 
 export type ReferralLayout = {
