@@ -25,16 +25,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     maxWidth: "734px",
     minHeight: "210px",
-    cursor: "pointer",
     backgroundColor: "white",
     marginBottom: "15px",
   },
   infoContent: {
     minHeight: "166px",
     marginBottom: "22px",
-    marginLeft: "22px",
-    fontFamily: textSelectionMain["fontFamily"],
-    fontSize: textSelectionMain["fontSize"]
+    paddingLeft: "22px",
+    maxWidth: "728px"
   },
   infoCard: {
     height: "100%",
@@ -42,11 +40,27 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "space-between",
   },
+  headerRow: {
+    maxWidth: "722px",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: "41px"
+  },
   infoHeader: {
     whiteSpace: "pre-wrap",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "flex-end"
+    justifyContent: "flex-end",
+    fontFamily: textSelectionMain["fontFamily"],
+    fontSize: textSelectionMain["fontSize"]
+  },
+  exitIcon: {
+    width: "30px",
+    height: "30px",
+    marginTop: "10px",
+    marginRight: "10px",
+    cursor: "pointer"
   },
   infoText: {
     ...textSelectionExplanation,
@@ -55,21 +69,11 @@ const useStyles = makeStyles((theme) => ({
   infoStripe: {
     display: "flex",
     backgroundColor: colorMain["115"],
-    height: "100%",
-    width: "11px"
-  },
-  headerRow: {
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: "41px"
-  },
-  exitIcon: {
-    width: "30px",
-    height: "30px",
-    marginTop: "10px",
-    marginRight: "10px",  }
+    width: "6px",
+    minWidth: "6px",
+    minHeight: "100px",
+    height: "100%"
+  }
 }));
 
 type PropsLayout = {
