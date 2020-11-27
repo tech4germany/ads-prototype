@@ -42,9 +42,6 @@ export default function Result() {
   const classes = useStyles();
   let answers = Answers.useContainer();
   let resultSpecs = ResultSpecs.useContainer();
-  const [showReferrals, setShowReferrals] = useState(true)
-  const [showTemplates, setShowTemplates] = useState(true)
-  const [showMaterials, setShowMaterials] = useState(true)
 
   useLayoutEffect(() => {
     resultSpecs.retrieveResultType(answers.self);
