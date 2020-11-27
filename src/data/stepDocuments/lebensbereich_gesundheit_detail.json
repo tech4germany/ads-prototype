@@ -12,14 +12,16 @@
             "status":"agg",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Benachteiligungen bei der Aufnahme in eine Krankenkasse, bei der Inanspruchnahme von Leistungen (Ablehnung einer Leistung oder Leistung zu schlechteren Konditionen), bei der Bemessung des Krankenkassenbeitrags. Die Benachteiligungen stehen in Zusammenhang mit einem bestimmten Diskriminierungsgrund."
         },
         "Arztbesuch": {
             "status":"non-agg",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Die ärztliche Behandlung wird verweigert in Zusammenhang mit einem bestimmten Diskriminierungsgrund. Diskriminierendes Verhalten von Ärzt*innen und Personal in Gesundheitspraxen und Krankenhäusern. Zum Beispiel ist die Behandlung nicht barrierefrei und kann deshalb nicht oder nur sehr schwer in Anspruch genommen werden."
         }
     }

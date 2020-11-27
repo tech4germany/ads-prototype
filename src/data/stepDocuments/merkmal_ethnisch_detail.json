@@ -12,21 +12,24 @@
             "status":"agg",
             "description": "Hautfarbe, Sprache, Name",
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "(rassistische) Zuschreibungen aufgrund von äußerlich erkennbaren Kriterien, die vermeintlich oder tatsächlich die Zugehörigkeit zu einer bestimmten Ethnie nahelegen, wie beispielsweise die Hautfarbe, die Sprache und der Name."
         },
         "Staatsangehörigkeit/Aufenthaltsstatus": {
             "status":"agg",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Staatsangehörigkeit meint die Zugehörigkeit zu einer bestimmten Nationalität anhand des Reisepasses oder Ausweises. Der Aufenthaltsstatus regelt Inhalt und Umfang der Aufenthaltsberechtigung in einem Staatsgebiet. Werden an die Zugehörigkeit zu einer bestimmten Nationalität oder an die Aufenthaltsberechtigung negative Folgen geknüpft, kann es sich um eine verbotene mittelbare Diskriminierung auf Grund der ethnischen Herkunft handeln."
         },
         "Sonstiges": {
             "status":"agg",
             "description": "Ich bin mir nicht sicher",
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Sie wissen nicht so genau, ob oder wo Ihr Fall hier reinpasst aber es geht um ethnische Herkunft und Rassismus."
         }
     }

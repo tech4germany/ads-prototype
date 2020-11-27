@@ -83,6 +83,7 @@ export enum EdgeDetail {
   description="description",
   next_node="next_node",
   icon="icon",
+  icon_hover="icon_hover",
   info_text="info_text"
 }
 export type EdgeDetailsLayout = {
@@ -90,6 +91,7 @@ export type EdgeDetailsLayout = {
     "description": string | null,
     "next_node": string | null,
     "icon": string | null,
+    "icon_hover": string | null,
     "info_text": string | null
 }
 

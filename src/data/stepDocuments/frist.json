@@ -12,28 +12,32 @@
             "status": "inTime",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": null
         },
         "Nein": {
             "status":"not-inTime",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": null
         },
         "dauert noch an/passiert ständig": {
             "status":"inTime",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": null
         },
         "Ich bin mir nicht sicher": {
             "status":"not-inTime",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": null
         }
     }

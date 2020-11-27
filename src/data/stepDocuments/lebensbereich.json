@@ -12,70 +12,80 @@
             "status":"agg",
             "description": null,
             "next_node": "lebensbereich_arbeit_detail",
-            "icon": "group.png",
+            "icon": "arbeitsleben",
+            "icon_hover": "arbeitsleben_hover",
             "info_text": "Diskriminierungen durch Arbeitgeber, Vorgesetze oder Kolleg*innen im Zusammenhang mit einem Beschäftigungsverhältnis. Erfasst ist die ganze Bandbreite von der Bewerbung bis zur Kündigung sowie einzelne Arbeitsbedingungen (Bezahlung, Beförderung, Mobbing am Arbeitsplatz und ähnliches). Geschützt sind Bewerber*innen, Angestellte, Praktikant*innen und Auszubildende. Freiberufler und Selbständige sowie Geschäftsführer*innen sind nur geschützt, wenn es um den Zugang zu einer Erwerbstätigkeit oder den beruflichen Aufstieg geht."
         },
         "Geschäfte, Verträge und Dienstleistungen": {
             "status":"agg",
             "description": "z.B. Einkaufen, Club, Friseur",
             "next_node": null,
-            "icon": "group.png",
+            "icon": "geschaefte",
+            "icon_hover": "geschaefte_hover",
             "info_text": "Hier geht es um alle alltäglichen Geschäfte und Vertragsbeziehungen, wie zum Beispiel Einkaufen oder Shoppen aber auch alle anderen bezahlten Leistungen, wie beispielweise die Mitgliedschaft im Fitnessstudio, der Kinobesuch, der Friseurbesuch, der Abschluss einer Versicherung, die Eröffnung eine Bankkontos, im Restaurant essen, in einer Kneipe etwas trinken oder in einen Club gehen. Wichtig ist, dass die Leistungen oder Waren öffentlich am Markt angeboten werden und der Vertrag quasi mit jeder zahlungswilligen Person geschlossen wird."
         },
         "Wohnungsmarkt": {
             "status":"agg",
             "description": "Wohnungsanzeige, Besichtigung, Mietverhältnis, Kündigung",
             "next_node": null,
-            "icon": "group.png",
+            "icon": "wohnungsmarkt",
+            "icon_hover": "wohnungsmarkt_hover",
             "info_text": "Erfasst werden Diskriminierungen bei der Wohnungssuche und der Wohnungsmiete. Hinweise auf eine Diskriminierung können diskriminierende Äußerungen in Wohnungsanzeigen oder bei der Wohnungsbesichtigung sein. Verboten sind Diskriminierungen durch Vermieter*innen bei bestehenden Mietverhältnissen sowie die Kündigung der Wohnung aus diskriminierenden Gründen. Nicht erfasst wird diskriminierendes Verhalten durch Nachbar*innen."
         },
         "Ämter und Behörden": {
             "status":"non-agg",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Diskriminierung durch staatliche Stellen und die Verwaltung bei der Ausführung öffentlicher Aufgaben und der Ausübung hoheitlicher Befugnisse. Insbesondere staatliches Handeln durch Verwaltungsakt oder Bescheide. Beispiel dafür sind Jugendamt, Sozialamt, Arbeitsagentur oder Jobcenter sowie Finanzamt, Standesamt, Versorgungsamt, Integrationsamt oder Ausländerbehörden."
         },
         "Justiz und Polizei": {
             "status":"non-agg",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Diskriminierung durch Richter*innen, Staatsanwält*innen, Rechtsanwält*innen oder Justiz- und Vollzugsbeamt*innen und diskriminierende Gerichtsentscheidungen oder im Strafvollzug. Außerdem diskriminierendes Verhalten der Polizei oder des Zolls, wie beispielsweise Kontrollen auf Grund einer bestimmten Hautfarbe, sogenanntes racial profiling."
         },
         "Bildungsbereich": {
             "status":"agg",
             "description": "Kita, Schule, Hochschule",
             "next_node": "lebensbereich_bildung_detail",
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Diskriminierung in Bildungseinrichtungen, insbesondere Kitas, Schulen und Hochschulen. Umfasst sind Diskriminierung durch Erzieher*innen, Lehrkräfte, Schulleitung oder Professor*innen. Beispiele sind schlechte Benotung, fehlenden Nachteilsausgleich oder abwertende Äußerungen.  Auch das Verhalten von Mitschüler*innen kann diskriminierend sein, insbesondere Mobbing wegen einem bestimmten Diskriminierungsgrund."
         },
         "Gesundheit und Pflege": {
             "status":"agg",
             "description": "Arztbesuch, Krankenhaus, Pflegedienstleistung",
             "next_node": "lebensbereich_gesundheit_detail",
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Diskriminierung bei der gesundheitlichen Versorgung einschließlich der Inanspruchnahme von Pflegeleistungen und anderer gesundheitsbezogener Sozialleistungen, insbesondere Leistungen der Krankenkasse. Erfasst werden die Ablehnung einer Behandlung aus diskriminierenden Gründen oder fehlende Barrierefreiheit beim Zugang oder der Versorgung mit Gesundheitsdienstleistungen. Verboten ist auch diskriminierendes Verhalten durch Ärzt*innen oder Pflegepersonal."
         },
         "Öffentlichkeit und Freizeit": {
             "status":"non-agg",
             "description": "Nachbarschaft, auf der Straße, Vereine, Ehrenamt",
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Diskriminierung auf der Straße oder im öffentlichen Raum. Die Diskriminierung erfolgt durch unbekannte oder bekannte Personen wie Nachbar*innen. Sie werden bedroht, beleidigt oder in sonstiger Weise schikaniert und belästigt. Oder Sie engagieren sich ehrenamtlich in Vereinen oder anderweitig und werden dabei wegen eines Diskriminierungsmerkmals benachteiligt: z.B. Nichtaufnahme in einen Verein, Ausschluss aus dem Verein, Benachteiligung bei der Beteiligung/Mitsprache im Verein."
         },
         "Internet, Medien und Werbung": {
             "status":"non-agg",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Diskriminierende/beleidigende Kommentare im Internet (Blogs, Websiten) oder sozialen Netzwerken."
         },
         "Sonstiges": {
             "status": "non-agg",
             "description": "Ich bin mir nicht sicher",
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Sie können Ihren Fall keinem der genannten Lebensbereiche zuordnen oder wissen nicht, welchem Bereich Sie den Fall zuordnen soll. Oder es handelt sich um einen Fall von Diskriminierung aber in einem anderen Lebensbereich."
         }
     }

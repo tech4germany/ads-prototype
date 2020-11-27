@@ -12,42 +12,48 @@
             "status":"agg",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Sexuelle Kommentare, Witze, Zeigen von pornografischen Bildern, Aufhängen von Pin-Up Kalendern am Arbeitsplatz, körperliche Berührungen. Verboten ist jede Form der sexuellen Belästigung am Arbeitsplatz. Die sexuelle Belästigung kann von Kolleg*innen, Vorgesetzten oder Kund*innen oder externen Mitarbeitenden ausgehen. Einvernehmliche Handlungen wie ein Flirt sind keine sexuellen Belästigungen. Sexuelle Belästigungen sind Würde verletzend. Oftmals handelt es sich um eine Form der Machtausübung/Machtmissbrauch."
         },
         "Trans*": {
             "status":"agg",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Trans* erfasst die verschiedenen Geschlechtsidentitäten, die sich gerade nicht nur auf das von außen zugeschriebenem Geschlecht beschränken, sondern darüber hinaus das persönliche, individuell erlebte und gefühlte Geschlechtsempfinden widerspiegeln."
         },
         "Inter*": {
             "status":"agg",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Personen, die sich zwischen den Geschlechtern bewegen und weder dem männlichen noch dem weiblichen Geschlecht zugeordnet werden können."
         },
         "Frau/Mann": {
             "status":"agg",
             "description": "z.B. Schwangerschaft, unterschiedliche Bezahlung",
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Wenn mit dem weiblichen Geschlecht Nachteile verbunden werden. Erfasst sind beispielsweise Benachteiligungen auf Grund von Schwangerschaft, schlechtere Bezahlung, schlechtere Beförderungschancen sowie sexistische Kommentare oder sonstige geschlechtsspezifische Abwertungen der Arbeitsleistung. Wenn mit dem männlichen Geschlecht Nachteile verbunden sind. Erfasst sind beispielsweise Benachteiligungen bei der Inanspruchnahme von Elternzeit oder im Bewerbungsverfahren."
         },
         "queer": {
             "status":"agg",
             "description": null,
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Wenn das eigene Geschlechtsempfinden oder die individuelle sexuelle Orientierung von den gesellschaftlich gesetzten Normen abweicht."
         },
         "Sonstiges": {
             "status":"agg",
             "description": "Ich bin mir nicht sicher",
             "next_node": null,
-            "icon": "group.png",
+            "icon": null,
+            "icon_hover": null,
             "info_text": "Ihr Fall lässt sich nicht unter die genannten Begriffe zuordnen oder Sie wissen nicht genau, wo Sie sich zuordnen sollen. Es geht aber um Diskriminierungen im Zusammenhang mit dem Geschlecht."
         }
     }
