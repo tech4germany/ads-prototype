@@ -127,8 +127,8 @@ export default function JourneySelection() {
     return (
       <Grid container className={classes.root}>
         {documentQueue.getEdges(activeStep.self).map((label, index) => {
-          const icon = require("assets/icons/" + documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
           const infoTextisSet = documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.info_text)
+          const icon = require("assets/icons/" + documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
           return (
               <div className={classes.buttonContainer}>
                 <div className={classes.buttonContent}>
