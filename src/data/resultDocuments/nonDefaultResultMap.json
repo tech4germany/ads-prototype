@@ -45,7 +45,7 @@
     "identifier": 3,
     "features": {
       "merkmal": ["Geschlecht/Geschlechtsidentität"],
-      "merkmal_ethnisch_detail": [
+      "merkmal_gender_detail": [
         "Trans*",
         "Inter*",
         "queer"

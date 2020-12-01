@@ -43,7 +43,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     backgroundColor: colorMain["115"],
     minHeight: "100px",
-    width: "11px"
+    width: "6px",
+    minWidth: "6px"
   }
 }));
 

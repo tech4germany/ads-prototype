@@ -16,12 +16,12 @@ import { ShowResult } from "states/showResultState"
 
 const useStyles = makeStyles((theme) => ({
   mainSpace: {
-      backgroundColor: "inherit",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      width: "100%",
-  },
+    backgroundColor: "inherit",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+  }
 }));
 
 export default function Journey() {
