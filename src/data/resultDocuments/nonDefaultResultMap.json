@@ -280,7 +280,8 @@
   {
     "identifier": 26,
     "features": {
-      "lebensbereich":["Arbeitsleben"]
+      "lebensbereich":["Arbeitsleben"],
+      "lebensbereich_arbeit_detail": ["Zugang"]
     }
   },
   {
