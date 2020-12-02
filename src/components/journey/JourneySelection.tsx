@@ -47,9 +47,11 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "354px",
     height: "100%",
     color: textSelectionMain["color"]["inactive"],
-    "&:hover": {
-      backgroundColor: colorMain["115"],
-      color: textSelectionMain["color"]["active"],
+    '@media (hover: hover)': {
+      "&:hover": {
+        backgroundColor: colorMain["115"],
+        color: textSelectionMain["color"]["active"],
+      }
     }
   },
   buttonCard: {
