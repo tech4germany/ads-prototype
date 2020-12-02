@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import  Grid from '@material-ui/core/Grid';
@@ -119,7 +119,7 @@ export default function JourneySelection() {
   let documentQueue = DocumentQueue.useContainer();
   let activeDocument = documentQueue.self[activeStep.self]
 
-  useEffect(() => {}, [displayHover])
+  useLayoutEffect(() => {}, [displayHover])
 
   const updateInfoDisplay = (label: string | null) => {
     setInfoDisplay(label)
