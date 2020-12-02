@@ -24,12 +24,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     alignItems: "flex-start",
     maxWidth: "734px",
-    minHeight: "210px",
     backgroundColor: "white",
     marginBottom: "15px",
   },
   infoContent: {
-    minHeight: "166px",
     marginBottom: "22px",
     paddingLeft: "22px",
     maxWidth: "728px"
@@ -53,7 +51,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "flex-end",
     fontFamily: textSelectionMain["fontFamily"],
-    fontSize: textSelectionMain["fontSize"]
+    fontSize: textSelectionMain["fontSize"],
+    marginTop: "22px"
   },
   exitIcon: {
     width: "30px",
