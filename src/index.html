@@ -9,38 +9,12 @@
   <title>Wegweiser</title>
   <script async defer data-domain="wegweiser.tech4germany.org" src="https://plausible.tech4germany.org/js/plausible.js"></script>
   <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
-  <noscript>
-     Your browser does not support JavaScript!
-  </noscript>
-  <script>
-    function watchForHover() {
-      // lastTouchTime is used for ignoring emulated mousemove events
-      let lastTouchTime = 0
-
-      function enableHover() {
-        if (new Date() - lastTouchTime < 500) return
-        document.body.classList.add('hasHover')
-      }
-
-      function disableHover() {
-        document.body.classList.remove('hasHover')
-      }
-
-      function updateLastTouchTime() {
-        lastTouchTime = new Date()
-      }
-
-      document.addEventListener('touchstart', updateLastTouchTime, true)
-      document.addEventListener('touchstart', disableHover, true)
-      document.addEventListener('mousemove', enableHover, true)
-
-      enableHover()
-    }
-    watchForHover()
-  </script>
 </head>
 
 <body>
+<noscript>
+   Your browser does not support JavaScript!
+</noscript>
 <div id="root"></div>
 <script src="./index.tsx"></script>
 </body>
