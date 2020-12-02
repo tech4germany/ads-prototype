@@ -9,6 +9,37 @@
   <title>Wegweiser</title>
   <script async defer data-domain="master.d1lrh1n6tj0vq0.amplifyapp.com" src="https://plausible.io/js/plausible.js"></script>
   <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+  <noscript>
+     Your browser does not support JavaScript!
+  </noscript>
+  <script>
+  function watchForHover() {
+    // lastTouchTime is used for ignoring emulated mousemove events
+    let lastTouchTime = 0
+
+    function enableHover() {
+      if (new Date() - lastTouchTime < 500) return
+      document.body.classList.add('hasHover')
+    }
+
+    function disableHover() {
+      document.body.classList.remove('hasHover')
+    }
+
+    function updateLastTouchTime() {
+      lastTouchTime = new Date()
+    }
+
+    document.addEventListener('touchstart', updateLastTouchTime, true)
+    document.addEventListener('touchstart', disableHover, true)
+    document.addEventListener('mousemove', enableHover, true)
+
+    enableHover()
+  }
+
+  watchForHover()
+
+  </script>
 </head>
 
 <body>
