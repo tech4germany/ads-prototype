@@ -106,13 +106,13 @@ export default function JourneySelectionInfoText(props: PropsLayout) {
                 }}/>
               </div>
             </div>
-            <div className={classes.infoText}>
+            <span className={classes.infoText}>
               {
                 props.infoDisplay?
                 documentQueue.getEdgeFeatureByLabel(activeStep.self, props.infoDisplay, EdgeDetail.info_text):
                 null
               }
-            </div>
+            </span>
           </div>
         </div>
         <div className={classes.infoStripe}></div>

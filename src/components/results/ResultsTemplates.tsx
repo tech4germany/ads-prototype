@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     minWidth: "100%",
     maxWidth: "750px",
-    paddingBottom: "2.3vh",
+    marginBottom: "50px"
   },
   subHeader: {
     fontFamily: "BundesSansWeb-Bold",
@@ -21,13 +21,14 @@ const useStyles = makeStyles((theme) => ({
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "18px",
-    marginBottom: "50px"
+    fontSize: "18px"
   },
   templateItem: {
     display: "flex",
     flexDirection: "column",
-    marginTop: "16px"
+    marginTop: "16px",
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "18px"
   }
 }));
 
@@ -41,6 +42,7 @@ export default function ResultsTemplates() {
       <span className={classes.subHeader}>Formulierungshilfen und Ausfühllhinweise:</span>
       <span className={classes.infoText}>
         Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
+      </span>
         {
           (list !== null)?
           list.map((label, index) => {
@@ -51,9 +53,8 @@ export default function ResultsTemplates() {
               </div>
             )
           }):
-          <></>
+          null
         }
-      </span>
     </div>
   );
 }

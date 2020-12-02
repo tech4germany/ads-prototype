@@ -17,15 +17,17 @@ const wrap = (s: string) => s.replace(
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    minHeight: "42vh"
+  },
+  selectionList: {
     display: 'flex',
     flexDirection: 'row',
-    alignContent: "flex-start",
     alignItems: "flex-start",
     flexWrap: "wrap",
     '& > *': {
       margin: theme.spacing(1),
     },
-    minHeight: "42vh"
+    paddingLeft: "0px"
   },
   buttonContainer: {
     marginBottom: "15px",
@@ -131,67 +133,67 @@ export default function JourneySelection() {
     )
   } else {
     return (
-      <Grid container className={classes.root}>
-        {documentQueue.getEdges(activeStep.self).map((label, index) => {
-          const infoTextisSet = documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.info_text)
-          const selectionIcon = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
-          const selectionIcon_hover = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon_hover))
-          return (
-              <div className={classes.buttonContainer}>
-                <div className={classes.buttonContent}
-                  onMouseOver={() => setDisplayHover(label)}
-                  onMouseOut={() => setDisplayHover(null)}
-                >
-                  <div className={classes.buttonCard}
-                    onClick={() => {
-                      answers.add(activeDocument.identifier, label)
-                      documentQueue.update(UpdateType.add, activeStep.self, label)
-                      activeStep.increment(documentQueue.getVisibilityQueue())
-                    }}>
+      <Grid className={classes.root}>
+        <ul className={classes.selectionList}>
+          {documentQueue.getEdges(activeStep.self).map((label, index) => {
+            const infoTextisSet = documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.info_text)
+            const selectionIcon = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
+            const selectionIcon_hover = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon_hover))
+            return (
+                <li className={classes.buttonContainer}>
+                  <div className={classes.buttonContent}
+                    onMouseOver={() => setDisplayHover(label)}
+                    onMouseOut={() => setDisplayHover(null)}
+                  >
+                    <div className={classes.buttonCard}
+                      onClick={() => {
+                        answers.add(activeDocument.identifier, label)
+                        documentQueue.update(UpdateType.add, activeStep.self, label)
+                        activeStep.increment(documentQueue.getVisibilityQueue())
+                      }}>
 
-                    <div className={classes.iconContainer}>
-                      {
-                        selectionIcon && selectionIcon_hover?
-                        <>
-                          {
-                            displayHover === label?
-                            <img className={classes.icon_hover} src={selectionIcon_hover} alt={"empty"}/>:
-                            <img className={classes.icon} src={selectionIcon} alt={"empty"}/>
-                          }
-                        </>:
-                        null
-                      }
-                    </div>
-
-                    <div className={classes.textContainer}>
-                      <span className={classes.text}>
-                        {wrap(label)}
-                      </span>
-                    </div>
-
-                    <div className={classes.infoIconContainer}>
-                      <div className={classes.infoIconContainer}>
+                      <div className={classes.iconContainer}>
                         {
-                          infoTextisSet?
-                          <img className={classes.infoIcon}
-                          src={infoIcon}
-                          alt={"empty"}
-                          onClick={(event) => {
-                            event.stopPropagation()
-                            updateInfoDisplay(label)
-                          }}/>:
+                          selectionIcon && selectionIcon_hover?
+                          <>
+                            {
+                              displayHover === label?
+                              <img className={classes.icon_hover} src={selectionIcon_hover} alt={"empty"}/>:
+                              <img className={classes.icon} src={selectionIcon} alt={"empty"}/>
+                            }
+                          </>:
                           null
                         }
                       </div>
+
+                      <div className={classes.textContainer}>
+                        <span className={classes.text}>
+                          {wrap(label)}
+                        </span>
+                      </div>
+
+                      <div className={classes.infoIconContainer}>
+                        <div className={classes.infoIconContainer}>
+                          {
+                            infoTextisSet?
+                            <img className={classes.infoIcon}
+                            src={infoIcon}
+                            alt={"empty"}
+                            onClick={(event) => {
+                              event.stopPropagation()
+                              updateInfoDisplay(label)
+                            }}/>:
+                            null
+                          }
+                        </div>
+                      </div>
                     </div>
-
-
-                  </div>
-              </div>
-              <div className={classes.buttonStripe}></div>
-            </div>
-        );
-      })}
+                </div>
+                <div className={classes.buttonStripe}></div>
+              </li>
+          );
+        })}
+      </ul>
     </Grid>
     )
   }

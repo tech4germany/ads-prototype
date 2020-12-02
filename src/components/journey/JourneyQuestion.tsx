@@ -41,13 +41,13 @@ export default function JourneyQuestion() {
   return (
     <div className={classes.questionBox}>
 
-      <div className={classes.question}>
+      <span className={classes.question}>
         {documentQueue.getStepDetail(activeStep.self, StepDetail.question)}
-      </div>
+      </span>
 
-      <div className={classes.explanation}>
+      <span className={classes.explanation}>
         {documentQueue.getStepDetail(activeStep.self, StepDetail.explanation)}
-      </div>
+      </span>
 
     </div>
 );

@@ -74,7 +74,7 @@ export default function Result() {
             </Grid>
           :
             <Grid item lg={9} md={10} sm={12} xs={12} className={classes.infoTemplateSpace}>
-              Loading ...
+              <span>Loading ...</span>
             </Grid>
         }
 

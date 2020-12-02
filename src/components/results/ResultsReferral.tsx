@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     minWidth: "100%",
     maxWidth: "750px",
-    paddingBottom: "2.3vh",
+    marginBottom: "50px"
   },
   subHeader: {
     fontFamily: "BundesSansWeb-Bold",
@@ -24,12 +24,13 @@ const useStyles = makeStyles((theme) => ({
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
-    marginBottom: "50px"
   },
   referralItem: {
     display: "flex",
     flexDirection: "column",
-    marginTop: "16px"
+    marginTop: "16px",
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "18px"
   }
 }));
 
@@ -42,7 +43,8 @@ export default function ResultReferrals() {
     <div className={classes.infoSpace}>
       <span className={classes.subHeader}>Anlaufstellen:</span>
       <span className={classes.infoText}>
-        Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:<br></br>
+        Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
+      </span>
         {
           (list !== null)?
           list.map((label, index) => {
@@ -67,10 +69,8 @@ export default function ResultReferrals() {
               </div>
             )
           }):
-          <></>
+          null
         }
-      </span>
-
     </div>
   );
 }

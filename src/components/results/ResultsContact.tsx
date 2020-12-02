@@ -59,7 +59,7 @@ export default function ResultContact() {
             <span>Kontakt zu uns</span>
           </div>
           <div className={classes.contactInfo}>
-            Mo 13-15, Mi und Fr 9-12 bieten wir eine juristische Erstberatung an.<br></br>
+            <span>Mo 13-15, Mi und Fr 9-12 bieten wir eine juristische Erstberatung an.</span><br></br>
             <span>Tel.: <a href={"tel:030 18555-1855"}>030 18555-1855</a></span><br></br>
               <br></br>
             <span>Email: <a href={"email:beratung@ads.bund.de"}>beratung@ads.bund.de</a></span><br></br>
