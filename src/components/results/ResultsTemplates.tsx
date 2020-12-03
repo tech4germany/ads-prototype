@@ -26,9 +26,12 @@ const useStyles = makeStyles((theme) => ({
   templateItem: {
     display: "flex",
     flexDirection: "column",
-    marginTop: "16px",
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px"
+  },
+  templateList:{
+    marginTop: "16px",
+    paddingLeft: "0px"
   }
 }));
 
@@ -43,18 +46,20 @@ export default function ResultsTemplates() {
       <span className={classes.infoText}>
         Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
       </span>
+      <ul className={classes.templateList}>
         {
           (list !== null)?
           list.map((label, index) => {
             return(
-              <div className={classes.templateItem}>
+              <li className={classes.templateItem} key={index}>
                 <span><a href={label.template}>Vorlage</a></span>
                 <span><a href={label.help}>Ausfüllhinweise</a></span>
-              </div>
+              </li>
             )
           }):
           null
         }
+      </ul>
     </div>
   );
 }

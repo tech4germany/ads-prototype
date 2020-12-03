@@ -27,9 +27,12 @@ const useStyles = makeStyles((theme) => ({
   materialsItem: {
     display: "flex",
     flexDirection: "column",
-    marginTop: "16px",
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px"
+  },
+  materialsList:{
+    marginTop: "16px",
+    paddingLeft: "0px"
   }
 }));
 
@@ -44,18 +47,20 @@ export default function ResultsMaterials() {
       <span className={classes.infoText}>
         Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
       </span>
+      <ul className={classes.materialsList}>
         {
           (materials !== null)?
           materials.map((label, index) => {
             return(
-              <div className={classes.materialsItem}>
+              <li className={classes.materialsItem} key={index}>
                 <span>{label.name}</span>
                 <span><a href={label.link}>Link zum Download</a></span>
-              </div>
+              </li>
             )
           }):
           null
         }
+      </ul>
     </div>
   );
 }

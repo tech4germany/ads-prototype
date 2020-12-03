@@ -28,9 +28,12 @@ const useStyles = makeStyles((theme) => ({
   referralItem: {
     display: "flex",
     flexDirection: "column",
-    marginTop: "16px",
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px"
+  },
+  referralsList:{
+    marginTop: "16px",
+    paddingLeft: "0px"
   }
 }));
 
@@ -45,11 +48,12 @@ export default function ResultReferrals() {
       <span className={classes.infoText}>
         Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
       </span>
+      <ul className={classes.referralsList}>
         {
           (list !== null)?
           list.map((label, index) => {
             return(
-              <div className={classes.referralItem}>
+              <li className={classes.referralItem} key={index}>
                 <span>{label.name}</span>
                 {
                   label.phone?
@@ -66,11 +70,12 @@ export default function ResultReferrals() {
                   <span><a href={label.website}>Website</a></span>:
                   null
                 }
-              </div>
+              </li>
             )
           }):
           null
         }
+      </ul>
     </div>
   );
 }

@@ -140,7 +140,7 @@ export default function JourneySelection() {
             const selectionIcon = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
             const selectionIcon_hover = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon_hover))
             return (
-                <li className={classes.buttonContainer}>
+                <li className={classes.buttonContainer} key={index}>
                   <div className={classes.buttonContent}
                     onMouseOver={() => setDisplayHover(label)}
                     onMouseOut={() => setDisplayHover(null)}
@@ -167,9 +167,7 @@ export default function JourneySelection() {
                       </div>
 
                       <div className={classes.textContainer}>
-                        <span className={classes.text}>
-                          {wrap(label)}
-                        </span>
+                        <span className={classes.text}>{wrap(label)}</span>
                       </div>
 
                       <div className={classes.infoIconContainer}>

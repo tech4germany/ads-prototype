@@ -27,7 +27,8 @@ export type ResultSpecsLayout = {
 type AdditionalContentLayout = {
   "referrals"?: Array<ReferralLayout>,
   "templates"?: Array<TemplateLayout>,
-  "materials"?: Array<MaterialLayout>
+  "materials"?: Array<MaterialLayout>,
+  "add_text"?: string
 }
 
 export type DefaultResultContentLayout = {
@@ -64,7 +65,8 @@ export enum UpdateType {
 export enum AdditionalContentType {
   referrals = "referrals",
   templates = "templates",
-  materials = "materials"
+  materials = "materials",
+  add_text = "add_text"
 }
 
 export enum StepDetail {
@@ -86,6 +88,7 @@ export enum EdgeDetail {
   icon_hover="icon_hover",
   info_text="info_text"
 }
+
 export type EdgeDetailsLayout = {
     "status": string,
     "description": string | null,

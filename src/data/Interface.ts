@@ -90,7 +90,7 @@ export function getNonDefaultResultFeatures(id: number): NonDefaultSpecsLayout {
 }
 
 // retrieve result content by id
-export function getResultFeature(id: number | undefined, feature: ResultFeatureType): string {
+export function getResultFeature(id: number | undefined, feature: ResultFeatureType): string | null {
   let _feature = default_result_content.filter(function(element) {
     return element.identifier === id
   })[0]["features"][feature]
@@ -138,4 +138,18 @@ export function getResultMaterials(ids: Array<number> | undefined): Array<Materi
       }
   }
   return materials
+}
+
+export function getResultAdditionalText(ids: Array<number> | undefined): string | null {
+  let add_text: string | null=null;
+  if (typeof ids === "undefined") { return add_text}
+  for (const val of ids) {
+    let _result: NonDefaultResultContentLayout = non_default_result_content.filter(function(element) {
+      return element.identifier === val
+    })[0]
+      if (typeof _result["additional_content"]["add_text"] !== "undefined") {
+        add_text = _result["additional_content"]["add_text"]
+      }
+  }
+  return add_text
 }
