@@ -19,7 +19,7 @@
         "Religion/Weltanschauung": {
             "status":"agg",
             "description": null,
-            "next_node": null,
+            "next_node": "merkmal_religion_detail",
             "icon": null,
             "icon_hover": null,
             "info_text": "Erfasst werden die Religionszugehörigkeit sowie gesellschaftliche Zuschreibungen, die mit einer bestimmten Religion verbunden werden. Typische Fälle sind Benachteiligungen auf Grund des Tragens von religiösen Symbolen sowie Benachteiligung bei der Ausübung des Glaubens wie z.B. Beten am Arbeitsplatz. Überzeugungen, die die persönliche Identität sowie das eigene Selbstverständnis grundlegend prägen und sich auf alle Lebensbereiche einer Person auswirken. Es handelt sich um Überzeugungen, die entweder gar nicht oder zumindest nicht beliebig abänderbar sind. Nicht erfasst sind Hobbies, persönliche Neigungen oder politische Anschauungen."

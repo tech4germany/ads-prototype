@@ -1,0 +1,36 @@
+{
+    "identifier":"lebensbereich_administration_detail",
+    "type":"non-default",
+    "step_title":"Ämter und Behörder",
+    "multiple_choice": false,
+    "visible": false,
+    "index": 0,
+    "question": "In welchem Zusammenhang fand die Diskriminierung genau statt?",
+    "explanation":"Sie haben den Bereich Ämter und Behörden ausgewählt",
+    "edges": {
+        "Arbeitsagentur/Jobcenter": {
+            "status":"non-agg",
+            "description": "",
+            "next_node": null,
+            "icon": null,
+            "icon_hover": null,
+            "info_text": null
+        },
+        "Gesetzliche Rente": {
+            "status":"non-agg",
+            "description": "",
+            "next_node": null,
+            "icon": null,
+            "icon_hover": null,
+            "info_text": null
+        },
+        "Sonstiges": {
+            "status":"non-agg",
+            "description": null,
+            "next_node": null,
+            "icon": null,
+            "icon_hover": null,
+            "info_text": "Sie wissen nicht so genau, ob oder wo Ihr Fall hier reinpasst aber es geht um Ämter und Behörden."
+        }
+    }
+}

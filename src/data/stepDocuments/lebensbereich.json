@@ -33,9 +33,9 @@
             "info_text": "Erfasst werden Diskriminierungen bei der Wohnungssuche und der Wohnungsmiete. Hinweise auf eine Diskriminierung können diskriminierende Äußerungen in Wohnungsanzeigen oder bei der Wohnungsbesichtigung sein. Verboten sind Diskriminierungen durch Vermieter*innen bei bestehenden Mietverhältnissen sowie die Kündigung der Wohnung aus diskriminierenden Gründen. Nicht erfasst wird diskriminierendes Verhalten durch Nachbar*innen."
         },
         "Ämter und Behörden": {
-            "status":"non-agg",
-            "description": null,
-            "next_node": null,
+            "status":"agg",
+            "description": "",
+            "next_node": "lebensbereich_administration_detail",
             "icon": null,
             "icon_hover": null,
             "info_text": "Diskriminierung durch staatliche Stellen und die Verwaltung bei der Ausführung öffentlicher Aufgaben und der Ausübung hoheitlicher Befugnisse. Insbesondere staatliches Handeln durch Verwaltungsakt oder Bescheide. Beispiel dafür sind Jugendamt, Sozialamt, Arbeitsagentur oder Jobcenter sowie Finanzamt, Standesamt, Versorgungsamt, Integrationsamt oder Ausländerbehörden."

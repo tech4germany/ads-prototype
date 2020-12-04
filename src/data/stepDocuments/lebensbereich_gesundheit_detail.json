@@ -8,14 +8,6 @@
     "question": "In welchem Zusammenhang fand die Diskriminierung genau statt?",
     "explanation":"Sie haben den Lebensbereich Gesundheit ausgewählt",
     "edges": {
-        "Krankenkasse": {
-            "status":"agg",
-            "description": null,
-            "next_node": null,
-            "icon": null,
-            "icon_hover": null,
-            "info_text": "Benachteiligungen bei der Aufnahme in eine Krankenkasse, bei der Inanspruchnahme von Leistungen (Ablehnung einer Leistung oder Leistung zu schlechteren Konditionen), bei der Bemessung des Krankenkassenbeitrags. Die Benachteiligungen stehen in Zusammenhang mit einem bestimmten Diskriminierungsgrund."
-        },
         "Arztbesuch": {
             "status":"non-agg",
             "description": null,
@@ -23,6 +15,30 @@
             "icon": null,
             "icon_hover": null,
             "info_text": "Die ärztliche Behandlung wird verweigert in Zusammenhang mit einem bestimmten Diskriminierungsgrund. Diskriminierendes Verhalten von Ärzt*innen und Personal in Gesundheitspraxen und Krankenhäusern. Zum Beispiel ist die Behandlung nicht barrierefrei und kann deshalb nicht oder nur sehr schwer in Anspruch genommen werden."
+        },
+        "Gesetzliche Krankenkasse": {
+            "status":"agg",
+            "description": null,
+            "next_node": null,
+            "icon": null,
+            "icon_hover": null,
+            "info_text": "Benachteiligungen bei der Aufnahme in eine Krankenkasse, bei der Inanspruchnahme von Leistungen (Ablehnung einer Leistung oder Leistung zu schlechteren Konditionen), bei der Bemessung des Krankenkassenbeitrags. Die Benachteiligungen stehen in Zusammenhang mit einem bestimmten Diskriminierungsgrund."
+        },
+        "Private Krankenkasse": {
+            "status":"non-agg",
+            "description": null,
+            "next_node": null,
+            "icon": null,
+            "icon_hover": null,
+            "info_text": "Benachteiligungen bei der Aufnahme in eine Krankenkasse, bei der Inanspruchnahme von Leistungen (Ablehnung einer Leistung oder Leistung zu schlechteren Konditionen), bei der Bemessung des Krankenkassenbeitrags. Die Benachteiligungen stehen in Zusammenhang mit einem bestimmten Diskriminierungsgrund."
+        },
+        "Sonstiges": {
+            "status":"non-agg",
+            "description": null,
+            "next_node": null,
+            "icon": null,
+            "icon_hover": null,
+            "info_text": "Sie wissen nicht so genau, ob oder wo Ihr Fall hier reinpasst aber es geht um den Lebensbereich Gesundheit und Pflege."
         }
     }
 }
