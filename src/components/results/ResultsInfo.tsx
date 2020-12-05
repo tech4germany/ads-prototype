@@ -30,6 +30,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     marginBottom: "18px"
   },
+  infoTextNS: {
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "18px",
+    marginBottom: "50px",
+    whiteSpace: "pre-wrap"
+  },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
@@ -75,7 +81,7 @@ export default function ResultInfo() {
       </span>
 
       <span className={classes.subHeader}>Nächste Schritte:</span>
-      <span className={classes.infoText}>
+      <span className={classes.infoTextNS}>
         {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.next_step)}
       </span>
     </div>

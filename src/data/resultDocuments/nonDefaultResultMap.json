@@ -356,5 +356,207 @@
         "queer"
       ]
     }
+  },
+  {
+    "identifier": 36,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität"
+      ],
+      "lebensbereich":["Arbeitsleben"]
+    }
+  },
+  {
+    "identifier": 37,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität"
+      ],
+      "merkmal_gender_detail": [
+        "Trans*",
+        "Inter*",
+        "Frau/Mann",
+        "queer",
+        "Sonstiges"
+      ],
+      "merkmal_religion_detail": [
+        "Religion",
+        "Sonstiges"
+      ],
+      "lebensbereich":[
+        "Geschäfte, Verträge und Dienstleistungen",
+        "Bildungsbereich",
+        "Gesundheit und Pflege"
+      ],
+      "lebensbereich_bildung_detail": [
+        "Kita",
+        "Privatschule/Privatunterricht"
+      ],
+      "lebensbereich_gesundheit_detail": [
+        "Arztbesuch",
+        "Private Krankenkasse"
+      ]
+    }
+  },
+  {
+    "identifier": 38,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität",
+        "Sozialer Status"
+      ],
+      "lebensbereich":[
+        "Ämter und Behörden",
+        "Justiz und Polizei"
+      ]
+    }
+  },
+  {
+    "identifier": 39,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität",
+        "Sozialer Status"
+      ],
+      "lebensbereich":["Bildungsbereich"],
+      "lebensbereich_bildung_detail": [
+        "Öffentliche Schule",
+        "Hochschule"
+      ]
+    }
+  },
+  {
+    "identifier": 40,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität",
+        "Sozialer Status"
+      ],
+      "lebensbereich":["Gesundheit und Pflege"],
+      "lebensbereich_gesundheit_detail": [
+        "Gesetzliche Krankenkasse",
+        "Sonstiges"
+      ]
+    }
+  },
+  {
+    "identifier": 41,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität",
+        "Sozialer Status"
+      ],
+      "lebensbereich":["Öffentlichkeit und Freizeit"]
+    }
+  },
+  {
+    "identifier": 42,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität",
+        "Sozialer Status"
+      ],
+      "lebensbereich":["Internet, Medien und Werbung"]
+    }
+  },
+  {
+    "identifier": 43,
+    "features": {
+      "merkmal": ["Sonstiges"]
+    }
+  },
+  {
+    "identifier": 44,
+    "features": {
+      "lebensbereich": ["Sonstiges"]
+    }
+  },
+  {
+    "identifier": 45,
+    "features": {
+      "merkmal": ["Sozialer Status"],
+      "lebensbereich": [
+        "Arbeitsleben",
+        "Geschäfte, Verträge und Dienstleistungen",
+        "Wohnungsmarkt",
+        "Bildungsbereich",
+        "Gesundheit und Pflege"
+      ],
+      "lebensbereich_bildung_detail": [
+        "Kita",
+        "Privatschule/Privatunterricht"
+      ],
+      "lebensbereich_gesundheit_detail": [
+        "Arztbesuch",
+        "Private Krankenkasse"
+      ]
+    }
+  },
+  {
+    "identifier": 46,
+    "features": {
+      "merkmal": [
+        "Geschlecht/Geschlechtsidentität",
+        "Religion/Weltanschauung"
+      ],
+      "lebensbereich_gender_detail": ["Sexuelle Belästigung"],
+      "lebensbereich_religion_detail": ["Weltanschauung"],
+      "lebensbereich": [
+        "Geschäfte, Verträge und Dienstleistungen",
+        "Wohnungsmarkt",
+        "Bildungsbereich",
+        "Gesundheit und Pflege"
+      ],
+      "lebensbereich_bildung_detail": [
+        "Kita",
+        "Privatschule/Privatunterricht"
+      ],
+      "lebensbereich_gesundheit_detail": [
+        "Arztbesuch",
+        "Private Krankenkasse"
+      ]
+    }
   }
 ]

@@ -395,8 +395,7 @@
           "name": "Leitfaden „Diskriminierungsschutz an Hochschulen“",
           "link": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Diskriminierungsfreie_Hochschule/leitfaden_diskriminierung_hochschule_20130916.html"
         }
-      ],
-      "add_text": "Sie haben das Recht sich darüber bei dem Arbeitgeber zu beschweren. Der Arbeitgeber muss Ihre Beschwerde prüfen und Maßnahmen zu Ihrem Schutz ergreifen. Außerdem dürfen Sie nicht abgestraft (z.B. versetzt oder entlassen) werden."
+      ]
     }
   },
   {
@@ -463,6 +462,72 @@
           "link": "https://www.regenbogenportal.de/"
         }
       ]
+    }
+  },
+  {
+    "identifier": 36,
+    "additional_content": {
+      "add_text": "Sie haben das Recht sich darüber bei dem Arbeitgeber zu beschweren. Der Arbeitgeber muss Ihre Beschwerde prüfen und Maßnahmen zu Ihrem Schutz ergreifen. Sonst können Sie den Arbeitgeber vor dem Arbeitsgericht verklagen. Dafür müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen."
+    }
+  },
+  {
+    "identifier": 37,
+    "additional_content": {
+      "add_text": "Wenn Sie rechtlich dagegen vorgehen wollen, müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich bei dem Vertragspartner geltend machen."
+    }
+  },
+  {
+    "identifier": 38,
+    "additional_content": {
+      "add_text": "Sie sind aber durch das Grundgesetz (GG) genauso vor benachteiligendem und rechtswidrigem Verhalten von Polizei und Justiz geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben oder vor Gericht gehen."
+    }
+  },
+  {
+    "identifier": 39,
+    "additional_content": {
+      "add_text": "Denn Bildung fällt in die Zuständigkeit der Bundesländer. Auch dort sind Sie aber durch Gesetze vor benachteiligendem und rechtswidrigem Verhalten geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben."
+    }
+  },
+  {
+    "identifier": 40,
+    "additional_content": {
+      "add_text": "Sie sind aber trotzdem durch Gesetze und Bestimmungen vor benachteiligendem und rechtswidrigem Verhalten geschützt und können sich darüber bei den zuständigen Stellen beschweren und rechtlich dagegen wehren."
+    }
+  },
+  {
+    "identifier": 41,
+    "additional_content": {
+      "add_text": "Sie sind aber trotzdem zum Beispiel vor beleidigendem oder sonst strafbarem Verhalten geschützt und können unter Umständen rechtlich dagegen vorgehen."
+    }
+  },
+  {
+    "identifier": 42,
+    "additional_content": {
+      "add_text": "Wir als Antidiskriminierungsstelle haben keine Befugnisse zur Kontrolle oder Zensur in diesen Bereichen. Sie können sich aber bei den fachlich zuständigen Stellen darüber beschweren. Die Kontaktmöglichkeiten dafür haben wir Ihnen unten zusammengestellt."
+    }
+  },
+  {
+    "identifier": 43,
+    "additional_content": {
+      "add_text": "Auf Grundlage Ihrer Angaben können wir Ihren Fall aber rechtlich nicht eindeutig einordnen. Daher wäre es sicherlich sinnvoll, wenn Sie sich persönlich beraten lassen."
+    }
+  },
+  {
+    "identifier": 44,
+    "additional_content": {
+      "add_text": "Auf Grundlage Ihrer Angaben können wir Ihren Fall aber rechtlich nicht eindeutig einordnen. Daher wäre es sicherlich sinnvoll, wenn Sie sich persönlich beraten lassen."
+    }
+  },
+  {
+    "identifier": 45,
+    "additional_content": {
+      "add_text": "Wir wissen aber, dass viele Menschen wegen Arbeitslosigkeit oder der sogenannten sozialen Herkunft ausgegrenzt werden. Daher haben wir Ihnen hierzu geeignete Unterstützungsangebote zusammengestellt."
+    }
+  },
+  {
+    "identifier": 46,
+    "additional_content": {
+      "add_text": "Trotzdem können Sie unter Umständen dagegen vorgehen und sich persönlich beraten lassen."
     }
   }
 ]

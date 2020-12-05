@@ -81,7 +81,7 @@
             "info_text": "Diskriminierende/beleidigende Kommentare im Internet (Blogs, Websiten) oder sozialen Netzwerken."
         },
         "Sonstiges": {
-            "status": "non-agg",
+            "status": "agg",
             "description": "Ich bin mir nicht sicher",
             "next_node": null,
             "icon": null,

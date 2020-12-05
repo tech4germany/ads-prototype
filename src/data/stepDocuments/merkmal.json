@@ -65,7 +65,7 @@
             "info_text": "Erfasst sind die soziale Herkunft und Position, die Stellung in der Gesellschaft und der damit verbundene Zugang zu Ressourcen wie Bildungschancen und Einkommen. Erfasst sind auch gesellschaftliche Zuschreibungen, die mit einer bestimmten sozialen Herkunft verbunden werden sowie das Anknüpfen von Nachteilen an die soziale Herkunft. Ein typisches Beispiel ist die Benachteiligung von Menschen, die Sozialleistungen beziehen."
         },
         "Sonstiges": {
-            "status": "non-agg",
+            "status": "agg",
             "description": "Ich bin mir nicht sicher",
             "next_node": null,
             "icon": null,
