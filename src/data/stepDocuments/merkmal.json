@@ -12,64 +12,64 @@
             "status":"agg",
             "description": null,
             "next_node": "merkmal_ethnisch_detail",
-            "icon": "group",
-            "icon_hover": "group_hover",
+            "icon": "ethnische_herkunft",
+            "icon_hover": "ethnische_herkunft_hover",
             "info_text": "Die ethnische Herkunft betrifft die Zugehörigkeit zu einer Bevölkerungsgruppe anhand von Sprache, Abstammung und Tradition. Rassismus erfasst Diskriminierungen, die auf Grund von rassistischen Motiven erfolgen, also insbesondere anhand der Hautfarbe oder des äußeren Erscheinungsbilds."
         },
         "Religion/Weltanschauung": {
             "status":"agg",
             "description": null,
             "next_node": "merkmal_religion_detail",
-            "icon": null,
-            "icon_hover": null,
+            "icon": "religion_weltanschauung",
+            "icon_hover": "religion_weltanschauung_hover",
             "info_text": "Erfasst werden die Religionszugehörigkeit sowie gesellschaftliche Zuschreibungen, die mit einer bestimmten Religion verbunden werden. Typische Fälle sind Benachteiligungen auf Grund des Tragens von religiösen Symbolen sowie Benachteiligung bei der Ausübung des Glaubens wie z.B. Beten am Arbeitsplatz. Überzeugungen, die die persönliche Identität sowie das eigene Selbstverständnis grundlegend prägen und sich auf alle Lebensbereiche einer Person auswirken. Es handelt sich um Überzeugungen, die entweder gar nicht oder zumindest nicht beliebig abänderbar sind. Nicht erfasst sind Hobbies, persönliche Neigungen oder politische Anschauungen."
         },
         "Behinderung/chronische Krankheiten": {
             "status": "agg",
             "description": null,
             "next_node": null,
-            "icon": null,
-            "icon_hover": null,
+            "icon": "disease",
+            "icon_hover": "disease_hover",
             "info_text": "Langfristige (mindestens 6 Monate andauernde) körperliche, seelische, geistige oder andere gesundheitliche Einschränkungen, die im Wechselspiel mit gesellschaftlichen und anderen Barrieren die Teilhabe am gesellschaftlichen Leben beeinträchtigen."
         },
         "Alter": {
             "status": "agg",
             "description": null,
             "next_node": null,
-            "icon": null,
-            "icon_hover": null,
+            "icon": "age",
+            "icon_hover": "age_hover",
             "info_text": "Der Begriff ist umfassend zu verstehen. Erfasst sind nicht nur das biologische Alter, sondern auch die tatsächliche oder vermeintliche Zuordnung zu einer bestimmten Altersgruppe sowie Zuschreibungen, die mit einem bestimmten Alter verbunden werden."
         },
         "Sexuelle Identität": {
             "status": "agg",
             "description": null,
             "next_node": null,
-            "icon": null,
-            "icon_hover": null,
+            "icon": "sexual_identity",
+            "icon_hover": "sexual_identity_hover",
             "info_text": "Der Begriff ist umfassend zu verstehen. Erfasst sind nicht nur die sexuelle Orientierung wie schwul, lesbisch, bisexuell oder heterosexuell, sondern auch das individuelle Empfinden, das von gesellschaftlich gesetzten Normen abweichen kann."
         },
         "Geschlecht/Geschlechtsidentität": {
             "status": "agg",
             "description": null,
             "next_node": "merkmal_gender_detail",
-            "icon": null,
-            "icon_hover": null,
+            "icon": "gender",
+            "icon_hover": "gender_hover",
             "info_text": "Der Begriff Geschlecht ist sehr umfassend zu verstehen. Erfasst sind nicht nur das biologische Geschlecht sowie das rechtlich zugewiesene Geschlecht durch Eintrag im Personenstandsregister. Erfasst ist auch die Geschlechtsidentität. Geschlechtsidentität ist das eigene Empfinden sich einem oder keinem bestimmten Geschlecht zuordnen zu wollen."
         },
         "Sozialer Status": {
             "status": "non-agg",
             "description": "z.B. Finanzen, Bildungsniveau, Sozialleistungen",
             "next_node": null,
-            "icon": null,
-            "icon_hover": null,
+            "icon": "social",
+            "icon_hover": "social_hover",
             "info_text": "Erfasst sind die soziale Herkunft und Position, die Stellung in der Gesellschaft und der damit verbundene Zugang zu Ressourcen wie Bildungschancen und Einkommen. Erfasst sind auch gesellschaftliche Zuschreibungen, die mit einer bestimmten sozialen Herkunft verbunden werden sowie das Anknüpfen von Nachteilen an die soziale Herkunft. Ein typisches Beispiel ist die Benachteiligung von Menschen, die Sozialleistungen beziehen."
         },
         "Sonstiges": {
             "status": "agg",
             "description": "Ich bin mir nicht sicher",
             "next_node": null,
-            "icon": null,
-            "icon_hover": null,
+            "icon": "other",
+            "icon_hover": "other_hover",
             "info_text": "Ihr Fall lässt sich nicht den genannten Diskriminierungskategorien zuordnen oder Sie sind sich nicht sicher, wo Sie Ihren Fall einordnen sollen. Es geht aber um eine Diskriminierung aus einem bestimmten Grund."
         }
     }

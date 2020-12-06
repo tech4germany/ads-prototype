@@ -424,7 +424,6 @@
         "Sozialer Status"
       ],
       "lebensbereich":[
-        "Ämter und Behörden",
         "Justiz und Polizei"
       ]
     }
@@ -556,6 +555,24 @@
       "lebensbereich_gesundheit_detail": [
         "Arztbesuch",
         "Private Krankenkasse"
+      ]
+    }
+  },
+  {
+    "identifier": 47,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität",
+        "Sozialer Status"
+      ],
+      "lebensbereich":[
+        "Ämter und Behörden"
       ]
     }
   }

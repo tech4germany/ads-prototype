@@ -36,56 +36,56 @@
             "status":"agg",
             "description": "",
             "next_node": "lebensbereich_administration_detail",
-            "icon": null,
-            "icon_hover": null,
+            "icon": "aemter",
+            "icon_hover": "aemter_hover",
             "info_text": "Diskriminierung durch staatliche Stellen und die Verwaltung bei der Ausführung öffentlicher Aufgaben und der Ausübung hoheitlicher Befugnisse. Insbesondere staatliches Handeln durch Verwaltungsakt oder Bescheide. Beispiel dafür sind Jugendamt, Sozialamt, Arbeitsagentur oder Jobcenter sowie Finanzamt, Standesamt, Versorgungsamt, Integrationsamt oder Ausländerbehörden."
         },
         "Justiz und Polizei": {
             "status":"non-agg",
             "description": null,
             "next_node": null,
-            "icon": null,
-            "icon_hover": null,
+            "icon": "police",
+            "icon_hover": "police_hover",
             "info_text": "Diskriminierung durch Richter*innen, Staatsanwält*innen, Rechtsanwält*innen oder Justiz- und Vollzugsbeamt*innen und diskriminierende Gerichtsentscheidungen oder im Strafvollzug. Außerdem diskriminierendes Verhalten der Polizei oder des Zolls, wie beispielsweise Kontrollen auf Grund einer bestimmten Hautfarbe, sogenanntes racial profiling."
         },
         "Bildungsbereich": {
             "status":"agg",
             "description": "Kita, Schule, Hochschule",
             "next_node": "lebensbereich_bildung_detail",
-            "icon": null,
-            "icon_hover": null,
+            "icon": "education",
+            "icon_hover": "education_hover",
             "info_text": "Diskriminierung in Bildungseinrichtungen, insbesondere Kitas, Schulen und Hochschulen. Umfasst sind Diskriminierung durch Erzieher*innen, Lehrkräfte, Schulleitung oder Professor*innen. Beispiele sind schlechte Benotung, fehlenden Nachteilsausgleich oder abwertende Äußerungen.  Auch das Verhalten von Mitschüler*innen kann diskriminierend sein, insbesondere Mobbing wegen einem bestimmten Diskriminierungsgrund."
         },
         "Gesundheit und Pflege": {
             "status":"agg",
             "description": "Arztbesuch, Krankenhaus, Pflegedienstleistung",
             "next_node": "lebensbereich_gesundheit_detail",
-            "icon": null,
-            "icon_hover": null,
+            "icon": "health",
+            "icon_hover": "health_hover",
             "info_text": "Diskriminierung bei der gesundheitlichen Versorgung einschließlich der Inanspruchnahme von Pflegeleistungen und anderer gesundheitsbezogener Sozialleistungen, insbesondere Leistungen der Krankenkasse. Erfasst werden die Ablehnung einer Behandlung aus diskriminierenden Gründen oder fehlende Barrierefreiheit beim Zugang oder der Versorgung mit Gesundheitsdienstleistungen. Verboten ist auch diskriminierendes Verhalten durch Ärzt*innen oder Pflegepersonal."
         },
         "Öffentlichkeit und Freizeit": {
             "status":"non-agg",
             "description": "Nachbarschaft, auf der Straße, Vereine, Ehrenamt",
             "next_node": null,
-            "icon": null,
-            "icon_hover": null,
+            "icon": "leisure",
+            "icon_hover": "leisure_hover",
             "info_text": "Diskriminierung auf der Straße oder im öffentlichen Raum. Die Diskriminierung erfolgt durch unbekannte oder bekannte Personen wie Nachbar*innen. Sie werden bedroht, beleidigt oder in sonstiger Weise schikaniert und belästigt. Oder Sie engagieren sich ehrenamtlich in Vereinen oder anderweitig und werden dabei wegen eines Diskriminierungsmerkmals benachteiligt: z.B. Nichtaufnahme in einen Verein, Ausschluss aus dem Verein, Benachteiligung bei der Beteiligung/Mitsprache im Verein."
         },
         "Internet, Medien und Werbung": {
             "status":"non-agg",
             "description": null,
             "next_node": null,
-            "icon": null,
-            "icon_hover": null,
+            "icon": "internet",
+            "icon_hover": "internet_hover",
             "info_text": "Diskriminierende/beleidigende Kommentare im Internet (Blogs, Websiten) oder sozialen Netzwerken."
         },
         "Sonstiges": {
             "status": "agg",
             "description": "Ich bin mir nicht sicher",
             "next_node": null,
-            "icon": null,
-            "icon_hover": null,
+            "icon": "other",
+            "icon_hover": "other_hover",
             "info_text": "Sie können Ihren Fall keinem der genannten Lebensbereiche zuordnen oder wissen nicht, welchem Bereich Sie den Fall zuordnen soll. Oder es handelt sich um einen Fall von Diskriminierung aber in einem anderen Lebensbereich."
         }
     }
