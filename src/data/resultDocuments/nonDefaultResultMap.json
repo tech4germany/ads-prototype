@@ -396,7 +396,8 @@
         "Alter",
         "Geschlecht/Geschlechtsidentität",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität"
+        "Geschlecht/Geschlechtsidentität",
+        "Sonstiges"
       ],
       "merkmal_gender_detail": [
         "Trans*",
@@ -635,6 +636,35 @@
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
       "lebensbereich":["Ämter und Behörden"],
       "lebensbereich_administration_detail": ["Arbeitsagentur/Jobcenter"]
+    }
+  },
+  {
+    "identifier": 53,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität",
+        "Sonstiges"
+      ],
+      "merkmal_gender_detail": [
+        "Trans*",
+        "Inter*",
+        "Frau/Mann",
+        "queer",
+        "Sonstiges"
+      ],
+      "merkmal_religion_detail": [
+        "Religion",
+        "Sonstiges"
+      ],
+      "lebensbereich":[
+        "Wohnungsmarkt"
+      ]
     }
   }
 ]

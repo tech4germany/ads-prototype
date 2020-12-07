@@ -475,7 +475,7 @@
   {
     "identifier": 36,
     "additional_content": {
-      "add_text": "Sie haben das Recht sich darüber bei dem Arbeitgeber zu beschweren. Der Arbeitgeber muss Ihre Beschwerde prüfen und Maßnahmen zu Ihrem Schutz ergreifen. Sonst können Sie den Arbeitgeber vor dem Arbeitsgericht verklagen. Dafür müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen."
+      "add_text": "Sie haben das Recht, sich darüber bei dem Arbeitgeber zu beschweren. Der Arbeitgeber muss Ihre Beschwerde prüfen und Maßnahmen zu Ihrem Schutz ergreifen. Sonst können Sie den Arbeitgeber vor dem Arbeitsgericht verklagen. Dafür müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen."
     }
   },
   {
@@ -607,6 +607,12 @@
           "website": "https://rlc-deutschland.de/"
         }
       ]
+    }
+  },
+  {
+    "identifier": 53,
+    "additional_content": {
+      "add_text": "Wenn Sie rechtlich dagegen vorgehen wollen, müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich bei dem Vermieter geltend machen."
     }
   }
 ]
