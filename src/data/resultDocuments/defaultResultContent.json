@@ -2,8 +2,8 @@
   {
     "identifier": 0,
     "features": {
-      "agg_text": "Das kann nach dem Allgemeinen Gleichbehandlungsgesetz (AGG) verboten sein.",
-      "frist_text": "Wenn Sie rechtlich dagegen vorgehen wollen, müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich bei dem Vertragspartner geltend machen.",
+      "agg_text": "Das kann nach dem Allgemeinen Gleichbehandlungsgesetz (AGG) verboten sein. Dann können Sie rechtlich dagegen vorgehen.",
+      "frist_text": null
       "next_step": "Informieren Sie sich über Ihre Rechte.\nMachen Sie ihre Ansprüche rechtzeitig geltend.\nFinden Sie Beratung und Unterstützung in Ihrer Nähe."
     }
   },
@@ -11,7 +11,7 @@
     "identifier": 1,
     "features": {
       "agg_text": "Das kann nach dem Allgemeinen Gleichbehandlungsgesetz (AGG) verboten sein.",
-      "frist_text": "Wenn Sie rechtlich dagegen vorgehen wollen, müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich bei dem Vertragspartner geltend machen. Diese ist in Ihrem Fall möglicherweise bereits abglaufen.",
+      "frist_text": null
       "next_step": "Informieren Sie sich über Ihre Rechte.\nFinden Sie Beratung und Unterstützung in Ihrer Nähe."
     }
   },
@@ -20,7 +20,7 @@
     "features": {
       "agg_text": "Hier greift der Schutz des Allgemeinen Gleichbehandlungsgesetzes (AGG) nicht.",
       "frist_text": null,
-      "next_step": "Informieren Sie sich über Ihre Rechte.\nFinden Sie Beratung und Unterstützung in Ihrer Nähe."
+      "next_step": "Informieren Sie sich über Ihre Rechte.\nNutzen Sie Ihre Vorgehensmöglichkeiten.\nFinden Sie Beratung und Unterstützung in Ihrer Nähe."
     }
   },
   {
@@ -28,7 +28,7 @@
     "features": {
       "agg_text": "Hier greift der Schutz des Allgemeinen Gleichbehandlungsgesetzes (AGG) nicht.",
       "frist_text": null,
-      "next_step": "Informieren Sie sich über Ihre Rechte.\nFinden Sie Beratung und Unterstützung in Ihrer Nähe."
+      "next_step": "Informieren Sie sich über Ihre Rechte.\nNutzen Sie Ihre Vorgehensmöglichkeiten.\nFinden Sie Beratung und Unterstützung in Ihrer Nähe."
     }
   }
 ]
