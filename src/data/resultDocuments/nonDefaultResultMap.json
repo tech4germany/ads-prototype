@@ -145,8 +145,8 @@
     "identifier": 15,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
-        "Geschlecht/Geschlechtsidentität"
+        "Geschlecht/Geschlechtsidentität",
+        "Sexuelle Identität"
       ],
       "merkmal_gender_detail": [
         "Trans*",
