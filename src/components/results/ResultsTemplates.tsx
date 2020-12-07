@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { ResultSpecs } from "states/resultState"
 import { getResultFeature, getResultTemplates } from "data/Interface"
 import { ResultFeatureType } from "data/customTypes"
+import downloadIcon from "assets/icons/Dokument.svg"
 
 const useStyles = makeStyles((theme) => ({
   infoSpace: {
@@ -26,12 +27,30 @@ const useStyles = makeStyles((theme) => ({
   templateItem: {
     display: "flex",
     flexDirection: "column",
-    fontFamily: "BundesSansWeb-Regular",
-    fontSize: "18px"
+    marginBottom: "18px"
+  },
+  downloadText: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
+    color: "black"
   },
   templateList:{
     marginTop: "16px",
     paddingLeft: "0px"
+  },
+  downloadIcon: {
+    width: "30px",
+    height: "30px",
+    cursor: "pointer",
+    marginRight: "15px",
+  },
+  downloadContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center"
+  },
+  downloadLink: {
+    textDecoration: "none"
   }
 }));
 
@@ -52,9 +71,28 @@ export default function ResultsTemplates() {
           list.map((label, index) => {
             return(
               <li className={classes.templateItem} key={index}>
-                <span><a href={label.template}>Vorlage</a></span>
-                <span><a href={label.help}>Ausfüllhinweise</a></span>
-              </li>
+                <div className={classes.downloadContainer}>
+                  <a href={label.template}
+                    className={classes.downloadLink}
+                  >
+                    <img className={classes.downloadIcon}
+                      src={downloadIcon}
+                      alt={"empty"}
+                    />
+                    <span className={classes.downloadText}>Download Vorlage</span>
+                  </a>
+                </div>
+                <div className={classes.downloadContainer}>
+                  <a href={label.help}
+                    className={classes.downloadLink}
+                  >
+                    <img className={classes.downloadIcon}
+                      src={downloadIcon}
+                      alt={"empty"}
+                    />
+                    <span className={classes.downloadText}>Download Ausfüllhinweise</span>
+                  </a>
+                </div>              </li>
             )
           }):
           null

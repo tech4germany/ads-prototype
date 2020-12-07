@@ -29,11 +29,16 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "18px"
+    fontSize: "18px",
+    marginBottom: "18px"
   },
   referralsList:{
     marginTop: "16px",
     paddingLeft: "0px"
+  },
+  title: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
   }
 }));
 
@@ -54,7 +59,7 @@ export default function ResultReferrals() {
           list.map((label, index) => {
             return(
               <li className={classes.referralItem} key={index}>
-                <span>{label.name}</span>
+                <span className={classes.title}>{label.name}</span>
                 {
                   label.phone?
                   <span>Telefon: <a href={"tel:"+label.phone}>{label.phone}</a></span>:

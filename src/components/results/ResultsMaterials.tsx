@@ -4,6 +4,7 @@ import { ResultSpecs } from "states/resultState"
 import { Answers } from "states/answerState"
 import { getResultFeature, getResultMaterials } from "data/Interface"
 import { ResultFeatureType } from "data/customTypes"
+import downloadIcon from "assets/icons/Dokument.svg"
 
 const useStyles = makeStyles((theme) => ({
   infoSpace: {
@@ -28,11 +29,35 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "18px"
+    fontSize: "18px",
+    marginBottom: "18px"
   },
   materialsList:{
     marginTop: "16px",
     paddingLeft: "0px"
+  },
+  title: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
+  },
+  downloadIcon: {
+    width: "30px",
+    height: "30px",
+    cursor: "pointer",
+    marginRight: "15px",
+  },
+  downloadContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center"
+  },
+  downloadLink: {
+    textDecoration: "none"
+  },
+  downloadText: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
+    color: "black"
   }
 }));
 
@@ -53,8 +78,17 @@ export default function ResultsMaterials() {
           materials.map((label, index) => {
             return(
               <li className={classes.materialsItem} key={index}>
-                <span>{label.name}</span>
-                <span><a href={label.link}>Link zum Download</a></span>
+                <div className={classes.downloadContainer}>
+                  <a href={label.link}
+                    className={classes.downloadLink}
+                  >
+                    <img className={classes.downloadIcon}
+                      src={downloadIcon}
+                      alt={"empty"}
+                    />
+                    <span className={classes.downloadText}>Download {label.name}</span>
+                  </a>
+                </div>
               </li>
             )
           }):

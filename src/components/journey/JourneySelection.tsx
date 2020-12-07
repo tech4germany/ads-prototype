@@ -102,7 +102,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "10px",
     marginRight: "10px",
   },
-
   buttonStripe: {
     display: "flex",
     backgroundColor: colorMain["115"],
