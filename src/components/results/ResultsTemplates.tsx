@@ -44,7 +44,7 @@ export default function ResultsTemplates() {
     <div className={classes.infoSpace}>
       <span className={classes.subHeader}>Formulierungshilfen und Ausfüllhinweise:</span>
       <span className={classes.infoText}>
-        Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
+        Die Vorlage hier können Sie ausfüllen und abschicken, um Ihre Rechte geltend zu machen:
       </span>
       <ul className={classes.templateList}>
         {

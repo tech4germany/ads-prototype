@@ -244,6 +244,10 @@
         {
           "name": "Gleichbehandlungsstelle EU-Arbeitnehmer",
           "website": "https://www.eu-gleichbehandlungsstelle.de/eugs-de/fachleute/beratungsanfrage"
+        },
+        {
+          "name": "Beratung „Faire Mobilität“ für Bürger*innen aus der EU",
+          "website": "https://www.faire-mobilitaet.de/beratungsstellen"
         }
       ]
     }
@@ -313,6 +317,10 @@
         {
           "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.3_Beschwerde_nach_13_AGG_PC.docx;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=6",
           "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.3_Beschwerde_nach_13_AGG_Ausfuellhinweise.pdf;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=6"
+        },
+        {
+          "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.4_Abhilfe_aussergerichtlich_PC.doc;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=18",
+          "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.4_Abhilfe_aussergerichtlich_Ausfuellhinweise.pdf;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=14"
         }
       ]
     }
@@ -534,6 +542,71 @@
     "identifier": 47,
     "additional_content": {
       "add_text": "Sie sind aber durch das Grundgesetz (GG) genauso vor benachteiligendem und rechtswidrigem Verhalten von staatlichen Stellen geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben oder vor Gericht gehen."
+    }
+  },
+  {
+    "identifier": 48,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Kundenreaktionsmanagement der Arbeitsagentur",
+          "website": "https://www.arbeitsagentur.de/ueber-uns/anregungen-und-kritik"
+        }
+      ],
+      "templates": [
+        {
+          "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.7_Beschwerde_Beratung_Jobcenter_PC.docx?__blob=publicationFile&v=6",
+          "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.7_Beschwerde_Beratung_Jobcenter_Ausfuellhinweise.pdf?__blob=publicationFile&v=6"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 49,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Sozialverband VdK e.V.",
+          "website": "https://www.vdk.de"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 50,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Ombudsmann Private Kranken- und Pflegeversicherung",
+          "website": "https://www.pkv-ombudsmann.de/"
+        },
+        {
+          "name": "Bundesamt für Soziale Sicherung",
+          "website": "https://www.bundesamtsozialesicherung.de/de/service/beschwerde-ueber-einen-sv-traeger/beschwerdeformular/"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 51,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Bundesamt für Soziale Sicherung",
+          "website": "https://www.bundesamtsozialesicherung.de/de/service/beschwerde-ueber-einen-sv-traeger/beschwerdeformular/"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 52,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Refugee Law Clinics in Deutschland (kostenfreie Beratung im Asyl- und Aufenthaltsrecht)",
+          "website": "https://rlc-deutschland.de/"
+        }
+      ]
     }
   }
 ]

@@ -45,7 +45,7 @@ export default function ResultsMaterials() {
     <div className={classes.infoSpace}>
       <span className={classes.subHeader}>Informationsmaterial:</span>
       <span className={classes.infoText}>
-        Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
+        Weitere Informationen zu Ihren Fragen gibt es hier:
       </span>
       <ul className={classes.materialsList}>
         {

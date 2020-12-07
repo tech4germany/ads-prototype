@@ -261,12 +261,25 @@
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität"
       ],
+      "merkmal_gender_detail": [
+        "Trans*",
+        "Inter*",
+        "Frau/Mann",
+        "queer",
+        "Sonstiges"
+      ],
+      "merkmal_religion_detail":[
+        "Religion",
+        "Sonstiges"
+      ],
       "lebensbereich":[
         "Geschäfte, Verträge und Dienstleistungen",
         "Wohnungsmarkt",
-        "Bildungsbereich"
+        "Bildungsbereich",
+        "Gesundheit und Pflege"
       ],
-      "lebensbereich_bildung_detail": ["Privatschule/Privatunterricht"]
+      "lebensbereich_bildung_detail": ["Privatschule/Privatunterricht"],
+      "lebensbereich_gesundheit_detail": ["Private Krankenkasse"]
     }
   },
   {
@@ -353,6 +366,7 @@
       "merkmal": ["Geschlecht/Geschlechtsidentität"],
       "merkmal_gender_detail": [
         "Trans*",
+        "Inter*",
         "queer"
       ]
     }
@@ -540,8 +554,8 @@
         "Geschlecht/Geschlechtsidentität",
         "Religion/Weltanschauung"
       ],
-      "lebensbereich_gender_detail": ["Sexuelle Belästigung"],
-      "lebensbereich_religion_detail": ["Weltanschauung"],
+      "merkmal_gender_detail": ["Sexuelle Belästigung"],
+      "merkmal_religion_detail": ["Weltanschauung"],
       "lebensbereich": [
         "Geschäfte, Verträge und Dienstleistungen",
         "Wohnungsmarkt",
@@ -574,6 +588,53 @@
       "lebensbereich":[
         "Ämter und Behörden"
       ]
+    }
+  },
+  {
+    "identifier": 48,
+    "features": {
+      "lebensbereich":["Ämter und Behörden"],
+      "lebensbereich_administration_detail": ["Arbeitsagentur/Jobcenter"]
+    }
+  },
+  {
+    "identifier": 49,
+    "features": {
+      "lebensbereich":[
+        "Ämter und Behörden",
+        "Gesundheit und Pflege"
+      ],
+      "lebensbereich_administration_detail": [
+        "Arbeitsagentur/Jobcenter",
+        "Gesetzliche Rente"
+      ],
+      "lebensbereich_gesundheit_detail": [
+        "Private Krankenversicherung",
+        "Gesetzliche Krankenkasse"
+      ]
+    }
+  },
+  {
+    "identifier": 50,
+    "features": {
+      "lebensbereich":["Gesundheit und Pflege"],
+      "lebensbereich_gesundheit_detail": ["Private Krankenversicherung"]
+    }
+  },
+  {
+    "identifier": 51,
+    "features": {
+      "lebensbereich":["Ämter und Behörden"],
+      "lebensbereich_administration_detail": ["Gesetzliche Rente"]
+    }
+  },
+  {
+    "identifier": 52,
+    "features": {
+      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
+      "lebensbereich":["Ämter und Behörden"],
+      "lebensbereich_administration_detail": ["Arbeitsagentur/Jobcenter"]
     }
   }
 ]
