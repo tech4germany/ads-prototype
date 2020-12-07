@@ -3,7 +3,7 @@
     "identifier": 0,
     "features": {
       "agg_text": "Das kann nach dem Allgemeinen Gleichbehandlungsgesetz (AGG) verboten sein. Dann können Sie rechtlich dagegen vorgehen.",
-      "frist_text": null
+      "frist_text": null,
       "next_step": "Informieren Sie sich über Ihre Rechte.\nMachen Sie ihre Ansprüche rechtzeitig geltend.\nFinden Sie Beratung und Unterstützung in Ihrer Nähe."
     }
   },
@@ -11,7 +11,7 @@
     "identifier": 1,
     "features": {
       "agg_text": "Das kann nach dem Allgemeinen Gleichbehandlungsgesetz (AGG) verboten sein.",
-      "frist_text": null
+      "frist_text": null,
       "next_step": "Informieren Sie sich über Ihre Rechte.\nFinden Sie Beratung und Unterstützung in Ihrer Nähe."
     }
   },
