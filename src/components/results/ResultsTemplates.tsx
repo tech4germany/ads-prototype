@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   templateItem: {
     display: "flex",
     flexDirection: "column",
-    marginBottom: "18px"
+    marginTop: "16px"
   },
   downloadText: {
     fontFamily: "BundesSansWeb-Bold",
@@ -92,7 +92,8 @@ export default function ResultsTemplates() {
                     />
                     <span className={classes.downloadText}>Download Ausfüllhinweise</span>
                   </a>
-                </div>              </li>
+                </div>
+              </li>
             )
           }):
           null

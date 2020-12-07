@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
-    marginBottom: "18px"
+    marginTop: "16px"
   },
   materialsList:{
     marginTop: "16px",
