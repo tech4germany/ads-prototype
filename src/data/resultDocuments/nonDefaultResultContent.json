@@ -614,5 +614,16 @@
     "additional_content": {
       "add_text": "Wenn Sie rechtlich dagegen vorgehen wollen, müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich bei dem Vermieter geltend machen."
     }
-  }
+  },
+  {
+    "identifier": 54,
+    "additional_content": {
+      "referrals": [
+        {
+          "name": "Refugee Law Clinics in Deutschland (kostenfreie Beratung im Asyl- und Aufenthaltsrecht)",
+          "website": "https://rlc-deutschland.de/"
+        }
+      ]
+    }
+  },
 ]

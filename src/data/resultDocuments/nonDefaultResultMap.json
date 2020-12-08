@@ -666,5 +666,14 @@
         "Wohnungsmarkt"
       ]
     }
-  }
+  },
+  {
+    "identifier": 54,
+    "features": {
+      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
+      "lebensbereich": ["Ämter und Behördem"],
+      "lebensbereich_bildung_detail": ["Sonstiges"]
+    }
+  },
 ]
