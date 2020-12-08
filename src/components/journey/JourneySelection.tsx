@@ -6,6 +6,7 @@ import { colorMain, textSelectionMain, textSelectionExplanation } from "componen
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
+import { ShowInfo } from "states/showInfoState"
 import { EdgeDetail, UpdateType } from "data/customTypes"
 import infoIcon from 'assets/icons/information.png'
 import { provideSelectionIcon } from "assets/icons/ProvideIcons"
@@ -86,12 +87,12 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     whiteSpace: "pre-wrap",
-    maxWidth:"189px",
+    maxWidth:"200px",
     fontFamily: textSelectionMain["fontFamily"],
     fontSize: textSelectionMain["fontSize"],
   },
   infoIconContainer: {
-    width: "30%",
+    width: "20%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
@@ -113,22 +114,22 @@ const useStyles = makeStyles((theme) => ({
 
 export default function JourneySelection() {
   const classes = useStyles();
-  let [infoDisplay, setInfoDisplay] = useState<string | null>(null)
   let [displayHover, setDisplayHover] = useState<string | null>(null)
-  let answers = Answers.useContainer();
-  let activeStep = ActiveStep.useContainer();
-  let documentQueue = DocumentQueue.useContainer();
+  let infoDisplay = ShowInfo.useContainer()
+  let answers = Answers.useContainer()
+  let activeStep = ActiveStep.useContainer()
+  let documentQueue = DocumentQueue.useContainer()
   let activeDocument = documentQueue.self[activeStep.self]
 
   useLayoutEffect(() => {}, [displayHover])
 
   const updateInfoDisplay = (label: string | null) => {
-    setInfoDisplay(label)
+    infoDisplay.show(label)
   }
 
-  if (infoDisplay) {
+  if (infoDisplay.self) {
     return (
-      <JourneySelectionInfo infoDisplay={infoDisplay} updateInfoDisplay={updateInfoDisplay} />
+      <JourneySelectionInfo />
     )
   } else {
     return (

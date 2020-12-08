@@ -6,6 +6,7 @@ import { colorMain, textSelectionMain, textSelectionExplanation } from "componen
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
+import { ShowInfo } from "states/showInfoState"
 import { EdgeDetail, UpdateType } from "data/customTypes"
 import exitIcon from 'assets/icons/cancel.png';
 
@@ -75,15 +76,11 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-type PropsLayout = {
-  "infoDisplay": string | null;
-  "updateInfoDisplay": (label: string | null) => void;
-}
-
-export default function JourneySelectionInfoText(props: PropsLayout) {
+export default function JourneySelectionInfoText() {
   const classes = useStyles();
-  let activeStep = ActiveStep.useContainer();
-  let documentQueue = DocumentQueue.useContainer();
+  let activeStep = ActiveStep.useContainer()
+  let documentQueue = DocumentQueue.useContainer()
+  let infoDisplay = ShowInfo.useContainer()
   let activeDocument = documentQueue.self[activeStep.self]
 
   return (
@@ -94,7 +91,7 @@ export default function JourneySelectionInfoText(props: PropsLayout) {
           <div className={classes.infoCard}>
             <div className={classes.headerRow}>
               <div className={classes.infoHeader}>
-                <span>{props.infoDisplay}</span>
+                <span>{infoDisplay.self}</span>
               </div>
               <div>
                 <img className={classes.exitIcon}
@@ -102,14 +99,14 @@ export default function JourneySelectionInfoText(props: PropsLayout) {
                   alt={"empty"}
                   onClick={(event) => {
                     event.stopPropagation()
-                    props.updateInfoDisplay(null)
+                    infoDisplay.hide()
                 }}/>
               </div>
             </div>
             <span className={classes.infoText}>
               {
-                props.infoDisplay?
-                documentQueue.getEdgeFeatureByLabel(activeStep.self, props.infoDisplay, EdgeDetail.info_text):
+                infoDisplay.self?
+                documentQueue.getEdgeFeatureByLabel(activeStep.self, infoDisplay.self, EdgeDetail.info_text):
                 null
               }
             </span>

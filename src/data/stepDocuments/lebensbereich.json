@@ -14,7 +14,7 @@
             "next_node": "lebensbereich_arbeit_detail",
             "icon": "arbeitsleben",
             "icon_hover": "arbeitsleben_hover",
-            "info_text": "Diskriminierungen durch Arbeitgeber, Vorgesetze oder Kolleg*innen im Zusammenhang mit einem Beschäftigungsverhältnis. Erfasst ist die ganze Bandbreite von der Bewerbung bis zur Kündigung sowie einzelne Arbeitsbedingungen (Bezahlung, Beförderung, Mobbing am Arbeitsplatz und ähnliches). Geschützt sind Bewerber*innen, Angestellte, Praktikant*innen und Auszubildende. Freiberufler und Selbständige sowie Geschäftsführer*innen sind nur geschützt, wenn es um den Zugang zu einer Erwerbstätigkeit oder den beruflichen Aufstieg geht."
+            "info_text": "Diskriminierungen durch Arbeitgeber, Vorgesetze oder Kolleg*innen im Zusammenhang mit einem Beschäftigungsverhältnis. Erfasst ist die ganze Bandbreite von der Bewerbung bis zur Kündigung sowie einzelne Arbeitsbedingungen (Bezahlung, Beförderung, Mobbing am Arbeitsplatz und ähnliches). Geschützt sind Bewerber*innen, Angestellte, Praktikant*innen und Auszubildende. Freiberufler und Selbständige sowie Geschäftsführer*innen sind nur geschützt, wenn es um den Bei der Bewerbung zu einer Erwerbstätigkeit oder den beruflichen Aufstieg geht."
         },
         "Geschäfte, Verträge und Dienstleistungen": {
             "status":"agg",
@@ -62,7 +62,7 @@
             "next_node": "lebensbereich_gesundheit_detail",
             "icon": "health",
             "icon_hover": "health_hover",
-            "info_text": "Diskriminierung bei der gesundheitlichen Versorgung einschließlich der Inanspruchnahme von Pflegeleistungen und anderer gesundheitsbezogener Sozialleistungen, insbesondere Leistungen der Krankenkasse. Erfasst werden die Ablehnung einer Behandlung aus diskriminierenden Gründen oder fehlende Barrierefreiheit beim Zugang oder der Versorgung mit Gesundheitsdienstleistungen. Verboten ist auch diskriminierendes Verhalten durch Ärzt*innen oder Pflegepersonal."
+            "info_text": "Diskriminierung bei der gesundheitlichen Versorgung einschließlich der Inanspruchnahme von Pflegeleistungen und anderer gesundheitsbezogener Sozialleistungen, insbesondere Leistungen der Krankenkasse. Erfasst werden die Ablehnung einer Behandlung aus diskriminierenden Gründen oder fehlende Barrierefreiheit beim Bei der Bewerbung oder der Versorgung mit Gesundheitsdienstleistungen. Verboten ist auch diskriminierendes Verhalten durch Ärzt*innen oder Pflegepersonal."
         },
         "Öffentlichkeit und Freizeit": {
             "status":"non-agg",

@@ -48,13 +48,13 @@
             "icon_hover": "sexual_identity_hover",
             "info_text": "Der Begriff ist umfassend zu verstehen. Erfasst sind nicht nur die sexuelle Orientierung wie schwul, lesbisch, bisexuell oder heterosexuell, sondern auch das individuelle Empfinden, das von gesellschaftlich gesetzten Normen abweichen kann."
         },
-        "Geschlecht/Geschlechtsidentität": {
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung": {
             "status": "agg",
             "description": null,
             "next_node": "merkmal_gender_detail",
             "icon": "gender",
             "icon_hover": "gender_hover",
-            "info_text": "Der Begriff Geschlecht ist sehr umfassend zu verstehen. Erfasst sind nicht nur das biologische Geschlecht sowie das rechtlich zugewiesene Geschlecht durch Eintrag im Personenstandsregister. Erfasst ist auch die Geschlechtsidentität. Geschlechtsidentität ist das eigene Empfinden sich einem oder keinem bestimmten Geschlecht zuordnen zu wollen."
+            "info_text": "Der Begriff Geschlecht ist sehr umfassend zu verstehen. Darunter fallen auch sexuelle Belästigungen. Erfasst sind außerdem nicht nur das biologische Geschlecht sowie das rechtlich zugewiesene Geschlecht durch Eintrag im Personenstandsregister, sondern auch die Geschlechtsidentität. Geschlechtsidentität ist das eigene Empfinden sich einem oder keinem bestimmten Geschlecht zuordnen zu wollen."
         },
         "Sozialer Status": {
             "status": "non-agg",
@@ -62,7 +62,7 @@
             "next_node": null,
             "icon": "social",
             "icon_hover": "social_hover",
-            "info_text": "Erfasst sind die soziale Herkunft und Position, die Stellung in der Gesellschaft und der damit verbundene Zugang zu Ressourcen wie Bildungschancen und Einkommen. Erfasst sind auch gesellschaftliche Zuschreibungen, die mit einer bestimmten sozialen Herkunft verbunden werden sowie das Anknüpfen von Nachteilen an die soziale Herkunft. Ein typisches Beispiel ist die Benachteiligung von Menschen, die Sozialleistungen beziehen."
+            "info_text": "Erfasst sind die soziale Herkunft und Position, die Stellung in der Gesellschaft und der damit verbundene Bei der Bewerbung zu Ressourcen wie Bildungschancen und Einkommen. Erfasst sind auch gesellschaftliche Zuschreibungen, die mit einer bestimmten sozialen Herkunft verbunden werden sowie das Anknüpfen von Nachteilen an die soziale Herkunft. Ein typisches Beispiel ist die Benachteiligung von Menschen, die Sozialleistungen beziehen."
         },
         "Sonstiges": {
             "status": "agg",

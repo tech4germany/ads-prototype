@@ -44,7 +44,7 @@
   {
     "identifier": 3,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
       "merkmal_gender_detail": [
         "Trans*",
         "Inter*",
@@ -101,14 +101,14 @@
   {
     "identifier": 11,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Sexuelle Belästigung"]
     }
   },
   {
     "identifier": 12,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Sexuelle Belästigung"],
       "lebensbereich": ["Bildungsbereich"],
       "lebensbereich_bildung_detail": [
@@ -121,7 +121,7 @@
   {
     "identifier": 13,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
       "merkmal_gender_detail": [
         "Trans*",
         "Inter*"
@@ -131,7 +131,7 @@
   {
     "identifier": 14,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Trans*"],
       "lebensbereich": ["Bildungsbereich"],
       "lebensbereich_bildung_detail": [
@@ -145,7 +145,7 @@
     "identifier": 15,
     "features": {
       "merkmal": [
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität"
       ],
       "merkmal_gender_detail": [
@@ -209,12 +209,12 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität"
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
       ],
       "lebensbereich":["Arbeitsleben"],
-      "lebensbereich_arbeit_detail": ["Zugang"]
+      "lebensbereich_arbeit_detail": ["Bei der Bewerbung"]
     }
   },
   {
@@ -225,9 +225,9 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität"
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
       ],
       "lebensbereich":["Arbeitsleben"],
       "lebensbereich_arbeit_detail": ["Im Beschäftigungsverhältnis"]
@@ -241,9 +241,9 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität"
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
       ],
       "lebensbereich":["Arbeitsleben"],
       "lebensbereich_arbeit_detail": ["Kündigung/Beendigung"]
@@ -257,9 +257,9 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität"
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
       ],
       "merkmal_gender_detail": [
         "Trans*",
@@ -285,7 +285,7 @@
   {
     "identifier": 25,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Sexuelle Belästigung"],
       "lebensbereich":["Arbeitsleben"]
     }
@@ -294,7 +294,7 @@
     "identifier": 26,
     "features": {
       "lebensbereich":["Arbeitsleben"],
-      "lebensbereich_arbeit_detail": ["Zugang"]
+      "lebensbereich_arbeit_detail": ["Bei der Bewerbung"]
     }
   },
   {
@@ -320,7 +320,7 @@
   {
     "identifier": 30,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Trans*"],
       "lebensbereich": ["Arbeitsleben"]
     }
@@ -328,7 +328,7 @@
   {
     "identifier": 31,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Trans*"],
       "lebensbereich": ["Gesundheit und Pflege"],
       "lebensbereich_gesundheit_detail": ["Arztbesuch"]
@@ -337,7 +337,7 @@
   {
     "identifier": 32,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Inter*"],
       "lebensbereich": ["Gesundheit und Pflege"],
       "lebensbereich_gesundheit_detail": ["Arztbesuch"]
@@ -346,7 +346,7 @@
   {
     "identifier": 33,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Frau/Mann"],
       "lebensbereich": ["Arbeitsleben"],
       "lebensbereich_gesundheit_detail": ["Im Beschäftigungsverhältnis"]
@@ -363,7 +363,7 @@
   {
     "identifier": 35,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität"],
+      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
       "merkmal_gender_detail": [
         "Trans*",
         "Inter*",
@@ -379,9 +379,9 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität"
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
       ],
       "lebensbereich":["Arbeitsleben"]
     }
@@ -394,9 +394,9 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sonstiges"
       ],
       "merkmal_gender_detail": [
@@ -433,9 +433,9 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sozialer Status"
       ],
       "lebensbereich":[
@@ -451,9 +451,9 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sozialer Status"
       ],
       "lebensbereich":["Bildungsbereich"],
@@ -471,9 +471,9 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sozialer Status"
       ],
       "lebensbereich":["Gesundheit und Pflege"],
@@ -491,9 +491,9 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sozialer Status"
       ],
       "lebensbereich":["Öffentlichkeit und Freizeit"]
@@ -507,9 +507,9 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sozialer Status"
       ],
       "lebensbereich":["Internet, Medien und Werbung"]
@@ -552,7 +552,7 @@
     "identifier": 46,
     "features": {
       "merkmal": [
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Religion/Weltanschauung"
       ],
       "merkmal_gender_detail": ["Sexuelle Belästigung"],
@@ -581,9 +581,9 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sozialer Status"
       ],
       "lebensbereich":[
@@ -646,9 +646,9 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sonstiges"
       ],
       "merkmal_gender_detail": [
@@ -675,5 +675,5 @@
       "lebensbereich": ["Ämter und Behördem"],
       "lebensbereich_bildung_detail": ["Sonstiges"]
     }
-  },
+  }
 ]

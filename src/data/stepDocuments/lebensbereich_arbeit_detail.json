@@ -8,7 +8,7 @@
     "question": "In welchem Zusammenhang fand die Diskriminierung genau statt?",
     "explanation":"Sie haben den Bereich Arbeitsleben ausgewählt",
     "edges": {
-        "Zugang": {
+        "Bei der Bewerbung": {
             "status":"agg",
             "description": "z.B. Stellenausschreibung, Bewerbungsverfahren",
             "next_node": null,
