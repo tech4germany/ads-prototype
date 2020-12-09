@@ -636,5 +636,17 @@
         }
       ]
     }
+  },
+  {
+    "identifier": 56,
+    "additional_content": {
+      "add_text": "Bitte beachten Sie, dass der Diskriminierungsschutz bei sexueller Belästigung nur im Arbeitsleben besteht. Ansonsten kann sexuelle Belästigung aber bei körperlichen Übergriffen auch strafbar sein und mit einer Strafanzeige bei der Polizei verfolgt werden."
+    }
+  },
+  {
+    "identifier": 57,
+    "additional_content": {
+      "add_text": "Bitte beachten Sie aber, dass Benachteiligungen wegen der Weltanschauung nur im Arbeitsleben verboten sind. Im gesamten zivilrechtlichen Bereich, also beispielsweise beim Einkaufen oder bei Hotelübernachtungen, ist die Weltanschauung nicht geschützt."
+    }
   }
 ]

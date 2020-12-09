@@ -209,7 +209,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
       ],
@@ -225,7 +224,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
       ],
@@ -241,7 +239,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
       ],
@@ -257,7 +254,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
       ],
@@ -379,7 +375,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
       ],
@@ -394,7 +389,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sonstiges"
@@ -450,7 +444,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sozialer Status"
@@ -470,7 +463,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sozialer Status"
@@ -490,7 +482,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sozialer Status"
@@ -506,7 +497,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sozialer Status"
@@ -586,7 +576,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sozialer Status"
@@ -615,7 +604,7 @@
         "Gesetzliche Rente"
       ],
       "lebensbereich_gesundheit_detail": [
-        "Private Krankenversicherung",
+        "Private Krankenkasse",
         "Gesetzliche Krankenkasse"
       ]
     }
@@ -624,7 +613,7 @@
     "identifier": 50,
     "features": {
       "lebensbereich":["Gesundheit und Pflege"],
-      "lebensbereich_gesundheit_detail": ["Private Krankenversicherung"]
+      "lebensbereich_gesundheit_detail": ["Private Krankenkasse"]
     }
   },
   {
@@ -651,7 +640,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sonstiges"
@@ -689,7 +677,6 @@
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sonstiges"
@@ -714,6 +701,56 @@
       ],
       "lebensbereich_bildung_detail": [
         "Kita"
+      ]
+    }
+  },
+  {
+    "identifier": 56,
+    "features": {
+      "merkmal": [
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
+      ],
+      "merkmal_gender_detail": [
+        "Sexuelle Belästigung"
+      ],
+      "lebensbereich":[
+        "Geschäfte, Verträge und Dienstleistungen",
+        "Wohnungsmarkt",
+        "Gesundheit und Pflege",
+        "Bildungsbereich"
+      ],
+      "lebensbereich_gesundheit_detail": [
+        "Arztbesuch",
+        "Private Krankenkasse"
+      ],
+      "lebensbereich_bildung_detail": [
+        "Kita",
+        "Privatschule/Privatunterricht"
+      ]
+    }
+  },
+  {
+    "identifier": 57,
+    "features": {
+      "merkmal": [
+        "Religion/Weltanschauung"
+      ],
+      "merkmal_religion_detail": [
+        "Weltanschauung"
+      ],
+      "lebensbereich":[
+        "Geschäfte, Verträge und Dienstleistungen",
+        "Wohnungsmarkt",
+        "Gesundheit und Pflege",
+        "Bildungsbereich"
+      ],
+      "lebensbereich_gesundheit_detail": [
+        "Arztbesuch",
+        "Private Krankenkasse"
+      ],
+      "lebensbereich_bildung_detail": [
+        "Kita",
+        "Privatschule/Privatunterricht"
       ]
     }
   }
