@@ -6,7 +6,7 @@ import { getResultFeature, getResultAdditionalText } from "data/Interface"
 import { ResultFeatureType } from "data/customTypes"
 
 const useStyles = makeStyles((theme) => ({
-  infoSpace: {
+  infoBox: {
     backgroundColor: "inherit",
     display: "flex",
     flexDirection: "column",
@@ -14,32 +14,31 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "100%",
     maxWidth: "750px",
   },
-  header: {
+  headerContainer: {
+    marginBottom: "50px",
+  },
+  headerText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "40px",
     lineHeight: "32px",
-    marginBottom: "50px",
   },
-  subHeader: {
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "30px",
+  subHeaderContainer: {
     marginBottom: "32px",
   },
-  infoTextNM: {
-    fontFamily: "BundesSansWeb-Regular",
-    fontSize: "18px",
+  subHeaderText: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "30px"
+  },
+  infoTextContainer: {
     marginBottom: "18px"
   },
-  infoTextNS: {
-    fontFamily: "BundesSansWeb-Regular",
-    fontSize: "18px",
-    marginBottom: "50px",
-    whiteSpace: "pre-wrap"
+  infoTextContainerMargin: {
+    marginBottom: "50px"
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
-    marginBottom: "50px"
+    whiteSpace: "pre-wrap"
   }
 }));
 
@@ -49,41 +48,62 @@ export default function ResultInfo() {
   let answers = Answers.useContainer();
 
   return (
-    <div className={classes.infoSpace}>
+    <div className={classes.infoBox}>
 
-      <span className={classes.header}>Die Ersteinschätzung Ihres Sachverhalts</span>
-      <span className={classes.subHeader}>Rechtliche Einordnung:</span>
+      <div className={classes.headerContainer}>
+        <span className={classes.headerText}>Die Ersteinschätzung Ihres Sachverhalts</span>
+      </div>
 
-      <span className={classes.infoTextNM}>
-        Sie sehen sich aufgrund des Merkmals <b>{answers.getAnswerByKey("merkmal", 0)}
-        </b> im Lebensbereich <b>{answers.getAnswerByKey("lebensbereich", 0)}</b> diskriminiert.
-      </span>
-      <span className={classes.infoTextNM}>
-        {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.agg_text)}
-      </span>
+      <div className={classes.subHeaderContainer}>
+        <span className={classes.subHeaderText}>Rechtliche Einordnung:</span>
+      </div>
+
+      <div className={classes.infoTextContainer}>
+        <span className={classes.infoText}>
+          Sie sehen sich aufgrund des Merkmals <b>{answers.getAnswerByKey("merkmal", 0)}
+          </b> im Lebensbereich <b>{answers.getAnswerByKey("lebensbereich", 0)}</b> diskriminiert.
+        </span>
+      </div>
+
+      <div className={classes.infoTextContainer}>
+        <span className={classes.infoText}>
+          {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.agg_text)}
+        </span>
+      </div>
+
       {
         getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.frist_text)?
-        <span className={classes.infoTextNM}>
-          {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.frist_text)}
-        </span>:
-        null
+        <div className={classes.infoTextContainer}>
+          <span className={classes.infoText}>
+            {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.frist_text)}
+          </span>
+        </div>: null
       }
+
       {
         getResultAdditionalText(resultSpecs.self.non_default_identifier)?
-        <span className={classes.infoTextNM}>
-          {getResultAdditionalText(resultSpecs.self.non_default_identifier)}
-        </span>:
-        null
+        <div className={classes.infoTextContainer}>
+          <span className={classes.infoText}>
+            {getResultAdditionalText(resultSpecs.self.non_default_identifier)}
+          </span>
+        </div>: null
       }
 
-      <span className={classes.infoText}>
-        Falls Sie weitere Fragen haben, können Sie uns gerne kontaktieren oder eine Beratungsstelle in Ihrer Nähe aufsuchen.
-      </span>
+      <div className={classes.infoTextContainerMargin}>
+        <span className={classes.infoText}>
+          Falls Sie weitere Fragen haben, können Sie uns gerne kontaktieren oder eine Beratungsstelle in Ihrer Nähe aufsuchen.
+        </span>
+      </div>
 
-      <span className={classes.subHeader}>Nächste Schritte:</span>
-      <span className={classes.infoTextNS}>
-        {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.next_step)}
-      </span>
+      <div className={classes.subHeaderContainer}>
+        <span className={classes.subHeaderText}>Nächste Schritte:</span>
+      </div>
+
+      <div className={classes.infoTextContainerMargin}>
+        <span className={classes.infoText}>
+          {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.next_step)}
+        </span>
+      </div>
     </div>
   );
 }

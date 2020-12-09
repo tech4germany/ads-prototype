@@ -7,7 +7,7 @@ import { ResultFeatureType } from "data/customTypes"
 import downloadIcon from "assets/icons/Dokument.svg"
 
 const useStyles = makeStyles((theme) => ({
-  infoSpace: {
+  materialsBox: {
     backgroundColor: "inherit",
     display: "flex",
     flexDirection: "column",
@@ -16,10 +16,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "750px",
     marginBottom: "50px"
   },
-  subHeader: {
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "30px",
+  subHeaderContainer: {
     marginBottom: "32px",
+  },
+  subHeaderText: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "30px"
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
@@ -67,11 +69,16 @@ export default function ResultsMaterials() {
   let materials = getResultMaterials(resultSpecs.self.non_default_identifier)
 
   return (
-    <div className={classes.infoSpace}>
-      <span className={classes.subHeader}>Informationsmaterial:</span>
+    <div className={classes.materialsBox}>
+
+      <div className={classes.subHeaderContainer}>
+        <span className={classes.subHeaderText}>Informationsmaterial:</span>
+      </div>
+
       <span className={classes.infoText}>
         Weitere Informationen zu Ihren Fragen gibt es hier:
       </span>
+
       <ul className={classes.materialsList}>
         {
           (materials !== null)?

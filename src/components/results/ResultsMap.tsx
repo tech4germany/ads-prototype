@@ -11,22 +11,26 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     paddingBottom: "4vh"
   },
-  mapHeader: {
+  mapHeaderContainer: {
     marginTop: "20px",
     marginBottom: "8px",
     marginLeft: "38px",
-    marginRight: "38px",
+    marginRight: "38px"
+  },
+  mapHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "22px"
   },
-  mapInfo: {
+  mapInfoContainer: {
     marginBottom: "20px",
     marginLeft: "38px",
     marginRight: "38px",
+    maxWidth: "268px"
+  },
+  mapInfoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "16px",
-    lineHeight: "22px",
-    maxWidth: "268px"
+    lineHeight: "22px"
   },
   mapContainer: {
     display: "flex",
@@ -55,11 +59,11 @@ export default function ResultMap() {
     <div className={classes.mapSpace}>
       <div className={classes.mapContainer}>
         <div className={classes.mapContent}>
-          <div className={classes.mapHeader}>
-            <span>Beratungsstellen</span>
+          <div className={classes.mapHeaderContainer}>
+            <span className={classes.mapHeaderText}>Beratungsstellen</span>
           </div>
-          <div className={classes.mapInfo}>
-            <span>Finden Sie eine Beratungsstelle in Ihrer Nähe über unsere Beratungsstellensuche</span>
+          <div className={classes.mapInfoContainer}>
+            <span className={classes.mapInfoText}>Finden Sie eine Beratungsstelle in Ihrer Nähe über unsere Beratungsstellensuche</span>
               <br></br>
               <br></br>
             <span><a target="_blank" href={"https://www.antidiskriminierungsstelle.de/SiteGlobals/Forms/Suche/Beratungsstellensuche/Karte/Beratungsstellensuche_formular.html?nn=6560716&ambit_distance=200&ambit_distance.HASH=3f1f143fdef1207bca01"}>Beratungsstelle finden</a></span>

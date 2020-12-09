@@ -3,30 +3,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import { colorMain, textSelectionMain, textSelectionExplanation } from "components/styleguide"
 
 const useStyles = makeStyles((theme) => ({
-  contactSpace: {
+  contactBox: {
     backgroundColor: "inherit",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
     flexWrap: "wrap",
     paddingBottom: "4vh"
-  },
-  contactHeader: {
-    marginTop: "20px",
-    marginBottom: "8px",
-    marginLeft: "38px",
-    marginRight: "38px",
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "22px"
-  },
-  contactInfo: {
-    marginBottom: "20px",
-    marginLeft: "38px",
-    marginRight: "38px",
-    fontFamily: "BundesSansWeb-Regular",
-    fontSize: "16px",
-    lineHeight: "22px",
-    maxWidth: "268px"
   },
   contactContainer: {
     display: "flex",
@@ -38,6 +21,27 @@ const useStyles = makeStyles((theme) => ({
   contactContent: {
     height: "100%",
     maxWidth: "333px"
+  },
+  contactHeaderContainer: {
+    marginTop: "20px",
+    marginBottom: "8px",
+    marginLeft: "38px",
+    marginRight: "38px"
+  },
+  contactHeaderText: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "22px"
+  },
+  contactInfoContainer: {
+    marginBottom: "20px",
+    marginLeft: "38px",
+    marginRight: "38px",
+    maxWidth: "268px"
+  },
+  contactInfoText: {
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "16px",
+    lineHeight: "22px"
   },
   contactStripe: {
     display: "flex",
@@ -52,18 +56,15 @@ export default function ResultContact() {
   const classes = useStyles();
 
   return (
-    <div className={classes.contactSpace}>
+    <div className={classes.contactBox}>
       <div className={classes.contactContainer}>
         <div className={classes.contactContent}>
-          <div className={classes.contactHeader}>
-            <span>Kontakt zu uns</span>
+          <div className={classes.contactHeaderContainer}>
+            <span className={classes.contactHeaderText}>Kontakt zu uns</span>
           </div>
-          <div className={classes.contactInfo}>
-            <span>Mo 13-15, Mi und Fr 9-12 bieten wir eine juristische Erstberatung an.</span><br></br>
-            <span>Tel.: <a href={"tel:030 18555-1855"}>030 18555-1855</a></span><br></br>
-              <br></br>
-            <span>Email: <a href={"email:beratung@ads.bund.de"}>beratung@ads.bund.de</a></span><br></br>
-            <span><a href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}>Kontaktformular</a></span>
+          <div className={classes.contactInfoContainer}>
+            <span className={classes.contactInfoText}>Email: <a href={"email:beratung@ads.bund.de"}>beratung@ads.bund.de</a></span><br></br>
+            <span className={classes.contactInfoText}><a href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}>Kontaktformular</a></span>
           </div>
         </div>
         <div className={classes.contactStripe}></div>
