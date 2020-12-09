@@ -68,7 +68,7 @@ export default function ResultsTemplates() {
       </div>
 
       <span className={classes.infoText}>
-        Die Vorlage hier können Sie ausfüllen und abschicken, um Ihre Rechte geltend zu machen:
+        Die Vorlage hier können Sie ausfüllen und an die Gegenseite schicken, um Ihre Rechte geltend zu machen:
       </span>
 
       <ul className={classes.templateList}>

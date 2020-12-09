@@ -121,7 +121,7 @@
         },
         {
           "name": "Pinkstinks Germany e.V. Werbemelder*in",
-          "website": "www.pinkstinks.de/werbung-melden/"
+          "website": "https://werbemelder.in/submit "
         },
         {
           "name": "HateAid",
@@ -487,13 +487,13 @@
   {
     "identifier": 38,
     "additional_content": {
-      "add_text": "Sie sind aber durch das Grundgesetz (GG) genauso vor benachteiligendem und rechtswidrigem Verhalten von Polizei und Justiz geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben oder vor Gericht gehen."
+      "add_text": "Sie sind aber durch das Grundgesetz (GG) und andere besondere gesetzliche Bestimmungen genauso vor benachteiligendem und rechtswidrigem Verhalten von Polizei und Justiz geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben oder vor Gericht gehen."
     }
   },
   {
     "identifier": 39,
     "additional_content": {
-      "add_text": "Denn Bildung fällt in die Zuständigkeit der Bundesländer. Auch dort sind Sie aber durch Gesetze vor benachteiligendem und rechtswidrigem Verhalten geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben."
+      "add_text": "Denn Bildung fällt in die Zuständigkeit der Bundesländer. Auch dort sind Sie aber durch Gesetze vor benachteiligendem und rechtswidrigem Verhalten geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben oder sich bei der Schulaufsichtsbehörde oder dem Landesbildungsministerium beschweren."
     }
   },
   {
@@ -622,6 +622,17 @@
         {
           "name": "Refugee Law Clinics in Deutschland (kostenfreie Beratung im Asyl- und Aufenthaltsrecht)",
           "website": "https://rlc-deutschland.de/"
+        }
+      ]
+    }
+  },
+  {
+    "identifier": 55,
+    "additional_content": {
+      "templates": [
+        {
+          "template": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.5_Abhilfe_aussergerichtlich_Geltendmachung_PC.doc;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=14",
+          "help": "https://www.antidiskriminierungsstelle.de/SharedDocs/Downloads/DE/publikationen/Handbuch_Diskriminierungsschutz/5.5_Abhilfe_aussergerichtlich_Geltendmachung_Ausfuellhinweise.pdf;jsessionid=24156284FE1ACBBA9081D70A1D439DA8.1_cid360?__blob=publicationFile&v=17"
         }
       ]
     }

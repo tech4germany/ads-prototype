@@ -435,7 +435,6 @@
         "Alter",
         "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
         "Sozialer Status"
       ],
       "lebensbereich":[
@@ -524,7 +523,13 @@
   {
     "identifier": 44,
     "features": {
-      "lebensbereich": ["Sonstiges"]
+      "lebensbereich": [
+        "Sonstiges",
+        "Gesundheit und Pflege"
+      ],
+      "lebensbereich_gesundheit_detail": [
+        "Sonstiges"
+      ]
     }
   },
   {
@@ -674,6 +679,42 @@
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
       "lebensbereich": ["Ämter und Behördem"],
       "lebensbereich_bildung_detail": ["Sonstiges"]
+    }
+  },
+  {
+    "identifier": 55,
+    "features": {
+      "merkmal": [
+        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Religion/Weltanschauung",
+        "Behinderung/chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Sexuelle Identität",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Sonstiges"
+      ],
+      "merkmal_gender_detail": [
+        "Trans*",
+        "Inter*",
+        "Frau/Mann",
+        "queer",
+        "Sonstiges"
+      ],
+      "merkmal_religion_detail": [
+        "Religion",
+        "Sonstiges"
+      ],
+      "lebensbereich":[
+        "Gesundheit und Pflege",
+        "Bildungsbereich"
+      ],
+      "lebensbereich_gesundheit_detail": [
+        "Arztbesuch"
+      ],
+      "lebensbereich_bildung_detail": [
+        "Kita"
+      ]
     }
   }
 ]
