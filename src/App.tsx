@@ -1,5 +1,4 @@
 import React from 'react'
-import CssBaseline from '@material-ui/core/CssBaseline'
 import { makeStyles } from '@material-ui/core/styles'
 import { colorMain } from "components/styleguide"
 
@@ -9,7 +8,6 @@ import StateInit from "components/StateInit"
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: colorMain["15"],
-    height:"100%",
     minHeight: "105vh",
     display: 'flex',
     flexDirection: 'column',
@@ -48,18 +46,14 @@ export default function App() {
 
   return (
     <React.Fragment>
-      <CssBaseline />
         <div className={classes.root}>
 
           <NavBar />
-
           <div className={classes.placeholder}></div>
-
           <div className={classes.mainArea}>
-
             <StateInit />
-
           </div>
+
         </div>
     </React.Fragment>
   );

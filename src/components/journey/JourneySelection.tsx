@@ -17,7 +17,7 @@ const wrap = (s: string) => s.replace(
     )
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  selectionBox: {
     minHeight: "42vh"
   },
   selectionList: {
@@ -25,10 +25,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     alignItems: "flex-start",
     flexWrap: "wrap",
-    '& > *': {
-      margin: theme.spacing(1),
-    },
-    paddingLeft: "0px"
+    paddingLeft: "0px",
+    marginTop: "0px"
   },
   buttonContainer: {
     marginBottom: "15px",
@@ -49,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "354px",
     height: "100%",
   },
-  buttonCard: {
+  button: {
     height: "100%",
     display: "flex",
     flexDirection: "row",
@@ -62,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
     '@media (hover: hover)': {
       "&:hover": {
         backgroundColor: colorMain["115"],
-        color: textSelectionMain["color"]["active"],
+        color: "white",
       }
     }
   },
@@ -90,9 +88,9 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     whiteSpace: "pre-wrap",
-    maxWidth:"200px",
-    fontFamily: textSelectionMain["fontFamily"],
-    fontSize: textSelectionMain["fontSize"],
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
+    textAlign: "left"
   },
   infoIconContainer: {
     display: "flex",
@@ -146,19 +144,22 @@ export default function JourneySelection() {
     )
   } else {
     return (
-      <Grid className={classes.root}>
+      <div className={classes.selectionBox}>
         <ul className={classes.selectionList}>
           {documentQueue.getEdges(activeStep.self).map((label, index) => {
+
             const infoTextisSet = documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.info_text)
             const selectionIcon = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
             const selectionIcon_hover = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon_hover))
+
             return (
                 <li className={classes.buttonContainer} key={index}>
+
                   <div className={classes.buttonContent}
                     onMouseOver={() => setDisplayHover(label)}
                     onMouseOut={() => setDisplayHover(null)}
                   >
-                    <button tabIndex={0} className={classes.buttonCard} type="submit"
+                    <button tabIndex={0} className={classes.button} type="submit"
                       onClick={() => {
                         answers.add(activeDocument.identifier, label)
                         documentQueue.update(UpdateType.add, activeStep.self, label)
@@ -171,8 +172,8 @@ export default function JourneySelection() {
                           <>
                             {
                               displayHover === label?
-                              <img className={classes.icon_hover} src={selectionIcon_hover} alt={"empty"}/>:
-                              <img className={classes.icon} src={selectionIcon} alt={"empty"}/>
+                              <img className={classes.icon_hover} src={selectionIcon_hover} alt={"Icon repräsentiert das Auswahlelement im Hoverzustand"}/>:
+                              <img className={classes.icon} src={selectionIcon} alt={"Icon repräsentiert das Auswahlelement"}/>
                             }
                           </>:
                           null
@@ -187,14 +188,16 @@ export default function JourneySelection() {
                           {
                             infoTextisSet?
                             <div>
-                              <button tabIndex={0} className={classes.infoButtonContainer} type="submit"
+                              <button
+                                tabIndex={0}
+                                className={classes.infoButtonContainer} type="submit"
                                 onClick={(event) => {
                                   event.stopPropagation()
                                   updateInfoDisplay(label)
                               }}>
                                 <img className={classes.infoIcon}
                                 src={infoIcon}
-                                alt={"empty"}
+                                alt={"Hier erfahren Sie mehr Informationen zu Ihrer Auswahl"}
                                 />
                               </button>
                             </div>
@@ -202,14 +205,16 @@ export default function JourneySelection() {
                             null
                           }
                       </div>
+
                     </button>
+
                 </div>
                 <div className={classes.buttonStripe}></div>
               </li>
           );
         })}
       </ul>
-    </Grid>
+    </div>
     )
   }
 }

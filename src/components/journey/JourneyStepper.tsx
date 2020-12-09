@@ -39,7 +39,7 @@ const useQontoStepIconStyles = makeStyles({
   root: {
     color: colorMain["45"],
     display: 'flex',
-    height: 22,
+    height: "22px",
     alignItems: 'center',
   },
   active: {
@@ -54,7 +54,7 @@ const useQontoStepIconStyles = makeStyles({
   completed: {
     color: colorMain["115"],
     zIndex: 1,
-    fontSize: "22px",
+    fontSize: "25px",
   },
 });
 

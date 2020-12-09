@@ -12,24 +12,26 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    paddingLeft: "0.8vw",
-    marginBottom: "2vh"
   },
-  question: {
+  questionContainer: {
     display: "flex",
     flexWrap: "wrap",
-    fontFamily: questionHeader["fontFamily"],
-    fontSize:  questionHeader["fontSize"],
     marginBottom: "1.5vh"
   },
-  explanation: {
+  questionText: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "28px"
+  },
+  explanationContainer: {
     display: "flex",
     flexWrap: "wrap",
-    fontFamily: questionExplanation["fontFamily"],
-    fontSize:  questionExplanation["fontSize"],
+    marginBottom: "1.5vh"
+  },
+  explanationText: {
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "22px",
     lineHeight: 1.15,
     whiteSpace: "pre-wrap",
-    marginBottom: "1.5vh"
   }
 }));
 
@@ -40,15 +42,16 @@ export default function JourneyQuestion() {
 
   return (
     <div className={classes.questionBox}>
-
-      <span className={classes.question}>
-        {documentQueue.getStepDetail(activeStep.self, StepDetail.question)}
-      </span>
-
-      <span className={classes.explanation}>
-        {documentQueue.getStepDetail(activeStep.self, StepDetail.explanation)}
-      </span>
-
+      <div className={classes.questionContainer}>
+        <span className={classes.questionText}>
+          {documentQueue.getStepDetail(activeStep.self, StepDetail.question)}
+        </span>
+      </div>
+      <div className={classes.explanationContainer}>
+        <span className={classes.explanationText}>
+          {documentQueue.getStepDetail(activeStep.self, StepDetail.explanation)}
+        </span>
+      </div>
     </div>
 );
 }

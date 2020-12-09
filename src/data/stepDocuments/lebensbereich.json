@@ -33,7 +33,7 @@
             "info_text": "Erfasst werden Diskriminierungen bei der Wohnungssuche und der Wohnungsmiete. Hinweise auf eine Diskriminierung können diskriminierende Äußerungen in Wohnungsanzeigen oder bei der Wohnungsbesichtigung sein. Verboten sind Diskriminierungen durch Vermieter*innen bei bestehenden Mietverhältnissen sowie die Kündigung der Wohnung aus diskriminierenden Gründen. Nicht erfasst wird diskriminierendes Verhalten durch Nachbar*innen."
         },
         "Ämter und Behörden": {
-            "status":"agg",
+            "status":"non-agg",
             "description": "",
             "next_node": "lebensbereich_administration_detail",
             "icon": "aemter",

@@ -14,7 +14,7 @@ import { Answers } from "states/answerState"
 import { ResultSpecs } from "states/resultState"
 
 const useStyles = makeStyles((theme) => ({
-  mainSpace: {
+  resultBox: {
       backgroundColor: "inherit",
       display: "flex",
       flexDirection: "column",
@@ -48,8 +48,8 @@ export default function Result() {
   }, [answers])
 
   return (
-    <div className={classes.mainSpace}>
-      <Grid container className={classes.resultSpace}>
+    <div className={classes.resultBox}>
+      <div className={classes.resultSpace}>
 
         {
           resultSpecs.self.profile ?
@@ -57,32 +57,25 @@ export default function Result() {
               <ResultsInfo />
               {
                 getResultReferrals(resultSpecs.self.non_default_identifier).length>0?
-                <ResultsReferrals />:
-                <></>
+                <ResultsReferrals />: null
               }
               {
                 getResultTemplates(resultSpecs.self.non_default_identifier).length>0?
-                <ResultsTemplates />:
-                <></>
+                <ResultsTemplates />: null
               }
               {
                 getResultMaterials(resultSpecs.self.non_default_identifier).length>0?
-                <ResultsMaterials />:
-                <></>
+                <ResultsMaterials />: null
               }
-
-            </Grid>
-          :
-            <Grid item lg={9} md={10} sm={12} xs={12} className={classes.infoTemplateSpace}>
-              <span>Loading ...</span>
-            </Grid>
+            </Grid>: null
         }
 
         <Grid item lg={3} md={2} sm={12} xs={12} className={classes.contactMapSpace}>
           <ResultsContact />
           <ResultsMap />
         </Grid>
-      </Grid>
+
+      </div>
       <JourneyNavigation />
   </div>
   );

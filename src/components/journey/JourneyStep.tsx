@@ -22,11 +22,11 @@ import { DocumentQueue } from "states/documentQueueState"
 import { Answers } from "states/answerState"
 
 const useStyles = makeStyles((theme) => ({
-  stepContent: {
+    stepBox: {
     display: "flex",
     flexDirection: "column",
     alignItems: "left",
-    width: "100%",
+    width: "100%"
   },
 }));
 
@@ -46,7 +46,7 @@ export default function JourneyStep() {
   }, [answers])
 
   return (
-      <div className={classes.stepContent}>
+      <div className={classes.stepBox}>
 
         <JourneyQuestion />
 

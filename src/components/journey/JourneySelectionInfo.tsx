@@ -1,8 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
-import  Grid from '@material-ui/core/Grid';
-import { colorMain, textSelectionMain, textSelectionExplanation } from "components/styleguide"
+import { colorMain } from "components/styleguide"
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
@@ -15,7 +13,7 @@ const wrap = (s: string) => s.replace(
     )
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  selectionInfoBox: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: "center",
@@ -51,8 +49,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end",
-    fontFamily: textSelectionMain["fontFamily"],
-    fontSize: textSelectionMain["fontSize"],
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
     marginTop: "22px"
   },
   exitIcon: {
@@ -70,7 +68,8 @@ const useStyles = makeStyles((theme) => ({
     padding: "0px"
   },
   infoText: {
-    ...textSelectionExplanation,
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "16px",
     marginRight: "90px"
   },
   infoStripe: {
@@ -91,10 +90,11 @@ export default function JourneySelectionInfoText() {
   let activeDocument = documentQueue.self[activeStep.self]
 
   return (
-    <Grid container className={classes.root} >
+    <div className={classes.selectionInfoBox} >
       <div className={classes.infoContainer}>
 
         <div className={classes.infoContent}>
+
           <div className={classes.infoCard}>
             <div className={classes.headerRow}>
               <div className={classes.infoHeader}>
@@ -117,9 +117,10 @@ export default function JourneySelectionInfoText() {
               }
             </span>
           </div>
+
         </div>
         <div className={classes.infoStripe}></div>
       </div>
-    </Grid>
+    </div>
   )
 }
