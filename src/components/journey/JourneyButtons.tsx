@@ -50,10 +50,10 @@ export function BackButton() {
     )
   } else {
     return(
-        <button tabIndex={0} className={classes.arrowContainer}>
-          <KeyboardArrowLeft className={classes.arrow}
-            onClick={() => backwardAction()}
-          />
+        <button tabIndex={0} className={classes.arrowContainer}
+          onClick={() => backwardAction()}
+        >
+          <KeyboardArrowLeft className={classes.arrow}/>
         </button>
     )
   }
