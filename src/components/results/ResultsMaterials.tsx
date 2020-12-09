@@ -1,9 +1,7 @@
-import React, { useLayoutEffect } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { ResultSpecs } from "states/resultState"
-import { Answers } from "states/answerState"
-import { getResultFeature, getResultMaterials } from "data/Interface"
-import { ResultFeatureType } from "data/customTypes"
+import { getResultMaterials } from "data/Interface"
 import downloadIcon from "assets/icons/Dokument.svg"
 
 const useStyles = makeStyles((theme) => ({

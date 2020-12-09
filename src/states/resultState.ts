@@ -1,6 +1,6 @@
 import { createContainer } from 'unstated-next'
 import { useState } from 'react'
-import { AnswerProfileLayout, DefaultSpecsLayout, NonDefaultSpecsLayout, AnswersLayout, ResultSpecsLayout, EdgeDetail, ResultType } from "data/customTypes"
+import { AnswerProfileLayout, DefaultSpecsLayout, NonDefaultSpecsLayout, AnswersLayout, ResultSpecsLayout, EdgeDetail } from "data/customTypes"
 import { getDefaultResultCount,
   getNonDefaultResultCount,
   mapLabelToFeature,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { colorMain, textSelectionMain, textSelectionExplanation } from "components/styleguide"
+import { colorMain } from "components/styleguide"
 
 const useStyles = makeStyles((theme) => ({
   mapSpace: {

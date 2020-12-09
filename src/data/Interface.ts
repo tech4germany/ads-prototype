@@ -18,18 +18,13 @@ import non_default_result_content from "data/resultDocuments/nonDefaultResultCon
 import default_result_content from "data/resultDocuments/defaultResultContent.json"
 import {
   NonDefaultResultContentLayout,
-  DefaultResultContentLayout,
   MaterialLayout,
   TemplateLayout,
   ReferralLayout,
-  AdditionalContentType,
-  ResultType,
   DefaultSpecsLayout,
   NonDefaultSpecsLayout,
-  StepDocumentLayout,
   EdgeDetail,
   DocumentQueueLayout,
-  ResultSpecsLayout,
   ResultFeatureType } from "data/customTypes"
 
 // collect all documents

@@ -13,12 +13,6 @@ export function useAnswers(initialState: AnswersLayout = {}) {
     else { return false }
   }
 
-  let _deleteLabelFromStepAnswer = (ans: AnswersLayout, id: string, label: string): AnswersLayout => {
-    let index = ans[id].indexOf(label)
-    ans[id].splice(index, 1)
-    return ans
-  }
-
   let _overwriteCurrentLabel = (ans: AnswersLayout, id: string, newLabel: string): AnswersLayout => {
     let delLabel = ans[id][0]
     let delIndex = mapLabelToFeature(id, delLabel, EdgeDetail.next_node)

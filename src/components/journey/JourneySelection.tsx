@@ -1,8 +1,6 @@
 import React, { useState, useLayoutEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
-import  Grid from '@material-ui/core/Grid';
-import { colorMain, textSelectionMain, textSelectionExplanation } from "components/styleguide"
+import { colorMain } from "components/styleguide"
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
