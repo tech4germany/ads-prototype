@@ -46,15 +46,15 @@ const useQontoStepIconStyles = makeStyles({
     color: colorMain["115"],
   },
   circle: {
-    width: "2vh",
-    height: "2vh",
+    width: "20px",
+    height: "20px",
     borderRadius: '50%',
     backgroundColor: 'currentColor',
   },
   completed: {
     color: colorMain["115"],
     zIndex: 1,
-    fontSize: "3.5vh",
+    fontSize: "22px",
   },
 });
 

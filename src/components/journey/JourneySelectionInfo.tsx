@@ -58,9 +58,16 @@ const useStyles = makeStyles((theme) => ({
   exitIcon: {
     width: "30px",
     height: "30px",
+    cursor: "pointer"
+  },
+  exitButton:{
+    backgroundColor: "inherit",
+    border: "solid 0px",
+    width: "30px",
+    height: "30px",
     marginTop: "10px",
     marginRight: "10px",
-    cursor: "pointer"
+    padding: "0px"
   },
   infoText: {
     ...textSelectionExplanation,
@@ -93,15 +100,14 @@ export default function JourneySelectionInfoText() {
               <div className={classes.infoHeader}>
                 <span>{infoDisplay.self}</span>
               </div>
-              <div>
-                <img className={classes.exitIcon}
-                  src={exitIcon}
-                  alt={"empty"}
-                  onClick={(event) => {
-                    event.stopPropagation()
-                    infoDisplay.hide()
-                }}/>
-              </div>
+              <button className={classes.exitButton} tabIndex={0}
+                onClick={(event) => {
+                  event.stopPropagation()
+                  infoDisplay.hide()
+                }}
+              >
+                <img className={classes.exitIcon} src={exitIcon} alt={"empty"}/>
+              </button>
             </div>
             <span className={classes.infoText}>
               {

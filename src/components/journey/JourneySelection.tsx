@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     width: "360px",
     minWidth: "300px",
-    cursor: "pointer",
     height: "130px",
     backgroundColor: "white"
   },
@@ -49,19 +48,23 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "294px",
     maxWidth: "354px",
     height: "100%",
-    color: textSelectionMain["color"]["inactive"],
+  },
+  buttonCard: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "row",
+    border: "solid 0px",
+    width: "100%",
+    padding: "0px",
+    cursor: "pointer",
+    backgroundColor: "inherit",
+    justifyContent: "space-between",
     '@media (hover: hover)': {
       "&:hover": {
         backgroundColor: colorMain["115"],
         color: textSelectionMain["color"]["active"],
       }
     }
-  },
-  buttonCard: {
-    height: "100%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
   },
   iconContainer: {
     minWidth: "30px",
@@ -92,10 +95,20 @@ const useStyles = makeStyles((theme) => ({
     fontSize: textSelectionMain["fontSize"],
   },
   infoIconContainer: {
-    width: "20%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
+    width: "20%"
+  },
+  infoButtonContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    border: "solid 0px",
+    width: "100%",
+    backgroundColor: "inherit",
+    padding: "0px",
+    cursor: "pointer",
   },
   infoIcon: {
     width: "30px",
@@ -145,7 +158,7 @@ export default function JourneySelection() {
                     onMouseOver={() => setDisplayHover(label)}
                     onMouseOut={() => setDisplayHover(null)}
                   >
-                    <div className={classes.buttonCard}
+                    <button tabIndex={0} className={classes.buttonCard} type="submit"
                       onClick={() => {
                         answers.add(activeDocument.identifier, label)
                         documentQueue.update(UpdateType.add, activeStep.self, label)
@@ -171,21 +184,25 @@ export default function JourneySelection() {
                       </div>
 
                       <div className={classes.infoIconContainer}>
-                        <div className={classes.infoIconContainer}>
                           {
                             infoTextisSet?
-                            <img className={classes.infoIcon}
-                            src={infoIcon}
-                            alt={"empty"}
-                            onClick={(event) => {
-                              event.stopPropagation()
-                              updateInfoDisplay(label)
-                            }}/>:
+                            <div>
+                              <button tabIndex={0} className={classes.infoButtonContainer} type="submit"
+                                onClick={(event) => {
+                                  event.stopPropagation()
+                                  updateInfoDisplay(label)
+                              }}>
+                                <img className={classes.infoIcon}
+                                src={infoIcon}
+                                alt={"empty"}
+                                />
+                              </button>
+                            </div>
+                            :
                             null
                           }
-                        </div>
                       </div>
-                    </div>
+                    </button>
                 </div>
                 <div className={classes.buttonStripe}></div>
               </li>

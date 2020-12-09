@@ -11,13 +11,21 @@ import { ShowInfo } from "states/showInfoState"
 
 const useStyles = makeStyles((theme) => ({
   arrow: {
-    cursor: "pointer",
     color: "#b8c0c5",
-    fontSize: "6vh"
+    fontSize: "48px"
+  },
+  arrowContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    cursor: "pointer",
+    backgroundColor: "inherit",
+    border: "solid 0px",
+    padding: "0px"
   },
   arrowInvisible: {
     color: colorMain["15"],
-    fontSize: "6vh"
+    fontSize: "48px"
   }
 }));
 
@@ -42,9 +50,11 @@ export function BackButton() {
     )
   } else {
     return(
-        <KeyboardArrowLeft className={classes.arrow}
-          onClick={() => backwardAction()}
-        />
+        <button tabIndex={0} className={classes.arrowContainer}>
+          <KeyboardArrowLeft className={classes.arrow}
+            onClick={() => backwardAction()}
+          />
+        </button>
     )
   }
 }

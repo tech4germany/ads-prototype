@@ -24,7 +24,7 @@ export default function NavBar() {
 
   return (
     <React.Fragment>
-      <AppBar position="static" elevation={0} className={classes.appBar}>
+      <AppBar tabIndex={0} position="static" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
         <Link href="/">
             <img className={classes.logo} src={logo} alt={"empty"}/>
