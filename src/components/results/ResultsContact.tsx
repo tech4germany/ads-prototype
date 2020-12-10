@@ -20,8 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contactContent: {
     height: "100%",
-    maxWidth: "333px",
-    minWidth: "300px"
+    width: "300px"
   },
   contactHeaderContainer: {
     marginTop: "20px",
@@ -34,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "22px"
   },
   contactInfoContainer: {
+    display: "flex",
+    flexDirection: "column",
     marginBottom: "20px",
     marginLeft: "38px",
     marginRight: "38px",
@@ -42,7 +43,15 @@ const useStyles = makeStyles((theme) => ({
   contactInfoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "16px",
-    lineHeight: "22px"
+  },
+  contactFormularText: {
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "16px",
+    borderBottom: "3px solid #000",
+    paddingBottom: "2.5px",
+    textDecoration: "none",
+    color: "black",
+    lineHeight: "32px"
   },
   contactStripe: {
     display: "flex",
@@ -50,6 +59,9 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100px",
     width: "6px",
     minWidth: "6px"
+  },
+  contactSpacer: {
+    height: "24px"
   }
 }));
 
@@ -64,8 +76,9 @@ export default function ResultContact() {
             <span className={classes.contactHeaderText}>Kontakt zu uns</span>
           </div>
           <div className={classes.contactInfoContainer}>
-            <span className={classes.contactInfoText}>Email: <a href={"email:beratung@ads.bund.de"}>beratung@ads.bund.de</a></span><br></br>
-            <span className={classes.contactInfoText}><a href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}>Kontaktformular</a></span>
+            <span className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an: <a href={"email:beratung@ads.bund.de"}>beratung@ads.bund.de</a></span>
+            <span className={classes.contactSpacer}></span>
+            <span><a className={classes.contactFormularText} href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}>Zum Kontaktformular</a></span>
           </div>
         </div>
         <div className={classes.contactStripe}></div>

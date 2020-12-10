@@ -58,8 +58,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     '@media (hover: hover)': {
       "&:hover": {
-        backgroundColor: colorMain["115"],
-        color: "white",
+        backgroundColor: colorMain["100"],
       }
     }
   },
@@ -176,14 +175,8 @@ export default function JourneySelection() {
 
                       <div className={classes.iconContainer}>
                         {
-                          selectionIcon && selectionIcon_hover?
-                          <>
-                            {
-                              displayHover === label?
-                              <img className={classes.icon_hover} src={selectionIcon_hover} alt={"Icon repräsentiert das Auswahlelement im Hoverzustand"}/>:
-                              <img className={classes.icon} src={selectionIcon} alt={"Icon repräsentiert das Auswahlelement"}/>
-                            }
-                          </>:
+                          selectionIcon?
+                          <img className={classes.icon} src={selectionIcon} alt={"Icon repräsentiert das Auswahlelement"}/>:
                           null
                         }
                       </div>
