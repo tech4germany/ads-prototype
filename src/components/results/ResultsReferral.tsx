@@ -47,12 +47,26 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     lineHeight: "32px"
   },
+  websiteButton: {
+      display: "flex",
+      flexDirection: "row",
+      border: "solid 0px",
+      backgroundColor: "inherit",
+      padding: "0px"
+  }
 }));
 
 export default function ResultReferrals() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
   let list = getResultReferrals(resultSpecs.self.non_default_identifier)
+
+  let handleClick = (link: string) => {
+    return function(e: React.SyntheticEvent) {
+      e.preventDefault()
+      window.location.href=link
+    }
+  }
 
   return (
     <div className={classes.referralsBox}>
@@ -84,7 +98,10 @@ export default function ResultReferrals() {
                 }
                 {
                   label.website?
-                  <span><a href={label.website} className={classes.contentWebsiteText}>Zur Website</a></span>:
+                  <button
+                    className={classes.websiteButton}
+                    onClick={handleClick(label.website)}
+                  ><a href={label.website} className={classes.contentWebsiteText}>Zur Website</a></button>:
                   null
                 }
               </li>

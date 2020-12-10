@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
   downloadTitleText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "18px",
+    textAlign: "left",
     color: "black",
     lineHeight: "25px",
     borderBottom: "3px solid #000",
@@ -41,7 +42,8 @@ const useStyles = makeStyles((theme) => ({
   downloadSubtitleText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
-    color: "black"
+    color: "black",
+    textAlign: "left"
   },
   templateList:{
     marginTop: "16px",
@@ -57,7 +59,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     height: "54px",
-    alignItems: "center"
+    alignItems: "center",
+    border: "solid 0px",
+    backgroundColor: "inherit",
+    padding: "0px"
   },
   downloadLink: {
     display: "flex",
@@ -78,6 +83,13 @@ export default function ResultsTemplates() {
   let resultSpecs = ResultSpecs.useContainer()
   let list = getResultTemplates(resultSpecs.self.non_default_identifier)
 
+  let handleClick = (link: string) => {
+    return function(e: React.SyntheticEvent) {
+      e.preventDefault()
+      window.location.href=link
+    }
+  }
+
   return (
     <div className={classes.templatesBox}>
 
@@ -96,7 +108,9 @@ export default function ResultsTemplates() {
             return(
               <li className={classes.templateItem} key={index}>
 
-                <div className={classes.downloadContainer}>
+                <button className={classes.downloadContainer}
+                  onClick={handleClick(label.template)}
+                >
                   <a href={label.template}
                     className={classes.downloadLink}
                   >
@@ -110,9 +124,11 @@ export default function ResultsTemplates() {
                       <span className={classes.downloadSubtitleText}>Download</span>
                     </div>
                   </a>
-                </div>
+                </button>
                 <span className={classes.itemSpacer}></span>
-                <div className={classes.downloadContainer}>
+                <button className={classes.downloadContainer}
+                  onClick={handleClick(label.help)}
+                >
                   <a href={label.help}
                     className={classes.downloadLink}
                   >
@@ -123,8 +139,9 @@ export default function ResultsTemplates() {
                     <div className={classes.downloadTextContainer}>
                       <span className={classes.downloadTitleText}>Ausfüllhinweis</span>
                       <span className={classes.downloadSubtitleText}>Download</span>
-                    </div>                  </a>
-                </div>
+                    </div>
+                  </a>
+                </button>
 
               </li>
             )

@@ -63,6 +63,13 @@ const useStyles = makeStyles((theme) => ({
   },
   mapSpacer: {
     height: "24px"
+  },
+  mapButton: {
+    display: "flex",
+    flexDirection: "row",
+    border: "solid 0px",
+    backgroundColor: "inherit",
+    padding: "0px"
   }
 }));
 
@@ -79,7 +86,10 @@ export default function ResultMap() {
           <div className={classes.mapInfoContainer}>
             <span className={classes.mapInfoText}>Finden Sie eine Beratungsstelle in Ihrer Nähe über unsere Beratungsstellensuche</span>
             <span className={classes.mapSpacer}></span>
-            <span><a className={classes.mapLinkText} target="_blank" href={"https://www.antidiskriminierungsstelle.de/SiteGlobals/Forms/Suche/Beratungsstellensuche/Karte/Beratungsstellensuche_formular.html?nn=6560716&ambit_distance=200&ambit_distance.HASH=3f1f143fdef1207bca01"}>Zur Beratungsstellensuche</a></span>
+            <button onClick={(e) => {e.preventDefault(); window.location.href="https://www.antidiskriminierungsstelle.de/SiteGlobals/Forms/Suche/Beratungsstellensuche/Karte/Beratungsstellensuche_formular.html?nn=6560716&ambit_distance=200&ambit_distance.HASH=3f1f143fdef1207bca01";}}
+              className={classes.mapButton}>
+              <a className={classes.mapLinkText} target="_blank" href={"https://www.antidiskriminierungsstelle.de/SiteGlobals/Forms/Suche/Beratungsstellensuche/Karte/Beratungsstellensuche_formular.html?nn=6560716&ambit_distance=200&ambit_distance.HASH=3f1f143fdef1207bca01"}>Zur Beratungsstellensuche</a>
+              </button>
           </div>
         </div>
         <div className={classes.mapStripe}></div>

@@ -49,7 +49,11 @@ const useStyles = makeStyles((theme) => ({
   downloadContainer: {
     display: "flex",
     flexDirection: "row",
-    alignItems: "center"
+    justifyContent: "flex-start",
+    alignItems: "center",
+    border: "solid 0px",
+    backgroundColor: "inherit",
+    padding: "0px"
   },
   downloadLink: {
     display: "flex",
@@ -66,11 +70,13 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     lineHeight: "25px",
     borderBottom: "3px solid #000",
-    paddingBottom: "2.5px"
+    paddingBottom: "2.5px",
+    textAlign: "left"
   },
   downloadSubtitleText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
+    textAlign: "left"
   },
 }));
 
@@ -78,6 +84,13 @@ export default function ResultsMaterials() {
   const classes = useStyles()
   let resultSpecs = ResultSpecs.useContainer()
   let materials = getResultMaterials(resultSpecs.self.non_default_identifier)
+
+  let handleClick = (link: string) => {
+    return function(e: React.SyntheticEvent) {
+      e.preventDefault()
+      window.location.href=link
+    }
+  }
 
   return (
     <div className={classes.materialsBox}>
@@ -96,20 +109,22 @@ export default function ResultsMaterials() {
           materials.map((label, index) => {
             return(
               <li className={classes.materialsItem} key={index}>
-                <div className={classes.downloadContainer}>
+                <button className={classes.downloadContainer}
+                  onClick={handleClick(label.link)}
+                >
                   <a href={label.link}
                     className={classes.downloadLink}
                   >
                     <img className={classes.downloadIcon}
                       src={downloadIcon}
-                      alt={"empty"}
+                      alt={"Icon repräsentiert Dokument, das an dieser Stelle downloadbar ist."}
                     />
                     <div className={classes.downloadTextContainer}>
                       <span className={classes.downloadTitleText}>{label.name}</span>
                       <span className={classes.downloadSubtitleText}>Download</span>
                     </div>
                   </a>
-                </div>
+                </button>
               </li>
             )
           }):

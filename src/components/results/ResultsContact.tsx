@@ -62,6 +62,13 @@ const useStyles = makeStyles((theme) => ({
   },
   contactSpacer: {
     height: "24px"
+  },
+  contactButton: {
+    display: "flex",
+    flexDirection: "row",
+    border: "solid 0px",
+    backgroundColor: "inherit",
+    padding: "0px"
   }
 }));
 
@@ -78,7 +85,8 @@ export default function ResultContact() {
           <div className={classes.contactInfoContainer}>
             <span className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an: <a href={"email:beratung@ads.bund.de"}>beratung@ads.bund.de</a></span>
             <span className={classes.contactSpacer}></span>
-            <span><a className={classes.contactFormularText} href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}>Zum Kontaktformular</a></span>
+            <button onClick={(e) => {e.preventDefault(); window.location.href="https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html";}}
+            className={classes.contactButton}><a tabIndex={0} className={classes.contactFormularText} href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}>Zum Kontaktformular</a></button>
           </div>
         </div>
         <div className={classes.contactStripe}></div>

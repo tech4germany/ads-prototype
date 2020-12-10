@@ -45,23 +45,26 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "300px",
     maxWidth: "354px",
     height: "100%",
-  },
-  button: {
-    height: "100%",
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    border: "solid 0px",
-    width: "100%",
-    padding: "0px",
-    cursor: "pointer",
-    backgroundColor: "inherit",
-    justifyContent: "space-between",
     '@media (hover: hover)': {
       "&:hover": {
         backgroundColor: colorMain["100"],
       }
+    },
+    "&:focus": {
+      backgroundColor: colorMain["100"],
     }
+  },
+  button: {
+    height: "100%",
+    width: "354px",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    border: "solid 0px",
+    padding: "0px",
+    cursor: "pointer",
+    backgroundColor: "inherit",
+    justifyContent: "space-between",
   },
   iconContainer: {
     minWidth: "30px",
@@ -98,8 +101,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
-    width: "15%",
-    height: "100%"
+    position: "absolute"
   },
   infoButtonContainer: {
     display: "flex",
@@ -122,6 +124,12 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "6px",
     minWidth: "6px"
+  },
+  buttonGroup: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    height: "100%"
   }
 }));
 
@@ -160,8 +168,10 @@ export default function JourneySelection() {
 
                   <div className={classes.buttonContent}
                     onMouseOver={() => setDisplayHover(label)}
+                    onFocus={() => setDisplayHover(label)}
                     onMouseOut={() => setDisplayHover(null)}
                   >
+                  <div className={classes.buttonGroup}>
                     <button tabIndex={0} className={classes.button} type="submit"
                       onClick={() => {
                         answers.add(activeDocument.identifier, label)
@@ -183,6 +193,7 @@ export default function JourneySelection() {
                       <div className={classes.textContainer}>
                         <span className={classes.text}>{wrap(label)}</span>
                       </div>
+                    </button>
 
                       <div className={classes.infoIconContainer}>
                           {
@@ -213,9 +224,7 @@ export default function JourneySelection() {
                             null
                           }
                       </div>
-
-                    </button>
-
+</div>
                 </div>
                 <div className={classes.buttonStripe}></div>
               </li>
