@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      width: "100%",
   },
   resultSpace: {
       backgroundColor: "inherit",
@@ -49,7 +48,7 @@ export default function Result() {
 
   return (
     <div className={classes.resultBox}>
-      <div className={classes.resultSpace}>
+      <Grid container className={classes.resultSpace}>
 
         {
           resultSpecs.self.profile ?
@@ -75,7 +74,7 @@ export default function Result() {
           <ResultsMap />
         </Grid>
 
-      </div>
+      </Grid>
       <JourneyNavigation />
   </div>
   );

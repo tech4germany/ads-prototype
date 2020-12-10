@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "15px",
   },
   infoContent: {
-    marginBottom: "22px",
+    marginBottom: "28px",
     paddingLeft: "22px",
     maxWidth: "728px"
   },
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: "41px"
+    marginBottom: "28px"
   },
   infoHeader: {
     whiteSpace: "pre-wrap",
@@ -65,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "16px",
+    lineHeight: "25px",
     marginRight: "90px"
   },
   infoStripe: {

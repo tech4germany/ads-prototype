@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
   },
   contactContent: {
     height: "100%",
-    maxWidth: "333px"
+    maxWidth: "333px",
+    minWidth: "300px"
   },
   contactHeaderContainer: {
     marginTop: "20px",

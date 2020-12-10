@@ -37,6 +37,8 @@ export function BackButton() {
   let documentQueue = DocumentQueue.useContainer()
   let activeDocument = documentQueue.self[activeStep.self]
 
+  let handleClick = (e: React.SyntheticEvent) => {if (e) {e.preventDefault()};}
+
   // how to handle backward moves
   let backwardAction = (): void => {
     activeStep.decrement(documentQueue.getVisibilityQueue())
@@ -52,6 +54,8 @@ export function BackButton() {
     return(
         <button tabIndex={0} className={classes.arrowContainer}
           onClick={() => backwardAction()}
+          onMouseDown={handleClick}
+          onKeyUp={(e) => {if (e.keyCode === 13 || e.keyCode === 32) {handleClick(e)}}}
         >
           <KeyboardArrowLeft className={classes.arrow}/>
         </button>

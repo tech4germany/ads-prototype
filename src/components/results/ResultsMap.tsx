@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mapContent: {
     height: "100%",
-    maxWidth: "333px"
+    width: "300px"
   },
   mapStripe: {
     display: "flex",

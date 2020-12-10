@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect, MouseEvent } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { colorMain } from "components/styleguide"
 import { Answers } from "states/answerState"
@@ -65,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
   iconContainer: {
     minWidth: "30px",
+    height: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -83,7 +84,9 @@ const useStyles = makeStyles((theme) => ({
   textContainer: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center"
+    justifyContent: "center",
+    height: "100%",
+    width: "80%"
   },
   text: {
     whiteSpace: "pre-wrap",
@@ -95,7 +98,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
-    width: "20%"
+    width: "20%",
+    height: "100%"
   },
   infoButtonContainer: {
     display: "flex",
@@ -133,6 +137,8 @@ export default function JourneySelection() {
 
   useLayoutEffect(() => {}, [displayHover])
 
+  let handleClick = (e: React.SyntheticEvent) => {if (e) {e.preventDefault()};}
+
   const updateInfoDisplay = (label: string | null) => {
     infoDisplay.show(label)
   }
@@ -163,7 +169,10 @@ export default function JourneySelection() {
                         answers.add(activeDocument.identifier, label)
                         documentQueue.update(UpdateType.add, activeStep.self, label)
                         activeStep.increment(documentQueue.getVisibilityQueue())
-                      }}>
+                      }}
+                      onMouseDown={handleClick}
+                      onKeyUp={(e) => {if (e.keyCode === 13 || e.keyCode === 32) {handleClick(e)}}}
+                    >
 
                       <div className={classes.iconContainer}>
                         {
@@ -193,7 +202,8 @@ export default function JourneySelection() {
                                 onClick={(event) => {
                                   event.stopPropagation()
                                   updateInfoDisplay(label)
-                              }}>
+                                }}
+                              >
                                 <img className={classes.infoIcon}
                                 src={infoIcon}
                                 alt={"Hier erfahren Sie mehr Informationen zu Ihrer Auswahl"}
