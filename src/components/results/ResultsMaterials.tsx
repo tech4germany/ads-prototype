@@ -41,8 +41,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
   },
   downloadIcon: {
-    width: "30px",
-    height: "30px",
+    height: "54px",
     cursor: "pointer",
     marginRight: "15px",
   },
@@ -52,13 +51,27 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center"
   },
   downloadLink: {
+    display: "flex",
+    flexDirection: "row",
     textDecoration: "none"
   },
-  downloadText: {
+  downloadTextContainer: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  downloadTitleText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "18px",
+    color: "black",
+    lineHeight: "25px",
+    borderBottom: "3px solid #000",
+    paddingBottom: "2.5px"
+  },
+  downloadSubtitleText: {
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "18px",
     color: "black"
-  }
+  },
 }));
 
 export default function ResultsMaterials() {
@@ -91,7 +104,10 @@ export default function ResultsMaterials() {
                       src={downloadIcon}
                       alt={"empty"}
                     />
-                    <span className={classes.downloadText}>Download {label.name}</span>
+                    <div className={classes.downloadTextContainer}>
+                      <span className={classes.downloadTitleText}>{label.name}</span>
+                      <span className={classes.downloadSubtitleText}>Download</span>
+                    </div>
                   </a>
                 </div>
               </li>

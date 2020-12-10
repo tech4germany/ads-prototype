@@ -30,8 +30,16 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     marginTop: "16px"
   },
-  downloadText: {
+  downloadTitleText: {
     fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
+    color: "black",
+    lineHeight: "25px",
+    borderBottom: "3px solid #000",
+    paddingBottom: "2.5px"
+  },
+  downloadSubtitleText: {
+    fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
     color: "black"
   },
@@ -40,18 +48,27 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "0px"
   },
   downloadIcon: {
-    width: "30px",
-    height: "30px",
+    height: "54px",
     cursor: "pointer",
     marginRight: "15px",
   },
   downloadContainer: {
     display: "flex",
     flexDirection: "row",
+    height: "54px",
     alignItems: "center"
   },
   downloadLink: {
+    display: "flex",
+    flexDirection: "row",
     textDecoration: "none"
+  },
+  downloadTextContainer: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  itemSpacer: {
+    height: "24px"
   }
 }));
 
@@ -82,14 +99,18 @@ export default function ResultsTemplates() {
                   <a href={label.template}
                     className={classes.downloadLink}
                   >
+
                     <img className={classes.downloadIcon}
                       src={downloadIcon}
                       alt={"Icon zeigt ein generisches Dokument und ist einen Link engebettet, der den Download des Dokuments einleitet."}
                     />
-                    <span className={classes.downloadText}>Download Vorlage</span>
+                    <div className={classes.downloadTextContainer}>
+                      <span className={classes.downloadTitleText}>Formulierungshilfe</span>
+                      <span className={classes.downloadSubtitleText}>Download</span>
+                    </div>
                   </a>
                 </div>
-
+                <span className={classes.itemSpacer}></span>
                 <div className={classes.downloadContainer}>
                   <a href={label.help}
                     className={classes.downloadLink}
@@ -98,8 +119,10 @@ export default function ResultsTemplates() {
                       src={downloadIcon}
                       alt={"Icon zeigt ein generisches Dokument und ist einen Link engebettet, der den Download des Dokuments einleitet."}
                     />
-                    <span className={classes.downloadText}>Download Ausfüllhinweise</span>
-                  </a>
+                    <div className={classes.downloadTextContainer}>
+                      <span className={classes.downloadTitleText}>Ausfüllhinweis</span>
+                      <span className={classes.downloadSubtitleText}>Download</span>
+                    </div>                  </a>
                 </div>
 
               </li>
