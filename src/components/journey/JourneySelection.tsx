@@ -6,7 +6,8 @@ import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { ShowInfo } from "states/showInfoState"
 import { EdgeDetail, UpdateType } from "data/customTypes"
-import infoIcon from 'assets/icons/information.png'
+import infoIcon from 'assets/icons/info.svg'
+import infoIcon_hover from 'assets/icons/info_hover.svg'
 import { provideSelectionIcon } from "assets/icons/ProvideIcons"
 import JourneySelectionInfo from "components/journey/JourneySelectionInfo"
 
@@ -111,8 +112,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   infoIcon: {
-    width: "30px",
-    height: "30px",
+    width: "68px",
     marginTop: "10px",
     marginRight: "10px",
   },
@@ -154,7 +154,6 @@ export default function JourneySelection() {
 
             const infoTextisSet = documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.info_text)
             const selectionIcon = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
-            const selectionIcon_hover = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon_hover))
 
             return (
                 <li className={classes.buttonContainer} key={index}>
@@ -197,10 +196,17 @@ export default function JourneySelection() {
                                   updateInfoDisplay(label)
                                 }}
                               >
-                                <img className={classes.infoIcon}
-                                src={infoIcon}
-                                alt={"Hier erfahren Sie mehr Informationen zu Ihrer Auswahl"}
-                                />
+                                {
+                                  displayHover === label?
+                                  <img className={classes.infoIcon}
+                                    src={infoIcon_hover}
+                                    alt={"Hier erfahren Sie mehr Informationen zu Ihrer Auswahl"}
+                                  />:
+                                  <img className={classes.infoIcon}
+                                    src={infoIcon}
+                                    alt={"Hier erfahren Sie mehr Informationen zu Ihrer Auswahl"}
+                                  />
+                                }
                               </button>
                             </div>
                             :
