@@ -12,7 +12,7 @@ import { provideSelectionIcon } from "assets/icons/ProvideIcons"
 import JourneySelectionInfo from "components/journey/JourneySelectionInfo"
 
 const wrap = (s: string) => s.replace(
-        /(?![^\n]{1,20}$)([^\n]{1,20})\//g, '$1\/\n'
+        /(?![^\n]{1,20}$)([^\n]{1,20})\//g, '$1\/\n',
     )
 
 const useStyles = makeStyles((theme) => ({
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonContent: {
     width: "354px",
-    minWidth: "294px",
+    minWidth: "300px",
     maxWidth: "354px",
     height: "100%",
   },
@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
-    width: "20%",
+    width: "15%",
     height: "100%"
   },
   infoButtonContainer: {
