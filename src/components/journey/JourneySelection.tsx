@@ -49,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     display: "flex",
     flexDirection: "row",
+    alignItems: "center",
     border: "solid 0px",
     width: "100%",
     padding: "0px",
