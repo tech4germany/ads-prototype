@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "2.5px",
     textDecoration: "none",
     color: "black",
-    lineHeight: "32px"
+    lineHeight: "22px"
   },
   contactStripe: {
     display: "flex",
