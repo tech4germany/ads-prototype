@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "22px"
   },
   mapLinkText: {
-    fontFamily: "BundesSansWeb-Regular",
+    fontFamily: "BundesSansWeb-Bold",
     fontSize: "16px",
     borderBottom: "3px solid #000",
     paddingBottom: "2.5px",

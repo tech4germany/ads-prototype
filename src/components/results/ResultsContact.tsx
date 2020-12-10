@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
   },
   contactFormularText: {
-    fontFamily: "BundesSansWeb-Regular",
+    fontFamily: "BundesSansWeb-Bold",
     fontSize: "16px",
     borderBottom: "3px solid #000",
     paddingBottom: "2.5px",
