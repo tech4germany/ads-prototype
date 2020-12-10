@@ -70,8 +70,7 @@
             "next_node": null,
             "icon": "leisure",
             "icon_hover": "leisure_hover",
-            "info_text": "Diskriminierung auf der Straße oder im öffentlichen Raum. Die Diskriminierung erfolgt durch unbekannte oder bekannte Personen wie Nachbar*innen. Sie werden bedroht, beleidigt oder in sonstiger Weise schikaniert und belästigt.
-Oder Sie engagieren sich ehrenamtlich in Vereinen oder anderweitig und werden dabei wegen eines Diskriminierungsmerkmals benachteiligt: z.B. Nichtaufnahme in einem Verein, Ausschluss aus dem Verein, Benachteiligung bei der Beteiligung/Mitsprache im Verein."
+            "info_text": "Diskriminierung auf der Straße oder im öffentlichen Raum. Die Diskriminierung erfolgt durch unbekannte oder bekannte Personen wie Nachbar*innen. Sie werden bedroht, beleidigt oder in sonstiger Weise schikaniert und belästigt. Oder Sie engagieren sich ehrenamtlich in Vereinen oder anderweitig und werden dabei wegen eines Diskriminierungsmerkmals benachteiligt: z.B. Nichtaufnahme in einem Verein, Ausschluss aus dem Verein, Benachteiligung bei der Beteiligung/Mitsprache im Verein."
         },
         "Internet, Medien und Werbung": {
             "status":"non-agg",
