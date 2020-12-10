@@ -34,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
   },
   materialsList:{
     marginTop: "16px",
-    paddingLeft: "0px"
+    paddingLeft: "0px",
+    marginBottom: "0px"
   },
   title: {
     fontFamily: "BundesSansWeb-Bold",
@@ -70,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
   downloadSubtitleText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
-    color: "black"
   },
 }));
 

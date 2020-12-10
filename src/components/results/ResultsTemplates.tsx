@@ -45,7 +45,8 @@ const useStyles = makeStyles((theme) => ({
   },
   templateList:{
     marginTop: "16px",
-    paddingLeft: "0px"
+    paddingLeft: "0px",
+    marginBottom: "0px"
   },
   downloadIcon: {
     height: "54px",

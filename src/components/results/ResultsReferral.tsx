@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   referralsList:{
     marginTop: "16px",
+    marginBottom: "0px",
     paddingLeft: "0px"
   },
   referralItem: {
@@ -33,14 +34,19 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     marginTop: "16px"
   },
-  title: {
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "18px",
-  },
   contentElementText: {
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "18px"
-  }
+    fontSize: "18px",
+  },
+  contentWebsiteText: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
+    borderBottom: "3px solid #000",
+    paddingBottom: "2.5px",
+    textDecoration: "none",
+    color: "black",
+    lineHeight: "32px"
+  },
 }));
 
 export default function ResultReferrals() {
@@ -65,7 +71,7 @@ export default function ResultReferrals() {
           list.map((label, index) => {
             return(
               <li className={classes.referralItem} key={index}>
-                <span className={classes.title}>{label.name}</span>
+                <span className={classes.contentElementText}>{label.name}</span>
                 {
                   label.phone?
                   <span className={classes.contentElementText}>Telefon: <a href={"tel:"+label.phone}>{label.phone}</a></span>:
@@ -78,7 +84,7 @@ export default function ResultReferrals() {
                 }
                 {
                   label.website?
-                  <span className={classes.contentElementText}><a href={label.website}>Website</a></span>:
+                  <span><a href={label.website} className={classes.contentWebsiteText}>Zur Website</a></span>:
                   null
                 }
               </li>
