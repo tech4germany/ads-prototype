@@ -36,13 +36,13 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     alignItems: "flex-start",
     width: "360px",
-    minWidth: "300px",
+    minWidth: "275px",
     height: "130px",
     backgroundColor: "white"
   },
   buttonContent: {
     width: "354px",
-    minWidth: "300px",
+    minWidth: "275px",
     maxWidth: "354px",
     height: "100%",
     '@media (hover: hover)': {
