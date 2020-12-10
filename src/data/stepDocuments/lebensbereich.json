@@ -14,7 +14,7 @@
             "next_node": "lebensbereich_arbeit_detail",
             "icon": "arbeitsleben",
             "icon_hover": "arbeitsleben_hover",
-            "info_text": "Diskriminierungen durch Arbeitgeber, Vorgesetze oder Kolleg*innen im Zusammenhang mit einem Beschäftigungsverhältnis. Erfasst ist die ganze Bandbreite von der Bewerbung bis zur Kündigung sowie einzelne Arbeitsbedingungen (Bezahlung, Beförderung, Mobbing am Arbeitsplatz und ähnliches). Geschützt sind Bewerber*innen, Angestellte, Praktikant*innen und Auszubildende. Freiberufler und Selbständige sowie Geschäftsführer*innen sind nur geschützt, wenn es um den Bei der Bewerbung zu einer Erwerbstätigkeit oder den beruflichen Aufstieg geht."
+            "info_text": "Diskriminierungen durch Arbeitgebende, Vorgesetze oder Kolleg*innen im Zusammenhang mit einem Beschäftigungsverhältnis. Erfasst ist die ganze Bandbreite von der Bewerbung bis zur Kündigung sowie einzelne Arbeitsbedingungen (Bezahlung, Beförderung, Mobbing am Arbeitsplatz und ähnliches). Geschützt sind Bewerber*innen, Angestellte, Praktikant*innen und Auszubildende. Freiberufler*innen und Selbständige sowie Geschäftsführer*innen sind nur geschützt, wenn es um den Zugang zu einer Erwerbstätigkeit oder den beruflichen Aufstieg geht."
         },
         "Geschäfte, Verträge und Dienstleistungen": {
             "status":"agg",
@@ -70,7 +70,8 @@
             "next_node": null,
             "icon": "leisure",
             "icon_hover": "leisure_hover",
-            "info_text": "Diskriminierung auf der Straße oder im öffentlichen Raum. Die Diskriminierung erfolgt durch unbekannte oder bekannte Personen wie Nachbar*innen. Sie werden bedroht, beleidigt oder in sonstiger Weise schikaniert und belästigt. Oder Sie engagieren sich ehrenamtlich in Vereinen oder anderweitig und werden dabei wegen eines Diskriminierungsmerkmals benachteiligt: z.B. Nichtaufnahme in einen Verein, Ausschluss aus dem Verein, Benachteiligung bei der Beteiligung/Mitsprache im Verein."
+            "info_text": "Diskriminierung auf der Straße oder im öffentlichen Raum. Die Diskriminierung erfolgt durch unbekannte oder bekannte Personen wie Nachbar*innen. Sie werden bedroht, beleidigt oder in sonstiger Weise schikaniert und belästigt.
+Oder Sie engagieren sich ehrenamtlich in Vereinen oder anderweitig und werden dabei wegen eines Diskriminierungsmerkmals benachteiligt: z.B. Nichtaufnahme in einem Verein, Ausschluss aus dem Verein, Benachteiligung bei der Beteiligung/Mitsprache im Verein."
         },
         "Internet, Medien und Werbung": {
             "status":"non-agg",
@@ -78,7 +79,7 @@
             "next_node": null,
             "icon": "internet",
             "icon_hover": "internet_hover",
-            "info_text": "Diskriminierende/beleidigende Kommentare im Internet (Blogs, Websiten) oder sozialen Netzwerken."
+            "info_text": "Diskriminierende/beleidigende Kommentare im Internet (Blogs, Websiten) oder sozialen Netzwerken. Diskriminierende Presseartikel und Rundfunkbeiträge. Diskriminierende Werbeaussagen, Darstellungen, Bilder und Filme in der Werbung."
         },
         "Sonstiges": {
             "status": "agg",

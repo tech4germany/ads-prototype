@@ -70,7 +70,7 @@
             "next_node": null,
             "icon": "other",
             "icon_hover": "other_hover",
-            "info_text": "Ihr Fall lässt sich nicht den genannten Diskriminierungskategorien zuordnen oder Sie sind sich nicht sicher, wo Sie Ihren Fall einordnen sollen. Es geht aber um eine Diskriminierung aus einem bestimmten Grund."
+            "info_text": "Ihr Fall lässt sich nicht den genannten Gründen zuordnen oder Sie sind sich nicht sicher, wo Sie Ihren Fall einordnen sollen. Es geht aber um eine Diskriminierung aus einem bestimmten Grund."
         }
     }
 }

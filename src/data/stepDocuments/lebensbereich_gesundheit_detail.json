@@ -22,7 +22,7 @@
             "next_node": null,
             "icon": null,
             "icon_hover": null,
-            "info_text": "Benachteiligungen bei der Aufnahme in eine Krankenkasse, bei der Inanspruchnahme von Leistungen (Ablehnung einer Leistung oder Leistung zu schlechteren Konditionen), bei der Bemessung des Krankenkassenbeitrags. Die Benachteiligungen stehen in Zusammenhang mit einem bestimmten Diskriminierungsgrund."
+            "info_text": "Sie erhalten aus diskriminierenden Gründen keinen Versicherungsvertrag oder nur eingeschränkte oder schlechtere Leistungen. Sie müssen aus diskriminierenden Gründen höhere Prämien bezahlen. Ihre private Krankenversicherung wurde zu Unrecht gekündigt."
         },
         "Gesetzliche Krankenkasse": {
             "status":"non-agg",
@@ -32,13 +32,13 @@
             "icon_hover": null,
             "info_text": "Benachteiligungen bei der Aufnahme in eine Krankenkasse, bei der Inanspruchnahme von Leistungen (Ablehnung einer Leistung oder Leistung zu schlechteren Konditionen), bei der Bemessung des Krankenkassenbeitrags. Die Benachteiligungen stehen in Zusammenhang mit einem bestimmten Diskriminierungsgrund."
         },
-        "Pflege": {
+        "Gesetzliche Pflegeversicherung": {
             "status":"non-agg",
             "description": null,
             "next_node": null,
             "icon": null,
             "icon_hover": null,
-            "info_text": null
+            "info_text": "Sie sehen sich bei der Bewilligung von Pflegeleistungen benachteiligt. Bestimmte Pflegeleistungen werden zu Unrecht nicht bezahlt oder Ihnen würden mehr Pflege zustehen. Sie fühlen sich durch das Verhalten von Mitarbeitenden der Pflegekasse oder gesetzlichen Pflegeversicherung oder eines anderen Sozialversicherungsträgers im Zusammenhang mit Ihren Pflegeleistungen benachteiligt."
         },
         "Sonstiges": {
             "status":"agg",
@@ -46,7 +46,7 @@
             "next_node": null,
             "icon": null,
             "icon_hover": null,
-            "info_text": "Sie wissen nicht so genau, ob oder wo Ihr Fall hier reinpasst aber es geht um den Lebensbereich Gesundheit und Pflege."
+            "info_text": "Sie wissen nicht genau, zu welchem Unterpunkt Ihr Fall gehört oder können Ihren Fall keinem der hier genannten Bereiche zuordnen. Es geht aber um eine Diskriminierung im Zusammenhang mit den Themen Gesundheit und Pflege."
         }
     }
 }

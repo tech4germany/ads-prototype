@@ -475,25 +475,25 @@
   {
     "identifier": 36,
     "additional_content": {
-      "add_text": "Sie haben das Recht, sich darüber bei dem Arbeitgeber zu beschweren. Der Arbeitgeber muss Ihre Beschwerde prüfen und Maßnahmen zu Ihrem Schutz ergreifen. Sonst können Sie den Arbeitgeber vor dem Arbeitsgericht verklagen. Dafür müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen."
+      "add_text": "Sie haben das Recht sich darüber bei dem*der Arbeitgeber*in zu beschweren.  Arbeitgebende müssen Ihre Beschwerde prüfen und Maßnahmen zu Ihrem Schutz ergreifen. Sonst können Sie den*die Arbeitgeber*in vor dem Arbeitsgericht verklagen. Dafür müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich geltend machen."
     }
   },
   {
     "identifier": 37,
     "additional_content": {
-      "add_text": "Wenn Sie rechtlich dagegen vorgehen wollen, müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich bei dem Vertragspartner geltend machen."
+      "add_text": "Wenn Sie rechtlich dagegen vorgehen wollen, müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich bei dem*der Vertragspartner*in geltend machen."
     }
   },
   {
     "identifier": 38,
     "additional_content": {
-      "add_text": "Sie sind aber durch das Grundgesetz (GG) und andere besondere gesetzliche Bestimmungen genauso vor benachteiligendem und rechtswidrigem Verhalten von Polizei und Justiz geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben oder vor Gericht gehen."
+      "add_text": "Sie sind aber durch das Grundgesetz (GG) und andere gesetzliche Bestimmungen genauso vor benachteiligendem und rechtswidrigem Verhalten von Polizei und Justiz geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben oder vor Gericht gehen."
     }
   },
   {
     "identifier": 39,
     "additional_content": {
-      "add_text": "Denn Bildung fällt in die Zuständigkeit der Bundesländer. Auch dort sind Sie aber durch Gesetze vor benachteiligendem und rechtswidrigem Verhalten geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben oder sich bei der Schulaufsichtsbehörde oder dem Landesbildungsministerium beschweren."
+      "add_text": "Denn Bildung fällt in die Zuständigkeit der Bundesländer. Auch dort sind Sie aber durch die Landesgesetze vor benachteiligendem und rechtswidrigem Verhalten geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben oder sich bei der Schulaufsichtsbehörde oder dem Landesbildungsministerium beschweren."
     }
   },
   {
@@ -541,7 +541,7 @@
   {
     "identifier": 47,
     "additional_content": {
-      "add_text": "Sie sind aber durch das Grundgesetz (GG) genauso vor benachteiligendem und rechtswidrigem Verhalten von staatlichen Stellen geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben oder vor Gericht gehen."
+      "add_text": "Sie sind aber durch das Grundgesetz (GG) und besondere Diskriminierungsverbote in den Sozialgesetzbüchern auch vor benachteiligendem und rechtswidrigem Verhalten bei Ämtern und Behörden geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben oder vor Gericht gehen."
     }
   },
   {
@@ -612,7 +612,7 @@
   {
     "identifier": 53,
     "additional_content": {
-      "add_text": "Wenn Sie rechtlich dagegen vorgehen wollen, müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich bei dem Vermieter geltend machen."
+      "add_text": "Wenn Sie rechtlich dagegen vorgehen wollen, müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich bei dem*der Vermieter*in geltend machen."
     }
   },
   {
