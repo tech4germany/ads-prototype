@@ -159,7 +159,7 @@
     "identifier": 16,
     "features": {
       "lebensbereich": ["Gesundheit und Pflege"],
-      "lebensbereich_bildung_detail": ["Arztbesuch"]
+      "lebensbereich_gesundheit_detail": ["Arztbesuch"]
     }
   },
   {
