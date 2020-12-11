@@ -20,14 +20,16 @@ const useStyles = makeStyles((theme) => ({
   headerText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "40px",
-    lineHeight: "32px",
+    lineHeight: "48px",
+    margin: "0px"
   },
   subHeaderContainer: {
     marginBottom: "32px",
   },
   subHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "30px"
+    fontSize: "30px",
+    margin: "0px"
   },
   infoTextContainer: {
     marginBottom: "18px"
@@ -51,11 +53,11 @@ export default function ResultInfo() {
     <div className={classes.infoBox}>
 
       <div className={classes.headerContainer}>
-        <span className={classes.headerText}>Die Ersteinschätzung Ihres Sachverhalts</span>
+        <h1 className={classes.headerText}>Die Ersteinschätzung Ihres Sachverhalts</h1>
       </div>
 
       <div className={classes.subHeaderContainer}>
-        <span className={classes.subHeaderText}>Rechtliche Einordnung:</span>
+        <h2 className={classes.subHeaderText}>Rechtliche Einordnung:</h2>
       </div>
 
       <div className={classes.infoTextContainer}>
@@ -96,7 +98,7 @@ export default function ResultInfo() {
       </div>
 
       <div className={classes.subHeaderContainer}>
-        <span className={classes.subHeaderText}>Nächste Schritte:</span>
+        <h2 className={classes.subHeaderText}>Nächste Schritte:</h2>
       </div>
 
       <div className={classes.infoTextContainerMargin}>

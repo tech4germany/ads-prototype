@@ -12,7 +12,7 @@
   {
     "identifier": 1,
     "features": {
-      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
       "lebensbereich": [
         "Ämter und Behörden",
@@ -165,7 +165,7 @@
   {
     "identifier": 17,
     "features": {
-      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
       "lebensbereich": ["Arbeitsleben"]
     }
@@ -173,7 +173,7 @@
   {
     "identifier": 18,
     "features": {
-      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
       "lebensbereich": ["Bildungsbereich"],
       "lebensbereich_bildung_detail": ["Hochschule"]
@@ -182,7 +182,7 @@
   {
     "identifier": 19,
     "features": {
-      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Äußere Merkmale"],
       "lebensbereich": ["Öffentlichkeit und Freizeit"]
     }
@@ -205,7 +205,7 @@
     "identifier": 21,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -220,7 +220,7 @@
     "identifier": 22,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -235,7 +235,7 @@
     "identifier": 23,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -250,7 +250,7 @@
     "identifier": 24,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -351,7 +351,7 @@
   {
     "identifier": 34,
     "features": {
-      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Äußere Merkmale"],
       "lebensbereich": ["Justiz und Polizei"]
     }
@@ -371,7 +371,7 @@
     "identifier": 36,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -385,7 +385,7 @@
     "identifier": 37,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -423,7 +423,7 @@
     "identifier": 38,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -440,7 +440,7 @@
     "identifier": 39,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -459,7 +459,7 @@
     "identifier": 40,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -478,7 +478,7 @@
     "identifier": 41,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -493,7 +493,7 @@
     "identifier": 42,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -572,7 +572,7 @@
     "identifier": 47,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -626,7 +626,7 @@
   {
     "identifier": 52,
     "features": {
-      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
       "lebensbereich":["Ämter und Behörden"],
       "lebensbereich_administration_detail": ["Arbeitsagentur/Jobcenter"]
@@ -636,7 +636,7 @@
     "identifier": 53,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",
@@ -663,7 +663,7 @@
   {
     "identifier": 54,
     "features": {
-      "merkmal": ["Ethnische Herkunft/Rassistische Diskriminierung"],
+      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
       "lebensbereich": ["Ämter und Behördem"],
       "lebensbereich_bildung_detail": ["Sonstiges"]
@@ -673,7 +673,7 @@
     "identifier": 55,
     "features": {
       "merkmal": [
-        "Ethnische Herkunft/Rassistische Diskriminierung",
+        "Rassistische Diskriminierung/Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung/chronische Krankheiten",
         "Alter",

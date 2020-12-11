@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
   },
   subHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "30px"
+    fontSize: "30px",
+    margin: "0px"
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
@@ -72,7 +73,7 @@ export default function ResultReferrals() {
     <div className={classes.referralsBox}>
 
       <div className={classes.subHeaderContainer}>
-        <span className={classes.subHeaderText}>Anlaufstellen:</span>
+        <h2 className={classes.subHeaderText}>Anlaufstellen:</h2>
       </div>
 
       <span className={classes.infoText}>

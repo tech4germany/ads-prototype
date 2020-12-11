@@ -30,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
   },
   contactHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "22px"
+    fontSize: "22px",
+    margin: "0px"
   },
   contactInfoContainer: {
     display: "flex",
@@ -80,7 +81,7 @@ export default function ResultContact() {
       <div className={classes.contactContainer}>
         <div className={classes.contactContent}>
           <div className={classes.contactHeaderContainer}>
-            <span className={classes.contactHeaderText}>Kontakt zu uns</span>
+            <h3 className={classes.contactHeaderText}>Kontakt zu uns</h3>
           </div>
           <div className={classes.contactInfoContainer}>
             <span className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an: <a href={"email:beratung@ads.bund.de"}>beratung@ads.bund.de</a></span>

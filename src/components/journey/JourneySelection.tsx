@@ -44,15 +44,7 @@ const useStyles = makeStyles((theme) => ({
     width: "354px",
     minWidth: "275px",
     maxWidth: "354px",
-    height: "100%",
-    '@media (hover: hover)': {
-      "&:hover": {
-        backgroundColor: colorMain["100"],
-      }
-    },
-    "&:focus": {
-      backgroundColor: colorMain["100"],
-    }
+    height: "100%"
   },
   button: {
     height: "100%",
@@ -65,6 +57,14 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     backgroundColor: "inherit",
     justifyContent: "space-between",
+    '@media (hover: hover)': {
+      "&:hover": {
+        backgroundColor: colorMain["100"],
+      }
+    },
+    "&:focus": {
+      backgroundColor: colorMain["100"],
+    }
   },
   iconContainer: {
     minWidth: "30px",

@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
   },
   questionText: {
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "28px"
+    fontSize: "28px",
+    margin: "0px"
   },
   explanationContainer: {
     display: "flex",
@@ -42,9 +43,9 @@ export default function JourneyQuestion() {
   return (
     <div className={classes.questionBox}>
       <div className={classes.questionContainer}>
-        <span className={classes.questionText}>
+        <h1 className={classes.questionText}>
           {documentQueue.getStepDetail(activeStep.self, StepDetail.question)}
-        </span>
+        </h1>
       </div>
       <div className={classes.explanationContainer}>
         <span className={classes.explanationText}>

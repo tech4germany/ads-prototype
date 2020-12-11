@@ -12,7 +12,15 @@ import { ShowInfo } from "states/showInfoState"
 const useStyles = makeStyles((theme) => ({
   arrow: {
     color: "#b8c0c5",
-    fontSize: "48px"
+    fontSize: "48px",
+    '@media (hover: hover)': {
+      "&:hover": {
+        color: "black",
+      }
+    },
+    "&:focus": {
+      color: "black",
+    }
   },
   arrowContainer: {
     display: "flex",

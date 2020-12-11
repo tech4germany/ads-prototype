@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
   },
   subHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "30px"
+    fontSize: "30px",
+    margin: "0px"
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
@@ -96,7 +97,7 @@ export default function ResultsMaterials() {
     <div className={classes.materialsBox}>
 
       <div className={classes.subHeaderContainer}>
-        <span className={classes.subHeaderText}>Informationsmaterial:</span>
+        <h2 className={classes.subHeaderText}>Informationsmaterial:</h2>
       </div>
 
       <span className={classes.infoText}>

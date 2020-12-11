@@ -6,9 +6,9 @@
     "visible": false,
     "index": 0,
     "question":"Grund der Diskriminierung",
-    "explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können. Welche Ursache vermuten Sie hinter der Diskriminierung. Also aus welchem Grund bzw. persönlichen Merkmal wurden Sie diskriminiert?",
+    "explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können. Welche Ursache vermuten Sie hinter der Diskriminierung? Aus welchem Grund bzw. persönlichen Merkmal wurden Sie diskriminiert?",
     "edges": {
-        "Ethnische Herkunft/Rassistische Diskriminierung": {
+        "Rassistische Diskriminierung/Ethnische Herkunft": {
             "status":"agg",
             "description": null,
             "next_node": "merkmal_ethnisch_detail",

@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
   },
   mapHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
-    fontSize: "22px"
+    fontSize: "22px",
+    margin: "0px"
   },
   mapInfoContainer: {
     display: "flex",
@@ -81,7 +82,7 @@ export default function ResultMap() {
       <div className={classes.mapContainer}>
         <div className={classes.mapContent}>
           <div className={classes.mapHeaderContainer}>
-            <span className={classes.mapHeaderText}>Beratungsstellen</span>
+            <h3 className={classes.mapHeaderText}>Beratungsstellen</h3>
           </div>
           <div className={classes.mapInfoContainer}>
             <span className={classes.mapInfoText}>Finden Sie eine Beratungsstelle in Ihrer Nähe über unsere Beratungsstellensuche</span>
