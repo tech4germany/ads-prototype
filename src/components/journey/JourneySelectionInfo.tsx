@@ -5,7 +5,7 @@ import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { ShowInfo } from "states/showInfoState"
 import { EdgeDetail } from "data/customTypes"
-import exitIcon from 'assets/icons/cancel.png';
+import exitIcon from 'assets/icons/cancel.svg';
 
 const useStyles = makeStyles((theme) => ({
   selectionInfoBox: {
