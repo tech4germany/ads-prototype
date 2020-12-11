@@ -24,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "18px"
+    fontSize: "18px",
+    margin: "0px"
   },
   templateItem: {
     display: "flex",
@@ -98,9 +99,9 @@ export default function ResultsTemplates() {
         <h2 className={classes.subHeaderText}>Formulierungshilfen und Ausfüllhinweise:</h2>
       </div>
 
-      <span className={classes.infoText}>
+      <p className={classes.infoText}>
         Die Vorlage hier können Sie ausfüllen und an die Gegenseite schicken, um Ihre Rechte geltend zu machen:
-      </span>
+      </p>
 
       <ul className={classes.templateList}>
         {
@@ -114,6 +115,7 @@ export default function ResultsTemplates() {
                 >
                   <a href={label.template}
                     className={classes.downloadLink}
+                    title="Formulierungshilfe herunterladen"
                   >
 
                     <img className={classes.downloadIcon}
@@ -132,6 +134,7 @@ export default function ResultsTemplates() {
                 >
                   <a href={label.help}
                     className={classes.downloadLink}
+                    title="Ausfüllhinweis herunterladen"
                   >
                     <img className={classes.downloadIcon}
                       src={downloadIcon}

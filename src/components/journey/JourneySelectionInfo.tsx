@@ -48,6 +48,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     marginTop: "22px"
   },
+  infoHeaderText: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
+    margin: "0px"
+  },
   exitIcon: {
     width: "30px",
     height: "30px",
@@ -66,7 +71,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "16px",
     lineHeight: "25px",
-    marginRight: "90px"
+    marginRight: "90px",
+    margin: "0px"
   },
   infoStripe: {
     display: "flex",
@@ -92,9 +98,10 @@ export default function JourneySelectionInfoText() {
           <div className={classes.infoCard}>
             <div className={classes.headerRow}>
               <div className={classes.infoHeader}>
-                <span>{infoDisplay.self}</span>
+                <h3 className={classes.infoHeaderText}>{infoDisplay.self}</h3>
               </div>
               <button className={classes.exitButton} tabIndex={0}
+                title="Informationstext schließen"
                 onClick={(event) => {
                   event.stopPropagation()
                   infoDisplay.hide()
@@ -103,13 +110,13 @@ export default function JourneySelectionInfoText() {
                 <img className={classes.exitIcon} src={exitIcon} alt={"empty"}/>
               </button>
             </div>
-            <span className={classes.infoText}>
+            <p className={classes.infoText}>
               {
                 infoDisplay.self?
                 documentQueue.getEdgeFeatureByLabel(activeStep.self, infoDisplay.self, EdgeDetail.info_text):
                 null
               }
-            </span>
+            </p>
           </div>
 
         </div>

@@ -24,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "18px"
+    fontSize: "18px",
+    margin: "0px"
   },
   materialsItem: {
     display: "flex",
@@ -100,9 +101,9 @@ export default function ResultsMaterials() {
         <h2 className={classes.subHeaderText}>Informationsmaterial:</h2>
       </div>
 
-      <span className={classes.infoText}>
+      <p className={classes.infoText}>
         Weitere Informationen zu Ihren Fragen gibt es hier:
-      </span>
+      </p>
 
       <ul className={classes.materialsList}>
         {
@@ -115,6 +116,7 @@ export default function ResultsMaterials() {
                 >
                   <a href={label.link}
                     className={classes.downloadLink}
+                    title="Informationsmaterial herunterladen"
                   >
                     <img className={classes.downloadIcon}
                       src={downloadIcon}

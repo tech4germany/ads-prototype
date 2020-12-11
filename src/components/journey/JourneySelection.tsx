@@ -174,6 +174,8 @@ export default function JourneySelection() {
                   <div className={classes.buttonGroup}>
 
                     <button tabIndex={0} className={classes.button} type="submit"
+                      title="Auswahl bestätigen"
+
                       onClick={() => {
                         answers.add(activeDocument.identifier, label)
                         documentQueue.update(UpdateType.add, activeStep.self, label)
@@ -202,6 +204,7 @@ export default function JourneySelection() {
                         infoTextisSet?
                         <div>
                           <button
+                            title="Informationstext anzeigen"
                             tabIndex={0}
                             className={classes.infoButtonContainer} type="submit"
                             onClick={(event) => {

@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "22px",
     lineHeight: 1.15,
     whiteSpace: "pre-wrap",
+    margin: "0px"
   }
 }));
 
@@ -48,9 +49,9 @@ export default function JourneyQuestion() {
         </h1>
       </div>
       <div className={classes.explanationContainer}>
-        <span className={classes.explanationText}>
+        <p className={classes.explanationText}>
           {documentQueue.getStepDetail(activeStep.self, StepDetail.explanation)}
-        </span>
+        </p>
       </div>
     </div>
 );

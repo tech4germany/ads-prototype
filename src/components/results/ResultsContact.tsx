@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
   contactInfoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "16px",
+    margin: "0px"
   },
   contactFormularText: {
     fontFamily: "BundesSansWeb-Bold",
@@ -70,6 +71,9 @@ const useStyles = makeStyles((theme) => ({
     border: "solid 0px",
     backgroundColor: "inherit",
     padding: "0px"
+  },
+  emailLink: {
+    color: "black"
   }
 }));
 
@@ -84,10 +88,10 @@ export default function ResultContact() {
             <h3 className={classes.contactHeaderText}>Kontakt zu uns</h3>
           </div>
           <div className={classes.contactInfoContainer}>
-            <span className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an: <a href={"email:beratung@ads.bund.de"}>beratung@ads.bund.de</a></span>
+            <p className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an: <a className={classes.emailLink} href={"email:beratung@ads.bund.de"}>beratung@ads.bund.de</a></p>
             <span className={classes.contactSpacer}></span>
             <button onClick={(e) => {e.preventDefault(); window.location.href="https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html";}}
-            className={classes.contactButton}><a tabIndex={0} className={classes.contactFormularText} href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}>Zum Kontaktformular</a></button>
+            className={classes.contactButton}><a title="Zum Kontaktformular" tabIndex={0} className={classes.contactFormularText} href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}>Zum Kontaktformular</a></button>
           </div>
         </div>
         <div className={classes.contactStripe}></div>

@@ -61,6 +61,7 @@ export function BackButton() {
   } else {
     return(
         <button tabIndex={0} className={classes.arrowContainer}
+          title="Schritt zurückgehen"
           onClick={() => backwardAction()}
           onMouseDown={handleClick}
           onKeyUp={(e) => {if (e.keyCode === 13 || e.keyCode === 32) {handleClick(e)}}}

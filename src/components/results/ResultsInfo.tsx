@@ -40,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
-    whiteSpace: "pre-wrap"
+    whiteSpace: "pre-wrap",
+    margin: "0px"
   }
 }));
 
@@ -61,40 +62,40 @@ export default function ResultInfo() {
       </div>
 
       <div className={classes.infoTextContainer}>
-        <span className={classes.infoText}>
-          Sie sehen sich aufgrund des Merkmals <b>{answers.getAnswerByKey("merkmal", 0)}
-          </b> im Lebensbereich <b>{answers.getAnswerByKey("lebensbereich", 0)}</b> diskriminiert.
-        </span>
+        <p className={classes.infoText}>
+          Sie sehen sich aufgrund des Merkmals <strong>{answers.getAnswerByKey("merkmal", 0)}
+          </strong> im Lebensbereich <strong>{answers.getAnswerByKey("lebensbereich", 0)}</strong> diskriminiert.
+        </p>
       </div>
 
       <div className={classes.infoTextContainer}>
-        <span className={classes.infoText}>
+        <p className={classes.infoText}>
           {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.agg_text)}
-        </span>
+        </p>
       </div>
 
       {
         getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.frist_text)?
         <div className={classes.infoTextContainer}>
-          <span className={classes.infoText}>
+          <p className={classes.infoText}>
             {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.frist_text)}
-          </span>
+          </p>
         </div>: null
       }
 
       {
         getResultAdditionalText(resultSpecs.self.non_default_identifier)?
         <div className={classes.infoTextContainer}>
-          <span className={classes.infoText}>
+          <p className={classes.infoText}>
             {getResultAdditionalText(resultSpecs.self.non_default_identifier)}
-          </span>
+          </p>
         </div>: null
       }
 
       <div className={classes.infoTextContainerMargin}>
-        <span className={classes.infoText}>
+        <p className={classes.infoText}>
           Falls Sie weitere Fragen haben, können Sie uns gerne kontaktieren oder eine Beratungsstelle in Ihrer Nähe aufsuchen.
-        </span>
+        </p>
       </div>
 
       <div className={classes.subHeaderContainer}>
@@ -102,9 +103,9 @@ export default function ResultInfo() {
       </div>
 
       <div className={classes.infoTextContainerMargin}>
-        <span className={classes.infoText}>
+        <p className={classes.infoText}>
           {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.next_step)}
-        </span>
+        </p>
       </div>
     </div>
   );

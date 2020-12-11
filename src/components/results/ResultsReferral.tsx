@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
+    margin: "0px"
   },
   referralsList:{
     marginTop: "16px",
@@ -76,9 +77,9 @@ export default function ResultReferrals() {
         <h2 className={classes.subHeaderText}>Anlaufstellen:</h2>
       </div>
 
-      <span className={classes.infoText}>
+      <p className={classes.infoText}>
         Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
-      </span>
+      </p>
 
       <ul className={classes.referralsList}>
         {
@@ -102,7 +103,8 @@ export default function ResultReferrals() {
                   <button
                     className={classes.websiteButton}
                     onClick={handleClick(label.website)}
-                  ><a href={label.website} className={classes.contentWebsiteText}>Zur Website</a></button>:
+                  ><a title="Website der Verweisstelle öffnen"
+                  href={label.website} className={classes.contentWebsiteText}>Zur Website</a></button>:
                   null
                 }
               </li>
