@@ -22,7 +22,7 @@ Currently, the project is hosted with AWS Amplify and can be accessed [here](htt
     `npm start`
   * b) Build process for production
 
-    `npm run build:alternative`
+    `npm run build`
 
 
 ## Technical Setup
@@ -199,8 +199,8 @@ states
 ├── answerState.ts
 ├── documentQueue.ts
 ├── resultState.ts
-├── showResultstate.ts
-└── tests   
+└── showResultstate.ts
+
 ```
 
 The states directory contains a set of files that describe our different state
@@ -224,10 +224,6 @@ and might be adjusted in the future.
 The file `showResultstate.ts` is binary and allows the application to switch
 between the questions nodes and the result page. It updated when the end of the
 question flow has been reached.
-
-There is also a `tests` directory. Please note the these tests were written
-at an earlier stage in the development process and do not apply to the current
-form of our state modules.
 
 ## Background
 ______________________
