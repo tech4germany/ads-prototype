@@ -78,7 +78,8 @@ const useStyles = makeStyles((theme) => ({
   downloadSubtitleText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
-    textAlign: "left"
+    textAlign: "left",
+    color: "black"
   },
 }));
 
