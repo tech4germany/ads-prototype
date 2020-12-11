@@ -753,5 +753,26 @@
         "Privatschule/Privatunterricht"
       ]
     }
+  },
+  {
+    "identifier": 58,
+    "features": {
+      "merkmal": [
+        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Religion/Weltanschauung",
+        "Behinderung/Chronische Krankheiten",
+        "Alter",
+        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Sexuelle Identität",
+        "Sozialer Status"
+      ],
+      "lebensbereich":[
+        "Gesundheit und Pflege"
+      ],
+      "lebensbereich_gesundheit_detail": [
+        "Gesetzliche Pflegeversicherung",
+        "Sonstiges"
+      ]
+    }
   }
 ]
