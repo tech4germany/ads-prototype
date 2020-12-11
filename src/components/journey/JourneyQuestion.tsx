@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   explanationText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "22px",
-    lineHeight: 1.15,
+    lineHeight: "28px",
     whiteSpace: "pre-wrap",
     margin: "0px"
   }
