@@ -6,7 +6,7 @@
     "visible": false,
     "index": 0,
     "question":"Zeitpunkt der Diskriminierung",
-    "explanation":"Schließlich kommt es auch darauf an, wann die Diskriminierung vorgefallen ist, ob Sie noch rechtliche Schritte ergreifen können. Wurden Sie innerhalb der letzten zwei Monate diskriminiert?",
+    "explanation":"Schließlich kommt es auch darauf an, wann die Diskriminierung vorgefallen ist und ob Sie noch rechtliche Schritte ergreifen können. Wurden Sie innerhalb der letzten zwei Monate diskriminiert?",
     "edges": {
         "Ja": {
             "status": "inTime",
