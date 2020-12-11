@@ -89,7 +89,6 @@ export default function JourneySelectionInfoText() {
       <div className={classes.infoContainer}>
 
         <div className={classes.infoContent}>
-
           <div className={classes.infoCard}>
             <div className={classes.headerRow}>
               <div className={classes.infoHeader}>
@@ -114,6 +113,7 @@ export default function JourneySelectionInfoText() {
           </div>
 
         </div>
+
         <div className={classes.infoStripe}></div>
       </div>
     </div>

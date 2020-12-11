@@ -16,7 +16,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import JourneyQuestion from "components/journey/JourneyQuestion";
 import JourneySelection from "components/journey/JourneySelection";
 import JourneyNavigation from "components/journey/JourneyNavigation";
-
+import { ShowInfo } from "states/showInfoState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { Answers } from "states/answerState"
@@ -35,6 +35,7 @@ export default function JourneyStep() {
   let activeStep = ActiveStep.useContainer();
   let documentQueue = DocumentQueue.useContainer();
   let answers = Answers.useContainer();
+  let infoDisplay = ShowInfo.useContainer()
   let activeDocument = documentQueue.self[activeStep.self]
 
   useEffect(() => {
@@ -51,8 +52,12 @@ export default function JourneyStep() {
         <JourneyQuestion />
 
         <JourneySelection />
+        {
+          infoDisplay.self?
+          null:
+          <JourneyNavigation />
+        }
 
-        <JourneyNavigation />
 
       </div>
   );

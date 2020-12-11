@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "0px",
     marginTop: "0px"
   },
-  buttonContainer: {
+  itemContainer: {
     marginBottom: "15px",
     marginTop: "0px",
     marginLeft: "0px",
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     height: "130px",
     backgroundColor: "white"
   },
-  buttonContent: {
+  itemContent: {
     width: "354px",
     minWidth: "275px",
     maxWidth: "354px",
@@ -164,14 +164,15 @@ export default function JourneySelection() {
             const selectionIcon = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
 
             return (
-                <li className={classes.buttonContainer} key={index}>
+              <li className={classes.itemContainer} key={index}>
 
-                  <div className={classes.buttonContent}
-                    onMouseOver={() => setDisplayHover(label)}
-                    onFocus={() => setDisplayHover(label)}
-                    onMouseOut={() => setDisplayHover(null)}
-                  >
+                <div className={classes.itemContent}
+                  onMouseOver={() => setDisplayHover(label)}
+                  onFocus={() => setDisplayHover(label)}
+                  onMouseOut={() => setDisplayHover(null)}
+                >
                   <div className={classes.buttonGroup}>
+
                     <button tabIndex={0} className={classes.button} type="submit"
                       onClick={() => {
                         answers.add(activeDocument.identifier, label)
@@ -193,43 +194,42 @@ export default function JourneySelection() {
                       <div className={classes.textContainer}>
                         <span className={classes.text}>{wrap(label)}</span>
                       </div>
+
                     </button>
 
-                      <div className={classes.infoIconContainer}>
-                          {
-                            infoTextisSet?
-                            <div>
-                              <button
-                                tabIndex={0}
-                                className={classes.infoButtonContainer} type="submit"
-                                onClick={(event) => {
-                                  event.stopPropagation()
-                                  updateInfoDisplay(label)
-                                }}
-                              >
-                                {
-                                  displayHover === label?
-                                  <img className={classes.infoIcon}
-                                    src={infoIcon_hover}
-                                    alt={"Hier erfahren Sie mehr Informationen zu Ihrer Auswahl"}
-                                  />:
-                                  <img className={classes.infoIcon}
-                                    src={infoIcon}
-                                    alt={"Hier erfahren Sie mehr Informationen zu Ihrer Auswahl"}
-                                  />
-                                }
-                              </button>
-                            </div>
-                            :
-                            null
-                          }
-                      </div>
-</div>
+                    <div className={classes.infoIconContainer}>
+                      {
+                        infoTextisSet?
+                        <div>
+                          <button
+                            tabIndex={0}
+                            className={classes.infoButtonContainer} type="submit"
+                            onClick={(event) => {
+                              event.stopPropagation()
+                              updateInfoDisplay(label)
+                            }}
+                          >
+                            {
+                              displayHover === label?
+                              <img className={classes.infoIcon}
+                                src={infoIcon_hover}
+                                alt={"Hier erfahren Sie mehr Informationen zu Ihrer Auswahl"}
+                              />:
+                              <img className={classes.infoIcon}
+                                src={infoIcon}
+                                alt={"Hier erfahren Sie mehr Informationen zu Ihrer Auswahl"}
+                              />
+                            }
+                          </button>
+                        </div>: null
+                      }
+                    </div>
+                  </div>
                 </div>
                 <div className={classes.buttonStripe}></div>
               </li>
-          );
-        })}
+            );
+          })}
       </ul>
     </div>
     )
