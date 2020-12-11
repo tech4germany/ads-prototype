@@ -4,7 +4,7 @@ This repo contains the code for a decision support tool designed to advise peopl
 in taking next steps when approaching the [German Federal Anti-discrimination agency](https://www.antidiskriminierungsstelle.de/DE/Home/home_node.htmle). The project was part of the [Tech4Germany Fellowship](https://tech.4germany.org/) cohorte of 2020. It allows people seeking advice after experiencing an act of discrimination to quickly find relevant information and possible next steps.
 
 :point_right:
-Currently, the project is hosted with AWS Amplify and can be accessed [here](https://wegweiser.tech4germany.org/). :point_left:
+Currently, the project is hosted with AWS Amplify and can be accessed [here](https://development.projekt-wegweiser.de/). :point_left:
 
 ## Get up and running
 
