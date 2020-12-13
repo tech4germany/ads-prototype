@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import JourneyNavigation from "components/journey/JourneyNavigation"
 import ResultsInfo from "components/results/ResultsInfo"
 import ResultsContact from "components/results/ResultsContact"
@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       flexDirection: "row",
       alignItems: "flex-start",
-      minHeight: "59vh"
   },
   infoTemplateSpace: {
     maxHeight: "100%",
@@ -35,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
   contactMapSpace: {
     maxHeight: "100%",
     marginTop: "22px"
+  },
+  contactMapSpacer: {
+    height: "22px"
   }
 }));
 
@@ -72,6 +74,7 @@ export default function Result() {
 
         <Grid item lg={3} md={2} sm={12} xs={12} className={classes.contactMapSpace}>
           <ResultsContact />
+          <div className={classes.contactMapSpacer}></div>
           <ResultsMap />
         </Grid>
 

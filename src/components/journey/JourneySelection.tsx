@@ -1,5 +1,5 @@
-import React, { useState, useLayoutEffect, MouseEvent } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState, useLayoutEffect, MouseEvent } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 import { colorMain } from "components/styleguide"
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"

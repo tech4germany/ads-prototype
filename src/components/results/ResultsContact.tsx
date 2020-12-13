@@ -9,14 +9,14 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     flexWrap: "wrap",
-    paddingBottom: "4vh"
   },
   contactContainer: {
+    backgroundColor: "white",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
     maxWidth: "344px",
-    backgroundColor: "white"
+    minWidth: "285px"
   },
   contactContent: {
     height: "100%",
