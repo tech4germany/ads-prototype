@@ -7,15 +7,17 @@ import { ActiveStep } from "states/activeStepState"
 
 const useStyles = makeStyles((theme) => ({
   questionBox: {
-    minHeight: "15vh",
+    minHeight: "64px",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
+    marginBottom: "12px",
+    paddingRight: "22px"
   },
   questionContainer: {
     display: "flex",
     flexWrap: "wrap",
-    marginBottom: "1.5vh"
+    marginBottom: "6px"
   },
   questionText: {
     fontFamily: "BundesSansWeb-Bold",
@@ -26,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
   explanationContainer: {
     display: "flex",
     flexWrap: "wrap",
-    marginBottom: "1.5vh"
   },
   explanationText: {
     fontFamily: "BundesSansWeb-Regular",
