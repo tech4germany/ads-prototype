@@ -36,13 +36,13 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     alignItems: "flex-start",
     width: "360px",
-    minWidth: "275px",
+    minWidth: "295px",
     height: "130px",
     backgroundColor: "white"
   },
   itemContent: {
     width: "354px",
-    minWidth: "275px",
+    minWidth: "295px",
     maxWidth: "354px",
     height: "100%"
   },
