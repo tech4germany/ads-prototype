@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     height: "100%",
-    maxWidth: "220px"
+    maxWidth: "200px"
   },
   text: {
     whiteSpace: "pre-wrap",
