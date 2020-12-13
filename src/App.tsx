@@ -7,7 +7,6 @@ import StateInit from "components/StateInit"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: colorMain["15"],
     minHeight: "105vh",
     display: 'flex',
     flexDirection: 'column',
@@ -15,12 +14,13 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "5vh"
   },
   mainArea: {
+    backgroundColor: colorMain["15"],
     minHeight: "80vh",
     display: 'flex',
     flexDirection: "row",
     justifyContent: "center",
     maxWidth: "1146px",
-    width: "80%",
+    paddingLeft: "22px",
     margin: theme.spacing(0),
     padding: theme.spacing(0),
   },
@@ -47,15 +47,9 @@ export default function App() {
 
   return (
     <React.Fragment>
-        <div className={classes.root}>
-
-          <NavBar />
-          <div className={classes.placeholder}></div>
           <div className={classes.mainArea}>
             <StateInit />
           </div>
-
-        </div>
     </React.Fragment>
   );
 }

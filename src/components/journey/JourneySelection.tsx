@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0px"
   },
   itemContainer: {
+    backgroundColor: "white",
     marginBottom: "15px",
     marginTop: "0px",
     marginLeft: "0px",
@@ -36,13 +37,12 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     alignItems: "flex-start",
     width: "360px",
-    minWidth: "295px",
-    height: "130px",
-    backgroundColor: "white"
+    minWidth: "285px",
+    height: "130px"
   },
   itemContent: {
     width: "354px",
-    minWidth: "295px",
+    minWidth: "285px",
     maxWidth: "354px",
     height: "100%"
   },
