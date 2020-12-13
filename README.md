@@ -109,6 +109,7 @@ bundler in the root directory are standard and can be inspected individually.
 
 ```
 src                
+├── assets
 ├── components   
 ├── data                    
 ├── fonts                    
@@ -128,6 +129,25 @@ application.
 Please note that production compilations are stored in a /build folder that is
 located in the root directory.
 
+##### Assets
+
+```
+components                
+├── fonts
+├── icons   
+└── images
+```
+
+The directory `fonts` contains the fonts used throughout the application.
+In its current form this includes only the BundesSchrift.
+
+The directory `icons` contains all necessary icons used in the application. This
+includes the icons representing answers, the information icon, a cancel icon and
+document icons. The file `ProvideIcons.ts` allows to import icons to the selection
+list dynamically.
+
+The directory `images` currently only contains the icon of the Antidiskiminierungstelle,
+which will become unnecessary in the production environment.
 
 ##### Components
 
@@ -145,8 +165,7 @@ The first file here is `StateInit.tsx`. It injects our set of global states into
 the application, which allows us to manipulate and retrieve state values
 throughout the user flow. One layer further down, `Main.tsx` allows the
 application to switch between the flow of questions, which we call journey, and the display of a result page. The file `styleguide.ts` contains a number style
-variables that need to be consistent throughout the application. This includes
-font styles and color codes.
+variables that need to be consistent throughout the application. This includes color codes.
 
 The directory `journey` contains all components to guide a user through the
 flow of the questions. These include components for questions headers, brief
@@ -185,7 +204,10 @@ files as well as certain state types
 
 The directory `resultDocuments` contains json files that map given answers to a
 number of different result types as well as a file that links an answer type to
-text elements.
+text elements. Please note that there are two types of answer mappings. The default
+answer mapping only categorises a set of answers as being with agg and within the
+relevant timeframe. The second broader mapping links specific answers to specific
+elements on the result page.
 
 The directory `stepDocuments` contains the files defining each node in the
 decisiontree. Each Node contains the same set of data points including question
@@ -199,6 +221,7 @@ states
 ├── answerState.ts
 ├── documentQueue.ts
 ├── resultState.ts
+├── showInfoState.ts
 └── showResultstate.ts
 
 ```
@@ -221,7 +244,10 @@ to a result type which then in turn links to text content displayed in the
 result page. Handling this through a state variable is not strictly necessary
 and might be adjusted in the future.
 
-The file `showResultstate.ts` is binary and allows the application to switch
+The file `showInfostate.ts` allows to application to switch between showing possible
+answers and giving more detailed information on a single answers field.
+
+The state described in `showResultstate.ts` is binary and allows the application to switch
 between the questions nodes and the result page. It updated when the end of the
 question flow has been reached.
 
