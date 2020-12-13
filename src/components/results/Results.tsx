@@ -33,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "30px"
   },
   contactMapSpace: {
-    maxHeight: "100%"
+    maxHeight: "100%",
+    marginTop: "22px"
   }
 }));
 
