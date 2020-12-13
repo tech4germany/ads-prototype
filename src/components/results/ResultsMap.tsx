@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "flex-start",
     maxWidth: "344px",
-    minWidth: "285px",
+    minWidth: "280px",
     backgroundColor: "white"
   },
   mapContent: {

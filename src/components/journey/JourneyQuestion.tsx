@@ -12,7 +12,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     minHeight: "96px",
     marginBottom: "12px",
-    paddingRight: "22px"
+    marginLeft: "11px",
+    marginRight: "11px"
   },
   questionContainer: {
     marginBottom: "6px"

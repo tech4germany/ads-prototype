@@ -7,22 +7,9 @@ the result page.
 import React, {useEffect} from 'react';
 import JourneyStep from "components/journey/JourneyStep"
 import Result from "components/results/Results"
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { ShowResult } from "states/showResultState"
-
-export const theme = createMuiTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 1086,
-      lg: 1280,
-      xl: 1920,
-    },
-  },
-})
 
 export default function Journey() {
   let showResult = ShowResult.useContainer();
@@ -36,13 +23,13 @@ export default function Journey() {
   }, [activeStep])
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
       {
         !showResult.self ?
         <JourneyStep />
         :
         <Result />
       }
-    </ThemeProvider>
+    </>
   );
 }

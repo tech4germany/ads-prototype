@@ -30,15 +30,15 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     alignItems: "flex-start",
     width: "360px",
-    minWidth: "285px",
+    minWidth: "280px",
     height: "130px",
     marginBottom: "15px",
     marginTop: "0px",
-    marginLeft: "0px",
-    marginRight: "22px",
+    marginLeft: "11px",
+    marginRight: "11px",
   },
   itemContent: {
-    minWidth: "285px",
+    minWidth: "280px",
     height: "100%"
   },
   button: {

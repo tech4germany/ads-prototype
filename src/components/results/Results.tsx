@@ -15,16 +15,16 @@ import { ResultSpecs } from "states/resultState"
 
 const useStyles = makeStyles((theme) => ({
   resultBox: {
-      backgroundColor: "inherit",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
+    backgroundColor: "inherit",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
   resultSpace: {
-      backgroundColor: "inherit",
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "flex-start",
+    backgroundColor: "inherit",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
   },
   infoTemplateSpace: {
     maxHeight: "100%",
@@ -55,7 +55,7 @@ export default function Result() {
 
         {
           resultSpecs.self.profile ?
-            <Grid item lg={9} md={10} sm={12} xs={12} className={classes.infoTemplateSpace}>
+            <div className={classes.infoTemplateSpace}>
               <ResultsInfo />
               {
                 getResultReferrals(resultSpecs.self.non_default_identifier).length>0?
@@ -69,14 +69,14 @@ export default function Result() {
                 getResultMaterials(resultSpecs.self.non_default_identifier).length>0?
                 <ResultsMaterials />: null
               }
-            </Grid>: null
+            </div>: null
         }
 
-        <Grid item lg={3} md={2} sm={12} xs={12} className={classes.contactMapSpace}>
+        <div className={classes.contactMapSpace}>
           <ResultsContact />
           <div className={classes.contactMapSpacer}></div>
           <ResultsMap />
-        </Grid>
+        </div>
 
       </Grid>
       <JourneyNavigation />
