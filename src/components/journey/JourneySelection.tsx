@@ -74,6 +74,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "20px",
     marginRight: "20px",
   },
+  iconContainerPlaceholder: {
+    minWidth: "30px",
+  },
   icon: {
     display: "block",
     width: "60px",
@@ -184,13 +187,14 @@ export default function JourneySelection() {
                       onKeyUp={(e) => {if (e.keyCode === 13 || e.keyCode === 32) {handleClick(e)}}}
                     >
 
-                      <div className={classes.iconContainer}>
                         {
                           selectionIcon?
-                          <img className={classes.icon} src={selectionIcon} alt={"Icon repräsentiert das Auswahlelement"}/>:
-                          null
+                          <div className={classes.iconContainer}>
+                            <img className={classes.icon} src={selectionIcon} alt={"Icon repräsentiert das Auswahlelement"}/>
+                          </div>:
+                          <div className={classes.iconContainerPlaceholder}></div>
                         }
-                      </div>
+
 
                       <div className={classes.textContainer}>
                         <p className={classes.text}>
