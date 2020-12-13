@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "20px",
   },
   iconContainerPlaceholder: {
-    minWidth: "30px",
+    minWidth: "40px",
   },
   icon: {
     display: "block",
