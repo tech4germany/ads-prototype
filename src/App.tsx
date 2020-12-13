@@ -15,11 +15,11 @@ const useStyles = makeStyles((theme) => ({
   },
   mainArea: {
     backgroundColor: colorMain["15"],
-    minHeight: "80vh",
+    minHeight: "256px",
     display: 'flex',
     flexDirection: "row",
     justifyContent: "center",
-    maxWidth: "1146px",
+    maxWidth: "1152px",
     paddingLeft: "22px",
     margin: theme.spacing(0),
     padding: theme.spacing(0),
