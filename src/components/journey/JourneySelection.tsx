@@ -51,12 +51,11 @@ const useStyles = makeStyles((theme) => ({
     width: "354px",
     display: "flex",
     flexDirection: "row",
-    alignItems: "center",
+    justifyContent: "flex-start",
     border: "solid 0px",
     padding: "0px",
     cursor: "pointer",
     backgroundColor: "inherit",
-    justifyContent: "space-between",
     '@media (hover: hover)': {
       "&:hover": {
         backgroundColor: colorMain["100"],
@@ -67,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   iconContainer: {
-    minWidth: "30px",
+    minWidth: "60px",
     height: "100%",
     display: "flex",
     flexDirection: "column",
@@ -89,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     height: "100%",
-    width: "80%"
+    maxWidth: "220px"
   },
   text: {
     whiteSpace: "pre-wrap",
@@ -194,7 +193,9 @@ export default function JourneySelection() {
                       </div>
 
                       <div className={classes.textContainer}>
-                        <span className={classes.text}>{wrap(label)}</span>
+                        <p className={classes.text}>
+                          {wrap(label)}
+                        </p>
                       </div>
 
                     </button>
