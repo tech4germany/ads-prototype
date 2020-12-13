@@ -7,16 +7,14 @@ import { ActiveStep } from "states/activeStepState"
 
 const useStyles = makeStyles((theme) => ({
   questionBox: {
-    minHeight: "64px",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
+    minHeight: "96px",
     marginBottom: "12px",
     paddingRight: "22px"
   },
   questionContainer: {
-    display: "flex",
-    flexWrap: "wrap",
     marginBottom: "6px"
   },
   questionText: {
@@ -24,10 +22,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "28px",
     margin: "0px",
     fontWeight: "normal"
-  },
-  explanationContainer: {
-    display: "flex",
-    flexWrap: "wrap",
   },
   explanationText: {
     fontFamily: "BundesSansWeb-Regular",
@@ -50,11 +44,9 @@ export default function JourneyQuestion() {
           {documentQueue.getStepDetail(activeStep.self, StepDetail.question)}
         </h1>
       </div>
-      <div className={classes.explanationContainer}>
-        <p className={classes.explanationText}>
-          {documentQueue.getStepDetail(activeStep.self, StepDetail.explanation)}
-        </p>
-      </div>
+      <p className={classes.explanationText}>
+        {documentQueue.getStepDetail(activeStep.self, StepDetail.explanation)}
+      </p>
     </div>
 );
 }

@@ -16,9 +16,6 @@ const wrap = (s: string) => s.replace(
     )
 
 const useStyles = makeStyles((theme) => ({
-  selectionBox: {
-    minHeight: "42vh"
-  },
   selectionList: {
     display: 'flex',
     flexDirection: 'row',
@@ -29,31 +26,29 @@ const useStyles = makeStyles((theme) => ({
   },
   itemContainer: {
     backgroundColor: "white",
-    marginBottom: "15px",
-    marginTop: "0px",
-    marginLeft: "0px",
-    marginRight: "22px",
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
     width: "360px",
     minWidth: "285px",
-    height: "130px"
+    height: "130px",
+    marginBottom: "15px",
+    marginTop: "0px",
+    marginLeft: "0px",
+    marginRight: "22px",
   },
   itemContent: {
-    width: "354px",
     minWidth: "285px",
-    maxWidth: "354px",
     height: "100%"
   },
   button: {
-    height: "100%",
-    width: "354px",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
-    border: "solid 0px",
+    height: "100%",
+    width: "354px",
     padding: "0px",
+    border: "solid 0px",
     cursor: "pointer",
     backgroundColor: "inherit",
     '@media (hover: hover)': {
@@ -66,23 +61,18 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   iconContainer: {
-    minWidth: "60px",
-    height: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    minWidth: "60px",
+    height: "100%",
     marginLeft: "20px",
     marginRight: "20px",
   },
   iconContainerPlaceholder: {
-    minWidth: "40px",
+    minWidth: "60px",
   },
   icon: {
-    display: "block",
-    width: "60px",
-    height: "60px",
-  },
-  icon_hover: {
     width: "60px",
     height: "60px",
   },
@@ -106,12 +96,12 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute"
   },
   infoButtonContainer: {
+    backgroundColor: "inherit",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
     border: "solid 0px",
     width: "100%",
-    backgroundColor: "inherit",
     padding: "0px",
     cursor: "pointer",
   },
@@ -121,8 +111,8 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "10px",
   },
   buttonStripe: {
-    display: "flex",
     backgroundColor: colorMain["115"],
+    display: "flex",
     height: "100%",
     width: "6px",
     minWidth: "6px"
@@ -158,7 +148,7 @@ export default function JourneySelection() {
     )
   } else {
     return (
-      <div className={classes.selectionBox}>
+      <div>
         <ul className={classes.selectionList}>
           {documentQueue.getEdges(activeStep.self).map((label, index) => {
 

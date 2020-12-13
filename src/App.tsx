@@ -6,26 +6,15 @@ import NavBar from 'components/shared/AppBar'
 import StateInit from "components/StateInit"
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    minHeight: "105vh",
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: "center",
-    paddingBottom: "5vh"
-  },
   mainArea: {
     backgroundColor: colorMain["15"],
-    minHeight: "256px",
     display: 'flex',
     flexDirection: "row",
     justifyContent: "center",
     maxWidth: "1152px",
+    minHeight: "640px",
     paddingLeft: "22px",
-    margin: theme.spacing(0),
-    padding: theme.spacing(0),
-  },
-  placeholder: {
-    height: "11vh",
+    paddingTop: "22px"
   }
 }));
 
