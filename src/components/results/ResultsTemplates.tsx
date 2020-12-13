@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
   subHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "30px",
-    margin: "0px"
+    margin: "0px",
+    fontWeight: "normal"
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",

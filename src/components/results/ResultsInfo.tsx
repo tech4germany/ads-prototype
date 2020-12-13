@@ -21,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "40px",
     lineHeight: "48px",
-    margin: "0px"
+    margin: "0px",
+    fontWeight: "normal"
   },
   subHeaderContainer: {
     marginBottom: "32px",
@@ -29,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
   subHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "30px",
-    margin: "0px"
+    margin: "0px",
+    fontWeight: "normal"
   },
   infoTextContainer: {
     marginBottom: "18px"

@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
   mapHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "22px",
-    margin: "0px"
+    margin: "0px",
+    fontWeight: "normal"
   },
   mapInfoContainer: {
     display: "flex",

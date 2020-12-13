@@ -31,7 +31,8 @@ const useStyles = makeStyles((theme) => ({
   contactHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "22px",
-    margin: "0px"
+    margin: "0px",
+    fontWeight: "normal"
   },
   contactInfoContainer: {
     display: "flex",

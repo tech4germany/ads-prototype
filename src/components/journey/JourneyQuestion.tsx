@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
   questionText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "28px",
-    margin: "0px"
+    margin: "0px",
+    fontWeight: "normal"
   },
   explanationContainer: {
     display: "flex",

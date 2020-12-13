@@ -51,7 +51,8 @@ const useStyles = makeStyles((theme) => ({
   infoHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "18px",
-    margin: "0px"
+    margin: "0px",
+    fontWeight: "normal"
   },
   exitIcon: {
     width: "30px",
