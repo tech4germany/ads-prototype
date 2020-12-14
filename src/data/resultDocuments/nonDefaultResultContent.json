@@ -105,11 +105,11 @@
       "referrals": [
         {
           "name": "eco - Verband der Internetwirtschaft e.V. Internet-Beschwerdestelle",
-          "website": "www.internet-beschwerdestelle.de"
+          "website": "https://www.internet-beschwerdestelle.de"
         },
         {
           "name": "Deutscher Presserat e.V.",
-          "website": "www.presserat.de/beschwerde.html"
+          "website": "https://www.presserat.de/beschwerde.html"
         },
         {
           "name": "Arbeitsgemeinschaft der Landesmedienanstalten (ALM) Programmbeschwerde",
@@ -117,7 +117,7 @@
         },
         {
           "name": "Zentralverband der deutschen Werbewirtschaft (ZAW) e.V. Deutscher Werberat",
-          "website": "www.werberat.de/beschwerdeformular"
+          "website": "https://www.werberat.de/beschwerdeformular"
         },
         {
           "name": "Pinkstinks Germany e.V. Werbemelder*in",
@@ -283,7 +283,7 @@
       "materials": [
         {
           "name": "Flyer: Was tun nach einem rassistischen Angriff? Empfehlungen für Betroffene (10 Sprachen)",
-          "link": "https://verband-brg.de/publikation-was-tun-nach-rassistischen-angriff-obr-2/"
+          "link": "https://www.verband-brg.de/publikation-was-tun-nach-rassistischen-angriff-obr-2/"
         }
       ]
     }

@@ -33,7 +33,7 @@
             "info_text": null
         },
         "Ich bin mir nicht sicher": {
-            "status":"not-inTime",
+            "status":"inTime",
             "description": null,
             "next_node": null,
             "icon": null,
