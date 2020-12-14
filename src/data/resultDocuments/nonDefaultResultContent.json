@@ -48,8 +48,8 @@
       "referrals": [
         {
           "name": "TransInterQueer (TrIQ) e.V. Persönliche Trans*- und Inter*-Beratung",
-          "email": "beratung@transinterqueer.org",
-          "website": "https://www.transinterqueer.org"
+          "email": "beratung@transinterQueer.org",
+          "website": "https://www.transinterQueer.org"
         }
       ]
     }
@@ -423,7 +423,7 @@
       "materials": [
         {
           "name": "Hinweise für Ärzt_innen, Psycholog_innen, Therapeut_innen & andere medizinische Berufsgruppen",
-          "link": "http://www.transinterqueer.org/download/Publikationen/triq_infobroschuere_medizinpsych_berufe.pdf"
+          "link": "http://www.transinterQueer.org/download/Publikationen/triq_infobroschuere_medizinpsych_berufe.pdf"
         }
       ]
     }
@@ -434,7 +434,7 @@
       "materials": [
         {
           "name": "Hinweise für Ärzt_innen, Psycholog_innen, Therapeut_innen & andere medizinische Berufsgruppen",
-          "link": "http://www.transinterqueer.org/download/Publikationen/InterSensibroschuere_2013.pdf"
+          "link": "http://www.transinterQueer.org/download/Publikationen/InterSensibroschuere_2013.pdf"
         }
       ]
     }

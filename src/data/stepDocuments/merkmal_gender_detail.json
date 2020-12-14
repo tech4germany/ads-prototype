@@ -40,7 +40,7 @@
             "icon_hover": null,
             "info_text": "Wenn mit dem weiblichen Geschlecht Nachteile verbunden werden. Erfasst sind beispielsweise Benachteiligungen auf Grund von Schwangerschaft, schlechtere Bezahlung, schlechtere Beförderungschancen sowie sexistische Kommentare oder sonstige geschlechtsspezifische Abwertungen der Arbeitsleistung. Wenn mit dem männlichen Geschlecht Nachteile verbunden sind. Erfasst sind beispielsweise Benachteiligungen bei der Inanspruchnahme von Elternzeit oder im Bewerbungsverfahren."
         },
-        "queer": {
+        "Queer": {
             "status":"agg",
             "description": null,
             "next_node": null,
