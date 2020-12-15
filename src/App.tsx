@@ -17,19 +17,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-type PlausibleArgs = Array<string>;
-
-declare global {
-  const plausible: {
-    (...args: PlausibleArgs): void
-    q?: PlausibleArgs[]
-  }
-
-  interface Window {
-    plausible?: typeof plausible
-  }
-}
-
 export default function App() {
   const classes = useStyles();
 

@@ -116,7 +116,8 @@ export default function ResultsMaterials() {
                 <button className={classes.downloadContainer}
                   onClick={handleClick(label.link)}
                 >
-                  <a href={label.link}
+                  <a target="_blank"
+                    href={label.link}
                     className={classes.downloadLink}
                     title="Informationsmaterial herunterladen"
                   >

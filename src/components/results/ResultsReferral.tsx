@@ -103,7 +103,7 @@ export default function ResultReferrals() {
                   <button
                     className={classes.websiteButton}
                     onClick={handleClick(label.website)}
-                  ><a title="Website der Verweisstelle öffnen"
+                  ><a target="_blank" title="Website der Verweisstelle öffnen"
                   href={label.website} className={classes.contentWebsiteText}>Zur Website</a></button>:
                   null
                 }
