@@ -92,7 +92,11 @@ export default function ResultMap() {
             <span className={classes.mapSpacer}></span>
             <button onClick={(e) => {e.preventDefault(); window.location.href="https://www.antidiskriminierungsstelle.de/SiteGlobals/Forms/Suche/Beratungsstellensuche/Karte/Beratungsstellensuche_formular.html?nn=6560716&ambit_distance=200&ambit_distance.HASH=3f1f143fdef1207bca01";}}
               className={classes.mapButton}>
-              <a target="_blank" title="Zur Beratungsstellensuche" className={classes.mapLinkText} href={"https://www.antidiskriminierungsstelle.de/SiteGlobals/Forms/Suche/Beratungsstellensuche/Karte/Beratungsstellensuche_formular.html?nn=6560716&ambit_distance=200&ambit_distance.HASH=3f1f143fdef1207bca01"}>Zur Beratungsstellensuche</a>
+              <a target="_blank" 
+		rel="noopener noreferrer"
+		title="Zur Beratungsstellensuche" 
+		className={classes.mapLinkText} 
+		href={"https://www.antidiskriminierungsstelle.de/SiteGlobals/Forms/Suche/Beratungsstellensuche/Karte/Beratungsstellensuche_formular.html?nn=6560716&ambit_distance=200&ambit_distance.HASH=3f1f143fdef1207bca01"}>Zur Beratungsstellensuche</a>
               </button>
           </div>
         </div>

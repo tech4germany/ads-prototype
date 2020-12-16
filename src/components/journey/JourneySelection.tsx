@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, MouseEvent } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { colorMain } from "components/styleguide"
 import { Answers } from "states/answerState"

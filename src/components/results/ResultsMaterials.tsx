@@ -117,6 +117,7 @@ export default function ResultsMaterials() {
                   onClick={handleClick(label.link)}
                 >
                   <a target="_blank"
+	            rel="noopener noreferrer"
                     href={label.link}
                     className={classes.downloadLink}
                     title="Informationsmaterial herunterladen"

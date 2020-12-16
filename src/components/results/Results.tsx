@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import JourneyNavigation from "components/journey/JourneyNavigation"
 import ResultsInfo from "components/results/ResultsInfo"
 import ResultsContact from "components/results/ResultsContact"

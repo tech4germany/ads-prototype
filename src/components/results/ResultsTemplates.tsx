@@ -114,7 +114,8 @@ export default function ResultsTemplates() {
                 <button className={classes.downloadContainer}
                   onClick={handleClick(label.template)}
                 >
-                  <a target="_blank" 
+                  <a target="_blank"
+                    rel="noopener noreferrer" 
                     href={label.template}
                     className={classes.downloadLink}
                     title="Formulierungshilfe herunterladen"
@@ -135,7 +136,8 @@ export default function ResultsTemplates() {
                   onClick={handleClick(label.help)}
                 >
                   <a target="_blank"
-                    ref={label.help}
+		    rel="noopener noreferrer"
+                    href={label.help}
                     className={classes.downloadLink}
                     title="Ausfüllhinweis herunterladen"
                   >

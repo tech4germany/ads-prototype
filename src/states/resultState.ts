@@ -75,7 +75,6 @@ export function useResultSpecs(initialState: ResultSpecsLayout={}) {
     let result_match: ResultSpecsLayout={};
     result_match = retrieveDefaultResult(answers, result_match);
     result_match = checkForNonDefaultResult(answers, result_match)
-    console.log(result_match)
     setResultSpecs(result_match)
   }
 

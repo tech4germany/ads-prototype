@@ -1,8 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { colorMain } from "components/styleguide"
-
-import NavBar from 'components/shared/AppBar'
 import StateInit from "components/StateInit"
 
 const useStyles = makeStyles((theme) => ({
