@@ -111,47 +111,40 @@ export default function ResultsTemplates() {
             return(
               <li className={classes.templateItem} key={index}>
 
-                <button className={classes.downloadContainer}
-                  onClick={handleClick(label.template)}
-                >
-                  <a target="_blank"
-                    rel="noopener noreferrer" 
+                <div className={classes.downloadContainer}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={label.template}
                     className={classes.downloadLink}
                     title="Formulierungshilfe herunterladen"
                   >
-
                     <img className={classes.downloadIcon}
                       src={downloadIcon}
                       alt={"Icon zeigt ein generisches Dokument und ist einen Link engebettet, der den Download des Dokuments einleitet."}
                     />
-                    <div className={classes.downloadTextContainer}>
+                    <span className={classes.downloadTextContainer}>
                       <span className={classes.downloadTitleText}>Formulierungshilfe</span>
                       <span className={classes.downloadSubtitleText}>Download</span>
-                    </div>
+                    </span>
                   </a>
-                </button>
+                </div>
                 <span className={classes.itemSpacer}></span>
-                <button className={classes.downloadContainer}
-                  onClick={handleClick(label.help)}
-                >
-                  <a target="_blank"
-		    rel="noopener noreferrer"
+                <div className={classes.downloadContainer}>
+                  <a
+                    target="_blank"
+		                rel="noopener noreferrer"
                     href={label.help}
                     className={classes.downloadLink}
                     title="Ausfüllhinweis herunterladen"
                   >
-                    <img className={classes.downloadIcon}
-                      src={downloadIcon}
-                      alt={"Icon zeigt ein generisches Dokument und ist einen Link engebettet, der den Download des Dokuments einleitet."}
-                    />
-                    <div className={classes.downloadTextContainer}>
+                    <img className={classes.downloadIcon} src={downloadIcon} />
+                    <span className={classes.downloadTextContainer}>
                       <span className={classes.downloadTitleText}>Ausfüllhinweis</span>
                       <span className={classes.downloadSubtitleText}>Download</span>
-                    </div>
+                    </span>
                   </a>
-                </button>
-
+                </div>
               </li>
             )
           }):

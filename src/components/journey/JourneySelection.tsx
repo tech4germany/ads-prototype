@@ -6,10 +6,9 @@ import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { ShowInfo } from "states/showInfoState"
 import { EdgeDetail, UpdateType } from "data/customTypes"
-import infoIcon from 'assets/icons/info.svg'
-import infoIcon_hover from 'assets/icons/info_hover.svg'
 import { provideSelectionIcon } from "assets/icons/ProvideIcons"
 import JourneySelectionInfo from "components/journey/JourneySelectionInfo"
+import clsx from 'clsx'
 
 const wrap = (s: string) => s.replace(
         /(?![^\n]{1,20}$)([^\n]{1,20})\//g, '$1\/\n',
@@ -54,10 +53,13 @@ const useStyles = makeStyles((theme) => ({
     '@media (hover: hover)': {
       "&:hover": {
         backgroundColor: colorMain["100"],
+        textDecoration: "underline",
+        boxShadow: "inset 0 0 0 1px currentColor"
       }
     },
     "&:focus": {
-      backgroundColor: colorMain["100"],
+      textDecoration: "underline",
+      boxShadow: "inset 0 0 0 1px currentColor"
     }
   },
   iconContainer: {
@@ -95,20 +97,45 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     position: "absolute"
   },
-  infoButtonContainer: {
-    backgroundColor: "inherit",
+  infoIcon: {
+    backgroundColor: colorMain["100"],
     display: "flex",
     flexDirection: "row",
-    justifyContent: "flex-end",
-    border: "solid 0px",
-    width: "100%",
-    padding: "0px",
-    cursor: "pointer",
-  },
-  infoIcon: {
+    justifyContent: "center",
+    alignItems: "center",
     width: "68px",
-    marginTop: "10px",
-    marginRight: "10px",
+    height: "30px",
+    borderRadius: "30px",
+    margin: "10px",
+    cursor: "pointer"
+  },
+  infoIconHover: {
+    backgroundColor: colorMain["115"],
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "68px",
+    height: "30px",
+    borderRadius: "30px",
+    margin: "10px",
+    cursor: "pointer",
+    '@media (hover: hover)': {
+      "&:hover": {
+        backgroundColor: colorMain["115"],
+        textDecoration: "underline",
+        boxShadow: "inset 0 0 0 1px currentColor"
+      }
+    },
+    "&:focus": {
+      backgroundColor: colorMain["115"],
+      textDecoration: "underline",
+      boxShadow: "inset 0 0 0 1px currentColor"
+    }
+  },
+  infoText: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "15px",
   },
   buttonStripe: {
     backgroundColor: colorMain["115"],
@@ -122,6 +149,16 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "flex-end",
     height: "100%"
+  },
+  srOnly: {
+    border: "0",
+    clip: "rect(0 0 0 0)",
+    height: "1px",
+    margin: "-1px",
+    overflow: "hidden",
+    padding: "0",
+    position: "absolute",
+    width: "1px"
   }
 }));
 
@@ -134,19 +171,51 @@ export default function JourneySelection() {
   let documentQueue = DocumentQueue.useContainer()
   let activeDocument = documentQueue.self[activeStep.self]
 
-  useLayoutEffect(() => {}, [displayHover])
+  useLayoutEffect(() => {
+    if (displayHover !== null ) {
+      const element = document.getElementById(displayHover)
+      if (element) {element.focus()}
+    } else {
+      if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur()
+      }
+    }
+  }, [displayHover])
 
-  let handleClick = (e: React.SyntheticEvent) => {if (e) {e.preventDefault()};}
+  useLayoutEffect(() => {
+    let previous_choice = infoDisplay.retrievePreviousLabel()
+    if (previous_choice){
+      const element = document.getElementById(previous_choice)
+      if (element) {element.focus()}
+    }
+  }, [infoDisplay])
+
+  let handleKeyDown = (e: React.KeyboardEvent, label: string) => {
+    if (e.keyCode === 13) {
+      answers.add(activeDocument.identifier, label)
+      documentQueue.update(UpdateType.add, activeStep.self, label)
+      activeStep.increment(documentQueue.getVisibilityQueue())
+    }
+  }
+
+  let handleKeyDownInfo = (e: React.KeyboardEvent, label: string) => {
+    if (e.keyCode === 13) {
+      e.stopPropagation()
+      updateInfoDisplay(label)
+    }
+  }
 
   const updateInfoDisplay = (label: string | null) => {
     infoDisplay.show(label)
   }
 
-  if (infoDisplay.self) {
+  if (infoDisplay.lastIsSet()) {
     return (
       <JourneySelectionInfo />
     )
-  } else {
+  }
+
+  else {
     return (
       <div>
         <ul className={classes.selectionList}>
@@ -157,69 +226,53 @@ export default function JourneySelection() {
 
             return (
               <li className={classes.itemContainer} key={index}>
-
                 <div className={classes.itemContent}
                   onMouseOver={() => setDisplayHover(label)}
-                  onFocus={() => setDisplayHover(label)}
                   onMouseOut={() => setDisplayHover(null)}
                 >
                   <div className={classes.buttonGroup}>
-
-                    <button tabIndex={0} className={classes.button} type="submit"
+                    <div className={classes.button}
+                      id={label}
+                      tabIndex={0}
                       title="Auswahl bestätigen"
-
+                      onKeyDown={(event) => handleKeyDown(event, label)}
                       onClick={() => {
                         answers.add(activeDocument.identifier, label)
                         documentQueue.update(UpdateType.add, activeStep.self, label)
                         activeStep.increment(documentQueue.getVisibilityQueue())
                       }}
-                      onMouseDown={handleClick}
-                      onKeyUp={(e) => {if (e.keyCode === 13 || e.keyCode === 32) {handleClick(e)}}}
                     >
-
                         {
                           selectionIcon?
-                          <div className={classes.iconContainer}>
-                            <img className={classes.icon} src={selectionIcon} alt={"Icon repräsentiert das Auswahlelement"}/>
-                          </div>:
-                          <div className={classes.iconContainerPlaceholder}></div>
+                          <span className={classes.iconContainer}>
+                            <img className={classes.icon} src={selectionIcon}/>
+                          </span>:
+                          <span className={classes.iconContainerPlaceholder}></span>
                         }
 
-
-                      <div className={classes.textContainer}>
+                      <span className={classes.textContainer}>
                         <p className={classes.text}>
                           {wrap(label)}
                         </p>
-                      </div>
+                      </span>
 
-                    </button>
+                    </div>
 
                     <div className={classes.infoIconContainer}>
                       {
                         infoTextisSet?
-                        <div>
-                          <button
+                          <div
                             title="Informationstext anzeigen"
                             tabIndex={0}
-                            className={classes.infoButtonContainer} type="submit"
+                            className={classes.infoIconHover}
                             onClick={(event) => {
                               event.stopPropagation()
                               updateInfoDisplay(label)
                             }}
+                            onKeyDown={(event) => handleKeyDownInfo(event, label)}
                           >
-                            {
-                              displayHover === label?
-                              <img className={classes.infoIcon}
-                                src={infoIcon_hover}
-                                alt={"Hier erfahren Sie mehr Informationen zu Ihrer Auswahl"}
-                              />:
-                              <img className={classes.infoIcon}
-                                src={infoIcon}
-                                alt={"Hier erfahren Sie mehr Informationen zu Ihrer Auswahl"}
-                              />
-                            }
-                          </button>
-                        </div>: null
+                            <span aria-label={"Info zu " + label} className={classes.infoText}>Info</span>
+                          </div>: null
                       }
                     </div>
                   </div>

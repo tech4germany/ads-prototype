@@ -91,8 +91,17 @@ export default function ResultContact() {
           <div className={classes.contactInfoContainer}>
             <p className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an: <a className={classes.emailLink} href={"mailto:beratung@ads.bund.de"}>beratung@ads.bund.de</a></p>
             <span className={classes.contactSpacer}></span>
-            <button onClick={(e) => {e.preventDefault(); window.location.href="https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html";}}
-            className={classes.contactButton}><a target="_blank" rel="noopener noreferrer" title="Zum Kontaktformular" tabIndex={0} className={classes.contactFormularText} href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}>Zum Kontaktformular</a></button>
+            <div className={classes.contactButton}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Zum Kontaktformular"
+                tabIndex={0}
+                className={classes.contactFormularText}
+                href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}
+                >Zum Kontaktformular
+              </a>
+            </div>
           </div>
         </div>
         <div className={classes.contactStripe}></div>

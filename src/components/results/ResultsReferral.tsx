@@ -100,11 +100,16 @@ export default function ResultReferrals() {
                 }
                 {
                   label.website?
-                  <button
-                    className={classes.websiteButton}
-                    onClick={handleClick(label.website)}
-                  ><a target="_blank" rel="noopener noreferrer" title="Website der Verweisstelle öffnen"
-                  href={label.website} className={classes.contentWebsiteText}>Zur Website</a></button>:
+                  <div className={classes.websiteButton}>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Website der Verweisstelle öffnen"
+                      href={label.website}
+                      className={classes.contentWebsiteText}>
+                      Zur Website
+                    </a>
+                  </div>:
                   null
                 }
               </li>

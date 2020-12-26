@@ -1,11 +1,11 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useRef, useLayoutEffect } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 import { colorMain } from "components/styleguide"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { ShowInfo } from "states/showInfoState"
 import { EdgeDetail } from "data/customTypes"
-import exitIcon from 'assets/icons/cancel.svg';
+import exitIcon from 'assets/icons/cancel.svg'
 
 const useStyles = makeStyles((theme) => ({
   selectionInfoBox: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     maxWidth: "734px",
     backgroundColor: "white",
-    marginBottom: "15px",
+    marginBottom: "15px"
   },
   infoContent: {
     marginBottom: "28px",
@@ -66,7 +66,15 @@ const useStyles = makeStyles((theme) => ({
     height: "30px",
     marginTop: "10px",
     marginRight: "10px",
-    padding: "0px"
+    padding: "0px",
+    '@media (hover: hover)': {
+      "&:hover": {
+        boxShadow: "inset 0 0 0 1px currentColor"
+      }
+    },
+    "&:focus": {
+      boxShadow: "inset 0 0 0 1px currentColor"
+    }
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
@@ -87,34 +95,49 @@ const useStyles = makeStyles((theme) => ({
 
 export default function JourneySelectionInfoText() {
   const classes = useStyles();
+  const setFocus = useRef<HTMLDivElement>(null);
   let activeStep = ActiveStep.useContainer()
   let documentQueue = DocumentQueue.useContainer()
   let infoDisplay = ShowInfo.useContainer()
 
+  useLayoutEffect(() => {
+    if (setFocus.current) {
+      setFocus.current.focus()
+    }
+  }, []);
+
+  let handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.keyCode === 13) {
+      infoDisplay.hide()
+    }
+  }
+
+  const current_label = infoDisplay.retrieveActiveLabel()
+
   return (
-    <div className={classes.selectionInfoBox} >
-      <div className={classes.infoContainer}>
+    <div className={classes.selectionInfoBox}>
+      <div className={classes.infoContainer} ref={setFocus} tabIndex={0}>
 
         <div className={classes.infoContent}>
           <div className={classes.infoCard}>
             <div className={classes.headerRow}>
               <div className={classes.infoHeader}>
-                <h3 className={classes.infoHeaderText}>{infoDisplay.self}</h3>
+                <h2 className={classes.infoHeaderText}>{infoDisplay.retrieveActiveLabel()}</h2>
               </div>
-              <button className={classes.exitButton} tabIndex={0}
+              <div className={classes.exitButton} tabIndex={0}
                 title="Informationstext schließen"
+                onKeyDown={handleKeyDown}
                 onClick={(event) => {
-                  event.stopPropagation()
                   infoDisplay.hide()
                 }}
               >
                 <img className={classes.exitIcon} src={exitIcon} alt={"empty"}/>
-              </button>
+              </div>
             </div>
             <p className={classes.infoText}>
               {
-                infoDisplay.self?
-                documentQueue.getEdgeFeatureByLabel(activeStep.self, infoDisplay.self, EdgeDetail.info_text):
+                current_label?
+                documentQueue.getEdgeFeatureByLabel(activeStep.self, current_label, EdgeDetail.info_text):
                 null
               }
             </p>

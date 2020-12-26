@@ -113,25 +113,22 @@ export default function ResultsMaterials() {
           materials.map((label, index) => {
             return(
               <li className={classes.materialsItem} key={index}>
-                <button className={classes.downloadContainer}
-                  onClick={handleClick(label.link)}
-                >
-                  <a target="_blank"
-	            rel="noopener noreferrer"
+                <div className={classes.downloadContainer}>
+                  <a
+                    tabIndex={0}
+                    target="_blank"
+	                  rel="noopener noreferrer"
                     href={label.link}
                     className={classes.downloadLink}
                     title="Informationsmaterial herunterladen"
                   >
-                    <img className={classes.downloadIcon}
-                      src={downloadIcon}
-                      alt={"Icon repräsentiert Dokument, das an dieser Stelle downloadbar ist."}
-                    />
-                    <div className={classes.downloadTextContainer}>
+                    <img className={classes.downloadIcon} src={downloadIcon}/>
+                    <span className={classes.downloadTextContainer}>
                       <span className={classes.downloadTitleText}>{label.name}</span>
                       <span className={classes.downloadSubtitleText}>Download</span>
-                    </div>
+                    </span>
                   </a>
-                </button>
+                </div>
               </li>
             )
           }):

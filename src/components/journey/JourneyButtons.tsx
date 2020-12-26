@@ -60,7 +60,7 @@ export function BackButton() {
     )
   } else {
     return(
-        <button tabIndex={0} className={classes.arrowContainer}
+        <button className={classes.arrowContainer}
           title="Schritt zurückgehen"
           onClick={() => backwardAction()}
           onMouseDown={handleClick}

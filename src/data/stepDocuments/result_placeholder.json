@@ -1,7 +1,7 @@
 {
     "identifier":"result",
     "type":"default",
-    "step_title":"",
+    "step_title":"Ergebnisseite",
     "multiple_choice": false,
     "visible": false,
     "index": 0,
