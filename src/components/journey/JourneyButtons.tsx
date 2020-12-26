@@ -54,7 +54,7 @@ export function BackButton() {
     answers.prune(activeDocument.identifier)
   }
 
-  if ((activeStep.self === 0) || (infoDisplay.self)) {
+  if ((activeStep.self === 0)) {
     return(
         <KeyboardArrowLeft className={classes.arrowInvisible} />
     )

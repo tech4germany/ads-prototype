@@ -124,7 +124,9 @@ export default function JourneySelectionInfoText() {
               <div className={classes.infoHeader}>
                 <h2 className={classes.infoHeaderText}>{infoDisplay.retrieveActiveLabel()}</h2>
               </div>
-              <div className={classes.exitButton} tabIndex={0}
+              <div className={classes.exitButton}
+                aria-label="Schließen"
+                tabIndex={0}
                 title="Informationstext schließen"
                 onKeyDown={handleKeyDown}
                 onClick={(event) => {

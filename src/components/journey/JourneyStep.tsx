@@ -58,7 +58,7 @@ export default function JourneyStep() {
           <JourneySelection />
         </div>
         {
-          infoDisplay.self?
+          infoDisplay.lastIsSet()?
           null:
           <JourneyNavigation />
         }
