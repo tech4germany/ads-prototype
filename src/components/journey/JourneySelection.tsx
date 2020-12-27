@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     alignItems: "flex-start",
     width: "360px",
-    minWidth: "280px",
+    minWidth: "255px",
     height: "130px",
     marginBottom: "15px",
     marginTop: "0px",
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "11px"
   },
   itemContent: {
-    minWidth: "280px",
+    minWidth: "255px",
     height: "100%"
   },
   button: {
@@ -55,11 +55,11 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: colorMain["100"],
         textDecoration: "underline",
         boxShadow: "inset 0 0 0 1px currentColor"
+      },
+      "&:focus": {
+        textDecoration: "underline",
+        boxShadow: "inset 0 0 0 1px currentColor"
       }
-    },
-    "&:focus": {
-      textDecoration: "underline",
-      boxShadow: "inset 0 0 0 1px currentColor"
     }
   },
   iconContainer: {
@@ -125,12 +125,12 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: colorMain["115"],
         textDecoration: "underline",
         boxShadow: "inset 0 0 0 1px currentColor"
+      },
+      "&:focus": {
+        backgroundColor: colorMain["115"],
+        textDecoration: "underline",
+        boxShadow: "inset 0 0 0 1px currentColor"
       }
-    },
-    "&:focus": {
-      backgroundColor: colorMain["115"],
-      textDecoration: "underline",
-      boxShadow: "inset 0 0 0 1px currentColor"
     }
   },
   infoText: {
@@ -172,12 +172,14 @@ export default function JourneySelection() {
   let activeDocument = documentQueue.self[activeStep.self]
 
   useLayoutEffect(() => {
-    if (displayHover !== null ) {
-      const element = document.getElementById(displayHover)
-      if (element) {element.focus()}
-    } else {
-      if (document.activeElement instanceof HTMLElement) {
-        document.activeElement.blur()
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      if (displayHover !== null ) {
+        const element = document.getElementById(displayHover)
+        if (element) {element.focus()}
+      } else {
+        if (document.activeElement instanceof HTMLElement) {
+          document.activeElement.blur()
+        }
       }
     }
   }, [displayHover])

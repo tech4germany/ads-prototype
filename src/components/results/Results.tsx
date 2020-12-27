@@ -19,21 +19,25 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    width: "100%",
+    height: "100%"
   },
   resultSpace: {
     backgroundColor: "inherit",
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
+    width: "100%"
   },
   infoTemplateSpace: {
     maxHeight: "100%",
     maxWidth: "750px",
-    marginRight: "30px"
+    marginRight: "30px",
+    width: "100%"
   },
   contactMapSpace: {
     maxHeight: "100%",
-    marginTop: "22px"
+    marginTop: "22px",
   },
   contactMapSpacer: {
     height: "22px"

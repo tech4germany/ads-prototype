@@ -16,11 +16,12 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "flex-start",
     maxWidth: "344px",
-    minWidth: "280px"
+    minWidth: "255px",
+    width: "100%",
   },
   contactContent: {
     height: "100%",
-    width: "300px"
+    width: "100%",
   },
   contactHeaderContainer: {
     marginTop: "20px",
@@ -59,11 +60,11 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
         borderBottom: "3px solid #fff",
         fontSize: "18px",
+      },
+      "&:focus": {
+        borderBottom: "3px solid #fff",
+        fontSize: "18px",
       }
-    },
-    "&:focus": {
-      borderBottom: "3px solid #fff",
-      fontSize: "18px",
     }
   },
   contactStripe: {

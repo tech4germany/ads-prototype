@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     maxWidth: "1152px",
     minHeight: "640px",
-    padding: "22px"
+    padding: "16px",
   }
 }));
 

@@ -52,11 +52,11 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
         borderBottom: "3px solid #fef3df",
         fontSize: "20px"
+      },
+      "&:focus": {
+        borderBottom: "3px solid #fef3df",
+        fontSize: "20px"
       }
-    },
-    "&:focus": {
-      borderBottom: "3px solid #fef3df",
-      fontSize: "20px"
     }
   },
   websiteButton: {

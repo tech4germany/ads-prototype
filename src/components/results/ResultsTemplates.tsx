@@ -73,10 +73,10 @@ const useStyles = makeStyles((theme) => ({
     '@media (hover: hover)': {
       "&:hover": {
         fontSize: "20px",
+      },
+      "&:focus": {
+        fontSize: "20px",
       }
-    },
-    "&:focus": {
-      fontSize: "20px",
     }
   },
   downloadTextContainer: {

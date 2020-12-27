@@ -11,39 +11,45 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    minWidth: "100%",
     maxWidth: "750px",
   },
   headerContainer: {
     marginBottom: "50px",
+    width: "100%"
   },
   headerText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "40px",
     lineHeight: "48px",
     margin: "0px",
-    fontWeight: "normal"
+    fontWeight: "normal",
+    width: "100%",
   },
   subHeaderContainer: {
     marginBottom: "32px",
+    width: "100%"
   },
   subHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "30px",
     margin: "0px",
-    fontWeight: "normal"
+    fontWeight: "normal",
+    width: "100%",
   },
   infoTextContainer: {
-    marginBottom: "18px"
+    marginBottom: "18px",
+    width: "100%"
   },
   infoTextContainerMargin: {
-    marginBottom: "50px"
+    marginBottom: "50px",
+    width: "100%"
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
     whiteSpace: "pre-wrap",
-    margin: "0px"
+    margin: "0px",
+    width: "100%",
   }
 }));
 

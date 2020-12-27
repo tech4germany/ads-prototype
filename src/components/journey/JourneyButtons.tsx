@@ -18,11 +18,11 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
         color: "black",
         boxShadow: "inset 0 0 0 1px currentColor"
+      },
+      "&:focus": {
+        color: "black",
+        boxShadow: "inset 0 0 0 1px currentColor"
       }
-    },
-    "&:focus": {
-      color: "black",
-      boxShadow: "inset 0 0 0 1px currentColor"
     }
   },
   arrowContainer: {

@@ -70,10 +70,10 @@ const useStyles = makeStyles((theme) => ({
     '@media (hover: hover)': {
       "&:hover": {
         boxShadow: "inset 0 0 0 1px currentColor"
+      },
+      "&:focus": {
+        boxShadow: "inset 0 0 0 1px currentColor"
       }
-    },
-    "&:focus": {
-      boxShadow: "inset 0 0 0 1px currentColor"
     }
   },
   infoText: {
