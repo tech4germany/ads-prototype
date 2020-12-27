@@ -47,7 +47,17 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "2.5px",
     textDecoration: "none",
     color: "black",
-    lineHeight: "32px"
+    lineHeight: "32px",
+    '@media (hover: hover)': {
+      "&:hover": {
+        borderBottom: "3px solid #fef3df",
+        fontSize: "20px"
+      }
+    },
+    "&:focus": {
+      borderBottom: "3px solid #fef3df",
+      fontSize: "20px"
+    }
   },
   websiteButton: {
       display: "flex",

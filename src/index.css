@@ -8,6 +8,7 @@ body {
 }
 
 div:focus {outline:0;}
+a:focus {outline:0;}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -34,8 +34,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "16px"
   },
   downloadTitleText: {
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "18px",
     textAlign: "left",
     color: "black",
     lineHeight: "25px",
@@ -44,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
   },
   downloadSubtitleText: {
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "18px",
     color: "black",
     textAlign: "left"
   },
@@ -68,9 +65,19 @@ const useStyles = makeStyles((theme) => ({
     padding: "0px"
   },
   downloadLink: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
     display: "flex",
     flexDirection: "row",
-    textDecoration: "none"
+    textDecoration: "none",
+    '@media (hover: hover)': {
+      "&:hover": {
+        fontSize: "20px",
+      }
+    },
+    "&:focus": {
+      fontSize: "20px",
+    }
   },
   downloadTextContainer: {
     display: "flex",

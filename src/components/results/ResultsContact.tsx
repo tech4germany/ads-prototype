@@ -54,7 +54,17 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "2.5px",
     textDecoration: "none",
     color: "black",
-    lineHeight: "22px"
+    lineHeight: "22px",
+    '@media (hover: hover)': {
+      "&:hover": {
+        borderBottom: "3px solid #fff",
+        fontSize: "18px",
+      }
+    },
+    "&:focus": {
+      borderBottom: "3px solid #fff",
+      fontSize: "18px",
+    }
   },
   contactStripe: {
     display: "flex",
@@ -74,7 +84,17 @@ const useStyles = makeStyles((theme) => ({
     padding: "0px"
   },
   emailLink: {
-    color: "black"
+    color: "black",
+    '@media (hover: hover)': {
+      "&:hover": {
+        textDecoration: "none",
+        fontFamily: "BundesSansWeb-Bold",
+      }
+    },
+    "&:focus": {
+      textDecoration: "none",
+      fontFamily: "BundesSansWeb-Bold",
+    }
   }
 }));
 

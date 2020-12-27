@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { ResultSpecs } from "states/resultState"
 import { getResultMaterials } from "data/Interface"
 import downloadIcon from "assets/icons/Dokument.svg"
+import { colorMain } from "components/styleguide"
 
 const useStyles = makeStyles((theme) => ({
   materialsBox: {
@@ -59,17 +60,25 @@ const useStyles = makeStyles((theme) => ({
     padding: "0px"
   },
   downloadLink: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
     display: "flex",
     flexDirection: "row",
-    textDecoration: "none"
+    textDecoration: "none",
+    '@media (hover: hover)': {
+      "&:hover": {
+        fontSize: "20px",
+      }
+    },
+    "&:focus": {
+      fontSize: "20px",
+    }
   },
   downloadTextContainer: {
     display: "flex",
     flexDirection: "column",
   },
   downloadTitleText: {
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "18px",
     color: "black",
     lineHeight: "25px",
     borderBottom: "3px solid #000",
@@ -78,7 +87,6 @@ const useStyles = makeStyles((theme) => ({
   },
   downloadSubtitleText: {
     fontFamily: "BundesSansWeb-Regular",
-    fontSize: "18px",
     textAlign: "left",
     color: "black"
   },
