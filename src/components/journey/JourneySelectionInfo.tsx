@@ -110,7 +110,12 @@ export default function JourneySelectionInfoText() {
   let handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.keyCode === 13) {
       infoDisplay.hide()
+      e.preventDefault()
     }
+  }
+
+  let handleClick = (e: React.SyntheticEvent) => {
+    infoDisplay.hide()
   }
 
   const current_label = infoDisplay.retrieveActiveLabel()
@@ -124,27 +129,25 @@ export default function JourneySelectionInfoText() {
         role="dialog"
         id="answer-info" aria-live="polite"
         >
-
         <div className={classes.infoContent}>
           <div className={classes.infoCard}>
             <div className={classes.headerRow}>
               <div className={classes.infoHeader}>
                 <h2 className={classes.infoHeaderText}>{infoDisplay.retrieveActiveLabel()}</h2>
               </div>
-              <div
+              <button
+                id="exit button"
                 className={classes.exitButton}
+                title="Informationstext schließen"
+                type="button"
                 role="button"
                 aria-label="Schließen des Informationstext"
                 aria-controls="answer-selector"
-                tabIndex={0}
-                title="Informationstext schließen"
                 onKeyDown={handleKeyDown}
-                onClick={(event) => {
-                  infoDisplay.hide()
-                }}
+                onClick={handleClick}
               >
                 <img className={classes.exitIcon} src={exitIcon} alt={"empty"}/>
-              </div>
+              </button>
             </div>
             <p className={classes.infoText}>
               {

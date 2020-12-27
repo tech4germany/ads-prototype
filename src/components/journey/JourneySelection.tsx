@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "255px",
     height: "100%"
   },
-  button: {
+  selectionButton: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
@@ -117,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "10px",
     cursor: "pointer",
   },
-  infoIconHover: {
+  infoButton: {
     backgroundColor: colorMain["115"],
     display: "flex",
     flexDirection: "row",
@@ -128,6 +128,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "30px",
     margin: "10px",
     cursor: "pointer",
+    border: "solid 0px",
     '@media (hover: hover)': {
       "&:hover": {
         backgroundColor: colorMain["115"],
@@ -200,6 +201,19 @@ export default function JourneySelection() {
     }
   }, [infoDisplay])
 
+  let handleClickSelection = (e: React.SyntheticEvent, label: string) => {
+    if (!(e instanceof KeyboardEvent)) {
+      answers.add(activeDocument.identifier, label)
+      documentQueue.update(UpdateType.add, activeStep.self, label)
+      activeStep.increment(documentQueue.getVisibilityQueue())
+    }
+  }
+
+  let handleClickInfo = (e: React.SyntheticEvent, label: string) => {
+    e.stopPropagation()
+    updateInfoDisplay(label)
+  }
+
   let handleKeyDown = (e: React.KeyboardEvent, label: string) => {
     if (e.keyCode === 13) {
       answers.add(activeDocument.identifier, label)
@@ -234,10 +248,8 @@ export default function JourneySelection() {
           id="answer-list"
         >
           {documentQueue.getEdges(activeStep.self).map((label, index) => {
-
             const infoTextisSet = documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.info_text)
             const selectionIcon = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
-
             return (
               <li className={classes.itemContainer} key={index}>
                 <div className={classes.itemContent}
@@ -245,19 +257,16 @@ export default function JourneySelection() {
                   onMouseOut={() => setDisplayHover(null)}
                 >
                   <div className={classes.buttonGroup}>
-                    <div className={classes.button}
-                      role="listitem button"
-                      aria-label={label}
+                    <button
                       id={label}
-                      aria-live="polite"
-                      tabIndex={0}
+                      className={classes.selectionButton}
                       title="Auswahl bestätigen"
+                      type="button"
+                      role="button"
+                      aria-live="polite"
+                      aria-label={"Auswahl von " + label}
                       onKeyDown={(event) => handleKeyDown(event, label)}
-                      onClick={() => {
-                        answers.add(activeDocument.identifier, label)
-                        documentQueue.update(UpdateType.add, activeStep.self, label)
-                        activeStep.increment(documentQueue.getVisibilityQueue())
-                      }}
+                      onClick={(event) => handleClickSelection(event, label)}
                     >
                         {
                           selectionIcon?
@@ -273,27 +282,24 @@ export default function JourneySelection() {
                         </p>
                       </span>
 
-                    </div>
+                    </button>
 
                     <div className={classes.infoIconContainer}>
                       {
                         infoTextisSet?
-                          <div
-                            className={classes.infoIconHover}
+                          <button
+                            id={"info-selector " + label}
+                            className={classes.infoButton}
                             title="Informationstext anzeigen"
+                            type="button"
                             role="button"
-                            tabIndex={0}
-                            id="info-selector"
                             aria-controls="answer-info"
                             aria-label={"Info zu " + label}
-                            onClick={(event) => {
-                              event.stopPropagation()
-                              updateInfoDisplay(label)
-                            }}
+                            onClick={(event) => handleClickInfo(event, label)}
                             onKeyDown={(event) => handleKeyDownInfo(event, label)}
                           >
                             <span className={classes.infoText}>Info</span>
-                          </div>: null
+                          </button>: null
                       }
                     </div>
                   </div>
