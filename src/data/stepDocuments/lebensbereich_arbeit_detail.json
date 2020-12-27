@@ -6,7 +6,7 @@
     "visible": false,
     "index": 0,
     "question": "In welchem Zusammenhang fand die Diskriminierung genau statt?",
-    "explanation":"Sie haben den Bereich Arbeitsleben ausgewählt",
+    "explanation":"Sie haben den Bereich Arbeitsleben ausgewählt.",
     "edges": {
         "Bei der Bewerbung": {
             "status":"agg",

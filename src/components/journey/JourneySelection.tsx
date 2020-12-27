@@ -70,6 +70,11 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     marginLeft: "20px",
     marginRight: "20px",
+    "@media (max-width: 340px)": {
+      minWidth: "20px",
+      marginLeft: "0px",
+      marginRight: "0px"
+    }
   },
   iconContainerPlaceholder: {
     minWidth: "60px",
@@ -77,6 +82,9 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     width: "60px",
     height: "60px",
+    "@media (max-width: 340px)": {
+      display: "none",
+    }
   },
   textContainer: {
     display: "flex",
@@ -107,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
     height: "30px",
     borderRadius: "30px",
     margin: "10px",
-    cursor: "pointer"
+    cursor: "pointer",
   },
   infoIconHover: {
     backgroundColor: colorMain["115"],
@@ -172,7 +180,7 @@ export default function JourneySelection() {
   let activeDocument = documentQueue.self[activeStep.self]
 
   useLayoutEffect(() => {
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
       if (displayHover !== null ) {
         const element = document.getElementById(displayHover)
         if (element) {element.focus()}
@@ -223,6 +231,7 @@ export default function JourneySelection() {
         <ul
           className={classes.selectionList}
           role="list"
+          id="answer-list"
         >
           {documentQueue.getEdges(activeStep.self).map((label, index) => {
 
@@ -238,7 +247,9 @@ export default function JourneySelection() {
                   <div className={classes.buttonGroup}>
                     <div className={classes.button}
                       role="listitem button"
+                      aria-label={label}
                       id={label}
+                      aria-live="polite"
                       tabIndex={0}
                       title="Auswahl bestätigen"
                       onKeyDown={(event) => handleKeyDown(event, label)}
@@ -268,17 +279,20 @@ export default function JourneySelection() {
                       {
                         infoTextisSet?
                           <div
+                            className={classes.infoIconHover}
                             title="Informationstext anzeigen"
                             role="button"
                             tabIndex={0}
-                            className={classes.infoIconHover}
+                            id="info-selector"
+                            aria-controls="answer-info"
+                            aria-label={"Info zu " + label}
                             onClick={(event) => {
                               event.stopPropagation()
                               updateInfoDisplay(label)
                             }}
                             onKeyDown={(event) => handleKeyDownInfo(event, label)}
                           >
-                            <span aria-label={"Info zu " + label} className={classes.infoText}>Info</span>
+                            <span className={classes.infoText}>Info</span>
                           </div>: null
                       }
                     </div>

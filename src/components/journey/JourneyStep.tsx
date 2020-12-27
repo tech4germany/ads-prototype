@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
   stepContent: {
     display: "flex",
     flexDirection: "column",
-    width: "100%"
   }
 }));
 

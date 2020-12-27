@@ -6,7 +6,7 @@
     "visible": false,
     "index": 0,
     "question": "Worauf genau bezog sich die Diskriminierung?",
-    "explanation": "Sie haben das Merkmal Religion/Weltanschauung ausgewählt",
+    "explanation": "Sie haben das Merkmal Religion/Weltanschauung ausgewählt.",
     "edges": {
         "Religion": {
             "status":"agg",

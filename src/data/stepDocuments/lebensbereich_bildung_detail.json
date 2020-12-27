@@ -6,7 +6,7 @@
     "visible": false,
     "index": 0,
     "question": "In welchem Zusammenhang fand die Diskriminierung genau statt?",
-    "explanation":"Sie haben den Lebensbereich Bildung ausgewählt",
+    "explanation":"Sie haben den Lebensbereich Bildung ausgewählt.",
     "edges": {
         "Kita": {
             "status":"agg",

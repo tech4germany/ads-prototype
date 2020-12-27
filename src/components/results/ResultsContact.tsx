@@ -110,15 +110,24 @@ export default function ResultContact() {
             <h3 className={classes.contactHeaderText}>Kontakt zu uns</h3>
           </div>
           <div className={classes.contactInfoContainer}>
-            <p className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an: <a className={classes.emailLink} href={"mailto:beratung@ads.bund.de"}>beratung@ads.bund.de</a></p>
+            <p className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an:
+              <a
+                className={classes.emailLink}
+                href={"mailto:beratung@ads.bund.de"}
+                aria-label="Email an die Antidiskriminierungsstelle schreiben"
+              >
+                beratung@ads.bund.de
+              </a>
+            </p>
             <span className={classes.contactSpacer}></span>
             <div className={classes.contactButton}>
               <a
+                className={classes.contactFormularText}
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Zum Kontaktformular"
+                aria-label="Kontaktformular der Antidiskriminierungsstelle öffnen"
                 tabIndex={0}
-                className={classes.contactFormularText}
                 href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}
                 >Zum Kontaktformular
               </a>

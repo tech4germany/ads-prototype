@@ -18,7 +18,6 @@ export default function Journey() {
   let activeStep = ActiveStep.useContainer();
   let activeDocument = documentQueue.self[activeStep.self]
 
-
   useEffect(() => {
     if (activeStep.isLast(documentQueue.self.length)) {
       showResult.show()

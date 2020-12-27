@@ -8,10 +8,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: colorMain["15"],
     display: 'flex',
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     maxWidth: "1152px",
     minHeight: "640px",
-    padding: "16px",
+    padding: "22px",
   }
 }));
 

@@ -129,6 +129,7 @@ export default function ResultsMaterials() {
                     href={label.link}
                     className={classes.downloadLink}
                     title="Informationsmaterial herunterladen"
+                    aria-label="Informationsmaterial herunterladen"
                   >
                     <img className={classes.downloadIcon} src={downloadIcon}/>
                     <span className={classes.downloadTextContainer}>

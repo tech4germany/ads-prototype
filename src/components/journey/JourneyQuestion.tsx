@@ -13,10 +13,10 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "96px",
     marginBottom: "12px",
     marginLeft: "11px",
-    marginRight: "11px"
+    marginRight: "11px",
   },
   questionContainer: {
-    marginBottom: "6px"
+    marginBottom: "6px",
   },
   questionText: {
     fontFamily: "BundesSansWeb-Bold",
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "22px",
     lineHeight: "28px",
     whiteSpace: "pre-wrap",
-    margin: "0px"
+    margin: "0px",
   }
 }));
 
@@ -39,7 +39,7 @@ export default function JourneyQuestion() {
   let activeStep = ActiveStep.useContainer()
 
   return (
-    <div className={classes.questionBox}>
+    <section className={classes.questionBox}>
       <div className={classes.questionContainer}>
         <h1 className={classes.questionText}>
           {documentQueue.getStepDetail(activeStep.self, StepDetail.question)}
@@ -48,6 +48,6 @@ export default function JourneyQuestion() {
       <p className={classes.explanationText}>
         {documentQueue.getStepDetail(activeStep.self, StepDetail.explanation)}
       </p>
-    </div>
+    </section>
 );
 }

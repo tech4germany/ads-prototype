@@ -125,6 +125,7 @@ export default function ResultsTemplates() {
                     href={label.template}
                     className={classes.downloadLink}
                     title="Formulierungshilfe herunterladen"
+                    aria-label="Formulierungshilfe herunterladen"
                   >
                     <img className={classes.downloadIcon}
                       src={downloadIcon}
@@ -144,6 +145,7 @@ export default function ResultsTemplates() {
                     href={label.help}
                     className={classes.downloadLink}
                     title="Ausfüllhinweis herunterladen"
+                    aria-label="Ausfüllhinweis herunterladen"
                   >
                     <img className={classes.downloadIcon} src={downloadIcon} />
                     <span className={classes.downloadTextContainer}>

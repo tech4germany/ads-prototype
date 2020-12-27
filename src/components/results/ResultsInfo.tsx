@@ -59,7 +59,7 @@ export default function ResultInfo() {
   let answers = Answers.useContainer();
 
   return (
-    <div className={classes.infoBox}>
+    <section className={classes.infoBox}>
 
       <div className={classes.headerContainer}>
         <h1 className={classes.headerText}>Die Ersteinschätzung Ihres Sachverhalts</h1>
@@ -115,6 +115,6 @@ export default function ResultInfo() {
           {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.next_step)}
         </p>
       </div>
-    </div>
+    </section>
   );
 }

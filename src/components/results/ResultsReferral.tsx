@@ -73,13 +73,6 @@ export default function ResultReferrals() {
   let resultSpecs = ResultSpecs.useContainer()
   let list = getResultReferrals(resultSpecs.self.non_default_identifier)
 
-  let handleClick = (link: string) => {
-    return function(e: React.SyntheticEvent) {
-      e.preventDefault()
-      window.location.href=link
-    }
-  }
-
   return (
     <div className={classes.referralsBox}>
 

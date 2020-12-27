@@ -12,13 +12,14 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: "center",
+    width: "100%"
   },
   infoContainer: {
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
     maxWidth: "734px",
-    backgroundColor: "white",
+    backgroundColor: "#fff",
     marginBottom: "15px"
   },
   infoContent: {
@@ -116,7 +117,13 @@ export default function JourneySelectionInfoText() {
 
   return (
     <div className={classes.selectionInfoBox}>
-      <div className={classes.infoContainer} ref={setFocus} tabIndex={0} role="dialog">
+      <div
+        className={classes.infoContainer}
+        ref={setFocus}
+        tabIndex={0}
+        role="dialog"
+        id="answer-info" aria-live="polite"
+        >
 
         <div className={classes.infoContent}>
           <div className={classes.infoCard}>
@@ -124,9 +131,11 @@ export default function JourneySelectionInfoText() {
               <div className={classes.infoHeader}>
                 <h2 className={classes.infoHeaderText}>{infoDisplay.retrieveActiveLabel()}</h2>
               </div>
-              <div className={classes.exitButton}
-                aria-label="Schließen"
+              <div
+                className={classes.exitButton}
                 role="button"
+                aria-label="Schließen des Informationstext"
+                aria-controls="answer-selector"
                 tabIndex={0}
                 title="Informationstext schließen"
                 onKeyDown={handleKeyDown}

@@ -7,7 +7,6 @@ import { DocumentQueue } from "states/documentQueueState"
 import { Answers } from "states/answerState"
 import { colorMain } from "components/styleguide"
 import { UpdateType } from "data/customTypes"
-import { ShowInfo } from "states/showInfoState"
 
 const useStyles = makeStyles((theme) => ({
   arrow: {
@@ -44,7 +43,6 @@ export function BackButton() {
   const classes = useStyles()
   let activeStep = ActiveStep.useContainer()
   let answers = Answers.useContainer()
-  let infoDisplay = ShowInfo.useContainer()
   let documentQueue = DocumentQueue.useContainer()
   let activeDocument = documentQueue.self[activeStep.self]
 
