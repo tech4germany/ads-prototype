@@ -11,15 +11,18 @@ import { ShowInfo } from "states/showInfoState"
 
 const useStyles = makeStyles((theme) => ({
   arrow: {
-    color: "#b8c0c5",
+    color: "#818F98",
     fontSize: "48px",
+    outline: 0,
     '@media (hover: hover)': {
       "&:hover": {
         color: "black",
+        boxShadow: "inset 0 0 0 1px currentColor"
       }
     },
     "&:focus": {
       color: "black",
+      boxShadow: "inset 0 0 0 1px currentColor"
     }
   },
   arrowContainer: {
@@ -60,14 +63,17 @@ export function BackButton() {
     )
   } else {
     return(
-        <button className={classes.arrowContainer}
-          title="Schritt zurückgehen"
-          onClick={() => backwardAction()}
-          onMouseDown={handleClick}
-          onKeyUp={(e) => {if (e.keyCode === 13 || e.keyCode === 32) {handleClick(e)}}}
-        >
-          <KeyboardArrowLeft className={classes.arrow}/>
-        </button>
+        <div className={classes.arrowContainer}>
+          <KeyboardArrowLeft
+            role="Navigation"
+            tabIndex={0}
+            aria-label="Zurück"
+            onClick={() => backwardAction()}
+            onMouseDown={handleClick}
+            onKeyUp={(e) => {if (e.keyCode === 13 || e.keyCode === 32) {handleClick(e)}}}
+            className={classes.arrow}
+          />
+        </div>
     )
   }
 }

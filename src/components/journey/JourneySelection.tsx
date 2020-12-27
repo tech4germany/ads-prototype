@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "15px",
     marginTop: "0px",
     marginLeft: "11px",
-    marginRight: "11px",
+    marginRight: "11px"
   },
   itemContent: {
     minWidth: "280px",
@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
         backgroundColor: colorMain["100"],
         textDecoration: "underline",
+        boxShadow: "inset 0 0 0 1px currentColor"
       }
     },
     "&:focus": {
@@ -217,7 +218,10 @@ export default function JourneySelection() {
   else {
     return (
       <div>
-        <ul className={classes.selectionList}>
+        <ul
+          className={classes.selectionList}
+          role="list"
+        >
           {documentQueue.getEdges(activeStep.self).map((label, index) => {
 
             const infoTextisSet = documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.info_text)
@@ -231,6 +235,7 @@ export default function JourneySelection() {
                 >
                   <div className={classes.buttonGroup}>
                     <div className={classes.button}
+                      role="listitem button"
                       id={label}
                       tabIndex={0}
                       title="Auswahl bestätigen"
@@ -262,6 +267,7 @@ export default function JourneySelection() {
                         infoTextisSet?
                           <div
                             title="Informationstext anzeigen"
+                            role="button"
                             tabIndex={0}
                             className={classes.infoIconHover}
                             onClick={(event) => {

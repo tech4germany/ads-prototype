@@ -116,7 +116,7 @@ export default function JourneySelectionInfoText() {
 
   return (
     <div className={classes.selectionInfoBox}>
-      <div className={classes.infoContainer} ref={setFocus} tabIndex={0}>
+      <div className={classes.infoContainer} ref={setFocus} tabIndex={0} role="dialog">
 
         <div className={classes.infoContent}>
           <div className={classes.infoCard}>
@@ -126,6 +126,7 @@ export default function JourneySelectionInfoText() {
               </div>
               <div className={classes.exitButton}
                 aria-label="Schließen"
+                role="button"
                 tabIndex={0}
                 title="Informationstext schließen"
                 onKeyDown={handleKeyDown}
