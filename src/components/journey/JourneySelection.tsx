@@ -8,7 +8,6 @@ import { ShowInfo } from "states/showInfoState"
 import { EdgeDetail, UpdateType } from "data/customTypes"
 import { provideSelectionIcon } from "assets/icons/ProvideIcons"
 import JourneySelectionInfo from "components/journey/JourneySelectionInfo"
-import clsx from 'clsx'
 
 const wrap = (s: string) => s.replace(
         /(?![^\n]{1,20}$)([^\n]{1,20})\//g, '$1\/\n',
@@ -257,7 +256,6 @@ export default function JourneySelection() {
                       id={label}
                       className={classes.selectionButton}
                       type="button"
-                      role="button"
                       aria-label={"Auswahl von " + label + " bestätigen"}
                       aria-controls="question-header"
                       onKeyDown={(event) => handleKeyDown(event, label)}
@@ -287,10 +285,7 @@ export default function JourneySelection() {
                           <button
                             id={"info-selector " + label}
                             className={classes.infoButton}
-                            title="Informationstext anzeigen"
                             type="button"
-                            role="button"
-                            aria-controls="answer-info"
                             aria-label={"Info zu " + label + " anzeigen"}
                             onClick={(event) => handleClickInfo(event, label)}
                             onKeyDown={(event) => handleKeyDownInfo(event, label)}
