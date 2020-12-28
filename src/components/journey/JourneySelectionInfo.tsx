@@ -121,13 +121,11 @@ export default function JourneySelectionInfoText() {
   const current_label = infoDisplay.retrieveActiveLabel()
 
   return (
-    <section className={classes.selectionInfoBox} aria-label={"Informationsbereich zu getroffener Auswahl: infoDisplay.retrieveActiveLabel()"}>
+    <section className={classes.selectionInfoBox} aria-label={"Informationsbereich zu getroffener Auswahl:" + infoDisplay.retrieveActiveLabel()}>
       <div
         className={classes.infoContainer}
         ref={setFocus}
-        tabIndex={0}
         role="dialog"
-        id="answer-info" aria-live="polite"
         >
         <div className={classes.infoContent}>
           <div className={classes.infoCard}>
@@ -142,14 +140,13 @@ export default function JourneySelectionInfoText() {
                 type="button"
                 role="button"
                 aria-label="Rückkehr zum Auswahlbereich"
-                aria-controls="answer-selector"
                 onKeyDown={handleKeyDown}
                 onClick={handleClick}
               >
                 <img className={classes.exitIcon} src={exitIcon} alt={"empty"}/>
               </button>
             </div>
-            <p className={classes.infoText}>
+            <p className={classes.infoText} id="answer-info" aria-live="polite">
               {
                 current_label?
                 documentQueue.getEdgeFeatureByLabel(activeStep.self, current_label, EdgeDetail.info_text):

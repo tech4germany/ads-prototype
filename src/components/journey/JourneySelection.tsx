@@ -245,7 +245,7 @@ export default function JourneySelection() {
   else {
     return (
       <section aria-label="Auswahlbereich möglicher Antworten">
-        <ul className={classes.selectionList} id="answer-list">
+        <ol className={classes.selectionList} id="answer-list">
           {documentQueue.getEdges(activeStep.self).map((label, index) => {
             const infoTextisSet = documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.info_text)
             const selectionIcon = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
@@ -256,11 +256,10 @@ export default function JourneySelection() {
                     <button
                       id={label}
                       className={classes.selectionButton}
-                      title="Auswahl bestätigen"
                       type="button"
                       role="button"
-                      aria-live="polite"
                       aria-label={"Auswahl von " + label + " bestätigen"}
+                      aria-controls="question-header"
                       onKeyDown={(event) => handleKeyDown(event, label)}
                       onClick={(event) => handleClickSelection(event, label)}
                       onMouseOver={() => setDisplayHover(label)}
@@ -268,7 +267,7 @@ export default function JourneySelection() {
                     >
                       {
                         selectionIcon?
-                        <div className={classes.iconContainer}>
+                        <div className={classes.iconContainer} aria-hidden="true">
                           <img className={classes.icon} src={selectionIcon}/>
                         </div>:
                         <div className={classes.iconContainerPlaceholder}></div>
@@ -306,7 +305,7 @@ export default function JourneySelection() {
               </li>
             );
           })}
-      </ul>
+      </ol>
     </section>
     )
   }

@@ -54,7 +54,7 @@ export default function Result() {
   }, [answers])
 
   return (
-    <div className={classes.resultBox}>
+    <div className={classes.resultBox} id="result-page" aria-live="polite">
       <Grid container className={classes.resultSpace}>
         {
           resultSpecs.self.profile ?
