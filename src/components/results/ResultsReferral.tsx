@@ -74,11 +74,11 @@ export default function ResultReferrals() {
   let list = getResultReferrals(resultSpecs.self.non_default_identifier)
 
   return (
-    <div className={classes.referralsBox}>
+    <section className={classes.referralsBox} aria-label="Anlaufstellen">
 
-      <div className={classes.subHeaderContainer}>
+      <header className={classes.subHeaderContainer} aria-hidden="true">
         <h2 className={classes.subHeaderText}>Anlaufstellen:</h2>
-      </div>
+      </header>
 
       <p className={classes.infoText}>
         Beratungen und Unterstützung für Ihre spezielle Fallkonstellation finden Sie außerdem hier:
@@ -108,6 +108,7 @@ export default function ResultReferrals() {
                       target="_blank"
                       rel="noopener noreferrer"
                       title="Website der Verweisstelle öffnen"
+                      aria-label="Website der Verweisstelle öffnen"
                       href={label.website}
                       className={classes.contentWebsiteText}>
                       Zur Website
@@ -121,6 +122,6 @@ export default function ResultReferrals() {
           null
         }
       </ul>
-    </div>
+    </section>
   );
 }

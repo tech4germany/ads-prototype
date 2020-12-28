@@ -105,11 +105,11 @@ export default function ResultsMaterials() {
   }
 
   return (
-    <div className={classes.materialsBox}>
+    <section className={classes.materialsBox} aria-label="Informationsmaterial">
 
-      <div className={classes.subHeaderContainer}>
+      <header className={classes.subHeaderContainer} aria-hidden="true">
         <h2 className={classes.subHeaderText}>Informationsmaterial:</h2>
-      </div>
+      </header>
 
       <p className={classes.infoText}>
         Weitere Informationen zu Ihren Fragen gibt es hier:
@@ -144,6 +144,6 @@ export default function ResultsMaterials() {
           null
         }
       </ul>
-    </div>
+    </section>
   );
 }

@@ -56,7 +56,6 @@ export default function Result() {
   return (
     <div className={classes.resultBox}>
       <Grid container className={classes.resultSpace}>
-
         {
           resultSpecs.self.profile ?
             <div className={classes.infoTemplateSpace}>
@@ -75,13 +74,11 @@ export default function Result() {
               }
             </div>: null
         }
-
         <div className={classes.contactMapSpace}>
           <ResultsContact />
           <div className={classes.contactMapSpacer}></div>
           <ResultsMap />
         </div>
-
       </Grid>
       <JourneyNavigation />
   </div>

@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   contactSpacer: {
     height: "24px"
   },
-  contactButton: {
+  contactLink: {
     display: "flex",
     flexDirection: "row",
     border: "solid 0px",
@@ -103,12 +103,12 @@ export default function ResultContact() {
   const classes = useStyles();
 
   return (
-    <div className={classes.contactBox}>
+    <section className={classes.contactBox} aria-label="Informationen für Kontaktaufnahme">
       <div className={classes.contactContainer}>
         <div className={classes.contactContent}>
-          <div className={classes.contactHeaderContainer}>
+          <header className={classes.contactHeaderContainer} aria-hidden="true">
             <h3 className={classes.contactHeaderText}>Kontakt zu uns</h3>
-          </div>
+          </header>
           <div className={classes.contactInfoContainer}>
             <p className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an:
               <a
@@ -120,7 +120,7 @@ export default function ResultContact() {
               </a>
             </p>
             <span className={classes.contactSpacer}></span>
-            <div className={classes.contactButton}>
+            <div className={classes.contactLink}>
               <a
                 className={classes.contactFormularText}
                 target="_blank"
@@ -134,8 +134,8 @@ export default function ResultContact() {
             </div>
           </div>
         </div>
-        <div className={classes.contactStripe}></div>
+        <canvas className={classes.contactStripe}></canvas>
       </div>
-    </div>
+    </section>
   );
 }

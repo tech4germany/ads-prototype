@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
   mapSpacer: {
     height: "24px"
   },
-  mapButton: {
+  mapLink: {
     display: "flex",
     flexDirection: "row",
     border: "solid 0px",
@@ -92,16 +92,16 @@ export default function ResultMap() {
   const classes = useStyles();
 
   return (
-    <div className={classes.mapSpace}>
+    <section className={classes.mapSpace} aria-label="Informationen für Beratungsstellensuche">
       <div className={classes.mapContainer}>
         <div className={classes.mapContent}>
-          <div className={classes.mapHeaderContainer}>
+          <header className={classes.mapHeaderContainer} aria-hidden="true">
             <h3 className={classes.mapHeaderText}>Beratungsstellen</h3>
-          </div>
+          </header>
           <div className={classes.mapInfoContainer}>
             <p className={classes.mapInfoText}>Finden Sie eine Beratungsstelle in Ihrer Nähe über unsere Beratungsstellensuche</p>
             <span className={classes.mapSpacer}></span>
-            <div className={classes.mapButton}>
+            <div className={classes.mapLink}>
               <a
                 className={classes.mapLinkText}
                 target="_blank"
@@ -114,8 +114,8 @@ export default function ResultMap() {
             </div>
           </div>
         </div>
-        <div className={classes.mapStripe}></div>
+        <canvas className={classes.mapStripe}></canvas>
       </div>
-    </div>
+    </section>
   );
 }

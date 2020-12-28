@@ -59,11 +59,11 @@ export default function ResultInfo() {
   let answers = Answers.useContainer();
 
   return (
-    <section className={classes.infoBox}>
+    <section className={classes.infoBox} aria-label="Rechtliche Ersteinschätzung zu Ihrem Fall">
 
-      <div className={classes.headerContainer}>
+      <header className={classes.headerContainer} aria-hidden="true">
         <h1 className={classes.headerText}>Die Ersteinschätzung Ihres Sachverhalts</h1>
-      </div>
+      </header>
 
       <div className={classes.subHeaderContainer}>
         <h2 className={classes.subHeaderText}>Rechtliche Einordnung:</h2>

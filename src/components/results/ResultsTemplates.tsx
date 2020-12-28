@@ -101,11 +101,11 @@ export default function ResultsTemplates() {
   }
 
   return (
-    <div className={classes.templatesBox}>
+    <section className={classes.templatesBox} aria-label="Formulierungshilfen und Ausfüllhinweise">
 
-      <div className={classes.subHeaderContainer}>
+      <header className={classes.subHeaderContainer} aria-hidden="true">
         <h2 className={classes.subHeaderText}>Formulierungshilfen und Ausfüllhinweise:</h2>
-      </div>
+      </header>
 
       <p className={classes.infoText}>
         Die Vorlage hier können Sie ausfüllen und an die Gegenseite schicken, um Ihre Rechte geltend zu machen:
@@ -160,6 +160,6 @@ export default function ResultsTemplates() {
           null
         }
       </ul>
-    </div>
+    </section>
   );
 }
