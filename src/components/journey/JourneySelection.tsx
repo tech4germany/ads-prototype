@@ -78,6 +78,9 @@ const useStyles = makeStyles((theme) => ({
   },
   iconContainerPlaceholder: {
     minWidth: "60px",
+    "@media (max-width: 340px)": {
+      minWidth: "20px",
+    }
   },
   icon: {
     width: "60px",
@@ -289,7 +292,7 @@ export default function JourneySelection() {
                             type="button"
                             role="button"
                             aria-controls="answer-info"
-                            aria-label={"Info zu " + label}
+                            aria-label={"Info zu " + label + " anzeigen"}
                             onClick={(event) => handleClickInfo(event, label)}
                             onKeyDown={(event) => handleKeyDownInfo(event, label)}
                           >

@@ -141,7 +141,7 @@ export default function JourneySelectionInfoText() {
                 title="Informationstext schließen"
                 type="button"
                 role="button"
-                aria-label="Schließen des Informationstext"
+                aria-label="Rückkehr zum Auswahlbereich"
                 aria-controls="answer-selector"
                 onKeyDown={handleKeyDown}
                 onClick={handleClick}
