@@ -133,12 +133,10 @@ const useStyles = makeStyles((theme) => ({
     border: "solid 0px",
     '@media (hover: hover)': {
       "&:hover": {
-        backgroundColor: colorMain["115"],
         textDecoration: "underline",
         boxShadow: "inset 0 0 0 1px currentColor"
       },
       "&:focus": {
-        backgroundColor: colorMain["115"],
         textDecoration: "underline",
         boxShadow: "inset 0 0 0 1px currentColor"
       }
