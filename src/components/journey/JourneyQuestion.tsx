@@ -39,12 +39,12 @@ export default function JourneyQuestion() {
   let activeStep = ActiveStep.useContainer()
 
   return (
-    <section className={classes.questionBox}>
-      <div className={classes.questionContainer}>
+    <section className={classes.questionBox} aria-label="Frage der Auswahlebene und Beschreibung">
+      <header className={classes.questionContainer}>
         <h1 className={classes.questionText}>
           {documentQueue.getStepDetail(activeStep.self, StepDetail.question)}
         </h1>
-      </div>
+      </header>
       <p className={classes.explanationText}>
         {documentQueue.getStepDetail(activeStep.self, StepDetail.explanation)}
       </p>

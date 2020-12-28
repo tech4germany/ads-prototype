@@ -241,21 +241,14 @@ export default function JourneySelection() {
 
   else {
     return (
-      <div>
-        <ul
-          className={classes.selectionList}
-          role="list"
-          id="answer-list"
-        >
+      <section aria-label="Auswahlbereich möglicher Antworten">
+        <ul className={classes.selectionList} id="answer-list">
           {documentQueue.getEdges(activeStep.self).map((label, index) => {
             const infoTextisSet = documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.info_text)
             const selectionIcon = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
             return (
               <li className={classes.itemContainer} key={index}>
-                <div className={classes.itemContent}
-                  onMouseOver={() => setDisplayHover(label)}
-                  onMouseOut={() => setDisplayHover(null)}
-                >
+                <div className={classes.itemContent}>
                   <div className={classes.buttonGroup}>
                     <button
                       id={label}
@@ -264,23 +257,25 @@ export default function JourneySelection() {
                       type="button"
                       role="button"
                       aria-live="polite"
-                      aria-label={"Auswahl von " + label}
+                      aria-label={"Auswahl von " + label + " bestätigen"}
                       onKeyDown={(event) => handleKeyDown(event, label)}
                       onClick={(event) => handleClickSelection(event, label)}
+                      onMouseOver={() => setDisplayHover(label)}
+                      onMouseOut={() => setDisplayHover(null)}
                     >
-                        {
-                          selectionIcon?
-                          <span className={classes.iconContainer}>
-                            <img className={classes.icon} src={selectionIcon}/>
-                          </span>:
-                          <span className={classes.iconContainerPlaceholder}></span>
-                        }
+                      {
+                        selectionIcon?
+                        <div className={classes.iconContainer}>
+                          <img className={classes.icon} src={selectionIcon}/>
+                        </div>:
+                        <div className={classes.iconContainerPlaceholder}></div>
+                      }
 
-                      <span className={classes.textContainer}>
-                        <p className={classes.text}>
+                      <div className={classes.textContainer}>
+                        <span className={classes.text}>
                           {wrap(label)}
-                        </p>
-                      </span>
+                        </span>
+                      </div>
 
                     </button>
 
@@ -304,12 +299,12 @@ export default function JourneySelection() {
                     </div>
                   </div>
                 </div>
-                <div className={classes.buttonStripe}></div>
+                <canvas className={classes.buttonStripe}></canvas>
               </li>
             );
           })}
       </ul>
-    </div>
+    </section>
     )
   }
 }

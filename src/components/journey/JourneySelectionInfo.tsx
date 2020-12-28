@@ -121,7 +121,7 @@ export default function JourneySelectionInfoText() {
   const current_label = infoDisplay.retrieveActiveLabel()
 
   return (
-    <div className={classes.selectionInfoBox}>
+    <section className={classes.selectionInfoBox} aria-label={"Informationsbereich zu getroffener Auswahl: infoDisplay.retrieveActiveLabel()"}>
       <div
         className={classes.infoContainer}
         ref={setFocus}
@@ -132,9 +132,9 @@ export default function JourneySelectionInfoText() {
         <div className={classes.infoContent}>
           <div className={classes.infoCard}>
             <div className={classes.headerRow}>
-              <div className={classes.infoHeader}>
+              <header className={classes.infoHeader}>
                 <h2 className={classes.infoHeaderText}>{infoDisplay.retrieveActiveLabel()}</h2>
-              </div>
+              </header>
               <button
                 id="exit button"
                 className={classes.exitButton}
@@ -157,11 +157,9 @@ export default function JourneySelectionInfoText() {
               }
             </p>
           </div>
-
         </div>
-
-        <div className={classes.infoStripe}></div>
+        <canvas className={classes.infoStripe}></canvas>
       </div>
-    </div>
+    </section>
   )
 }
