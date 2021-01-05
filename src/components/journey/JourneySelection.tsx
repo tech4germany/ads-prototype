@@ -287,6 +287,7 @@ export default function JourneySelection() {
                             type="button"
                             title={"Info zu " + label + " anzeigen"}
                             aria-label={"Info zu " + label + " anzeigen"}
+                            aria-haspopup="dialog"
                             onClick={(event) => handleClickInfo(event, label)}
                             onKeyDown={(event) => handleKeyDownInfo(event, label)}
                           >
