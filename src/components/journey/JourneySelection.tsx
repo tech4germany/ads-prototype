@@ -254,6 +254,7 @@ export default function JourneySelection() {
                       id={label}
                       className={classes.selectionButton}
                       type="button"
+                      title={"Auswahl von " + label + " bestätigen"}
                       aria-label={"Auswahl von " + label + " bestätigen"}
                       aria-controls="question-header"
                       onKeyDown={(event) => handleKeyDown(event, label)}
@@ -284,6 +285,7 @@ export default function JourneySelection() {
                             id={"info-selector " + label}
                             className={classes.infoButton}
                             type="button"
+                            title={"Info zu " + label + " anzeigen"}
                             aria-label={"Info zu " + label + " anzeigen"}
                             onClick={(event) => handleClickInfo(event, label)}
                             onKeyDown={(event) => handleKeyDownInfo(event, label)}

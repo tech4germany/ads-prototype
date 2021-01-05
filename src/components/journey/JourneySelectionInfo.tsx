@@ -136,7 +136,7 @@ export default function JourneySelectionInfoText() {
               <button
                 id="exit button"
                 className={classes.exitButton}
-                title="Informationstext schließen"
+                title="Rückkehr zum Auswahlbereich"
                 type="button"
                 aria-label="Rückkehr zum Auswahlbereich"
                 onKeyDown={handleKeyDown}
