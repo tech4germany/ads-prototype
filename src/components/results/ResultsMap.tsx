@@ -92,7 +92,8 @@ export default function ResultMap() {
   const classes = useStyles();
 
   return (
-    <section className={classes.mapSpace} aria-label="Informationen für Beratungsstellensuche">
+    <section className={classes.mapSpace}
+      aria-label="Informationen für Beratungsstellensuche"
       <div className={classes.mapContainer}>
         <div className={classes.mapContent}>
           <header className={classes.mapHeaderContainer} aria-hidden="true">
