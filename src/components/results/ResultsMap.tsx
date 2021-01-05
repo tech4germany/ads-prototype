@@ -14,8 +14,8 @@ const useStyles = makeStyles((theme) => ({
   mapHeaderContainer: {
     marginTop: "20px",
     marginBottom: "8px",
-    marginLeft: "38px",
-    marginRight: "38px"
+    marginLeft: "30px",
+    marginRight: "30px"
   },
   mapHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     marginBottom: "20px",
-    marginLeft: "38px",
-    marginRight: "38px",
+    marginLeft: "30px",
+    marginRight: "30px",
     maxWidth: "268px"
   },
   mapInfoText: {
