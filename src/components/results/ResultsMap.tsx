@@ -93,7 +93,7 @@ export default function ResultMap() {
 
   return (
     <section className={classes.mapSpace}
-      aria-label="Informationen für Beratungsstellensuche"
+      aria-label="Informationen für Beratungsstellensuche">
       <div className={classes.mapContainer}>
         <div className={classes.mapContent}>
           <header className={classes.mapHeaderContainer} aria-hidden="true">
