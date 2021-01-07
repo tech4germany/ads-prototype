@@ -60,9 +60,10 @@ export function BackButton() {
     return(
         <div className={classes.arrowContainer}>
           <KeyboardArrowLeft
-            role="Navigation"
+            role="navigation"
             tabIndex={0}
             aria-label="Zurück"
+            aria-hidden="false"
             onClick={handleClick}
             onKeyDown={(e) => {if (e.keyCode === 13 || e.keyCode === 32) {handleClick()}}}
             className={classes.arrow}

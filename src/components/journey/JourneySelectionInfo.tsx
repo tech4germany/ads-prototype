@@ -126,6 +126,7 @@ export default function JourneySelectionInfoText() {
         className={classes.infoContainer}
         ref={setFocus}
         role="dialog"
+        aria-label={"Informationen zu getroffener Auswahl:" + infoDisplay.retrieveActiveLabel()}
         >
         <div className={classes.infoContent}>
           <div className={classes.infoCard}>
