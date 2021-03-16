@@ -110,7 +110,7 @@ export default function ResultContact() {
             <h3 className={classes.contactHeaderText}>Kontakt zu uns</h3>
           </header>
           <div className={classes.contactInfoContainer}>
-            <p className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an:
+            <p className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an:&nbsp;
               <a
                 className={classes.emailLink}
                 href={"mailto:beratung@ads.bund.de"}
