@@ -27,7 +27,7 @@ export default function NavBar() {
       <AppBar tabIndex={0} position="static" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
         <Link href="/">
-            <img className={classes.logo} src={logo} alt={"empty"}/>
+            <img className={classes.logo} src={logo} alt={""}/>
         </Link>
         </Toolbar>
       </AppBar>

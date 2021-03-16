@@ -146,7 +146,7 @@ export default function JourneySelectionInfoText() {
                 onKeyDown={handleKeyDown}
                 onClick={handleClick}
               >
-                <img className={classes.exitIcon} src={exitIcon} alt={"empty"}/>
+                <img className={classes.exitIcon} src={exitIcon} alt={""}/>
               </button>
             </div>
             <p className={classes.infoText}>
