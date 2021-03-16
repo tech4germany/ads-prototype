@@ -54,11 +54,9 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
         backgroundColor: colorMain["100"],
         textDecoration: "underline",
-        boxShadow: "inset 0 0 0 1px currentColor"
       },
       "&:focus": {
         textDecoration: "underline",
-        boxShadow: "inset 0 0 0 1px currentColor"
       }
     }
   },
