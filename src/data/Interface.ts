@@ -25,7 +25,8 @@ import {
   NonDefaultSpecsLayout,
   EdgeDetail,
   DocumentQueueLayout,
-  ResultFeatureType } from "data/customTypes"
+  ResultFeatureType
+} from "data/customTypes"
 
 // collect all documents
 let allDocuments: DocumentQueueLayout = [
@@ -140,15 +141,22 @@ export function getResultMaterials(ids: Array<number> | undefined): Array<Materi
 }
 
 export function getResultAdditionalText(ids: Array<number> | undefined): string | null {
-  let add_text: string | null=null;
-  if (typeof ids === "undefined") { return add_text}
+  let add_text: Array<string>=[];
+  if (typeof ids === "undefined") { return null}
   for (const val of ids) {
     let _result: NonDefaultResultContentLayout = non_default_result_content.filter(function(element) {
       return element.identifier === val
     })[0]
       if (typeof _result["additional_content"]["add_text"] !== "undefined") {
-        add_text = _result["additional_content"]["add_text"]
+        add_text.push(_result["additional_content"]["add_text"])
       }
   }
-  return add_text
+
+  if (add_text.length === 1) {return add_text[0]}
+  if (add_text.length === 0) {return null}
+  if (add_text.length > 1) {
+    console.log("this should not be the case")
+    return add_text[0]
+  }
+  return null
 }
