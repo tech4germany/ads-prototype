@@ -129,7 +129,7 @@ export default function ResultsTemplates() {
                   >
                     <img className={classes.downloadIcon}
                       src={downloadIcon}
-                      alt={"Icon zeigt ein generisches Dokument und ist einen Link engebettet, der den Download des Dokuments einleitet."}
+                      alt={""}
                     />
                     <span className={classes.downloadTextContainer}>
                       <span className={classes.downloadTitleText}>Formulierungshilfe</span>
