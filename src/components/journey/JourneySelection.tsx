@@ -8,7 +8,6 @@ import { ShowInfo } from "states/showInfoState"
 import { EdgeDetail, UpdateType } from "data/customTypes"
 import { provideSelectionIcon } from "assets/icons/ProvideIcons"
 import JourneySelectionInfo from "components/journey/JourneySelectionInfo"
-import clsx from 'clsx'
 
 const wrap = (s: string) => s.replace(
         /(?![^\n]{1,20}$)([^\n]{1,20})\//g, '$1\/\n',
@@ -92,13 +91,13 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     height: "100%",
-    maxWidth: "200px"
-  },
-  text: {
+    maxWidth: "200px",
     whiteSpace: "pre-wrap",
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "18px",
     textAlign: "left"
+  },
+  text: {
   },
   infoIconContainer: {
     display: "flex",
@@ -256,7 +255,6 @@ export default function JourneySelection() {
                       className={classes.selectionButton}
                       title="Auswahl bestätigen"
                       type="button"
-                      role="button"
                       aria-live="polite"
                       aria-label={"Auswahl von " + label + " bestätigen"}
                       onKeyDown={(event) => handleKeyDown(event, label)}
@@ -266,17 +264,15 @@ export default function JourneySelection() {
                     >
                       {
                         selectionIcon?
-                        <div className={classes.iconContainer}>
-                          <img className={classes.icon} src={selectionIcon}/>
-                        </div>:
-                        <div className={classes.iconContainerPlaceholder}></div>
+                        <span className={classes.iconContainer}>
+                          <img className={classes.icon} src={selectionIcon} alt={""}/>
+                        </span>:
+                        <span className={classes.iconContainerPlaceholder}></span>
                       }
 
-                      <div className={classes.textContainer}>
-                        <span className={classes.text}>
+                      <span className={classes.textContainer}>
                           {wrap(label)}
-                        </span>
-                      </div>
+                      </span>
 
                     </button>
 
@@ -288,7 +284,6 @@ export default function JourneySelection() {
                             className={classes.infoButton}
                             title="Informationstext anzeigen"
                             type="button"
-                            role="button"
                             aria-controls="answer-info"
                             aria-label={"Info zu " + label + " anzeigen"}
                             onClick={(event) => handleClickInfo(event, label)}

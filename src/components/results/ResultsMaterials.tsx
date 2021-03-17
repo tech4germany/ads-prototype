@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import { ResultSpecs } from "states/resultState"
 import { getResultMaterials } from "data/Interface"
 import downloadIcon from "assets/icons/Dokument.svg"
-import { colorMain } from "components/styleguide"
 
 const useStyles = makeStyles((theme) => ({
   materialsBox: {
@@ -97,13 +96,6 @@ export default function ResultsMaterials() {
   let resultSpecs = ResultSpecs.useContainer()
   let materials = getResultMaterials(resultSpecs.self.non_default_identifier)
 
-  let handleClick = (link: string) => {
-    return function(e: React.SyntheticEvent) {
-      e.preventDefault()
-      window.location.href=link
-    }
-  }
-
   return (
     <section className={classes.materialsBox} aria-label="Informationsmaterial">
 
@@ -131,7 +123,7 @@ export default function ResultsMaterials() {
                     title="Informationsmaterial herunterladen"
                     aria-label="Informationsmaterial herunterladen"
                   >
-                    <img className={classes.downloadIcon} src={downloadIcon}/>
+                    <img className={classes.downloadIcon} src={downloadIcon} alt={""}/>
                     <span className={classes.downloadTextContainer}>
                       <span className={classes.downloadTitleText}>{label.name}</span>
                       <span className={classes.downloadSubtitleText}>Download</span>

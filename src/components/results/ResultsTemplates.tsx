@@ -93,13 +93,6 @@ export default function ResultsTemplates() {
   let resultSpecs = ResultSpecs.useContainer()
   let list = getResultTemplates(resultSpecs.self.non_default_identifier)
 
-  let handleClick = (link: string) => {
-    return function(e: React.SyntheticEvent) {
-      e.preventDefault()
-      window.location.href=link
-    }
-  }
-
   return (
     <section className={classes.templatesBox} aria-label="Formulierungshilfen und Ausfüllhinweise">
 
@@ -147,7 +140,7 @@ export default function ResultsTemplates() {
                     title="Ausfüllhinweis herunterladen"
                     aria-label="Ausfüllhinweis herunterladen"
                   >
-                    <img className={classes.downloadIcon} src={downloadIcon} />
+                    <img className={classes.downloadIcon} src={downloadIcon} alt={""}/>
                     <span className={classes.downloadTextContainer}>
                       <span className={classes.downloadTitleText}>Ausfüllhinweis</span>
                       <span className={classes.downloadSubtitleText}>Download</span>

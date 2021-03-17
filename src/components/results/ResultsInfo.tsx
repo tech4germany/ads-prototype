@@ -66,7 +66,7 @@ export default function ResultInfo() {
       </header>
 
       <div className={classes.subHeaderContainer}>
-        <h2 className={classes.subHeaderText}>Rechtliche Einordnung:</h2>
+        <h2 className={classaes.subHeaderText}>Rechtliche Einordnung:</h2>
       </div>
 
       <div className={classes.infoTextContainer}>
