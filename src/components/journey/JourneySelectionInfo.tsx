@@ -121,12 +121,13 @@ export default function JourneySelectionInfoText() {
   const current_label = infoDisplay.retrieveActiveLabel()
 
   return (
-    <section className={classes.selectionInfoBox} aria-label={"Informationsbereich zu getroffener Auswahl: infoDisplay.retrieveActiveLabel()"}>
+    <section className={classes.selectionInfoBox}>
       <div
         className={classes.infoContainer}
         ref={setFocus}
         tabIndex={0}
         role="dialog"
+        aria-label={"Informationsbereich zu getroffener Auswahl: infoDisplay.retrieveActiveLabel()"}
         id="answer-info" aria-live="polite"
         >
         <div className={classes.infoContent}>

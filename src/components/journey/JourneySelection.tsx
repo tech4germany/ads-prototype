@@ -282,7 +282,7 @@ export default function JourneySelection() {
                           <button
                             id={"info-selector-" + label}
                             className={classes.infoButton}
-                            title="Informationstext anzeigen"
+                            title={"Informationstext zu " + label + " anzeigen"}
                             type="button"
                             aria-controls="answer-info"
                             aria-label={"Info zu " + label + " anzeigen"}
