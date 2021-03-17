@@ -92,30 +92,16 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     height: "100%",
     maxWidth: "200px",
-    whiteSpace: "pre-wrap",
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "18px",
-    textAlign: "left"
-  },
-  text: {
+    textAlign: "left",
+    hyphens: "auto"
   },
   infoIconContainer: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
     position: "absolute"
-  },
-  infoIcon: {
-    backgroundColor: colorMain["100"],
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "68px",
-    height: "30px",
-    borderRadius: "30px",
-    margin: "10px",
-    cursor: "pointer",
   },
   infoButton: {
     backgroundColor: colorMain["115"],
@@ -125,8 +111,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     width: "68px",
     height: "30px",
-    borderRadius: "30px",
     margin: "10px",
+    borderRadius: "30px",
     cursor: "pointer",
     border: "solid 0px",
     '@media (hover: hover)': {
@@ -271,7 +257,7 @@ export default function JourneySelection() {
                       }
 
                       <span className={classes.textContainer}>
-                          {wrap(label)}
+                          {label}
                       </span>
 
                     </button>
