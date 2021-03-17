@@ -2,7 +2,7 @@
   {
     "identifier": 0,
     "features": {
-      "merkmal": ["Behinderung/Chronische Krankheiten"],
+      "merkmal": ["Behinderung / Chronische Krankheiten"],
       "lebensbereich": [
         "Bildungsbereich"
       ],
@@ -12,7 +12,7 @@
   {
     "identifier": 1,
     "features": {
-      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
+      "merkmal": ["Rassistische Diskriminierung / Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
       "lebensbereich": [
         "Ämter und Behörden",
@@ -26,7 +26,7 @@
   {
     "identifier": 2,
     "features": {
-      "merkmal": ["Behinderung/Chronische Krankheiten"],
+      "merkmal": ["Behinderung / Chronische Krankheiten"],
       "lebensbereich": [
         "Ämter und Behörden",
         "Justiz und Polizei",
@@ -44,7 +44,7 @@
   {
     "identifier": 3,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
+      "merkmal": ["Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"],
       "merkmal_gender_detail": [
         "Trans*",
         "Inter*",
@@ -101,14 +101,14 @@
   {
     "identifier": 11,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
+      "merkmal": ["Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Sexuelle Belästigung"]
     }
   },
   {
     "identifier": 12,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
+      "merkmal": ["Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Sexuelle Belästigung"],
       "lebensbereich": ["Bildungsbereich"],
       "lebensbereich_bildung_detail": [
@@ -121,7 +121,7 @@
   {
     "identifier": 13,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
+      "merkmal": ["Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"],
       "merkmal_gender_detail": [
         "Trans*",
         "Inter*"
@@ -131,7 +131,7 @@
   {
     "identifier": 14,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
+      "merkmal": ["Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Trans*"],
       "lebensbereich": ["Bildungsbereich"],
       "lebensbereich_bildung_detail": [
@@ -145,7 +145,7 @@
     "identifier": 15,
     "features": {
       "merkmal": [
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
         "Sexuelle Identität"
       ],
       "merkmal_gender_detail": [
@@ -165,7 +165,7 @@
   {
     "identifier": 17,
     "features": {
-      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
+      "merkmal": ["Rassistische Diskriminierung / Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
       "lebensbereich": ["Arbeitsleben"]
     }
@@ -173,7 +173,7 @@
   {
     "identifier": 18,
     "features": {
-      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
+      "merkmal": ["Rassistische Diskriminierung / Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
       "lebensbereich": ["Bildungsbereich"],
       "lebensbereich_bildung_detail": ["Hochschule"]
@@ -182,7 +182,7 @@
   {
     "identifier": 19,
     "features": {
-      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
+      "merkmal": ["Rassistische Diskriminierung / Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Äußere Merkmale"],
       "lebensbereich": ["Öffentlichkeit und Freizeit"]
     }
@@ -205,12 +205,12 @@
     "identifier": 21,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"
       ],
       "lebensbereich":["Arbeitsleben"],
       "lebensbereich_arbeit_detail": ["Bei der Bewerbung"]
@@ -220,12 +220,12 @@
     "identifier": 22,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"
       ],
       "lebensbereich":["Arbeitsleben"],
       "lebensbereich_arbeit_detail": ["Im Beschäftigungsverhältnis"]
@@ -235,12 +235,12 @@
     "identifier": 23,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"
       ],
       "lebensbereich":["Arbeitsleben"],
       "lebensbereich_arbeit_detail": ["Kündigung/Beendigung"]
@@ -250,12 +250,12 @@
     "identifier": 24,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"
       ],
       "merkmal_gender_detail": [
         "Trans*",
@@ -281,7 +281,7 @@
   {
     "identifier": 25,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
+      "merkmal": ["Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Sexuelle Belästigung"],
       "lebensbereich":["Arbeitsleben"]
     }
@@ -316,7 +316,7 @@
   {
     "identifier": 30,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
+      "merkmal": ["Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Trans*"],
       "lebensbereich": ["Arbeitsleben"]
     }
@@ -324,7 +324,7 @@
   {
     "identifier": 31,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
+      "merkmal": ["Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Trans*"],
       "lebensbereich": ["Gesundheit und Pflege"],
       "lebensbereich_gesundheit_detail": ["Arztbesuch"]
@@ -333,7 +333,7 @@
   {
     "identifier": 32,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
+      "merkmal": ["Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Inter*"],
       "lebensbereich": ["Gesundheit und Pflege"],
       "lebensbereich_gesundheit_detail": ["Arztbesuch"]
@@ -342,7 +342,7 @@
   {
     "identifier": 33,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
+      "merkmal": ["Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"],
       "merkmal_gender_detail": ["Frau/Mann"],
       "lebensbereich": ["Arbeitsleben"],
       "lebensbereich_gesundheit_detail": ["Im Beschäftigungsverhältnis"]
@@ -351,7 +351,7 @@
   {
     "identifier": 34,
     "features": {
-      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
+      "merkmal": ["Rassistische Diskriminierung / Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Äußere Merkmale"],
       "lebensbereich": ["Justiz und Polizei"]
     }
@@ -359,7 +359,7 @@
   {
     "identifier": 35,
     "features": {
-      "merkmal": ["Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"],
+      "merkmal": ["Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"],
       "merkmal_gender_detail": [
         "Trans*",
         "Inter*",
@@ -371,12 +371,12 @@
     "identifier": 36,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"
       ],
       "lebensbereich":["Arbeitsleben"]
     }
@@ -385,12 +385,12 @@
     "identifier": 37,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
         "Sonstiges"
       ],
       "merkmal_gender_detail": [
@@ -423,11 +423,11 @@
     "identifier": 38,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
         "Sexuelle Identität",
         "Sozialer Status"
       ],
@@ -440,12 +440,12 @@
     "identifier": 39,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
         "Sozialer Status"
       ],
       "lebensbereich":["Bildungsbereich"],
@@ -459,12 +459,12 @@
     "identifier": 40,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
         "Sozialer Status"
       ],
       "lebensbereich":["Gesundheit und Pflege"],
@@ -478,12 +478,12 @@
     "identifier": 41,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
         "Sozialer Status"
       ],
       "lebensbereich":["Öffentlichkeit und Freizeit"]
@@ -493,12 +493,12 @@
     "identifier": 42,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
         "Sozialer Status"
       ],
       "lebensbereich":["Internet, Medien und Werbung"]
@@ -547,7 +547,7 @@
     "identifier": 46,
     "features": {
       "merkmal": [
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
         "Religion/Weltanschauung"
       ],
       "merkmal_gender_detail": ["Sexuelle Belästigung"],
@@ -572,12 +572,12 @@
     "identifier": 47,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
         "Sozialer Status"
       ],
       "lebensbereich":[
@@ -626,7 +626,7 @@
   {
     "identifier": 52,
     "features": {
-      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
+      "merkmal": ["Rassistische Diskriminierung / Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
       "lebensbereich":["Ämter und Behörden"],
       "lebensbereich_administration_detail": ["Arbeitsagentur/Jobcenter"]
@@ -636,12 +636,12 @@
     "identifier": 53,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
         "Sonstiges"
       ],
       "merkmal_gender_detail": [
@@ -663,7 +663,7 @@
   {
     "identifier": 54,
     "features": {
-      "merkmal": ["Rassistische Diskriminierung/Ethnische Herkunft"],
+      "merkmal": ["Rassistische Diskriminierung / Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
       "lebensbereich": ["Ämter und Behördem"],
       "lebensbereich_bildung_detail": ["Sonstiges"]
@@ -673,12 +673,12 @@
     "identifier": 55,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
         "Sonstiges"
       ],
       "merkmal_gender_detail": [
@@ -708,7 +708,7 @@
     "identifier": 56,
     "features": {
       "merkmal": [
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung"
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"
       ],
       "merkmal_gender_detail": [
         "Sexuelle Belästigung"
@@ -758,11 +758,11 @@
     "identifier": 58,
     "features": {
       "merkmal": [
-        "Rassistische Diskriminierung/Ethnische Herkunft",
+        "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
-        "Behinderung/Chronische Krankheiten",
+        "Behinderung / Chronische Krankheiten",
         "Alter",
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung",
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
         "Sexuelle Identität",
         "Sozialer Status"
       ],

@@ -6,7 +6,7 @@
     "visible": false,
     "index": 0,
     "question": "Worauf genau bezog sich die Diskriminierung?",
-    "explanation": "Sie haben das Merkmal Geschlecht/Geschlechtsidentität/Sexuelle Belästigung ausgewählt.",
+    "explanation": "Sie haben das Merkmal Geschlecht / Geschlechtsidentität / Sexuelle Belästigung ausgewählt.",
     "edges": {
         "Sexuelle Belästigung": {
             "status":"agg",

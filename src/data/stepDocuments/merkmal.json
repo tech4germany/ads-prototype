@@ -8,7 +8,7 @@
     "question":"Grund der Diskriminierung",
     "explanation":"Wir benötigen ein paar Angaben von Ihnen, um Ihren Fall richtig einordnen zu können. Welche Ursache vermuten Sie hinter der Diskriminierung? Aus welchem Grund bzw. persönlichen Merkmal wurden Sie diskriminiert?",
     "edges": {
-        "Rassistische Diskriminierung/Ethnische Herkunft": {
+        "Rassistische Diskriminierung / Ethnische Herkunft": {
             "status":"agg",
             "description": null,
             "next_node": "merkmal_ethnisch_detail",
@@ -24,7 +24,7 @@
             "icon_hover": "religion_weltanschauung_hover",
             "info_text": "Erfasst werden die Religionszugehörigkeit sowie gesellschaftliche Zuschreibungen, die mit einer bestimmten Religion verbunden werden. Typische Fälle sind Benachteiligungen auf Grund des Tragens von religiösen Symbolen sowie Benachteiligung bei der Ausübung des Glaubens wie z.B. Beten am Arbeitsplatz. Überzeugungen, die die persönliche Identität sowie das eigene Selbstverständnis grundlegend prägen und sich auf alle Lebensbereiche einer Person auswirken. Es handelt sich um Überzeugungen, die entweder gar nicht oder zumindest nicht beliebig abänderbar sind. Nicht erfasst sind Hobbies, persönliche Neigungen oder politische Anschauungen."
         },
-        "Behinderung/Chronische Krankheiten": {
+        "Behinderung / Chronische Krankheiten": {
             "status": "agg",
             "description": null,
             "next_node": null,
@@ -48,7 +48,7 @@
             "icon_hover": "sexual_identity_hover",
             "info_text": "Der Begriff ist umfassend zu verstehen. Erfasst sind nicht nur die sexuelle Orientierung wie schwul, lesbisch, bisexuell oder heterosexuell, sondern auch das individuelle Empfinden, das von gesellschaftlich gesetzten Normen abweichen kann."
         },
-        "Geschlecht/Geschlechtsidentität/Sexuelle Belästigung": {
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung": {
             "status": "agg",
             "description": null,
             "next_node": "merkmal_gender_detail",
