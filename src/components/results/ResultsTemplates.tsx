@@ -72,10 +72,12 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     '@media (hover: hover)': {
       "&:hover": {
-        fontSize: "20px",
+        textDecoration: "underline",
+        textDecorationColor: "black"
       },
       "&:focus": {
-        fontSize: "20px",
+        textDecoration: "underline",
+        textDecorationColor: "black"
       }
     }
   },
@@ -97,7 +99,7 @@ export default function ResultsTemplates() {
     <section className={classes.templatesBox} aria-label="Formulierungshilfen und Ausfüllhinweise">
 
       <header className={classes.subHeaderContainer} aria-hidden="true">
-        <h2 className={classes.subHeaderText}>Formulierungs&shy;hilfen und Ausfüllhinweise:</h2>
+        <h2 className={classes.subHeaderText}>Formulierungshilfen und Ausfüllhinweise:</h2>
       </header>
 
       <p className={classes.infoText}>

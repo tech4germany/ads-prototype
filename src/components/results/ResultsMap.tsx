@@ -47,12 +47,12 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "22px",
     '@media (hover: hover)': {
       "&:hover": {
-        borderBottom: "3px solid #fff",
-        fontSize: "18px",
+        textDecoration: "underline",
+        textDecorationColor: "black"
       },
       "&:focus": {
-        borderBottom: "3px solid #fff",
-        fontSize: "18px",
+        textDecoration: "underline",
+        textDecorationColor: "black"
       }
     }
   },

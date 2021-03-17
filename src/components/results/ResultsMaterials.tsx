@@ -66,10 +66,12 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     '@media (hover: hover)': {
       "&:hover": {
-        fontSize: "20px",
+        textDecoration: "underline",
+        textDecorationColor: "black"
       },
       "&:focus": {
-        fontSize: "20px",
+        textDecoration: "underline",
+        textDecorationColor: "black"
       }
     }
   },
