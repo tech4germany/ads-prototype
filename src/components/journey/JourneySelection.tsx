@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     width: "68px",
-    height: "30px",
+    height: "24px",
     margin: "10px",
     borderRadius: "30px",
     cursor: "pointer",
@@ -261,7 +261,6 @@ export default function JourneySelection() {
                       </span>
 
                     </button>
-
                     <div className={classes.infoIconContainer}>
                       {
                         infoTextisSet?
