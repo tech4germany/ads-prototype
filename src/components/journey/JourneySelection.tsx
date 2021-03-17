@@ -196,7 +196,7 @@ export default function JourneySelection() {
   useLayoutEffect(() => {
     let previous_choice = infoDisplay.retrievePreviousLabel()
     if (previous_choice){
-      const element = document.getElementById(previous_choice)
+      const element = document.getElementById("info-selector-" + previous_choice)
       if (element) {element.focus()}
     }
   }, [infoDisplay])
@@ -253,7 +253,7 @@ export default function JourneySelection() {
                     <button
                       id={label}
                       className={classes.selectionButton}
-                      title="Auswahl bestätigen"
+                      title={label + " auswählen"}
                       type="button"
                       aria-live="polite"
                       aria-label={"Auswahl von " + label + " bestätigen"}
@@ -280,7 +280,7 @@ export default function JourneySelection() {
                       {
                         infoTextisSet?
                           <button
-                            id={"info-selector " + label}
+                            id={"info-selector-" + label}
                             className={classes.infoButton}
                             title="Informationstext anzeigen"
                             type="button"
