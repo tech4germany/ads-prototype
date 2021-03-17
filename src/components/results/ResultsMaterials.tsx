@@ -100,7 +100,7 @@ export default function ResultsMaterials() {
     <section className={classes.materialsBox} aria-label="Informationsmaterial">
 
       <header className={classes.subHeaderContainer} aria-hidden="true">
-        <h2 className={classes.subHeaderText}>Informationsmaterial:</h2>
+        <h2 className={classes.subHeaderText}>Informations&shy;material:</h2>
       </header>
 
       <p className={classes.infoText}>

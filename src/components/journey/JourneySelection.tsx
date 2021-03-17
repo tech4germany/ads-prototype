@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     marginLeft: "20px",
     marginRight: "20px",
-    "@media (max-width: 340px)": {
+    "@media (max-width: 400px)": {
       minWidth: "20px",
       marginLeft: "0px",
       marginRight: "0px"
@@ -75,14 +75,14 @@ const useStyles = makeStyles((theme) => ({
   },
   iconContainerPlaceholder: {
     minWidth: "60px",
-    "@media (max-width: 340px)": {
+    "@media (max-width: 400px)": {
       minWidth: "20px",
     }
   },
   icon: {
     width: "60px",
     height: "60px",
-    "@media (max-width: 340px)": {
+    "@media (max-width: 400px)": {
       display: "none",
     }
   },
@@ -94,8 +94,11 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "200px",
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "18px",
+    hyphens: "auto",
     textAlign: "left",
-    hyphens: "auto"
+    "@media (max-width: 420px)": {
+      maxWidth: "160px",
+    }
   },
   infoIconContainer: {
     display: "flex",

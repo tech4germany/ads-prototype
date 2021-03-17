@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   headerContainer: {
     marginBottom: "50px",
-    width: "100%"
+    width: "100%",
   },
   headerText: {
     fontFamily: "BundesSansWeb-Bold",
@@ -24,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
     margin: "0px",
     fontWeight: "normal",
     width: "100%",
+    textAlign: "left",
+    hyphen: "auto"
   },
   subHeaderContainer: {
     marginBottom: "32px",
@@ -35,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "0px",
     fontWeight: "normal",
     width: "100%",
+    hyphen: "auto"
   },
   infoTextContainer: {
     marginBottom: "18px",
@@ -50,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
     whiteSpace: "pre-wrap",
     margin: "0px",
     width: "100%",
+    hyphen: "auto"
   }
 }));
 
@@ -62,7 +66,7 @@ export default function ResultInfo() {
     <section className={classes.infoBox} aria-label="Rechtliche Ersteinschätzung zu Ihrem Fall">
 
       <header className={classes.headerContainer} aria-hidden="true">
-        <h1 className={classes.headerText}>Die Ersteinschätzung Ihres Sachverhalts</h1>
+        <h1 className={classes.headerText}>Die Ersteinschät&shy;zung Ihres Sachverhalts</h1>
       </header>
 
       <div className={classes.subHeaderContainer}>
