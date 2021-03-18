@@ -39,20 +39,19 @@ export default function JourneyQuestion() {
   let activeStep = ActiveStep.useContainer()
 
   return (
-    <section
+    <header
       className={classes.questionBox}
       aria-label="Frage der Auswahlebene und Beschreibung"
-      aria-live="polite"
       id="question-header"
     >
-      <header className={classes.questionContainer}>
-        <h1 className={classes.questionText}>
+      <div className={classes.questionContainer}>
+        <h1 className={classes.questionText} aria-live="polite" aria-atomic="true">
           {documentQueue.getStepDetail(activeStep.self, StepDetail.question)}
         </h1>
-      </header>
-      <p className={classes.explanationText} id="question-explanation" aria-live="polite">
+      </div>
+      <p className={classes.explanationText} id="question-explanation" aria-live="polite" aria-atomic="true">
         {documentQueue.getStepDetail(activeStep.self, StepDetail.explanation)}
       </p>
-    </section>
+    </header>
 );
 }
