@@ -121,21 +121,12 @@ export default function JourneySelectionInfoText() {
   const current_label = infoDisplay.retrieveActiveLabel()
 
   return (
-<<<<<<< HEAD
-    <section className={classes.selectionInfoBox}>
-=======
     <section className={classes.selectionInfoBox} aria-label={"Informationsbereich zu getroffener Auswahl:" + infoDisplay.retrieveActiveLabel()}>
->>>>>>> master
       <div
         className={classes.infoContainer}
         ref={setFocus}
         role="dialog"
-<<<<<<< HEAD
-        aria-label={"Informationsbereich zu getroffener Auswahl: infoDisplay.retrieveActiveLabel()"}
-        id="answer-info" aria-live="polite"
-=======
         aria-label={"Informationen zu getroffener Auswahl:" + infoDisplay.retrieveActiveLabel()}
->>>>>>> master
         >
         <div className={classes.infoContent}>
           <div className={classes.infoCard}>
@@ -147,7 +138,6 @@ export default function JourneySelectionInfoText() {
                 id="exit button"
                 className={classes.exitButton}
                 title="Rückkehr zum Auswahlbereich"
-                type="button"
                 aria-label="Rückkehr zum Auswahlbereich"
                 onKeyDown={handleKeyDown}
                 onClick={handleClick}
