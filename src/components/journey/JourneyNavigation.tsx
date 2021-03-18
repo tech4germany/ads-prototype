@@ -37,10 +37,7 @@ export default function JourneyNavigation() {
   const classes = useStyles()
 
   return (
-    <section
-      className={classes.navigationGroup}
-      role="navigation"
-      >
+    <nav className={classes.navigationGroup}>
 
       <Grid item md={4} sm={4} lg={4} xs={4} className={classes.backBox}>
         <BackButton/>
@@ -52,6 +49,6 @@ export default function JourneyNavigation() {
 
       <Grid item md={4} sm={4} lg={4} xs={4} className={classes.placeholderBox}></Grid>
 
-    </section>
+    </nav>
   );
 }
