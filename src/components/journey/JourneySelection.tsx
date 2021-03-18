@@ -184,25 +184,33 @@ export default function JourneySelection() {
     }
   }, [infoDisplay])
 
+  let updateToNextStep = (label: string) => {
+
+    // add selected answers to answer dictionary
+    answers.add(activeDocument.identifier, label)
+
+    // update document queue with selected answer
+    documentQueue.add(activeStep.self, label)
+
+    // update active step
+    activeStep.increment(documentQueue.getVisibilityQueue())
+  }
+
   let handleClickSelection = (e: React.SyntheticEvent, label: string) => {
     if (!(e instanceof KeyboardEvent)) {
-      answers.add(activeDocument.identifier, label)
-      documentQueue.add(activeStep.self, label)
-      activeStep.increment(documentQueue.getVisibilityQueue())
+      updateToNextStep(label)
+    }
+  }
+
+  let handleKeyDown = (e: React.KeyboardEvent, label: string) => {
+    if (e.keyCode === 13) {
+      updateToNextStep(label)
     }
   }
 
   let handleClickInfo = (e: React.SyntheticEvent, label: string) => {
     e.stopPropagation()
     updateInfoDisplay(label)
-  }
-
-  let handleKeyDown = (e: React.KeyboardEvent, label: string) => {
-    if (e.keyCode === 13) {
-      answers.add(activeDocument.identifier, label)
-      documentQueue.add(activeStep.self, label)
-      activeStep.increment(documentQueue.getVisibilityQueue())
-    }
   }
 
   let handleKeyDownInfo = (e: React.KeyboardEvent, label: string) => {

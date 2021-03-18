@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import JourneyNavigation from "components/journey/JourneyNavigation"
@@ -49,31 +49,28 @@ export default function Result() {
   let answers = Answers.useContainer();
   let resultSpecs = ResultSpecs.useContainer();
 
-  useLayoutEffect(() => {
-    resultSpecs.retrieveResultType(answers.self.answers);
-  }, [answers])
+  let result_match = resultSpecs.retrieveResultType(answers.self.answers);
 
   return (
     <div className={classes.resultBox} id="result-page" aria-live="polite">
       <Grid container className={classes.resultSpace}>
-        {
-          resultSpecs.self.profile ?
+
             <div className={classes.infoTemplateSpace}>
-              <ResultsInfo />
+              <ResultsInfo result={result_match} />
               {
-                getResultReferrals(resultSpecs.self.non_default_identifier).length>0?
-                <ResultsReferrals />: null
+                getResultReferrals(result_match.non_default_identifier).length>0?
+                <ResultsReferrals result={result_match}/>: null
               }
               {
-                getResultTemplates(resultSpecs.self.non_default_identifier).length>0?
-                <ResultsTemplates />: null
+                getResultTemplates(result_match.non_default_identifier).length>0?
+                <ResultsTemplates result={result_match}/>: null
               }
               {
-                getResultMaterials(resultSpecs.self.non_default_identifier).length>0?
-                <ResultsMaterials />: null
+                getResultMaterials(result_match.non_default_identifier).length>0?
+                <ResultsMaterials result={result_match}/>: null
               }
-            </div>: null
-        }
+            </div>
+
         <div className={classes.contactMapSpace}>
           <ResultsContact />
           <div className={classes.contactMapSpacer}></div>

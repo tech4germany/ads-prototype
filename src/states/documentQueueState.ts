@@ -1,6 +1,6 @@
 import { createContainer } from 'unstated-next';
 import { useState } from 'react';
-import { DocumentQueueLayout, StepDocumentLayout, EdgeDetail, StepDetail, UpdateType } from "data/customTypes"
+import { DocumentQueueLayout, StepDocumentLayout, EdgeDetail, StepDetail } from "data/customTypes"
 import { initialiseDocQueue, mapLabelToFeature } from "data/Interface"
 
 let initialQueue: DocumentQueueLayout = initialiseDocQueue()
@@ -37,7 +37,6 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
   let add = (activeStep: number, label: string): void => {
     let activeDocument = self[activeStep]
     let _docQueue = [...self]
-
     let newDocumentIdentifier = mapLabelToFeature(activeDocument.identifier, label, EdgeDetail.next_node)
 
     // check if answer requires detail question
@@ -62,7 +61,6 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     if (!remainsAgg) {
       _docQueue = _updateVisibility(_docQueue, "frist", true)
     }
-
     setDocumentQueue(_docQueue)
   }
 
@@ -78,7 +76,6 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
   }
 
   let getStepDetail = (activeStep: number, detail: StepDetail): string | number | boolean => {
-    console.log("here we go again ", activeStep, " detail ", detail)
     let activeDocument: StepDocumentLayout = self[activeStep]
     return activeDocument[detail]
   }

@@ -1,8 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { ResultSpecs } from "states/resultState"
 import { getResultTemplates } from "data/Interface"
 import downloadIcon from "assets/icons/Dokument.svg"
+import { ResultSpecsLayout } from "data/customTypes"
 
 const useStyles = makeStyles((theme) => ({
   templatesBox: {
@@ -90,10 +90,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ResultsTemplates() {
+interface Props {
+  result: ResultSpecsLayout;
+}
+
+export default function ResultsTemplates(props: Props) {
   const classes = useStyles()
-  let resultSpecs = ResultSpecs.useContainer()
-  let list = getResultTemplates(resultSpecs.self.non_default_identifier)
+  let list = getResultTemplates(props.result.non_default_identifier)
 
   return (
     <section className={classes.templatesBox} aria-label="Formulierungshilfen und Ausfüllhinweise">

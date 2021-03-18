@@ -11,15 +11,12 @@ qualifies for AGG support. In that case it re-inserts the frist question into th
 visible document queue.
 
  */
-import React, { useEffect, useLayoutEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import JourneyQuestion from "components/journey/JourneyQuestion";
 import JourneySelection from "components/journey/JourneySelection";
 import JourneyNavigation from "components/journey/JourneyNavigation";
 import { ShowInfo } from "states/showInfoState"
-import { ActiveStep } from "states/activeStepState"
-import { DocumentQueue } from "states/documentQueueState"
-import { Answers } from "states/answerState"
 
 const useStyles = makeStyles((theme) => ({
   stepBox: {
@@ -36,11 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function JourneyStep() {
   const classes = useStyles()
-  let activeStep = ActiveStep.useContainer();
-  let documentQueue = DocumentQueue.useContainer();
-  let answers = Answers.useContainer();
   let infoDisplay = ShowInfo.useContainer()
-  let activeDocument = documentQueue.self[activeStep.self]
 
   return (
       <div className={classes.stepBox}>
@@ -53,7 +46,6 @@ export default function JourneyStep() {
           null:
           <JourneyNavigation />
         }
-
 
       </div>
   );

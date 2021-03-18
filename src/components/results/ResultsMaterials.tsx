@@ -1,8 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { ResultSpecs } from "states/resultState"
 import { getResultMaterials } from "data/Interface"
 import downloadIcon from "assets/icons/Dokument.svg"
+import { ResultSpecsLayout } from "data/customTypes"
 
 const useStyles = makeStyles((theme) => ({
   materialsBox: {
@@ -93,10 +93,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ResultsMaterials() {
+interface Props {
+  result: ResultSpecsLayout;
+}
+
+export default function ResultsMaterials(props: Props) {
   const classes = useStyles()
-  let resultSpecs = ResultSpecs.useContainer()
-  let materials = getResultMaterials(resultSpecs.self.non_default_identifier)
+  let materials = getResultMaterials(props.result.non_default_identifier)
 
   return (
     <section className={classes.materialsBox} aria-label="Informationsmaterial">

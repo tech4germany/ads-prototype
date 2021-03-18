@@ -71,11 +71,11 @@ export function useResultSpecs(initialState: ResultSpecsLayout={}) {
     return result_match
   }
 
-  let retrieveResultType = (answers: AnswersLayout): void => {
+  let retrieveResultType = (answers: AnswersLayout): ResultSpecsLayout => {
     let result_match: ResultSpecsLayout={};
     result_match = retrieveDefaultResult(answers, result_match);
     result_match = checkForNonDefaultResult(answers, result_match)
-    setResultSpecs(result_match)
+    return result_match
   }
 
   // getter functions

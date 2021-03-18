@@ -1,9 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { ResultSpecs } from "states/resultState"
 import { Answers } from "states/answerState"
 import { getResultFeature, getResultAdditionalText } from "data/Interface"
-import { ResultFeatureType } from "data/customTypes"
+import { ResultFeatureType, ResultSpecsLayout } from "data/customTypes"
 
 const useStyles = makeStyles((theme) => ({
   infoBox: {
@@ -57,9 +56,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ResultInfo() {
+interface Props {
+  result: ResultSpecsLayout;
+}
+
+export default function ResultInfo(props: Props) {
   const classes = useStyles()
-  let resultSpecs = ResultSpecs.useContainer()
   let answers = Answers.useContainer();
 
   return (
@@ -82,24 +84,24 @@ export default function ResultInfo() {
 
       <div className={classes.infoTextContainer}>
         <p className={classes.infoText}>
-          {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.agg_text)}
+          {getResultFeature(props.result.default_identifier, ResultFeatureType.agg_text)}
         </p>
       </div>
 
       {
-        getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.frist_text)?
+        getResultFeature(props.result.default_identifier, ResultFeatureType.frist_text)?
         <div className={classes.infoTextContainer}>
           <p className={classes.infoText}>
-            {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.frist_text)}
+            {getResultFeature(props.result.default_identifier, ResultFeatureType.frist_text)}
           </p>
         </div>: null
       }
 
       {
-        getResultAdditionalText(resultSpecs.self.non_default_identifier)?
+        getResultAdditionalText(props.result.non_default_identifier)?
         <div className={classes.infoTextContainer}>
           <p className={classes.infoText}>
-            {getResultAdditionalText(resultSpecs.self.non_default_identifier)}
+            {getResultAdditionalText(props.result.non_default_identifier)}
           </p>
         </div>: null
       }
@@ -116,7 +118,7 @@ export default function ResultInfo() {
 
       <div className={classes.infoTextContainerMargin}>
         <p className={classes.infoText}>
-          {getResultFeature(resultSpecs.self.default_identifier, ResultFeatureType.next_step)}
+          {getResultFeature(props.result.default_identifier, ResultFeatureType.next_step)}
         </p>
       </div>
     </section>

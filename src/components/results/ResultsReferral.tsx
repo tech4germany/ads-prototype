@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { ResultSpecs } from "states/resultState"
 import { getResultReferrals } from "data/Interface"
+import { ResultSpecsLayout } from "data/customTypes"
 
 const useStyles = makeStyles((theme) => ({
   referralsBox: {
@@ -68,10 +68,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ResultReferrals() {
+interface Props {
+  result: ResultSpecsLayout;
+}
+
+export default function ResultReferrals(props: Props) {
   const classes = useStyles()
-  let resultSpecs = ResultSpecs.useContainer()
-  let list = getResultReferrals(resultSpecs.self.non_default_identifier)
+  let list = getResultReferrals(props.result.non_default_identifier)
 
   return (
     <section className={classes.referralsBox} aria-label="Anlaufstellen">

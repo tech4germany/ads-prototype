@@ -155,7 +155,6 @@ export function getResultAdditionalText(ids: Array<number> | undefined): string 
   if (add_text.length === 1) {return add_text[0]}
   if (add_text.length === 0) {return null}
   if (add_text.length > 1) {
-    console.log("this should not be the case")
     return add_text[0]
   }
   return null
