@@ -26,8 +26,8 @@ const useStyles = makeStyles((theme) => ({
   contactHeaderContainer: {
     marginTop: "20px",
     marginBottom: "8px",
-    marginLeft: "38px",
-    marginRight: "38px"
+    marginLeft: "30px",
+    marginRight: "30px"
   },
   contactHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
@@ -39,13 +39,14 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     marginBottom: "20px",
-    marginLeft: "38px",
-    marginRight: "38px",
+    marginLeft: "30px",
+    marginRight: "30px",
     maxWidth: "268px"
   },
   contactInfoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "16px",
+    lineHeight: "22px",
     margin: "0px"
   },
   contactFormularText: {
@@ -103,7 +104,10 @@ export default function ResultContact() {
   const classes = useStyles();
 
   return (
-    <section className={classes.contactBox} aria-label="Informationen für Kontaktaufnahme">
+    <section className={classes.contactBox}
+      aria-label="Informationen für Kontaktaufnahme"
+
+    >
       <div className={classes.contactContainer}>
         <div className={classes.contactContent}>
           <header className={classes.contactHeaderContainer} aria-hidden="true">

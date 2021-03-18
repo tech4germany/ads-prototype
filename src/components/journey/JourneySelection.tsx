@@ -120,12 +120,10 @@ const useStyles = makeStyles((theme) => ({
     border: "solid 0px",
     '@media (hover: hover)': {
       "&:hover": {
-        backgroundColor: colorMain["115"],
         textDecoration: "underline",
         boxShadow: "inset 0 0 0 1px currentColor"
       },
       "&:focus": {
-        backgroundColor: colorMain["115"],
         textDecoration: "underline",
         boxShadow: "inset 0 0 0 1px currentColor"
       }
@@ -231,7 +229,7 @@ export default function JourneySelection() {
   else {
     return (
       <section aria-label="Auswahlbereich möglicher Antworten">
-        <ul className={classes.selectionList} id="answer-list">
+        <ol className={classes.selectionList} id="answer-list">
           {documentQueue.getEdges(activeStep.self).map((label, index) => {
             const infoTextisSet = documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.info_text)
             const selectionIcon = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
@@ -246,6 +244,7 @@ export default function JourneySelection() {
                       type="button"
                       aria-live="polite"
                       aria-label={"Auswahl von " + label + " bestätigen"}
+                      aria-controls="question-header"
                       onKeyDown={(event) => handleKeyDown(event, label)}
                       onClick={(event) => handleClickSelection(event, label)}
                       onMouseOver={() => setDisplayHover(label)}
@@ -253,7 +252,7 @@ export default function JourneySelection() {
                     >
                       {
                         selectionIcon?
-                        <span className={classes.iconContainer}>
+                        <span className={classes.iconContainer} aria-hidden="true">
                           <img className={classes.icon} src={selectionIcon} alt={""}/>
                         </span>:
                         <span className={classes.iconContainerPlaceholder}></span>
@@ -272,8 +271,8 @@ export default function JourneySelection() {
                             className={classes.infoButton}
                             title={"Informationstext zu " + label + " anzeigen"}
                             type="button"
-                            aria-controls="answer-info"
                             aria-label={"Info zu " + label + " anzeigen"}
+                            aria-haspopup="dialog"
                             onClick={(event) => handleClickInfo(event, label)}
                             onKeyDown={(event) => handleKeyDownInfo(event, label)}
                           >
@@ -287,7 +286,7 @@ export default function JourneySelection() {
               </li>
             );
           })}
-      </ul>
+      </ol>
     </section>
     )
   }
