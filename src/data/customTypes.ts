@@ -1,8 +1,13 @@
 export type ActiveStepLayout = number;
 
 export type AnswersLayout = {
-  [key: string]: Array<string>;
+  [key: string]: string;
 };
+
+export type AnswerObject = {
+  "answers": AnswersLayout,
+  "last_insert": string
+}
 
 export type AnswerProfileLayout = {
   [key: string]: boolean;

@@ -42,14 +42,6 @@ export default function JourneyStep() {
   let infoDisplay = ShowInfo.useContainer()
   let activeDocument = documentQueue.self[activeStep.self]
 
-  useEffect(() => {
-    answers.prune(activeDocument.identifier)
-  })
-
-  useLayoutEffect(() => {
-    documentQueue.validateFristQuestion(answers.isAgg())
-  }, [answers])
-
   return (
       <div className={classes.stepBox}>
         <div className={classes.stepContent}>

@@ -23,7 +23,7 @@ export function useResultSpecs(initialState: ResultSpecsLayout={}) {
       if(typeof value !== "undefined") {
         if (!(key in answers)){ /// this only works because merkmal und lebensbereich are ALWAYS included
           continue
-        } else if (!value.includes(answers[key][0])) {
+        } else if (!value.includes(answers[key])) {
           return false
         }
       }
@@ -35,12 +35,12 @@ export function useResultSpecs(initialState: ResultSpecsLayout={}) {
     let answerProfile: AnswerProfileLayout = {"agg": true, "frist": false};
     for (const [key, value] of Object.entries(answers)) {
       if (key !== "frist") {
-        if (mapLabelToFeature(key, value[0], EdgeDetail.status) !== "agg"){
+        if (mapLabelToFeature(key, value, EdgeDetail.status) !== "agg"){
           answerProfile["agg"] = false
           break
         }
       } else {
-        if (mapLabelToFeature(key, value[0], EdgeDetail.status) === "inTime"){
+        if (mapLabelToFeature(key, value, EdgeDetail.status) === "inTime"){
           answerProfile["frist"] = true
         }
       }

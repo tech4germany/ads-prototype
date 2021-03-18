@@ -50,7 +50,7 @@ export default function Result() {
   let resultSpecs = ResultSpecs.useContainer();
 
   useLayoutEffect(() => {
-    resultSpecs.retrieveResultType(answers.self);
+    resultSpecs.retrieveResultType(answers.self.answers);
   }, [answers])
 
   return (

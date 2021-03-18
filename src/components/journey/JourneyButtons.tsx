@@ -48,8 +48,8 @@ export function BackButton() {
 
   let handleClick = () => {
     activeStep.decrement(documentQueue.getVisibilityQueue())
-    documentQueue.update(UpdateType.remove, activeStep.self)
-    answers.prune(activeDocument.identifier)
+    documentQueue.remove(activeStep.self, answers.remainsAgg())
+    answers.prune()
   }
 
   if ((activeStep.self === 0)) {

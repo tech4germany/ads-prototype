@@ -34,27 +34,35 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     }
   }
 
-  let update = (type: UpdateType, activeStep: number, label: string = ""): void => {
+  let add = (activeStep: number, label: string): void => {
     let activeDocument = self[activeStep]
     let _docQueue = [...self]
 
-    if (type === UpdateType.add) {
-      let newDocumentIdentifier = mapLabelToFeature(activeDocument.identifier, label, EdgeDetail.next_node)
+    let newDocumentIdentifier = mapLabelToFeature(activeDocument.identifier, label, EdgeDetail.next_node)
 
-      // check if answer requires detail question
-      if (!(newDocumentIdentifier === null)) {
-        _docQueue = _updateVisibility(_docQueue, newDocumentIdentifier, true);
-      }
-
-      // check if we need to remove date question
-      _docQueue = _removeFristQuestion(_docQueue, activeDocument.identifier, label)
-
-    } else {
-      // if document is no default document we reset its status back to invisible
-      if (activeDocument.type !== "default") {
-        _updateVisibility(_docQueue, activeDocument.identifier, false)
-      }
+    // check if answer requires detail question
+    if (!(newDocumentIdentifier === null)) {
+      _docQueue = _updateVisibility(_docQueue, newDocumentIdentifier, true);
     }
+
+    // check if we need to remove date question
+    _docQueue = _removeFristQuestion(_docQueue, activeDocument.identifier, label)
+    setDocumentQueue(_docQueue)
+  }
+
+  let remove = (activeStep: number, remainsAgg: boolean): void => {
+    let activeDocument = self[activeStep]
+    let _docQueue = [...self]
+
+    // if document is no default document we reset its status back to invisible
+    if (activeDocument.type !== "default") {
+      _docQueue = _updateVisibility(_docQueue, activeDocument.identifier, false)
+    }
+
+    if (!remainsAgg) {
+      _docQueue = _updateVisibility(_docQueue, "frist", true)
+    }
+
     setDocumentQueue(_docQueue)
   }
 
@@ -70,6 +78,7 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
   }
 
   let getStepDetail = (activeStep: number, detail: StepDetail): string | number | boolean => {
+    console.log("here we go again ", activeStep, " detail ", detail)
     let activeDocument: StepDocumentLayout = self[activeStep]
     return activeDocument[detail]
   }
@@ -97,7 +106,8 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
   }
 
   return { self,
-    update,
+    add,
+    remove,
     validateFristQuestion,
     getVisibilityQueue,
     getEdges,

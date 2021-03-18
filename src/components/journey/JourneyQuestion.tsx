@@ -41,11 +41,13 @@ export default function JourneyQuestion() {
   return (
     <header
       className={classes.questionBox}
-      aria-label="Frage der Auswahlebene und Beschreibung"
       id="question-header"
+      aria-label="Frage der Auswahlebene und Beschreibung"
     >
       <div className={classes.questionContainer}>
-        <h1 className={classes.questionText} aria-live="polite" aria-atomic="true">
+        <h1 className={classes.questionText}
+          aria-atomic="true"
+          aria-live="polite">
           {documentQueue.getStepDetail(activeStep.self, StepDetail.question)}
         </h1>
       </div>

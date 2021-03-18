@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "normal",
     width: "100%",
     textAlign: "left",
-    hyphen: "auto"
+    hyphens: "auto"
   },
   subHeaderContainer: {
     marginBottom: "32px",
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "0px",
     fontWeight: "normal",
     width: "100%",
-    hyphen: "auto"
+    hyphens: "auto"
   },
   infoTextContainer: {
     marginBottom: "18px",
@@ -75,8 +75,8 @@ export default function ResultInfo() {
 
       <div className={classes.infoTextContainer}>
         <p className={classes.infoText}>
-          Sie sehen sich aufgrund des Merkmals <strong>{answers.getAnswerByKey("merkmal", 0)}
-          </strong> im Lebensbereich <strong>{answers.getAnswerByKey("lebensbereich", 0)}</strong> diskriminiert.
+          Sie sehen sich aufgrund des Merkmals <strong>{answers.getAnswerByKey("merkmal")}
+          </strong> im Lebensbereich <strong>{answers.getAnswerByKey("lebensbereich")}</strong> diskriminiert.
         </p>
       </div>
 

@@ -1,11 +1,11 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { colorMain } from "components/styleguide"
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { ShowInfo } from "states/showInfoState"
-import { EdgeDetail, UpdateType } from "data/customTypes"
+import { EdgeDetail } from "data/customTypes"
 import { provideSelectionIcon } from "assets/icons/ProvideIcons"
 import JourneySelectionInfo from "components/journey/JourneySelectionInfo"
 
@@ -163,7 +163,7 @@ export default function JourneySelection() {
   let documentQueue = DocumentQueue.useContainer()
   let activeDocument = documentQueue.self[activeStep.self]
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
       if (displayHover !== null ) {
         const element = document.getElementById(displayHover)
@@ -176,7 +176,7 @@ export default function JourneySelection() {
     }
   }, [displayHover])
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let previous_choice = infoDisplay.retrievePreviousLabel()
     if (previous_choice){
       const element = document.getElementById("info-selector-" + previous_choice)
@@ -187,7 +187,7 @@ export default function JourneySelection() {
   let handleClickSelection = (e: React.SyntheticEvent, label: string) => {
     if (!(e instanceof KeyboardEvent)) {
       answers.add(activeDocument.identifier, label)
-      documentQueue.update(UpdateType.add, activeStep.self, label)
+      documentQueue.add(activeStep.self, label)
       activeStep.increment(documentQueue.getVisibilityQueue())
     }
   }
@@ -200,7 +200,7 @@ export default function JourneySelection() {
   let handleKeyDown = (e: React.KeyboardEvent, label: string) => {
     if (e.keyCode === 13) {
       answers.add(activeDocument.identifier, label)
-      documentQueue.update(UpdateType.add, activeStep.self, label)
+      documentQueue.add(activeStep.self, label)
       activeStep.increment(documentQueue.getVisibilityQueue())
     }
   }
@@ -237,7 +237,6 @@ export default function JourneySelection() {
                       id={label}
                       className={classes.selectionButton}
                       title={label + " auswählen"}
-                      aria-live="polite"
                       aria-label={"Auswahl von " + label + " bestätigen"}
                       aria-controls="question-header"
                       onKeyDown={(event) => handleKeyDown(event, label)}
