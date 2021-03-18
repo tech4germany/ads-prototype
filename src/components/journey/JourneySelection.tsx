@@ -9,10 +9,6 @@ import { EdgeDetail, UpdateType } from "data/customTypes"
 import { provideSelectionIcon } from "assets/icons/ProvideIcons"
 import JourneySelectionInfo from "components/journey/JourneySelectionInfo"
 
-const wrap = (s: string) => s.replace(
-        /(?![^\n]{1,20}$)([^\n]{1,20})\//g, '$1\/\n',
-    )
-
 const useStyles = makeStyles((theme) => ({
   selectionList: {
     display: 'flex',
