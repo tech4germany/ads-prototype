@@ -11,7 +11,6 @@ import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { ShowResult } from "states/showResultState"
-import { ResultSpecs } from "states/resultState"
 import { ShowInfo } from "states/showInfoState"
 
 export default function JourneyStateInit() {
@@ -22,11 +21,9 @@ export default function JourneyStateInit() {
     <DocumentQueue.Provider>
     <ShowResult.Provider>
     <ShowInfo.Provider>
-    <ResultSpecs.Provider>
 
       <Main />
 
-    </ResultSpecs.Provider>
     </ShowInfo.Provider>
     </ShowResult.Provider>
     </DocumentQueue.Provider>

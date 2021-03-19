@@ -9,9 +9,9 @@ import ResultsTemplates from "components/results/ResultsTemplates"
 import ResultsReferrals from "components/results/ResultsReferral"
 import ResultsMaterials from "components/results/ResultsMaterials"
 import { getResultReferrals, getResultTemplates, getResultMaterials } from "data/Interface"
+import { retrieveResultType } from "data/ResultMatcher"
 
 import { Answers } from "states/answerState"
-import { ResultSpecs } from "states/resultState"
 
 const useStyles = makeStyles((theme) => ({
   resultBox: {
@@ -47,8 +47,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Result() {
   const classes = useStyles();
   let answers = Answers.useContainer();
-  let resultSpecs = ResultSpecs.useContainer();
-  let result_match = resultSpecs.retrieveResultType(answers.self.answers);
+  let result_match = retrieveResultType(answers.self.answers);
+  console.log("final stage: ", answers.self)
 
   return (
     <div className={classes.resultBox} id="result-page" aria-live="polite">
