@@ -4,7 +4,7 @@ import { EdgeDetail } from "data/customTypes"
 import { mapLabelToFeature } from "data/Interface"
 import { AnswersLayout, AnswerObject } from "data/customTypes"
 
-let initial_answer_object = {"answers": {}, "last_insert": ""}
+let initial_answer_object = {"answers": {}, "last_insert": []}
 export function useAnswers(initialState: AnswerObject = initial_answer_object) {
   let [self, setAnswers] = useState(initialState)
 
@@ -17,13 +17,14 @@ export function useAnswers(initialState: AnswerObject = initial_answer_object) {
   let add = (id: string, label: string): void => {
     let _ans = {...self}
     _ans["answers"] = _addStepWithLabelToAnswers(_ans["answers"], id, label)
-    _ans["last_insert"] = id
+    _ans["last_insert"].push(id)
     setAnswers(_ans)
   }
 
   let prune = (): void => {
     let _ans: AnswerObject = {...self}
-    delete _ans["answers"][_ans["last_insert"]]
+    delete _ans["answers"][_ans["last_insert"].slice(-1)[0]]
+    _ans["last_insert"].splice(-1,1)
     setAnswers(_ans)
   }
 
@@ -32,7 +33,7 @@ export function useAnswers(initialState: AnswerObject = initial_answer_object) {
 
     // remove previous answer
     let _ans: AnswerObject = {...self}
-    delete _ans["answers"][_ans["last_insert"]]
+    delete _ans["answers"][_ans["last_insert"].slice(-1)[0]]
 
     // check if stays agg / non-agg when removing the previous answer
     let agg: boolean = true;

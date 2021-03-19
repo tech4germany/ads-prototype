@@ -11,7 +11,6 @@ import lebensbereich_bildung_detail from "data/stepDocuments/lebensbereich_bildu
 import lebensbereich_gesundheit_detail from "data/stepDocuments/lebensbereich_gesundheit_detail.json"
 import lebensbereich_administration_detail from "data/stepDocuments/lebensbereich_administration_detail.json"
 import frist from "data/stepDocuments/frist.json"
-import result_placeholder from "data/stepDocuments/result_placeholder.json"
 import default_result_map from "data/resultDocuments/defaultResultMap.json"
 import non_default_result_map from "data/resultDocuments/nonDefaultResultMap.json"
 import non_default_result_content from "data/resultDocuments/nonDefaultResultContent.json"
@@ -40,7 +39,6 @@ let allDocuments: DocumentQueueLayout = [
   lebensbereich_gesundheit_detail,
   lebensbereich_administration_detail,
   frist,
-  result_placeholder
 ];
 
 // collect documents required for initial decision tree

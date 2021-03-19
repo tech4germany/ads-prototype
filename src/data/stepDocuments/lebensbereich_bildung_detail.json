@@ -12,6 +12,7 @@
             "status":"agg",
             "description": null,
             "next_node": null,
+            "end_node": "false",
             "icon": null,
             "icon_hover": null,
             "info_text": "Diskriminierung bei der Suche nach einem Kitaplatz oder eine Benachteiligung des Kindes in der Kindertagestätte wegen eines Diskriminierungsgrundes. Die Benachteiligung kann von dem Erzieher*innen oder der Kitaleitung ausgehen, aber auch von anderen Kindern und deren Eltern."
@@ -20,6 +21,7 @@
             "status":"agg",
             "description": null,
             "next_node": null,
+            "end_node": "false",
             "icon": null,
             "icon_hover": null,
             "info_text": "Ihr Kind besucht eine Privatschule und wird dort vom Schulpersonal, von Mitschüler*innen oder Eltern benachteiligt. Außerdem Benachteiligungen im Zusammenhang mit einer privaten Fort- und Weiterbildungsveranstaltung: z.B. Ablehnung eines Fortbildungsplatzes aus diskriminierenden Gründen, fehlende Barrierefreiheit oder diskriminierendes Verhalten des Lehrpersonals."
@@ -28,6 +30,7 @@
             "status":"non-agg",
             "description": "Grundschule oder weiterführende Schule",
             "next_node": null,
+            "end_node": "true",
             "icon": null,
             "icon_hover": null,
             "info_text": "Diskriminierung durch Schulpersonal wie Lehrkräfte oder Schulleitung, z.B. durch schlechte Benotung, fehlende Nachteilsausgleiche oder abwertende Äußerungen. Aber auch Mobbing und sonstiges diskriminierendes Verhalten von Mitschüler*innen oder deren Eltern."
@@ -36,6 +39,7 @@
             "status":"non-agg",
             "description": null,
             "next_node": null,
+            "end_node": "true",
             "icon": null,
             "icon_hover": null,
             "info_text": "Ihre Leistungen an der Hochschule oder Universität werden aus diskriminierenden Gründen schlechter bewertet oder sie erhalten bei Prüfungen zu Unrecht keinen Nachteilsausgleich. Sie werden von anderen Studierenden gemobbt oder Sie werden von Professor*innen oder Hochschulpersonal ungerecht oder herabwürdigend behandelt."

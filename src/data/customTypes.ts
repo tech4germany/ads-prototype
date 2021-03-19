@@ -6,7 +6,7 @@ export type AnswersLayout = {
 
 export type AnswerObject = {
   "answers": AnswersLayout,
-  "last_insert": string
+  "last_insert": Array<string>
 }
 
 export type AnswerProfileLayout = {
@@ -89,6 +89,7 @@ export enum EdgeDetail {
   status="status",
   description="description",
   next_node="next_node",
+  end_node="end_node",
   icon="icon",
   icon_hover="icon_hover",
   info_text="info_text"
@@ -100,7 +101,8 @@ export type EdgeDetailsLayout = {
     "next_node": string | null,
     "icon": string | null,
     "icon_hover": string | null,
-    "info_text": string | null
+    "info_text": string | null,
+    "end_node": string
 }
 
 export type ReferralLayout = {

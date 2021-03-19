@@ -12,6 +12,7 @@
             "status":"agg",
             "description": "",
             "next_node": null,
+            "end_node": "false",
             "icon": null,
             "icon_hover": null,
             "info_text": null
@@ -20,6 +21,7 @@
             "status":"agg",
             "description": null,
             "next_node": null,
+            "end_node": "false",
             "icon": null,
             "icon_hover": null,
             "info_text": null
@@ -28,6 +30,7 @@
             "status":"agg",
             "description": "Ich bin mir nicht sicher",
             "next_node": null,
+            "end_node": "false",
             "icon": null,
             "icon_hover": null,
             "info_text": "Sie wissen nicht so genau, ob oder wo Ihr Fall hier reinpasst aber es geht um Religion oder Weltanschauung."

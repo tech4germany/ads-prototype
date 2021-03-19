@@ -4,6 +4,7 @@ import { colorMain } from "components/styleguide"
 import { Answers } from "states/answerState"
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
+import { ShowResult } from "states/showResultState"
 import { ShowInfo } from "states/showInfoState"
 import { EdgeDetail } from "data/customTypes"
 import { provideSelectionIcon } from "assets/icons/ProvideIcons"
@@ -161,10 +162,11 @@ export default function JourneySelection() {
   let answers = Answers.useContainer()
   let activeStep = ActiveStep.useContainer()
   let documentQueue = DocumentQueue.useContainer()
+  let showResult = ShowResult.useContainer();
   let activeDocument = documentQueue.self[activeStep.self]
 
   useEffect(() => {
-    console.log(answers.self)
+    console.log("answer_object: ", answers.self)
   }, [answers])
 
 
@@ -194,11 +196,18 @@ export default function JourneySelection() {
     // add selected answers to answer dictionary
     answers.add(activeDocument.identifier, label)
 
-    // update document queue with selected answer
-    documentQueue.add(activeStep.self, label)
+    // check if we have reached an end node
+    if (documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.end_node) === "true") {
+      showResult.show()
 
-    // update active step
-    activeStep.increment(documentQueue.getVisibilityQueue())
+    } else {
+
+      // update document queue with selected answer
+      documentQueue.move_forward(activeStep.self, label)
+
+      // update active step
+      activeStep.increment(documentQueue.getVisibilityQueue())
+    }
   }
 
   let handleClickSelection = (e: React.SyntheticEvent, label: string) => {

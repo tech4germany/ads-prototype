@@ -12,6 +12,7 @@
             "status": "inTime",
             "description": null,
             "next_node": null,
+            "end_node": "true",
             "icon": null,
             "icon_hover": null,
             "info_text": null
@@ -20,6 +21,7 @@
             "status":"not-inTime",
             "description": null,
             "next_node": null,
+            "end_node": "true",
             "icon": null,
             "icon_hover": null,
             "info_text": null
@@ -28,6 +30,7 @@
             "status":"inTime",
             "description": null,
             "next_node": null,
+            "end_node": "true",
             "icon": null,
             "icon_hover": null,
             "info_text": null
@@ -36,6 +39,7 @@
             "status":"inTime",
             "description": null,
             "next_node": null,
+            "end_node": "true",
             "icon": null,
             "icon_hover": null,
             "info_text": null

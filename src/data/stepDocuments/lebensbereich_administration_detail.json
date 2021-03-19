@@ -12,6 +12,7 @@
             "status":"non-agg",
             "description": "",
             "next_node": null,
+            "end_node": "true",
             "icon": null,
             "icon_hover": null,
             "info_text": "Sie sehen sich durch die Arbeitsagentur oder das Jobcenter benachteiligt, weil beispielsweise Leistungen nicht bewilligt werden oder eine beantragte Weiterbildungsmaßnahme abgelehnt wird. Sie fühlen sich durch Mitarbeitende der Arbeitsagentur/Jobcenter herabwürdigend oder ungerecht behandelt."
@@ -20,6 +21,7 @@
             "status":"non-agg",
             "description": "",
             "next_node": null,
+            "end_node": "true",
             "icon": null,
             "icon_hover": null,
             "info_text": "Sie sehen sich bei der Bewilligung von Rentenleistungen benachteiligt. Die Rente wird zu Unrecht nicht bezahlt oder Ihnen würde mehr Rente zustehen. Sie fühlen sich durch das Verhalten von Mitarbeitenden der Rentenkasse oder eines anderen Sozialversicherungsträgers im Zusammenhang mit Ihrer Rente benachteiligt."
@@ -28,6 +30,7 @@
             "status":"non-agg",
             "description": null,
             "next_node": null,
+            "end_node": "true",
             "icon": null,
             "icon_hover": null,
             "info_text": "Sie wissen nicht genau, zu welchem Thema Ihr Fall gehört oder können Ihren Fall keinem der hier genannten Bereiche zuordnen. Es geht aber um eine Diskriminierung durch Ämter und Behörden."

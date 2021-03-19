@@ -4,7 +4,7 @@ active step updates it checks whether we have reached the final node in the
 document queue. Depending on that it either renders the next step or switches to
 the result page.
  */
-import React, {useEffect} from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet'
 import JourneyStep from "components/journey/JourneyStep"
 import Result from "components/results/Results"
@@ -18,16 +18,14 @@ export default function Journey() {
   let activeStep = ActiveStep.useContainer();
   let activeDocument = documentQueue.self[activeStep.self]
 
-  useEffect(() => {
-    if (activeStep.isLast(documentQueue.self.length)) {
-      showResult.show()
-    } else showResult.hide()
-  }, [activeStep])
-
   return (
     <>
       <Helmet>
-        <title>{ activeDocument.step_title }</title>
+          {
+            showResult.self?
+            <title>Ergebnis</title>:
+            <title>{ activeDocument.step_title }</title>
+          }
       </Helmet>
       {
         !showResult.self ?

@@ -48,7 +48,6 @@ export default function Result() {
   const classes = useStyles();
   let answers = Answers.useContainer();
   let resultSpecs = ResultSpecs.useContainer();
-
   let result_match = resultSpecs.retrieveResultType(answers.self.answers);
 
   return (

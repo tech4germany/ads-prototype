@@ -5,6 +5,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import { ActiveStep } from "states/activeStepState"
 import { DocumentQueue } from "states/documentQueueState"
 import { Answers } from "states/answerState"
+import { ShowResult } from "states/showResultState"
 import { colorMain } from "components/styleguide"
 
 const useStyles = makeStyles((theme) => ({
@@ -43,10 +44,24 @@ export function BackButton() {
   let activeStep = ActiveStep.useContainer()
   let answers = Answers.useContainer()
   let documentQueue = DocumentQueue.useContainer()
+  let showResult = ShowResult.useContainer();
 
   let handleClick = () => {
-    activeStep.decrement(documentQueue.getVisibilityQueue())
-    documentQueue.remove(activeStep.self, answers.remainsAgg())
+
+    if (showResult.self) {
+
+      // return to selection journey
+      showResult.hide()
+
+    } else {
+      // decrement step count back to last visible document in queue
+      activeStep.decrement(documentQueue.getVisibilityQueue())
+
+      // move backward in document queue and reset visibility status where necessary
+      documentQueue.move_backward(activeStep.self, answers.remainsAgg())
+    }
+
+    // delete previous answer from answer dictionary
     answers.prune()
   }
 

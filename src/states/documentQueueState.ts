@@ -34,7 +34,7 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     }
   }
 
-  let add = (activeStep: number, label: string): void => {
+  let move_forward = (activeStep: number, label: string): void => {
     let activeDocument = self[activeStep]
     let _docQueue = [...self]
     let newDocumentIdentifier = mapLabelToFeature(activeDocument.identifier, label, EdgeDetail.next_node)
@@ -49,7 +49,7 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
     setDocumentQueue(_docQueue)
   }
 
-  let remove = (activeStep: number, remainsAgg: boolean): void => {
+  let move_backward = (activeStep: number, remainsAgg: boolean): void => {
     let activeDocument = self[activeStep]
     let _docQueue = [...self]
 
@@ -58,9 +58,12 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
       _docQueue = _updateVisibility(_docQueue, activeDocument.identifier, false)
     }
 
+    // check if moving backward reinstates agg state bc then we reintroduce frist
+    // question
     if (!remainsAgg) {
       _docQueue = _updateVisibility(_docQueue, "frist", true)
     }
+
     setDocumentQueue(_docQueue)
   }
 
@@ -103,8 +106,8 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
   }
 
   return { self,
-    add,
-    remove,
+    move_forward,
+    move_backward,
     validateFristQuestion,
     getVisibilityQueue,
     getEdges,
