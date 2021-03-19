@@ -390,8 +390,7 @@
         "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
-        "Sonstiges"
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"
       ],
       "merkmal_gender_detail": [
         "Trans*",
@@ -547,31 +546,6 @@
     "identifier": 46,
     "features": {
       "merkmal": [
-        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
-        "Religion/Weltanschauung"
-      ],
-      "merkmal_gender_detail": ["Sexuelle Belästigung"],
-      "merkmal_religion_detail": ["Weltanschauung"],
-      "lebensbereich": [
-        "Geschäfte, Verträge und Dienstleistungen",
-        "Wohnungsmarkt",
-        "Bildungsbereich",
-        "Gesundheit und Pflege"
-      ],
-      "lebensbereich_bildung_detail": [
-        "Kita",
-        "Privatschule/Privatunterricht"
-      ],
-      "lebensbereich_gesundheit_detail": [
-        "Arztbesuch",
-        "Private Krankenkasse"
-      ]
-    }
-  },
-  {
-    "identifier": 47,
-    "features": {
-      "merkmal": [
         "Rassistische Diskriminierung / Ethnische Herkunft",
         "Religion/Weltanschauung",
         "Behinderung / Chronische Krankheiten",
@@ -586,14 +560,14 @@
     }
   },
   {
-    "identifier": 48,
+    "identifier": 47,
     "features": {
       "lebensbereich":["Ämter und Behörden"],
       "lebensbereich_administration_detail": ["Arbeitsagentur/Jobcenter"]
     }
   },
   {
-    "identifier": 49,
+    "identifier": 48,
     "features": {
       "lebensbereich":[
         "Ämter und Behörden",
@@ -610,21 +584,21 @@
     }
   },
   {
-    "identifier": 50,
+    "identifier": 49,
     "features": {
       "lebensbereich":["Gesundheit und Pflege"],
       "lebensbereich_gesundheit_detail": ["Private Krankenkasse"]
     }
   },
   {
-    "identifier": 51,
+    "identifier": 50,
     "features": {
       "lebensbereich":["Ämter und Behörden"],
       "lebensbereich_administration_detail": ["Gesetzliche Rente"]
     }
   },
   {
-    "identifier": 52,
+    "identifier": 51,
     "features": {
       "merkmal": ["Rassistische Diskriminierung / Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
@@ -633,7 +607,7 @@
     }
   },
   {
-    "identifier": 53,
+    "identifier": 52,
     "features": {
       "merkmal": [
         "Rassistische Diskriminierung / Ethnische Herkunft",
@@ -661,7 +635,7 @@
     }
   },
   {
-    "identifier": 54,
+    "identifier": 53,
     "features": {
       "merkmal": ["Rassistische Diskriminierung / Ethnische Herkunft"],
       "merkmal_ethnisch_detail": ["Staatsangehörigkeit/Aufenthaltsstatus"],
@@ -670,7 +644,7 @@
     }
   },
   {
-    "identifier": 55,
+    "identifier": 54,
     "features": {
       "merkmal": [
         "Rassistische Diskriminierung / Ethnische Herkunft",
@@ -705,7 +679,7 @@
     }
   },
   {
-    "identifier": 56,
+    "identifier": 55,
     "features": {
       "merkmal": [
         "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"
@@ -730,7 +704,7 @@
     }
   },
   {
-    "identifier": 57,
+    "identifier": 56,
     "features": {
       "merkmal": [
         "Religion/Weltanschauung"
@@ -755,7 +729,7 @@
     }
   },
   {
-    "identifier": 58,
+    "identifier": 57,
     "features": {
       "merkmal": [
         "Rassistische Diskriminierung / Ethnische Herkunft",

@@ -17,13 +17,6 @@
     "identifier": 2,
     "profile": {
       "agg": false,
-      "frist": true
-    }
-  },
-  {
-    "identifier": 3,
-    "profile": {
-      "agg": false,
       "frist": false
     }
   }

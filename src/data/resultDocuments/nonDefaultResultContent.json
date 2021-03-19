@@ -535,17 +535,11 @@
   {
     "identifier": 46,
     "additional_content": {
-      "add_text": "Trotzdem können Sie unter Umständen dagegen vorgehen und sich persönlich beraten lassen."
-    }
-  },
-  {
-    "identifier": 47,
-    "additional_content": {
       "add_text": "Sie sind aber durch das Grundgesetz (GG) und besondere Diskriminierungsverbote in den Sozialgesetzbüchern auch vor benachteiligendem und rechtswidrigem Verhalten bei Ämtern und Behörden geschützt. Wenn Sie sich dagegen wehren wollen, können Sie zum Beispiel Dienstaufsichtsbeschwerde erheben oder vor Gericht gehen."
     }
   },
   {
-    "identifier": 48,
+    "identifier": 47,
     "additional_content": {
       "referrals": [
         {
@@ -562,7 +556,7 @@
     }
   },
   {
-    "identifier": 49,
+    "identifier": 48,
     "additional_content": {
       "referrals": [
         {
@@ -573,7 +567,7 @@
     }
   },
   {
-    "identifier": 50,
+    "identifier": 49,
     "additional_content": {
       "referrals": [
         {
@@ -588,7 +582,7 @@
     }
   },
   {
-    "identifier": 51,
+    "identifier": 50,
     "additional_content": {
       "referrals": [
         {
@@ -599,7 +593,7 @@
     }
   },
   {
-    "identifier": 52,
+    "identifier": 51,
     "additional_content": {
       "referrals": [
         {
@@ -610,13 +604,13 @@
     }
   },
   {
-    "identifier": 53,
+    "identifier": 52,
     "additional_content": {
       "add_text": "Wenn Sie rechtlich dagegen vorgehen wollen, müssen Sie Ihre Forderung innerhalb von zwei Monaten nach dem Vorfall schriftlich bei dem*der Vermieter*in geltend machen."
     }
   },
   {
-    "identifier": 54,
+    "identifier": 53,
     "additional_content": {
       "referrals": [
         {
@@ -627,7 +621,7 @@
     }
   },
   {
-    "identifier": 55,
+    "identifier": 54,
     "additional_content": {
       "templates": [
         {
@@ -638,19 +632,19 @@
     }
   },
   {
-    "identifier": 56,
+    "identifier": 55,
     "additional_content": {
       "add_text": "Bitte beachten Sie, dass der Diskriminierungsschutz bei sexueller Belästigung nur im Arbeitsleben besteht. Ansonsten kann sexuelle Belästigung aber bei körperlichen Übergriffen auch strafbar sein und mit einer Strafanzeige bei der Polizei verfolgt werden."
     }
   },
   {
-    "identifier": 57,
+    "identifier": 56,
     "additional_content": {
       "add_text": "Bitte beachten Sie aber, dass Benachteiligungen wegen der Weltanschauung nur im Arbeitsleben verboten sind. Im gesamten zivilrechtlichen Bereich, also beispielsweise beim Einkaufen oder bei Hotelübernachtungen, ist die Weltanschauung nicht geschützt."
     }
   },
   {
-    "identifier": 58,
+    "identifier": 57,
     "additional_content": {
       "add_text": "Sie sind aber trotzdem durch Gesetze und Bestimmungen vor benachteiligendem und rechtswidrigem Verhalten geschützt und können sich darüber bei den zuständigen Stellen beschweren und rechtlich dagegen wehren."
     }

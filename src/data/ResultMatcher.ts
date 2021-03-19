@@ -73,7 +73,6 @@ let retrieveDefaultResult = (answers: AnswersLayout, result_match: ResultSpecsLa
   for (var i=0; i < getDefaultResultCount(); i++) {
     if (_isProfileEquivalent(getDefaultResultProfile(i), _parseAnswerToProfile(answers))) {
       result_match["default_identifier"] = getDefaultResultIdentifier(i)
-      result_match["profile"] = getDefaultResultProfile(i)
     }
   }
   return result_match
