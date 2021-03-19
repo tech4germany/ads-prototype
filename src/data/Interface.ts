@@ -1,5 +1,5 @@
 /*
-This file handles all dealing with data from the webapp.
+This file handles dealing with data from the webapp.
  */
 import merkmal from "data/stepDocuments/merkmal.json"
 import merkmal_ethnisch_detail from "data/stepDocuments/merkmal_ethnisch_detail.json"

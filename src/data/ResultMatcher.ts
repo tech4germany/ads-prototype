@@ -1,3 +1,19 @@
+/*
+This file handles the matching of given answers to result profiles.
+
+There are two types of result profiles.
+
+1) Default result profiles
+Default result profiles are required for every answer set and are fixed in structure.
+The default answer profile reflects a) whether the answer profile is coverd by AGG
+and b) whether the answer profile is within the frist window.
+
+2. Non-default result profiles
+The non-default result profiles matches the provided answers to a number of more
+complex result profiles that allow the application to provide more detailed
+information for a given case.
+
+ */
 import {
   AnswerProfileLayout,
   DefaultSpecsLayout,
