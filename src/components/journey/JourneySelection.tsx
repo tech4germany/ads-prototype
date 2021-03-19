@@ -164,6 +164,11 @@ export default function JourneySelection() {
   let activeDocument = documentQueue.self[activeStep.self]
 
   useEffect(() => {
+    console.log(answers.self)
+  }, [answers])
+
+
+  useEffect(() => {
     if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
       if (displayHover !== null ) {
         const element = document.getElementById(displayHover)
