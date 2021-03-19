@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     whiteSpace: "pre-wrap",
     margin: "0px",
     width: "100%",
-    hyphen: "auto"
+    hyphens: "auto"
   }
 }));
 
