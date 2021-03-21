@@ -54,11 +54,13 @@ export function BackButton() {
       showResult.hide()
 
     } else {
+
       // decrement step count back to last visible document in queue
       activeStep.decrement(documentQueue.getVisibilityQueue())
 
       // move backward in document queue and reset visibility status where necessary
       documentQueue.move_backward(activeStep.self, answers.remainsAgg())
+
     }
 
     // delete previous answer from answer dictionary

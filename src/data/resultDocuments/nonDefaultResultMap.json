@@ -468,8 +468,7 @@
       ],
       "lebensbereich":["Gesundheit und Pflege"],
       "lebensbereich_gesundheit_detail": [
-        "Gesetzliche Krankenkasse",
-        "Sonstiges"
+        "Gesetzliche Krankenkasse"
       ]
     }
   },
@@ -744,8 +743,7 @@
         "Gesundheit und Pflege"
       ],
       "lebensbereich_gesundheit_detail": [
-        "Gesetzliche Pflegeversicherung",
-        "Sonstiges"
+        "Gesetzliche Pflegeversicherung"
       ]
     }
   }
