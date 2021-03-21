@@ -26,14 +26,6 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
   }
 
   // setter functions
-  let validateFristQuestion = (isAgg: boolean) => {
-    if (isAgg) {
-      let docQueue = [...self]
-      docQueue = _updateVisibility(docQueue, "frist", true)
-      setDocumentQueue(docQueue)
-    }
-  }
-
   let move_forward = (activeStep: number, label: string): void => {
     let activeDocument = self[activeStep]
     let _docQueue = [...self]
@@ -60,7 +52,7 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
 
     // check if moving backward reinstates agg state bc then we reintroduce frist
     // question
-    if (!remainsAgg) {
+    if (remainsAgg) {
       _docQueue = _updateVisibility(_docQueue, "frist", true)
     }
 
@@ -108,7 +100,6 @@ export function useDocumentQueue(initialState: DocumentQueueLayout = initialQueu
   return { self,
     move_forward,
     move_backward,
-    validateFristQuestion,
     getVisibilityQueue,
     getEdges,
     getEdgeFeatureByLabel,

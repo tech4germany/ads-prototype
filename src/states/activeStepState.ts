@@ -23,11 +23,6 @@ export function useActiveStep(initialState: ActiveStepLayout = 0) {
     }
   }
 
-  let isLast = (documentQueueLength: number): boolean => {
-    if (self+1 === documentQueueLength) { return true}
-    else { return false }
-  }
-
-  return { self, increment, decrement, isLast }
+  return { self, increment, decrement }
 }
 export const ActiveStep = createContainer(useActiveStep)
