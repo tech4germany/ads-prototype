@@ -48,8 +48,6 @@ export default function Result() {
   const classes = useStyles();
   let answers = Answers.useContainer();
   let result_match = retrieveResultType(answers.self.answers);
-  console.log("final stage: ", answers.self)
-  console.log("result matches: ", result_match)
 
   return (
     <div className={classes.resultBox} id="result-page" aria-live="polite">
