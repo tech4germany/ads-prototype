@@ -23,21 +23,20 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
-    width: "354px",
     height: "132px",
     marginBottom: "15px",
     marginTop: "0px",
     marginLeft: "11px",
-    marginRight: "11px",
+    marginRight: "11px"
+  },
+  itemContent: {
+    width: "354px",
     "@media (max-width: 420px)": {
       width: "294px",
     },
     "@media (max-width: 375px)": {
       width: "254px",
     }
-  },
-  itemContent: {
-    width: "100%"
   },
   buttonGroup: {
     display: "flex",
@@ -87,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   iconContainerPlaceholder: {
-    minWidth: "40px",
+    minWidth: "50px",
     "@media (max-width: 375px)": {
       minWidth: "20px",
     }
