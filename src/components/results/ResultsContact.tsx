@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     flexWrap: "wrap",
-    "@media (max-width: 400px)": {
+    "@media (max-width: 414px)": {
       maxWidth: "250px",
     }
   },
@@ -52,6 +52,30 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "22px",
     margin: "0px"
   },
+  emailLink: {
+    color: "black",
+    hyphens: "auto",
+    '@media (hover: hover)': {
+      "&:hover": {
+        textDecoration: "none",
+        fontFamily: "BundesSansWeb-Bold",
+      }
+    },
+    "&:focus": {
+      textDecoration: "none",
+      fontFamily: "BundesSansWeb-Bold",
+    }
+  },
+  contactSpacer: {
+    height: "24px"
+  },
+  contactLink: {
+    display: "flex",
+    flexDirection: "row",
+    border: "solid 0px",
+    backgroundColor: "inherit",
+    padding: "0px"
+  },
   contactFormularText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "16px",
@@ -77,30 +101,6 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100px",
     width: "6px",
     minWidth: "6px"
-  },
-  contactSpacer: {
-    height: "24px"
-  },
-  contactLink: {
-    display: "flex",
-    flexDirection: "row",
-    border: "solid 0px",
-    backgroundColor: "inherit",
-    padding: "0px"
-  },
-  emailLink: {
-    color: "black",
-    hyphens: "auto",
-    '@media (hover: hover)': {
-      "&:hover": {
-        textDecoration: "none",
-        fontFamily: "BundesSansWeb-Bold",
-      }
-    },
-    "&:focus": {
-      textDecoration: "none",
-      fontFamily: "BundesSansWeb-Bold",
-    }
   }
 }));
 

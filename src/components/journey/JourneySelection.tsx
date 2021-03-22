@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     marginLeft: "20px",
     marginRight: "20px",
-    "@media (max-width: 400px)": {
+    "@media (max-width: 414px)": {
       minWidth: "20px",
       marginLeft: "0px",
       marginRight: "0px"
@@ -72,14 +72,14 @@ const useStyles = makeStyles((theme) => ({
   },
   iconContainerPlaceholder: {
     minWidth: "60px",
-    "@media (max-width: 400px)": {
+    "@media (max-width: 414px)": {
       minWidth: "20px",
     }
   },
   icon: {
     width: "60px",
     height: "60px",
-    "@media (max-width: 400px)": {
+    "@media (max-width: 414px)": {
       display: "none",
     }
   },
@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     hyphens: "auto",
     textAlign: "left",
-    "@media (max-width: 420px)": {
+    "@media (max-width: 414px)": {
       maxWidth: "160px",
     }
   },
