@@ -51,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: "underline",
       },
       "&:focus": {
+        backgroundColor: colorMain["100"],
         textDecoration: "underline",
       }
     }
@@ -59,11 +60,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    minWidth: "60px",
     height: "100%",
     marginLeft: "20px",
     marginRight: "20px",
-    "@media (max-width: 414px)": {
+    "@media (max-width: 420px)": {
       minWidth: "20px",
       marginLeft: "0px",
       marginRight: "0px"
@@ -71,14 +71,14 @@ const useStyles = makeStyles((theme) => ({
   },
   iconContainerPlaceholder: {
     minWidth: "60px",
-    "@media (max-width: 414px)": {
+    "@media (max-width: 420px)": {
       minWidth: "20px",
     }
   },
   icon: {
     width: "60px",
     height: "60px",
-    "@media (max-width: 414px)": {
+    "@media (max-width: 420px)": {
       display: "none",
     }
   },
@@ -92,7 +92,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     hyphens: "auto",
     textAlign: "left",
-    "@media (max-width: 414px)": {
+    "@media (max-width: 420px)": {
+      maxWidth: "200px",
+    },
+    "@media (max-width: 350px)": {
       maxWidth: "160px",
     }
   },
@@ -173,6 +176,7 @@ export default function JourneySelection() {
       if (element) {element.focus()}
     }
   }, [infoDisplay])
+
 
   let handleClickSelection = (e: React.SyntheticEvent, label: string) => {
     if (!(e instanceof KeyboardEvent)) {

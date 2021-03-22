@@ -52,7 +52,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "18px",
     margin: "0px",
-    fontWeight: "normal"
+    fontWeight: "normal",
+    hyphens: "auto"
   },
   exitIcon: {
     width: "30px",
@@ -81,7 +82,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     lineHeight: "25px",
     marginRight: "90px",
-    margin: "0px"
+    margin: "0px",
+    hyphens: "auto"
   },
   infoStripe: {
     display: "flex",
