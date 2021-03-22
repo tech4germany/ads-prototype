@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     maxWidth: "750px",
     "@media (max-width: 375px)": {
-      width: "255px",
+      width: "275px",
     }
   },
   headerContainer: {

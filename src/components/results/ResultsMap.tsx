@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     width: "344px",
     "@media (max-width: 375px)": {
-      width: "255px",
+      width: "275px",
     }
   },
   mapContent: {

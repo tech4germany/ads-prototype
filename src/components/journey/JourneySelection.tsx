@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0px",
     marginLeft: "11px",
     marginRight: "11px",
+    "@media (max-width: 420px)": {
+      width: "294px",
+    },
     "@media (max-width: 375px)": {
       width: "254px",
     }
@@ -84,11 +87,9 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   iconContainerPlaceholder: {
-    width: "20px",
+    minWidth: "40px",
     "@media (max-width: 375px)": {
-      width: "20px",
-      marginLeft: "0px",
-      marginRight: "0px"
+      minWidth: "20px",
     }
   },
   textContainer: {

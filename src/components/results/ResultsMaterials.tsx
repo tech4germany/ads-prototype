@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "50px",
     maxWidth: "750px",
     "@media (max-width: 375px)": {
-      width: "255px",
+      width: "275px",
     }
   },
   subHeaderContainer: {

@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-start",
     width: "344px",
     "@media (max-width: 375px)": {
-      width: "255px",
+      width: "275px",
     }
   },
   contactContent: {
