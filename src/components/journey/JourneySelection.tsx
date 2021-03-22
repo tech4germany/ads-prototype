@@ -200,12 +200,8 @@ export default function JourneySelection() {
 
   let handleClickSelection = (e: React.SyntheticEvent, label: string) => {
     if (!(e instanceof KeyboardEvent)) {
-      updateToNextStep(label)
-    }
-  }
+      console.log("hi there kb      ")
 
-  let handleKeyDown = (e: React.KeyboardEvent, label: string) => {
-    if (e.keyCode === 13) {
       updateToNextStep(label)
     }
   }
@@ -213,13 +209,6 @@ export default function JourneySelection() {
   let handleClickInfo = (e: React.SyntheticEvent, label: string) => {
     e.stopPropagation()
     updateInfoDisplay(label)
-  }
-
-  let handleKeyDownInfo = (e: React.KeyboardEvent, label: string) => {
-    if (e.keyCode === 13) {
-      e.stopPropagation()
-      updateInfoDisplay(label)
-    }
   }
 
   const updateInfoDisplay = (label: string | null) => {
@@ -249,7 +238,6 @@ export default function JourneySelection() {
                       title={label + " auswählen"}
                       aria-label={label + " auswählen"}
                       aria-controls="question-header"
-                      onKeyDown={(event) => handleKeyDown(event, label)}
                       onClick={(event) => handleClickSelection(event, label)}
                       onMouseOver={() => setDisplayHover(label)}
                       onMouseOut={() => setDisplayHover(null)}
@@ -277,7 +265,6 @@ export default function JourneySelection() {
                             aria-label={"Info zu " + label + " anzeigen"}
                             aria-haspopup="dialog"
                             onClick={(event) => handleClickInfo(event, label)}
-                            onKeyDown={(event) => handleKeyDownInfo(event, label)}
                           >
                             <span className={classes.infoText}>Info</span>
                           </button>: null
