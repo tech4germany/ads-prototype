@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     maxWidth: "750px",
+    "@media (max-width: 400px)": {
+      maxWidth: "250px",
+    }
   },
   headerContainer: {
     marginBottom: "50px",

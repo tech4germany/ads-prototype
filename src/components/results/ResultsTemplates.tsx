@@ -12,7 +12,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     minWidth: "100%",
     maxWidth: "750px",
-    marginBottom: "50px"
+    marginBottom: "50px",
+    "@media (max-width: 400px)": {
+      maxWidth: "250px",
+    }
   },
   subHeaderContainer: {
     marginBottom: "32px"

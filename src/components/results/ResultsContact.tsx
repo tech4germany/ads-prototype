@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     flexWrap: "wrap",
+    "@media (max-width: 400px)": {
+      maxWidth: "250px",
+    }
   },
   contactContainer: {
     backgroundColor: "white",
@@ -87,6 +90,7 @@ const useStyles = makeStyles((theme) => ({
   },
   emailLink: {
     color: "black",
+    hyphens: "auto",
     '@media (hover: hover)': {
       "&:hover": {
         textDecoration: "none",
@@ -117,7 +121,7 @@ export default function ResultContact() {
                 href={"mailto:beratung@ads.bund.de"}
                 aria-label="Email an die Antidiskriminierungsstelle schreiben"
               >
-                beratung@ads.bund.de
+                beratung&shy;@ads.bund.de
               </a>
             </p>
             <span className={classes.contactSpacer}></span>

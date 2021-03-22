@@ -12,7 +12,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     minWidth: "100%",
     maxWidth: "750px",
-    marginBottom: "50px"
+    marginBottom: "50px",
+    "@media (max-width: 400px)": {
+      maxWidth: "250px",
+    }
   },
   subHeaderContainer: {
     marginBottom: "32px",
@@ -84,12 +87,14 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "25px",
     borderBottom: "3px solid #000",
     paddingBottom: "2.5px",
-    textAlign: "left"
+    textAlign: "left",
+    hyphens: "auto"
   },
   downloadSubtitleText: {
     fontFamily: "BundesSansWeb-Regular",
     textAlign: "left",
-    color: "black"
+    color: "black",
+    hyphens: "auto"
   },
 }));
 

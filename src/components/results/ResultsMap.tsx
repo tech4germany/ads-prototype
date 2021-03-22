@@ -9,7 +9,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     flexWrap: "wrap",
-    paddingBottom: "4vh"
+    paddingBottom: "4vh",
+    "@media (max-width: 400px)": {
+      maxWidth: "250px",
+    }
   },
   mapHeaderContainer: {
     marginTop: "20px",
@@ -21,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "22px",
     margin: "0px",
-    fontWeight: "normal"
+    fontWeight: "normal",
+    hyphens: "auto"
   },
   mapInfoContainer: {
     display: "flex",
@@ -35,7 +39,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "16px",
     lineHeight: "22px",
-    margin: "0px"
+    margin: "0px",
+    hyphens: "auto"
   },
   mapLinkText: {
     fontFamily: "BundesSansWeb-Bold",
@@ -45,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     color: "black",
     lineHeight: "22px",
+    hyphens: "auto",
     '@media (hover: hover)': {
       "&:hover": {
         textDecoration: "underline",
