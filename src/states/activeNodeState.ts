@@ -83,4 +83,4 @@ export function useActiveNode(initialState: ActiveNodeLayout = initialNode) {
   }
 }
 
-export const DocumentQueue = createContainer(useActiveNode)
+export const ActiveNode = createContainer(useActiveNode)
