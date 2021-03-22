@@ -9,13 +9,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     flexWrap: "wrap",
-    paddingBottom: "4vh",
-    "@media (max-width: 420px)": {
-      maxWidth: "275px",
-    },
-    "@media (max-width: 374px)": {
-      maxWidth: "250px",
-    }
+    paddingBottom: "4vh"
   },
   mapHeaderContainer: {
     marginTop: "20px",
@@ -36,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "20px",
     marginLeft: "30px",
     marginRight: "30px",
-    maxWidth: "268px"
   },
   mapInfoText: {
     fontFamily: "BundesSansWeb-Regular",
@@ -69,10 +62,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
-    maxWidth: "344px",
-    minWidth: "255px",
     backgroundColor: "white",
-    width: "100%",
+    width: "344px",
+    "@media (max-width: 375px)": {
+      width: "255px",
+    }
   },
   mapContent: {
     height: "100%",

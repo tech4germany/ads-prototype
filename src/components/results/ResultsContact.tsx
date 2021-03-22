@@ -8,22 +8,17 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    flexWrap: "wrap",
-    "@media (max-width: 420px)": {
-      maxWidth: "275px",
-    },
-    "@media (max-width: 374px)": {
-      maxWidth: "250px",
-    }
+    flexWrap: "wrap"
   },
   contactContainer: {
     backgroundColor: "white",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
-    maxWidth: "344px",
-    minWidth: "255px",
-    width: "100%",
+    width: "344px",
+    "@media (max-width: 375px)": {
+      width: "255px",
+    }
   },
   contactContent: {
     height: "100%",
