@@ -30,10 +30,9 @@ export function useAnswers(initialState: AnswerObject = initial_answer_object) {
 
   // getter functions
   let isAgg = (): boolean => {
-    let _ans: AnswerObject = {...self}
     let agg: boolean = true;
-    Object.keys(_ans["answers"]).forEach(stepIdentifier => {
-      let label = _ans["answers"][stepIdentifier]
+    Object.keys(self["answers"]).forEach(stepIdentifier => {
+      let label = self["answers"][stepIdentifier]
       let status: string | null = mapLabelToFeature(stepIdentifier, label, EdgeDetail.status)
       if (status === null) {}
       else if (!["agg", "inTime", "not-InTime"].includes(status)) {
