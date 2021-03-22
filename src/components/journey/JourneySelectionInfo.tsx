@@ -121,7 +121,7 @@ export default function JourneySelectionInfoText() {
   const current_label = infoDisplay.retrieveActiveLabel()
 
   return (
-    <section className={classes.selectionInfoBox} aria-label={"Informationsbereich zu getroffener Auswahl:" + infoDisplay.retrieveActiveLabel()}>
+    <section className={classes.selectionInfoBox}>
       <div
         className={classes.infoContainer}
         ref={setFocus}

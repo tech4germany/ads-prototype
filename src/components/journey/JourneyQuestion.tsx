@@ -46,12 +46,15 @@ export default function JourneyQuestion() {
     >
       <div className={classes.questionContainer}>
         <h1 className={classes.questionText}
-          aria-atomic="true"
-          aria-live="polite">
+          aria-live="polite"
+          aria-atomic="true">
           {documentQueue.getStepDetail(activeStep.self, StepDetail.question)}
         </h1>
       </div>
-      <p className={classes.explanationText} id="question-explanation" aria-live="polite" aria-atomic="true">
+      <p className={classes.explanationText}
+        id="question-explanation"
+        aria-live="polite"
+        aria-atomic="true">
         {documentQueue.getStepDetail(activeStep.self, StepDetail.explanation)}
       </p>
     </header>
