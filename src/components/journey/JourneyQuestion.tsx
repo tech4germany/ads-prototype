@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "28px",
     margin: "0px",
-    fontWeight: "normal"
+    fontWeight: "normal",
+    hyphens: "auto"
   },
   explanationText: {
     fontFamily: "BundesSansWeb-Regular",
@@ -28,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "28px",
     whiteSpace: "pre-wrap",
     margin: "0px",
+    hyphens: "auto"
   }
 }));
 

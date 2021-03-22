@@ -156,7 +156,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function JourneySelection() {
   const classes = useStyles();
-  let [displayHover, setDisplayHover] = useState<string | null>(null)
   let infoDisplay = ShowInfo.useContainer()
   let answers = Answers.useContainer()
   let showResult = ShowResult.useContainer();
@@ -166,20 +165,7 @@ export default function JourneySelection() {
     console.log("answer_object: ", answers.self)
   }, [answers])
 
-
-  useEffect(() => {
-    if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
-      if (displayHover !== null ) {
-        const element = document.getElementById(displayHover)
-        if (element) {element.focus()}
-      } else {
-        if (document.activeElement instanceof HTMLElement) {
-          document.activeElement.blur()
-        }
-      }
-    }
-  }, [displayHover])
-
+  // reset focus on return from infosection
   useEffect(() => {
     let previous_choice = infoDisplay.retrievePreviousLabel()
     if (previous_choice){
@@ -188,30 +174,21 @@ export default function JourneySelection() {
     }
   }, [infoDisplay])
 
-  let updateToNextStep = (label: string) => {
-
-    // add selected answers to answer dictionary
-    answers.add(activeNode.getStepIdentifier(), label)
-
-    if (activeNode.isLeaf(label, answers.isAgg())) { showResult.show() }
-    else { activeNode.move_forward(label) }
-
-  }
-
   let handleClickSelection = (e: React.SyntheticEvent, label: string) => {
     if (!(e instanceof KeyboardEvent)) {
-      console.log("hi there kb      ")
 
-      updateToNextStep(label)
+      // add selected answers to answer dictionary
+      answers.add(activeNode.getStepIdentifier(), label)
+
+      // move forward in tree
+      if (activeNode.isLeaf(label, answers.isAgg())) { showResult.show() }
+      else { activeNode.move_forward(label) }
+
     }
   }
 
   let handleClickInfo = (e: React.SyntheticEvent, label: string) => {
     e.stopPropagation()
-    updateInfoDisplay(label)
-  }
-
-  const updateInfoDisplay =       (label: string | null) => {
     infoDisplay.show(label)
   }
 
@@ -220,7 +197,6 @@ export default function JourneySelection() {
       <JourneySelectionInfo />
     )
   }
-
   else {
     return (
       <section aria-label="Auswahlbereich möglicher Antworten">
@@ -239,8 +215,6 @@ export default function JourneySelection() {
                       aria-label={label + " auswählen"}
                       aria-controls="question-header"
                       onClick={(event) => handleClickSelection(event, label)}
-                      onMouseOver={() => setDisplayHover(label)}
-                      onMouseOut={() => setDisplayHover(null)}
                     >
                       {
                         selectionIcon?

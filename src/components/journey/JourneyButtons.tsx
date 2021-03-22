@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
-
 import { ActiveNode } from "states/activeNodeState"
 import { Answers } from "states/answerState"
 import { ShowResult } from "states/showResultState"
@@ -46,10 +45,14 @@ export function BackButton() {
 
   let handleClick = () => {
 
+    // if we are displaying the result move back back into tree
     if (showResult.self) { showResult.hide()}
-    else { activeNode.move_backward() }
-    answers.prune()
 
+    // move back up in the tree
+    else { activeNode.move_backward() }
+
+    // delete answer given at previous node
+    answers.prune()
   }
 
   if (activeNode.isRoot()) {

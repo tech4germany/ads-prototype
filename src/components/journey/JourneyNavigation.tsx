@@ -19,16 +19,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-start",
     display: 'flex',
     alignItems: "center"
-  },
-  stepperBox: {
-    [theme.breakpoints.down('xs')]: {
-      visibility: "hidden",
-    },
-    justifyContent: "center",
-    position: "relative",
-    overflow: "hidden",
-    display: 'flex',
-    alignItems: "center"
   }
 }));
 
