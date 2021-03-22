@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { colorMain } from "components/styleguide"
 import { Answers } from "states/answerState"
-import { ActiveStep } from "states/activeStepState"
-import { DocumentQueue } from "states/documentQueueState"
+import { ActiveNode } from "states/activeNodeState"
 import { ShowResult } from "states/showResultState"
 import { ShowInfo } from "states/showInfoState"
 import { EdgeDetail } from "data/customTypes"
@@ -160,10 +159,8 @@ export default function JourneySelection() {
   let [displayHover, setDisplayHover] = useState<string | null>(null)
   let infoDisplay = ShowInfo.useContainer()
   let answers = Answers.useContainer()
-  let activeStep = ActiveStep.useContainer()
-  let documentQueue = DocumentQueue.useContainer()
   let showResult = ShowResult.useContainer();
-  let activeDocument = documentQueue.self[activeStep.self]
+  let activeNode = ActiveNode.useContainer()
 
   useEffect(() => {
     console.log("answer_object: ", answers.self)
@@ -194,20 +191,11 @@ export default function JourneySelection() {
   let updateToNextStep = (label: string) => {
 
     // add selected answers to answer dictionary
-    answers.add(activeDocument.identifier, label)
+    answers.add(activeNode.getStepIdentifier(), label)
 
-    // check if we have reached an end node
-    if (documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.end_node) === "true") {
-      showResult.show()
+    if (activeNode.isLeaf(label, answers.isAgg())) { showResult.show() }
+    else { activeNode.move_forward(label) }
 
-    } else {
-
-      // update document queue with selected answer
-      documentQueue.move_forward(activeStep.self, label)
-
-      // update active step
-      activeStep.increment(documentQueue.getVisibilityQueue())
-    }
   }
 
   let handleClickSelection = (e: React.SyntheticEvent, label: string) => {
@@ -248,9 +236,9 @@ export default function JourneySelection() {
     return (
       <section aria-label="Auswahlbereich möglicher Antworten">
         <ol className={classes.selectionList} id="answer-list">
-          {documentQueue.getEdges(activeStep.self).map((label, index) => {
-            const infoTextisSet = documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.info_text)
-            const selectionIcon = provideSelectionIcon(documentQueue.getEdgeFeatureByLabel(activeStep.self, label, EdgeDetail.icon))
+          {activeNode.getEdges().map((label, index) => {
+            const infoTextisSet = activeNode.getEdgeFeatureByLabel(label, EdgeDetail.info_text)
+            const selectionIcon = provideSelectionIcon(activeNode.getEdgeFeatureByLabel(label, EdgeDetail.icon))
             return (
               <li className={classes.itemContainer} key={index}>
                 <div className={classes.itemContent}>

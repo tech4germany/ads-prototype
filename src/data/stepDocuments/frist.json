@@ -11,8 +11,7 @@
         "Ja": {
             "status": "inTime",
             "description": null,
-            "next_node": null,
-            "end_node": "true",
+            "next_node": "result",
             "icon": null,
             "icon_hover": null,
             "info_text": null
@@ -20,8 +19,7 @@
         "Nein": {
             "status":"not-inTime",
             "description": null,
-            "next_node": null,
-            "end_node": "true",
+            "next_node": "result",
             "icon": null,
             "icon_hover": null,
             "info_text": null
@@ -29,8 +27,7 @@
         "Dauert noch an/Passiert ständig": {
             "status":"inTime",
             "description": null,
-            "next_node": null,
-            "end_node": "true",
+            "next_node": "result",
             "icon": null,
             "icon_hover": null,
             "info_text": null
@@ -38,8 +35,7 @@
         "Ich bin mir nicht sicher": {
             "status":"inTime",
             "description": null,
-            "next_node": null,
-            "end_node": "true",
+            "next_node": "result",
             "icon": null,
             "icon_hover": null,
             "info_text": null

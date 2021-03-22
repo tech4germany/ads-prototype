@@ -11,8 +11,7 @@
         "Bei der Bewerbung": {
             "status":"agg",
             "description": "z.B. Stellenausschreibung, Bewerbungsverfahren",
-            "next_node": null,
-            "end_node": "false",
+            "next_node": "frist",
             "icon": null,
             "icon_hover": null,
             "info_text": "Sie wurden bei der Suche nach einem Arbeitsplatz oder im Bewerbungsverfahren diskriminiert. Verboten sind unter anderem diskriminierende Stellenausschreibungen (etwa wenn nur nach Muttersprachler*innen oder jungen Bewerber*innen gesucht wird) und unzulässige Fragen im Vorstellungsgespräch (z.B. zur Familienplanung oder Schwangerschaft). Außerdem darf die Auswahl nicht wegen eines geschützten Diskriminierungsmerkmal erfolgen. Sie dürfen also nicht abgelehnt werden, weil sie beispielsweise eine Behinderung haben oder zu alt oder zu jung oder eine Frau sind."
@@ -20,8 +19,7 @@
         "Im Beschäftigungsverhältnis": {
             "status":"agg",
             "description": "Mobbing / Bossing oder bei der Bezahlung",
-            "next_node": null,
-            "end_node": "false",
+            "next_node": "frist",
             "icon": null,
             "icon_hover": null,
             "info_text": "Diskriminierungen am Arbeitsplatz und während der Arbeit sind verboten. Das umfasst unter anderem ungerechte Arbeitsbedingungen, wie eine ungleiche Bezahlung (z.B. wegen Ihres Geschlechts), Benachteiligungen bei Beförderungen (z.B. wegen Ihres Alters), aber auch diskriminierendes Verhalten von Kolleg*innen oder Vorgesetzen wie Mobbing oder Bossing (z.B. wegen Ihrer ethnischen Herkunft oder einer Behinderung oder Ihrer sexuellen Identität)."
@@ -29,8 +27,7 @@
         "Kündigung/Beendigung": {
             "status":"agg",
             "description": null,
-            "next_node": null,
-            "end_node": "false",
+            "next_node": "frist",
             "icon": null,
             "icon_hover": null,
             "info_text": "Das Arbeitsverhältnis wird beendet durch eine einseitige Erklärung des Arbeitgebenden in Form einer Kündigung oder durch Vereinbarung eines Aufhebungsvertrages oder Ablauf eines befristeten Vertrages. Das ist diskriminierend, wenn dabei Ihr Alter, ihre ethnische Herkunft, ihr Geschlecht, ihre Religion oder Weltanschauung, eine Behinderung oder ihre sexuelle Identität eine Rolle gespielt hat."

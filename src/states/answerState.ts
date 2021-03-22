@@ -29,23 +29,17 @@ export function useAnswers(initialState: AnswerObject = initial_answer_object) {
   }
 
   // getter functions
-  let remainsAgg = (): boolean => {
-
-    // remove previous answer
+  let isAgg = (): boolean => {
     let _ans: AnswerObject = {...self}
-    delete _ans["answers"][_ans["last_insert"].slice(-1)[0]]
-
-    // check if stays agg / non-agg when removing the previous answer
     let agg: boolean = true;
     Object.keys(_ans["answers"]).forEach(stepIdentifier => {
       let label = _ans["answers"][stepIdentifier]
       let status: string | null = mapLabelToFeature(stepIdentifier, label, EdgeDetail.status)
-      if (status === null) { status=""}
-      if (!["agg", "inTime", "not-InTime"].includes(status)) {
+      if (status === null) {}
+      else if (!["agg", "inTime", "not-InTime"].includes(status)) {
         agg = false
       }
     })
-
     return agg
   }
 
@@ -55,6 +49,6 @@ export function useAnswers(initialState: AnswerObject = initial_answer_object) {
     } else { return "Identifier not existent"}
   }
 
-  return { self, add, getAnswerByKey, prune, remainsAgg }
+  return { self, add, getAnswerByKey, prune, isAgg }
 }
 export const Answers = createContainer(useAnswers)

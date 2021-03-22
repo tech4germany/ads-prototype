@@ -11,8 +11,7 @@
         "Arztbesuch": {
             "status":"agg",
             "description": null,
-            "next_node": null,
-            "end_node": "false",
+            "next_node": "frist",
             "icon": null,
             "icon_hover": null,
             "info_text": "Die ärztliche Behandlung wird verweigert in Zusammenhang mit einem bestimmten Diskriminierungsgrund. Diskriminierendes Verhalten von Ärzt*innen und Personal in Gesundheitspraxen und Krankenhäusern. Zum Beispiel ist die Behandlung nicht barrierefrei und kann deshalb nicht oder nur sehr schwer in Anspruch genommen werden."
@@ -20,8 +19,7 @@
         "Private Krankenkasse": {
             "status":"agg",
             "description": null,
-            "next_node": null,
-            "end_node": "false",
+            "next_node": "frist",
             "icon": null,
             "icon_hover": null,
             "info_text": "Sie erhalten aus diskriminierenden Gründen keinen Versicherungsvertrag oder nur eingeschränkte oder schlechtere Leistungen. Sie müssen aus diskriminierenden Gründen höhere Prämien bezahlen. Ihre private Krankenversicherung wurde zu Unrecht gekündigt."
@@ -29,8 +27,7 @@
         "Gesetzliche Krankenkasse": {
             "status":"non-agg",
             "description": null,
-            "next_node": null,
-            "end_node": "true",
+            "next_node": "result",
             "icon": null,
             "icon_hover": null,
             "info_text": "Benachteiligungen bei der Aufnahme in eine Krankenkasse, bei der Inanspruchnahme von Leistungen (Ablehnung einer Leistung oder Leistung zu schlechteren Konditionen), bei der Bemessung des Krankenkassenbeitrags. Die Benachteiligungen stehen in Zusammenhang mit einem bestimmten Diskriminierungsgrund."
@@ -38,8 +35,7 @@
         "Gesetzliche Pflegeversicherung": {
             "status":"non-agg",
             "description": null,
-            "next_node": null,
-            "end_node": "true",
+            "next_node": "result",
             "icon": null,
             "icon_hover": null,
             "info_text": "Sie sehen sich bei der Bewilligung von Pflegeleistungen benachteiligt. Bestimmte Pflegeleistungen werden zu Unrecht nicht bezahlt oder Ihnen würden mehr Pflege zustehen. Sie fühlen sich durch das Verhalten von Mitarbeitenden der Pflegekasse oder gesetzlichen Pflegeversicherung oder eines anderen Sozialversicherungsträgers im Zusammenhang mit Ihren Pflegeleistungen benachteiligt."
@@ -47,8 +43,7 @@
         "Sonstiges": {
             "status":"agg",
             "description": null,
-            "next_node": null,
-            "end_node": "false",
+            "next_node": "frist",
             "icon": null,
             "icon_hover": null,
             "info_text": "Sie wissen nicht genau, zu welchem Unterpunkt Ihr Fall gehört oder können Ihren Fall keinem der hier genannten Bereiche zuordnen. Es geht aber um eine Diskriminierung im Zusammenhang mit den Themen Gesundheit und Pflege."

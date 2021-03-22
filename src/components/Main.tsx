@@ -8,15 +8,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet'
 import JourneyStep from "components/journey/JourneyStep"
 import Result from "components/results/Results"
-import { ActiveStep } from "states/activeStepState"
-import { DocumentQueue } from "states/documentQueueState"
+import { ActiveNode } from "states/activeNodeState"
 import { ShowResult } from "states/showResultState"
+import { StepDetail } from "data/customTypes"
 
 export default function Journey() {
   let showResult = ShowResult.useContainer();
-  let documentQueue = DocumentQueue.useContainer();
-  let activeStep = ActiveStep.useContainer();
-  let activeDocument = documentQueue.self[activeStep.self]
+  let activeNode = ActiveNode.useContainer();
 
   return (
     <>
@@ -24,7 +22,7 @@ export default function Journey() {
           {
             showResult.self?
             <title>Ergebnis</title>:
-            <title>{ activeDocument.step_title }</title>
+            <title>{ activeNode.getStepDetail(StepDetail.step_title)}</title>
           }
       </Helmet>
       {

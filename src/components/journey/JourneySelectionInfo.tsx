@@ -1,8 +1,7 @@
 import React, { useRef, useLayoutEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { colorMain } from "components/styleguide"
-import { ActiveStep } from "states/activeStepState"
-import { DocumentQueue } from "states/documentQueueState"
+import { ActiveNode } from "states/activeNodeState"
 import { ShowInfo } from "states/showInfoState"
 import { EdgeDetail } from "data/customTypes"
 import exitIcon from 'assets/icons/cancel.svg'
@@ -97,8 +96,7 @@ const useStyles = makeStyles((theme) => ({
 export default function JourneySelectionInfoText() {
   const classes = useStyles();
   const setFocus = useRef<HTMLDivElement>(null);
-  let activeStep = ActiveStep.useContainer()
-  let documentQueue = DocumentQueue.useContainer()
+  let activeNode = ActiveNode.useContainer()
   let infoDisplay = ShowInfo.useContainer()
 
   useLayoutEffect(() => {
@@ -148,7 +146,7 @@ export default function JourneySelectionInfoText() {
             <p className={classes.infoText} id="answer-info" aria-live="polite">
               {
                 current_label?
-                documentQueue.getEdgeFeatureByLabel(activeStep.self, current_label, EdgeDetail.info_text):
+                activeNode.getEdgeFeatureByLabel(current_label, EdgeDetail.info_text):
                 null
               }
             </p>

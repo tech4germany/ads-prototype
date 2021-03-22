@@ -8,8 +8,7 @@ import React from 'react';
 import Main from "./Main";
 
 import { Answers } from "states/answerState"
-import { ActiveStep } from "states/activeStepState"
-import { DocumentQueue } from "states/documentQueueState"
+import { ActiveNode } from "states/activeNodeState"
 import { ShowResult } from "states/showResultState"
 import { ShowInfo } from "states/showInfoState"
 
@@ -17,8 +16,7 @@ export default function JourneyStateInit() {
 
   return (
     <Answers.Provider>
-    <ActiveStep.Provider>
-    <DocumentQueue.Provider>
+    <ActiveNode.Provider>
     <ShowResult.Provider>
     <ShowInfo.Provider>
 
@@ -26,8 +24,7 @@ export default function JourneyStateInit() {
 
     </ShowInfo.Provider>
     </ShowResult.Provider>
-    </DocumentQueue.Provider>
-    </ActiveStep.Provider>
+    </ActiveNode.Provider>
     </Answers.Provider>
   );
 }

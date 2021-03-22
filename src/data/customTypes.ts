@@ -89,7 +89,6 @@ export enum EdgeDetail {
   status="status",
   description="description",
   next_node="next_node",
-  end_node="end_node",
   icon="icon",
   icon_hover="icon_hover",
   info_text="info_text"
@@ -102,7 +101,6 @@ export type EdgeDetailsLayout = {
     "icon": string | null,
     "icon_hover": string | null,
     "info_text": string | null,
-    "end_node": string
 }
 
 export type ReferralLayout = {
@@ -134,6 +132,11 @@ export interface StepDocumentLayout {
   "edges": {
     [key: string]: EdgeDetailsLayout
   }
+}
+
+export type ActiveNodeLayout = {
+  "activeDoc": StepDocumentLayout,
+  "previousNode": Array<string>
 }
 
 export type DocumentQueueLayout = Array<StepDocumentLayout>;
