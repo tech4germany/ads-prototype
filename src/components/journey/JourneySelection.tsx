@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0px",
     marginLeft: "11px",
     marginRight: "11px",
-    "@media (max-width: 420px)": {
+    "@media (max-width: 375px)": {
       width: "254px",
     }
   },
@@ -48,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "flex-start",
     padding: "0px",
+    paddingRight: "78px",
     border: "solid 0px",
     cursor: "pointer",
     backgroundColor: "inherit",
@@ -69,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     marginLeft: "20px",
     marginRight: "20px",
-    "@media (max-width: 420px)": {
+    "@media (max-width: 375px)": {
       minWidth: "20px",
       marginLeft: "0px",
       marginRight: "0px"
@@ -78,13 +79,13 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     width: "60px",
     height: "60px",
-    "@media (max-width: 420px)": {
+    "@media (max-width: 375px)": {
       display: "none",
     }
   },
   iconContainerPlaceholder: {
     width: "20px",
-    "@media (max-width: 420px)": {
+    "@media (max-width: 375px)": {
       width: "20px",
       marginLeft: "0px",
       marginRight: "0px"
@@ -99,11 +100,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     hyphens: "auto",
     textAlign: "left",
-    width: "176px",
-    paddingRight: "78px",
-    "@media (max-width: 420px)": {
-      width: "156px",
-    }
   },
   infoIconContainer: {
     display: "flex",
