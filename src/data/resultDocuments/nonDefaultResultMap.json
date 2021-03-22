@@ -592,8 +592,11 @@
   {
     "identifier": 50,
     "features": {
-      "lebensbereich":["Ämter und Behörden"],
-      "lebensbereich_administration_detail": ["Gesetzliche Rente"]
+      "lebensbereich":[
+        "Ämter und Behörden",
+        "Gesundheit und Pflege"],
+      "lebensbereich_administration_detail": ["Gesetzliche Rente"],
+      "lebensbereich_gesundheit_detail": ["Gesetzliche Krankenkasse"]
     }
   },
   {
@@ -651,8 +654,7 @@
         "Behinderung / Chronische Krankheiten",
         "Alter",
         "Sexuelle Identität",
-        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung",
-        "Sonstiges"
+        "Geschlecht / Geschlechtsidentität / Sexuelle Belästigung"
       ],
       "merkmal_gender_detail": [
         "Trans*",
