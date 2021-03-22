@@ -48,9 +48,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "flex-start",
     padding: "0px",
-    paddingRight: "78px",
     border: "solid 0px",
     cursor: "pointer",
+    width: "100%",
     backgroundColor: "inherit",
     '@media (hover: hover)': {
       "&:hover": {
@@ -100,6 +100,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     hyphens: "auto",
     textAlign: "left",
+    paddingRight: "78px",
+    width: "176px",
+    "@media (max-width: 375px)": {
+      width: "156",
+    }
   },
   infoIconContainer: {
     display: "flex",
