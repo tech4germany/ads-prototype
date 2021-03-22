@@ -9,7 +9,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     flexWrap: "wrap",
-    "@media (max-width: 414px)": {
+    "@media (max-width: 420px)": {
+      maxWidth: "275px",
+    },
+    "@media (max-width: 374px)": {
       maxWidth: "250px",
     }
   },
