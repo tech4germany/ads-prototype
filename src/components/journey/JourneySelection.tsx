@@ -22,25 +22,31 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     display: "flex",
     flexDirection: "row",
-    alignItems: "flex-start",
-    width: "360px",
-    minWidth: "255px",
-    height: "130px",
+    justifyContent: "flex-start",
+    width: "354px",
+    height: "132px",
     marginBottom: "15px",
     marginTop: "0px",
     marginLeft: "11px",
-    marginRight: "11px"
+    marginRight: "11px",
+    "@media (max-width: 420px)": {
+      width: "254px",
+    }
   },
   itemContent: {
-    minWidth: "255px",
-    height: "100%"
+    width: "100%"
+  },
+  buttonGroup: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    height: "100%",
+    position: "relative"
   },
   selectionButton: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
-    height: "100%",
-    width: "354px",
     padding: "0px",
     border: "solid 0px",
     cursor: "pointer",
@@ -69,12 +75,6 @@ const useStyles = makeStyles((theme) => ({
       marginRight: "0px"
     }
   },
-  iconContainerPlaceholder: {
-    minWidth: "60px",
-    "@media (max-width: 420px)": {
-      minWidth: "20px",
-    }
-  },
   icon: {
     width: "60px",
     height: "60px",
@@ -82,28 +82,36 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     }
   },
+  iconContainerPlaceholder: {
+    width: "20px",
+    "@media (max-width: 420px)": {
+      width: "20px",
+      marginLeft: "0px",
+      marginRight: "0px"
+    }
+  },
   textContainer: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     height: "100%",
-    maxWidth: "200px",
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "18px",
     hyphens: "auto",
     textAlign: "left",
+    width: "176px",
+    paddingRight: "78px",
     "@media (max-width: 420px)": {
-      maxWidth: "200px",
-    },
-    "@media (max-width: 374px)": {
-      maxWidth: "160px",
+      width: "156px",
     }
   },
   infoIconContainer: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
-    position: "absolute"
+    position: "absolute",
+    top: "0px",
+    right: "0px",
   },
   infoButton: {
     backgroundColor: colorMain["115"],
@@ -113,7 +121,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     width: "68px",
     height: "24px",
-    margin: "10px",
+    marginRight: "10px",
+    marginTop: "10px",
     borderRadius: "30px",
     cursor: "pointer",
     border: "solid 0px",
@@ -138,22 +147,6 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "6px",
     minWidth: "6px"
-  },
-  buttonGroup: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    height: "100%"
-  },
-  srOnly: {
-    border: "0",
-    clip: "rect(0 0 0 0)",
-    height: "1px",
-    margin: "-1px",
-    overflow: "hidden",
-    padding: "0",
-    position: "absolute",
-    width: "1px"
   }
 }));
 
