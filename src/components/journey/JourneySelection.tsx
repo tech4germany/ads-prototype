@@ -211,7 +211,7 @@ export default function JourneySelection() {
     updateInfoDisplay(label)
   }
 
-  const updateInfoDisplay = (label: string | null) => {
+  const updateInfoDisplay =       (label: string | null) => {
     infoDisplay.show(label)
   }
 
