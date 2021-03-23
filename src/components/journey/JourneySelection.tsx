@@ -19,31 +19,20 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0px"
   },
   itemContainer: {
+    flex: "1 1 0px",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
     backgroundColor: "white",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
+    position: "relative",
     height: "132px",
-    marginBottom: "15px",
-    marginTop: "0px",
-    marginLeft: "11px",
-    marginRight: "11px"
-  },
-  itemContent: {
-    width: "354px",
-    "@media (max-width: 420px)": {
-      width: "294px",
-    },
-    "@media (max-width: 375px)": {
-      width: "254px",
+    minWidth: "260px",
+    maxWidth: "360px",
+    margin: "0px 11px 15px 11px",
+    "@media (min-width: 608px)": {
+      minWidth: "360px",
+      maxWidth: "360px",
     }
-  },
-  buttonGroup: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    height: "100%",
-    position: "relative"
   },
   selectionButton: {
     display: "flex",
@@ -70,26 +59,21 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     height: "100%",
-    marginLeft: "20px",
     marginRight: "20px",
-    "@media (max-width: 375px)": {
-      minWidth: "20px",
-      marginLeft: "0px",
-      marginRight: "0px"
+    "@media (min-width: 400px)": {
+      margin: "0px 20px 0px 20px"
     }
   },
   icon: {
-    width: "60px",
-    height: "60px",
-    "@media (max-width: 375px)": {
-      display: "none",
+    display: "none",
+    "@media (min-width: 400px)": {
+      display: "block",
+      width: "60px",
+      height: "60px",
     }
   },
   iconContainerPlaceholder: {
-    minWidth: "50px",
-    "@media (max-width: 375px)": {
-      minWidth: "20px",
-    }
+    minWidth: "20px",
   },
   textContainer: {
     display: "flex",
@@ -100,11 +84,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     hyphens: "auto",
     textAlign: "left",
-    paddingRight: "78px",
-    width: "176px",
-    "@media (max-width: 375px)": {
-      width: "156",
-    }
+    paddingRight: "84px",
   },
   infoIconContainer: {
     display: "flex",
@@ -112,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     position: "absolute",
     top: "0px",
-    right: "0px",
+    right: "6px",
   },
   infoButton: {
     backgroundColor: colorMain["115"],
@@ -122,8 +102,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     width: "68px",
     height: "24px",
-    marginRight: "10px",
-    marginTop: "10px",
+    margin: "10px 10px 0px 0px",
     borderRadius: "30px",
     cursor: "pointer",
     border: "solid 0px",
@@ -147,7 +126,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     height: "100%",
     width: "6px",
-    minWidth: "6px"
+    minWidth: "6px",
+    position: "absolute",
+    right: "0px"
   }
 }));
 
@@ -204,45 +185,41 @@ export default function JourneySelection() {
             const selectionIcon = provideSelectionIcon(activeNode.getEdgeFeatureByLabel(label, EdgeDetail.icon))
             return (
               <li className={classes.itemContainer} key={index}>
-                <div className={classes.itemContent}>
-                  <div className={classes.buttonGroup}>
-                    <button
-                      id={label}
-                      className={classes.selectionButton}
-                      title={label + " auswählen"}
-                      aria-label={label + " auswählen"}
-                      aria-controls="question-header"
-                      onClick={(event) => handleClickSelection(event, label)}
-                    >
-                      {
-                        selectionIcon?
-                        <span className={classes.iconContainer} aria-hidden="true">
-                          <img className={classes.icon} src={selectionIcon} alt={""}/>
-                        </span>:
-                        <span className={classes.iconContainerPlaceholder}></span>
-                      }
+                <button
+                  id={label}
+                  className={classes.selectionButton}
+                  title={label + " auswählen"}
+                  aria-label={label + " auswählen"}
+                  aria-controls="question-header"
+                  onClick={(event) => handleClickSelection(event, label)}
+                >
+                  {
+                    selectionIcon?
+                    <span className={classes.iconContainer} aria-hidden="true">
+                      <img className={classes.icon} src={selectionIcon} alt={""}/>
+                    </span>:
+                    <span className={classes.iconContainerPlaceholder}></span>
+                  }
 
-                      <span className={classes.textContainer}>
-                          {label}
-                      </span>
+                  <span className={classes.textContainer}>
+                      {label}
+                  </span>
 
-                    </button>
-                    <div className={classes.infoIconContainer}>
-                      {
-                        infoTextisSet?
-                          <button
-                            id={"info-selector-" + label}
-                            className={classes.infoButton}
-                            title={"Info zu " + label + " anzeigen"}
-                            aria-label={"Info zu " + label + " anzeigen"}
-                            aria-haspopup="dialog"
-                            onClick={(event) => handleClickInfo(event, label)}
-                          >
-                            <span className={classes.infoText}>Info</span>
-                          </button>: null
-                      }
-                    </div>
-                  </div>
+                </button>
+                <div className={classes.infoIconContainer}>
+                  {
+                    infoTextisSet?
+                      <button
+                        id={"info-selector-" + label}
+                        className={classes.infoButton}
+                        title={"Info zu " + label + " anzeigen"}
+                        aria-label={"Info zu " + label + " anzeigen"}
+                        aria-haspopup="dialog"
+                        onClick={(event) => handleClickInfo(event, label)}
+                      >
+                        <span className={classes.infoText}>Info</span>
+                      </button>: null
+                  }
                 </div>
                 <canvas className={classes.buttonStripe}></canvas>
               </li>
