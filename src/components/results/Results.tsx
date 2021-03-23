@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "260px",
     maxWidth: "340px",
     paddingTop: "25px",
+    marginBottom: "50px"
   },
   contactMapSpacer: {
     height: "22px"
