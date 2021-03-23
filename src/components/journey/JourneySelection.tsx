@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     flex: "1 1 0px",
     backgroundColor: "white",
     position: "relative",
-    height: "132px",
+    minHeight: "132px",
     minWidth: "260px",
     maxWidth: "360px",
     margin: "0px 11px 15px 11px",
