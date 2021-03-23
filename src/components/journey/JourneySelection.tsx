@@ -139,10 +139,6 @@ export default function JourneySelection() {
   let showResult = ShowResult.useContainer();
   let activeNode = ActiveNode.useContainer()
 
-  useEffect(() => {
-    console.log("answer_object: ", answers.self)
-  }, [answers])
-
   // reset focus on return from infosection
   useEffect(() => {
     let previous_choice = infoDisplay.retrievePreviousLabel()
@@ -151,7 +147,6 @@ export default function JourneySelection() {
       if (element) {element.focus()}
     }
   }, [infoDisplay])
-
 
   let handleClickSelection = (e: React.SyntheticEvent, label: string) => {
     if (!(e instanceof KeyboardEvent)) {
@@ -162,7 +157,6 @@ export default function JourneySelection() {
       // move forward in tree
       if (activeNode.isLeaf(label, answers.isAgg())) { showResult.show() }
       else { activeNode.move_forward(label) }
-
     }
   }
 
