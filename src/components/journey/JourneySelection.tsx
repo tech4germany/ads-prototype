@@ -83,6 +83,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "18px",
+    color: "black",
     hyphens: "auto",
     textAlign: "left",
     paddingRight: "84px",
