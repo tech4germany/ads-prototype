@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "flex-start",
     padding: "0px",
+    margin: "0px",
     border: "solid 0px",
     cursor: "pointer",
     width: "100%",
