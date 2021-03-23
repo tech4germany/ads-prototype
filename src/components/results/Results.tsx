@@ -17,16 +17,13 @@ const useStyles = makeStyles((theme) => ({
   resultBox: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    height: "100%"
-
+    alignItems: "center"
   },
   resultSpace: {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
-    alignItems: "flex-start",
-    height: "100%"
+    alignItems: "flex-start"
   },
   infoTemplateSpace: {
     maxWidth: "750px",

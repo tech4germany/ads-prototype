@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     backgroundColor: "white",
-    position: "relative"
+    position: "relative",
+    height: "100%"
   },
   mapContainer: {
     display: "flex",

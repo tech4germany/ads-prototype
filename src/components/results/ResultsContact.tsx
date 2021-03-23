@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     backgroundColor: "white",
+    height: "100%",
     position: "relative"
   },
   contactContainer: {

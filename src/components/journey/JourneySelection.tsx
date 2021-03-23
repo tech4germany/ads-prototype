@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { colorMain } from "components/styleguide"
 import { Answers } from "states/answerState"
@@ -101,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     width: "68px",
-    height: "24px",
+    height: "30px",
     margin: "10px 10px 0px 0px",
     borderRadius: "30px",
     cursor: "pointer",
