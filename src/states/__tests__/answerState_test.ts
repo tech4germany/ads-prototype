@@ -2,8 +2,6 @@ import { renderHook, act } from "@testing-library/react-hooks"
 import { useAnswers } from 'states/answerState'
 import { AnswersLayout, AnswerObject } from "data/customTypes"
 
-//  add, getAnswerByKey, prune, remainsAgg
-
 test('Simple add', () => {
 
     // initialse object
@@ -56,7 +54,7 @@ test('Prune last answer', () => {
     }
     let initial_last_keys = ["merkmal", "merkmal_religion_detail"]
     let initial_answer_object = {
-      "answers": initial_answers, 
+      "answers": initial_answers,
       "last_insert": initial_last_keys
     }
     const { result } = renderHook(() => useAnswers(initial_answer_object))
