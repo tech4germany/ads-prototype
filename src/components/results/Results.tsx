@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   resultSpace: {
     display: "flex",
     flexDirection: "row",
+    flexWrap: "wrap",
     alignItems: "flex-start",
     height: "100%"
   },
