@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
+    height: "100%"
   },
   infoTemplateSpace: {
     maxWidth: "750px",
