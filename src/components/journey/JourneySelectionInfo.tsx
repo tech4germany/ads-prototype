@@ -11,42 +11,21 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: "center",
-    width: "100%"
   },
   infoContainer: {
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
     maxWidth: "734px",
+    mindWidth: "260px",
     backgroundColor: "#fff",
-    marginBottom: "15px"
+    position: "relative"
   },
   infoContent: {
-    marginBottom: "28px",
-    paddingLeft: "22px",
-    maxWidth: "728px"
-  },
-  infoCard: {
-    height: "100%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-  },
-  headerRow: {
-    maxWidth: "722px",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: "28px"
+    padding: "30px 96px 30px 22px",
   },
   infoHeader: {
-    whiteSpace: "pre-wrap",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-end",
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "18px",
-    marginTop: "22px"
+    marginBottom: "28px"
   },
   infoHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
@@ -65,8 +44,9 @@ const useStyles = makeStyles((theme) => ({
     border: "solid 0px",
     width: "30px",
     height: "30px",
-    marginTop: "10px",
-    marginRight: "10px",
+    position: "absolute",
+    top: "10px",
+    right: "16px",
     padding: "0px",
     '@media (hover: hover)': {
       "&:hover": {
@@ -81,7 +61,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "16px",
     lineHeight: "25px",
-    marginRight: "90px",
     margin: "0px",
     hyphens: "auto"
   },
@@ -91,7 +70,10 @@ const useStyles = makeStyles((theme) => ({
     width: "6px",
     minWidth: "6px",
     minHeight: "100px",
-    height: "100%"
+    height: "100%",
+    position: "absolute",
+    top: "0px",
+    right: "0px",
   }
 }));
 
@@ -129,31 +111,27 @@ export default function JourneySelectionInfoText() {
         aria-label={"Informationen zu getroffener Auswahl:" + infoDisplay.retrieveActiveLabel()}
         >
         <div className={classes.infoContent}>
-          <div className={classes.infoCard}>
-            <div className={classes.headerRow}>
-              <header className={classes.infoHeader}>
-                <h2 className={classes.infoHeaderText}>{infoDisplay.retrieveActiveLabel()}</h2>
-              </header>
-              <button
-                id="exit button"
-                className={classes.exitButton}
-                title="Rückkehr zum Auswahlbereich"
-                aria-label="Rückkehr zum Auswahlbereich"
-                onKeyDown={handleKeyDown}
-                onClick={handleClick}
-              >
-                <img className={classes.exitIcon} src={exitIcon} alt={""}/>
-              </button>
-            </div>
-            <p className={classes.infoText} id="answer-info" aria-live="polite">
-              {
-                current_label?
-                activeNode.getEdgeFeatureByLabel(current_label, EdgeDetail.info_text):
-                null
-              }
-            </p>
-          </div>
+          <header className={classes.infoHeader}>
+            <h2 className={classes.infoHeaderText}>{infoDisplay.retrieveActiveLabel()}</h2>
+          </header>
+          <p className={classes.infoText} id="answer-info" aria-live="polite">
+            {
+              current_label?
+              activeNode.getEdgeFeatureByLabel(current_label, EdgeDetail.info_text):
+              null
+            }
+          </p>
         </div>
+        <button
+          id="exit button"
+          className={classes.exitButton}
+          title="Rückkehr zum Auswahlbereich"
+          aria-label="Rückkehr zum Auswahlbereich"
+          onKeyDown={handleKeyDown}
+          onClick={handleClick}
+        >
+          <img className={classes.exitIcon} src={exitIcon} alt={""}/>
+        </button>
         <canvas className={classes.infoStripe}></canvas>
       </div>
     </section>
