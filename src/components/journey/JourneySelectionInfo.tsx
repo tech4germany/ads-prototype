@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     position: "relative"
   },
   infoContent: {
-    padding: "30px 96px 30px 22px",
+    padding: "30px 60px 30px 22px",
   },
   infoHeader: {
     marginBottom: "28px"
