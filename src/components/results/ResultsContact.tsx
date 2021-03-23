@@ -4,12 +4,11 @@ import { colorMain } from "components/styleguide"
 
 const useStyles = makeStyles((theme) => ({
   contactBox: {
-    flex: "1 1 0px",
+    //flex: "1 1 0px",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
     backgroundColor: "white",
-    height: "100%",
     position: "relative"
   },
   contactContainer: {

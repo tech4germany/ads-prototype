@@ -4,13 +4,12 @@ import { colorMain } from "components/styleguide"
 
 const useStyles = makeStyles((theme) => ({
   mapSpace: {
-    flex: "1 1 0px",
+    //flex: "1 1 0px",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
     backgroundColor: "white",
     position: "relative",
-    height: "100%"
   },
   mapContainer: {
     display: "flex",
