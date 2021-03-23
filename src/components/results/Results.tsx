@@ -15,33 +15,26 @@ import { Answers } from "states/answerState"
 
 const useStyles = makeStyles((theme) => ({
   resultBox: {
-    backgroundColor: "inherit",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    width: "100%",
-    height: "100%"
   },
   resultSpace: {
-    backgroundColor: "inherit",
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
-    width: "100%"
   },
   infoTemplateSpace: {
-    maxHeight: "100%",
     maxWidth: "750px",
-    marginRight: "30px",
+    paddingRight: "25px",
     width: "100%"
   },
   contactMapSpace: {
     display: "flex",
     flexDirection: "column",
     minWidth: "260px",
-    maxWidth: "360px",
-    maxHeight: "100%",
-    marginTop: "22px",
+    maxWidth: "340px",
+    paddingTop: "25px",
   },
   contactMapSpacer: {
     height: "22px"

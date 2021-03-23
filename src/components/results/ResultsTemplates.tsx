@@ -6,15 +6,10 @@ import { ResultSpecsLayout } from "data/customTypes"
 
 const useStyles = makeStyles((theme) => ({
   templatesBox: {
-    backgroundColor: "inherit",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    marginBottom: "50px",
-    maxWidth: "750px",
-    "@media (max-width: 375px)": {
-      width: "275px",
-    }
+    marginBottom: "50px"
   },
   subHeaderContainer: {
     marginBottom: "32px"
@@ -28,34 +23,15 @@ const useStyles = makeStyles((theme) => ({
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
-    margin: "0px"
+    margin: "0px 0px 16px 0px"
+  },
+  templateList:{
+    paddingLeft: "0px",
   },
   templateItem: {
     display: "flex",
     flexDirection: "column",
     marginTop: "16px"
-  },
-  downloadTitleText: {
-    textAlign: "left",
-    color: "black",
-    lineHeight: "25px",
-    borderBottom: "3px solid #000",
-    paddingBottom: "2.5px"
-  },
-  downloadSubtitleText: {
-    fontFamily: "BundesSansWeb-Regular",
-    color: "black",
-    textAlign: "left"
-  },
-  templateList:{
-    marginTop: "16px",
-    paddingLeft: "0px",
-    marginBottom: "0px"
-  },
-  downloadIcon: {
-    height: "54px",
-    cursor: "pointer",
-    marginRight: "15px",
   },
   downloadContainer: {
     display: "flex",
@@ -63,12 +39,9 @@ const useStyles = makeStyles((theme) => ({
     height: "54px",
     alignItems: "center",
     border: "solid 0px",
-    backgroundColor: "inherit",
     padding: "0px"
   },
   downloadLink: {
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "18px",
     display: "flex",
     flexDirection: "row",
     textDecoration: "none",
@@ -83,12 +56,32 @@ const useStyles = makeStyles((theme) => ({
       }
     }
   },
+  downloadIcon: {
+    height: "54px",
+    cursor: "pointer",
+    marginRight: "15px",
+  },
   downloadTextContainer: {
     display: "flex",
     flexDirection: "column",
   },
+  downloadTitleText: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
+    textAlign: "left",
+    color: "black",
+    lineHeight: "25px",
+    borderBottom: "3px solid #000",
+    paddingBottom: "2.5px"
+  },
+  downloadSubtitleText: {
+    fontFamily: "BundesSansWeb-Regular",
+    fontSize: "18px",
+    color: "black",
+    textAlign: "left"
+  },
   itemSpacer: {
-    height: "24px"
+    height: "16px"
   }
 }));
 
@@ -119,6 +112,7 @@ export default function ResultsTemplates(props: Props) {
               <li className={classes.templateItem} key={index}>
 
                 <div className={classes.downloadContainer}>
+
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -127,17 +121,22 @@ export default function ResultsTemplates(props: Props) {
                     title="Formulierungshilfe herunterladen"
                     aria-label="Formulierungshilfe herunterladen"
                   >
+
                     <img className={classes.downloadIcon}
                       src={downloadIcon}
                       alt={""}
                     />
+
                     <span className={classes.downloadTextContainer}>
                       <span className={classes.downloadTitleText}>Formulierungshilfe</span>
                       <span className={classes.downloadSubtitleText}>Download</span>
                     </span>
+
                   </a>
                 </div>
+
                 <span className={classes.itemSpacer}></span>
+
                 <div className={classes.downloadContainer}>
                   <a
                     target="_blank"
@@ -154,6 +153,7 @@ export default function ResultsTemplates(props: Props) {
                     </span>
                   </a>
                 </div>
+
               </li>
             )
           }):

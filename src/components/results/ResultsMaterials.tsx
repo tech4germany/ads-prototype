@@ -6,15 +6,10 @@ import { ResultSpecsLayout } from "data/customTypes"
 
 const useStyles = makeStyles((theme) => ({
   materialsBox: {
-    backgroundColor: "inherit",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    marginBottom: "50px",
-    maxWidth: "750px",
-    "@media (max-width: 375px)": {
-      width: "275px",
-    }
+    marginBottom: "50px"
   },
   subHeaderContainer: {
     marginBottom: "32px",
@@ -28,41 +23,17 @@ const useStyles = makeStyles((theme) => ({
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
-    margin: "0px"
+    margin: "0px 0px 16px 0px"
+  },
+  materialsList:{
+    paddingLeft: "0px",
   },
   materialsItem: {
     display: "flex",
     flexDirection: "column",
-    fontFamily: "BundesSansWeb-Regular",
-    fontSize: "18px",
     marginTop: "16px"
   },
-  materialsList:{
-    marginTop: "16px",
-    paddingLeft: "0px",
-    marginBottom: "0px"
-  },
-  title: {
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "18px",
-  },
-  downloadIcon: {
-    height: "54px",
-    cursor: "pointer",
-    marginRight: "15px",
-  },
-  downloadContainer: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "center",
-    border: "solid 0px",
-    backgroundColor: "inherit",
-    padding: "0px"
-  },
   downloadLink: {
-    fontFamily: "BundesSansWeb-Bold",
-    fontSize: "18px",
     display: "flex",
     flexDirection: "row",
     textDecoration: "none",
@@ -77,11 +48,18 @@ const useStyles = makeStyles((theme) => ({
       }
     }
   },
+  downloadIcon: {
+    height: "54px",
+    cursor: "pointer",
+    marginRight: "15px",
+  },
   downloadTextContainer: {
     display: "flex",
     flexDirection: "column",
   },
   downloadTitleText: {
+    fontFamily: "BundesSansWeb-Bold",
+    fontSize: "18px",
     color: "black",
     lineHeight: "25px",
     borderBottom: "3px solid #000",
@@ -91,6 +69,7 @@ const useStyles = makeStyles((theme) => ({
   },
   downloadSubtitleText: {
     fontFamily: "BundesSansWeb-Regular",
+    fontSize: "18px",
     textAlign: "left",
     color: "black",
     hyphens: "auto"
@@ -122,23 +101,21 @@ export default function ResultsMaterials(props: Props) {
           materials.map((label, index) => {
             return(
               <li className={classes.materialsItem} key={index}>
-                <div className={classes.downloadContainer}>
-                  <a
-                    tabIndex={0}
-                    target="_blank"
-	                  rel="noopener noreferrer"
-                    href={label.link}
-                    className={classes.downloadLink}
-                    title="Informationsmaterial herunterladen"
-                    aria-label="Informationsmaterial herunterladen"
-                  >
-                    <img className={classes.downloadIcon} src={downloadIcon} alt={""}/>
-                    <span className={classes.downloadTextContainer}>
-                      <span className={classes.downloadTitleText}>{label.name}</span>
-                      <span className={classes.downloadSubtitleText}>Download</span>
-                    </span>
-                  </a>
-                </div>
+                <a
+                  tabIndex={0}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={label.link}
+                  className={classes.downloadLink}
+                  title="Informationsmaterial herunterladen"
+                  aria-label="Informationsmaterial herunterladen"
+                >
+                  <img className={classes.downloadIcon} src={downloadIcon} alt={""}/>
+                  <span className={classes.downloadTextContainer}>
+                    <span className={classes.downloadTitleText}>{label.name}</span>
+                    <span className={classes.downloadSubtitleText}>Download</span>
+                  </span>
+                </a>
               </li>
             )
           }):

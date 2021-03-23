@@ -5,33 +5,27 @@ import { ResultSpecsLayout } from "data/customTypes"
 
 const useStyles = makeStyles((theme) => ({
   referralsBox: {
-    backgroundColor: "inherit",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    marginBottom: "50px",
-    maxWidth: "750px",
-    "@media (max-width: 375px)": {
-      width: "275px",
-    }
+    marginBottom: "50px"
   },
   subHeaderContainer: {
-    marginBottom: "32px"
+    marginBottom: "32px",
   },
   subHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "30px",
-    margin: "0px"
+    margin: "0px",
+    fontWeight: "normal"
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
-    margin: "0px"
+    margin: "0px 0px 16px 0px"
   },
   referralsList:{
-    marginTop: "16px",
-    marginBottom: "0px",
-    paddingLeft: "0px"
+    paddingLeft: "0px",
   },
   referralItem: {
     display: "flex",
@@ -43,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     hyphens: "auto"
   },
-  contentWebsiteText: {
+  contentWebsiteLink: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "18px",
     borderBottom: "3px solid #000",
@@ -61,13 +55,6 @@ const useStyles = makeStyles((theme) => ({
         textDecorationColor: "black"
       }
     }
-  },
-  websiteButton: {
-      display: "flex",
-      flexDirection: "row",
-      border: "solid 0px",
-      backgroundColor: "inherit",
-      padding: "0px"
   }
 }));
 
@@ -109,14 +96,14 @@ export default function ResultReferrals(props: Props) {
                 }
                 {
                   label.website?
-                  <div className={classes.websiteButton}>
+                  <div>
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
                       title="Website der Verweisstelle öffnen"
                       aria-label="Website der Verweisstelle öffnen"
                       href={label.website}
-                      className={classes.contentWebsiteText}>
+                      className={classes.contentWebsiteLink}>
                       Zur Website
                     </a>
                   </div>:

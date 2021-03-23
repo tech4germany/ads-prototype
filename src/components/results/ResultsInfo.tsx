@@ -6,18 +6,12 @@ import { ResultFeatureType, ResultSpecsLayout } from "data/customTypes"
 
 const useStyles = makeStyles((theme) => ({
   infoBox: {
-    backgroundColor: "inherit",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    maxWidth: "750px",
-    "@media (max-width: 375px)": {
-      width: "275px",
-    }
   },
   headerContainer: {
     marginBottom: "50px",
-    width: "100%",
   },
   headerText: {
     fontFamily: "BundesSansWeb-Bold",
@@ -25,36 +19,30 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "48px",
     margin: "0px",
     fontWeight: "normal",
-    width: "100%",
     textAlign: "left",
     hyphens: "auto"
   },
   subHeaderContainer: {
     marginBottom: "32px",
-    width: "100%"
   },
   subHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "30px",
     margin: "0px",
     fontWeight: "normal",
-    width: "100%",
     hyphens: "auto"
   },
   infoTextContainer: {
     marginBottom: "18px",
-    width: "100%"
   },
   infoTextContainerMargin: {
     marginBottom: "50px",
-    width: "100%"
   },
   infoText: {
     fontFamily: "BundesSansWeb-Regular",
     fontSize: "18px",
     whiteSpace: "pre-wrap",
     margin: "0px",
-    width: "100%",
     hyphens: "auto"
   }
 }));
