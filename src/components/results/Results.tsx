@@ -36,6 +36,10 @@ const useStyles = makeStyles((theme) => ({
     width: "100%"
   },
   contactMapSpace: {
+    display: "flex",
+    flexDirection: "column",
+    minWidth: "260px",
+    maxWidth: "360px",
     maxHeight: "100%",
     marginTop: "22px",
   },
@@ -74,6 +78,7 @@ export default function Result() {
           <div className={classes.contactMapSpacer}></div>
           <ResultsMap />
         </div>
+
       </Grid>
       <JourneyNavigation />
   </div>

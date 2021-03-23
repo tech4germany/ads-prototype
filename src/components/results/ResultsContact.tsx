@@ -4,45 +4,31 @@ import { colorMain } from "components/styleguide"
 
 const useStyles = makeStyles((theme) => ({
   contactBox: {
-    backgroundColor: "inherit",
+    flex: "1 1 0px",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    flexWrap: "wrap"
+    backgroundColor: "white",
+    position: "relative"
   },
   contactContainer: {
-    backgroundColor: "white",
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     justifyContent: "flex-start",
-    width: "344px",
-    "@media (max-width: 375px)": {
-      width: "275px",
-    }
-  },
-  contactContent: {
-    height: "100%",
-    width: "100%",
+    padding: "20px 30px 22.5px 30px"
   },
   contactHeaderContainer: {
-    marginTop: "20px",
-    marginBottom: "8px",
-    marginLeft: "30px",
-    marginRight: "30px"
+    marginBottom: "8px"
   },
   contactHeaderText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "22px",
     margin: "0px",
-    fontWeight: "normal"
+    fontWeight: "normal",
+    hyphens: "auto"
   },
   contactInfoContainer: {
-    display: "flex",
-    flexDirection: "column",
-    marginBottom: "20px",
-    marginLeft: "30px",
-    marginRight: "30px",
-    maxWidth: "268px"
+    marginBottom: "8px"
   },
   contactInfoText: {
     fontFamily: "BundesSansWeb-Regular",
@@ -64,17 +50,7 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "BundesSansWeb-Bold",
     }
   },
-  contactSpacer: {
-    height: "24px"
-  },
   contactLink: {
-    display: "flex",
-    flexDirection: "row",
-    border: "solid 0px",
-    backgroundColor: "inherit",
-    padding: "0px"
-  },
-  contactFormularText: {
     fontFamily: "BundesSansWeb-Bold",
     fontSize: "16px",
     borderBottom: "3px solid #000",
@@ -94,11 +70,11 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   contactStripe: {
-    display: "flex",
     backgroundColor: colorMain["115"],
-    minHeight: "100px",
+    height: "100%",
     width: "6px",
-    minWidth: "6px"
+    position: "absolute",
+    right: "0px"
   }
 }));
 
@@ -107,38 +83,41 @@ export default function ResultContact() {
 
   return (
     <section className={classes.contactBox} aria-label="Informationen für Kontaktaufnahme">
+
       <div className={classes.contactContainer}>
-        <div className={classes.contactContent}>
-          <header className={classes.contactHeaderContainer} aria-hidden="true">
-            <h3 className={classes.contactHeaderText}>Kontakt zu uns</h3>
-          </header>
-          <div className={classes.contactInfoContainer}>
-            <p className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an:&nbsp;
-              <a
-                className={classes.emailLink}
-                href={"mailto:beratung@ads.bund.de"}
-                aria-label="Email an die Antidiskriminierungsstelle schreiben"
-              >
-                beratung&shy;@ads.bund.de
-              </a>
-            </p>
-            <span className={classes.contactSpacer}></span>
-            <div className={classes.contactLink}>
-              <a
-                className={classes.contactFormularText}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Zum Kontaktformular"
-                aria-label="Kontaktformular der Antidiskriminierungsstelle öffnen"
-                tabIndex={0}
-                href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}
-                >Zum Kontaktformular
-              </a>
-            </div>
-          </div>
+
+        <header className={classes.contactHeaderContainer} aria-hidden="true">
+          <h3 className={classes.contactHeaderText}>Kontakt zu uns</h3>
+        </header>
+
+        <div className={classes.contactInfoContainer}>
+
+          <p className={classes.contactInfoText}>Für eine Beratung oder allgemeine Fragen nutzen Sie unser Kontaktformular oder schreiben eine Email an:&nbsp;
+            <a
+              className={classes.emailLink}
+              href={"mailto:beratung@ads.bund.de"}
+              aria-label="Email an die Antidiskriminierungsstelle schreiben"
+            >
+              beratung&shy;@ads.bund.de
+            </a>
+          </p>
         </div>
-        <canvas className={classes.contactStripe}></canvas>
+
+        <div>
+          <a
+            className={classes.contactLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Zum Kontaktformular"
+            aria-label="Kontaktformular der Antidiskriminierungsstelle öffnen"
+            tabIndex={0}
+            href={"https://www.antidiskriminierungsstelle.de/DE/Beratung/Beratung_Moeglichkeiten/Formular/Formular1_node.html"}
+            >Zum Kontaktformular
+          </a>
+        </div>
+
       </div>
+      <canvas className={classes.contactStripe}></canvas>
     </section>
   );
 }

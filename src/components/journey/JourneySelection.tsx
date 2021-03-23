@@ -19,10 +19,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0px"
   },
   itemContainer: {
-    flex: "1 1 0px",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
+    flex: "1 1 0px",
     backgroundColor: "white",
     position: "relative",
     height: "132px",
